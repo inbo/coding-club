@@ -58,7 +58,7 @@ The current core-team is Hans Van Calster (@hansvancalster), Dirk Maes, Joost Va
 
 The core team provides...
 
-* .a room
+* ...a room
 * ...thematic topics, working material and some challenges to work on
 * ...general agenda, aiming to take into consideration the feedback of the participants.
 
