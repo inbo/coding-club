@@ -45,7 +45,7 @@ Still, bear in mind that:
 
 ### So, practically?
 
-The coding club is a monthly meeting, alternating on Tuesday of Thursday morning from 10h till 12h.
+The coding club is held monthly on alternate Tuesday and Thursday, from 10 a.m. till 12 a.m., in [Herman Terilinck building](https://www.vlaanderen.be/nl/vlaamse-overheid/gebouwen/herman-teirlinckgebouw) ([Tour & Taxis](https://en.wikipedia.org/wiki/Tour_%26_Taxis), Brussels).
 
 In function of the availability of the lecture rooms in Herman Teirlinck building (Tour & Taxis Brussels), we focus on around 25 participants. Each session focusses on a specific theme and is independent from any other session, so people can just attend when available or interested.
 
