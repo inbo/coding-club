@@ -55,11 +55,11 @@ Bringing your own laptop is mandatory, as we will always work together on the co
 
 The current core team members are Hans Van Calster (@hansvancalster), Dirk Maes, Joost Vanoverbeke, Damiano Oldoni (@damianooldoni) and Stijn Van Hoey (@stijnvanhoey). The core team is not there to make new course material, but focuses on the practical organisation. 
 
-The core team provides...
+More specifically, the core team takes care of:
 
-* ...a room
-* ...thematic topics, working material and some challenges to work on
-* ...general agenda, aiming to take into consideration the feedback of the participants.
+* reservation of the lecture room
+* thematic topics, working material and some challenges to work on
+* general agenda, taking into account the feedback of the participants
 
 ### You all figured out this yourself?
 
