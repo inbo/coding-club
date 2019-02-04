@@ -53,7 +53,7 @@ Bringing your own laptop is mandatory, as we will always work together on the co
 
 ### Who organises the coding club?
 
-The current core-team is Hans Van Calster (@hansvancalster), Dirk Maes, Joost Vanoverbeke, Damiano Oldoni (@damianooldoni) and Stijn Van Hoey (@stijnvanhoey). The core team is not there to make new course material, but focuses on the practical organisation. 
+The current core team members are Hans Van Calster (@hansvancalster), Dirk Maes, Joost Vanoverbeke, Damiano Oldoni (@damianooldoni) and Stijn Van Hoey (@stijnvanhoey). The core team is not there to make new course material, but focuses on the practical organisation. 
 
 The core team provides...
 
