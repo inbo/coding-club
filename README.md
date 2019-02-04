@@ -18,23 +18,23 @@ Everyone who is eager to learn is invited, as we think learning together is more
 
 ### So, what to expect?
 
-In the coding club, we will __NOT__ discuss...
+In the coding club, we will talk about:
 
-- ...is a glm the proper choice for my experiment?
-- ...how to implement a species distribution model
-- ...what is machine learning?
+- How to read the data from this awkward text format provided by VMM?
+- What is the purpose of the `%>%` operator?
+- How can I JOIN two tables in R?
+- How to convert some scatterd code into a reusable R function?
+- How to wrangle my data to a format that can be used as input for a glm?
+- How to extract data from a database using R
+- How to setup a Rmarkdown file mixing text and code?
+- How to improve figures?
+- How to reuse pieces of working code for different data sets or variables without copy pasting it?
 
-In de coding club, we will talk about...
+In the coding club, we will __NOT__ discuss:
 
-* ...how to read the data from this ackward text format provided by VMM?
-* ...what is the purpose of the `%>%` operator?
-* ...how can I JOIN two tables in R?
-* ...how to convert some scatterd code into a reusable R function?
-* ...how to wrangle my data to a format that can be used as the input for a glm
-* ...how to extract data from a database using R
-* ...how to setup an Rmarkdown file mixing text and code?
-* ... how to improve figures?
-* ... how to automate the reuse of pieces of working code for different data sets or variables
+- Is a glm the proper choice for my experiment?
+- How to implement a species distribution model?
+- What is machine learning?
 
 All of this is not written in stone. We are open to new ideas and will adapt the coding club concept and content in function of the requirements of the participants.
 
