@@ -47,9 +47,9 @@ Still, bear in mind that:
 
 The coding club is held monthly on alternate Tuesday and Thursday, from 10 a.m. till 12 a.m., in [Herman Terilinck building](https://www.vlaanderen.be/nl/vlaamse-overheid/gebouwen/herman-teirlinckgebouw) ([Tour & Taxis](https://en.wikipedia.org/wiki/Tour_%26_Taxis), Brussels).
 
-Bring your own laptop is mandatory, as we will always work together on the code.
 Depending on the availability and capacity of the lecture rooms, the coding club is typically limited to 25 participants. Each session focusses on a specific theme and is independent from any other session, so people can just attend when available or interested.
 
+Bringing your own laptop is mandatory, as we will always work together on the code.
 
 ### Who organises the coding club?
 
