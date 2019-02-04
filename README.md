@@ -12,7 +12,7 @@ It required a mission to be trustworthy:
 
 ### So, what does this mean?
 
-The coding club is for everyone who want to learn more about programming and data analysis in R with a specific focus on ecologcal and environmental topics. We aim for an environment where we experiment together, share code and learn from each other. Everyone has an equal say and can express themselves freely. We are convinced that everyone can learn from each other, irrespective the experience.
+The coding club is for everyone who wants to learn more about programming and data analysis in R with a specific focus on ecological and environmental topics. We aim for an environment where we experiment together, share code and learn from each other. Everyone has an equal say and can express themselves freely. We are convinced that everyone can learn from each other, irrespective of the experience.
 
 Everyone who is eager to learn is invited, as we think learning together is more effective and just more fun. We focus on the skills that improve our data mangement and data analysis to do research more efficiently.
 
