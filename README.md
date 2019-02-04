@@ -38,10 +38,10 @@ In the coding club, we will __NOT__ discuss:
 
 All of this is not written in stone. We are open to new ideas and will adapt the coding club concept and content in function of the requirements of the participants.
 
-Still,...
+Still, bear in mind that:
 
-* ...the coding club is not a _helpdesk_, as we focus on interaction in between all participants.
-* ...the coding club is not a _lunchtalk_, as we work hands-on and do not focus on presenting information.
+- The coding club is not a _helpdesk_, as our goal is the effective interaction among all participants.
+- The coding club is not a _lunchtalk_, as we work hands-on and do not focus on presenting information.
 
 ### So, practically?
 
