@@ -1,7 +1,3 @@
----
-layout: home
----
-
 # Coding club @INBO
 
 Welcome to the INBO coding club, a peer-learning R-group
