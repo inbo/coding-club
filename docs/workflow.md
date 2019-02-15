@@ -26,6 +26,7 @@
     *   Provide example solutions in a file `yyyymmdd_challenges.R` for yourself
     *   If the challenge uses new datasets, add them to the [data](https://github.com/inbo/coding-club/tree/master/data) folder. Use consistent naming, e.g. `yyyymmdd_description_with_underscores_and_lower_case.csv`
     * If useful, provide a script to get started and add it to the  [src](https://github.com/inbo/coding-club/tree/master/src) folder.
+* Update the [session overview page](https://github.com/inbo/coding-club/blob/master/docs/sessions/index.md) overview table with the date, topic name, slideshow link, hackmd link and location (room).
 
 
 #### Day of the coding club
