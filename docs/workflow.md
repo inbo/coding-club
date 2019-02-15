@@ -55,37 +55,5 @@ __Remark__, when creating links to other files, make sure to use the [jekyll lin
 *   Upload the `_YYYYMMDD__challenges.R` file to the [src](https://github.com/inbo/coding-club/tree/master/src) folder
 
 
-## Templates
-
-
-### Hackmd template
-
-
-    # INBO CODING CLUB
-    26 April, 2018
-
-    Welcome!
-
-    ## Share your code snippet
-
-    If you want to share your code snippet, copy paste your snippet within a section of three backticks (```):
-
-    As an **example**:
-    ```r
-    library(tidyverse)
-
-    ...
-    ```
-    (*you can copy paste this example and add your code further down, but do not fill in your code in this section*)
-
-    Your snippets:
-
-    ### ADD A TITLE OF YOUR SNIPPET
-
-    ```r
-    # ADD YOUR CODE HERE
-    ```
-
-    ###...
 
 
