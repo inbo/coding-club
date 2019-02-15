@@ -21,6 +21,7 @@
     *   To create the topic badge in green, we use [Inkscape](https://inkscape.org/en/). The source file is [here](https://github.com/inbo/coding-club/blob/master/docs/assets/images/coding_club_badges.svg).
     *   Make sure to keep the sticky note concept slide as people may join the first time!
     *   Create a new hackmd with [https://hackmd.io/new](https://hackmd.io/new), and update link to the new hackmd in the presentation. You can use the [template](#hackmd-template) to add to the hackmd.
+    * When creating the slideshow, serving the slides live is possible with setting up a local server in the terminal: `jekyll serve --baseurl ""`.
 * Set up 3 (we experienced that 3 is mostly enough for a 2 hour session) challenges with an increasing complexity:
     *   Explain the challenges in the slideshow
     *   Provide example solutions in a file `yyyymmdd_challenges.R` for yourself
