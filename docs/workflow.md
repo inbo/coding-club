@@ -27,6 +27,9 @@
     *   If the challenge uses new datasets, add them to the [data](https://github.com/inbo/coding-club/tree/master/data) folder. Use consistent naming, e.g. `yyyymmdd_description_with_underscores_and_lower_case.csv`
     * If useful, provide a script to get started and add it to the  [src](https://github.com/inbo/coding-club/tree/master/src) folder.
 * Update the [session overview page](https://github.com/inbo/coding-club/blob/master/docs/sessions/index.md) overview table with the date, topic name, slideshow link, hackmd link and location (room).
+*   If a cheat sheet exists about the topic, download it and add it to the [cheatsheet folder](https://github.com/inbo/coding-club/tree/master/cheat_sheets). Use consistent naming, `yyyymmdd_cheat_sheet_topicname.pdf`.
+*   (Make sure all subscribers do have internet access, otherwise in HT provide them with internet access, [https://bezoekers.vonet.be/](https://bezoekers.vonet.be/))
+
 
 
 #### Day of the coding club
