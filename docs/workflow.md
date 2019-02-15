@@ -58,4 +58,23 @@ __Remark__, when creating links to other files, make sure to use the [jekyll lin
 ### Templates
 
 
+### Invitation email example
+
+_change links to proper links_
+
+If your unaware of the coding club existence, make sure to check the [coding club introduction page](https://inbo.github.io/coding-club/) on intranet. In short, the coding club is open to anyone who want to develop R skills in a pleasant and supportive environment to do research more effectively.
+
+The next coding club will take place on __Tuesday 26 February__, room 01.70 - Ferdinand Peeters at Herman Teirlinck (Tour & Taxis Brussels), 10-12h. The topic of this coding club is geospatial data handling in R and more specific working with simple features (sf), also known as vector data (cfr. stored in shapefiles or geojson files). Hence we will try to read in files, transform data, combine the spatial data with non-spatial data, etc. (Notice, making maps will be the topic of a follow-up coding club.)
+
+The concept of the coding club remains the same: everyone works together and learns from each other. We will provide some challenges and appropriate test cases. As always, presence at previous edition is not required to join in this time, you can just jump in this edition as well.
+
+To subscribe, fill in your name on this [gsheet](https://docs.google.com/spreadsheets/d/1D80p7lxLUnWUxEkTIYOMhhYdL39kZOKgKmLOXsr4HGM/edit#gid=0). The limitation of subscriptions is defined by the number of spaces in the room.
+
+See you all theRe in good shape,
+
+Dirk, Hans, Damiano, Stijn
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+
+
 
