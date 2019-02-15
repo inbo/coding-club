@@ -17,8 +17,8 @@
 #### Within 1 week before coding club
 
 *   Add calendar item in google calendar with an invite to the subscribed people as a reminder of the coding session.
-*   Create new presentation in the [coding club > docs > sessions](https://github.com/inbo/coding-club/tree/master/docs/sessions) folder. Make a COPY of the [template presentation]({{ site.baseurl }}{% link sessions/template.html  %}), call the copy `yyyymmdd_topicname.html` and adapt to the requirements/needs of the session (don't take the template to rigid ;-). Slides are created in [remark](https://github.com/gnab/remark) and can be written as a markdown file. Note the extension is `html` to properly render in the webpage (more info [here](https://github.com/gnab/remark/wiki/Using-with-Jekyll)):
-    *   To create the topic badge in green, we use [Inkscape](https://inkscape.org/en/). The source file is [here](https://github.com/inbo/coding-club/blob/master/docs/assets/images/coding_club_badges.svg)
+*   Create new presentation in the [coding club > docs > sessions](https://github.com/inbo/coding-club/tree/master/docs/sessions) folder. Make a COPY of the [template presentation]({{ site.baseurl }}{% link sessions/template.html  %}), call the copy `yyyymmdd_topicname.html` and adapt to the requirements/needs of the session (don't take the template to rigid ;-). Slides are created in [remark](https://github.com/gnab/remark) and can be written as a markdown file. Note the extension is `html` to properly render in the web page (more info [here](https://github.com/gnab/remark/wiki/Using-with-Jekyll)):
+    *   To create the topic badge in green, we use [Inkscape](https://inkscape.org/en/). The source file is [here](https://github.com/inbo/coding-club/blob/master/docs/assets/images/coding_club_badges.svg).
     *   Make sure to keep the sticky note concept slide as people may join the first time!
     *   Create a new hackmd with [https://hackmd.io/new](https://hackmd.io/new), and update link to the new hackmd in the presentation. You can use the [template](#hackmd-template) to add to the hackmd.
 *   Set up 3 (we experienced that 3 is mostly enough for a 2 hour session) challenges with an increasing complexity:
@@ -57,52 +57,5 @@ __Remark__, when creating links to other files, make sure to use the [jekyll lin
 
 ### Templates
 
-
-### Invitation email example
-
-_change links to proper links_
-
-If your unaware of the coding club existence, make sure to check the [coding club introduction page](https://inbo.github.io/coding-club/) on intranet. In short, the coding club is open to anyone who want to develop R skills in a pleasant and supportive environment to do research more effectively.
-
-The next coding club will take place on __Tuesday 26 February__, room 01.70 - Ferdinand Peeters at Herman Teirlinck (Tour & Taxis Brussels), 10-12h. The topic of this coding club is geospatial data handling in R and more specific working with simple features (sf), also known as vector data (cfr. stored in shapefiles or geojson files). Hence we will try to read in files, transform data, combine the spatial data with non-spatial data, etc. (Notice, making maps will be the topic of a follow-up coding club.)
-
-The concept of the coding club remains the same: everyone works together and learns from each other. We will provide some challenges and appropriate test cases. As always, presence at previous edition is not required to join in this time, you can just jump in this edition as well.
-
-To subscribe, fill in your name on this [gsheet](https://docs.google.com/spreadsheets/d/1D80p7lxLUnWUxEkTIYOMhhYdL39kZOKgKmLOXsr4HGM/edit#gid=0). The limitation of subscriptions is defined by the number of spaces in the room.
-
-See you all theRe in good shape,
-
-Dirk, Hans, Damiano, Stijn
-![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
-
-### Hackmd template
-
-
-    # INBO CODING CLUB
-    26 April, 2018
-
-    Welcome!
-
-    ## Share your code snippet
-
-    If you want to share your code snippet, copy paste your snippet within a section of three backticks (```):
-
-    As an **example**:
-    ```r
-    library(tidyverse)
-
-    ...
-    ```
-    (*you can copy paste this example and add your code further down, but do not fill in your code in this section*)
-
-    Your snippets:
-
-    ### ADD A TITLE OF YOUR SNIPPET
-
-    ```r
-    # ADD YOUR CODE HERE
-    ```
-
-    ###...
 
 
