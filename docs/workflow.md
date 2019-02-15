@@ -24,10 +24,10 @@
 *   Set up 3 (we experienced that 3 is mostly enough for a 2 hour session) challenges with an increasing complexity:
     *   Explain the challenges in the slideshow
     *   Provide example solutions in a file `_yyyymmdd__challenges.R` for yourself
-    *   If the challenge uses new datasets, add them to the [data](https://github.com/inbo/coding-club/tree/master/data) folder. Use consistent naming, e.g. `_yyyymmdd_description_with_underscores_and_lower_case.csv`_
+    *   If the challenge uses new datasets, add them to the [data](https://github.com/inbo/coding-club/tree/master/data) folder. Use consistent naming, e.g. `yyyymmdd_description_with_underscores_and_lower_case.csv`
     * If useful, provide a script to get started and add it to the  [src](https://github.com/inbo/coding-club/tree/master/src) folder.
 * Update the [session overview page](https://github.com/inbo/coding-club/blob/master/docs/sessions/index.md) overview table with the date, topic name, slideshow link, hackmd link and location (room).
-*   If a cheat sheet exists about the topic, download it and add it to the [cheatsheet folder](https://github.com/inbo/coding-club/tree/master/cheat_sheets). Use consistent naming,`_yyyymmdd_cheat_sheet_topicname.pdf`._
+*   If a cheat sheet exists about the topic, download it and add it to the [cheatsheet folder](https://github.com/inbo/coding-club/tree/master/cheat_sheets). Use consistent naming,`yyyymmdd_cheat_sheet_topicname.pdf`.
 *   (Make sure all subscribers do have internet access, otherwise in HT provide them with internet access, [https://bezoekers.vonet.be/](https://bezoekers.vonet.be/))
 
 __Remark__, when creating links to other files, make sure to use the [jekyll link system](https://jekyllrb.com/docs/liquid/tags/#links) by combining the base url reference with the relative link, e.g. `{{ site.baseurl }}{% link _collection/name-of-document.md %}`
@@ -52,8 +52,57 @@ __Remark__, when creating links to other files, make sure to use the [jekyll lin
 
 #### After coding club
 
-*   Upload the `_YYYYMMDD__challenges.R` file to the [src](https://github.com/inbo/coding-club/tree/master/src) folder
+*   Upload the `YYYYMMDD_challenges.R` file to the [src](https://github.com/inbo/coding-club/tree/master/src) folder.
 
 
+## Templates
+
+
+### Invitation email example
+
+_change links to proper links_
+
+If your unaware of the coding club existence, make sure to check the [coding club introduction page](https://inbo.github.io/coding-club/) on intranet. In short, the coding club is open to anyone who want to develop R skills in a pleasant and supportive environment to do research more effectively.
+
+The next coding club will take place on __Tuesday 26 February__, room 01.70 - Ferdinand Peeters at Herman Teirlinck (Tour & Taxis Brussels), 10-12h. The topic of this coding club is geospatial data handling in R and more specific working with simple features (sf), also known as vector data (cfr. stored in shapefiles or geojson files). Hence we will try to read in files, transform data, combine the spatial data with non-spatial data, etc. (Notice, making maps will be the topic of a follow-up coding club.)
+
+The concept of the coding club remains the same: everyone works together and learns from each other. We will provide some challenges and appropriate test cases. As always, presence at previous edition is not required to join in this time, you can just jump in this edition as well.
+
+To subscribe, fill in your name on this [gsheet](https://docs.google.com/spreadsheets/d/1D80p7lxLUnWUxEkTIYOMhhYdL39kZOKgKmLOXsr4HGM/edit#gid=0). The limitation of subscriptions is defined by the number of spaces in the room.
+
+See you all theRe in good shape,
+
+Dirk, Hans, Damiano, Stijn
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+### Hackmd template
+
+
+    # INBO CODING CLUB
+    26 April, 2018
+    
+    Welcome!
+    
+    ## Share your code snippet
+    
+    If you want to share your code snippet, copy paste your snippet within a section of three backticks (```):
+    
+    As an **example**:
+    ```r
+    library(tidyverse)
+    
+    ...
+    ```
+    (*you can copy paste this example and add your code further down, but do not fill in your code in this section*)
+    
+    Your snippets:
+    
+    ### ADD A TITLE OF YOUR SNIPPET
+    
+    ```r
+    # ADD YOUR CODE HERE
+    ```
+    
+    ###...
 
 
