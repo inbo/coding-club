@@ -14,23 +14,7 @@
 *   Create a new column [in the subscription table](https://docs.google.com/spreadsheets/d/1D80p7lxLUnWUxEkTIYOMhhYdL39kZOKgKmLOXsr4HGM/edit) and provide subscription/waiting list as function of the room space availability
 *   Sent out an invitation mail to dg_user@inbo.be AND all email addresses listed on the [external_invites sheet of the subscription sheets](https://docs.google.com/spreadsheets/d/1D80p7lxLUnWUxEkTIYOMhhYdL39kZOKgKmLOXsr4HGM/edit). Introduce the topic, the complexity level and add link to the subscription table. Add the [coding club logo]({{ site.baseurl }}{% link /assets/images/coding_club_logo_1.png %}) to the mail.
 
-#### Within 1 week before coding club
 
-*   Add calendar item in google calendar with an invite to the subscribed people as a reminder of the coding session.
-*   Create new presentation in the [coding club > docs > sessions](https://github.com/inbo/coding-club/tree/master/docs/sessions) folder. Make a COPY of the [template presentation]({{ site.baseurl }}{% link sessions/template.html  %}), call the copy `yyyymmdd_topicname.html` and adapt to the requirements/needs of the session (don't take the template to rigid ;-). Slides are created in [remark](https://github.com/gnab/remark) and can be written as a markdown file. Note the extension is `html` to properly render in the web page (more info [here](https://github.com/gnab/remark/wiki/Using-with-Jekyll)):
-    *   To create the topic badge in green, we use [Inkscape](https://inkscape.org/en/). The source file is [here](https://github.com/inbo/coding-club/blob/master/docs/assets/images/coding_club_badges.svg).
-    *   Make sure to keep the sticky note concept slide as people may join the first time!
-    *   Create a new hackmd with [https://hackmd.io/new](https://hackmd.io/new), and update link to the new hackmd in the presentation. You can use the [template](#hackmd-template) to add to the hackmd.
-*   Set up 3 (we experienced that 3 is mostly enough for a 2 hour session) challenges with an increasing complexity:
-    *   Explain the challenges in the slideshow
-    *   Provide example solutions in a file `yyyymmdd_challenges.R` for yourself
-    *   If the challenge uses new datasets, add them to the [data](https://github.com/inbo/coding-club/tree/master/data) folder. Use consistent naming, e.g. `yyyymmdd_description_with_underscores_and_lower_case.csv`
-    * If useful, provide a script to get started and add it to the  [src](https://github.com/inbo/coding-club/tree/master/src) folder.
-* Update the [session overview page](https://github.com/inbo/coding-club/blob/master/docs/sessions/index.md) overview table with the date, topic name, slideshow link, hackmd link and location (room).
-*   If a cheat sheet exists about the topic, download it and add it to the [cheatsheet folder](https://github.com/inbo/coding-club/tree/master/cheat_sheets). Use consistent naming,`yyyymmdd_cheat_sheet_topicname.pdf`.
-*   (Make sure all subscribers do have internet access, otherwise in HT provide them with internet access, [https://bezoekers.vonet.be/](https://bezoekers.vonet.be/))
-
-__Remark__, when creating links to other files, make sure to use the [jekyll link system](https://jekyllrb.com/docs/liquid/tags/#links) by combining the base url reference with the relative link, e.g. `{{ site.baseurl }}{% link _collection/name-of-document.md %}`
 
 #### Day of the coding club
 
@@ -73,7 +57,8 @@ To subscribe, fill in your name on this [gsheet](https://docs.google.com/spreads
 See you all theRe in good shape,
 
 Dirk, Hans, Damiano, Stijn
-![](/assets/images/coding_club_logo.png)
+
+![:scale 30%]({{site.baseurl}}/assets/images/coding_club_logo_1.png)
 
 ### Hackmd template
 
