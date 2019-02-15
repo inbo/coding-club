@@ -6,3 +6,16 @@
 a {
     color: #c04384;
 }
+
+a:hover, a:focus {
+    color: #843860;
+    font-weight: bold;
+}
+
+header a {
+    color: #222;
+}
+
+header img {
+    max-width: 50%;
+}
