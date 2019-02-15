@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1800"
+   height="1400"
+   viewBox="0 0 476.25001 370.41668"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (33fec40, 2019-01-16)"
+   sodipodi:docname="coding_club_sticky_concept.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient2385">
+      <stop
+         offset="0"
+         style="stop-color:#ffd42a;stop-opacity:1"
+         id="stop2387" />
+      <stop
+         offset="1"
+         style="stop-color:#ffeeaa;stop-opacity:1"
+         id="stop2389" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient2385"
+       id="linearGradient2391"
+       y2="458.39249"
+       x2="194.45436"
+       y1="287.6767"
+       x1="324.25897" />
+    <filter
+       id="filter3239"
+       x="-0.10827981"
+       width="1.2165596"
+       y="-0.11860518"
+       height="1.2372104">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="9.2834045"
+         id="feGaussianBlur3241" />
+    </filter>
+    <filter
+       id="filter3239-7"
+       x="-0.10827981"
+       width="1.2165596"
+       y="-0.11860518"
+       height="1.2372104">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="9.2834045"
+         id="feGaussianBlur3241-9" />
+    </filter>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient2385"
+       id="linearGradient2391-9"
+       y2="458.39249"
+       x2="194.45436"
+       y1="287.6767"
+       x1="324.25897" />
+    <filter
+       id="filter3239-7-2"
+       x="-0.10827981"
+       width="1.2165596"
+       y="-0.11860518"
+       height="1.2372104">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="9.2834045"
+         id="feGaussianBlur3241-9-1" />
+    </filter>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient2385"
+       id="linearGradient2391-9-7"
+       y2="458.39249"
+       x2="194.45436"
+       y1="287.6767"
+       x1="324.25897" />
+    <filter
+       id="filter3239-7-1"
+       x="-0.10827981"
+       width="1.2165596"
+       y="-0.11860518"
+       height="1.2372104">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="9.2834045"
+         id="feGaussianBlur3241-9-8" />
+    </filter>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient2385"
+       id="linearGradient2391-9-3"
+       y2="458.39249"
+       x2="194.45436"
+       y1="287.6767"
+       x1="324.25897" />
+    <filter
+       id="filter3239-7-1-7"
+       x="-0.10827981"
+       width="1.2165596"
+       y="-0.11860518"
+       height="1.2372104">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="9.2834045"
+         id="feGaussianBlur3241-9-8-1" />
+    </filter>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient2385"
+       id="linearGradient2391-9-3-6"
+       y2="458.39249"
+       x2="194.45436"
+       y1="287.6767"
+       x1="324.25897" />
+    <filter
+       id="filter3239-7-1-0"
+       x="-0.10827981"
+       width="1.2165596"
+       y="-0.11860518"
+       height="1.2372104">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="9.2834045"
+         id="feGaussianBlur3241-9-8-4" />
+    </filter>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient2385"
+       id="linearGradient2391-9-3-0"
+       y2="458.39249"
+       x2="194.45436"
+       y1="287.6767"
+       x1="324.25897" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="1004.694"
+     inkscape:cy="691.14852"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1869"
+     inkscape:window-height="1056"
+     inkscape:window-x="51"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,73.416821)">
+    <g
+       id="layer1-3-4"
+       transform="matrix(0.231546,0,0,0.231546,281.4763,-45.374051)">
+      <g
+         id="g3243-3"
+         transform="matrix(0.9365417,0,0,0.9365417,18.623069,21.142942)">
+        <path
+           style="fill:#4d4d4d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3239-7)"
+           id="path2393-7"
+           d="m 177.72699,486.38516 c 39.94517,-76.75054 44.71497,-83.9152 49.11762,-155.83199 l 152.27432,-32.01959 4.37283,160.12243 c -96.03964,3.59989 -113.51552,2.67987 -205.76477,27.72915 z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#linearGradient2391-9);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           id="path2383-1"
+           d="M 161.42857,480.93361 C 207.8154,410.45742 192.30882,339.98123 207.14286,269.50504 H 412.85714 V 492.36218 C 329.04762,483.01246 245.23809,468.57773 161.42857,480.93361 Z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       id="g2172"
+       transform="matrix(0.06223853,0.0174664,-0.0174664,0.06223853,222.66792,182.3839)">
+      <g
+         id="g2116">
+	<path
+   id="path2114"
+   d="m 144.421,501.133 c -0.023,0 -0.047,0 -0.071,0 -6.871,0 -12.625,-3.104 -15.793,-8.482 -5.222,-8.842 -2.613,-21.013 9.008,-41.996 14.212,-25.664 22.352,-53.593 24.27,-83.199 C 66.435,339.456 3.057,269.124 3.057,190.029 3.056,85.245 114.087,0 250.567,0 c 136.477,0 247.51,85.245 247.51,190.028 0,81.323 -66.815,153.21 -166.571,179.607 C 177.826,500.831 153.55,501.133 144.421,501.133 Z M 250.567,24.787 c -122.814,0 -222.729,74.13 -222.729,165.241 0,70.252 60.228,132.995 149.873,156.106 l 9.49,2.429 -0.186,9.807 c -0.709,37.226 -10.06,72.323 -27.769,104.301 -2.308,4.161 -3.984,7.519 -5.198,10.22 16.68,-8.086 59.412,-34.95 163.527,-123.954 l 2.199,-1.886 2.802,-0.703 C 412.732,323.402 473.283,260.594 473.283,190.029 473.282,98.917 373.366,24.787 250.567,24.787 Z"
+   inkscape:connector-curvature="0" />
+
+</g>
+      <g
+         id="g2118">
+</g>
+      <g
+         id="g2120">
+</g>
+      <g
+         id="g2122">
+</g>
+      <g
+         id="g2124">
+</g>
+      <g
+         id="g2126">
+</g>
+      <g
+         id="g2128">
+</g>
+      <g
+         id="g2130">
+</g>
+      <g
+         id="g2132">
+</g>
+      <g
+         id="g2134">
+</g>
+      <g
+         id="g2136">
+</g>
+      <g
+         id="g2138">
+</g>
+      <g
+         id="g2140">
+</g>
+      <g
+         id="g2142">
+</g>
+      <g
+         id="g2144">
+</g>
+      <g
+         id="g2146">
+</g>
+    </g>
+    <g
+       id="layer1-3"
+       transform="matrix(0.34848499,0,0,0.34848499,20.422791,-157.48596)">
+      <g
+         id="g3243"
+         transform="matrix(0.9365417,0,0,0.9365417,18.623069,21.142942)">
+        <path
+           style="fill:#4d4d4d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3239)"
+           id="path2393"
+           d="m 177.72699,486.38516 c 39.94517,-76.75054 44.71497,-83.9152 49.11762,-155.83199 l 152.27432,-32.01959 4.37283,160.12243 c -96.03964,3.59989 -113.51552,2.67987 -205.76477,27.72915 z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#linearGradient2391);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           id="path2383"
+           d="M 161.42857,480.93361 C 207.8154,410.45742 192.30882,339.98123 207.14286,269.50504 H 412.85714 V 492.36218 C 329.04762,483.01246 245.23809,468.57773 161.42857,480.93361 Z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:47.21876907px;line-height:1.25;font-family:'Flanders Art Sans';-inkscape-font-specification:'Flanders Art Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.18046927"
+       x="11.578869"
+       y="-11.719202"
+       id="text2480"><tspan
+         sodipodi:role="line"
+         id="tspan2478"
+         x="11.578869"
+         y="-11.719202"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:FlandersArtSans-Regular;-inkscape-font-specification:FlandersArtSans-Regular;stroke-width:1.18046927">The      concept</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Flanders Art Serif';-inkscape-font-specification:'Flanders Art Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="16.570709"
+       y="47.370106"
+       id="text2510"><tspan
+         sodipodi:role="line"
+         id="tspan2508"
+         x="16.570709"
+         y="47.370106"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;font-family:FlandersArtSans-Regular;-inkscape-font-specification:FlandersArtSans-Regular;stroke-width:0.26458332">If you achieved a challenge    , add a          to </tspan><tspan
+         sodipodi:role="line"
+         x="16.570709"
+         y="72.064552"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;font-family:FlandersArtSans-Regular;-inkscape-font-specification:FlandersArtSans-Regular;stroke-width:0.26458332"
+         id="tspan2512">your laptop screen.</tspan></text>
+    <g
+       id="g3890"
+       transform="matrix(0.01224938,0,0,-0.01224938,246.86682,48.222237)"
+       style="fill:#000000;fill-opacity:1">
+      <path
+         style="fill:#000000;fill-opacity:1"
+         inkscape:connector-curvature="0"
+         id="path3892"
+         d="m 256,192 q 0,26 -19,45 -19,19 -45,19 -26,0 -45,-19 -19,-19 -19,-45 0,-26 19,-45 19,-19 45,-19 26,0 45,19 19,19 19,45 z m 1152,576 q 0,51 -39,89.5 -39,38.5 -89,38.5 H 928 q 0,58 48,159.5 48,101.5 48,160.5 0,98 -32,145 -32,47 -128,47 -26,-26 -38,-85 -12,-59 -30.5,-125.5 Q 777,1131 736,1088 714,1065 659,997 655,992 636,967 617,942 604.5,926 592,910 570,883.5 548,857 530,839.5 512,822 491.5,804 471,786 451.5,777 432,768 416,768 H 384 V 128 h 32 q 13,0 31.5,-3 18.5,-3 33,-6.5 14.5,-3.5 38,-11 Q 542,100 553.5,96 565,92 589,83.5 613,75 618,73 829,0 960,0 h 121 q 192,0 192,167 0,26 -5,56 30,16 47.5,52.5 17.5,36.5 17.5,73.5 0,37 -18,69 53,50 53,119 0,25 -10,55.5 -10,30.5 -25,47.5 32,1 53.5,47 21.5,46 21.5,81 z m 128,1 q 0,-89 -49,-163 9,-33 9,-69 0,-77 -38,-144 3,-21 3,-43 0,-101 -60,-178 1,-139 -85,-219.5 -86,-80.5 -227,-80.5 h -36 -93 q -96,0 -189.5,22.5 Q 677,-83 554,-40 438,0 416,0 H 128 Q 75,0 37.5,37.5 0,75 0,128 V 768 Q 0,821 37.5,858.5 75,896 128,896 h 274 q 36,24 137,155 58,75 107,128 24,25 35.5,85.5 11.5,60.5 30.5,126.5 19,66 62,108 39,37 90,37 84,0 151,-32.5 67,-32.5 102,-101.5 35,-69 35,-186 0,-93 -48,-192 h 176 q 104,0 180,-76 76,-76 76,-179 z" />
+    </g>
+    <g
+       id="g2980"
+       transform="translate(0,15.501632)">
+      <text
+         id="text2510-2"
+         y="116.1404"
+         x="15.504551"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Flanders Art Serif';-inkscape-font-specification:'Flanders Art Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           id="tspan2512-0"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;font-family:FlandersArtSans-Regular;-inkscape-font-specification:FlandersArtSans-Regular;stroke-width:0.26458332"
+           y="116.1404"
+           x="15.504551"
+           sodipodi:role="line">The real objective is that everyone achieves          !</tspan></text>
+      <g
+         transform="matrix(0.231546,0,0,0.231546,339.25931,22.192311)"
+         id="layer1-3-4-7">
+        <g
+           transform="matrix(0.9365417,0,0,0.9365417,18.623069,21.142942)"
+           id="g3243-3-4">
+          <path
+             inkscape:connector-curvature="0"
+             d="m 177.72699,486.38516 c 39.94517,-76.75054 44.71497,-83.9152 49.11762,-155.83199 l 152.27432,-32.01959 4.37283,160.12243 c -96.03964,3.59989 -113.51552,2.67987 -205.76477,27.72915 z"
+             id="path2393-7-1"
+             style="fill:#4d4d4d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3239-7-2)" />
+          <path
+             inkscape:connector-curvature="0"
+             d="M 161.42857,480.93361 C 207.8154,410.45742 192.30882,339.98123 207.14286,269.50504 H 412.85714 V 492.36218 C 329.04762,483.01246 245.23809,468.57773 161.42857,480.93361 Z"
+             id="path2383-1-7"
+             style="fill:url(#linearGradient2391-9-7);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g3223"
+       transform="translate(5.612098)">
+      <g
+         transform="translate(-2.6726953,-3.2072343)"
+         id="g3110">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.16666603px;line-height:1.75;font-family:'Flanders Art Serif';-inkscape-font-specification:'Flanders Art Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.29974374"
+           x="115.86703"
+           y="193.99298"
+           id="text2958"><tspan
+             sodipodi:role="line"
+             x="115.86703"
+             y="193.99298"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.16666603px;line-height:1.75;font-family:FlandersArtSans-Regular;-inkscape-font-specification:FlandersArtSans-Regular;text-align:center;text-anchor:middle;stroke-width:0.29974374"
+             id="tspan2990">Someone has more</tspan><tspan
+             sodipodi:role="line"
+             x="115.86703"
+             y="231.03465"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.16666603px;line-height:1.75;font-family:FlandersArtSans-Regular;-inkscape-font-specification:FlandersArtSans-Regular;text-align:center;text-anchor:middle;stroke-width:0.29974374"
+             id="tspan3095">        than you?<tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.16666603px;line-height:1.75;font-family:'Flanders Art Sans';-inkscape-font-specification:'Flanders Art Sans Bold';text-align:center;text-anchor:middle"
+   id="tspan3097"></tspan></tspan><tspan
+             id="tspan3114"
+             sodipodi:role="line"
+             x="115.86703"
+             y="268.07632"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.16666603px;line-height:1.75;font-family:FlandersArtSans-Regular;-inkscape-font-specification:FlandersArtSans-Regular;text-align:center;text-anchor:middle;stroke-width:0.29974374"><tspan
+   id="tspan3116"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.16666603px;line-height:1.75;font-family:'Flanders Art Sans';-inkscape-font-specification:'Flanders Art Sans Bold';text-align:center;text-anchor:middle">Ask</tspan><tspan
+   style="font-weight:bold;font-size:21.16666603px;line-height:1.75;text-align:center;text-anchor:middle"
+   id="tspan2982"> for help</tspan>!</tspan></text>
+        <g
+           id="layer1-3-4-2"
+           transform="matrix(0.20529439,0,0,0.20529439,4.7847152,146.49021)">
+          <g
+             id="g3243-3-45"
+             transform="matrix(0.9365417,0,0,0.9365417,18.623069,21.142942)">
+            <path
+               style="fill:#4d4d4d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3239-7-1)"
+               id="path2393-7-17"
+               d="m 177.72699,486.38516 c 39.94517,-76.75054 44.71497,-83.9152 49.11762,-155.83199 l 152.27432,-32.01959 4.37283,160.12243 c -96.03964,3.59989 -113.51552,2.67987 -205.76477,27.72915 z"
+               inkscape:connector-curvature="0" />
+            <path
+               style="fill:url(#linearGradient2391-9-3);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               id="path2383-1-5"
+               d="M 161.42857,480.93361 C 207.8154,410.45742 192.30882,339.98123 207.14286,269.50504 H 412.85714 V 492.36218 C 329.04762,483.01246 245.23809,468.57773 161.42857,480.93361 Z"
+               inkscape:connector-curvature="0" />
+          </g>
+        </g>
+      </g>
+      <g
+         transform="translate(29.399648,-1.5910884)"
+         id="g3196">
+        <g
+           transform="translate(212.79698,-1.6161459)"
+           id="g3110-7">
+          <text
+             id="text2958-4"
+             y="193.99298"
+             x="115.86703"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.16666603px;line-height:1.75;font-family:'Flanders Art Serif';-inkscape-font-specification:'Flanders Art Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.29974374"
+             xml:space="preserve"><tspan
+               id="tspan2990-1"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.16666603px;line-height:1.75;font-family:FlandersArtSans-Regular;-inkscape-font-specification:FlandersArtSans-Regular;text-align:center;text-anchor:middle;stroke-width:0.29974374"
+               y="193.99298"
+               x="115.86703"
+               sodipodi:role="line">Someone has less</tspan><tspan
+               id="tspan3095-1"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.16666603px;line-height:1.75;font-family:FlandersArtSans-Regular;-inkscape-font-specification:FlandersArtSans-Regular;text-align:center;text-anchor:middle;stroke-width:0.29974374"
+               y="231.03465"
+               x="115.86703"
+               sodipodi:role="line">        than you?<tspan
+   id="tspan3097-3"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.16666603px;line-height:1.75;font-family:'Flanders Art Sans';-inkscape-font-specification:'Flanders Art Sans Bold';text-align:center;text-anchor:middle" /></tspan><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.16666603px;line-height:1.75;font-family:FlandersArtSans-Regular;-inkscape-font-specification:FlandersArtSans-Regular;text-align:center;text-anchor:middle;stroke-width:0.29974374"
+               y="268.07632"
+               x="115.86703"
+               sodipodi:role="line"
+               id="tspan3114-0"><tspan
+   id="tspan2982-2"
+   style="font-weight:bold;font-size:21.16666603px;line-height:1.75;text-align:center;text-anchor:middle"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Flanders Art Sans';-inkscape-font-specification:'Flanders Art Sans Bold'"
+   id="tspan3182">Provide</tspan> help</tspan>!</tspan></text>
+          <g
+             transform="matrix(0.20529439,0,0,0.20529439,4.7847152,146.49021)"
+             id="layer1-3-4-2-17">
+            <g
+               transform="matrix(0.9365417,0,0,0.9365417,18.623069,21.142942)"
+               id="g3243-3-45-5">
+              <path
+                 inkscape:connector-curvature="0"
+                 d="m 177.72699,486.38516 c 39.94517,-76.75054 44.71497,-83.9152 49.11762,-155.83199 l 152.27432,-32.01959 4.37283,160.12243 c -96.03964,3.59989 -113.51552,2.67987 -205.76477,27.72915 z"
+                 id="path2393-7-17-6"
+                 style="fill:#4d4d4d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3239-7-1-0)" />
+              <path
+                 inkscape:connector-curvature="0"
+                 d="M 161.42857,480.93361 C 207.8154,410.45742 192.30882,339.98123 207.14286,269.50504 H 412.85714 V 492.36218 C 329.04762,483.01246 245.23809,468.57773 161.42857,480.93361 Z"
+                 id="path2383-1-5-5"
+                 style="fill:url(#linearGradient2391-9-3-0);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
