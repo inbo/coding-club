@@ -20,14 +20,16 @@
 *   Create new presentation in the [coding club > docs > sessions](https://github.com/inbo/coding-club/tree/master/docs/sessions) folder. Make a COPY of the [template presentation]({{ site.baseurl }}{% link sessions/template.html  %}), call the copy `yyyymmdd_topicname.html` and adapt to the requirements/needs of the session (don't take the template to rigid ;-). Slides are created in [remark](https://github.com/gnab/remark) and can be written as a markdown file. Note the extension is `html` to properly render in the webpage (more info [here](https://github.com/gnab/remark/wiki/Using-with-Jekyll)):
     *   To create the topic badge in green, we use [Inkscape](https://inkscape.org/en/). The source file is [here]({{ site.baseurl }}{% link /assets/images/coding_club_badges.svg %})
     *   Make sure to keep the sticky note concept slide as people may join the first time!
-    *   Create a new hackmd with [https://hackmd.io/new](https://hackmd.io/new), and update link to the new hackmd in the presentation and [in the session overview page]({{ site.baseurl }}{% link sessions/index.md  %}). You can use the [template](#hackmd-template) to add to the hackmd.
-
+    *   Create a new hackmd with [https://hackmd.io/new](https://hackmd.io/new), and update link to the new hackmd in the presentation. You can use the [template](#hackmd-template) to add to the hackmd.
 *   Set up 3 (we experienced that 3 is mostly enough for a 2 hour session) challenges with an increasing complexity:
     *   Explain the challenges in the slideshow
     *   Provide example solutions in a file `_yyyymmdd__challenges.R` for yourself
     *   If the challenge uses new datasets, add them to the [data](https://github.com/inbo/coding-club/tree/master/data) folder. Use consistent naming, e.g. `_yyyymmdd_description_with_underscores_and_lower_case.csv`_
-*   If a cheat sheet exists about the topic, download it and add it to the [cheatsheet folder](). Use consistent naming,`_YYYYMMDD_cheat_sheet_TOPIC.pdf`._
+* Update the [session overview page]({{ site.baseurl }}{% link sessions/index.md  %}) overview table with the date, topic name, slideshow link, hackmd link and location (room).
+*   If a cheat sheet exists about the topic, download it and add it to the [cheatsheet folder](https://github.com/inbo/coding-club/tree/master/cheat_sheets). Use consistent naming,`_yyyymmdd_cheat_sheet_TOPIC.pdf`._
 *   (Make sure all subscribers do have internet access, otherwise in HT provide them with internet access, https://bezoekers.vonet.be/)
+
+__Remark__, when creating links to other files, make sure to use the [jekyll link system](https://jekyllrb.com/docs/liquid/tags/#links) by combining the base url reference with the relative link, e.g. `{{ site.baseurl }}{% link _collection/name-of-document.md %}`
 
 #### Day of the coding club
 
@@ -58,7 +60,7 @@
 ### Invitation email example
 
 _change links to proper links_
-```
+
 If your unaware of the coding club existence, make sure to check the [coding club introduction page](https://inbo.github.io/coding-club/) on intranet. In short, the coding club is open to anyone who want to develop R skills in a pleasant and supportive environment to do research more effectively.
 
 The next coding club will take place on __Tuesday 26 February__, room 01.70 - Ferdinand Peeters at Herman Teirlinck (Tour & Taxis Brussels), 10-12h. The topic of this coding club is geospatial data handling in R and more specific working with simple features (sf), also known as vector data (cfr. stored in shapefiles or geojson files). Hence we will try to read in files, transform data, combine the spatial data with non-spatial data, etc. (Notice, making maps will be the topic of a follow-up coding club.)
@@ -71,37 +73,34 @@ See you all theRe in good shape,
 
 Dirk, Hans, Damiano, Stijn
 ![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
-```
 
 ### Hackmd template
 
-<code>
-# INBO CODING CLUB
-26 April, 2018
+    # INBO CODING CLUB
+    26 April, 2018
 
-Welcome!
+    Welcome!
 
-## Share your code snippet
+    ## Share your code snippet
 
-If you want to share your code snippet, copy paste your snippet within a section of three backticks (```):
+    If you want to share your code snippet, copy paste your snippet within a section of three backticks (```):
 
-As an **example**:
-```r
-library(tidyverse)
+    As an **example**:
+    ```r
+    library(tidyverse)
 
-...
-```
-(*you can copy paste this example and add your code further down, but do not fill in your code in this section*)
+    ...
+    ```
+    (*you can copy paste this example and add your code further down, but do not fill in your code in this section*)
 
-Your snippets:
+    Your snippets:
 
-### ADD A TITLE OF YOUR SNIPPET
+    ### ADD A TITLE OF YOUR SNIPPET
 
-```r
- # ADD YOUR CODE HERE
-```
+    ```r
+    # ADD YOUR CODE HERE
+    ```
 
-###...
+    ###...
 
-</code>
 
