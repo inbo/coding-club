@@ -12,6 +12,10 @@ a:hover, a:focus {
     font-weight: bold;
 }
 
+img {
+    max-width: 60%;
+}
+
 header img {
     max-width: 50%;
     display: block;
@@ -19,3 +23,4 @@ header img {
     margin-right: auto;
     padding: 20px;
 }
+
