@@ -2,4 +2,4 @@ title: INBO coding club
 logo: images/coding_club_logo_1.png
 description:
 show_downloads: true
-remote_theme: tdwg/tdwg-theme-jekyll
+theme: jekyll-theme-minimal
