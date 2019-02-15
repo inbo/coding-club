@@ -1,3 +1,7 @@
+---
+layout: home
+---
+
 # Coding club @INBO
 
 Welcome to the INBO coding club, a peer-learning R-group
@@ -8,7 +12,7 @@ In January 2018, inspired by other examples, some enthousiastic researchers at t
 
 It required a mission to be trustworthy:
 
-> The INBO Coding Club unites all ecologists, researchers and coders  who want to develop their (R) programming skills in a pleasant and supportive environment in order to replace the fear for coding with inspiration and motivation to learn. 
+> The INBO Coding Club unites all ecologists, researchers and coders  who want to develop their (R) programming skills in a pleasant and supportive environment in order to replace the fear for coding with inspiration and motivation to learn.
 
 ### So, what does this mean?
 
@@ -53,7 +57,7 @@ Bringing your own laptop is mandatory, as we will always work together on the co
 
 ### Who organises the coding club?
 
-The current core team members are Hans Van Calster (@hansvancalster), Dirk Maes, Joost Vanoverbeke, Damiano Oldoni (@damianooldoni) and Stijn Van Hoey (@stijnvanhoey). The core team is not there to make new course material, but focuses on the practical organisation. 
+The current core team members are Hans Van Calster (@hansvancalster), Dirk Maes, Joost Vanoverbeke, Damiano Oldoni (@damianooldoni) and Stijn Van Hoey (@stijnvanhoey). The core team is not there to make new course material, but focuses on the practical organisation.
 
 More specifically, the core team takes care of:
 
