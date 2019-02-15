@@ -1,4 +1,4 @@
-# Coding club @INBO
+# INBO Coding club
 
 The Research Institute for Nature and Forest (INBO) Coding Club unites all scientists of INBO and beyond who want to develop their programming skills in a pleasant and supportive environment to do research more effectively and reproducible. We focus on the R language and the scope is to manipulate and use (biodiversity) data to improve our data management skills and do research more efficiently.
 
