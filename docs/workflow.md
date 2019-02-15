@@ -23,7 +23,7 @@
     *   Create a new hackmd with [https://hackmd.io/new](https://hackmd.io/new), and update link to the new hackmd in the presentation. You can use the [template](#hackmd-template) to add to the hackmd.
 *   Set up 3 (we experienced that 3 is mostly enough for a 2 hour session) challenges with an increasing complexity:
     *   Explain the challenges in the slideshow
-    *   Provide example solutions in a file `_yyyymmdd__challenges.R` for yourself
+    *   Provide example solutions in a file `yyyymmdd_challenges.R` for yourself
     *   If the challenge uses new datasets, add them to the [data](https://github.com/inbo/coding-club/tree/master/data) folder. Use consistent naming, e.g. `yyyymmdd_description_with_underscores_and_lower_case.csv`
     * If useful, provide a script to get started and add it to the  [src](https://github.com/inbo/coding-club/tree/master/src) folder.
 * Update the [session overview page](https://github.com/inbo/coding-club/blob/master/docs/sessions/index.md) overview table with the date, topic name, slideshow link, hackmd link and location (room).
@@ -73,36 +73,36 @@ To subscribe, fill in your name on this [gsheet](https://docs.google.com/spreads
 See you all theRe in good shape,
 
 Dirk, Hans, Damiano, Stijn
-![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+![](/assets/images/coding_club_logo.png)
 
 ### Hackmd template
 
 
     # INBO CODING CLUB
     26 April, 2018
-    
+
     Welcome!
-    
+
     ## Share your code snippet
-    
+
     If you want to share your code snippet, copy paste your snippet within a section of three backticks (```):
-    
+
     As an **example**:
     ```r
     library(tidyverse)
-    
+
     ...
     ```
     (*you can copy paste this example and add your code further down, but do not fill in your code in this section*)
-    
+
     Your snippets:
-    
+
     ### ADD A TITLE OF YOUR SNIPPET
-    
+
     ```r
     # ADD YOUR CODE HERE
     ```
-    
+
     ###...
 
 
