@@ -61,7 +61,7 @@ More specifically, the core team takes care of:
 * thematic topics, working material and some challenges to work on
 * general agenda, taking into account the feedback of the participants
 
-### Did you figure that out all by yourself?
+### Did we figure that out all ourselves?
 
-No :smile:. We got inspired by foreign initiatives such as the [ourcodingclub Edinburgh](https://ourcodingclub.github.io/). Moreover, more and more initiatives illustrate that coding together can be effective to improve ecological/environmental research. Interesting reading material in that sense is the [Ocean Health Index project paper](https://www.nature.com/articles/s41559-017-0160) published in Nature Eccology & Evolution. The Software and Data Carpentry organisation proves that we all can overcome our fear to code. Their material is highly inspiring for setting up the challenges, e.g. the [ecology workshop](http://www.datacarpentry.org/lessons/#ecology-workshop).
+No :-). We got inspired by foreign initiatives such as the [ourcodingclub Edinburgh](https://ourcodingclub.github.io/). Moreover, more and more initiatives illustrate that coding together can be effective to improve ecological/environmental research. Interesting reading material in that sense is the [Ocean Health Index project paper](https://www.nature.com/articles/s41559-017-0160) published in Nature Eccology & Evolution. The Software and Data Carpentry organisation proves that we all can overcome our fear to code. Their material is highly inspiring for setting up the challenges, e.g. the [ecology workshop](http://www.datacarpentry.org/lessons/#ecology-workshop).
 
