@@ -24,19 +24,17 @@ header img {
     padding: 20px;
 }
 
-section.menu {
-    width:270px;
-    float:left;
-    position:fixed;
-    -webkit-font-smoothing:subpixel-antialiased;
-  }
-
 .menu ul {
     list-style: none;
     margin: 0;
-    text-align: right;
+    background: #ffffff!important;
+    border-radius:0px!important;
+    border:0px!important;
+    width: auto;
 }
 
 .menu li {
     text-transform: uppercase;
+    text-align: right;
+    display: block;
 }
