@@ -15,6 +15,7 @@ class: center, middle
     Note, to include figures, store the image in the `/docs/assets/images`
     folder and use the jekyll base.url reference as done in this template
     or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
 -->
 
 <!--  Adjust the day, month  -->
@@ -70,6 +71,9 @@ Go to https://hackmd.io/QTJz1R1IRtyqdXamsGpIfw
 
 ---
 background-image: {{ site.baseurl}}/assets/images/background_challenge_1.png
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
 class: center, middle
 
 
