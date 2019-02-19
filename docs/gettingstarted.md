@@ -2,13 +2,13 @@
 
 ## Introduction
 
-Welcome! We're glad you are interested in our exploration of R, coding and data analysis. The docing club is an environment where we experiment together, share code and learn from each other. Everyone has an equal say and can express themselves freely. We are convinced that everyone can learn from each other, irrespective of the experience. As a particant, we ask you to check and respect our [code of conduct](https://github.com/inbo/coding-club/blob/master/.github/CODE_OF_CONDUCT.md).
+Welcome! We're glad you are interested in our exploration of R, coding and data analysis. The coding club is an environment where we experiment together, share code and learn from each other. Everyone has an equal say and can express themselves freely. We are convinced that everyone can learn from each other, irrespective of the experience. As a particant, we ask you to check and respect our [code of conduct](https://github.com/inbo/coding-club/blob/master/.github/CODE_OF_CONDUCT.md).
 
 This page provides the information for first-time participants as well as some information to get you started for each new session. If anyhting is missing in these instructions, please raise an [New issue](https://github.com/inbo/coding-club/issues/new) on GitHub or [adapt the notes directly](https://github.com/inbo/coding-club/edit/master/docs/gettingstarted.md).
 
 ## Technical setup
 
-### First time installation
+### First time preparation
 
 * Install Rstudio: If you have admin rights on your computer, download the installer [here](https://www.rstudio.com/products/rstudio/download/#download). INBO employees, contact the [IT helpdesk](mailto:ict.helpdesk@inbo.be). After installation, [these instructions](https://inbo.github.io/tutorials/installation/user/user_install_rstudio/) (_in dutch_) will get you started.
 * Open Rstudio
@@ -42,10 +42,13 @@ __Note for git-users__ You can do `git pull origin master` (or click the `pull` 
 
 ## The challenges
 
-- sticky note concept:
+Each coding club session focuses on a specific theme with a number of challenges to solve. Altough we aim to solve these challenges by the end of the session, learning from each other is the main purpose. To achieve this, we use our home-brew _sticky note concept_:
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
 
+## Tips and tricks
 
-__Tip__ using Rstudio projects... Relative file names... read_csv("./) + ../  instead of setwd en C:/...
+__The power of TAB button__: When writing code in Rstudio, you can use the TAB button to autocomplete variables and function names!
+
+__No more `setwd`__: By using the Rstudio projects, you no longer need to use `setwd()`, or full file paths inside `read_csv()`-like functions. Instead, you can use a _relative file path_, e.g. `read_csv("data/mydatafile.csv)` instead of `read_csv("C://users/AnakinSkywalker/Documents/coding-club/data/mydatafile.csv)`. As such, it becomes much easier to share your code with others (having another folder structure on their computer). In case you need to refer to a parent folder using relative links, use two dots `../folder-name` to go up one folder level. Don't forget the power of the TAB button as well, as Rstudio will autocomplete file/folder names as well.
 

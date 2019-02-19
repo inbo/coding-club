@@ -1,4 +1,4 @@
-# Coding club @INBO
+# INBO Coding club
 
 Welcome to the INBO coding club, a peer-learning R-group
 

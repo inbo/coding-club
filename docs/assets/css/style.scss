@@ -12,8 +12,8 @@ a:hover, a:focus {
     font-weight: bold;
 }
 
-img {
-    max-width: 60%;
+header img {
+    max-width: 90%;
 }
 
 header img {
@@ -26,12 +26,6 @@ header img {
 
 header ul a strong {
     font-size: 13px;
-    display: block;
     color: #222;
 }
 
-header ul a:hover, strong {
-    font-size: 13px;
-    display: block;
-    color: #843860;
-}
