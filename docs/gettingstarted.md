@@ -8,9 +8,12 @@ This page provides the information for first-time participants as well as some i
 
 ## Technical setup
 
-### First time preparation
+### In advance
 
 * Install Rstudio: If you have admin rights on your computer, download the installer [here](https://www.rstudio.com/products/rstudio/download/#download). INBO employees, contact the [IT helpdesk](mailto:ict.helpdesk@inbo.be). After installation, [these instructions](https://inbo.github.io/tutorials/installation/user/user_install_rstudio/) (_in dutch_) will get you started.
+
+### First time setup
+
 * Open Rstudio
 * Within Rstudio, start a new Rstudio project:
     * Go to `File`  and choose `New Project...`
@@ -24,7 +27,7 @@ This page provides the information for first-time participants as well as some i
 
 __Note for git-users__: When familiar with Git, you can setup a coding club using the git-integration of Rstudio. Go to `File`  and choose `New Project...`. Pick `Version control`, next `Git`  and fill in the URL of the coding club in the `Repository URL`: `https://github.com/inbo/coding-club`
 
-### Each session
+### Each session setup
 
 * Open the existing Rstudio project called `coding-club`:
     * Go to `File`  and choose `Open Project...`
