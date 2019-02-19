@@ -22,7 +22,7 @@ This page provides the information for first-time participants as well as some i
     * a folder called `data`
     * a folder called `src`
 
-__Note for git-users__ When familiar with Git, you can setup a coding club using the git-integration of Rstudio. Go to `File`  and choose `New Project...`. Pick `Version control`, next `Git`  and fill in the URL of the coding club in the `Repository URL`: `https://github.com/inbo/coding-club`
+__Note for git-users__: When familiar with Git, you can setup a coding club using the git-integration of Rstudio. Go to `File`  and choose `New Project...`. Pick `Version control`, next `Git`  and fill in the URL of the coding club in the `Repository URL`: `https://github.com/inbo/coding-club`
 
 ### Each session
 
@@ -35,10 +35,9 @@ To complete the challenges, both data sets and R code are used in the sessions:
 * When data sets are used during the challenges: put data inside the `data` folder
 * When scripts are used during the challenges: put in `src` folder
 
-__How to download a single file__
-The links to the data sets and source code will be provided, e.g. [this script](https://github.com/inbo/coding-club/blob/master/src/20180821_challenge_1.R). Go to the page and look for the button `Raw` or `Download`. Next, right click on this button and choose `Save link as...` (or _Link opslaan als..._). Navigate to the respective folder (either `src` or `data`)
+__How to download a single file__? The links to the data sets and source code will be provided, e.g. [this script](https://github.com/inbo/coding-club/blob/master/src/20180821_challenge_1.R). Go to the page and look for the button `Raw` or `Download`. Next, right click on this button and choose `Save link as...` (or _Link opslaan als..._). Navigate to the respective folder (either `src` or `data`)
 
-__Note for git-users__ You can do `git pull origin master` (or click the `pull` button in the git tab) to download the new material.
+__Note for git-users__: You can do `git pull origin master` (or click the `pull` button in the git tab) to download the new material.
 
 ## The challenges
 
