@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="251.42857"
+   height="222.85715"
+   id="svg2">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient2385">
+      <stop
+         id="stop2387"
+         style="stop-color:#ffd42a;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop2389"
+         style="stop-color:#ffeeaa;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="324.25897"
+       y1="287.6767"
+       x2="194.45436"
+       y2="458.39249"
+       id="linearGradient2391"
+       xlink:href="#linearGradient2385"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       height="1.2372104"
+       y="-0.11860518"
+       width="1.2165596"
+       x="-0.10827981"
+       id="filter3239">
+      <feGaussianBlur
+         id="feGaussianBlur3241"
+         stdDeviation="9.2834045"
+         inkscape:collect="always" />
+    </filter>
+    <linearGradient
+       x1="324.25897"
+       y1="287.6767"
+       x2="194.45436"
+       y2="458.39249"
+       id="linearGradient3247"
+       xlink:href="#linearGradient2385"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     transform="translate(-161.42857,-269.50504)"
+     id="layer1">
+    <g
+       transform="matrix(0.9365417,0,0,0.9365417,18.623069,21.142942)"
+       id="g3243">
+      <path
+         d="M 177.72699,486.38516 C 217.67216,409.63462 222.44196,402.46996 226.84461,330.55317 L 379.11893,298.53358 L 383.49176,458.65601 C 287.45212,462.2559 269.97624,461.33588 177.72699,486.38516 z"
+         id="path2393"
+         style="fill:#4d4d4d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3239)" />
+      <path
+         d="M 161.42857,480.93361 C 207.8154,410.45742 192.30882,339.98123 207.14286,269.50504 L 412.85714,269.50504 L 412.85714,492.36218 C 329.04762,483.01246 245.23809,468.57773 161.42857,480.93361 z"
+         id="path2383"
+         style="fill:url(#linearGradient3247);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>
