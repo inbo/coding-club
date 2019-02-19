@@ -1,10 +1,8 @@
 # INBO Coding club
 
-Welcome to the INBO coding club, a peer-learning R-group
-
 ## Introduction
 
-In January 2018, inspired by other examples, some enthousiastic researchers at the Research Institute for Nature and Forest (INBO) started a coding club at INBO.
+Welcome to the INBO coding club, a peer-learning R-group. In January 2018, inspired by other examples, some enthousiastic researchers at the Research Institute for Nature and Forest (INBO) started a coding club at INBO.
 
 It required a mission to be trustworthy:
 

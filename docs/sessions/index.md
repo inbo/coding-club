@@ -15,7 +15,7 @@
 | 2018-04-26 | dates & strings | [slides](https://drive.google.com/open?id=1KjO34YIAfYVm6DjpATiQHzjLYMTdduNwY_Abxw96GUI) | [hackmd](https://hackmd.io/aPEFORMXSIOeEycsDsSTqw) | 01.21 - Jeanne Brabants |
 | 2018-03-20 | data manipulation | [slides](https://drive.google.com/open?id=1fBH-Jy6Xwcrl2KARFlGDBNRYhTH0-cWLiZhNxIyFfxc) | [hackmd](https://hackmd.io/7Yd3NsCFTwqHbRnHZbhlzg) | 01.17 - Clara Peeters |
 | 2018-02-22 | data manipulation | [slides](https://drive.google.com/open?id=1iH9X5Nu1BpYL8u47isWsZqw-19OjdZiTl0CopK0xVUs) | [hackmd](https://hackmd.io/Di6qnl7QS-mW8taTEezoVQ) | 01.71 - Frans Breziers |
-| 2018-01-23 | import data | [slides](https://drive.google.com/open?id=1ArVtIat5lSvcYkcwawsCmML5snL1EyGKHlt49wRxU9o) | [hackmd](https://hackmd.io/7jIfz3LMRb-EMrtAfCNlzQ) | 00.48 - Keldermans |
+| 2018-01-23 | import data | [slides]({{ site.baseurl }}{% link sessions/20180123_coding_club_import_data.pdf  %}) | [hackmd](https://hackmd.io/7jIfz3LMRb-EMrtAfCNlzQ) | 00.48 - Keldermans |
 
 
 ## Next sessions...
