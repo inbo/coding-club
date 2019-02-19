@@ -23,3 +23,14 @@ header img {
     margin-right: auto;
     padding: 20px;
 }
+
+header ul a strong {
+    font-size: 13px;
+    display: block;
+    color: #222;
+}
+
+header ul a:hover, a:focus strong {
+    font-size: 13px;
+    color: #843860;
+}
