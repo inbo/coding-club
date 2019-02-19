@@ -30,7 +30,8 @@ header ul a strong {
     color: #222;
 }
 
-header ul a:hover, a:focus strong {
+header ul a:hover, strong {
     font-size: 13px;
+    display: block;
     color: #843860;
 }
