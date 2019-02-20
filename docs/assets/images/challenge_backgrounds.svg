@@ -16,7 +16,10 @@
    version="1.1"
    id="svg838"
    inkscape:version="0.92.4 (33fec40, 2019-01-16)"
-   sodipodi:docname="challenge_backgrounds.svg">
+   sodipodi:docname="challenge_backgrounds.svg"
+   inkscape:export-filename="/home/stijn_vanhoey/githubs/project_coding-club/docs/assets/images/background_challenge_1.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs832">
     <filter
@@ -49,6 +52,85 @@
          style="stop-color:#ffeeaa;stop-opacity:1"
          offset="1" />
     </linearGradient>
+    <filter
+       height="1.2372104"
+       y="-0.11860518"
+       width="1.2165596"
+       x="-0.10827981"
+       id="filter3239-6">
+      <feGaussianBlur
+         id="feGaussianBlur3241-7"
+         stdDeviation="9.2834045"
+         inkscape:collect="always" />
+    </filter>
+    <linearGradient
+       x1="324.25897"
+       y1="287.6767"
+       x2="194.45436"
+       y2="458.39249"
+       id="linearGradient3247-5"
+       xlink:href="#linearGradient2385"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       height="1.2372104"
+       y="-0.11860518"
+       width="1.2165596"
+       x="-0.10827981"
+       id="filter3239-6-2">
+      <feGaussianBlur
+         id="feGaussianBlur3241-7-7"
+         stdDeviation="9.2834045"
+         inkscape:collect="always" />
+    </filter>
+    <linearGradient
+       x1="324.25897"
+       y1="287.6767"
+       x2="194.45436"
+       y2="458.39249"
+       id="linearGradient3247-5-0"
+       xlink:href="#linearGradient2385"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       height="1.2372104"
+       y="-0.11860518"
+       width="1.2165596"
+       x="-0.10827981"
+       id="filter3239-6-2-6">
+      <feGaussianBlur
+         id="feGaussianBlur3241-7-7-1"
+         stdDeviation="9.2834045"
+         inkscape:collect="always" />
+    </filter>
+    <linearGradient
+       x1="324.25897"
+       y1="287.6767"
+       x2="194.45436"
+       y2="458.39249"
+       id="linearGradient3247-5-0-8"
+       xlink:href="#linearGradient2385"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       height="1.2372104"
+       y="-0.11860518"
+       width="1.2165596"
+       x="-0.10827981"
+       id="filter3239-6-20">
+      <feGaussianBlur
+         id="feGaussianBlur3241-7-2"
+         stdDeviation="9.2834045"
+         inkscape:collect="always" />
+    </filter>
+    <filter
+       height="1.2372104"
+       y="-0.11860518"
+       width="1.2165596"
+       x="-0.10827981"
+       id="filter3239-7">
+      <feGaussianBlur
+         id="feGaussianBlur3241-5"
+         stdDeviation="9.2834045"
+         inkscape:collect="always" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -87,7 +169,7 @@
      id="layer1"
      transform="translate(0,46.95835)">
     <g
-       transform="matrix(0.26458333,0,0,0.26458333,304.43459,-109.60187)"
+       transform="matrix(0.13911715,0,0,0.13911715,358.30746,-77.171022)"
        id="layer1-3">
       <g
          transform="matrix(0.9365417,0,0,0.9365417,18.623069,21.142942)"
