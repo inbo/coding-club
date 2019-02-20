@@ -71,12 +71,12 @@ class: left, middle
 
 # Challenge 1
 
-- From [EAA internet site](https://www.eea.europa.eu/data-and-maps/data/eea-reference-grids-2) download the shapefile of Belgium (zipped file). It contains the grids of Belgium at 1, 10 and 100 km resolution. Place the zip file `Belgium_shapefile.zip` in `./data` and extract all in subfolder `./data/Belgium_shapefile/`.
-- Download R file `./src/20190228_challenge_1.R` and run it.
+- Download the `./data/20190228_utm10_bel.zip`. It contains the EAA reference grid of Belgium at 10km resolution. Download it in folder `./data` and extract all in subfolder `./data/20190228_utm10_bel/`.
+- Download R file `./src/20190228_challenge_1.R` and run it to get occurrences of Chinese mitten crabs in Belgium with valid coordinates.
 
 Challenge:
-1. Read shapefile with `sf` function. Check [documentation](https://r-spatial.github.io/sf/articles/sf2.html) how to do it.
-2. Create a `sf` data.frame `spatial_crab_df` from `crab_df`. Assign the Coordinate Reference System (CRS) of GBIF data: `epsg=4326`. Check [documentation](https://r-spatial.github.io/sf/articles/sf2.html)
+1. Read the reference grid with `sf` package. Check [documentation](https://r-spatial.github.io/sf/articles/sf2.html) on how to do it.
+2. Create a `sf` data.frame, `spatial_crab_df`, from `crab_df`. Assign the Coordinate Reference System (CRS) of GBIF data: `epsg=4326`. Check [documentation](https://r-spatial.github.io/sf/articles/sf2.html).
 3. Compare the CRS of occurrences and grid. Use the [sf cheatsheet].
 
 ---
