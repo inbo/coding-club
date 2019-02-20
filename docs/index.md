@@ -21,7 +21,7 @@ In the coding club, we will talk about:
 - How to read the data from this awkward text format provided by VMM?
 - What is the purpose of the `%>%` operator?
 - How can I JOIN two tables in R?
-- How to convert some scatterd code into a reusable R function?
+- How to convert some scattered code into a reusable R function?
 - How to wrangle my data to a format that can be used as input for a glm?
 - How to extract data from a database using R
 - How to setup a Rmarkdown file mixing text and code?
@@ -61,7 +61,7 @@ More specifically, the core team takes care of:
 
 Check [this page]({{ site.baseurl }}{% link workflow.md  %}) to see the step-by-step workflow to organize an INBO coding club.
 
-### Did we figure that out all ourselves?
+### Did we figure that out ourselves?
 
 No :-). We got inspired by foreign initiatives such as the [ourcodingclub Edinburgh](https://ourcodingclub.github.io/). Moreover, more and more initiatives illustrate that coding together can be effective to improve ecological/environmental research. Interesting reading material in that sense is the [Ocean Health Index project paper](https://www.nature.com/articles/s41559-017-0160) published in Nature Eccology & Evolution. The Software and Data Carpentry organisation proves that we all can overcome our fear to code. Their material is highly inspiring for setting up the challenges, e.g. the [ecology workshop](http://www.datacarpentry.org/lessons/#ecology-workshop).
 
