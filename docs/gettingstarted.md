@@ -4,7 +4,7 @@
 
 Welcome! We're glad you are interested in our exploration of R, coding and data analysis. The coding club is an environment where we experiment together, share code and learn from each other. Everyone has an equal say and can express themselves freely. We are convinced that everyone can learn from each other, irrespective of the experience. As a particant, we ask you to check and respect our [code of conduct](https://github.com/inbo/coding-club/blob/master/.github/CODE_OF_CONDUCT.md).
 
-This page provides the information for first-time participants as well as some information to get you started for each new session. If anyhting is missing in these instructions, please raise an [New issue](https://github.com/inbo/coding-club/issues/new) on GitHub or [adapt the notes directly](https://github.com/inbo/coding-club/edit/master/docs/gettingstarted.md).
+This page provides the information for first-time participants as well as some information to get you started for each new session. If anyhting is missing in these instructions, please raise a [New issue](https://github.com/inbo/coding-club/issues/new) on GitHub or [adapt the notes directly](https://github.com/inbo/coding-club/edit/master/docs/gettingstarted.md).
 
 ## Technical setup
 
@@ -20,8 +20,9 @@ This page provides the information for first-time participants as well as some i
     * Pick `New directory`
     * Pick `New project`
     * Fill in the Directory name `coding-club`. You can choose the location on your computer (`Create project as subdirectory of:`) yourself by browsing to a folder. Leave the options `Create git repository` and  `use packrat with this project` empty.
+    * Click `Create project` (Rstudio will now open in the newly created project)
 * Still within Rstudio, install some essential packages by typing the following command in the `Console`: `install.packages("tidyverse")` and clicking ENTER button.
-* Using file explorer, navigate to your `coding-club` folder and create two (empty) subfolders inside the directory of your new `coding-club` directory:
+* Using file explorer (you can either use your operating systems file explorer or Rstudio's file explorer which is in the `Files` pane), navigate to your `coding-club` folder and create two (empty) subfolders inside the directory of your new `coding-club` directory:
     * a folder called `data`
     * a folder called `src`
 
@@ -36,7 +37,7 @@ __Note for git-users__: When familiar with Git, you can setup a coding club usin
 
 To complete the challenges, both data sets and R code are used in the sessions:
 * When data sets are used during the challenges: put data inside the `data` folder
-* When scripts are used during the challenges: put in `src` folder
+* When scripts are used during the challenges: put them in the `src` folder
 
 __How to download a single file__? The links to the data sets and source code will be provided, e.g. [this script](https://github.com/inbo/coding-club/blob/master/src/20180821_challenge_1.R). Go to the page and look for the button `Raw` or `Download`. Next, right click on this button and choose `Save link as...` (or _Link opslaan als..._). Navigate to the respective folder (either `src` or `data`) and save the file.
 
@@ -50,7 +51,7 @@ Each coding club session focuses on a specific theme with a number of challenges
 
 ## Tips and tricks
 
-__The power of TAB button__: When writing code in Rstudio, you can use the TAB button to autocomplete variables and function names!
+__The power of TAB button__: When writing code in Rstudio, you can use the TAB keyboard-button to autocomplete variables and function names!
 
 __No more `setwd`__: By using the Rstudio projects, you no longer need to use `setwd()`, or full file paths inside `read_csv()`-like functions. Instead, you can use a _relative file path_, e.g. `read_csv("data/mydatafile.csv)` instead of `read_csv("C://users/AnakinSkywalker/Documents/coding-club/data/mydatafile.csv)`. As such, it becomes much easier to share your code with others (having another folder structure on their computer). In case you need to refer to a parent folder using relative links, use two dots `../folder-name` to go up one folder level. Don't forget the power of the TAB button as well, as Rstudio will autocomplete file/folder names as well.
 
