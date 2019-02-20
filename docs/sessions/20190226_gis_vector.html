@@ -23,14 +23,6 @@ class: center, middle
 ---
 class: left, middle
 
-### CRS
-
-No geospatial data without specifying the Coordinate Reference System you work with!<br>
-See [video](https://youtu.be/KUF_Ckv8HbE) from [tutorial](https://www.earthdatascience.org/courses/earth-analytics/spatial-data-r/intro-to-coordinate-reference-systems/).
-
----
-class: left, middle
-
 Install the package:
 ```r
 install.packages("sf")
@@ -45,7 +37,7 @@ library(sf)
 class: center, middle
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20190226_cheasheet.png)<br />
-[`sf` cheasheet]("../../cheat_sheets/20190226_cheat_sheet_sf/pdf")
+[`sf` cheasheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20190226_cheat_sheet_sf.pdf)
 
 ---
 class: center, middle
@@ -85,7 +77,15 @@ class: left, middle
 Challenge:
 1. Read the reference grid with `sf` package. Check [documentation](https://r-spatial.github.io/sf/articles/sf2.html) on how to do it.
 2. Create a `sf` data.frame, `spatial_crab_df`, from `crab_df` with CRS: `epsg=4326`, the CRS used by GBIF. Check [documentation](https://r-spatial.github.io/sf/articles/sf2.html).
-3. Compare the CRS of occurrences and grid. Use the [sf cheatsheet].
+3. Compare the CRS of occurrences and grid. Use the [`sf` cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20190226_cheat_sheet_sf.pdf).
+
+---
+class: left, middle
+
+### CRS
+
+No geospatial data without specifying the Coordinate Reference System you work with!<br>
+See [video](https://youtu.be/KUF_Ckv8HbE) from [tutorial](https://www.earthdatascience.org/courses/earth-analytics/spatial-data-r/intro-to-coordinate-reference-systems/).
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -93,7 +93,7 @@ class: left, middle
 
 # Challenge 2
 
-1. How many occurrences of Chinese mitten crab in each cell from 2015? Hint: Use [`sf` cheasheet]("../../cheat_sheets/20190226_cheat_sheet_sf/pdf") to find how to *intersect* geometries.
+1. How many occurrences of Chinese mitten crab in each cell from 2015? Hint: Use [`sf` cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20190226_cheat_sheet_sf.pdf) to find how to *intersect* geometries.
 2. Find the 5 cells with the highest number of occurrences.
 
 
