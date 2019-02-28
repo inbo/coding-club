@@ -32,7 +32,7 @@ Have an idea to improve the content or organization of the coding club? You have
 
 ### Improve the documentation 📖
 
-Noticed a typo on the website? You had problems to get started or setup? Good documentation makes all the difference, so your help to improve it is very welcome! [This website][website] is generated and hosted by GitHub by the files and folders inside the `docs` folder. Hence, By editing the markdown pages in the `docs` folder , you can directly propose improvements. If things did not work out, [report an issue][new_issue] and we can point you in the right direction.
+Noticed a typo on the website? Encountered problems getting started? Good documentation makes all the difference, so your help to improve it is very welcome! [This website][website] is generated and hosted by GitHub by the files and folders inside the `docs` folder. Hence, by editing the markdown pages in the `docs` folder , you can directly propose improvements. If things did not work out, [report an issue][new_issue] and we can point you in the right direction.
 
 ## Acknowledgements
 
