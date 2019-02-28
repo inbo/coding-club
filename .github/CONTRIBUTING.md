@@ -38,4 +38,3 @@ Noticed a typo on the website? Encountered problems getting started? Good docume
 
 These contributing guidelines are based on the `CONTRIBUTING.md` template for R packages by [Peter Desmet](https://gist.github.com/peterdesmet/e90a1b0dc17af6c12daf6e8b2f044e7c).
 
-
