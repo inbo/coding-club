@@ -149,17 +149,27 @@ class: left, middle
 
 # Challenge 3
 
-Leaflet can also integrate existing online maps (e.g. WMS services) on the fly. [This tutorial](https://inbo.github.io/tutorials/tutorials/spatial_wms_services/#as-background-of-interactive-maps)
-on the INBO tutorials website explains how to add a WMS service to your map.
+- Click [`20190321_crab_occurrences_2015.csv`](https://github.com/inbo/coding-club/blob/master/data/20190321_crab_occurrences_2015.csv) and download data file to `./data` folder.
+- Add occurrences from 2015 as circles in a leaflet map
+- Provide popups with information on the date of occurrence
+- Make sure the plot focuses on a small region around coordinate 51.1373384, 4.2813167
+- Leaflet can also integrate existing online maps (e.g. WMS services) on the fly. Add WMS services from the Flemish environmental agency (VMM) about water as
+layers to the leaflet map.
 
-- Click [`20190321_crab_occurrences_2015.csv`](https://github.com/inbo/coding-club/blob/master/data/20190321_crab_occurrences_2015.csv) and download* data file to `./data` folder.
-- Add occurrences from 2015 as markers/circles on the map
-- Provide popup
-- Make sure the plot focuses on region around coordinate 51.1373384, 4.2813167
-- Add WMS services on rivers in Flanders as optional layers to the map
+__Tip__:  [This tutorial](https://inbo.github.io/tutorials/tutorials/spatial_wms_services/#as-background-of-interactive-maps)
+on the INBO tutorials website explains how to add a WMS service to your leaflet map. The layers you can choice from the [VMM webservice](http://www.geopunt.be/catalogus/webservicefolder/4d361174-860d-ee21-4b3e-cafc-a2fc-2151-d3f42167) can be retrieved
+from [this page](https://geoservices.informatievlaanderen.be/raadpleegdiensten/VMM/wms?service=WMS&version=1.3.0&request=GetCapabilities). The pattern to
+look for is:
 
-http://www.geopunt.be/catalogus/webservicefolder/4d361174-860d-ee21-4b3e-cafc-a2fc-2151-d3f42167
-https://geoservices.informatievlaanderen.be/raadpleegdiensten/VMM/wms?service=WMS&version=1.3.0&request=GetCapabilities
+```
+...
+<Layer queryable="1">
+    <Name>Oppwwin</Name>
+    <Title>Oppervlaktewaterwingebieden drinkwater</Title>
+...
+```
+
+from which the text within `<Name>....</Name>` (in this case `Oppwwin`) is the layer name to use in the code.
 
 ---
 class: center, middle
