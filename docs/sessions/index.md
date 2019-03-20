@@ -3,6 +3,7 @@
 
 |date | topic | slideshow | hackmd | location |
 | --- | ----- | ----------| ------ | -------  |
+| 2019-03-21 | making maps | [slides]({{ site.baseurl }}{% link sessions/20190321_gis_maps.html  %}) | [hackmd](https://hackmd.io/lWGlTDsuTOi0s4SVcAj6aA) | 01.71 - Frans Breziers |
 | 2019-02-26 | geospatial analysis | [slides]({{ site.baseurl }}{% link sessions/20190226_gis_vector.html  %}) | [hackmd](https://hackmd.io/PbkFYUshQmS3pRdEZ6XJeg?both) | 01.70 - Ferdinand Peeters |
 | 2019-01-24 | tidy data representation | [slides]({{ site.baseurl }}{% link sessions/20190124_tidy_data_representation.pdf  %}) | [hackmd](https://hackmd.io/QTJz1R1IRtyqdXamsGpIfw) | 01.71 - Frans Breziers |
 | 2018-12-18 | computer says no | [slides]({{ site.baseurl }}{% link sessions/20181218_coding_club_error_handling.pdf  %}) | [hackmd](https://hackmd.io/wz_7_fCJTxWpFL23bklbjg) | 01.23 - Léon Stynen |
