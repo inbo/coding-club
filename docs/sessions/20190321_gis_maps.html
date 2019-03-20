@@ -61,26 +61,6 @@ devtools::install_github("tidyverse/dplyr")
 ---
 class: center, middle
 
-Install other packages:
-
-```
-install.packages(c("leaflet", "htmltools"))
-install.packages("BelgiumMaps.StatBel", repos = "http://www.datatailor.be/rcube", type = "source")
-```
-
-Load the packages:
-
-```
-library(sf)
-library(tidyverse)
-library(BelgiumMaps.StatBel)
-library(leaflet)
-library(htmltools)
-```
-
----
-class: center, middle
-
 ![:scale 90%]({{ site.baseurl}}/assets/images/20190321_cheat_sheet_leaflet_preview.png)<br />
 [`leaflet` cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20190321_cheat_sheet_leaflet.pdf)
 
@@ -111,20 +91,46 @@ Go to https://hackmd.io/lWGlTDsuTOi0s4SVcAj6aA
 <iframe src="https://hackmd.io/lWGlTDsuTOi0s4SVcAj6aA" height="400px" width="800px"></iframe>
 
 ---
+class: left, middle
+
+### Install required packages:
+
+```r
+devtools::install_github("tidyverse/dplyr")
+install.packages(c("sf", "leaflet", "htmltools"))
+install.packages("BelgiumMaps.StatBel",
+                 repos = "http://www.datatailor.be/rcube",
+                 type = "source")
+```
+
+### Load the required packages:
+
+```r
+library(sf)
+library(tidyverse)
+library(BelgiumMaps.StatBel)
+library(leaflet)
+library(htmltools)
+```
+
+---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
 class: left, middle
 
 # Challenge 1
 
-- Download [`20190321_n_crabs_provinces.csv`](https://github.com/inbo/coding-club/blob/master/data/20190321_n_crabs_provinces.csv) in your folder `./data`.
-- Download R file [`20190321_challenge.R`](https://github.com/inbo/coding-club/blob/master/src/20190331_challenge.R) in your folder `./src` and run it.
+- Click [`20190321_n_crabs_provinces.csv`](https://github.com/inbo/coding-club/blob/master/data/20190321_n_crabs_provinces.csv) and download* data file to `./data` folder.
+- Click [`20190321_challenge.R`](https://github.com/inbo/coding-club/blob/master/src/20190321_challenges.R) and download* script in `./src` folder.
 
 Challenge:
-1. Assign color to the provinces based on number of crab occurrences in 2016
 
-Tip: [ggplot_with_geom_sf()](https://workshop.mhermans.net/thematic-maps-r/04_plot.html#ggplot_with_geom_sf())
+Start from the [`20190321_challenge.R`](https://github.com/inbo/coding-club/blob/master/src/20190321_challenges.R) file.
+For the data of 2016 only, make a [choropleth map](https://en.wikipedia.org/wiki/Choropleth_map) with ggplot. In other words,
+join the crab data to the provinces map and assign a color to each of the provinces map proportional to the number of crab occurrences in 2016.
 
-<small>note: check [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+Tip: [Check the tutorial on ggplot_with_geom_sf](https://workshop.mhermans.net/thematic-maps-r/04_plot.html#ggplot_with_geom_sf())
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
