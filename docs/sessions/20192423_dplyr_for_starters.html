@@ -31,7 +31,7 @@ Herman Teirlinck<br>
 class: center, middle
 
 <!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
-![:scale 90%]({{ site.baseurl}}/assets/images/20190321_creating_maps.png)
+![:scale 90%]({{ site.baseurl}}/assets/images/20190423_dplyr_starters.png)
 
 ---
 class: center, middle
@@ -67,30 +67,47 @@ Go to https://hackmd.io/f_obNpkVSRedTcb19kP8Og
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
-class: center, middle
+class: left, middle
 
 # Challenge 1
 
-<!-- Add your challenge here. For each script and data file,
-    link to the file in the Github repo -->
+- Click [`20190423_species.csv`](https://github.com/inbo/coding-club/blob/master/data/20190423_species.csv) and download* data file to `./data` folder.
+- Click [`20190423_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190423_challenges.R) and download* script in `./src` folder.
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+- Open the [`20190423_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190423_challenges.R) file.
+- Extract the columns: `scientificName, decimalLatitude, decimalLongitude, coordinateUncertaintyInMeters, eventDate, year, identifiedBy, speciesKey and issue` for the observations...
+    - observed in June
+    - from either `Lycopus europaeus`, `Phragmites australis`, `Cymatia bonsdorffi` or `Lemna minor`
+    - where `issue` (column in table) is `NA`
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
-class: center, middle
+class: left, middle
 
 # Challenge 2
 
-<!-- Add your challenge here. For each script and data file,
-    link to the file in the Github repo -->
+- In the `occs` data.frame, create a new column, called `grid_resolution_km`, which calculates the grid resolution using the `coordinateUncertaintyInMeters` information. To get
+the grid resolution from the uncertainty in meter use the following: `gridresolution = sqrt(2) * coordinateUncertaintyInMeters/1000`
+- Sort the columns from newest to oldest observation
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
-class: center, middle
+class: left, middle
 
 # Challenge 3
 
-<!-- Add your challenge here. For each script and data file,
-    link to the file in the Github repo -->
+- In the `occs` data.frame, how many observations (count the number of rows) are available _for each_ year?
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3 - BONUS
+
+- Click [`20180222_surveys.csv`](https://github.com/inbo/coding-club/blob/master/data/20180222_surveys.csv) and download* data file to `./data` folder.
+- Calculate the median, mean and number of records _for each_ identifier in the `species_id` column
 
 ---
 class: center, middle
