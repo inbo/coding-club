@@ -457,11 +457,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="774.74781"
-     inkscape:cy="120.50055"
+     inkscape:zoom="1.4"
+     inkscape:cx="961.42111"
+     inkscape:cy="156.72463"
      inkscape:document-units="px"
-     inkscape:current-layer="g5530-1-0-93-9-2"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1869"
      inkscape:window-height="1056"
@@ -1494,8 +1494,8 @@
            sodipodi:role="line">MAPS</tspan></text>
     </g>
     <rect
-       inkscape:export-ydpi="199.98146"
-       inkscape:export-xdpi="199.98146"
+       inkscape:export-ydpi="199.981"
+       inkscape:export-xdpi="199.981"
        y="871.84717"
        x="756.14642"
        height="132.01224"
@@ -1504,8 +1504,8 @@
        style="opacity:1;fill:#000000;fill-opacity:0;stroke:#c2c444;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter10317-3-8-3-1-367-3)"
        inkscape:export-filename="/home/stijn_vanhoey/projecten/2018_coding_club/images/2019032_creating_maps.png" />
     <rect
-       inkscape:export-ydpi="199.98146"
-       inkscape:export-xdpi="199.98146"
+       inkscape:export-ydpi="199.981"
+       inkscape:export-xdpi="199.981"
        y="871.84717"
        x="756.14642"
        height="132.01228"
@@ -1517,8 +1517,8 @@
        id="g5530-1-0-93-9"
        transform="matrix(0.97703692,0,0,0.97703692,737.04409,8.9667666)"
        inkscape:export-filename="/home/stijn_vanhoey/projecten/2018_coding_club/images/2019032_creating_maps.png"
-       inkscape:export-xdpi="199.98146"
-       inkscape:export-ydpi="199.98146">
+       inkscape:export-xdpi="199.981"
+       inkscape:export-ydpi="199.981">
       <text
          id="text10220-1-3-2-9-6-1"
          y="929.40143"
@@ -1550,8 +1550,8 @@
        id="g5530-1-0-93-9-2"
        transform="translate(730.4326,25.150131)"
        inkscape:export-filename="/home/stijn_vanhoey/projecten/2018_coding_club/images/2019032_creating_maps.png"
-       inkscape:export-xdpi="199.98146"
-       inkscape:export-ydpi="199.98146">
+       inkscape:export-xdpi="199.981"
+       inkscape:export-ydpi="199.981">
       <text
          id="text10220-1-3-2-9-6-1-6"
          y="919.70428"
