@@ -4,7 +4,7 @@
 |date | topic | slideshow | hackmd | location |
 | --- | ----- | ----------| ------ | -------  |
 | 2019-05-23 | connect to inbo database | [slides]({{ site.baseurl }}{% link sessions/20190523_connect_inbo_dbase.html  %}) | [hackmd](https://hackmd.io/pcYIBNEJScGDEeIvc9LOEg) | 01.70 - Ferdinand Peters |
-| 2019-04-23 | dplyr for starters | [slides]({{ site.baseurl }}{% link sessions/20192423_dplyr_for_starters.html  %}) | [hackmd](https://hackmd.io/f_obNpkVSRedTcb19kP8Og) | 01.70 - Ferdinand Peters |
+| 2019-04-23 | dplyr for starters | [slides]({{ site.baseurl }}{% link sessions/20190423_dplyr_for_starters.html  %}) | [hackmd](https://hackmd.io/f_obNpkVSRedTcb19kP8Og) | 01.70 - Ferdinand Peters |
 | 2019-03-21 | making maps | [slides]({{ site.baseurl }}{% link sessions/20190321_gis_maps.html  %}) | [hackmd](https://hackmd.io/lWGlTDsuTOi0s4SVcAj6aA) | 01.71 - Frans Breziers |
 | 2019-02-26 | geospatial analysis | [slides]({{ site.baseurl }}{% link sessions/20190226_gis_vector.html  %}) | [hackmd](https://hackmd.io/PbkFYUshQmS3pRdEZ6XJeg?both) | 01.70 - Ferdinand Peeters |
 | 2019-01-24 | tidy data representation | [slides]({{ site.baseurl }}{% link sessions/20190124_tidy_data_representation.pdf  %}) | [hackmd](https://hackmd.io/QTJz1R1IRtyqdXamsGpIfw) | 01.71 - Frans Breziers |
