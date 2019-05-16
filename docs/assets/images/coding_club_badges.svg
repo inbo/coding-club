@@ -449,6 +449,38 @@
          result="composite2"
          id="feComposite10327-5-7-5-2-1-5" />
     </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter10317-3-8-3-1-367-3-3">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood10319-6-9-6-4-5-6-6" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite10321-7-0-7-38-3-7-7" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="3"
+         result="blur"
+         id="feGaussianBlur10323-5-6-5-5-56-5-5" />
+      <feOffset
+         dx="0"
+         dy="0"
+         result="offset"
+         id="feOffset10325-3-8-3-64-29-3-3" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite10327-5-7-5-2-1-5-5" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -458,8 +490,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="961.42111"
-     inkscape:cy="156.72463"
+     inkscape:cx="782.84968"
+     inkscape:cy="-242.56108"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1578,6 +1610,90 @@
            y="1002.9186"
            x="133.93565"
            sodipodi:role="line" /></text>
+    </g>
+    <g
+       id="g1145"
+       inkscape:export-xdpi="199.98271"
+       inkscape:export-ydpi="199.98271">
+      <rect
+         inkscape:export-filename="/home/stijn_vanhoey/projecten/2018_coding_club/images/2019032_creating_maps.png"
+         style="opacity:1;fill:#000000;fill-opacity:0;stroke:#c2c444;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter10317-3-8-3-1-367-3-3)"
+         id="rect4136-9-2-3-0-2-0-2-6-27-6-6"
+         width="223.42148"
+         height="132.01224"
+         x="768.19995"
+         y="1088.8114"
+         inkscape:export-xdpi="199.981"
+         inkscape:export-ydpi="199.981" />
+      <rect
+         inkscape:export-filename="/home/stijn_vanhoey/projecten/2018_coding_club/images/2019032_creating_maps.png"
+         style="opacity:1;fill:#c2c444;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4136-9-2-3-9-3-9-3-0-2-2"
+         width="223.42152"
+         height="132.0123"
+         x="768.19995"
+         y="1088.8114"
+         inkscape:export-xdpi="199.981"
+         inkscape:export-ydpi="199.981" />
+      <text
+         id="text10220-1-3-2-9-6-1-1"
+         y="1133.9905"
+         x="879.10114"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.72444248px;line-height:0%;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.97703689px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:export-xdpi="199.98146"
+         inkscape:export-ydpi="199.98146"><tspan
+           id="tspan5504-7-5-0-2-2"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:44.89886093px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.97703689px"
+           y="1133.9905"
+           x="879.10114"
+           sodipodi:role="line">CONNECT</tspan></text>
+      <text
+         id="text10220-1-3-3-0-3-6-7-7"
+         y="1203.054"
+         x="880.00201"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.24567127px;line-height:0%;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.93713927px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:export-xdpi="199.98146"
+         inkscape:export-ydpi="199.98146"><tspan
+           id="tspan5504-2-9-6-2-0-0"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:43.06539917px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.93713927px"
+           y="1203.054"
+           x="880.00201"
+           sodipodi:role="line">DATABASE</tspan></text>
+      <g
+         inkscape:export-ydpi="199.981"
+         inkscape:export-xdpi="199.981"
+         inkscape:export-filename="/home/stijn_vanhoey/projecten/2018_coding_club/images/2019032_creating_maps.png"
+         transform="translate(742.48613,242.11439)"
+         id="g5530-1-0-93-9-2-9">
+        <text
+           inkscape:export-ydpi="199.98146"
+           inkscape:export-xdpi="199.98146"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="133.05893"
+           y="919.70428"
+           id="text10220-1-3-2-9-6-1-6-3"><tspan
+             sodipodi:role="line"
+             x="133.05893"
+             y="919.70428"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;fill:#ffffff"
+             id="tspan5504-7-5-0-2-1-6">to</tspan></text>
+        <text
+           inkscape:export-ydpi="199.98146"
+           inkscape:export-xdpi="199.98146"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="133.93565"
+           y="999.3844"
+           id="text10220-1-3-3-0-3-6-7-8-0"><tspan
+             sodipodi:role="line"
+             x="133.93565"
+             y="1002.9186"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.95410919px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;fill:#ffffff"
+             id="tspan5504-2-9-6-2-0-7-6" /></text>
+      </g>
     </g>
   </g>
 </svg>
