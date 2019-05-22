@@ -79,6 +79,8 @@ class: left, middle
 
 # Challenge 1
 
+Using the [INBO database tutorial](https://inbo.github.io/tutorials/tutorials/r_database_access/):
+
 - Click [`20190523_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190523_challenges.R) and download* script to `src` subfolder.
 - Install and load the [inborutils](https://inbo.github.io/inborutils/index.html) package
 - Use the [`connect_inbo_dbase`](https://inbo.github.io/inborutils/reference/connect_inbo_dbase.html) function from the `inborutils` package to make a
@@ -86,7 +88,29 @@ connection to the "W0003_00_Lims" or the "D0021_00_userFlora" database
 - Can you get an overview of the tables in the database using the Rstudio interface?
 
 <small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
-<small>Thanks to Floris for reviewing and improving the tutorial and database connection function.</small>
+
+<br><br><br>
+<small>Thanks to Floris for reviewing and improving the database tutorial and database connection function yesterday!</small>
+
+---
+class: left, middle
+
+## Intermezzo: start to SQL...
+
+- `SELECT`: which __columns__ are you interested in?
+- `FROM`: which __table__ are you interested in?
+- `TOP N`: __limit__ to the top N rows, with N equal to a number
+- `DISTINCT`: __unique__ values within a given column
+- `WHERE`: __filter__ the data with specific conditions
+
+__REMEMBER:__ `TOP 10` is your friend, keep traffic low! Use `SELECT/WHERE` to limit...
+
+<br><br>
+<small>Want to dive a bit deeper? <br>
+    Check the [Data carpenty: data Management with SQL for Ecologists](https://datacarpentry.org/sql-ecology-lesson/) lesson, especially on
+    [queries](https://datacarpentry.org/sql-ecology-lesson/01-sql-basic-queries/index.html) and
+    [aggregations](https://datacarpentry.org/sql-ecology-lesson/02-sql-aggregation/index.html).
+</small>
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -94,16 +118,42 @@ class: left, middle
 
 # Challenge 2
 
-After establishing a connection to database `W0003_00_Lims`:
+The LIMS database `W0003_00_Lims` contains the labo measurements with an important table `FactResult`.
+We want to have more insight into the column names of the `FactResult` table and will
+setup [a query](https://inbo.github.io/tutorials/tutorials/r_database_access/#execute-a-query-to-the-database) for this:
 
-- Get first 100 rows of the table `vwDocumentatie`.
-- Get from table `vwDocumentatie` the documentation about table `FactResult`.
+- Make a connection to the database `W0003_00_Lims`.
+- Get first 10 rows of the table `vwDocumentatie` with a query.
+- Create a query to get the unique values of the `name` column.
+- Query from table `vwDocumentatie` the documentation by filtering those rows where the `name` is equal to 'Description'.
+- Store the output of the query to a new object called `fact_columns_documentation`.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, middle
 
 # Challenge 3
+
+Writing queries can be hard and we have specialists in house who are great at it...
+Let's make sure we can reuse our own and their hard work!
+
+We have a custom query available to get the scienticname of 'Gebogen kransblad':
+
+```
+custom_query <- "
+  SELECT NaamWetenschappelijk
+  FROM dbo.tblTaxon
+  WHERE NaamNederlands = 'Gebogen kransblad'
+  "
+```
+
+Create a function called `userflora_query_scientificname`:
+
+- The function has two input arguments: a connection and a Dutch species name (_not just 'Gebogen kransblad', any UserFlora name_)
+- The function returns a dataframe with the corresponding scientificname of UserFlora
+- Test your function by using it, <br>e.g. `userflora_query_scientificname(con, 'Mijtermos')`
+
+__Note:__ [This](https://inbo.github.io/tutorials/tutorials/r_database_access/#create-and-use-query-templates) part of the tutorial can be useful...
 
 
 ---
