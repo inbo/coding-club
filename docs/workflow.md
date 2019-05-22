@@ -24,7 +24,8 @@
     * When creating the slideshow, serving the slides live is possible with setting up a local server in the terminal: `jekyll serve --baseurl ""`.
 * Set up 3 challenges (we experienced that 3 is mostly enough for a 2 hour session) with an increasing complexity:
     *   Explain the challenges in the slideshow
-    *   Provide example solutions in a file `yyyymmdd_challenges.R` for yourself
+    *   Provide a draft working script in a file `yyyymmdd_challenges.R` and add it to the `src` folder
+    *   Provide example solutions in a file `yyyymmdd_solutions.R` for yourself
     *   If the challenge uses new datasets, add them to the [data](https://github.com/inbo/coding-club/tree/master/data) folder. Use consistent naming, e.g. `yyyymmdd_topic_with_underscores_lower_case.csv`
     * If useful, provide a script to get started and add it to the  [src](https://github.com/inbo/coding-club/tree/master/src) folder.
 * Update the [session overview page](https://github.com/inbo/coding-club/blob/master/docs/sessions/index.md) overview table with the date, topic name, slideshow link, hackmd link and location (room).
@@ -53,7 +54,7 @@ __Remark__, when creating links to other files, make sure to use the [jekyll lin
 
 #### After coding club
 
-*   Upload the `YYYYMMDD_challenges.R` file to the [src](https://github.com/inbo/coding-club/tree/master/src) folder.
+*   Upload the `YYYYMMDD_solutions.R` file to the [src](https://github.com/inbo/coding-club/tree/master/src) folder.
 
 
 ## Templates
