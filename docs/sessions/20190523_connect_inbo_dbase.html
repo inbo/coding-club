@@ -33,7 +33,7 @@ class: center, middle
 <!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
 ![:scale 90%]({{ site.baseurl}}/assets/images/20190523_connect_dbase.png)
 
-Special thanks to our dba admins Jo Loos and Gert Van Spaendonk!
+Special thanks to our database admins Jo Loos and Gert Van Spaendonk!
 
 ---
 class: center, middle
@@ -45,7 +45,7 @@ class: center, middle
 class: center, middle
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/inbotutorials_database.png)<br />
-[Rstudio database website](https://inbo.github.io/tutorials/tutorials/r_database_access/)
+[INBO database tutorial](https://inbo.github.io/tutorials/tutorials/r_database_access/)
 
 ---
 class: center, middle
@@ -79,13 +79,14 @@ class: left, middle
 
 # Challenge 1
 
-- Click [`20190523_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190523_challenges.R) and download* script in `./src` folder.
-- ...
+- Click [`20190523_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190523_challenges.R) and download* script to `src` subfolder.
+- Install and load the [inborutils](https://inbo.github.io/inborutils/index.html) package
+- Use the [`connect_inbo_dbase`](https://inbo.github.io/inborutils/reference/connect_inbo_dbase.html) function from the `inborutils` package to make a
+connection to the "W0003_00_Lims" or the "D0021_00_userFlora" database
+- Can you get an overview of the tables in the database using the Rstudio interface?
 
 <small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
-
-
-<small>Thanks Floris for reviewing and improving the tutorial and database connection function.</small>
+<small>Thanks to Floris for reviewing and improving the tutorial and database connection function.</small>
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
