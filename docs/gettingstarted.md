@@ -25,6 +25,14 @@ This page provides the information for first-time participants as well as some i
 * Using file explorer (you can either use your operating systems file explorer or Rstudio's file explorer which is in the `Files` pane), navigate to your `coding-club` folder and create two (empty) subfolders inside the directory of your new `coding-club` directory:
     * a folder called `data`
     * a folder called `src`
+    
+When done, the coding club folder on your computer should look like:
+
+```
+├── coding-club.Rproj
+├── data
+└── src
+```
 
 __Note for git-users__: When familiar with Git, you can setup a coding club using the git-integration of Rstudio. Go to `File`  and choose `New Project...`. Pick `Version control`, next `Git`  and fill in the URL of the coding club in the `Repository URL`: `https://github.com/inbo/coding-club`
 
