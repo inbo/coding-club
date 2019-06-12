@@ -1,0 +1,160 @@
+---
+layout: presentation
+title: tidyversing your queries
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 18 JUNE 2019
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck<br>
+01.71 - Frans Breziers
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20190618_tidyversing_your_queries.png)
+
+---
+class: center, middle
+
+Previuos month:
+
+![:scale 100%]({{ site.baseurl}}/assets/images/rstudio_database_website.png)<br />
+[Rstudio database website](https://db.rstudio.com/)
+
+---
+class: center, middle
+
+Previuos month:
+
+![:scale 100%]({{ site.baseurl}}/assets/images/inbotutorials_database.png)<br />
+[INBO database tutorial](https://inbo.github.io/tutorials/tutorials/r_database_access/)
+
+---
+class: center, middle
+
+Today:
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20190618_tidyversing_your_queries.png)<br />
+[dbplyr](https://dbplyr.tidyverse.org/)
+
+---
+class: center, middle
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: center, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, middle
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/AtaurkBeRXKVgvCQwpE5kw
+
+<iframe src="https://hackmd.io/AtaurkBeRXKVgvCQwpE5kw" height="400px" width="800px"></iframe>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, middle
+
+# Challenge 1
+
+(Installing and) load package `inborutils` use the `connect_inbo_dbase` function from the inborutils package to connect to the database `D0021_00_userFlora`. For more information, check [INBO database tutorial](https://inbo.github.io/tutorials/tutorials/r_database_access/).
+
+- Click [`20190618_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190618_challenges.R) and download* script to `src` subfolder.
+- Make a connection to `D0021_00_userFlora`
+- Connect to taxon table `tblTaxon`
+- Get the names of the columns in `taxon`
+- Get preview of first 10 rows of `taxon`
+- Get the first 10 Dutch names in `taxon`
+- How many taxa are in `taxon` data.frame?
+- Get the first 10 Dutch names in `taxon` as a "normal" data.frame (tip: check https://dbplyr.tidyverse.org/)
+- Get the scientific name of 'Geel schorpioenmos'
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, middle
+
+## Intermezzo: RStudio webinar dbplyr
+
+<p><a href="https://resources.rstudio.com/webinars/best-practices-for-working-with-databases-march-2018-edgar-ruiz?wvideo=vffitvywy6"><img src="https://embedwistia-a.akamaihd.net/deliveries/29b87d8ee942cd844acf0481b9376c52ecda91a2.jpg?origin_v2=1&amp;image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=71a5d4e0" width="400" height="225" style="width: 400px; height: 225px;"></a></p><p><a href="https://resources.rstudio.com/webinars/best-practices-for-working-with-databases-march-2018-edgar-ruiz?wvideo=vffitvywy6">Best practices for working with databases (March 2018)- Edgar Ruiz</a></p>
+
+<small>Thanks Floris for the link to this nice webinar!</small>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, middle
+
+# Challenge 2
+
+We found in Challenge 1 how to get the scientific name of 'Geel schorpioenmos'. We want to reuse the query later on for other species.
+
+- Complete the function called `userflora_query_scientificname` in [`20190618_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190618_challenges.R) to do it. The function has two input arguments: a connection to a table and a dutch plant name. The funcion should return the corresponding scientificname.
+
+- Try to extend the function `userflora_dutch_to_scientificname` to work on partial matches, i.e. search for all taxa CONTAINING the input dutch plant name in column `NaamNederlands`. For example, searching all dutch names containing the string `sterkranswier`. Tip: see https://dbplyr.tidyverse.org/articles/sql.html
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3
+
+- Get taxon groups: table `tblTaxonGroep`
+- Get relationship between the groups and the taxa in `taxon`
+- Try to add the group name (Naam) to `taxon`
+- Try also to count how many taxa are in each group
+
+---
+class: center, middle
+
+<!-- Always try to include some type of reviewing (can be short and entertaining).
+    Remove this slide if no reviewing is included -->
+![:scale 100%]({{ site.baseurl}}/assets/images/time_for_review.jpg)
+
+---
+class: center, middle
+
+INBO Coding club goes to holiday... see you all back in August!
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20190618_summerbreak.png)
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: Herman Teirlinck - 01.71 - Frans Breziers<br>
+Date: __29/08/2019__, van 10:00 tot 12:00<br>
+(registration announced via DG_useR@inbo.be)
