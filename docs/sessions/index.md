@@ -3,6 +3,7 @@
 
 |date | topic | slideshow | hackmd | location |
 | --- | ----- | ----------| ------ | -------  |
+| 2019-08-29 | markdown your report | [slides]({{ site.baseurl }}{% link sessions/20190829_markdown_your_report.html  %}) | [hackmd](https://hackmd.io/oeoBUqGnQpSEtRYxKXTEJg) | 01.71 - Frans Breziers |
 | 2019-06-18 | tidyversing your queries | [slides]({{ site.baseurl }}{% link sessions/20190618_tidyversing_your_queries.html  %}) | [hackmd](https://hackmd.io/AtaurkBeRXKVgvCQwpE5kw) | 01.71 - Frans Breziers |
 | 2019-05-23 | connect to inbo database | [slides]({{ site.baseurl }}{% link sessions/20190523_connect_inbo_dbase.html  %}) | [hackmd](https://hackmd.io/pcYIBNEJScGDEeIvc9LOEg) | 01.70 - Ferdinand Peters |
 | 2019-04-23 | dplyr for starters | [slides]({{ site.baseurl }}{% link sessions/20190423_dplyr_for_starters.html  %}) | [hackmd](https://hackmd.io/f_obNpkVSRedTcb19kP8Og) | 01.70 - Ferdinand Peters |
