@@ -1,4 +1,4 @@
-Provincie,Gemeente,Jaar,LatinName,CommonName,Totaal_Geteld,Gevangen,Adult,Pulli,Niet_gevangen
+province,location,year,latinName,commonName,counts,catched,adult,pulli,not_catched
 Antwerpen,Antwerpen,2013,Alopochen aegyptiacus,Nijlgans,12,NA,NA,NA,NA
 Antwerpen,Antwerpen,2013,Anser albifrons,Kolgans,0,NA,NA,NA,NA
 Antwerpen,Antwerpen,2013,Anser anser,Grauwe gans,29,NA,NA,NA,NA
