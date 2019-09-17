@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location |
 | --- | ----- | ----------| ------ | -------  |
-| 2019-08-29 | make your code functional | [slides]({{ site.baseurl }}{% link sessions/20190924_make_your_code_functional_use_functions.html  %}) | [hackmd](https://hackmd.io/bzOI43RjRnaSu0bC4hQVPQ) | 01.71 - Frans Breziers |
+| 2019-09-24 | make your code functional | [slides]({{ site.baseurl }}{% link sessions/20190924_make_your_code_functional_use_functions.html  %}) | [hackmd](https://hackmd.io/bzOI43RjRnaSu0bC4hQVPQ) | 01.71 - Frans Breziers |
 | 2019-08-29 | markdown your report | [slides]({{ site.baseurl }}{% link sessions/20190829_markdown_your_report.html  %}) | [hackmd](https://hackmd.io/oeoBUqGnQpSEtRYxKXTEJg) | 01.71 - Frans Breziers |
 | 2019-06-18 | tidyversing your queries | [slides]({{ site.baseurl }}{% link sessions/20190618_tidyversing_your_queries.html  %}) | [hackmd](https://hackmd.io/AtaurkBeRXKVgvCQwpE5kw) | 01.71 - Frans Breziers |
 | 2019-05-23 | connect to inbo database | [slides]({{ site.baseurl }}{% link sessions/20190523_connect_inbo_dbase.html  %}) | [hackmd](https://hackmd.io/pcYIBNEJScGDEeIvc9LOEg) | 01.70 - Ferdinand Peters |
