@@ -45,7 +45,13 @@ get_info_districts <- function() {
 # tackle also "oppervlakte_straat_wijken_Antwerpen.csv" without
 # altering the data itself
 
+area_districts_f_antwerpen <- here("data", "oppervlakte_straat_wijken_Antwerpen.csv")
+area_districts_antwerpen <- read_delim(area_districts_f_antwerpen, delim = ";")
 
+# IMPROVE get_info_districts FUNCTION HERE! ###
+get_info_districts2 <- function() {
+
+}
 
 ################################################################################
 
