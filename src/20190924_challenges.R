@@ -1,5 +1,6 @@
 library(tidyverse)
 library(here)
+library(INBOtheme)
 
 
 ## CHALLENGE 1
@@ -43,3 +44,79 @@ info_districts <- tibble(min_area = min_area,
 
 ################################################################################
 
+## CHALLENGE 3
+
+# read data
+goose_counts <-
+  read_csv(here("data", "20190829_goose_counts_2018.csv"))
+
+# remove Dutch neighboring provinces in case present
+goose_counts <-
+  goose_counts %>%
+  filter(province != "NL_Noord-Brabant" & province != "NL_Zeeland")
+
+# counts geese per year
+goose_counts_summary_plot <-
+  goose_counts %>%
+  group_by(year) %>%
+  summarize(total_counts_year = sum(counts, na.rm = TRUE)) %>%
+  ungroup() %>%
+  arrange(desc(total_counts_year)) %>%
+  ggplot(aes(x = year, y = total_counts_year)) +
+  geom_point()  +
+  theme(axis.text.x = element_text(angle = 90)) +
+  ggtitle("Total counts by year")
+goose_counts_summary_plot
+
+# counts geese per province
+goose_counts_summary_plot <-
+  goose_counts %>%
+  group_by(province) %>%
+  summarize(total_counts_province = sum(counts, na.rm = TRUE)) %>%
+  ungroup() %>%
+  arrange(desc(total_counts_province)) %>%
+  ggplot(aes(x = province, y = total_counts_province)) +
+  geom_point()  +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  ggtitle("Total counts by province")
+
+goose_counts_summary_plot
+
+# counts geese per species (commonName)
+goose_counts_summary_plot <-
+  goose_counts %>%
+  group_by(commonName) %>%
+  summarize(total_counts_species = sum(counts, na.rm = TRUE)) %>%
+  ungroup() %>%
+  arrange(desc(total_counts_species)) %>%
+  ggplot(aes(x = commonName, y = total_counts_species)) +
+  geom_point()  +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  ggtitle("Total counts by species")
+goose_counts_summary_plot
+
+## Let's do it without repeating ourselves by writing a function!
+
+# WRITE YOUR FUNCTION HERE! ###
+# counts_summary <- function(put here your arguments) {
+  # ...
+#}
+
+# columns for summary
+cols_for_summary_plots <- c("year", "province", "commonName")
+
+# initalize list of summary plots
+goose_counts_summary_plots <-
+  list()
+# for loop to make all plots
+for (parameter in cols_for_summary_plots) {
+  goose_counts_summary_plot <-
+    goose_counts %>%
+    counts_summary()
+  goose_counts_summary_plots[[parameter]] <- goose_counts_summary_plot
+}
+
+# show plots
+goose_counts_summary_plots$year
+goose_counts_summary_plots$province
+goose_counts_summary_plots$commonName

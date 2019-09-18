@@ -112,22 +112,39 @@ You have no idea (or unfortunately you have it) how difficult it is to compare d
 Do you want to compare district demography or air quality from different open data city portals? Good luck!
 
 1. Strive for standards
-2. Use them
-3. Contribute to improve them if not good enough. Your own "better standard" is not a standard...
+2. Use standards
+3. Contribute to improve standards if they are not good enough. Your own "better standard" on your laptop is not a standard...
 
 Standards in biodiversity: [TDWG standards](https://www.tdwg.org/standards/)
 ![:scale 40%]({{ site.baseurl}}/assets/images/20190924_standards.png)
 
+---
+class: left, middle
 
 # Challenge 3
 
+<p>Functions allow you to reuse your own coding work more easily, i.e. Don't Repeat Yourself (DRY), aka less copy pasting of code…</p>
+
+- Click [`20190829_goose_counts_2018.csv`](https://github.com/inbo/coding-club/blob/master/data/20190829_goose_counts_2018.csv) used in previous coding club and download data file to `./data` folder.
+  - The challenge 3 code in [`20190924_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190924_challenges.R) is long, redundant and prone to errors. Write a function called `counts_summary` to generate the very same plots without repeating yourself.
+
+<small>* __Tip__: use  `!!sym(var_name)` in your function to group data frame by a variable containing column name.
 
 ---
-class: center, middle
+class: left, middle
 
-<!-- Always try to include some type of reviewing (can be short and entertaining).
-    Remove this slide if no reviewing is included -->
-![:scale 100%]({{ site.baseurl}}/assets/images/time_for_review.jpg)
+# Made functions useful for colleagues?
+
+Share them by collaborating to [`inborutils`](https://github.com/inbo/inborutils) package.
+
+![:scale 50%]({{ site.baseurl}}/assets/images/20190924_inborutils.png)
+---
+class:left, middle
+
+# Do you want more?
+
+Go [in depth](http://adv-r.had.co.nz/Functions.html#function-arguments) or do a check [under the hood](https://swcarpentry.github.io/r-novice-inflammation/14-supp-call-stack/).
+![:scale 50%]({{ site.baseurl}}/assets/images/20190924_more_info_functions.png)
 
 ---
 class: center, middle
