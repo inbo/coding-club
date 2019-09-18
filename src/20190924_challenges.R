@@ -7,22 +7,22 @@ library(INBOtheme)
 
 # file path
 area_districts_f <- here("data", "oppervlakte_straat_wijken_Brugge.csv")
-area_districts <- read_delim(area_districts_f, delim = ";")
+area_districts_brugge <- read_delim(area_districts_f, delim = ";")
 
 # minimum area
-min_area <- min(area_districts$OPPERVLAKTE, na.rm = TRUE) # min
+min_area <- min(area_districts_brugge$OPPERVLAKTE, na.rm = TRUE) # min
 # distict with smallest area
-smallest_district <- area_districts$NAAM[which.min(area_districts$OPPERVLAKTE)]
+smallest_district <- area_districts_brugge$NAAM[which.min(area_districts_brugge$OPPERVLAKTE)]
 
 # maximum area
-max_area <- max(area_districts$OPPERVLAKTE, na.rm = TRUE) # max
+max_area <- max(area_districts_brugge$OPPERVLAKTE, na.rm = TRUE) # max
 # district with biggest area
-biggest_district <- area_districts$NAAM[which.max(area_districts$OPPERVLAKTE)]
+biggest_district <- area_districts_brugge$NAAM[which.max(area_districts_brugge$OPPERVLAKTE)]
 
 # average area
-average_area <- mean(area_districts$OPPERVLAKTE, na.rm = TRUE) # mean
+average_area <- mean(area_districts_brugge$OPPERVLAKTE, na.rm = TRUE) # mean
 # the district with area most similar to average
-average_district <- area_districts$NAAM[which.min(abs(area_districts$OPPERVLAKTE - average_area))]
+average_district <- area_districts_brugge$NAAM[which.min(abs(area_districts_brugge$OPPERVLAKTE - average_area))]
 
 # summarize these info in data frame (output)
 info_districts <- tibble(min_area = min_area,
@@ -31,6 +31,11 @@ info_districts <- tibble(min_area = min_area,
                              biggest_district = biggest_district,
                              average_area = average_area,
                              average_district = average_district)
+
+# WRITE YOUR FUNCTION HERE! ###
+get_info_districts <- function() {
+
+}
 
 ################################################################################
 
@@ -98,9 +103,9 @@ goose_counts_summary_plot
 ## Let's do it without repeating ourselves by writing a function!
 
 # WRITE YOUR FUNCTION HERE! ###
-# counts_summary <- function(put here your arguments) {
-  # ...
-#}
+counts_summary <- function() {
+
+}
 
 # columns for summary
 cols_for_summary_plots <- c("year", "province", "commonName")
