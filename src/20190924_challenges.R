@@ -11,7 +11,7 @@ area_districts_brugge <- read_delim(area_districts_f, delim = ";")
 
 # minimum area
 min_area <- min(area_districts_brugge$OPPERVLAKTE, na.rm = TRUE) # min
-# distict with smallest area
+# district with smallest area
 smallest_district <- area_districts_brugge$NAAM[which.min(area_districts_brugge$OPPERVLAKTE)]
 
 # maximum area
