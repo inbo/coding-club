@@ -1,64 +1,63 @@
-species_id,genus,species,taxa
-"AB","Amphispiza","bilineata","Bird"
-"AS","Ammodramus","savannarum","Bird"
-"BA","Baiomys","taylori","Rodent"
-"CB","Campylorhynchus","brunneicapillus","Bird"
-"CM","Calamospiza","melanocorys","Bird"
-"DO","Dipodomys","ordii","Rodent"
-"CCO", "Corvus", "corone", "Bird"
-"CCN", "Corvus", "cornix", "Bird"
-"CCA", "Corvus", "corax", "Bird"
-"CS","Crotalus","scutalatus","Reptile"
-"CT","Cnemidophorus","tigris","Reptile"
-"CU","Cnemidophorus","uniparens","Reptile"
-"CV","Crotalus","viridis","Reptile"
-"DM","Dipodomys","merriami","Rodent"
-"DS","Dipodomys","spectabilis","Rodent"
-"DX","Dipodomys","sp.","Rodent"
-"EO","Eumeces","obsoletus","Reptile"
-"GS","Gambelia","silus","Reptile"
-"PX","Chaetodipus","sp.","Rodent"
-"NA","Neotoma","albigula","Rodent"
-"NX","Neotoma","sp.","Rodent"
-"CQ","Callipepla","squamata","Bird"
-"AH","Ammospermophilus","harrisi","Rodent-not censused"
-"OL","Onychomys","leucogaster","Rodent"
-"OT","Onychomys","torridus","Rodent"
-"OX","Onychomys","sp.","Rodent"
-"PB","Chaetodipus","baileyi","Rodent"
-"PC","Pipilo","chlorurus","Bird"
-"PE","Peromyscus","eremicus","Rodent"
-"PF","Perognathus","flavus","Rodent"
-"PG","Pooecetes","gramineus","Bird"
-"PI","Chaetodipus","intermedius","Rodent"
-"PL","Peromyscus","leucopus","Rodent"
-"PM","Peromyscus","maniculatus","Rodent"
-"PP","Chaetodipus","penicillatus","Rodent"
-"PU","Pipilo","fuscus","Bird"
-"SF","Sigmodon","fulviventer","Rodent"
-"RF","Reithrodontomys","fulvescens","Rodent"
-"RM","Reithrodontomys","megalotis","Rodent"
-"RO","Reithrodontomys","montanus","Rodent"
-"RX","Reithrodontomys","sp.","Rodent"
-"SA","Sylvilagus","audubonii","Rabbit"
-"ACR","Anas","crecca","Bird"
-"ACA","Anas","carolinensis","Bird"
-"SB","Spizella","breweri","Bird"
-"US","Sparrow","sp.","Bird"
-"SC","Sceloporus","clarki","Reptile"
-"PH","Perognathus","hispidus","Rodent"
-"ZM","Zenaida","macroura","Bird"
-"SH","Sigmodon","hispidus","Rodent"
-"SO","Sigmodon","ochrognathus","Rodent"
-"OAP","Oides","apicalis","Insect"
-"OAF","Oides","affinis","Insect"
-"SS","Spermophilus","spilosoma","Rodent-not censused"
-"ST","Spermophilus","tereticaudus","Rodent-not censused"
-"SU","Sceloporus","undulatus","Reptile"
-"SX","Sigmodon","sp.","Rodent"
-"UL","Lizard","sp.","Reptile"
-"UP","Pipilo","sp.","Bird"
-"UR","Rodent","sp.","Rodent"
-"XX",,,"Zero Trapping Success"
-"ZL","Zonotrichia","leucophrys","Bird"
-
+species_id,genus,species,taxa,authorship
+AB,Amphispiza,bilineata,Bird,"Adema 1991, Maes et al 1998, Ysebaert et al 2000, Wouters 2002.|NA|NA|NA"
+AS,Ammodramus,savannarum,Bird,"NA|Adema 1991, Maes et al 1998.||NA"
+SA,Sylvilagus,audubonii,Mammal-not censused,Adema 1991|NA|NA|NA
+BA,Baiomys,taylori,Rodent,"Adema and Mennema 1979, Wolff 2005;|NA|NA|NA"
+CB,Campylorhynchus,brunneicapillus,Bird,Alimov and Bogutskaya 2004|NA|NA|NA
+CM,Calamospiza,melanocorys,Bird,Alvarez et al 1993.|NA|NA|
+AH,Ammospermophilus,harrisi,Rodent-not censused,Anderson R 1977	|NA|NA|NA
+DO,Dipodomys,ordii,Rodent,Anderson R 2003|NA|NA|NA
+CCO,Corvus,corone,Bird,Anderson R 2003	|NA||NA
+CCN,Corvus,cornix,Bird,Anderson R 2004  ||NA|NA
+CCA,Corvus,corax,Bird,"Anisimova and Lavrovskiy 1983, Romanenko et al. 2003|NA||NA"
+CS,Crotalus,scutalatus,Reptile,Anistratenko 1998  ||NA|
+CT,Cnemidophorus,tigris,Reptile,"Ankel 1935, Kuckuck 1957, Reise 1993, Nehring 2006a,|NA||"
+CU,Cnemidophorus,uniparens,Reptile,Appleby 1999|NA||NA
+CV,Crotalus,viridis,Reptile,Aristegui and Fern	andez-Gil 2003.|NA|NA|NA
+DM,Dipodomys,merriami,Rodent,Aristegui and Fernandez-Gil 2003.||NA|NA
+DS,Dipodomys,spectabilis,Rodent,Aristegui and Fernandez-Gil 2003||NA|
+DX,Dipodomys,sp.,Rodent,NA|Buizer 1978  |||
+EO,Eumeces,obsoletus,Reptile,Buizer and Van Soest 1977|NA||
+GS,Gambelia,silus,Reptile,"NA|Burlakova LE, Padilla DK, Karatayev AY and Minchin D 2006|NA|NA"
+PX,Chaetodipus,sp.,Rodent,"Burlakova LE, Padilla DK, Karatayev AY and Minchin D 2006 |NA|NA|NA"
+NA,Neotoma,albigula,Rodent,"Caamano et al 1990, Salinas et al 1996, Perez- Ruzafa et al 2002, Barbara et al 2004||NA|"
+NX,Neotoma,sp.,Rodent,NA|NA|Cabal et Alimov	|
+CQ,Callipepla,squamata,Bird,"Cabioch et al 1997, |NA|NA|NA"
+OL,Onychomys,leucogaster,Rodent,"Cardigos et al 2006, Ardre et al 1974|NA|NA|NA"
+OT,Onychomys,torridus,Rodent,"Cardigos et al 2006, Cornelius 1992|NA|NA|NA"
+OX,Onychomys,sp.,Rodent,d'Udekem d'Acoz et al 2005|NA|NA|NA
+PB,Chaetodipus,baileyi,Rodent,Day G 2004|NA|NA|NA
+PC,Pipilo,chlorurus,Bird,"Dahl, 1946, Wolff 2005||NA|NA"
+PE,Peromyscus,eremicus,Rodent,"Dahl, 1946, Wolff 2005||NA|NA"
+PF,Perognathus,flavus,Rodent,"Dahl, 1946|NA|NA|NA"
+PG,Pooecetes,gramineus,Bird-not censused,Davis & Davis 2005|NA||NA
+PI,Chaetodipus,intermedius,Rodent,De Blauwe and Faasse 2001|NA|NA|NA
+PL,Peromyscus,leucopus,Rodent,De Bruyne 1994|NA|NA|NA
+PM,Peromyscus,maniculatus,Rodent,"de Grave S, Moore SJ, Burnell G 1998|NA|NA|NA"
+PP,Chaetodipus,penicillatus,Rodent,De Grave S. Wilkins HKA 1994|NA|NA|NA
+PU,Pipilo,fuscus,Bird,"De Groot 1985, Nijssen and De Groot 1987|NA|NA|NA"
+SF,Sigmodon,fulviventer,Rodent,De Groot 1985|NA|NA|
+RF,Reithrodontomys,fulvescens,Rodent,De Mesquita Rodrigues 1963|NA|NA|NA
+RM,Reithrodontomys,megalotis,Rodent,"Dechow 1920, Bathe 1995|NA|NA|NA"
+RO,Reithrodontomys,montanus,Rodent,Dediu 1980|NA|NA|NA
+RX,Reithrodontomys,sp.,Rodent,NA|NA|NA|NA
+ACR,Anas,crecca,Bird,NA|NA|NA|NA
+ACA,Anas,carolinensis,Bird,NA|NA|NA|NA
+SB,Spizella,breweri,Bird,NA|||
+US,Sparrow,sp.,Bird,NA|NA|NA|NA
+SC,Sceloporus,clarki,Reptile-not censused,NA|NA|NA|NA
+PH,Perognathus,hispidus,Rodent,NA||NA|NA
+ZM,Zenaida,macroura,Bird-not censused,NA||NA|NA
+SH,Sigmodon,hispidus,Rodent,NA|NA|NA|NA
+SO,Sigmodon,ochrognathus,Rodent,NA||NA|NA
+OAP,Oides,apicalis,Insect-not censused,NA|NA|NA|NA
+OAF,Oides,affinis,Insect,NA||NA|NA
+SS,Spermophilus,spilosoma,Rodent-not censused,NA|NA|Dediu 1980|NA
+ST,Spermophilus,tereticaudus,Rodent-not censused,NA|NA|NA|NA
+SU,Sceloporus,undulatus,Reptile,NA|||NA
+SX,Sigmodon,sp.,Rodent,NA|NA|NA|NA
+UL,Lizard,sp.,Reptile,NA|NA||NA
+UP,Pipilo,sp.,Bird,NA|NA|NA|NA
+UR,Rodent,sp.,Rodent,NA|NA||NA
+XX,,,Zero Trapping Success,NA|NA|NA|NA
+ZL,Zonotrichia,leucophrys,Bird,NA|NA|NA|NA
