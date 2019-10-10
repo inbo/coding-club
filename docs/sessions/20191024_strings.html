@@ -28,9 +28,9 @@ Herman Teirlinck<br>
 01.71 - Frans Breziers
 
 ---
-class: center, middle
+class: center, left
 
-![:scale 120%]({{ site.baseurl}}/assets/images/20191024_room_reservation_reminder.png)
+![:scale 100%]({{ site.baseurl}}/assets/images/20191024_room_reservation_reminder.png)
 
 ---
 class: center, middle
@@ -43,7 +43,7 @@ class: center, middle
 
 ## Strings?
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20190924_string_theory.gif)
+![:scale 90%]({{ site.baseurl}}/assets/images/20191024_string-theory.gif)
 <br>
 
 No, I mean strings...
@@ -59,7 +59,7 @@ class: center, middle
 class: center, middle
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20190829_markdown_cheatsheet_preview.png)
-[Download pdf here](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+[Download pdf here](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20180426_cheat_sheet_stringr.pdf)
 
 ---
 class: center, middle
@@ -92,11 +92,11 @@ class:center, left
 
 ### Install the package suite
 
-```install.packages("tidyverse")```
+`install.packages("tidyverse")`
 
 ### Load the package suite
 
-```library(tidyverse)```
+`library(tidyverse)`
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -106,7 +106,7 @@ class: left, middle
 
 - Click [`20191024_species.csv`](https://github.com/inbo/coding-club/blob/master/data/20191024_species.csv) and download* data file to `/data` folder.
 - Click [`20191024_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20191024_challenges.R) and download* script in `/src` folder.
-After reading data.frame `species_df`:
+<br>After reading data.frame `species_df`:
 - Set columns `species_id` and `taxa` lowercase
 - Make a vector of labels from column `species_id` and sort it alphabetically
 - Extract `species_id` labels longer than 2 letters
@@ -123,18 +123,16 @@ class: left, middle
 
 - Column `taxa` contains not only taxonomic information. A census label, `not censused`, is present sometimes, e.g. `"rodent-not censused"`. Remove every census label from column `taxa`, e.g. `"rodent"`.
 
-<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
-
 ---
-class: left, center
+class: left, middle
 
 ## Intermezzo: <b>reg</b>ular <b>ex</b>pressions
 
 How to detect/remove/extract:
 - any kind of digit?
 - anything but letters `a `, `b` and `e`?
-- all  `.`?
-- any extra `.`?
+- all  full stops (`.`)?
+- any extra full stop (`.`)?
 
 ![:scale 50%]({{ site.baseurl}}/assets/images/20191024_regular_expresssions.png)
 <br>Try yourself some of these rules before moving to challenge 3.
@@ -145,14 +143,18 @@ background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png
 
 # Challenge 3
 
-- Column `authorship` is quite dirty: vertical pipes (`|`), `NA`, tabs, white spaces and punctuations (,;.) occur at the end. Make a new column to store the cleaned version of it.
+Column `authorship` is quite dirty: vertical pipes (`|`), `NA`, tabs, white spaces and punctuations (,;.) occur at the end. Make a new column to store the cleaned version of it.
+
+---
+class: left, middle
 
 # Bonus challenge
 
 - Click [`20191024_bird_observations.csv`](https://github.com/inbo/coding-club/blob/master/data/20191024_bird_observations.csv)* and download data file to `/data` folder.
-- We want to aggregate information about location from three different columns as follows: `PlaatsGemeente`, `,`, `PlaatsToponym`, `:`, `PlaatsToponymDetail`
+- We want to aggregate information about location from three different columns as follows: `PlaatsGemeente,PlaatsToponym:PlaatsToponymDetail`.
 - Try to do the same with file [20191024_bird_observations_with_na.csv](https://github.com/inbo/coding-club/blob/master/data/20191024_bird_observations_with_na.csv) where the three fields are not always filled.
 
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 ---
 class: center, middle
 
