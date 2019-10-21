@@ -39,6 +39,12 @@ Stadsgehoorzaal, Cornelis Schuytzaal, Leiden (NL)
 ---
 class: center, middle
 
+![:scale 100%]({{ site.baseurl}}/assets/images/20191022_oscibio.png)
+<big>[Open science lab for biodiversity](https://oscibio.inbo.be/)</big>
+
+---
+class: center, middle
+
 <!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
 ![:scale 90%]({{ site.baseurl}}/assets/images/20191022_badge_codingclub.png)
 
@@ -54,6 +60,132 @@ But that's meta-coding club!
 ---
 class: center, middle
 
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, middle
+
+### Share your code/answers/problems during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/IucYoto4SnmMYAJowJ9Uvw?both
+
+<iframe src="https://hackmd.io/IucYoto4SnmMYAJowJ9Uvw?both" height="400px" width="800px"></iframe>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, middle
+
+## First time coding club?
+
+- Do you have R and RSudio installed? Great! If not, go to [RStudio Cloud](https://rstudio.cloud/) and sign up.
+
+- Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup. Skip part about installing packages: we don't need any package today.
+
+---
+class: center, middle
+
+# Intermezzo
+
+Fill in this _hackmd_ [questionnaire](https://hackmd.io/IucYoto4SnmMYAJowJ9Uvw)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, middle
+
+Download script [20191022_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20191022_challenges.R) and check for each of the `wont_work` steps the error message to identify what is going wrong.<br>
+Discuss with your neighbour: Is there a common pattern in these error messages?
+<br>Once done, insert your answer in [hackmd](https://hackmd.io/IucYoto4SnmMYAJowJ9Uvw?view#Challenge-3) and put a third sticky note on your laptop.
+
+<code><br>## function 'sum' ----
+<br>wont_work <- c('a', 'b', 'c')
+<br>sum(wont_work)
+<br>will_work <- 1:10
+<br>sum(will_work)
+<br>...
+</code>
+
+---
+class: center, middle
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20191022_pckgs_methods.png)
+
+---
+class: center, middle
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20191022_errors_inform_you.png)
+
+---
+class: center, middle
+
+## Intermezzo
+### What does _tidy_ mean?
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20191022_tidy_meaning_english.png)
+
+---
+class: center, middle
+
+## Intermezzo
+### Tidy data
+
+![:scale 65%]({{ site.baseurl}}/assets/images/20191022_tidypaper.png)
+<br>
+https://doi.org/10.18637/jss.v059.i10
+
+---
+class: center, middle
+
+# Intermezzo
+## Tidy vs untidy: spot the difference
+
+![:scale 50%]({{ site.baseurl}}/assets/images/20191022_untidy_voorbeeld.png)
+<br>
+<br>
+<br>
+![:scale 50%]({{ site.baseurl}}/assets/images/20191022_tidy_voorbeeld.png)
+
+---
+class: center, middle
+
+## Tidy data: principles
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20191022_tidydata_principles_1.png)
+
+---
+class: center, middle
+
+## Tidy data: principles
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20191022_tidydata_principles_2.png)
+
+---
+class: center, middle
+
+## Tidy data: principles
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20191022_tidydata_principles_3.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3
+
+Goal: Make the file [20190124_survey_part1.xlsx](https://github.com/inbo/coding-club/blob/master/data/20190124_survey_part1.xlsx) as tidy as possible.
+
+1. Pair up with your neighbour.
+2. Download* data file.
+3. Do not modify the file. A (very) good practice: raw data should never be modified!
+4. Document the issues you encountered in the chapter [_challenge 1_ of hackmd](https://hackmd.io/IucYoto4SnmMYAJowJ9Uvw?view#Challenge-1), below the questionnaire. Start a new subsection with your name, e.g. `### Damiano`.
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+Credits to: https://datacarpentry.org/spreadsheet-ecology-lesson/
+
+---
+class: center, middle
+
 23rd January 2018: _"we started a quite special, little club..."_
 <br>
 <br />
@@ -64,7 +196,6 @@ class: center, middle
 
 ---
 class: center, middle
-
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20191022_pillars_mission_codingclub.png)
 
@@ -115,7 +246,7 @@ class: left, middle
 
 ## So, practically...
 
-- The coding club is typically limited to 25 participants (room capacity). It will increase soon to 40 in 2020...
+- The coding club is typically limited to 25 participants (room capacity). It will increase soon to 40 from Jan, 2020
 - Each session focusses on a specific theme and is <u>independent</u> from previous sessions
 - No laptop, no party. We code, after all!
 
@@ -161,158 +292,24 @@ class: center, middle
 
 ## Resources
 
-INBO coding club material is open and available online
+INBO coding club material is open and available online. Take a look, get inspired and inspire us.
 <br>
 <br />
 https://inbo.github.io/coding-club/
 
 ---
-class: center, middle
-
-Let's start
-<br>
-<br />
-![:scale 55%]({{ site.baseurl}}/assets/images/20191022_start.png)
-
----
-class: center, middle
-
-![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
-
-<!--  Adjust the day, month  -->
-# 22 OCTOBER 2019
-
-## INBO coding club
-
-<!--  Adjust the room number and name  -->
-Stadsgehoorzaal<br>
-Cornelis Schuytzaal
-
----
-background-image: url({{ site.baseurl}}/assets/images/20191022_hackmd_screenshot.png))
-class: center, middle
-
-## Go to the [questionnaire](https://hackmd.io/IucYoto4SnmMYAJowJ9Uvw)
-
----
-class: center, middle
-
-### How to get started?
-
-Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
-
-### First time coding club?
-
-Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
-
----
-class: center, middle
-
-![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
-
----
-class: center, middle
-
-### Share your code during the coding session!
-
-<!-- Create a new hackmd file and replace this link (twice!) -->
-Go to https://hackmd.io/IucYoto4SnmMYAJowJ9Uvw?both
-
-<iframe src="https://hackmd.io/IucYoto4SnmMYAJowJ9Uvw?both" height="400px" width="800px"></iframe>
-
----
-class: center, middle
-
-<!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
-![:scale 90%]({{ site.baseurl}}/assets/images/20190124_tidy_data.png)
-
----
-class: center, middle
-
-## What does _tidy_ mean?
-
-![:scale 90%]({{ site.baseurl}}/assets/images/20191022_tidy_meaning_english.png)
-
----
-class: center, middle
-
-## Tidy data
-
-![:scale 65%]({{ site.baseurl}}/assets/images/20191022_tidypaper.png)
-<br>
-https://doi.org/10.18637/jss.v059.i10
-
----
-class: center, middle
-
-## Tidy vs untidy: spot the difference
-
-![:scale 50%]({{ site.baseurl}}/assets/images/20191022_untidy_voorbeeld.png)
-<br>
-<br>
-<br>
-![:scale 50%]({{ site.baseurl}}/assets/images/20191022_tidy_voorbeeld.png)
-
----
-class: center, middle
-
-## Tidy data: principles
-
-![:scale 90%]({{ site.baseurl}}/assets/images/20191022_tidydata_principles_1.png)
-
----
-class: center, middle
-
-## Tidy data: principles
-
-![:scale 90%]({{ site.baseurl}}/assets/images/20191022_tidydata_principles_2.png)
-
----
-class: center, middle
-
-## Tidy data: principles
-
-![:scale 90%]({{ site.baseurl}}/assets/images/20191022_tidydata_principles_3.png)
-
----
-background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
 class: left, middle
 
-# Challenge 1
+## Challenge 4
 
-Goal: Make the file [20190124_survey_part1.xlsx](https://github.com/inbo/coding-club/blob/master/data/20190124_survey_part1.xlsx) as tidy as possible.
+So far our experience taught us:
 
-1. Pair up with your neighbour.
-2. Download* data file.
-3. Do not modify the file. A (very) good practice: raw data should never be modified!
-4. Document the issues you encountered in the chapter [_challenge 1_ of hackmd](https://hackmd.io/IucYoto4SnmMYAJowJ9Uvw?view#Challenge-1), below the questionnaire. Start a new subsection with your name, e.g. `### Damiano`.
+1. Start easy: we started with a shared directory on Google Drive...
+2. [DOCUMENTATION for participants](https://inbo.github.io/coding-club/gettingstarted.html).
+3. [DOCUMENTATION for maintainers](https://inbo.github.io/coding-club/workflow.html)
 
-<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
-
-Credits to: https://datacarpentry.org/spreadsheet-ecology-lesson/
----
-background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
-class: left, middle
-
-# Challenge 2
-
-Goal: Make the file [20190124_survey_part2.xlsx](https://github.com/inbo/coding-club/blob/master/data/20190124_survey_part2.xlsx) as tidy as possible.
-
-1. Pair up with your neighbour.
-2. Download* data file.
-3. Do not modify the file. A (very) good practice: raw data should never be modified!
-4. Document the issues you encountered in the chapter [_challenge 2_ of hackmd](https://hackmd.io/IucYoto4SnmMYAJowJ9Uvw?view#Challenge-2). Start a new subsection with your name, e.g. `### Damiano`.
-
-<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
-
-Credits to https://datacarpentry.org/spreadsheet-ecology-lesson/
-
----
-class: center, middle
-
-<!-- Always try to include some type of reviewing (can be short and entertaining).
-    Remove this slide if no reviewing is included -->
-![:scale 80%]({{ site.baseurl}}/assets/images/time_for_review.jpg)
+<br>
+Ideas? Questions? Doubts? We will try to track all them in [hackmd chapter Discussion](https://hackmd.io/IucYoto4SnmMYAJowJ9Uvw?view#Discussion).
 
 ---
 class: center, middle
@@ -323,16 +320,3 @@ Room: Herman Teirlinck - 01.16 - Rik Wouters<br>
 Date: __26/11/2019__, van 10:00 tot 12:00<br>
 Title: basics to make attractive gaphs<br>
 (registration announced via DG_useR@inbo.be)
-
----
-class: left, middle
-
-## Discussion
-
-Our experience taught us:
-
-1. Start easy: we started with a shared directory on Google Drive, after all.
-2. [DOCUMENTATION for participants](https://inbo.github.io/coding-club/gettingstarted.html).
-3. [DOCUMENTATION for maintainers](https://inbo.github.io/coding-club/workflow.html)
-
- hackmd
