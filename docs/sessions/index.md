@@ -3,7 +3,6 @@
 
 |date | topic | slideshow | hackmd | location |
 | --- | ----- | ----------| ------ | -------  |
-| 2019-11-26 | graphs with ggplot | [slides]({{ site.baseurl }}{% link sessions/20191126_graphs_with_ggplot.html) | [hackmd](https://hackmd.io/A0GZbxv2ToqjAvjT4XxKCQ) | 01.16 - Rik Wouters |
 | 2019-10-24 | manipulating strings | [slides]({{ site.baseurl }}{% link sessions/20191024_strings.html  %}) | [hackmd](https://hackmd.io/K_ba-lfbTmuuC1iYt5HT4A) | 01.71 - Frans Breziers |
 | 2019-10-22 | coding club | [slides]({{ site.baseurl }}{% link sessions/20191022_codingclub.html  %}) | [hackmd](https://hackmd.io/IucYoto4SnmMYAJowJ9Uvw) | Stadsgehoorzaal, Cornelis Schuytzaal, Leiden |
 | 2019-09-24 | make your code functional | [slides]({{ site.baseurl }}{% link sessions/20190924_make_your_code_functional_use_functions.html  %}) | [hackmd](https://hackmd.io/bzOI43RjRnaSu0bC4hQVPQ) | 01.71 - Frans Breziers |
@@ -25,19 +24,3 @@
 | 2018-03-20 | data manipulation | [slides]({{ site.baseurl }}{% link sessions/20180320_coding_club_data_manipulation.pdf  %}) | [hackmd](https://hackmd.io/7Yd3NsCFTwqHbRnHZbhlzg) | 01.17 - Clara Peeters |
 | 2018-02-22 | data manipulation | [slides]({{ site.baseurl }}{% link sessions/20180222_coding_club_data_manipulation.pdf  %}) | [hackmd](https://hackmd.io/Di6qnl7QS-mW8taTEezoVQ) | 01.71 - Frans Breziers |
 | 2018-01-23 | import data | [slides]({{ site.baseurl }}{% link sessions/20180123_coding_club_import_data.pdf  %}) | [hackmd](https://hackmd.io/7jIfz3LMRb-EMrtAfCNlzQ) | 00.48 - Keldermans |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
