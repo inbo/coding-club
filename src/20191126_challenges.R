@@ -57,5 +57,5 @@ ggplot(data = survey, mapping = aes(x = year)) +
 inat_bxl <- read_tsv("./data/20191126_BXL_iNaturalist_top20.csv",
                      na =  "")
 
-# Tlot the number of observations per species and year.
+# Plot the number of observations per species and year.
 # Make the best plot ever!
