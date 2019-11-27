@@ -18,10 +18,10 @@ survey <- survey %>%
 # Replace the box plot with a violin plot
 
 
-# How many surveys per gender? Show it as histogram
+# How many surveys per gender? Show it as bar plot
 
 
-# How many surveys per year? Show it as histogram
+# How many surveys per year? Show it as bar plot
 
 
 ### CHALLENGE 2
