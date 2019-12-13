@@ -31,7 +31,7 @@ Herman Teirlinck<br>
 class: center, left
 
 While you all are hypnotized by this gif created with [`moveVis`](http://movevis.org/#get-started) package, I check the roomie out of the room.<br>
-![:scale 50%]({{ site.baseurl}}/assets/images/20191219_moveVis.gif)
+![:scale 100%]({{ site.baseurl}}/assets/images/20191219_moveVis.gif)
 
 ---
 class: center, middle
@@ -40,24 +40,14 @@ class: center, middle
 ![:scale 90%]({{ site.baseurl}}/assets/images/20191219_boost_your_gaphs.png)
 
 ---
-class: center, middle
+class: center, left
 
 ## Recap: what did I learn during the last coding club?
-
-See 
 
 1. The ggplot recipe: <strong>data - mapping - geometry</strong>
 2. Mapping can be defined in the geometry (and often that's the case)
 3. The most important mapping argument? **aes**thetics!
-4. Arguments which need columns as values MUST go in `aes()`, the other ones MUST be put out of `aes()`.
-
----
-class: center, middle
-
-## Recap: what did I learn during the last coding club?
-
-Put all arguments which require variables (= column names) in `aes()`, all other arguments outside:
-
+4. Put all arguments which require variables (= columns) in `aes()`, all other arguments outside.
 
 ---
 class: center, middle
@@ -106,7 +96,9 @@ Run `library(tidyverse)`
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
 class: left, middle
 
-# Challenge 1: one plot, multiple geometries
+# Challenge 1
+
+## One plot, multiple geometries? Yes, we can
 
 - Click [`20191219_gam_fit_results.csv`](https://github.com/inbo/coding-club/blob/master/data/20191219_gam_fit_results.csv) and download* data file to `/data` folder.
 - Click [`20191219_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20191126_challenges.R) and download* script file in `/src` folder.
@@ -121,7 +113,7 @@ Use dataframe `fit_results` to:
 6. Set subtitle: "Source: GBIF".
 7. Left align title and subtitle (`INBOtheme` centers authomatically title and subtitles).
 
-Your plot is now ready for being inserted in the paper...
+Your plot is now ready for being inserted in the paper.<br>
 <small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
 ---
@@ -130,8 +122,10 @@ class: left, middle
 
 # Challenge 2
 
-You submitted the paper with plot of challenge 1. The reviewer likes your subplots a lot. Still, he/she asked a minor review: 
-<i>add a general plot above the subplots of previous challenge. I suggest to use area plots</i>. Hint: you need a ggplot extension.
+You submitted the paper. The reviewer likes your subplots a lot. Still, he/she asked the following minor review:
+<br>
+<i>add a general plot above the subplots of previous challenge. I suggest to use area plots</i>.
+<br> Hint: you need a ggplot extension like `cowplot` or `egg`.
 
 ---
 class: left, middle
@@ -144,7 +138,9 @@ Run:
 - `install.packages("ggdark")`
 - `library(ggdark)`
 
-![:scale 80%]({{ site.baseurl}}/assets/images/20191219_ggdark_example.png)
+have fun!
+
+![:scale 60%]({{ site.baseurl}}/assets/images/20191219_ggdark_example.png)
 
 ---
 class: left, middle
@@ -157,7 +153,7 @@ background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png
 The reviewer from challenge 2 approved the paper! He likes it, but still... He is the typical graphic freak. He wrote: <i>Why not adding the official logo of gbif on the left next to the title instead of subtitle "Source: GBIF"?</i><br>
 Do not download the logo. Just use the link as provided in the R source code.
 <br>
-Hint: use the wonderful [magick](https://ropensci.org/blog/2017/08/15/magick-10/) package.
+Hint: the [magick](https://ropensci.org/blog/2017/08/15/magick-10/) package does magic.
 <br>
 ![:scale 80%]({{ site.baseurl}}/assets/images/20191219_example_gbif_logo_on_plot.png)
 
@@ -169,13 +165,13 @@ background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png
 
 ### Option 2
 
-You don't have time to satisfy the reviewer: you need to <i>animate</i> a plot of another submitted paper (see code in option 2 of challenge 3 in source R file). Another graphic freak reviewer (maybe the same one?) suggests this minor review: <br>
+You don't have time to satisfy the reviewer: you need to <i>animate</i> a plot of an earlier submitted paper (see code in option 2 of challenge 3 in source R file). Another graphic freak reviewer (maybe the same one?) suggests this minor review: <br>
 <i>instead of so many subplots, I would use an animation plot: use year as variable to make the animation. At each frame, i.e. at each year, show the hidefoot length vs weight for all surveys taken up to that year.</i>
 <br>
-Hint: use the wonderful [magick](https://ropensci.org/blog/2017/08/15/magick-10/) package.
+Hint: the [magick](https://ropensci.org/blog/2017/08/15/magick-10/) package does magic again...
 <br>
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20191219_challenge3_animation.gif)
+![:scale 50%]({{ site.baseurl}}/assets/images/20191219_challenge3_animation.gif)
 
 ---
 class: left, middle
