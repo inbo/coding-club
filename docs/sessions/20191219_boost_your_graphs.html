@@ -84,22 +84,21 @@ Go to https://hackmd.io/hhmAidHlSwm8ITz6oE6ynA?both
 ---
 class: left, middle
 
-### Install the package suite
+### Install and load the package suite
 
-Run `install.packages("tidyverse")`
+`install.packages("tidyverse")`<br>
+`library(tidyverse)`
 
-### Load the package suite
+### Install and load the INBO gglot theme
 
-Run `library(tidyverse)`
+`install.packages("INBOtheme")`<br>
+`library(INBOtheme)`
 
-### Install the INBO gglot theme
+### Download data and source file
 
-Run `install.packages("INBOtheme")`
-
-### Load the INBO ggplot theme
-
-Run `library(INBOtheme)`
-
+- Click [`20191219_gam_fit_results.csv`](https://github.com/inbo/coding-club/blob/master/data/20191219_gam_fit_results.csv) and download* data file to `/data` folder.
+- Click [`20180222_surveys.csv`](https://github.com/inbo/coding-club/blob/master/data/20180222_surveys.csv) and download* data file to `/data` folder.
+- Click [`20191219_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20191126_challenges.R) and download* script file in `/src` folder.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -109,9 +108,6 @@ class: left, middle
 
 ## One plot, multiple geometries? Yes, we can
 
-- Click [`20191219_gam_fit_results.csv`](https://github.com/inbo/coding-club/blob/master/data/20191219_gam_fit_results.csv) and download* data file to `/data` folder.
-- Click [`20191219_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20191126_challenges.R) and download* script file in `/src` folder.
-<p>
 Use dataframe `fit_results` to:
 
 1. Plot number of observations (`obs`) versus time (`year`) and *facet* by species (`scientificName`). Arrange them in two rows and two columns.  As  y- and x- ranges are quit different among species, check that each plot has own y- and x-scale.
@@ -120,8 +116,9 @@ Use dataframe `fit_results` to:
 5. Set "Number of observations in Belgian Natura2000 protected areas" as title and "Source: GBIF" as subtitle.
 7. Left align both title and subtitles (`INBOtheme` centers authomatically title and subtitles).
 
-Your plot is now ready for being inserted in the paper.<br>
-<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+Your plot is now ready for being inserted in the paper.
+
+<p><small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small></p>
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
