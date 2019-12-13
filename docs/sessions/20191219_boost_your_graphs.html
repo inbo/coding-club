@@ -31,7 +31,7 @@ Herman Teirlinck<br>
 class: center, left
 
 While you all are hypnotized by this gif created with [`moveVis`](http://movevis.org/#get-started) package, I check the roomie out of the room.<br>
-![:scale 100%]({{ site.baseurl}}/assets/images/20191219_moveVis.gif)
+![:scale 80%]({{ site.baseurl}}/assets/images/20191219_moveVis.gif)
 
 ---
 class: center, middle
@@ -40,7 +40,7 @@ class: center, middle
 ![:scale 90%]({{ site.baseurl}}/assets/images/20191219_boost_your_gaphs.png)
 
 ---
-class: center, left
+class: left, middle
 
 ## Recap: what did I learn during the last coding club?
 
@@ -92,6 +92,15 @@ Run `install.packages("tidyverse")`
 
 Run `library(tidyverse)`
 
+### Install the INBO gglot theme
+
+Run `install.packages("INBOtheme")`
+
+### Load the INBO ggplot theme
+
+Run `library(INBOtheme)`
+
+
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
 class: left, middle
@@ -105,13 +114,11 @@ class: left, middle
 <p>
 Use dataframe `fit_results` to:
 
-1. Plot number of observations (`obs`) versus time (`year`).
-2. Split it in subplots: one subplot per species (`scientificName`). Arrange them in two rows and two columns.  As  y- and x- ranges are quit different among species, check that each plot has own y- and x-scale. Hint: <i>free scale</i>.
-3. Add fit avalues (`fit` column) as squared red points and red dotted line.
-4. Add confidence interval area (lower value: `lcl`, upper value: `ucl`) and set transparency equal to 0.3 and modify fill color to `purple`.
-5. Set title: "Number of observations in Belgian Natura2000 protected areas".
-6. Set subtitle: "Source: GBIF".
-7. Left align title and subtitle (`INBOtheme` centers authomatically title and subtitles).
+1. Plot number of observations (`obs`) versus time (`year`) and *facet* by species (`scientificName`). Arrange them in two rows and two columns.  As  y- and x- ranges are quit different among species, check that each plot has own y- and x-scale.
+3. Add fit values (`fit` column) as squared red points and red dotted line.
+4. Add confidence interval area (lower value: `lcl`, upper value: `ucl`) with transparency equal to 0.3 and use purple as filling color.
+5. Set "Number of observations in Belgian Natura2000 protected areas" as title and "Source: GBIF" as subtitle.
+7. Left align both title and subtitles (`INBOtheme` centers authomatically title and subtitles).
 
 Your plot is now ready for being inserted in the paper.<br>
 <small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
@@ -122,7 +129,7 @@ class: left, middle
 
 # Challenge 2
 
-You submitted the paper. The reviewer likes your subplots a lot. Still, he/she asked the following minor review:
+You submitted the paper. The reviewer likes the plot a lot. Still, he/she asked the following minor review to make it even better:
 <br>
 <i>add a general plot above the subplots of previous challenge. I suggest to use area plots</i>.
 <br> Hint: you need a ggplot extension like `cowplot` or `egg`.
@@ -140,7 +147,7 @@ Run:
 
 have fun!
 
-![:scale 60%]({{ site.baseurl}}/assets/images/20191219_ggdark_example.png)
+![:scale 50%]({{ site.baseurl}}/assets/images/20191219_ggdark_example.png)
 
 ---
 class: left, middle
