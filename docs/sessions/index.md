@@ -3,7 +3,8 @@
 
 |date | topic | slideshow | hackmd | location |
 | --- | ----- | ----------| ------ | -------  |
-| 2019-11-26 | Data visualization with ggplot | [slides]({{ site.baseurl }}{% link sessions/20191126_graphs_with_ggplot.html  %}) | [hackmd](https://hackmd.io/A0GZbxv2ToqjAvjT4XxKCQ?both) | 01.16 - Rik Wouters |
+| 2019-12-19 | Boost your graphs | [slides]({{ site.baseurl }}{% link sessions/20191219_boost_your_graphs.html  %}) | [hackmd](https://hackmd.io/hhmAidHlSwm8ITz6oE6ynA?view) | 01.71 - Frans Breziers |
+| 2019-11-26 | Data visualization with ggplot | [slides]({{ site.baseurl }}{% link sessions/20191126_graphs_with_ggplot.html  %}) | [hackmd](https://hackmd.io/A0GZbxv2ToqjAvjT4XxKCQ?view) | 01.16 - Rik Wouters |
 | 2019-10-24 | manipulating strings | [slides]({{ site.baseurl }}{% link sessions/20191024_strings.html  %}) | [hackmd](https://hackmd.io/K_ba-lfbTmuuC1iYt5HT4A) | 01.71 - Frans Breziers |
 | 2019-10-22 | coding club | [slides]({{ site.baseurl }}{% link sessions/20191022_codingclub.html  %}) | [hackmd](https://hackmd.io/IucYoto4SnmMYAJowJ9Uvw) | Stadsgehoorzaal, Cornelis Schuytzaal, Leiden |
 | 2019-09-24 | make your code functional | [slides]({{ site.baseurl }}{% link sessions/20190924_make_your_code_functional_use_functions.html  %}) | [hackmd](https://hackmd.io/bzOI43RjRnaSu0bC4hQVPQ) | 01.71 - Frans Breziers |
