@@ -19,7 +19,7 @@ class: center, middle
 -->
 
 <!--  Adjust the day, month  -->
-# 12 DECEMBER 2019
+# 19 DECEMBER 2019
 
 ## INBO coding club
 
@@ -103,7 +103,7 @@ class: left, middle
 - Click [`20180222_surveys.csv`](https://github.com/inbo/coding-club/blob/master/data/20180222_surveys.csv) and download* data file to `/data` folder.
 - Click [`20191219_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20191126_challenges.R) and download* script file in `/src` folder.
 
-<p><small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small></p>
+* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -116,7 +116,7 @@ class: left, middle
 Use dataframe `fit_results` to:
 
 1. Plot number of observations (`obs`) versus time (`year`) and *facet* by species (`scientificName`). Arrange them in two rows and two columns.  As  y- and x- ranges are quit different among species, check that each plot has own y- and x-scale.
-3. Add fit values (`fit` column) as squared red points and red dotted line.
+3. Add fit values (`fit` column) as red dotted line.
 4. Add confidence interval area (lower value: `lcl`, upper value: `ucl`) with transparency equal to 0.3 and use purple as filling color.
 5. Set "Number of observations in Belgian Natura2000 protected areas" as title and "Source: GBIF" as subtitle.
 7. Left align both title and subtitles (`INBOtheme` centers authomatically title and subtitles).
@@ -176,6 +176,9 @@ You don't have time to satisfy the reviewer: you need to <i>animate</i> a plot o
 <i>instead of so many subplots, I would use an animation plot for variable `year`. At each frame, i.e. at each year, show the hidefoot length vs weight for all surveys taken **up to that year**.</i>
 <br>
 Hint: the [magick](https://ropensci.org/blog/2017/08/15/magick-10/) package does magic again...
+
+Or: check out the [gganimate](https://gganimate.com/reference/index.html) package.
+
 <br>
 
 ![:scale 50%]({{ site.baseurl}}/assets/images/20191219_challenge3_animation.gif)
