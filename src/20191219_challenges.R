@@ -38,7 +38,11 @@ library(ggdark)
 ## CHALLENGE 3
 
 install.packages("magick")
+install.packages("gifski") # no need to load it, only needed for gganimate
+install.packages("gganimate")
+
 library(magick)
+library(gganimate)
 
 # Option 1
 
