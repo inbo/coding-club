@@ -36,11 +36,12 @@ library(ggdark)
 
 
 ## CHALLENGE 3
-
+install.packages("lubridate")
 install.packages("magick")
 install.packages("gifski") # no need to load it, only needed for gganimate
 install.packages("gganimate")
 
+library(lubridate)
 library(magick)
 library(gganimate)
 
@@ -55,3 +56,14 @@ ggplot(survey) +
   geom_point(aes(weight, hindfoot_length, color = sex),
              alpha = 0.3) +
   facet_wrap(~year)
+
+# preparing survey data to follow the hint...
+survey_timestamp <-
+  survey %>%
+  mutate(timestamp = ymd(paste(year, month, day, sep = "-")))
+
+static_plot <-
+  ggplot(survey_timestamp) +
+  geom_point(aes(weight, hindfoot_length, color = sex),
+             alpha = 0.3)
+# now it's up to you to add animation with gganimate!
