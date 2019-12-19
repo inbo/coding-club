@@ -2,7 +2,7 @@ library(tidyverse)
 library(INBOtheme)
 
 # read survey data
-survey <- read_csv("./data/20180222_surveys.csv")
+survey <- read_csv("./data/20191219_survey_cleaned.csv")
 # remove records without weight or hindfoot length
 survey <- survey %>%
   filter(!is.na(weight) & !is.na(hindfoot_length) & !is.na(sex))
