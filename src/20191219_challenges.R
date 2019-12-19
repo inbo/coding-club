@@ -46,6 +46,7 @@ library(magick)
 library(gganimate)
 
 # Option 1
+link <- "https://github.com/inbo/coding-club/raw/master/docs/assets/images/20191219_logo_gbif.png"
 
 
 
