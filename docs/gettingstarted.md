@@ -18,10 +18,14 @@ This page provides the information for first-time participants as well as some i
 * Within Rstudio, start a new Rstudio project:
     * Go to `File`  and choose `New Project...`
     * Pick `New directory`
+    ![:scale 50%]({{ site.baseurl}}/assets/images/getting_started_new_project1.png)
     * Pick `New project`
+    ![:scale 50%]({{ site.baseurl}}/assets/images/getting_started_new_project2.png)
     * Fill in the Directory name `coding-club`. You can choose the location on your computer (`Create project as subdirectory of:`) yourself by browsing to a folder. Leave the options `Create git repository` and  `use packrat with this project` empty.
+    ![:scale 50%]({{ site.baseurl}}/assets/images/getting_started_new_project3.png)
     * Click `Create project` (Rstudio will now open in the newly created project)
 * Still within Rstudio, install some essential packages by typing the following command in the `Console`: `install.packages("tidyverse")` and clicking ENTER button.
+![:scale 50%]({{ site.baseurl}}/assets/images/getting_started_new_project4.png)
 * Using file explorer (you can either use your operating systems file explorer or Rstudio's file explorer which is in the `Files` pane), navigate to your `coding-club` folder and create two (empty) subfolders inside the directory of your new `coding-club` directory:
     * a folder called `data`
     * a folder called `src`
@@ -33,7 +37,7 @@ When done, the coding club folder on your computer should look like:
 ├── data
 └── src
 ```
-
+![:scale 50%]({{ site.baseurl}}/assets/images/getting_started_new_project5.png)
 __Note for git-users__: When familiar with Git, you can setup a coding club using the git-integration of Rstudio. Go to `File`  and choose `New Project...`. Pick `Version control`, next `Git`  and fill in the URL of the coding club in the `Repository URL`: `https://github.com/inbo/coding-club`
 
 ### Each session setup
