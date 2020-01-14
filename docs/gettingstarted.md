@@ -25,7 +25,7 @@ This page provides the information for first-time participants as well as some i
     ![:scale 50%]({{ site.baseurl}}/assets/images/getting_started_new_project3.png)
     * Click `Create project` (Rstudio will now open in the newly created project)
 * Still within Rstudio, install some essential packages by typing the following command in the `Console`: `install.packages("tidyverse")` and clicking ENTER button.
-![:scale 50%]({{ site.baseurl}}/assets/images/getting_started_new_project4.png)
+![:scale 70%]({{ site.baseurl}}/assets/images/getting_started_new_project4.png)
 * Using file explorer (you can either use your operating systems file explorer or Rstudio's file explorer which is in the `Files` pane), navigate to your `coding-club` folder and create two (empty) subfolders inside the directory of your new `coding-club` directory:
     * a folder called `data`
     * a folder called `src`
