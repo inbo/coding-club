@@ -37,7 +37,7 @@ When done, the coding club folder on your computer should look like:
 ├── data
 └── src
 ```
-![:scale 50%]({{ site.baseurl}}/assets/images/getting_started_new_project5.png)
+![:scale 85%]({{ site.baseurl}}/assets/images/getting_started_new_project5.png)
 __Note for git-users__: When familiar with Git, you can setup a coding club using the git-integration of Rstudio. Go to `File`  and choose `New Project...`. Pick `Version control`, next `Git`  and fill in the URL of the coding club in the `Repository URL`: `https://github.com/inbo/coding-club`
 
 ### Each session setup
