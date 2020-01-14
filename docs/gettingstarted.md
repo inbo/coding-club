@@ -29,9 +29,9 @@ This page provides the information for first-time participants as well as some i
 * Using file explorer (you can either use your operating systems file explorer or Rstudio's file explorer which is in the `Files` pane), navigate to your `coding-club` folder and create two (empty) subfolders inside the directory of your new `coding-club` directory:
     * a folder called `data`
     * a folder called `src`
+    
 ![:scale 85%]({{ site.baseurl}}/assets/images/getting_started_new_project5.png)
 When done, the coding club folder on your computer should look like:
-
 ```
 ├── coding-club.Rproj
 ├── data
