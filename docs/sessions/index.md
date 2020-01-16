@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location |
 | --- | ----- | ----------| ------ | -------  |
-| 2019-12-21 & 23 | Import. Explore. Visualize (for staRters) | [slides]({{ site.baseurl }}{% link sessions/20200121_coding_club_for_staRters.html %) | [hackmd](https://hackmd.io/mv-Ng9V5R2KZyQbUUFmDcA) | 06.C.03 |
+| 2019-12-21 | Import. Explore. Visualize (for staRters) | [slides]({{ site.baseurl }}{% link sessions/20200121_coding_club_for_staRters.html %}) | [hackmd](https://hackmd.io/mv-Ng9V5R2KZyQbUUFmDcA) | 06.C.03 |
 | 2019-12-19 | Boost your graphs | [slides]({{ site.baseurl }}{% link sessions/20191219_boost_your_graphs.html  %}) | [hackmd](https://hackmd.io/hhmAidHlSwm8ITz6oE6ynA?view) | 01.71 - Frans Breziers |
 | 2019-11-26 | Data visualization with ggplot | [slides]({{ site.baseurl }}{% link sessions/20191126_graphs_with_ggplot.html  %}) | [hackmd](https://hackmd.io/A0GZbxv2ToqjAvjT4XxKCQ?view) | 01.16 - Rik Wouters |
 | 2019-10-24 | manipulating strings | [slides]({{ site.baseurl }}{% link sessions/20191024_strings.html  %}) | [hackmd](https://hackmd.io/K_ba-lfbTmuuC1iYt5HT4A) | 01.71 - Frans Breziers |
