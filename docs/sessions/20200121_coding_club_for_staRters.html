@@ -248,10 +248,11 @@ class: left, middle
 class: left, middle
 # Intermezzo: this `%>%` is a pype
 
-Why using  `%>%`? Try this:<br>
+Why using  `%>%`? <br>
+Try this:<br>
 
 ```
-rename(select(filter(iris, Sepal.Length > 7.5), Petal.Length, Petal.Width, Species), petal_length = Petal.Length)
+select(filter(iris, Sepal.Length > 7.5), Petal.Length, Petal.Width, Species)
 ```
 
 Can you understand what I have done here?<br>
@@ -261,8 +262,7 @@ Maybe this is better...
 ```
 iris %>%
   filter(Sepal.Length > 7.5) %>%
-  select(Petal.Length, Petal.Width, Species) %>%
-  rename(petal_length = Petal.Length)
+  select(Petal.Length, Petal.Width, Species)
 ```
 
 `%>%` makes programming and code reading easier. Life is easy with a pipe...
