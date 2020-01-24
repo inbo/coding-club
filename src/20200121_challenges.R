@@ -15,7 +15,7 @@ library(readxl) # to read Excel files
 # Did you know you can inspect some `summary()` statistics?
 
 
-# Did you know you can get `nrows()` and `ncols()`?
+# Did you know you can get `nrow()` and `ncol()`?
 
 
 
