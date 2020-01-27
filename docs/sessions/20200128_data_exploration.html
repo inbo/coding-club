@@ -112,15 +112,15 @@ class: left, middle
 
 # Challenge 2. Exploring means...
 
-- getting the `distinct()` values of specific columns.
+- Getting the `distinct()` values of specific columns.
   1. In which years countings took place?
   2. Which species were observed?
-- getting the `distinct()` pair values:
+- Getting the `distinct()` pair values:
   1. In which years-months countings took place?
   2. In which years a species was observed?
-- summarizing. Let's `summarise()` to produce a one-row dataframe containing columns: `n_distinct_gardens` (n of distinct gardens where countings took place), `min_year`, `max_year`, `n_distinct_years` (n of distinct years when countings took place), `min_counts`, `max_counts`, `mean_counts` (average number of idividuals per counting).
+- Summarizing. Let's `summarise()` to produce a one-row dataframe containing columns: `n_distinct_gardens` (n of distinct gardens where countings took place), `min_year`, `max_year`, `n_distinct_years` (n of distinct years when countings took place), `min_counts`, `max_counts`, `mean_counts` (average number of idividuals per counting).
 
-![:scale 20%]({{ site.baseurl}}/assets/images/20200128_distinct_summarize.png)
+![:scale 60%]({{ site.baseurl}}/assets/images/20200128_distinct_summarize.png)
 ---
 class: left, middle
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -135,12 +135,13 @@ background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png
 ![:scale 100%]({{ site.baseurl}}/assets/images/20200128_tidylog.png)
 
 ---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, middle
 
 # Challenge 3. The `group_by() %>% sumamrize()` recipe.
 
 <p>
-  1. Summarising as we did in challenge 2 is nice. But what if we want to retrieve the very same informations (number of gardens, minimum year, maximum year, number of years, average countings) **for each species**?
+  1. Summarising as we did in challenge 2 is nice. But what if we want to retrieve the very same informations (number of gardens, minimum year, maximum year, number of years, average countings) for **each species**?
 </p>
 <p>
   2. Get a summary with total number of counted individuals per species and month.
@@ -157,11 +158,12 @@ class: left, middle
   1. The top month of each species.
   2. The top 3 months of each species.
 
---- class: center, middle
+---
+class: center, middle
 
 # Resources
 
-Package [`DataExplorer`](https://towardsdatascience.com/simple-fast-exploratory-data-analysis-in-r-with-dataexplorer-package-e055348d9619) could help for basically data exploration. Via function `create_report()` you can get a comprehensive html report!
+Package [`DataExplorer`](https://towardsdatascience.com/simple-fast-exploratory-data-analysis-in-r-with-dataexplorer-package-e055348d9619) can help for basically data exploration. Via function `create_report()` you can get a comprehensive html report in a second!
 
 ![:scale 80%]({{ site.baseurl}}/assets/images/20200128_dataexplorer_package.png)
 
