@@ -1,8 +1,11 @@
 library(tidyverse)
 
-butterflycounts_df <- read_delim("./data/20200128_garden_butterfly_counts.csv", delim = ";")
+butterflycounts_df <- read_delim("./data/20200128_garden_butterfly_counts.csv",
+                                 delim = ";")
 
 ## CHALLENGE 1
+
+
 
 
 
@@ -32,7 +35,7 @@ butterflycounts_df <- read_delim("./data/20200128_garden_butterfly_counts.csv", 
 # In how many months per year and per garden did countings occur?
 # (months_garden)
 
-# Code for plotting (column with number of months is here called `n_months`)
+# Plot it! (column with number of months is called `n_months`)
 ggplot(months_garden, aes(n_months)) +
   geom_histogram(bins = 13, binwidth = 0.75) +
   scale_x_continuous(breaks = seq(0, 13, 1)) +
