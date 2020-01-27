@@ -68,7 +68,7 @@ class: center, middle
 <!-- Create a new hackmd file and replace this link (twice!) -->
 Go to https://hackmd.io/51fdfXY8SXOcOSMke3vZUg?both
 
-<iframe src="https://hackmd.io/hhmAidHlSwm8ITz6oE6ynA?both" height="440px" width="800px"></iframe>
+<iframe src="https://hackmd.io/51fdfXY8SXOcOSMke3vZUg?both" height="440px" width="800px"></iframe>
 
 ---
 class: left, middle
@@ -99,7 +99,7 @@ class: left, middle
 Open `20200128_challenges.R` you have just downloaded, read `butterflycounts_df` and:
 
 1. check the `head()` of it
-1. check the `structure()` of it
+1. check the `str()` of it
 1. have a `glimpse()` of it
 1. get some `summary()` statistics out of it
 1. calculate the number of rows and columns of it
@@ -118,7 +118,7 @@ class: left, middle
 - Getting the `distinct()` pair values:
   1. In which years-months countings took place?
   2. In which years a species was observed?
-- Summarizing. Let's `summarise()` to produce a one-row dataframe containing columns: `n_distinct_gardens` (n of distinct gardens where countings took place), `min_year`, `max_year`, `n_distinct_years` (n of distinct years when countings took place), `min_counts`, `max_counts`, `mean_counts` (average number of idividuals per counting).
+- Summarizing. Let's `summarise()` to produce a one-row dataframe containing columns: `n_distinct_gardens` (n of distinct gardens where countings took place), `min_year`, `max_year`, `n_distinct_years` (n of distinct years when countings took place), `min_counts`, `max_counts`, `mean_counts` (average number of individuals per counting).
 
 ![:scale 65%]({{ site.baseurl}}/assets/images/20200128_distinct_summarize.png)
 ---
@@ -152,11 +152,12 @@ class: left, middle
 
 # Bonus challenge
 
-- Sometimes you need to *do something* before summarising: `group_by() %>% do_something() %>% summrise()`. In how many months per year and per garden did countings occur? You can plot the result by using the given code.
+- Sometimes you need to *do something* before summarising: `group_by() %>% do_something() %>% summarise()`. In how many months per year and per garden did countings occur? You can plot the result by using the given code.
 
 - Sometimes you need to *do something* per each group without summarising: `group_by() %>% do_something()`. Start from output of second output of Challenge 3 to get:
   1. The top month of each species.
   2. The top 3 months of each species.
+  3. All species with at least 4 months with over 2000 individuals
 
 ---
 class: center, middle
