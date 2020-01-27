@@ -99,12 +99,12 @@ class: left, middle
 Open `20200128_challenges.R` you have just downloaded, read `butterflycounts_df` and:
 
 1. check the `head()` of it
-2. check the `structure()` of it
-3. have a `glimpse()` of it
-4. get some `summary()` statistics out of it
-5. calculate the number of rows and columns of it
-6. get the column names
-6. or, if it is not too big, `View()` it
+1. check the `structure()` of it
+1. have a `glimpse()` of it
+1. get some `summary()` statistics out of it
+1. calculate the number of rows and columns of it
+1. get the column names
+1. or, if it is not too big, `View()` it
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -120,7 +120,7 @@ class: left, middle
   2. In which years a species was observed?
 - Summarizing. Let's `summarise()` to produce a one-row dataframe containing columns: `n_distinct_gardens` (n of distinct gardens where countings took place), `min_year`, `max_year`, `n_distinct_years` (n of distinct years when countings took place), `min_counts`, `max_counts`, `mean_counts` (average number of idividuals per counting).
 
-![:scale 60%]({{ site.baseurl}}/assets/images/20200128_distinct_summarize.png)
+![:scale 70%]({{ site.baseurl}}/assets/images/20200128_distinct_summarize.png)
 ---
 class: left, middle
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -141,7 +141,7 @@ class: left, middle
 # Challenge 3. The `group_by() %>% sumamrize()` recipe.
 
 <p>
-  1. Summarising as we did in challenge 2 is nice. But what if we want to retrieve the very same informations (number of gardens, minimum year, maximum year, number of years, average countings) for **each species**?
+  1. Summarising as we did in challenge 2 is nice. But what if we want to retrieve the very same information (number of gardens, minimum year, maximum year, number of years, average countings) for **each species**?
 </p>
 <p>
   2. Get a summary with total number of counted individuals per species and month.
