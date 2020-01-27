@@ -35,7 +35,7 @@ p <- ggplot(months_garden, aes(n_months)) +
   scale_x_continuous(breaks = seq(0, 13, 1)) +
   xlab("Number of months") +
   ylab("Number of gardens") +
-  facet_wrap(~jaartal)
+  facet_wrap(~year)
 p
 
 
