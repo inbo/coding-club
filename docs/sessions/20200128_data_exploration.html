@@ -84,7 +84,7 @@ class: left, middle
 ## Download data and source file
 
 - Click [`20200128_garden_butterflycounts.csv`](https://github.com/inbo/coding-club/blob/master/data/20200128_garden_butterfly_counts.csv) and download* data file to your `/data` folder.
-- Click [`20200128_challenges.R`]() and download* script file in `/src` folder.
+- Click [`20200128_challenges.R`]() and download* script file in your `/src` folder.
 
 * __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)
 
@@ -144,7 +144,10 @@ class: left, middle
   1. Summarising as we did in challenge 2 is nice. But what if we want to retrieve the very same information (number of gardens, minimum year, maximum year, number of years, average countings) for **each species**?
 </p>
 <p>
-  2. Get a summary with total number of counted individuals per species and month.
+  2. Get a summary with total number of counted individuals per species.
+</p>
+<p>
+  3. Get a summary with total number of counted individuals per species and month.
 </p>
 
 ---
@@ -154,10 +157,10 @@ class: left, middle
 
 - Sometimes you need to *do something* before summarising: `group_by() %>% do_something() %>% summarise()`. In how many months per year and per garden did countings occur? You can plot the result by using the given code.
 
-- Sometimes you need to *do something* per each group without summarising: `group_by() %>% do_something()`. Start from output of second output of Challenge 3 to get:
+- Sometimes you need to *do something* per each group without summarising: `group_by() %>% do_something()`. Start from output of third output of Challenge 3 to get:
   1. The top month of each species.
   2. The top 3 months of each species.
-  3. All species with at least 4 months with over 2000 individuals
+  3. All species with at least 4 months with over 2000 individuals.
 
 ---
 class: center, middle
