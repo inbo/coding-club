@@ -49,7 +49,7 @@ ggplot(tot_species_month, aes(x = species, y = total)) +
   theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5))
 
 # plot it! x = month, y = total, facet = species
-ggplot(tot_spec_month, aes(x = month, y = tot_individuals)) +
+ggplot(tot_species_month, aes(x = month, y = total)) +
   geom_col() +
   xlab("Month") +
   ylab("Number of individuals") +
@@ -60,7 +60,7 @@ ggplot(tot_spec_month, aes(x = month, y = tot_individuals)) +
 # In how many months per year and per garden did countings occur?
 # (months_garden)
 
-# Plot it! We used column with number of months is called `n_months`
+# Plot it! Column with number of months: `n_months`
 ggplot(months_garden, aes(n_months)) +
   geom_histogram(bins = 13, binwidth = 0.75) +
   scale_x_continuous(breaks = seq(0, 13, 1)) +
