@@ -17,12 +17,27 @@ View(butterflycounts_df)
 ## CHALLENGE 2
 
 # let's work with `distinct()`
+
+distinct(butterflycounts_df, year)
+distinct(butterflycounts_df, species)
+distinct(butterflycounts_df, year, month)
+distinct(butterflycounts_df, species, year)
+# the same using the pipe %>% (shortcut: Ctrl + Shift + m)
 butterflycounts_df %>% distinct(year)
 butterflycounts_df %>% distinct(species)
 butterflycounts_df %>% distinct(year, month)
 butterflycounts_df %>% distinct(species, year)
 
 # let's work with `summarize()`
+summarise(butterflycounts_df,
+          n_distinct_gardens = n_distinct(id_garden),
+          min_year = min(year),
+          max_year = max(year),
+          n_years = n_distinct(year),
+          min_counts = min(n_individuals),
+          max_counts = max(n_individuals),
+          mean_counts = mean(n_individuals))
+# or using the pipe %>%
 butterflycounts_df %>%
   summarise(n_distinct_gardens = n_distinct(id_garden),
             min_year = min(year),
@@ -37,6 +52,8 @@ butterflycounts_df %>%
 
 # 1. summarise() as in challenge 2 but now lets' do it for each species
 
+# the use of %>% is strongly suggested. Working without pipes would make code
+# very difficult to read.
 butterflycounts_df %>%
   group_by(species) %>%
   summarise(n_distinct_gardens = n_distinct(id_garden),
@@ -87,6 +104,7 @@ ggplot(tot_species_month, aes(x = month, y = total)) +
 ## BONUS CHALLENGE
 
 # In how many months per year and per garden did countings occur?
+# We use months_garden as variable to store the summary.
 months_garden <- butterflycounts_df %>%
   group_by(year, id_garden) %>%
   distinct(month) %>%
