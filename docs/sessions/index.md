@@ -3,6 +3,7 @@
 
 |date | topic | slideshow | hackmd | location |
 | --- | ----- | ----------| ------ | -------  |
+| 2020-02-25 | Data management | [slides]({{ site.baseurl }}{% link sessions/20200225_data_management.html  %}) | [hackmd](https://hackmd.io/09qyY42KTXeNK1nOZDB01Q) | 01.05 - Isala Van Diest |
 | 2020-01-28 | Data exploration | [slides]({{ site.baseurl }}{% link sessions/20200128_data_exploration.html  %}) | [hackmd](https://hackmd.io/51fdfXY8SXOcOSMke3vZUg) | 01.05 - Isala Van Diest |
 | 2020-01-21 & 23 | Import. Explore. Visualize. | [slides]({{ site.baseurl }}{% link sessions/20200121_coding_club_for_staRters.html %}) | [hackmd](https://hackmd.io/mv-Ng9V5R2KZyQbUUFmDcA) | 06.C.03 |
 | 2019-12-19 | Boost your graphs | [slides]({{ site.baseurl }}{% link sessions/20191219_boost_your_graphs.html  %}) | [hackmd](https://hackmd.io/hhmAidHlSwm8ITz6oE6ynA?view) | 01.71 - Frans Breziers |
