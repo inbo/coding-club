@@ -74,3 +74,5 @@ SpeciesDf.Clean <-
                                            pattern = "[:punct:]$"))
 
 View(SpeciesDf.Clean)
+
+if (nrow(df) <= nrow(df2)) print(paste("Number of rows:", nrow(df))) else print(paste("Number of rows:", nrow(df2)))
