@@ -1,6 +1,20 @@
+library(tidyverse)
+
+## Challenge 1: files and directories
+
+##  Challenge 2: improve the column names
+
+urban_gaia <- read_delim(here::here("data", "20200225_urban_gaia_policy.txt"),
+                         delim = "\t")
 
 
-##  Challenge 3
+##########################################
+##  Challenge 3: improve the code style ##
+##########################################
+
+# tip 1: use CTRL + I for automatic code alignment
+# tip 2: use lintr::lint() to check this file for faults against style
+
 
 library(tidyverse)
 library(here)
@@ -12,7 +26,7 @@ df <- read_csv(here('data', '20191024_species.csv'), na = "")
 
 df$species_id <- str_to_lower(
   df$species_id
-    )
+)
 df$taxa <- str_to_lower( df$taxa )
 
 
@@ -33,7 +47,7 @@ df %>%
 ### extract species_id labels longer than 2 letters
 species_id_long <- df$species_id[
   str_length(df$species_id) > 2
-]
+  ]
 
 ### tidyverse version
 species_id_long <-
