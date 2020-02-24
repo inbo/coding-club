@@ -86,9 +86,14 @@ class: left, middle
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
 class: left, middle
 
-# Challenge 1. Files and directories
+# Challenge 1. Tidy files and directories
 
-Improve directory structure and filenames of [.](). Get inspired by:
+Run the code in `20200225_challenges.R` to create a messy project. Next:
+- Improve the directory structure and filenames
+- Improve the code in `1.R` so the figure can be created by anyone and gets stored in a dedicated folder. Tip use: `here()`
+- use `as.data.frame(list.files(recursive = TRUE))` to show your tidy project structure in the hackmd
+
+Get inspired by:
 - [how to give good names to files (slides)](https://speakerdeck.com/jennybc/how-to-name-files)
 <br>![:scale 30%]({{ site.baseurl}}/assets/images/20200225_name_files.png)
 - [this project structure](https://github.com/inbo/coding-club/blob/master/docs/assets/images/20200225_structure_project.png), a simplified version of Python's [cookiecutter-data-science directory structure]
@@ -98,7 +103,7 @@ Improve directory structure and filenames of [.](). Get inspired by:
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, middle
 
-# Challenge 2. Tabular data
+# Challenge 2. Tidy column names for tabular data
 
 Open the downloaded file `20200225_urban_gaia_policy.txt` and improve the column names.
 
@@ -110,25 +115,26 @@ class: left, middle
 Do you know that:
 
 - You can improve column names by using the function  `clean_names()` from `janitor` package?
-- You can rename columns by using tidyverse function `rename`?
+- You can rename columns by using tidyverse function `rename` or `select`?
 
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, middle
 
-# Challenge 3. Code
+# Challenge 3. Tidy code
 
 
-Based on the [the INBO style guide for R code](https://inbo.github.io/tutorials/tutorials/styleguide_r_code/) or [The tidyverse style guide](https://style.tidyverse.org/files.html) improve the code of [20200225_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20200225_challenges.R) (this is the R file you are working in)
+Based on [the INBO style guide for R code](https://inbo.github.io/tutorials/tutorials/styleguide_r_code/) or [the tidyverse style guide on syntax](https://style.tidyverse.org/syntax.html) improve the code of [20200225_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20200225_challenges.R) (this is the R file you are working in)
 
 ---
 class: center, left
 
 # Resources
 
-- [The tidyverse style guide](https://style.tidyverse.org/files.html): style everything it has to do with coding (R filenames, code syntax, documentation, packages)
+- [The tidyverse style guide](https://style.tidyverse.org/files.html): style everything that has to do with coding (R filenames, code syntax, documentation, packages)
 - [What they forgot to teach you about R](https://rstats.wtf/index.html)
+- [workflow-projects in r4ds](https://r4ds.had.co.nz/workflow-projects.html)
 
 
 ---
