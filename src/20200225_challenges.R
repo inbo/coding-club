@@ -30,8 +30,7 @@ urban_gaia <- read_delim(here("data", "20200225_urban_gaia_policy.txt"),
 # tip 2: use lintr::lint() to check this file for faults against style
 
 # the below code is copy-pasted from a previous coding club (and messed up a bit)
-# there is no need to actually run the code (in case you did not attend that
-# coding club, you will probably not have the file 20191024_species.csv)
+
 
 library(tidyverse)
 library(here)
