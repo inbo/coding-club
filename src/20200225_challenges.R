@@ -9,7 +9,7 @@ library(janitor)
 ## Challenge 1: files and directories ##
 ########################################
 
-source(here("src", "20200225_create_messy_project"))
+source(here("src", "20200225_create_messy_project.R"))
 create_messy_project()
 # this will create a folder "messy_project", open the Rstudio project
 # (messy_project.Rproj) in that folder to start the challenge
