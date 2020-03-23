@@ -61,7 +61,7 @@ After coding club 2019-02-26: https://github.com/rstudio/cheatsheets/issues/74 <
 ---
 class: left, middle
 
-Not only, thanks to that coding club @ryangarnett learned git and GitHub!<br>
+Not only, thanks to that coding club @ryangarnett learned a lot about git and GitHub!<br>
 
 ![:scale 60%]({{ site.baseurl}}/assets/images/20200326_cheatsheet_sf_issue_followup.png)
 
@@ -72,6 +72,7 @@ class: center, middle
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20190226_cheasheet.png)<br />
 [`sf` cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20200326_cheat_sheet_sf.pdf)
+Very nice [article with a lot of examples](https://r-spatial.github.io/sf/articles/sf2.html).
 
 ---
 class: center, middle
@@ -100,19 +101,45 @@ Go to https://hackmd.io/Xx5FJXrWQV-Pn79ZxdDQBg?both
 <iframe src="https://hackmd.io/Xx5FJXrWQV-Pn79ZxdDQBg?both" height="400px" width="800px"></iframe>
 
 ---
+class: left, middle
+
+# Download data and code
+
+Today we will use an R script and some datasets. Download them by following the links:
+
+- R script: [20200326.R](https://github.com/inbo/coding-club/blob/master/src/20200326.R). Download it in your  `src` folder
+- [20200121_dataVlinders.txt](https://github.com/inbo/coding-club/blob/master/data/20200121_dataVlinders.txt)
+- the reference grid of Belgium at 10km resolution: [`20190226_utm10_bel.zip`](https://github.com/inbo/coding-club/blob/master/data/20190226_utm10_bel.zip). Download it in your `data` folder and **extract all** in subfolder `/data/20190226_utm10_bel/`. Source: [European Environment Agency](https://www.eea.europa.eu/data-and-maps/data/eea-reference-grids-2)
+- The Flemish *protected areas*: [`20190226_ps_hbtrl.zip`](https://github.com/inbo/coding-club/blob/master/data/20190226_ps_hbtrl.zip). Download it in your  `data` folder and **extract all** in subfolder `data/20190226_ps_hbtrl`. Source:[geopunt](https://www.geopunt.be/catalogus/datasetfolder/a84a87f5-5607-4019-a8db-9d52a827786b)
+
+---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
 class: left, middle
 
 # Challenge 1
 
+1. Create a `sf` data.frame, `spatial_butterfly_df`, from `butterfly_df` with CRS: `epsg=4326`, the CRS used by the author of the dataset
+2. A `sf` data.frame is tidyverse compatible! Create `spatial_atalanta_df` with only the observations of `Atalanta` butterflies
+2. Read the Belgian reference grid
+3. Compare the CRS of occurrences and grids
 
 ---
 class: left, middle
 
 ### CRS
 
-No geospatial data without specifying the Coordinate Reference System you work with!<br>
-See [video](https://youtu.be/KUF_Ckv8HbE) from [tutorial](https://www.earthdatascience.org/courses/earth-analytics/spatial-data-r/intro-to-coordinate-reference-systems/).
+No geospatial data without specifying the Coordinate Reference System you work with!<br> Why? Because we need to project a sphere on a flat map! The typical Mercator projection stretches at the Poles:
+![:scale 80%]({{ site.baseurl}}/assets/images/20200326_greenland_vs_africa.png).<br>
+For more strange effects of the mercator projection see this [video](https://youtu.be/KUF_Ckv8HbE) from [tutorial](https://www.earthdatascience.org/courses/earth-analytics/spatial-data-r/intro-to-coordinate-reference-systems/).
+
+---
+class: left, middle
+
+### CRS by EPSG codes
+
+A common way to specify the CRS is by providing the EPSG code. EPSG stands for European Petroleum Survey Group and is an organization that maintains a geodetic parameter database with standard codes, the EPSG codes, for coordinate systems, datums, spheroids, units and such alike.  There a lot of EPSG codes! Full list: https://spatialreference.org/
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20200326_epsg_codes.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -120,12 +147,19 @@ class: left, middle
 
 # Challenge 2
 
+1. For each observation of Atalanta find the cell it belongs to. Hint: an `intersection` is needed...
+2. How many observations in each cell of the grid?
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, middle
 
 # Challenge 3
+
+1. Get information on the layers of the Flemish protected area shapefile?
+2. Read the Flemish protected areas. Does it have a EPSG code? If not, assign the EPSG code 3035 (from [geopunt source](https://www.geopunt.be/catalogus/datasetfolder/a84a87f5-5607-4019-a8db-9d52a827786b)).
+3. Find the area of each protected area
+4. How many Atalanta butterflies in each protected area?
 
 
 ---
