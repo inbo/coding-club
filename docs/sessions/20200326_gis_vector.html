@@ -109,8 +109,8 @@ Today we will use an R script and some datasets. Download them by following the 
 
 - R script: [20200326.R](https://github.com/inbo/coding-club/blob/master/src/20200326.R). Download it in your  `src` folder
 - [20200121_dataVlinders.txt](https://github.com/inbo/coding-club/blob/master/data/20200121_dataVlinders.txt)
-- the reference grid of Belgium at 10km resolution: [`20190226_utm10_bel.zip`](https://github.com/inbo/coding-club/blob/master/data/20190226_utm10_bel.zip). Download it in your `data` folder and **extract all** in subfolder `/data/20190226_utm10_bel/`. Source: [European Environment Agency](https://www.eea.europa.eu/data-and-maps/data/eea-reference-grids-2)
-- The Flemish *protected areas*: [`20190226_ps_hbtrl.zip`](https://github.com/inbo/coding-club/blob/master/data/20190226_ps_hbtrl.zip). Download it in your  `data` folder and **extract all** in subfolder `data/20190226_ps_hbtrl`. Source:[geopunt](https://www.geopunt.be/catalogus/datasetfolder/a84a87f5-5607-4019-a8db-9d52a827786b)
+- the reference grid of Belgium at 10km resolution: [`20190226_utm10_bel.zip`](https://github.com/inbo/coding-club/blob/master/data/20190226_utm10_bel.zip). Download it in your `data` folder and **extract** in subfolder `/data/20190226_utm10_bel/`. Source: [European Environment Agency](https://www.eea.europa.eu/data-and-maps/data/eea-reference-grids-2)
+- The Flemish *protected areas*: [`20190226_ps_hbtrl.zip`](https://github.com/inbo/coding-club/blob/master/data/20190226_ps_hbtrl.zip). Download it in your  `data` folder and **extract** in subfolder `data/20190226_ps_hbtrl`. Source:[geopunt](https://www.geopunt.be/catalogus/datasetfolder/a84a87f5-5607-4019-a8db-9d52a827786b)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -118,10 +118,11 @@ class: left, middle
 
 # Challenge 1
 
-1. Create a `sf` data.frame, `spatial_butterfly_df`, from `butterfly_df` with CRS: `epsg=4326`, the CRS used by the author of the dataset
+1. Create a `sf` data.frame, `spatial_butterfly_df`, from `butterfly_df` with: `crs =4326`, the **C**oordinate **R**eference **S**ystem used by the author of the dataset
 2. A `sf` data.frame is tidyverse compatible! Create `spatial_atalanta_df` with only the observations of `Atalanta` butterflies
 2. Read the Belgian reference grid
-3. Compare the CRS of occurrences and grids
+3. Read the Belgian municipalities
+3. Compare the CRS of occurrences, grids and municipalities
 
 ---
 class: left, middle
@@ -147,8 +148,10 @@ class: left, middle
 
 # Challenge 2
 
-1. For each observation of Atalanta find the cell it belongs to. Hint: an `intersection` is needed...
+1. For each observation of Atalanta find the 10x10km cell it belongs to. Hint: an `intersection` is needed...
 2. How many observations in each cell of the grid?
+3. For each observation of Atalanta find the municipality it belongs to.
+4. How many observations in each municipality?
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -156,10 +159,11 @@ class: left, middle
 
 # Challenge 3
 
-1. Get information on the layers of the Flemish protected area shapefile?
-2. Read the Flemish protected areas. Does it have a EPSG code? If not, assign the EPSG code 3035 (from [geopunt source](https://www.geopunt.be/catalogus/datasetfolder/a84a87f5-5607-4019-a8db-9d52a827786b)).
-3. Find the area of each protected area
-4. How many Atalanta butterflies in each protected area?
+1. Get information on the layers of the Flemish protected area. How do they are called?
+2. Read the layer `ps_hbtrl` of the Flemish protected areas as `hab_flanders`. Does it have a EPSG code? If not, *transform* to EPSG code 3035 ( [geopunt source](https://www.geopunt.be/catalogus/datasetfolder/a84a87f5-5607-4019-a8db-9d52a827786b))
+3. Overlap protected areas and municipalities
+4. In which municipalities is *Kalmthoutse Heide* located?
+5. And the *Voerstreek*?
 
 
 ---
