@@ -107,7 +107,7 @@ class: left, middle
 
 Today we will use an R script and some datasets. Download them by following the links:
 
-- R script: [20200326.R](https://github.com/inbo/coding-club/blob/master/src/20200326.R). Download it in your  `src` folder
+- R script: [20200326_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20200326_challenges.R). Download it in your  `src` folder
 - [20200121_dataVlinders.txt](https://github.com/inbo/coding-club/blob/master/data/20200121_dataVlinders.txt)
 - the reference grid of Belgium at 10km resolution: [`20190226_utm10_bel.zip`](https://github.com/inbo/coding-club/blob/master/data/20190226_utm10_bel.zip). Download it in your `data` folder and **extract** in subfolder `/data/20190226_utm10_bel/`. Source: [European Environment Agency](https://www.eea.europa.eu/data-and-maps/data/eea-reference-grids-2)
 - the Belgian municipalities: [20200326_Belgian_municipalities.zip](https://github.com/inbo/coding-club/blob/master/data/20200326_Belgian_municipalities.zip). . Download it in your  `data` folder and **extract** in subfolder `data/20200326_Belgian_municipalities`.
@@ -119,7 +119,7 @@ class: left, middle
 
 # Challenge 1
 
-1. Create a `sf` data.frame, `spatial_butterfly_df`, from `butterfly_df` with: `crs =4326`, the **C**oordinate **R**eference **S**ystem used by the author of the dataset
+1. Run 20200326_challenges.R and create a spatial data.frame, `spatial_butterfly_df`, from `butterfly_df` with: `crs =4326`, the **C**oordinate **R**eference **S**ystem used by the author of the dataset
 2. A `sf` data.frame is tidyverse compatible! Create `spatial_atalanta_df` with only the observations of `Atalanta` butterflies
 2. Read the Belgian reference grid
 3. Read the Belgian municipalities
