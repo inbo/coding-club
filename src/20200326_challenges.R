@@ -1,6 +1,5 @@
 library(tidyverse)
 library(sf)
-library(janitor)
 
 # CHALLENGE 1
 
