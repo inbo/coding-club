@@ -38,3 +38,5 @@ rsconnect/
 
 # documentation sass
 docs/.sass-cache/
+
+.DS_Store
