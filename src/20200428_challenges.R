@@ -22,6 +22,7 @@ st_crs(provinces)
 # Here your code...
 
 
+
 ## CHALLENGE 2
 
 # Read butterfly data
@@ -56,6 +57,8 @@ st_crs(obs_butterflies)
 
 # Here your code...
 
+
+
 ## CHALLENGE 3
 
 # Transform to Lambert 31370, typical metrical projection for Belgium:
@@ -85,6 +88,8 @@ provinces <-
 # Hint: https://rstudio.github.io/leaflet/choropleths.html
 
 # Here your code...
+
+
 
 ## BONUS CHALLENGE
 
@@ -117,3 +122,5 @@ obs_butterflies_selection <-
 # Hint: https://rstudio.github.io/leaflet/showhide.html
 
 # Here your code...
+
+
