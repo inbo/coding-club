@@ -115,8 +115,8 @@ class: left, middle
 
 Starting from the [`20200428_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20200428_challenges.R) file:
 
-- Plot a map with Belgian provinces using `tmap`. Fill the provinces with a color based on their area (column `SURFACE.GIS.km2`) and provide a nice title to the legend, i.e. "Area (km2)". Hint:[building_maps_in_layers](https://workshop.mhermans.net/thematic-maps-r/04_plot.html#building_maps_in_layers).
-- Divide them by region using facets. Hint: [multiple_maps__facets](https://workshop.mhermans.net/thematic-maps-r/04_plot.html#multiple_maps__facets).
+- Plot a map with Belgian provinces using `tmap`. Fill the provinces with a color based on their area (column `SURFACE.GIS.km2`) and provide a nice title to the legend, i.e. "Area (km2)". Hint:[Building Maps In Layers](https://workshop.mhermans.net/thematic-maps-r/04_plot.html#building_maps_in_layers)
+- Divide them by region using facets. Hint: [multiple Maps Facets](https://workshop.mhermans.net/thematic-maps-r/04_plot.html#multiple_maps__facets)
 
 You could end up with something like [this]({{ site.baseurl}}/assets/images/20200428_example_provinces_tmap.html).
 
@@ -128,10 +128,9 @@ class: left, middle
 
 Starting from the [`20200428_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20200428_challenges.R) file:
 
-- Generate a *leaflet* map centered at lng 4.89 and lat 51.01 with zoom level 7. Hint: https://rstudio.github.io/leaflet/basemaps.html
-- Add markers at butterfly observations coordinates (`decimal_longitude`, `decimal_latitude`). Cluster them using the cluster option. Hint: https://rstudio.github.io/leaflet/markers.html
-- Add pop-ups to the markers showing the date, e.g. "Date: 2015-09-20". Hint: https://rstudio.github.io/leaflet/popups.html
-- Add also labels to the markers showing the species, e.g. "Atalanta".
+- Generate a *leaflet* map centered at lng 4.89 and lat 51.01 with zoom level 7. Hint: [Basemaps](https://rstudio.github.io/leaflet/basemaps.html)
+- Add markers at butterfly observations coordinates (`decimal_longitude`, `decimal_latitude`). Cluster them using the cluster option. Hint:[Markers](https://rstudio.github.io/leaflet/markers.html)
+- Add pop-ups to the markers showing the date, e.g. "Date: 2015-09-20". Add also labels to the markers showing the species, e.g. "Atalanta". Hint: [Popups and Labels](https://rstudio.github.io/leaflet/popups.html)
 
 ![:scale 70%]({{ site.baseurl}}/assets/images/20200428_example_butterflies_markers.png)
 
@@ -143,8 +142,8 @@ class: left, middle
 
 Starting from the [`20200428_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20200428_challenges.R) file:
 
-- Make a choropleth map of belgian provinces based on their area (column `SURFACE.GIS.km2`). Provide a legend as well. Hint: https://rstudio.github.io/leaflet/choropleths.html
-- Add markers at the centroids of the provinces. Add labels using the Dutch name of the provinces (column `TX_PROV_DESCR_NL`).
+- Make a choropleth map of belgian provinces based on their area (column `SURFACE.GIS.km2`). Provide a legend as well. Hint: [Choropleths](https://rstudio.github.io/leaflet/choropleths.html) and [Legends](https://rstudio.github.io/leaflet/legends.html).
+- Add markers at the centroids of the provinces. Add labels using the Dutch name of the provinces (column `TX_PROV_DESCR_NL`)
 
 ![:scale 50%]({{ site.baseurl}}/assets/images/20200428_example_provinces_choropleths.png)
 
@@ -157,8 +156,8 @@ If you didn't have enough, then you earn a bonus!
 
 Starting from the [`20200428_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20200428_challenges.R) file:
 
-- Show the observations of common brimstone (citroenvlinder),  large tortoiseshell (grote vos), small tortoiseshell (kleine vos) and orange tip (oranjetipje) as **circles** whose radius in meters is equal to the uncertainty (column `coord_uncertainty_in_meters`) and the color represents the species. Provide a legend for the colors.  Hint: https://rstudio.github.io/leaflet/shapes.html
-- Add also a layer with provinces and correspondent legend. Let the user to show/hide the layers and their legends and to choose between Esri.WorldImagery and the default Open Street Map as background. Hint: https://rstudio.github.io/leaflet/showhide.html
+- Show the observations of common brimstone (citroenvlinder),  large tortoiseshell (grote vos), small tortoiseshell (kleine vos) and orange tip (oranjetipje) as **circles** whose radius in meters is equal to the uncertainty (column `coord_uncertainty_in_meters`) and the color represents the species. Provide a legend for the colors.  Hint: [shapes](https://rstudio.github.io/leaflet/shapes.html)
+- Add also a layer with provinces and correspondent legend. Let the user to show/hide the layers and their legends and to choose between Esri.WorldImagery and the default Open Street Map as background. Hint: [Show/Hide Layers](https://rstudio.github.io/leaflet/showhide.html)
 
 ![:scale 60%]({{ site.baseurl}}/assets/images/20200428_example_tiles_butterflies_provinces.png).
 
