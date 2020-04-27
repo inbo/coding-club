@@ -37,9 +37,8 @@ class: center, middle
 class: center, middle
 
 Thematic maps tutorial: https://workshop.mhermans.net/thematic-maps-r/index.html.<br>
+[`leaflet` online documentation](https://rstudio.github.io/leaflet/)<br>
 ![:scale 80%]({{ site.baseurl}}/assets/images/20200428_leaflet_documentation_screenshot.png)<br>
-[`leaflet` online documentation](https://rstudio.github.io/leaflet/)
-<br>
 and the [`leaflet` cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20190321_cheat_sheet_leaflet.pdf).
 
 ---
@@ -65,16 +64,16 @@ class: center, middle
 ### Share your code during the coding session!
 
 <!-- Create a new hackmd file and replace this link (twice!) -->
-Go to https://hackmd.io/1JeUgfKNRPeXTfk2lqP2AA
+Go to https://hackmd.io/1JeUgfKNRPeXTfk2lqP2AA?both
 
-<iframe src="https://hackmd.io/1JeUgfKNRPeXTfk2lqP2AA" height="400px" width="800px"></iframe>
+<iframe src="https://hackmd.io/1JeUgfKNRPeXTfk2lqP2AA?both" height="400px" width="800px"></iframe>
 
 ---
 class: left, middle
 
 ### Install required packages:
 
-Packages we need, as mentioned by e-mail on Fri:
+Packages we need, as mentioned by e-mail on Friday:
 
 ```r
 install.packages(c("sf", "leaflet", "htmltools", "tmap"))
@@ -88,11 +87,12 @@ Install also `tidyverse` if you have not done before.
 ### Load the required packages:
 
 ```r
-library(sf)
 library(tidyverse)
+library(sf)
 library(BelgiumMaps.StatBel)
 library(leaflet)
 library(htmltools)
+library(tmap)
 ```
 
 ---
@@ -115,13 +115,10 @@ class: left, middle
 
 Starting from the [`20200428_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20200428_challenges.R) file:
 
-- Plot a map with Belgian provinces using `tmap`
-- Fill the provinces with a color based on their area (column `SURFACE.GIS.km2`) and provide a nice title to the legend, i.e. "Area (km2)".
-- Divide them by region using facets
+- Plot a map with Belgian provinces using `tmap`. Fill the provinces with a color based on their area (column `SURFACE.GIS.km2`) and provide a nice title to the legend, i.e. "Area (km2)". Hint:[building_maps_in_layers](https://workshop.mhermans.net/thematic-maps-r/04_plot.html#building_maps_in_layers).
+- Divide them by region using facets. Hint: [multiple_maps__facets](https://workshop.mhermans.net/thematic-maps-r/04_plot.html#multiple_maps__facets).
 
-__Tip__: [Check the tutorial ](https://workshop.mhermans.net/thematic-maps-r/04_plot.html#ggplot_with_geom_sf)
-
-You should endup with something like [this](url({{ site.baseurl}}/docs/assets/images/20200428_example_provinces_tmap.html).
+You could end up with something like [this]({{ site.baseurl}}/assets/images/images/20200428_example_provinces_tmap.html)).
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -134,9 +131,9 @@ Starting from the [`20200428_challenges.R`](https://github.com/inbo/coding-club/
 - Generate a *leaflet* map centered at lng 4.89 and lat 51.01 with zoom level 7. Hint: https://rstudio.github.io/leaflet/basemaps.html
 - Add markers at butterfly observations coordinates (`decimal_longitude`, `decimal_latitude`). Cluster them using the cluster option. Hint: https://rstudio.github.io/leaflet/markers.html
 - Add pop-ups to the markers showing the date, e.g. "Date: 2015-09-20". Hint: https://rstudio.github.io/leaflet/popups.html
-- Add also labels to the markers showing the species, e.g. "Atalanta"."
+- Add also labels to the markers showing the species, e.g. "Atalanta".
 
-![:scale 80%]({{ site.baseurl}}/assets/images/20200428_example_butterflies_markers.png)
+![:scale 70%]({{ site.baseurl}}/assets/images/20200428_example_butterflies_markers.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -147,10 +144,9 @@ class: left, middle
 Starting from the [`20200428_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20200428_challenges.R) file:
 
 - Make a choropleth map of belgian provinces based on their area (column `SURFACE.GIS.km2`). Provide a legend as well. Hint: https://rstudio.github.io/leaflet/choropleths.html
-- Add markers at the centroids of the provinces. Add labels using the Dutch name of the provinces (column
-# `TX_PROV_DESCR_NL`).
+- Add markers at the centroids of the provinces. Add labels using the Dutch name of the provinces (column `TX_PROV_DESCR_NL`).
 
-![:scale 80%]({{ site.baseurl}}/assets/images/20200428_example_provinces_choropleths.png)
+![:scale 70%]({{ site.baseurl}}/assets/images/20200428_example_provinces_choropleths.png)
 
 ---
 class: left, middle
@@ -164,16 +160,17 @@ Starting from the [`20200428_challenges.R`](https://github.com/inbo/coding-club/
 - Show the observations of common brimstone (citroenvlinder),  large tortoiseshell (grote vos), small tortoiseshell (kleine vos) and orange tip (oranjetipje) as **circles** whose radius in meters is equal to the uncertainty (column `coord_uncertainty_in_meters`) and the color represents the species. Provide a legend for the colors.  Hint: https://rstudio.github.io/leaflet/shapes.html
 - Add also a layer with provinces and correspondent legend. Let the user to show/hide the layers and their legends and to choose between Esri.WorldImagery and the default Open Street Map as background. Hint: https://rstudio.github.io/leaflet/showhide.html
 
-![:scale 80%]({{ site.baseurl}}/assets/images/20200428_example_tiles_butterflies_provinces.png).
+![:scale 70%]({{ site.baseurl}}/assets/images/20200428_example_tiles_butterflies_provinces.png).
 
 ---
 class: left, middle
 
 # Resources
 
-1. [Thematic maps in R](https://workshop.mhermans.net/thematic-maps-r/index.html)
-2. [Leaflet for R](https://rstudio.github.io/leaflet/)
+1. [Thematic maps in R](https://workshop.mhermans.net/thematic-maps-r/index.html).
+2. [Leaflet for R](https://rstudio.github.io/leaflet/).
 3. [INBO tutorial](https://inbo.github.io/tutorials/tutorials/spatial_wms_services/#as-background-of-interactive-maps) on how to add a WMS service to your leaflet map.
+4. More challenges from [coding club session - March 2019](https://inbo.github.io/coding-club/sessions/20190321_gis_maps.html#1).
 
 ---
 class: center, middle
