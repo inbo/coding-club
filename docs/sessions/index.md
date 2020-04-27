@@ -4,6 +4,7 @@
 |date | topic | slideshow | hackmd | location |
 | --- | ----- | ----------| ------ | -------  |
 | 2020-03-26 | Geospatial data handling | [slides]({{ site.baseurl }}{% link sessions/20200326_gis_vector.html  %}) | [hackmd](https://hackmd.io/Xx5FJXrWQV-Pn79ZxdDQBg?both) | 01.05 - Isala Van Diest |
+| 2020-04-28 | Making maps | [slides]({{ site.baseurl }}{% link sessions/20200428_gis_maps.html  %}) | [hackmd](https://hackmd.io/1JeUgfKNRPeXTfk2lqP2AA) | webinar |
 | 2020-02-25 | Data management | [slides]({{ site.baseurl }}{% link sessions/20200225_data_management.html  %}) | [hackmd](https://hackmd.io/09qyY42KTXeNK1nOZDB01Q) | 01.05 - Isala Van Diest |
 | 2020-01-28 | Data exploration | [slides]({{ site.baseurl }}{% link sessions/20200128_data_exploration.html  %}) | [hackmd](https://hackmd.io/51fdfXY8SXOcOSMke3vZUg) | 01.05 - Isala Van Diest |
 | 2020-01-21 & 23 | Import. Explore. Visualize. | [slides]({{ site.baseurl }}{% link sessions/20200121_coding_club_for_staRters.html %}) | [hackmd](https://hackmd.io/mv-Ng9V5R2KZyQbUUFmDcA) | 06.C.03 |
