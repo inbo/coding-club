@@ -29,20 +29,11 @@ st_crs(provinces)
 obs_butterflies <- read_csv(
   "./data/20200326_butterflies.txt",
   na = "")
-# Extract coordinates
-coords_obs_butterflies <-
-  obs_butterflies %>%
-  select(decimal_longitude, decimal_latitude)
-# Transfomr obs_butterflies to a sf data.frame (data in WGS84)
+# Transform obs_butterflies to a sf data.frame (data in WGS84)
 obs_butterflies <-
   st_as_sf(obs_butterflies,
            coords = c("decimal_longitude", "decimal_latitude"),
            crs = 4326)
-# Add coordinates as two extra columns
-obs_butterflies <-
-  obs_butterflies %>%
-  bind_cols(coords_obs_butterflies)
-
 # Double check the Coordinate Reference System (CRS)
 st_crs(obs_butterflies)
 
