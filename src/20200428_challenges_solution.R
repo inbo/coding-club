@@ -98,7 +98,7 @@ map_butterflies_1 <-
 
 map_butterflies_1
 
-# Option 2: if you use the data.frame obs_butterfly_df is possible you must pass
+# Option 2: if you use the data.frame obs_butterfly_df you must pass
 # the right column names to the arguments lng (longitdue) and lat (latitude).
 map_butterflies_2 <-
   leaflet(obs_butterflies_df) %>%
@@ -152,8 +152,6 @@ provinces <-
 # `TX_PROV_DESCR_NL`).
 # Hint: https://rstudio.github.io/leaflet/choropleths.html
 
-# Here your code...
-
 # Create the palette function to map values into colors
 pal <- colorBin(palette = "plasma",
                 domain = provinces$SURFACE.GIS.km2)
@@ -174,7 +172,7 @@ provinces_leaflet <-
     # we need to pass the columns with lng and lat
     lng = ~lng, lat = ~lat,
     label = ~htmlEscape(TX_PROV_DESCR_NL),
-    popup = ~htmlEscape(paste("Area:", SURFACE.GIS.km2))
+    popup = ~htmlEscape(paste("Area:", round(SURFACE.GIS.km2)))
 )
 
 provinces_leaflet
@@ -197,7 +195,7 @@ provinces_leaflet2 <-
   addMarkers(data = provinces, # data goes here
              lng = ~lng, lat = ~lat,
              label = ~htmlEscape(TX_PROV_DESCR_NL),
-             popup = ~htmlEscape(paste("Area:", SURFACE.GIS.km2)))
+             popup = ~htmlEscape(paste("Area:", round(SURFACE.GIS.km2))))
 
 provinces_leaflet2
 
@@ -237,8 +235,6 @@ obs_butterflies_selection_sf <-
 # correspondent legend. Let the user to show/hide these two layers and to choose
 # between Esri.WorldImagery and the default Open Street Map as background.
 # Hint: https://rstudio.github.io/leaflet/showhide.html
-
-# Here your code...
 
 n_species <- length(unique(obs_butterflies_selection_df$species))
 speciespal <- colorFactor(topo.colors(n_species),
