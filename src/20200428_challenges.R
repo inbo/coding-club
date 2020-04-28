@@ -33,7 +33,7 @@ obs_butterflies <- read_csv(
 coords_obs_butterflies <-
   obs_butterflies %>%
   select(decimal_longitude, decimal_latitude)
-# Transfomr obs_butterflies to a sf data.frame (data in WGS84)
+# Transform obs_butterflies to a sf data.frame (data in WGS84)
 obs_butterflies <-
   st_as_sf(obs_butterflies,
            coords = c("decimal_longitude", "decimal_latitude"),
