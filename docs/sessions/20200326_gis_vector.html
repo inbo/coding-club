@@ -30,14 +30,14 @@ My living room
 ---
 class: center, left
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20200326_roomie.png)
+![:scale 100%]({{ site.baseurl}}/assets/images/20200326/20200326_roomie.png)
 <p>No, not this time!</p>
 
 ---
 class: center, middle
 
 <!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
-![:scale 90%]({{ site.baseurl}}/assets/images/20190226_spatial_data.png)
+![:scale 90%]({{ site.baseurl}}/assets/images/20190226/20190226_spatial_data.png)
 
 ---
 class: left, middle
@@ -57,21 +57,21 @@ class: left, middle
 
 After coding club 2019-02-26: https://github.com/rstudio/cheatsheets/issues/74 <br>
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20200326_cheatsheet_sf_issue.png)
+![:scale 100%]({{ site.baseurl}}/assets/images/20200326/20200326_cheatsheet_sf_issue.png)
 
 ---
 class: left, middle
 
 Not only, thanks to that coding club @ryangarnett learned a lot about git and GitHub!<br>
 
-![:scale 60%]({{ site.baseurl}}/assets/images/20200326_cheatsheet_sf_issue_followup.png)
+![:scale 60%]({{ site.baseurl}}/assets/images/20200326/20200326_cheatsheet_sf_issue_followup.png)
 
 <br>Open science: it's good for you, it's good for everyone.
 
 ---
 class: center, middle
 
-![:scale 80%]({{ site.baseurl}}/assets/images/20190226_cheasheet.png)<br>
+![:scale 80%]({{ site.baseurl}}/assets/images/20190226/20190226_cheasheet.png)<br>
 [`sf` cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20200326_cheat_sheet_sf.pdf)
 
 See also this very nice [article with some examples](https://r-spatial.github.io/sf/articles/sf2.html) and the excellent book [geocomputation with R](https://geocompr.robinlovelace.net/).
@@ -110,11 +110,11 @@ class: left, middle
 
 Today we will use an R script and some datasets. Download* the R script in `src ` and datasets in `data`.
 
-- R script: [20200326_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20200326_challenges.R)
-- Dataset of butterfly observations in Belgium [20200326_butterflies.txt](https://github.com/inbo/coding-club/blob/master/data/20200326_butterflies.txt)
-- the reference grid of Belgium at 10km resolution: [`20200326_utm10_bel.gpkg`](https://github.com/inbo/coding-club/blob/master/data/20200326_utm10_bel.gpkg). Source: [European Environment Agency](https://www.eea.europa.eu/data-and-maps/data/eea-reference-grids-2)
-- the Belgian municipalities: [20200326_Belgian_municipalities.geojson](https://github.com/inbo/coding-club/blob/master/data/20200326_Belgian_municipalities.geojson)
-- the Flemish protected areas: [`20200326_protected_areas.gpkg`](https://github.com/inbo/coding-club/blob/master/data/20200326_protected_areas.gpkg). Source:[geopunt](https://www.geopunt.be/catalogus/datasetfolder/a84a87f5-5607-4019-a8db-9d52a827786b)
+- R script: [20200326/20200326_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20200326/20200326_challenges.R)
+- Dataset of butterfly observations in Belgium [20200326/20200326_butterflies.txt](https://github.com/inbo/coding-club/blob/master/data/20200326/20200326_butterflies.txt)
+- the reference grid of Belgium at 10km resolution: [`20200326/20200326_utm10_bel.gpkg`](https://github.com/inbo/coding-club/blob/master/data/20200326/20200326_utm10_bel.gpkg). Source: [European Environment Agency](https://www.eea.europa.eu/data-and-maps/data/eea-reference-grids-2)
+- the Belgian municipalities: [20200326/20200326_Belgian_municipalities.geojson](https://github.com/inbo/coding-club/blob/master/data/20200326/20200326_Belgian_municipalities.geojson)
+- the Flemish protected areas: [`20200326/20200326_protected_areas.gpkg`](https://github.com/inbo/coding-club/blob/master/data/20200326/20200326_protected_areas.gpkg). Source:[geopunt](https://www.geopunt.be/catalogus/datasetfolder/a84a87f5-5607-4019-a8db-9d52a827786b)
 
 <small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
@@ -124,12 +124,12 @@ class: left, middle
 
 # Challenge 1
 
-1. Run 20200326_challenges.R and create a spatial data.frame, `spatial_butterfly_df`, from `butterfly_df` with: `crs =4326`, the **C**oordinate **R**eference **S**ystem used by the author of the dataset
+1. Run 20200326/20200326_challenges.R and create a spatial data.frame, `spatial_butterfly_df`, from `butterfly_df` with: `crs =4326`, the **C**oordinate **R**eference **S**ystem used by the author of the dataset
 2. A `sf` data.frame is tidyverse compatible! Create `spatial_atalanta_df` with only the observations of `Atalanta` butterflies
 2. Read the Belgian reference grid
 3. Read the Belgian municipalities
 3. Compare the CRS of occurrences, grids and municipalities
-<p>![:scale 80%]({{ site.baseurl}}/assets/images/20200326_cheatsheet_challenge1.png)
+<p>![:scale 80%]({{ site.baseurl}}/assets/images/20200326/20200326_cheatsheet_challenge1.png)
 
 ---
 class: left, middle
@@ -137,7 +137,7 @@ class: left, middle
 ### CRS
 
 No geospatial data without specifying the Coordinate Reference System you work with!<br> Why? Because we need to project a sphere on a flat map! The typical Mercator projection stretches at the Poles:
-![:scale 80%]({{ site.baseurl}}/assets/images/20200326_greenland_vs_africa.png).<br>
+![:scale 80%]({{ site.baseurl}}/assets/images/20200326/20200326_greenland_vs_africa.png).<br>
 For more strange effects of the mercator projection see this [video](https://youtu.be/KUF_Ckv8HbE) from [tutorial](https://www.earthdatascience.org/courses/earth-analytics/spatial-data-r/intro-to-coordinate-reference-systems/).
 
 ---
@@ -147,7 +147,7 @@ class: left, middle
 
 A common way to specify the CRS is by providing the EPSG code. EPSG stands for European Petroleum Survey Group and is an organization that maintains a geodetic parameter database with standard codes, the EPSG codes, for coordinate systems, datums, spheroids, units and such alike.  There are a lot of EPSG codes! Full list: https://spatialreference.org/
 
-![:scale 80%]({{ site.baseurl}}/assets/images/20200326_epsg_codes.png)
+![:scale 80%]({{ site.baseurl}}/assets/images/20200326/20200326_epsg_codes.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -159,7 +159,7 @@ class: left, middle
 2. How many observations in each cell of the grid?
 3. For each observation of Atalanta find the municipality it belongs to.
 4. How many observations in each municipality?
-<p>![:scale 80%]({{ site.baseurl}}/assets/images/20200326_cheatsheet_challenge2.png)
+<p>![:scale 80%]({{ site.baseurl}}/assets/images/20200326/20200326_cheatsheet_challenge2.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -172,7 +172,7 @@ class: left, middle
 3. Overlap protected areas and municipalities
 4. In which municipalities is *Kalmthoutse Heide* located?
 5. And the *Voerstreek*?
-<p>![:scale 80%]({{ site.baseurl}}/assets/images/20200326_cheatsheet_challenge3.png)
+<p>![:scale 80%]({{ site.baseurl}}/assets/images/20200326/20200326_cheatsheet_challenge3.png)
 
 ---
 class: left, middle
@@ -181,7 +181,7 @@ class: left, middle
 
 Some extra exercises...
 
-1. Via `st_read()` you can also read shape files! Go to the zipped shape file of Flemish protected areas: [`20190226_ps_hbtrl.zip`](https://github.com/inbo/coding-club/blob/master/data/20190226_ps_hbtrl.zip). Download it in your `data` folder and extract in subfolder `data/20190226_ps_hbtrl`. Check the names of the layers and read the layer `ps_hbtrl` as in challenge 3
+1. Via `st_read()` you can also read shape files! Go to the zipped shape file of Flemish protected areas: [`20190226/20190226_ps_hbtrl.zip`](https://github.com/inbo/coding-club/blob/master/data/20190226/20190226_ps_hbtrl.zip). Download it in your `data` folder and extract in subfolder `data/20190226/20190226_ps_hbtrl`. Check the names of the layers and read the layer `ps_hbtrl` as in challenge 3
 2. Calculate centroids of the municipalities
 3. Calculate distance of Atalanta observations to the centroids of the municipalities
 
@@ -193,7 +193,7 @@ class: left, middle
 - [Geocomputation with R](https://geocompr.robinlovelace.net/)
 - [Spatial Data Science](https://keen-swartz-3146c4.netlify.com/)
 - [How to use open vector file formats in R](https://inbo.github.io/tutorials/tutorials/spatial_standards_vector/)
-- [`sf` cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20200326_cheat_sheet_sf.pdf)
+- [`sf` cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20200326/20200326_cheat_sheet_sf.pdf)
 - [`sf` article with some examples](https://r-spatial.github.io/sf/articles/sf2.html)
 
 ---

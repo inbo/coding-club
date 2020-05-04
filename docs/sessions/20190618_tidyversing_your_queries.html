@@ -31,7 +31,7 @@ Herman Teirlinck<br>
 class: center, middle
 
 <!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
-![:scale 90%]({{ site.baseurl}}/assets/images/20190618_tidyverse_queries.png)
+![:scale 90%]({{ site.baseurl}}/assets/images/20190618/20190618_tidyverse_queries.png)
 
 ---
 class: center, middle
@@ -54,7 +54,7 @@ class: center, middle
 
 Today:
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20190618_dbplyr_intro.png)<br />
+![:scale 100%]({{ site.baseurl}}/assets/images/20190618/20190618_dbplyr_intro.png)<br />
 [dbplyr](https://dbplyr.tidyverse.org/)
 
 ---
@@ -91,7 +91,7 @@ class: left, middle
 
 (Installing and) load package `inborutils` use the `connect_inbo_dbase` function from the inborutils package to connect to the database `D0021_00_userFlora`. For more information, check [INBO database tutorial](https://inbo.github.io/tutorials/tutorials/r_database_access/).
 
-- Click [`20190618_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190618_challenges.R) and download* script to `src` subfolder.
+- Click [`20190618/20190618_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190618/20190618_challenges.R) and download* script to `src` subfolder.
 - Make a connection to `D0021_00_userFlora`
 - Connect to taxon table `tblTaxon`
 - Get the names of the columns in `taxon`
@@ -121,7 +121,7 @@ class: left, middle
 
 We found in Challenge 1 how to get the scientific name of 'Geel schorpioenmos'. We want to reuse the query later on for other species.
 
-- Complete the function called `userflora_query_scientificname` in [`20190618_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190618_challenges.R) to do it. The function has two input arguments: a connection to a table and a dutch plant name. The funcion should return the corresponding scientificname.
+- Complete the function called `userflora_query_scientificname` in [`20190618/20190618_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190618/20190618_challenges.R) to do it. The function has two input arguments: a connection to a table and a dutch plant name. The funcion should return the corresponding scientificname.
 
 - Try to extend the function `userflora_dutch_to_scientificname` to work on partial matches, i.e. search for all taxa CONTAINING the input dutch plant name in column `NaamNederlands`. For example, searching all dutch names containing the string `sterkranswier`. Tip: see https://dbplyr.tidyverse.org/articles/sql.html
 
@@ -148,7 +148,7 @@ class: center, middle
 
 INBO Coding club goes to holiday... see you all back in August!
 
-![:scale 70%]({{ site.baseurl}}/assets/images/20190618_summerbreak.png)
+![:scale 70%]({{ site.baseurl}}/assets/images/20190618/20190618_summerbreak.png)
 
 ---
 class: center, middle

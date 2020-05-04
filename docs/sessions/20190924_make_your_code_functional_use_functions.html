@@ -31,24 +31,24 @@ Herman Teirlinck<br>
 class: center, middle
 
 <!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
-![:scale 90%]({{ site.baseurl}}/assets/images/20190924_write_functions.png)
+![:scale 90%]({{ site.baseurl}}/assets/images/20190924/20190924_write_functions.png)
 
 ---
 class: center, middle
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20190924_scheme_function.png)
+![:scale 90%]({{ site.baseurl}}/assets/images/20190924/20190924_scheme_function.png)
 
 ---
 class: center, middle
 
 ### Why functions?
 
-![:scale 120%]({{ site.baseurl}}/assets/images/20190924_why_functions.png)
+![:scale 120%]({{ site.baseurl}}/assets/images/20190924/20190924_why_functions.png)
 
 ---
 class: center, middle
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20190924_functions_as_building_blocks.jpg)
+![:scale 90%]({{ site.baseurl}}/assets/images/20190924/20190924_functions_as_building_blocks.jpg)
 
 ---
 class: center, middle
@@ -82,9 +82,9 @@ class: left, middle
 
 # Challenge 1
 
-- Click [`20190924_oppervlakte_straat_wijken_Brugge.csv`](https://github.com/inbo/coding-club/blob/master/data/20190924_oppervlakte_straat_wijken_Brugge.csv) and download* data file to `./data` folder.
-- Click [`20190924_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190924_challenges.R) and download* script in `./src` folder.
-- Write function `get_info_districts` so that you can retrieve the summary values of `20190924_oppervlakte_straat_wijken_Brugge.csv` using your function.
+- Click [`20190924/20190924_oppervlakte_straat_wijken_Brugge.csv`](https://github.com/inbo/coding-club/blob/master/data/20190924/20190924_oppervlakte_straat_wijken_Brugge.csv) and download* data file to `./data` folder.
+- Click [`20190924/20190924_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190924/20190924_challenges.R) and download* script in `./src` folder.
+- Write function `get_info_districts` so that you can retrieve the summary values of `20190924/20190924_oppervlakte_straat_wijken_Brugge.csv` using your function.
 
 <small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
@@ -94,7 +94,7 @@ class: left, middle
 
 # Challenge 2
 
-- Click [`20190924_oppervlakte_straat_wijken_Antwerpen.csv`](https://github.com/inbo/coding-club/blob/master/data/20190924_oppervlakte_straat_wijken_Antwerpen.csv) and download data file to `./data` folder.
+- Click [`20190924/20190924_oppervlakte_straat_wijken_Antwerpen.csv`](https://github.com/inbo/coding-club/blob/master/data/20190924/20190924_oppervlakte_straat_wijken_Antwerpen.csv) and download data file to `./data` folder.
 - Adapt the function `get_info_districts` so that you can reuse your function to tackle also Antwerp's data without altering the data itself*.
 
 <small>* __Tip__: select column by name with double square brackets instead of $: `df[["col_name"]]` instead of `df$col_name`
@@ -111,7 +111,7 @@ Do you want to compare district demography or air quality from different open da
 2. Use standards
 3. Contribute to improve standards if they are not good enough. Your own "better standard" on your laptop is not a standard...
 
-<br>![:scale 40%]({{ site.baseurl}}/assets/images/20190924_standards.png)
+<br>![:scale 40%]({{ site.baseurl}}/assets/images/20190924/20190924_standards.png)
 <br>Standards in biodiversity: [TDWG standards](https://www.tdwg.org/standards/). <br>Oscibio goes to [BIODIVERSITY NEXT](https://biodiversitynext.org/).
 
 ---
@@ -123,8 +123,8 @@ class: left, middle
 
 <p>Functions allow you to reuse your own coding work more easily: Don't Repeat Yourself (DRY), aka less copy pasting of code…</p>
 
-- Click [`20190829_goose_counts_2018.csv`](https://github.com/inbo/coding-club/blob/master/data/20190829_goose_counts_2018.csv) used in previous coding club and download data file to `./data` folder.
-  - The challenge 3 code in [`20190924_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190924_challenges.R#L58) is long, redundant and prone to errors. Write a function called `counts_summary` to generate the very same plots without repeating yourself.
+- Click [`20190829/20190829_goose_counts_2018.csv`](https://github.com/inbo/coding-club/blob/master/data/20190829/20190829_goose_counts_2018.csv) used in previous coding club and download data file to `./data` folder.
+  - The challenge 3 code in [`20190924/20190924_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190924/20190924_challenges.R#L58) is long, redundant and prone to errors. Write a function called `counts_summary` to generate the very same plots without repeating yourself.
 
 <small>* __Tip__: use  `!!sym(var_name)` in your function to group data frame by a variable containing column name.
 
@@ -135,7 +135,7 @@ class: center, middle
 
 Share them by collaborating to [`inborutils`](https://github.com/inbo/inborutils) package.
 
-![:scale 80%]({{ site.baseurl}}/assets/images/20190924_inborutils.PNG)
+![:scale 80%]({{ site.baseurl}}/assets/images/20190924/20190924_inborutils.PNG)
 
 ---
 class:center, middle
@@ -143,7 +143,7 @@ class:center, middle
 # Do you want more?
 
 <p>Go [in depth](http://adv-r.had.co.nz/Functions.html#function-arguments), do a check [under the hood](https://swcarpentry.github.io/r-novice-inflammation/14-supp-call-stack/) or learn more about [programming with `dplyr`](https://dplyr.tidyverse.org/articles/programming.html).</p>
-![:scale 90%]({{ site.baseurl}}/assets/images/20190924_more_info_functions.PNG)
+![:scale 90%]({{ site.baseurl}}/assets/images/20190924/20190924_more_info_functions.PNG)
 
 ---
 class: center, middle
