@@ -33,10 +33,14 @@ The repository structure is described below.
 │   │   └── template.html
 │   └── workflow.md           : How to organize a coding club at INBO
 ├── data                      : Data sets used during sessions
-│   ├── 20180222_species.csv
+│   ├── 20180222
+|   │   ├── 20180222_species.csv
+|   │   └── ...
 │   └── ...
-└── src                       : Code used during sessions
-    ├── 20180522_challenges.r
+└── src
+    ├── 20180522                   : Code used during sessions
+    │   ├── 20180522_challenges.r
+    │   └── ...
     └── ...
 ```
 
