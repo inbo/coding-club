@@ -27,7 +27,7 @@ st_crs(provinces)
 
 # Read butterfly data
 obs_butterflies <- read_csv(
-  "./data/20200326_butterflies.txt",
+  "./data/20200326/20200326_butterflies.txt",
   na = "")
 # Transform obs_butterflies to a sf data.frame (data in WGS84)
 obs_butterflies <-

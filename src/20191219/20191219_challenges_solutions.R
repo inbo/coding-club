@@ -2,7 +2,7 @@ library(tidyverse)
 library(INBOtheme)
 
 # read data
-survey <- read_csv("./data/20191219_survey_cleaned.csv")
+survey <- read_csv("./data/20191219/20191219_survey_cleaned.csv")
 
 ## RECAP
 
@@ -38,7 +38,7 @@ ggplot(data = survey) +
 
 ## CHALLENGE 1
 
-fit_results <- read_csv("./data/20191219_gam_fit_results.csv",
+fit_results <- read_csv("./data/20191219/20191219_gam_fit_results.csv",
                            na = "")
 
 ggplot(data = fit_results) +
@@ -131,7 +131,7 @@ main_plot <-
 complete_plot <- image_graph(res = 96)
 cowplot::plot_grid(main_plot, sub_plots, nrow = 2)
 dev.off()
-link <- "https://github.com/inbo/coding-club/raw/master/docs/assets/images/20191219_logo_gbif.png"
+link <- "https://github.com/inbo/coding-club/raw/master/docs/assets/images/20191219/20191219_logo_gbif.png"
 gbif_logo <- image_read(link)
 out <- image_composite(complete_plot,
                        image_scale(gbif_logo, geometry = "x50"))

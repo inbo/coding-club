@@ -1,6 +1,6 @@
 library(readr)
 
-decay_1 <- read_csv("./data/20180821_decay_measurements_1.csv")
+decay_1 <- read_csv("./data/20180821/20180821_decay_measurements_1.csv")
 
 # Get summary stats about concentration decay
 min_decay_1 <- min(decay_1$conc_data, na.rm = TRUE) # min

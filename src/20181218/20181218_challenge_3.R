@@ -20,7 +20,7 @@ will_work * 2
 library(readr)
 library(tidyverse)
 
-rainfall <- read_csv("../data/20180123_rainfall_klemskerke_clean.csv")
+rainfall <- read_csv("../data/20180123/20180123_rainfall_klemskerke_clean.csv")
 
 rainfall %>%
     mutate(take_half_wont_work = datetime/2.)

@@ -51,7 +51,7 @@ decay_model <- function(decay, init, data_conc) {
 }
 
 # I have the following concentration measured
-conc_data <- readr::read_csv("../data/20180821_decay_measurements_1.csv")
+conc_data <- readr::read_csv("../data/20180821/20180821_decay_measurements_1.csv")
 
 # I want to model this....
 decay_model(0.35, 10, conc_data)

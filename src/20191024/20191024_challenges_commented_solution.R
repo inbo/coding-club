@@ -3,7 +3,7 @@ library(here)
 
 ## Challlenge 1
 
-species_df <- read_csv(here("data", "20191024_species.csv"), na = "")
+species_df <- read_csv(here("data", "20191024", "20191024_species.csv"), na = "")
 
 ### Set columns `species_id` and `taxa` lowercase
 
@@ -143,7 +143,7 @@ all.equal(species_df_clean, species_df_clean2)
 ## Bonus challenge
 
 ### bird observation (easy)
-bird_obs <- read_csv(here("data", "20191024_bird_observations.csv"), na = "")
+bird_obs <- read_csv(here("data", "20191024", "20191024_bird_observations.csv"), na = "")
 
 bird_obs[["observation_location"]] <- str_c(
   str_c(bird_obs$PlaatsGemeente, bird_obs$PlaatsToponym,
@@ -168,7 +168,7 @@ bird_obs <-
 )
 
 ### bird observation (slightly more difficult)
-bird_obs2 <- read_csv(here("data", "20191024_bird_observations_with_na.csv"),
+bird_obs2 <- read_csv(here("data", "20191024", "20191024_bird_observations_with_na.csv"),
                       na = "")
 
 bird_obs2 <-

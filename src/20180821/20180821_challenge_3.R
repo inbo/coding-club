@@ -31,7 +31,7 @@ model_evaluation_plot <- function(df) {
 #' @return
 #'
 #' @examples
-#' conc_data <- read_csv("../data/20180821_decay_measurements.csv")
+#' conc_data <- read_csv("../data/20180821/20180821_decay_measurements.csv")
 #' decay_model(0.2, 10, conc_data)
 decay_model <- function(decay, init, data_conc) {
     time <- data_conc$time
@@ -53,7 +53,7 @@ decay_model <- function(decay, init, data_conc) {
 ## Model optimization
 
 # I have the following concentration measured
-conc_data <- readr::read_csv("../data/20180821_decay_measurements_1.csv")
+conc_data <- readr::read_csv("../data/20180821/20180821_decay_measurements_1.csv")
 
 # I want to get optimal parameter... using
 optimized <- optim(0.3, decay_model, init = 10, data_conc = conc_data,

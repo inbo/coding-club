@@ -2,7 +2,7 @@ library(tidyverse)
 
 ## Challlenge 1
 
-species_df <- read_csv("./data/20191024_species.csv", na = "")
+species_df <- read_csv("./data/20191024/20191024_species.csv", na = "")
 
 ### Set columns `species_id` and `taxa` lowercase
 
@@ -57,8 +57,8 @@ example_string <- "I. love. the. 2019(!!) INBO. Coding. Club! Session. of. 24/10
 ### Concatenate the coumns PlaatsGemeente, PlaatsToponym, PlaatsToponymDetail in
 ### a new column called observation_location formatted as
 ### "PlaatsGemeente, PlaatsToponym: PlaatsToponymDetail"
-bird_obs <- read_csv("./data/20191024_bird_observations.csv", na = "")
+bird_obs <- read_csv("./data/20191024/20191024_bird_observations.csv", na = "")
 
 
 ### Try to do the same with this other file containing NAs
-bird_obs2 <- read_csv("/data/20191024_bird_observations_with_na.csv", na = "")
+bird_obs2 <- read_csv("/data/20191024/20191024_bird_observations_with_na.csv", na = "")

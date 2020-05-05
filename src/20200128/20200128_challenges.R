@@ -1,6 +1,6 @@
 library(tidyverse)
 
-butterflycounts_df <- read_delim("./data/20200128_garden_butterfly_counts.csv",
+butterflycounts_df <- read_delim("./data/20200128/20200128_garden_butterfly_counts.csv",
                                  delim = ";")
 
 ## CHALLENGE 1

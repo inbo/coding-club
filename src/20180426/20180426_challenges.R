@@ -4,9 +4,9 @@ library(lubridate)
 
 # Intro/recap
 
-surveys <- read_csv("../data/20180222_surveys.csv") %>%
+surveys <- read_csv("../data/20180222/20180222_surveys.csv") %>%
     slice(1:10)
-species <- read_csv("../data/20180222_species.csv")
+species <- read_csv("../data/20180222/20180222_species.csv")
 
 # left join - "adding information from other table"
 surveys_joined <- left_join(surveys, species, by = "species_id")
@@ -44,7 +44,7 @@ my_date <- "August 2nd, 2018 14:00"
 wday(mdy_hm(my_date), label = TRUE)
 
 # From three separate colums to a date column
-surveys <- read_csv("../data/20180222_surveys.csv")
+surveys <- read_csv("../data/20180222/20180222_surveys.csv")
 
 surveys %>%
     mutate(date = str_c(year, month, day, sep = "-")) %>%
@@ -54,7 +54,7 @@ surveys %>%
 #  Fish data
 # ------------------------------
 
-fish <- read_csv("../data/20180426_visdata_cleaned.csv")
+fish <- read_csv("../data/20180426/20180426_visdata_cleaned.csv")
 
 fish %>%
     mutate(meetpuntomschrijving = str_to_lower(meetpuntomschrijving)) %>%
@@ -67,7 +67,7 @@ fish %>%
 #  Survey_data
 # ------------------------------
 
-grofwild_logs <- read_delim("../data/20180316_grofwild_logs.csv", delim = " ")
+grofwild_logs <- read_delim("../data/20180316/20180316_grofwild_logs.csv", delim = " ")
 
 # number of visits for each hour of the day
 hour_counts <- grofwild_logs %>%

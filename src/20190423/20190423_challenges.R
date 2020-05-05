@@ -1,6 +1,6 @@
 library(tidyverse)
 
-occs <-  read_tsv("data/20190423_species.csv")
+occs <-  read_tsv("data/20190423/20190423_species.csv")
 
 # Challenge 1: ----
 # Extract the columns
@@ -52,7 +52,7 @@ occs %>%
 # different animals.
 # Calculate the median, mean and number of records _for each_ `species_id`
 
-surveys <-  read_csv("data/20180222_surveys.csv") %>%
+surveys <-  read_csv("data/20180222/20180222_surveys.csv") %>%
   filter(!is.na(weight))
 
 # YOUR CODE...

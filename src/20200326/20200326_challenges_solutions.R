@@ -4,7 +4,7 @@ library(sf)
 
 # CHALLENGE 1
 
-butterfly_df <- read_csv("data/20200326_butterflies.txt", na = "")
+butterfly_df <- read_csv("data/20200326/20200326_butterflies.txt", na = "")
 
 # View first 10 rows for inspection
 butterfly_df %>% head(n = 10) %>% View
@@ -32,7 +32,7 @@ spatial_butterfly_df %>%
   filter(species == "Atalanta")
 
 # Import reference grid of Belgium at 10km resolution
-utm10_belgium <- st_read("./data/20200326_utm10_bel.gpkg")
+utm10_belgium <- st_read("./data/20200326/20200326_utm10_bel.gpkg")
 
 # check CRS
 st_crs(utm10_belgium)
@@ -44,8 +44,8 @@ st_crs(utm10_belgium)
 st_crs(utm10_belgium) <- 3035
 
 
-municipalities_layers <- st_layers("./data/20200326_Belgian_municipalities")
-municipalities <- st_read("./data/20200326_Belgian_municipalities")
+municipalities_layers <- st_layers("./data/20200326/20200326_Belgian_municipalities")
+municipalities <- st_read("./data/20200326/20200326_Belgian_municipalities")
 
 # import municipalities: geojson data are always in WGS84, i.e. EPSG code 4326
 st_crs(municipalities)
@@ -106,11 +106,11 @@ counts_per_municipality_3035 <-
 ## CHALLENGE 3
 
 # Get information on the layers of the Flemish protected area
-prot_areas_layers <- st_layers("data/20200326_protected_areas.gpkg")
+prot_areas_layers <- st_layers("data/20200326/20200326_protected_areas.gpkg")
 prot_areas_layers
 
 # Import layer ps_hbtrl with habitat of Flanders areas
-prot_areas <- st_read("./data/20190226_ps_hbtrl",
+prot_areas <- st_read("./data/20190226/20190226_ps_hbtrl",
                         layer = prot_areas_layers$name[1])
 
 # Again no explicit EPSG code (actually it is 103300 by googling the entire
@@ -206,10 +206,10 @@ municipalities_in_prot_areas_31370 %>%
 # them as explained in the body of the challenge. Shape files are always a
 # fodler containing multiple files with different extensions. You need to call
 # the map containing them.
-prot_areas_shp <- st_layers("data/20190226_ps_hbtrl")
+prot_areas_shp <- st_layers("data/20190226/20190226_ps_hbtrl")
 
 # Note how it fails reading them if we add a / in the path. So, be careful.
-prot_areas_shp <- st_layers("data/20190226_ps_hbtrl/")
+prot_areas_shp <- st_layers("data/20190226/20190226_ps_hbtrl/")
 
 # Calculate centroids municipalities
 centroids_municipalities_3035 <- st_centroid(municipalities_3035)

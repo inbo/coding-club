@@ -16,7 +16,7 @@ ggplot() +
   geom_sf(data = provinces)
 
 ## Get number of Chinese mitten crab occurrences per province in 2015 en 2016
-n_crab_provinces <- read_csv("./data/20190321_n_crabs_provinces.csv")
+n_crab_provinces <- read_csv("./data/20190321/20190321_n_crabs_provinces.csv")
 
 # Challenge 1: ----
 # Color provinces based on number of crab occurrences in 2016
@@ -52,7 +52,7 @@ n_crab_provinces <- read_csv("./data/20190321_n_crabs_provinces.csv")
 # - look for layer names on https://geoservices.informatievlaanderen.be/raadpleegdiensten/VMM/wms?service=WMS&version=1.3.0&request=GetCapabilities
 
 # read data
-crab_df_2015 <- read_csv("./data/20190321_crab_occurrences_2015.csv")
+crab_df_2015 <- read_csv("./data/20190321/20190321_crab_occurrences_2015.csv")
 
 # define URL WMS service VMM
 wms_vmm <- "https://geoservices.informatievlaanderen.be/raadpleegdiensten/VMM/wms"

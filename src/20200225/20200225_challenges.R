@@ -9,7 +9,7 @@ library(janitor)
 ## Challenge 1: files and directories ##
 ########################################
 
-source(here("src", "20200225_create_messy_project.R"))
+source(here("src", "20200225", "20200225_create_messy_project.R"))
 create_messy_project()
 # this will create a folder "messy_project", open the Rstudio project
 # (messy_project.Rproj) in that folder to start the challenge
@@ -19,7 +19,7 @@ create_messy_project()
 ##  Challenge 2: improve the column names (using R syntax) ##
 #############################################################
 
-urban_gaia <- read_delim(here("data", "20200225_urban_gaia_policy.txt"),
+urban_gaia <- read_delim(here("data", "20200225", "20200225_urban_gaia_policy.txt"),
                          delim = "\t")
 
 ##########################################
@@ -36,7 +36,7 @@ library(tidyverse)
 library(here)
 
 # Read something
-my.df<-read_csv(here('data','20191024_species.csv'),na="")
+my.df<-read_csv(here('data', '20191024', '20191024_species.csv'),na="")
 
 # Do something
 

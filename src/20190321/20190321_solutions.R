@@ -16,7 +16,7 @@ ggplot() +
   geom_sf(data = provinces)
 
 ## Get number of Chiense mitten crab occurrences per province in 2015 en 2016
-n_crab_provinces <- read_csv("./data/20190321_n_crabs_provinces.csv")
+n_crab_provinces <- read_csv("./data/20190321/20190321_n_crabs_provinces.csv")
 
 # Challenge 1:
 # Color provinces based on number of crab occurrences in 2016
@@ -76,7 +76,7 @@ crab_in_provinces_2016_leaflet
 # - wmstiles https://inbo.github.io/tutorials/tutorials/spatial_wms_services/#as-background-of-interactive-maps
 # - look for layer names on https://geoservices.informatievlaanderen.be/raadpleegdiensten/VMM/wms?service=WMS&version=1.3.0&request=GetCapabilities
 
-crab_df_2015 <- read_csv("./data/20190321_crab_occurrences_2015.csv")
+crab_df_2015 <- read_csv("./data/20190321/20190321_crab_occurrences_2015.csv")
 
 wms_vmm <- "https://geoservices.informatievlaanderen.be/raadpleegdiensten/VMM/wms"
 crab_provinces_occurrences <- leaflet() %>%

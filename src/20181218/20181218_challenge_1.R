@@ -1,6 +1,6 @@
 # 1. Open  a file:
 library(readr)
-bird_rings <- read_csv("./data/20181217_bird_rings.csv")
+bird_rings <- read_csv("./data/20181217/20181217_bird_rings.csv")
 
 # 2. Preview of bird_rings
 bird_rings %>% head()

@@ -6,13 +6,13 @@ library(rgbif)
 # Belgium with valid coordinates
 key <- "0043019-181108115102211"
 crab_zipfile <- occ_download_get(key,
-                                 path = "../data/",
+                                 path = "../data/20190226",
                                  overwrite = TRUE)
 
 # unzip only occurrence file
 crab_occs <- paste0(key, ".csv")
-unzip(zipfile = crab_zipfile, files = crab_occs, exdir = "../data/.")
+unzip(zipfile = crab_zipfile, files = crab_occs, exdir = "../data/20190226/.")
 
 # read file in R as data.frame
-crab_df <- read_tsv(paste0("../data/", crab_occs))
+crab_df <- read_tsv(paste0("../data/20190226/", crab_occs))
 

@@ -4,7 +4,7 @@ library(tidyverse)
 # ------------------------------
 #  Survey_data
 # ------------------------------
-survey <- readr::read_csv2("../data/20180222_survey_data_spreadsheet_tidy.csv")
+survey <- readr::read_csv2("../data/20180222/20180222_survey_data_spreadsheet_tidy.csv")
 
 # Show min, max, mean weight per sex
 survey %>%
@@ -25,7 +25,7 @@ data_kg_US <- survey %>%
 # ------------------------------
 library(readxl)
 library(janitor)
-brandganzen <- read_excel("../data/20180123_brandganzen.xlsx")
+brandganzen <- read_excel("../data/20180123/20180123_brandganzen.xlsx")
 brandganzen <- brandganzen %>%
     remove_empty_rows() %>%
     clean_names()
@@ -53,7 +53,7 @@ brandganzen %>%
 #  Bevolkingsevolutie Gent
 # ------------------------------
 
-bevolking <- readr::read_delim("./data/20180123_gent_groeiperwijk.csv",
+bevolking <- readr::read_delim("./data/20180123/20180123_gent_groeiperwijk.csv",
                                delim = ";")
 tidy_bevolking <- bevolking %>%
     gather(key = "year", value = "growth", -wijk) %>%
@@ -65,15 +65,15 @@ tidy_bevolking <- bevolking %>%
 #  Surveys/species
 # ------------------------------
 
-surveys <- read_csv("./data/20180222_surveys.csv")
-species <- read_csv("./data/20180222_species.csv")
+surveys <- read_csv("./data/20180222/20180222_surveys.csv")
+species <- read_csv("./data/20180222/20180222_species.csv")
 
 surveys_joined <- left_join(surveys, species, by = "species_id")
 
 # ------------------------------
 # cameratrap images
 # ------------------------------
-cameratrap <- read_csv("./data/20180123_observations_NPHK_cameratrapping.csv")
+cameratrap <- read_csv("./data/20180123/20180123_observations_NPHK_cameratrapping.csv")
 
 # human observations in each month
 cameratrap %>%
@@ -93,7 +93,7 @@ cameratrap %>%
 # Stierkikker
 # ------------------------------
 
-stierkikker <- read_csv("./data/20180123_stierkikker_formulieren_reacties.csv")
+stierkikker <- read_csv("./data/20180123/20180123_stierkikker_formulieren_reacties.csv")
 animal <- "blankvoorn"
 stierkikker %>%
     select(contains(animal, ignore.case = TRUE)) %>%
@@ -103,7 +103,7 @@ stierkikker %>%
 # yearly rainfall sum
 # ------------------------------
 
-klemskerke <- read_csv("./data/20180123_rainfall_klemskerke_clean.csv")
+klemskerke <- read_csv("./data/20180123/20180123_rainfall_klemskerke_clean.csv")
 
 year_sum <- klemskerke %>%
     filter(datetime >= as.Date("2012-01-01") &

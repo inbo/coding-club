@@ -12,14 +12,14 @@ library(readr)
 library(dplyr)
 
 # First try:
-klemskerke <- read_delim("../data/20180123_rainfall_klemskerke.csv",
+klemskerke <- read_delim("../data/20180123/20180123_rainfall_klemskerke.csv",
                          delim = ";", skip = 7)
 # * Value interpret as string, since `,` usage as decimal sign..
 # * timestamp proper interpreted
 
 # OPTION 1: I want to use the . decmal sign and keep it as such, adapt Value
 # --------------------------------------------------------------------------
-klemskerke <- read_delim("../data/20180123_rainfall_klemskerke.csv",
+klemskerke <- read_delim("../data/20180123/20180123_rainfall_klemskerke.csv",
                          delim = ";", skip = 7)
 klemskerke <- klemskerke %>%
     select(datetime = `#Timestamp`, value = Value,
@@ -30,7 +30,7 @@ head(klemskerke)
 
 # OPTION 2: using functions of the data import cheat sheet
 # ---------------------------------------------------------
-klemskerke <- read_delim("../data/20180123_rainfall_klemskerke.csv",
+klemskerke <- read_delim("../data/20180123/20180123_rainfall_klemskerke.csv",
                          delim = ";", skip = 7)
 klemskerke <- klemskerke %>%
     select(datetime = `#Timestamp`, value = Value,
@@ -71,7 +71,7 @@ ggplot(year_sum, mapping = aes(year, value)) +
 # Using the custom load function
 # ------------------------------
 source("./20180123_vmm_function_loader.R")
-klemskerke <- load_waterinfo_data("../data/20180123_rainfall_klemskerke.csv")
+klemskerke <- load_waterinfo_data("../data/20180123/20180123_rainfall_klemskerke.csv")
 
 
 # --------------------------
@@ -80,7 +80,7 @@ klemskerke <- load_waterinfo_data("../data/20180123_rainfall_klemskerke.csv")
 # --------------------------
 
 # read the data
-bevolking <- readr::read_delim("../data/20180123_gent_groeiperwijk.csv",
+bevolking <- readr::read_delim("../data/20180123/20180123_gent_groeiperwijk.csv",
                                delim = ";")
 
 # convert to a tidy data set (see cheatsheet for functions)

@@ -5,7 +5,7 @@
 
 library(tidyverse)
 
-surveys <- read_csv("../data/20180222_surveys.csv") %>% 
+surveys <- read_csv("../data/20180222/20180222_surveys.csv") %>% 
   filter(!is.na(weight),           # remove missing weight
          !is.na(hindfoot_length),  # remove missing hindfoot_length
          !is.na(sex))                # remove missing sex
@@ -28,7 +28,7 @@ ggplot(surveys, aes(x = weight,
 # challenge 2
 # ----------------
 
-tidy_bevolking <- read_csv("../data/20180522_gent_groeiperwijk_tidy.csv")
+tidy_bevolking <- read_csv("../data/20180522/20180522_gent_groeiperwijk_tidy.csv")
 
 # heatmap of the data
 # https://learnr.wordpress.com/2010/01/26/ggplot2-quick-heatmap-plotting/

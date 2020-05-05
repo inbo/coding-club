@@ -1,7 +1,7 @@
 library(tidyverse)
 
 # read data
-survey <- read_csv("./data/20180222_surveys.csv")
+survey <- read_csv("./data/20180222/20180222_surveys.csv")
 # remove records without weight or hindfoot length
 survey <- survey %>%
   filter(!is.na(weight) & !is.na(hindfoot_length) & !is.na(sex))
@@ -79,7 +79,7 @@ ggplot(data = survey, mapping = aes(x = year, fill = sex)) +
 ## CHALLENGE 3
 
 # Read iNaturalist obseration in and around Brussels from 2019
-inat_bxl <- read_tsv("./data/20191126_BXL_iNaturalist_top20.csv",
+inat_bxl <- read_tsv("./data/20191126/20191126_BXL_iNaturalist_top20.csv",
                         na =  "")
 
 # Plot the number of observations per species and year.

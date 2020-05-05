@@ -1,6 +1,6 @@
 library(tidyverse)
 
-files_in_dir <- list.files("../data", full.names = TRUE)
+files_in_dir <- list.files("../data/20180821", full.names = TRUE)
 
 for (file in files_in_dir) {
     if (stringr::str_detect(file, "decay")) {

@@ -6,7 +6,7 @@ library(INBOtheme)
 ## CHALLENGE 1
 
 # file path
-area_districts_f <- here("data", "20190924_oppervlakte_straat_wijken_Brugge.csv")
+area_districts_f <- here("data", "20190924", "20190924_oppervlakte_straat_wijken_Brugge.csv")
 area_districts_brugge <- read_delim(area_districts_f, delim = ";")
 
 # minimum area
@@ -45,7 +45,7 @@ get_info_districts <- function() {
 # tackle also "oppervlakte_straat_wijken_Antwerpen.csv" without
 # altering the data itself
 
-area_districts_f_antwerpen <- here("data", "20190924_oppervlakte_straat_wijken_Antwerpen.csv")
+area_districts_f_antwerpen <- here("data", "20190924", "20190924_oppervlakte_straat_wijken_Antwerpen.csv")
 area_districts_antwerpen <- read_delim(area_districts_f_antwerpen, delim = ";")
 
 # IMPROVE get_info_districts FUNCTION HERE! ###
@@ -59,7 +59,7 @@ get_info_districts2 <- function() {
 
 # read data
 goose_counts <-
-  read_csv(here("data", "20190829_goose_counts_2018.csv"))
+  read_csv(here("data", "20190829", "20190829_goose_counts_2018.csv"))
 
 # remove Dutch neighboring provinces in case present
 goose_counts <-

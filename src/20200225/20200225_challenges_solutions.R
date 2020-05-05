@@ -9,7 +9,7 @@ library(janitor)
 ## Challenge 1: files and directories ##
 ########################################
 
-source(here("src", "20200225_create_messy_project.R"))
+source(here("src", "20200225", "20200225_create_messy_project.R"))
 create_messy_project()
 # this will create a folder "messy_project", open the Rstudio project
 # (messy_project.Rproj) in that folder to start the challenge
@@ -118,7 +118,7 @@ fig1 <- ggplot(birds, aes(x = PlaatsGemeente)) +
 ##  Challenge 2: improve the column names (using R syntax) ##
 #############################################################
 
-urban_gaia <- read_delim(here("data", "20200225_urban_gaia_policy.txt"),
+urban_gaia <- read_delim(here("data", "20200225", "20200225_urban_gaia_policy.txt"),
                          delim = "\t")
 
 names(urban_gaia)
@@ -146,7 +146,7 @@ library(tidyverse)
 library(here)
 
 # Read something
-bird_obs <- read_csv(here("data", "20191024_species.csv"), na = "")
+bird_obs <- read_csv(here("data", "20191024", "20191024_species.csv"), na = "")
 
 # ALT + -: inserts an assignment, including spaces " <- "
 # CTRL + SHIFT + M: inserts a pipe, including spaces " %>% "

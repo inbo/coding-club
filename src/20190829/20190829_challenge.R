@@ -15,7 +15,7 @@ library(here)         # to work with paths
 
 ##1.1) Alle geese - all provinces
 
-dataset <- read_csv(here::here("data", "20190829_goose_counts_2018.csv"),
+dataset <- read_csv(here::here("data", "20190829", "20190829_goose_counts_2018.csv"),
                      na = "NA",
                     col_types = cols(
                       province = col_character(),

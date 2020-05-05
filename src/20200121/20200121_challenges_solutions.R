@@ -7,9 +7,9 @@ library(readxl) # to read Excel files
 
 # this doesn't work: more than 1000 empty rows (1047) in last 6 columns:
 # they are set as logicals and therefore you get error message
-resistentie_df <- read_xlsx(path = "./data/20200121_overzicht_resistentie_2013_2015.xlsx")
+resistentie_df <- read_xlsx(path = "./data/20200121/20200121_overzicht_resistentie_2013_2015.xlsx")
 # this works: set a sufficient higher rows as guess_max to guess the type of the column:
-resistentie_df <- read_xlsx(path = "./data/20200121_overzicht_resistentie_2013_2015.xlsx",
+resistentie_df <- read_xlsx(path = "./data/20200121/20200121_overzicht_resistentie_2013_2015.xlsx",
                     guess_max = 2000) # Still, you loose colors: colors are not tidy data :-(
 
 
@@ -17,9 +17,9 @@ resistentie_df <- read_xlsx(path = "./data/20200121_overzicht_resistentie_2013_2
 
 # this will not work: columns are grouped.
 # Group names in first column.Column names in second column.
-manta_df <- read_xlsx("./data/20200121_manta_master_database_2014_2015.xlsx")
+manta_df <- read_xlsx("./data/20200121/20200121_manta_master_database_2014_2015.xlsx")
 # this will work: skip first row
-manta_df <- read_xlsx("./data/20200121_manta_master_database_2014_2015.xlsx",
+manta_df <- read_xlsx("./data/20200121/20200121_manta_master_database_2014_2015.xlsx",
                       skip = 1)
 
 
@@ -28,7 +28,7 @@ manta_df <- read_xlsx("./data/20200121_manta_master_database_2014_2015.xlsx",
 # it's a semicolon separated file and Wouter let me know that comma is the
 # decimal mark!
 ecosysteem_clc_df <- read_delim(
-  file = "./data/20200121_ecosysteem_areaal_clc.csv",
+  file = "./data/20200121/20200121_ecosysteem_areaal_clc.csv",
   delim = ";",
   locale = locale(decimal_mark = ","))
 # via read_csv2() you obtain a message about interpretation of comma and dot.
@@ -36,79 +36,79 @@ ecosysteem_clc_df <- read_delim(
 # This behavior is well documented. Type ?read_csv2 and read the very first
 # section (Description) ;-)
 # So this will work fine:
-ecosysteem_clc_df <- read_csv2("./data/20200121_ecosysteem_areaal_clc.csv")
+ecosysteem_clc_df <- read_csv2("./data/20200121/20200121_ecosysteem_areaal_clc.csv")
 
 
 ## 20200121_derep_mincount80_cleaned_tagged.txt
 
 # Open txt files first to see how they look like and get right delimiter
 derep_df <- read_delim(
-  file = "./data/20200121_derep_mincount80_cleaned_tagged.txt",
+  file = "./data/20200121/20200121_derep_mincount80_cleaned_tagged.txt",
   delim = "\t"
 )
 # a lot of columns, you can check specifications of all cols by typing
 # spec(derep_df)
 # tab separated files can be opened by read_tsv(). No need to specify delimiter.
-derep_df <- read_tsv("./data/20200121_derep_mincount80_cleaned_tagged.txt")
+derep_df <- read_tsv("./data/20200121/20200121_derep_mincount80_cleaned_tagged.txt")
 
 
 ## 20200121_occurrence_iNaturalist_researchgrade_obs.txt
 gbif_inat_df <- read_delim(
-  file = "./data/20200121_occurrence_iNaturalist_researchgrade_obs.txt",
+  file = "./data/20200121/20200121_occurrence_iNaturalist_researchgrade_obs.txt",
   delim = "\t"
 )
 # of via read_tsv()
 gbif_inat_df <- read_tsv(
-  file = "./data/20200121_occurrence_iNaturalist_researchgrade_obs.txt"
+  file = "./data/20200121/20200121_occurrence_iNaturalist_researchgrade_obs.txt"
 )
 
 
 ## 20200121_dataVlinders.csv
 # this is a file with semicolon as delimiter (separator),
 # and dot (.) as decimal mark.
-vlinders_df <- read_delim(file = "./data/20200121_dataVlinders.csv",
+vlinders_df <- read_delim(file = "./data/20200121/20200121_dataVlinders.csv",
                           delim = ";")
 # Maybe via read_csv2()? No, the dot is in read_csv2 ALWAYS interpreted as
 # grouping mark, the comma ALWAYS as decimal mark. Providing your own locale to
 # read_csv2() doesn't work. This behavior is not a bug. See
 # https://github.com/tidyverse/readr/issues/1061. So this will not work:
-# vlinders_df <- read_csv2("./data/20200121_dataVlinders.csv", locale =
+# vlinders_df <- read_csv2("./data/20200121/20200121_dataVlinders.csv", locale =
 # locale(decimal_mark = "."))
 
 ## 20200121_hyacint_ename_2008_2018.xlsx
 # multiple sheets? Multiple variables
 # First sheet
-hyacint1_df <- read_excel("./data/20200121_hyacint_ename_2008_2018.xlsx")
+hyacint1_df <- read_excel("./data/20200121/20200121_hyacint_ename_2008_2018.xlsx")
 # Second sheet
-hyacint2_df <- read_excel("./data/20200121_hyacint_ename_2008_2018.xlsx",
+hyacint2_df <- read_excel("./data/20200121/20200121_hyacint_ename_2008_2018.xlsx",
                           sheet = 2, na = "NA")
 
 ## 20200121_meff_lu_soorten.csv
-meff_soorten_df <- read_delim("./data/20200121_meff_lu_soorten.csv",
+meff_soorten_df <- read_delim("./data/20200121/20200121_meff_lu_soorten.csv",
                               delim = ",")
 
 
 ## 20200121_osmerus_rclubevdb.xlsx
-osmerus_df <- read_excel("./data/20200121_osmerus_rclubevdb.xlsx")
+osmerus_df <- read_excel("./data/20200121/20200121_osmerus_rclubevdb.xlsx")
 
 
 ## 20200121_qry_abiotiek_all.xlsx
-abiotiek_df <- read_excel(path = "./data/20200121_qry_abiotiek_all.xlsx")
+abiotiek_df <- read_excel(path = "./data/20200121/20200121_qry_abiotiek_all.xlsx")
 
 
 ## 20200121_urban_gaia_policy.xlsx
-urban_gaia_df <- read_excel("./data/20200121_urban_gaia_policy.xlsx")
+urban_gaia_df <- read_excel("./data/20200121/20200121_urban_gaia_policy.xlsx")
 
 
 ## 20200121_191007_WUP_SGBP_Bio_2018.xlsx Skip first row with names of groups of
 #columns: nice for humans, bad for computers
 # You can select sheet by number (1 for first sheet, 2 for second sheet etc. )
 # You can select sheet by name as below
-wup_sgbf_bio_df <- read_excel("./data/20200121_191007_WUP_SGBP_Bio_2018.xlsx",
+wup_sgbf_bio_df <- read_excel("./data/20200121/20200121_191007_WUP_SGBP_Bio_2018.xlsx",
                           skip = 1,
                           sheet = "Bio")
 
-wup_sgbf_vl_df <- read_excel("./data/20200121_191007_WUP_SGBP_Bio_2018.xlsx",
+wup_sgbf_vl_df <- read_excel("./data/20200121/20200121_191007_WUP_SGBP_Bio_2018.xlsx",
                               skip = 1,
                               sheet = "Vlaanderen")
 

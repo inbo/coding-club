@@ -59,7 +59,7 @@ leaflet() %>%
 
 # Read butterfly data (they are already in WGS84 projection)
 obs_butterflies_df <- read_csv(
-  "./data/20200326_butterflies.txt",
+  "./data/20200326/20200326_butterflies.txt",
   na = "")
 # Transform obs_butterflies to a sf data.frame (data in WGS84)
 obs_butterflies_sf <-

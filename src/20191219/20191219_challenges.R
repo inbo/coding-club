@@ -2,13 +2,13 @@ library(tidyverse)
 library(INBOtheme)
 
 # read survey data
-survey <- read_csv("./data/20191219_survey_cleaned.csv")
+survey <- read_csv("./data/20191219/20191219_survey_cleaned.csv")
 # remove records without weight or hindfoot length
 survey <- survey %>%
   filter(!is.na(weight) & !is.na(hindfoot_length) & !is.na(sex))
 
 # read fit data
-fit_results <- read_csv("./data/20191219_gam_fit_results.csv",
+fit_results <- read_csv("./data/20191219/20191219_gam_fit_results.csv",
                         na = "")
 
 ## CHALLENGE 1
@@ -46,7 +46,7 @@ library(magick)
 library(gganimate)
 
 # Option 1
-link <- "https://github.com/inbo/coding-club/raw/master/docs/assets/images/20191219_logo_gbif.png"
+link <- "https://github.com/inbo/coding-club/raw/master/docs/assets/images/20191219/20191219_logo_gbif.png"
 
 
 

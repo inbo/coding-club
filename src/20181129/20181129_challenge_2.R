@@ -1,4 +1,4 @@
-camera_trap_data <- read.csv(file = "../data/20180123_observations_NPHK_cameratrapping.csv",
+camera_trap_data <- read.csv(file = "../data/20180123/20180123_observations_NPHK_cameratrapping.csv",
                              stringsAsFactors = FALSE, as.is = TRUE)
 
 # transform the date columns to datetime

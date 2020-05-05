@@ -4,7 +4,7 @@ library(lubridate)
 library(purrr)
 
 # read csv file and preprocessing
-vis_data <- read_csv(file = "../data/20180426_visdata_cleaned.csv")
+vis_data <- read_csv(file = "../data/20180426/20180426_visdata_cleaned.csv")
 vis_data <- vis_data %>%
   filter(!is.na(lengte) & !is.na(gewicht)) %>%
   mutate(year = lubridate::year(datum))
@@ -22,7 +22,7 @@ vis_data <- vis_data %>%
 #' library(tidyverse)
 #' library(lubridate)
 #' library(purrr)
-#' vis_data <- read_csv(file = "../data/20180426_visdata_cleaned.csv")
+#' vis_data <- read_csv(file = "../data/20180426/20180426_visdata_cleaned.csv")
 #' vis_data %>%
 #'   mutate(year = lubridate::year(datum)) %>%
 #'   spherical_density_distribution()
