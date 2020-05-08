@@ -31,7 +31,7 @@ Herman Teirlinck<br>
 class: center, middle
 
 <!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
-![:scale 90%]({{ site.baseurl}}/assets/images/20190321_creating_maps.png)
+![:scale 90%]({{ site.baseurl}}/assets/images/20190321/20190321_creating_maps.png)
 
 ---
 class: center, middle
@@ -40,7 +40,7 @@ class: center, middle
 
 .left[Got issues installing `sf` and `tidyverse`? During the last coding club, somebody from Germany [posted this](https://github.com/r-spatial/sf/issues/969#issuecomment-467367771).:]
 
-![:scale 75%]({{ site.baseurl}}/assets/images/20190321_issue_tidyverse_sf.PNG)<br>
+![:scale 75%]({{ site.baseurl}}/assets/images/20190321/20190321_issue_tidyverse_sf.PNG)<br>
 
 
 ---
@@ -50,7 +50,7 @@ class: center, middle
 
 .left[Immediately got answer:]
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20190321_issue_tidyverse_sf_answer.PNG)<br>
+![:scale 90%]({{ site.baseurl}}/assets/images/20190321/20190321_issue_tidyverse_sf_answer.PNG)<br>
 
 Restart R (Ctrl+Shift+10) and then:
 
@@ -61,7 +61,7 @@ devtools::install_github("tidyverse/dplyr")
 ---
 class: center, middle
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20190321_cheat_sheet_leaflet_preview.png)<br />
+![:scale 90%]({{ site.baseurl}}/assets/images/20190321/20190321_cheat_sheet_leaflet_preview.png)<br />
 [`leaflet` cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20190321_cheat_sheet_leaflet.pdf) and
 [`leaflet` online documentation](https://rstudio.github.io/leaflet/)
 
@@ -120,12 +120,12 @@ class: left, middle
 
 # Challenge 1
 
-- Click [`20190321_n_crabs_provinces.csv`](https://github.com/inbo/coding-club/blob/master/data/20190321_n_crabs_provinces.csv) and download* data file to `./data` folder.
-- Click [`20190321_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190321_challenges.R) and download* script in `./src` folder.
+- Click [`20190321/20190321_n_crabs_provinces.csv`](https://github.com/inbo/coding-club/blob/master/data/20190321/20190321_n_crabs_provinces.csv) and download* data file to `./data` folder.
+- Click [`20190321/20190321_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190321/20190321_challenges.R) and download* script in `./src` folder.
 
 <small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
-- Start from the [`20190321_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190321_challenges.R) file.
+- Start from the [`20190321/20190321_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20190321/20190321_challenges.R) file.
 For the data of 2016 only, make a [choropleth map](https://en.wikipedia.org/wiki/Choropleth_map) with ggplot. In other words,
 join the crab data to the provinces map and assign a color to each of the provinces map proportional to the number of crab occurrences in 2016.
 
@@ -138,7 +138,7 @@ class: left, middle
 # Challenge 2
 
 - Create an interactive map by using the `leaflet` package showing the same information as in challenge 1. You
-should end up with something like [this]({{ site.baseurl}}/assets/images/20190321_crab_leaflet.html).
+should end up with something like [this]({{ site.baseurl}}/assets/images/20190321/20190321_crab_leaflet.html).
 
 __Tip__:  get inspiration on [colors](https://rstudio.github.io/leaflet/colors.html) and [legends](https://rstudio.github.io/leaflet/legends.html).
 
@@ -149,12 +149,12 @@ class: left, middle
 
 # Challenge 3
 
-- Click [`20190321_crab_occurrences_2015.csv`](https://github.com/inbo/coding-club/blob/master/data/20190321_crab_occurrences_2015.csv) and download data file to `./data` folder.
+- Click [`20190321/20190321_crab_occurrences_2015.csv`](https://github.com/inbo/coding-club/blob/master/data/20190321/20190321_crab_occurrences_2015.csv) and download data file to `./data` folder.
 - Add occurrences from 2015 as circles in a leaflet map
 - Provide popups with information on the date of occurrence
 - Make sure the plot focuses on a small region around coordinate 51.1373384, 4.2813167
 - Leaflet can also integrate existing online maps (e.g. WMS services) on the fly. Add WMS services from the Flemish environmental agency (VMM) about water as
-layers to the leaflet map. You could end up with something like [this]({{ site.baseurl}}/assets/images/20190321_crab_occurrence_leaflet.html).
+layers to the leaflet map. You could end up with something like [this]({{ site.baseurl}}/assets/images/20190321/20190321_crab_occurrence_leaflet.html).
 
 __Tip__:  [This tutorial](https://inbo.github.io/tutorials/tutorials/spatial_wms_services/#as-background-of-interactive-maps)
 on the INBO tutorials website explains how to add a WMS service to your leaflet map. The layers you can choice from the [VMM webservice](http://www.geopunt.be/catalogus/webservicefolder/4d361174-860d-ee21-4b3e-cafc-a2fc-2151-d3f42167) can be retrieved

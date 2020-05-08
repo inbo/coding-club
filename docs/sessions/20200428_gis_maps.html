@@ -31,14 +31,14 @@ Home, sweet home
 class: center, middle
 
 <!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
-![:scale 90%]({{ site.baseurl}}/assets/images/20190321_creating_maps.png)
+![:scale 90%]({{ site.baseurl}}/assets/images/20190321/20190321_creating_maps.png)
 
 ---
 class: left, middle
 
 - [Thematic maps tutorial](https://workshop.mhermans.net/thematic-maps-r/index.html)
 - [`leaflet` online documentation](https://rstudio.github.io/leaflet/)
-![:scale 90%]({{ site.baseurl}}/assets/images/20200428_leaflet_documentation_screenshot.png)<br>
+![:scale 90%]({{ site.baseurl}}/assets/images/20200428/20200428_leaflet_documentation_screenshot.png)<br>
 - [`leaflet` cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20190321_cheat_sheet_leaflet.pdf)
 
 ---
@@ -102,8 +102,8 @@ class: left, middle
 
 Today we will use an R script and a dataset. Download* the R script in your folder `src ` and the dataset in your folder `data`.
 
-- R script: [20200428_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20200428_challenges.R)
-- Dataset of some butterfly observations in Belgium [20200326_butterflies.txt](https://github.com/inbo/coding-club/blob/master/data/20200326_butterflies.txt), already used on March.
+- R script: [20200428/20200428_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20200428/20200428_challenges.R)
+- Dataset of some butterfly observations in Belgium [20200326/20200326_butterflies.txt](https://github.com/inbo/coding-club/blob/master/data/20200326_butterflies.txt), already used on March.
 
 <small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
@@ -113,12 +113,12 @@ class: left, middle
 
 # Challenge 1
 
-Starting from the [`20200428_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20200428_challenges.R) file:
+Starting from the [`20200428/20200428_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20200428/20200428_challenges.R) file:
 
 - Plot a map with Belgian provinces using `tmap`. Fill the provinces with a color based on their area (column `SURFACE.GIS.km2`) and provide a nice title to the legend, i.e. "Area (km2)". Hint:[Building Maps In Layers](https://workshop.mhermans.net/thematic-maps-r/04_plot.html#building_maps_in_layers)
 - Divide them by region using facets. Hint: [multiple Maps Facets](https://workshop.mhermans.net/thematic-maps-r/04_plot.html#multiple_maps__facets)
 
-You could end up with something like [this]({{ site.baseurl}}/assets/images/20200428_example_provinces_tmap.html).
+You could end up with something like [this]({{ site.baseurl}}/assets/images/20200428/20200428_example_provinces_tmap.html).
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -126,13 +126,13 @@ class: left, middle
 
 # Challenge 2
 
-Starting from the [`20200428_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20200428_challenges.R) file:
+Starting from the [`20200428_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20200428/20200428_challenges.R) file:
 
 - Generate a *leaflet* map centered at lng 4.89 and lat 51.01 with zoom level 7. Hint: [Basemaps](https://rstudio.github.io/leaflet/basemaps.html)
 - Add markers at butterfly observations coordinates (`decimal_longitude`, `decimal_latitude`). Cluster them using the cluster option. Hint:[Markers](https://rstudio.github.io/leaflet/markers.html)
 - Add pop-ups to the markers showing the date, e.g. "Date: 2015-09-20". Add also labels to the markers showing the species, e.g. "Atalanta". Hint: [Popups and Labels](https://rstudio.github.io/leaflet/popups.html)
 
-![:scale 70%]({{ site.baseurl}}/assets/images/20200428_example_butterflies_markers.png)
+![:scale 70%]({{ site.baseurl}}/assets/images/20200428/20200428_example_butterflies_markers.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -140,24 +140,24 @@ class: left, middle
 
 # Challenge 3
 
-Starting from the [`20200428_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20200428_challenges.R) file:
+Starting from the [`20200428/20200428_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20200428/20200428_challenges.R) file:
 
 - Make a choropleth map of belgian provinces based on their area (column `SURFACE.GIS.km2`). Provide a legend as well. Hint: [Choropleths](https://rstudio.github.io/leaflet/choropleths.html) and [Legends](https://rstudio.github.io/leaflet/legends.html)
 - Add markers at the centroids of the provinces. Add labels using the Dutch name of the provinces (column `TX_PROV_DESCR_NL`)
 
-![:scale 50%]({{ site.baseurl}}/assets/images/20200428_example_provinces_choropleths.png)
+![:scale 50%]({{ site.baseurl}}/assets/images/20200428/20200428_example_provinces_choropleths.png)
 
 ---
 class: left, middle
 
 # Bonus challenge
 
-Starting from the [`20200428_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20200428_challenges.R) file:
+Starting from the [`20200428/20200428_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20200428/20200428_challenges.R) file:
 
 - Show the observations of common brimstone (citroenvlinder),  large tortoiseshell (grote vos), small tortoiseshell (kleine vos) and orange tip (oranjetipje) as **circles** whose radius in meters is equal to the uncertainty (column `coord_uncertainty_in_meters`) and the color represents the species. Provide a legend for the colors.  Hint: [shapes](https://rstudio.github.io/leaflet/shapes.html)
 - Add also a layer with provinces and correspondent legend. Let the user to show/hide the layers and their legends and to choose between Esri.WorldImagery and the default Open Street Map as background. Hint: [Show/Hide Layers](https://rstudio.github.io/leaflet/showhide.html)
 
-![:scale 70%]({{ site.baseurl}}/assets/images/20200428_example_tiles_butterflies_provinces.png).
+![:scale 70%]({{ site.baseurl}}/assets/images/20200428/20200428_example_tiles_butterflies_provinces.png).
 
 ---
 class: left, middle

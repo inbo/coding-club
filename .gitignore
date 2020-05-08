@@ -39,6 +39,9 @@ rsconnect/
 # documentation sass
 docs/.sass-cache/
 
+# Apple Desktop Services Store
+.DS_Store
+
 # Jekyll files
 .jekyll-cache/
 _site/
