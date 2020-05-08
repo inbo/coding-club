@@ -38,3 +38,7 @@ rsconnect/
 
 # documentation sass
 docs/.sass-cache/
+
+# Jekyll files
+.jekyll-cache/
+_site/
