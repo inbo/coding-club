@@ -51,7 +51,7 @@ Bringing your own laptop is mandatory, as we will always work together on the co
 
 ### Who organises the coding club?
 
-The current core team members are Hans Van Calster ([@hansvancalster](https://github.com/hansvancalster)), Dirk Maes, Joost Vanoverbeke, Damiano Oldoni ([@damianooldoni](https://github.com/damianooldoni)) and Stijn Van Hoey ([@stijnvanhoey](https://github.com/stijnvanhoey)). The core team is not there to make new course material, but focuses on the practical organisation.
+The current core team members are Hans Van Calster ([@hansvancalster](https://github.com/hansvancalster)), Emma Cartuyvels ([@EmmaCartuyvels1](https://github.com/EmmaCartuyvels1)), Dirk Maes ([@dirkmaes33](https://github.com/dirkmaes33)), Joost Vanoverbeke ([@joost-vanoverbeke](https://github.com/joost-vanoverbeke)) and Damiano Oldoni ([@damianooldoni](https://github.com/damianooldoni)). The core team is not there to make new course material, but focuses on the practical organisation.
 
 More specifically, the core team takes care of:
 
@@ -64,4 +64,3 @@ Check [this page]({{ site.baseurl }}{% link workflow.md  %}) to see the step-by-
 ### Did we figure that out ourselves?
 
 No :-). We got inspired by foreign initiatives such as the [ourcodingclub Edinburgh](https://ourcodingclub.github.io/). Moreover, more and more initiatives illustrate that coding together can be effective to improve ecological/environmental research. Interesting reading material in that sense is the [Ocean Health Index project paper](https://www.nature.com/articles/s41559-017-0160) published in Nature Eccology & Evolution. The Software and Data Carpentry organisation proves that we all can overcome our fear to code. Their material is highly inspiring for setting up the challenges, e.g. the [ecology workshop](http://www.datacarpentry.org/lessons/#ecology-workshop).
-
