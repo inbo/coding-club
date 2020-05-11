@@ -6,7 +6,7 @@ The Research Institute for Nature and Forest (INBO) Coding Club unites all scien
 
 The coding club is held monthly on alternate Tuesday and Thursday, from 10 a.m. till 12 a.m., in [Herman Terilinck building](https://www.vlaanderen.be/nl/vlaamse-overheid/gebouwen/herman-teirlinckgebouw) ([Tour & Taxis](https://en.wikipedia.org/wiki/Tour_%26_Taxis), Brussels).
 
-Depending on the availability and capacity of the lecture rooms, the coding club is typically limited to 25 participants. Each session focusses on a specific theme and is independent from any other session, so people can just attend when available or interested.
+Depending on the availability and capacity of the lecture rooms, the coding club is typically limited to 25 participants. We stream our sessions via Google Meet as well. Each session focusses on a specific theme and is independent from any other session, so people can just attend when available or interested.
 
 Bringing your own laptop is mandatory, as we will always work together on the code.
 
