@@ -1,0 +1,155 @@
+---
+layout: presentation
+title: Simple iteration problems in R
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 28 MAY 2020
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck<br>
+Living/bed/bath/kitchen-room
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20200528/20200528_loops.png)
+
+---
+class: center, middle
+
+![:scale 70%]({{ site.baseurl}}/assets/images/20200528/20200528_blockly_games_intro1.png)<br>
+
+versus
+
+![:scale 70%]({{ site.baseurl}}/assets/images/20200528/20200528_blockly_games_intro2.png)<br>
+Let's [solve it](https://blockly.games/maze?lang=en&level=4&skin=0)!<br>
+
+[Blockly](https://blockly.games/?lang=en), learning while having fun: for kids ... and adults. For bird lovers, check the [Bird game](https://blockly.games/bird) to learn `if - else` structure.
+
+---
+class: center, middle
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+<br> No yellow sticky notes online :-( We use hackmd (see next slide) but basic principle doesn't change.
+
+---
+class: center, middle
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/-uDJu4xCS6CC7qNtaK2PLQ?both
+
+<iframe src="https://hackmd.io/-uDJu4xCS6CC7qNtaK2PLQ?both" height="400px" width="800px"></iframe>
+
+
+---
+class: left, middle
+
+### Load the required packages:
+
+```r
+library(tidyverse)
+```
+
+---
+class: center, middle
+
+# The `for` loop in R
+
+No loop has been more used (and abused) by R users than the **for loop**<br>.
+![:scale 50%]({{ site.baseurl}}/assets/images/20200528/200528_for_loops_syntax_r.png)
+
+---
+class: left, middle
+
+# Why loops?
+
+[DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) ("<strong>D</strong>on't <strong>R</strong>epeat <strong>Y</strong>ourself")
+<p>![:scale 90%]({{ site.baseurl}}/assets/images/20200528/20200528_loops_why.png)</p>
+
+DRY is the enemy of WET ("write every time", "write everything twice", "we enjoy typing" or "waste everyone's time")
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, middle
+
+# Challenge 1
+
+Write `for` loops to:
+
+1. Compute the mean of every column in [`swiss`](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/swiss.html).
+2. Determine the type of each column in  [`iris`](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/iris.html).
+3. Compute the number of unique values in each column of `iris`.
+4. Generate 10 random normals (`rnorm(n = 10)`) from distributions with means of -10, 0, 10, and 100.
+
+__Tip__: https://r4ds.had.co.nz/iteration.html#for-loops
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, middle
+
+# Challenge 2
+
+- Download* [`20200528/20200528_births_belgium.txt`](https://github.com/inbo/coding-club/blob/master/data/20200528/20200528_births_belgium.txt) in your folder `./data/20200528/`. It contains the number of births per month in Belgium from 1992 to 2019.
+- Download* R script [`20200528/20200528_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20200528/20200528_challenges.R) in your folder `./src/20200528`
+
+The code in challenge 2 makes a bar plot of the number of births in Belgium per month in 2010 and save it as png file. How to do the same for every year from 2010 to 2019 without repeating yourself 10 times?
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3
+
+
+
+---
+class: left, middle
+
+## Back to Blockly
+
+Try solving [level 10](https://blockly.games/maze?lang=en&level=10&skin=0).<br>
+![:scale 70%]({{ site.baseurl}}/assets/images/20200528/20200528_blockly_games_final.png)
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: Herman Teirlinck - 01.71 - Ferdinand Peeters<br>
+Date: __30/06/2020__, van 10:00 tot 12:00<br>
+Subject: functional programming with `purrr`. Loops on steroids.
+(registration announced via DG_useR@inbo.be)
