@@ -71,7 +71,6 @@ Go to https://hackmd.io/-uDJu4xCS6CC7qNtaK2PLQ?both
 
 <iframe src="https://hackmd.io/-uDJu4xCS6CC7qNtaK2PLQ?both" height="400px" width="800px"></iframe>
 
-
 ---
 class: left, middle
 
@@ -120,26 +119,120 @@ class: left, middle
 
 # Challenge 2
 
-- Download* [`20200528/20200528_births_belgium.txt`](https://github.com/inbo/coding-club/blob/master/data/20200528/20200528_births_belgium.txt) in your folder `./data/20200528/`. It contains the number of births per month in Belgium from 1992 to 2019. Derived from a [StatBel open dataset](https://statbel.fgov.be/en/open-data/number-births-day).
+- Download* [`20200528/20200528_births_belgium.txt`](https://github.com/inbo/coding-club/blob/master/data/20200528/20200528_births_belgium.txt) in your folder `./data/20200528/`. It contains the number of births per month in Belgium from 1992 to 2019. Based on a [StatBel open dataset](https://statbel.fgov.be/en/open-data/number-births-day).
 - Download* R script [`20200528/20200528_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20200528/20200528_challenges.R) in your folder `./src/20200528`
 
-The code in challenge 2 makes a bar plot of the number of births in Belgium per month in 2010 and save it as png file. How to do the same for every year from 2010 to 2019 without repeating yourself 10 times?
+The code in challenge 2 makes a bar plot of the number of births in Belgium per month in 2010 and save it as a png file. How to do the same for every year from 2010 to 2019 without repeating yourself 10 times?
 
 <small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, middle
+
+# INTERMEZZO 1: nested loops
+
+What if you put a loop in another loop?
+
+Some dummy examples:
+
+```r
+years <- c(2019:2020)
+seasons <- c("winter", "spring", "summer", "autumn")
+for (year in years) {
+  for (season in seasons) {
+    print(paste0("year:",year, ". Season:", season))
+  }
+}
+
+"year:2019. Season:winter"
+"year:2019. Season:spring"
+"year:2019. Season:summer"
+"year:2019. Season:autumn"
+"year:2020. Season:winter"
+"year:2020. Season:spring"
+"year:2020. Season:summer"
+"year:2020. Season:autumn"
+```
+
+---
+class: left, middle
+
+# INTERMEZZO 1: nested loops
+
+All possible positions on a chessboard
+
+```r
+columns <- letters[1:8]
+rows <- 1:8
+for (row in rows) {
+  for (column in columns) {
+    print(paste0("Position: ", column, row))
+  }
+}
+
+"Position: a1"
+"Position: b1"
+"Position: c1"
+"Position: d1"
+"Position: e1"
+"Position: f1"
+"Position: g1"
+"Position: h1"
+"Position: a2"
+...
+"Position: f8"
+"Position: g8"
+"Position: h8"
+```
+
+---
+class: left, middle
+
+# INTERMEZZO 2: `while` loop
+
+When the end of the loop is not known beforehand, but it depends on a condition, then the for-loop cannot help you. You need a <strong>while</strong>-loop.
+
+Example: playing dices. Play until you get more than 10 throwing two dices.
+
+```r
+result <- 0
+n <- 0
+while (result < 10) {
+  n <- n + 1 # game number
+  dice <- sample(1:6, size = 2, replace = TRUE)
+  result <- sum(dice)
+  print(paste0("Game number: ", n, ". Result: ", result))
+}
+
+"Game number: 1. Result: 8"
+"Game number: 2. Result: 3"
+"Game number: 3. Result: 9"
+"Game number: 4. Result: 11"
+```
+
+Many videogames are actually a big while loop!
+
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, middle
 
-# Challenge 3
+# Challenge 3. The Fox slot machine
 
+<p>The goal of a fox is to reproduce before it dies.</p>
+<p>The fox dies for sure after 10 years in the wild. But it can die earlier due to poison (one of the possible `foods`) or by an enemy (all `enemies` except `"safe"`).</p>
+<p>The "fox game" ends when the fox succeeds to reproduce or when it dies.</p>
+By using the code provided in [`20200528/20200528_challenges.R`] and using loop techniques:
+1. simulate the fox life. Does the fox succeed to reproduce? Or does it die before?
+2. Extend the game to a population of 10 foxes. How many foxes succeeded to reproduce?
 
+<p>![:scale 50%]({{ site.baseurl}}/assets/images/20200528/20200528_fox_slotmachine.png)
 
 ---
 class: left, middle
 
-## Back to Blockly
+## Bonus challenge: back to Blockly
 
-Try solving [level 10](https://blockly.games/maze?lang=en&level=10&skin=0).<br>
+<p>Try solving [level 10](https://blockly.games/maze?lang=en&level=10&skin=0).</p>
 ![:scale 70%]({{ site.baseurl}}/assets/images/20200528/20200528_blockly_games_final.png)
 
 ---
@@ -150,5 +243,5 @@ class: center, middle
 <!--  Adjust the room and date  -->
 Room: Herman Teirlinck - 01.71 - Ferdinand Peeters<br>
 Date: __30/06/2020__, van 10:00 tot 12:00<br>
-Subject: functional programming with `purrr`. Loops on steroids.
+Subject: functional programming with `purrr`. <br>Loops on steroids.<br>
 (registration announced via DG_useR@inbo.be)
