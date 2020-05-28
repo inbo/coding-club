@@ -1,6 +1,24 @@
 library(tidyverse)
 library(INBOtheme)
 
+## CHALLENGE 1
+
+# Compute the mean of every column in swiss.
+
+swiss
+
+# Determine the type of each column in iris.
+
+iris
+
+# Compute the number of unique values in each column of iris.
+
+
+#Generate 10 random normals (rnorm(n = 10)) from distributions with means of -10, 0, 10, and 100.
+
+
+
+
 ## CHALLENGE 2
 
 # read data
