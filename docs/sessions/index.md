@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location |
 | --- | ----- | ----------| ------ | -------  |
-| 2020-05-28 | loops | [slides]({{ site.baseurl }}{% link sessions/20200528_loops.html  %}) | [hackmd](https://hackmd.io/-uDJu4xCS6CC7qNtaK2PLQ) | webinar |
+| 2020-05-28 | Loops | [slides]({{ site.baseurl }}{% link sessions/20200528_loops.html  %}) | [hackmd](https://hackmd.io/-uDJu4xCS6CC7qNtaK2PLQ) | webinar |
 | 2020-04-28 | Making maps | [slides]({{ site.baseurl }}{% link sessions/20200428_gis_maps.html  %}) | [hackmd](https://hackmd.io/1JeUgfKNRPeXTfk2lqP2AA) | webinar |
 | 2020-03-26 | Geospatial data handling | [slides]({{ site.baseurl }}{% link sessions/20200326_gis_vector.html  %}) | [hackmd](https://hackmd.io/Xx5FJXrWQV-Pn79ZxdDQBg) | webinar |
 | 2020-02-25 | Data management | [slides]({{ site.baseurl }}{% link sessions/20200225_data_management.html  %}) | [hackmd](https://hackmd.io/09qyY42KTXeNK1nOZDB01Q) | 01.05 - Isala Van Diest |
