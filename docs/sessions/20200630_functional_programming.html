@@ -1,0 +1,339 @@
+---
+layout: presentation
+title: Functional programming in R
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 30 JUNE 2020
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Everywhere you wanna be...
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20200630/20200630_functional_programming.png)
+
+---
+class: left, middle
+
+- Functional programming: _"wrap up for loops in a function, and call that function instead of using the for loop directly"_, [R for Data Science](https://r4ds.had.co.nz/iteration.html#for-loops-vs.functionals)
+
+- functional programming in basic R: `apply()`, `lapply()`, `tapply()`
+
+- The `purrr` package provides a complete and consistent set of tools
+
+<center>![:scale 30%]({{ site.baseurl}}/assets/images/20200630/20200630_purrr_logo.png)<br></center>
+
+
+Are purrr or apply() functions faster than loops! NO. It's just a question of clarity: **code is easier to write and to read**. But first you need a little of practice, and here we are: doing some purrr "fitness" exercises at the coding _gym_ club.
+
+---
+class: center, middle
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20200630/20200630_cheatsheet_purrr.png)
+[Download cheatsheet here](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20181023_cheat_sheet_purrr.pdf)
+
+---
+class: center, middle
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+<br> No yellow sticky notes online :-( We use hackmd (see next slide) but basic principle doesn't change.
+
+---
+class: center, middle
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/ZDc7gTTHRm-ZcjYq_2f2Fg?both
+
+<iframe src="https://hackmd.io/ZDc7gTTHRm-ZcjYq_2f2Fg?both" height="400px" width="800px"></iframe>
+
+---
+class: left, middle
+
+### Install the required packages
+
+```r
+install.packages("rgbif")
+```
+
+### Load the required packages:
+
+```r
+library(tidyverse)
+library(lubridate)
+```
+
+---
+class: left, middle
+
+# Download data and code
+
+Today we will use an R script and some datasets. Download* the R script in your folder `src ` and the dataset in your folder `data`.
+
+- R script: [20200630/20200630_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20200630/20200630_challenges.R)
+- Dataset of some sensors: [20200630/20200630_sensor_A1.txt](https://github.com/inbo/coding-club/blob/master/data/20200630/20200630_sensor_A1.txt), [20200630/20200630_sensor_G7.txt](https://github.com/inbo/coding-club/blob/master/data/20200630/20200630_sensor_G7.txt), and [20200630/20200630_sensor_H4.txt](https://github.com/inbo/coding-club/blob/master/data/20200630/20200630_sensor_H4.txt)
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, middle
+
+# Last month...
+
+## Why loops?
+
+[DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) ("<strong>D</strong>on't <strong>R</strong>epeat <strong>Y</strong>ourself")
+<p>![:scale 90%]({{ site.baseurl}}/assets/images/20200528/20200528_loops_why.png)</p>
+
+DRY is the enemy of WET ("write every time", "write everything twice", "we enjoy typing" or "waste everyone's time")
+
+---
+class: left, middle
+
+# Basics: `map()`
+
+The _mantra_ of this 2 hours coding session is: **FOR EACH __ DO __**
+<p>![:scale 85%]({{ site.baseurl}}/assets/images/20200630/20200630_map_basics.png)</p>
+
+---
+class: left, middle
+
+<p><center>![:scale 50%]({{ site.baseurl}}/assets/images/20200630/20200630_map_basics.png)</center></p>
+
+```r
+# height of 5 giraffes
+height_giraffe <- runif(n = 5, min = 4.3, max = 5.7)
+```
+- FOR EACH element of `height_giraffe` DO floor()
+- FOR EACH element of `height_giraffe` DO as.character()
+
+---
+class: left, middle
+
+<p><center>![:scale 50%]({{ site.baseurl}}/assets/images/20200630/20200630_map_basics.png)</center></p>
+
+```r
+# weight of 5 giraffes
+weight_giraffe <- rnorm(n = 5, mean = 1192, sd = 300)
+# data.frame with height and weight
+df_giraffe <- tibble(height = height_giraffe,
+                     weight = weight_giraffe)
+```
+
+- FOR EACH column of `df_giraffe` DO calculate mean
+- FOR EACH column of `df_giraffe` DO calculate median
+
+---
+class: left, middle
+
+<p><center>![:scale 50%]({{ site.baseurl}}/assets/images/20200630/20200630_map_basics.png)</center></p>
+
+```r
+# nicknames of 5 giraffes
+names_giraffe <- c("Damiano", "Dirk", "Emma", "Hans", "Joost")
+# List with height and weight of 5 giraffes
+info_giraffe <- transpose(df_giraffe) %>% set_names(names_giraffe)
+# Add specific fields to some giraffes
+info_giraffe$Dirk$subspecies <- "Giraffa camelopardalis subsp. antiquorum"
+info_giraffe$Emma$GPS_trackerID <- "AFG4953"
+```
+
+- FOR EACH giraffe of `info_giraffe` DO get class
+- FOR EACH giraffe of `info_giraffe` DO get length
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, middle
+
+# Challenge 1
+
+Write `map()` statements to:
+
+1. Compute the mean of every column in [`swiss`](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/swiss.html)
+2. Determine the type of each column in  [`iris`](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/iris.html)
+3. Set swiss and iris as a named list of two data.frames
+```r
+dfs <- list(swiss = swiss, iris = iris)
+```
+and get the number of rows of each data.frame
+5. `map` returns ALWAYS a list, **ALWAYS**. Apply the right `map_*()` variants to the previous exercises to return a numeric vector (1), a character vector (2) or a data.frame.
+
+Hint: [tutorial at 21.5](https://r4ds.had.co.nz/iteration.html#the-map-functions) or cheat sheet
+
+---
+class: left, middle
+
+# The `map` strategy
+
+So far it is so plain. Data science is rarely so easy.
+<p>Example: **FOR EACH** giraffe of `info_giraffe` **DO** calculate the body mass index (weight / height^2)</p>
+
+```r
+bmi <- function(weight, height) weight / ((height)^2)
+```
+
+But:
+
+```r
+map(info_giraffe, ???)
+Error in .f(.x[[i]], ...) : argument "height" is missing, with no default
+```
+
+---
+class: left, middle
+
+# The `map` strategy
+
+1. Do it for one element
+2. Turn it into a <bold>recipe</bold>
+3. Use `map()` to do it for all elements
+
+---
+class: left, middle
+
+# The `map` strategy. Step 1
+
+## 1. Do it for one element
+
+```r
+Joost <- info_giraffe$Joost
+bmi(Joost$weight, Joost$height)
+```
+
+---
+class: left, middle
+
+# The `map` strategy. Step 2
+
+2.Turn it into a <bold>recipe</bold>
+
+Make it a **formula** (`~`) and use `.x` as pronoun
+
+```r
+~ bmi(.x$weight, .x$height)
+```
+
+---
+class: left, middle
+
+# The `map` strategy. Step 3
+
+3.Use `map()` to do it for all elements
+
+```r
+map(info_giraffe, ~ bmi(.x$weight, .x$height))
+```
+
+or if you don't feel confident with "~" and ".x":
+
+```r
+map(info_giraffe, function(giraffe) bmi(giraffe$weight, giraffe$height))
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, middle
+
+# Challenge 2
+
+Using the *map strategy*:
+
+1. Find the number of unique values in each column of `iris` and return it as a list
+2. Get 10 random numbers from a normal distribution (`rnorm(n = 10)`) for each of the mean values and return it as a list of 4:
+```r
+means <- c(-10, 0, 10, 20)
+```
+3. Read all sensor data as a list of data.frames by applying function `read_sensor_data` defined in script [`20200630_challenges.R`]()
+4. Get maximum and minimum datetime of all data.frames as a data.frame based on code provided to you in `20200630_challenges.R`. You should get something like this:
+
+<p><center>![:scale 50%]({{ site.baseurl}}/assets/images/20200630/20200630_max_min_datetime.png)</center></p>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3
+
+1. How can we get 10 random numbers from a normal distribution (`rnorm(n = 10)`) for each of the mean and standard deviations below and returning it as a list of 4:
+```r
+means <- c(-10, 0, 10, 20)
+st_dev <- c(1, 3, 2, 1.5)
+```
+2. Add column `sensor_id` to each data.frame with the corresponding sensor ID.
+3. Column `datetime` of the sensors data doesn't contain the time zone information. Apply the following time zones by using lubridate function force_tz():
+```r
+time_zones <- list("A1" = "EST", "G7" = "EET", "H4" = "MST")
+```
+4. The sensors have been calibrated so you should apply these offsets to `pressure`:
+```r
+offset <- list("A1" = -0.3, "G7" = 0.08, "H4" = 0.6)
+```
+
+Hint: https://r4ds.had.co.nz/iteration.html#mapping-over-multiple-arguments
+
+---
+class: left, middle
+
+# Bonus challenge
+
+purrr is more than `map`. You can *reduce* the data.frames `species_1`, `species_2` and `species_3` defined in the script [20200630/20200630_challenges.R]() into a data.frame containing all information by applying full_join() twice:
+
+```r
+full_join(species_1, species_2, by = "species") %>%
+  full_join(species_3, by = "species")
+```
+
+Definitely not DRY and prone to errors! Try to do it DRY by using lists and purrr. Hint: First page of the purrr cheat sheet
+
+---
+class: left, middle
+
+## Resources
+
+- Well-written and complete tutorial: https://r4ds.had.co.nz/iteration.html#for-loops-vs.functionals (from 21.4 up to 21.9)
+- Beautiful presentation (pdf slides are downloadable) from Charlotte Wickham: [part 1](https://channel9.msdn.com/Events/useR-international-R-User-conferences/useR-International-R-User-2017-Conference/Solving-iteration-problems-with-purrr) and [part 2](https://channel9.msdn.com/Events/useR-international-R-User-conferences/useR-International-R-User-2017-Conference/Solving-iteration-problems-with-purrr-II)
+- Challenge solutions: will be available soon
+- Video recording of the coding club session will be available on INBO's vimeo channel soon
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: Herman Teirlinck - 01.21 - Jeanne Brabants <br>
+Date: __25/08/2020__, van 10:00 tot 12:00<br>
+Subject: debugging R
+(registration announced via DG_useR@inbo.be)
