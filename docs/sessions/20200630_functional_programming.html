@@ -97,7 +97,7 @@ class: left, middle
 Today we will use an R script and some datasets. Download* the R script in your folder `src ` and the dataset in your folder `data`.
 
 - R script: [20200630/20200630_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20200630/20200630_challenges.R)
-- Dataset of some sensors: [20200630/20200630_sensor_A1.txt](https://github.com/inbo/coding-club/blob/master/data/20200630/20200630_sensor_A1.txt), [20200630/20200630_sensor_G7.txt](https://github.com/inbo/coding-club/blob/master/data/20200630/20200630_sensor_G7.txt), and [20200630/20200630_sensor_H4.txt](https://github.com/inbo/coding-club/blob/master/data/20200630/20200630_sensor_H4.txt)
+- Datasets with sensor data: [20200630/20200630_sensor_A1.txt](https://github.com/inbo/coding-club/blob/master/data/20200630/20200630_sensor_A1.txt), [20200630/20200630_sensor_G7.txt](https://github.com/inbo/coding-club/blob/master/data/20200630/20200630_sensor_G7.txt), and [20200630/20200630_sensor_H4.txt](https://github.com/inbo/coding-club/blob/master/data/20200630/20200630_sensor_H4.txt)
 
 <small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
@@ -192,7 +192,7 @@ class: left, middle
 # The `map` strategy
 
 So far it is so plain. Data science is rarely so easy.
-<p>Example: **FOR EACH** giraffe of `info_giraffe` **DO** calculate the body mass index (weight / height^2)</p>
+<p>Example: <bold>FOR EACH</bold> giraffe of info_giraffe <bold>DO</bold> calculate the body mass index (weight / height^2)</p>
 
 ```r
 bmi <- function(weight, height) weight / ((height)^2)
@@ -286,7 +286,7 @@ means <- c(-10, 0, 10, 20)
 st_dev <- c(1, 3, 2, 1.5)
 ```
 2. Add column `sensor_id` to each data.frame with the corresponding sensor ID.
-3. Column `datetime` of the sensors data doesn't contain the time zone information. Apply the following time zones by using lubridate function force_tz():
+3. Column `datetime` of the sensors data doesn't contain the time zone information. Apply the following time zones by using lubridate function `force_tz()`:
 ```r
 time_zones <- list("A1" = "EST", "G7" = "EET", "H4" = "MST")
 ```
@@ -302,7 +302,7 @@ class: left, middle
 
 # Bonus challenge
 
-purrr is more than `map`. You can *reduce* the data.frames `species_1`, `species_2` and `species_3` defined in the script [20200630/20200630_challenges.R]() into a data.frame containing all information by applying full_join() twice:
+purrr is more than `map`. You can *reduce* the data.frames `species_1`, `species_2` and `species_3` defined in the script [20200630/20200630_challenges.R]() into a data.frame containing all information by applying `full_join()` twice:
 
 ```r
 full_join(species_1, species_2, by = "species") %>%
