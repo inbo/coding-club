@@ -269,8 +269,8 @@ Using the *map strategy*:
 ```r
 means <- c(-10, 0, 10, 20)
 ```
-3. Read all sensor data as a list of data.frames by applying function `read_sensor_data` defined in script [`20200630_challenges.R`]()
-4. Get maximum and minimum datetime of all data.frames as a data.frame based on code provided to you in `20200630_challenges.R`. You should get something like this:
+3. Read all sensor data as a list of data.frames by applying function `read_sensor_data` defined in script [`20200630_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20200630/20200630_challenges.R#L42-L50)
+4. Get maximum and minimum datetime of all data.frames as a data.frame based on code provided to you in [`20200630_challenges.R`](https://github.com/inbo/coding-club/blob/master/src/20200630/20200630_challenges.R#L56-L59). You should get something like this:
 
 <p><center>![:scale 50%]({{ site.baseurl}}/assets/images/20200630/20200630_max_min_datetime.png)</center></p>
 
@@ -302,7 +302,7 @@ class: left, middle
 
 # Bonus challenge
 
-purrr is more than `map`. You can *reduce* the data.frames `species_1`, `species_2` and `species_3` defined in the script [20200630/20200630_challenges.R]() into a data.frame containing all information by applying `full_join()` twice:
+purrr is more than `map`. You can *reduce* the data.frames `species_1`, `species_2` and `species_3` defined in the script [20200630/20200630_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20200630/20200630_challenges.R#L81-L95) into a data.frame containing all information by applying `full_join()` twice:
 
 ```r
 full_join(species_1, species_2, by = "species") %>%
