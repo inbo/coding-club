@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2020-06-30 | Functional programming | [slides]({{ site.baseurl }}{% link sessions/20200630_functional_programming.html  %}) | [hackmd]() | webinar |  |
+| 2020-06-30 | Functional programming | [slides]({{ site.baseurl }}{% link sessions/20200630_functional_programming.html  %}) | [hackmd](https://hackmd.io/ZDc7gTTHRm-ZcjYq_2f2Fg?both) | webinar |  |
 | 2020-05-28 | Loops | [slides]({{ site.baseurl }}{% link sessions/20200528_loops.html  %}) | [hackmd](https://hackmd.io/-uDJu4xCS6CC7qNtaK2PLQ) | webinar | [vimeo](https://vimeo.com/424029848)|
 | 2020-04-28 | Making maps | [slides]({{ site.baseurl }}{% link sessions/20200428_gis_maps.html  %}) | [hackmd](https://hackmd.io/1JeUgfKNRPeXTfk2lqP2AA) | webinar | |
 | 2020-03-26 | Geospatial data handling | [slides]({{ site.baseurl }}{% link sessions/20200326_gis_vector.html  %}) | [hackmd](https://hackmd.io/Xx5FJXrWQV-Pn79ZxdDQBg) | webinar | |
