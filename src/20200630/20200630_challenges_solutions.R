@@ -138,7 +138,13 @@ pd <- penguins %>%
 
 pd$plot
 
-# Alternative: define the plot function on the fly. Less readable
+# Alternative: without mutate()
+pd$plot <- map2(.x = pd$data,
+                .y = pd$species,
+                .f = ~plot_function(df = .x,
+                                    species_name = .y))
+
+# Alternative: define the plot function "on the fly". Less readable
 pd <- penguins %>%
   group_by(species) %>%
   nest() %>%
