@@ -54,8 +54,9 @@ __Remark__, when creating links to other files, make sure to use the [jekyll lin
 
 #### After coding club
 
-*   Upload the `YYYYMMDD_solutions.R` file to the [src](https://github.com/inbo/coding-club/tree/master/src) folder.
-
+*   Upload the `YYYYMMDD_challenges_solutions.R` file to the [src](https://github.com/inbo/coding-club/tree/master/src) folder.
+*   Edit the video recording of the coding club session
+*   Publish video to INBO Vimeo channel in the dedicated folder called "INBO Coding Club". (Title and settings in template below)
 
 ## Templates
 
@@ -109,3 +110,29 @@ Dirk, Hans, Damiano, Stijn
     ###...
 
 
+### Vimeo webinar settings template
+
+Title: "INBO coding club - yyyy-mm-dd - topic". Example: "INBO coding club - 2020-06-30 - functional programming in R with purrr"
+
+Description: short description of the topic, typically a copy paste from the invitation email. Add link to slides and hackmd at the end as well. Example:
+
+> The topic of this INBO coding club edition is functional programming in R, alias loops on steroids. We will be using the package purrr, part of the tidyverse universe, which provides a complete and consistent set of tools to work with functions and vectors. If you have never heard about it, this INBO coding club session is the perfect occasion to learn it in a friendly and informal environment. For who already knows purrr, e.g. its map() functions, this session will offer the opportunity to increase the knowledge of this very powerful package.
+<br>Slides: https://inbo.github.io/coding-club/sessions/20200630_functional_programming.html#1
+<br>Hackmd: https://hackmd.io/ZDc7gTTHRm-ZcjYq_2f2Fg?view
+
+Privacy: "Anyone can see this video"
+
+Folder: INBO Coding Club
+
+Tags: programming, INBO coding club, R, other session related tags 
+
+Example: 
+> programming, INBO coding club, R, functional programming, purrr, tidyverse
+
+Language: English
+
+Enable video review page: YES
+
+Content rating: All audiences
+
+Use topic badge as thumbnail.
