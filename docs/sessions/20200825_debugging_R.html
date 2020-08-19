@@ -1,0 +1,228 @@
+---
+layout: presentation
+title: debugging R
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 25 AUGUST 2020
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Somewhere in the Milky Way
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20200825/20200825_debuggingR.png)
+
+---
+class: center, middle
+
+From the fortunes of the R community: <p>
+![:scale 100%]({{ site.baseurl}}/assets/images/20200825/20200825_intro_debugging.png)
+</p>
+
+---
+class: left, middle
+
+You have some code, it doesn't work as expected...
+<center>![:scale 100%]({{ site.baseurl}}/assets/images/20200825/20200825_print_in_action1.png)</center>
+<br> You start to search by inserting `print()` instructions here and there..
+
+---
+class: left, middle
+
+Welcome to your personal `print()` FESTIVAL!
+
+<center>![:scale 100%]({{ site.baseurl}}/assets/images/20200825/20200825_print_in_action2.png)</center>
+<br>
+And what if the error is not in your code but in a function embedded in it?
+
+---
+class: center, middle
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20200825/20200825_RStudio_IDE_cheatsheet.png)
+[Download cheatsheet here](https://github.com/inbo/coding-club/blob/master/cheat_sheets/201800821_cheat_sheet_rstudio-ide.pdf)
+
+---
+class: center, middle
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20200825/20200825_debug_mode_zoom_cheatsheet.png)
+
+---
+class: center, middle
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20200825/20200825_debug_mode_zoom_cheatsheet2.png)
+
+---
+class: center, middle
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+<br> No yellow sticky notes online :-( We use hackmd (see next slide) but basic principle doesn't change.
+
+---
+class: center, middle
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/Nb8AFC5gQ7GMJ4FyiTYqow?both
+
+<iframe src="https://hackmd.io/Nb8AFC5gQ7GMJ4FyiTYqow?both" height="400px" width="800px"></iframe>
+
+---
+class: left, middle
+
+# Install and load the required packages:
+
+Copy-paste and run the following R script:
+
+```r
+
+```
+
+---
+class: left, middle
+
+# Download data and code
+
+Today we will use an R script and some datasets. Download* the R script in your folder `src ` and the dataset in your folder `data`.
+
+- R script: [20200825/20200825_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20200825/20200825_challenges.R)
+- Data: [20200825/20200825_.txt](https://github.com/inbo/coding-club/blob/master/data/20200825/20200825_.txt),
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, middle
+
+# A live code intro
+
+![:scale 83%]({{ site.baseurl}}/assets/images/20200825/20200825_livecoding_snippet.png)<br>
+```r
+Error in FUN(newX[, i], ...) : is.atomic(x) is not TRUE
+```
+
+---
+class: left, middle
+
+# A memory aid
+
+## Two-steps debugging
+
+1. `traceback` your code to find where it stops to work
+2. `debug` your code to find where the bug(s) is/are
+
+## WHY
+
+- save time: "debugging" using `print()` is time consumming  + you have to clean up your code after
+- jump in **loops**, in **if-else** statements, in **functions**
+
+## HOW
+
+- traceback to find the source of the error
+- use `browser()` instead of `print()` (but still not abuse of it)
+- add **breakpoints** (red circles) and use **Source** instead of  **Run**
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, middle
+
+# Challenge 1
+
+
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, middle
+
+# Challenge 2
+
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3
+
+
+---
+class: left, middle
+
+# Debugging starts by writing better code - part 1
+
+## Practice defensive programming
+
+1. Add pre-conditions to your functions to avoid unexpected and unpredictable errors in later stages (**fail fast principle**: stop the current operation as soon as any unexpected error occurs)
+2.
+
+
+---
+class: left, middle
+
+# Debugging starts by writing better code - part 2
+
+## Miscellaneous tips
+
+1. Smaller functions are better: easier to debug, easier to understand
+1. Find and avoid global variables
+```r
+library(codetools)
+f <- function(z) {y <- 3; print(x + y + z)} # BAD FUNCTION
+findGlobals(f)
+## [1] "<-"    "{"     "+"     "print" "x"
+```
+1. Don't hard code numbers: use variables instead (n of iterations, parameter values in simulations, ...). Easier to read and reduce bugs when you use the same number multiple times
+1. Build up code in pieces, testing along the way
+1. Make big changes in small steps
+
+---
+class: left, middle
+
+## Resources
+
+- [webinar](https://www.youtube.com/watch?v=-yy_3htRHdU&t=444s) and related [tutorial](and related tutorial) from Chris Paciorek, Department of Statistics, UC Berkley
+- Well-written and complete tutorial: https://r4ds.had.co.nz/iteration.html#for-loops-vs.functionals (from 21.4 up to 21.9)
+- Challenge solutions will be available soon
+- Video recording of the coding club session will be available soon at the INBO's vimeo channel
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: Herman Teirlinck - 01.72 - Kaat Tilley (?) <br>
+Date: __24/09/2020__, van 10:00 tot 12:00<br>
+Subject: be proficient with stRings
+(registration announced via DG_useR@inbo.be)
