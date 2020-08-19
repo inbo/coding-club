@@ -3,7 +3,6 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2020-08-25 | Debugging R | [slides]({{ site.baseurl }}{% link sessions/20200825_debugging_R.html  %}) | [hackmd](https://hackmd.io/Nb8AFC5gQ7GMJ4FyiTYqow) | webinar | coming soon |
 | 2020-06-30 | Functional programming | [slides]({{ site.baseurl }}{% link sessions/20200630_functional_programming.html  %}) | [hackmd](https://hackmd.io/ZDc7gTTHRm-ZcjYq_2f2Fg?both) | webinar | [vimeo](https://vimeo.com/434253382) |
 | 2020-05-28 | Loops | [slides]({{ site.baseurl }}{% link sessions/20200528_loops.html  %}) | [hackmd](https://hackmd.io/-uDJu4xCS6CC7qNtaK2PLQ) | webinar | [vimeo](https://vimeo.com/424029848) |
 | 2020-04-28 | Making maps | [slides]({{ site.baseurl }}{% link sessions/20200428_gis_maps.html  %}) | [hackmd](https://hackmd.io/1JeUgfKNRPeXTfk2lqP2AA) | webinar | |
