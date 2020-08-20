@@ -35,6 +35,11 @@ class: center, middle
 ---
 class: center, middle
 
+![:scale 100%]({{ site.baseurl}}/assets/images/20200825/20200825_debugging_phdcomics.gif)
+
+---
+class: center,middle
+
 From the fortunes of the R community: <p>
 ![:scale 100%]({{ site.baseurl}}/assets/images/20200825/20200825_intro_debugging.png)
 </p>
@@ -49,7 +54,7 @@ You have some code, it doesn't work as expected...
 ---
 class: left, middle
 
-Welcome to your personal `print()` FESTIVAL!
+Welcome to the `print()` FESTIVAL!
 
 <center>![:scale 100%]({{ site.baseurl}}/assets/images/20200825/20200825_print_in_action2.png)</center>
 <br>
@@ -70,6 +75,14 @@ class: center, middle
 class: center, middle
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20200825/20200825_debug_mode_zoom_cheatsheet2.png)
+
+---
+class: left, middle
+
+## Why debugging?
+
+- save time: "debugging" using `print()` is time consumming  + you have to clean up your code after
+- jump in **loops**, in **if-else** statements, in **functions**
 
 ---
 class: center, middle
@@ -101,23 +114,11 @@ Go to https://hackmd.io/Nb8AFC5gQ7GMJ4FyiTYqow?both
 ---
 class: left, middle
 
-# Install and load the required packages:
-
-Copy-paste and run the following R script:
-
-```r
-
-```
-
----
-class: left, middle
-
 # Download data and code
 
 Today we will use an R script and some datasets. Download* the R script in your folder `src ` and the dataset in your folder `data`.
 
 - R script: [20200825/20200825_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20200825/20200825_challenges.R)
-- Data: [20200825/20200825_.txt](https://github.com/inbo/coding-club/blob/master/data/20200825/20200825_.txt),
 
 <small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
@@ -136,21 +137,82 @@ class: left, middle
 
 # A memory aid
 
-## Two-steps debugging
+## Traceback your code
 
-1. `traceback` your code to find where it stops to work
-2. `debug` your code to find where the bug(s) is/are
+`traceback` your code to find where it stops to work.
 
-## WHY
+In RStudio: in **Debug pane** -> **On Error** -> **Error Inspector** and then click on **Show Traceback** in the error message <p>
+![:scale 100%]({{ site.baseurl}}/assets/images/20200825/20200825_livecoding_show_traceback.png)</p>
+In basic R:
+```r
+option(error = traceback) # trace the error back, better than option(error = message)
+```
 
-- save time: "debugging" using `print()` is time consumming  + you have to clean up your code after
-- jump in **loops**, in **if-else** statements, in **functions**
+---
+class: left, middle
 
-## HOW
+# A memory aid
 
-- traceback to find the source of the error
-- use `browser()` instead of `print()` (but still not abuse of it)
-- add **breakpoints** (red circles) and use **Source** instead of  **Run**
+## Debug your code: activate debugging mode
+
+1. set breakpoints (red circles) where you suspect something wrong happens after sourcing
+2. set `options(error = recover)` and select the function:
+<p>
+![:scale 100%]({{ site.baseurl}}/assets/images/20200825/20200825_livecoding_show_error_recovery.png)</p>
+3. activate debugging mode on a specific function by using `debug(function_name`)
+
+---
+class: left, middle
+
+# A memory aid
+
+## Debug your code: work in debugging mode
+
+Once you are in debugging mode, use **Next** (n) to move to next line, **Continue** (c) to go to next breakpoint (red circles)
+<p>
+![:scale 70%]({{ site.baseurl}}/assets/images/20200825/20200825_livecoding_show_debugging_mode_actions.png)</p>
+
+---
+class: left, middle
+
+# 123 magic
+
+Write down a positive integer on a piece of paper:
+
+```
+886328712442992
+```
+
+Count up the number of even and odd digits, and the total number of digits:
+
+```
+10 5 15
+```
+
+String the digits of those three numbers together to make a new number:
+
+```
+10515
+```
+
+Perform the same operation on the obtained number:
+
+```
+1 4 5 ⟶ 145
+```
+
+And keep iterating:
+
+```
+1 2 3 ⟶ 123
+```
+
+You'll always arrive at the number 123!
+
+<small>Credits:<br>
+(EN) https://dodona.ugent.be/en/courses/239/series/2168/activities/192047393/<br>
+(NL) https://dodona.ugent.be/nl/courses/239/series/2168/activities/192047393/
+</small>
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -158,8 +220,32 @@ class: left, middle
 
 # Challenge 1
 
+Use debug techniques to find (and possibly solve) the bug in the function `evenOdd()` in [20200825_challenge.R]():
 
-
+```r
+#' Function evenOdd() takes an integer n and returns a list containing two integers
+#' that respectively indicate how many even and odd digits occur in n
+#'
+#' @examples
+#' evenOdd(886328712442992) -> (10, 5)
+#' evenOdd(10515) -> (1, 4)
+#' evenOdd(145) -> (1, 2)
+evenOdd <- function(n) {
+  char_n <- as.character(n)
+  counter_even <- 0
+  counter_odd <- 0
+  for (i in char_n) {
+    digit <- as.integer(i)
+    if (digit %% 2 == 0) {
+      counter_even <- counter_even + 1
+    } else {
+      counter_odd <- counter_odd + 1
+    }
+  }
+  return(list(n_even = counter_even,
+              n_odd = counter_odd))
+}
+```
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -167,7 +253,50 @@ class: left, middle
 
 # Challenge 2
 
+Using debug techniques find (and solve) bugs in functions `step()` and `steps()` in [20200825_challenge.R]()
 
+```r
+#' Function step() takes a positive integer:
+#' 886328712442992
+#' 1. Count up the number of even and odd digits, and the total number of digits:
+#' 10 5 15
+#' 2. String the digits of those three numbers together to make a new number:
+#' 10515
+#' 3. Return it as a number
+step <- function(n) {
+  n_odd_even <- evenOdd(n)
+  total_digits <- nchar(n)
+  n_odd_even_total <- n_odd_even
+  n_odd_even_total$n_total <- total_digits
+  return(n_odd_even_total)
+}
+
+#'Function `steps` takes an integer and return how
+#' many steps you need before the number 123 is reached.
+steps <- function(n) {
+  while (n != 123) {
+    n <- step(n)
+    n_steps <- n_steps + 1
+  }
+  return(n_steps)
+}
+```
+
+---
+class: left, middle
+
+# Intermezzo: defensive programming
+
+Debugging starts already while writing code! Defensive programming is the best way to solve a good bunch of (future) bugs.
+
+1. Add pre-conditions to your functions to avoid unexpected and unpredictable errors in later stages (**fail fast principle**: stop the current operation as soon as any unexpected error occurs)
+```r
+# PSEUDOCODE !!
+if (date < today) stop("Date is too early");
+if (class input != numeric vector) stop("Invalid type of input: only numeric vectors allowed.")
+```
+
+2. Assert statements to validate output at intermediate steps, e.g. output of 3rd party libraries that you use in your project.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -175,27 +304,35 @@ class: left, middle
 
 # Challenge 3
 
+Apply defensive programming to avoid unexpected behavior or cryptic error messages ("fail fast" principle).
+
+Function crashes with:
+
+1.  "very large" numbers
+![]({{ site.baseurl}}/assets/images/20200825/20200825_challenge3_unexpected_error_big_numbers.png)
+2. decimal numbers
+![]({{ site.baseurl}}/assets/images/20200825/20200825_challenge3_unexpected_error_decimal_number.png)
+3. vectors or list of numbers
+![]({{ site.baseurl}}/assets/images/20200825/20200825_challenge3_unexpected_error_multiple_numbers.png)
 
 ---
 class: left, middle
 
-# Debugging starts by writing better code - part 1
+# Bonus challenge
 
-## Practice defensive programming
+It's not the first time we speak about debugging. We did it already in 21 Aug 2018, so there are other three challenges waiting to be solved! See [slides](https://inbo.github.io/coding-club/sessions/20180821_coding_club_debugging.pdf) (pdf). Download [data](https://github.com/inbo/coding-club/tree/master/data/20180821) and [R scripts](https://github.com/inbo/coding-club/tree/master/src/20180821) as links in slides are broken after we moved from Google Drive to GitHub.
 
-1. Add pre-conditions to your functions to avoid unexpected and unpredictable errors in later stages (**fail fast principle**: stop the current operation as soon as any unexpected error occurs)
-2.
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
 
 
 ---
 class: left, middle
 
-# Debugging starts by writing better code - part 2
-
-## Miscellaneous tips
+# Miscellaneous tips
 
 1. Smaller functions are better: easier to debug, easier to understand
-1. Find and avoid global variables
+1. Find and avoid **global variables**
 ```r
 library(codetools)
 f <- function(z) {y <- 3; print(x + y + z)} # BAD FUNCTION
@@ -211,9 +348,10 @@ class: left, middle
 
 ## Resources
 
-- [webinar](https://www.youtube.com/watch?v=-yy_3htRHdU&t=444s) and related [tutorial](and related tutorial) from Chris Paciorek, Department of Statistics, UC Berkley
-- Well-written and complete tutorial: https://r4ds.had.co.nz/iteration.html#for-loops-vs.functionals (from 21.4 up to 21.9)
-- Challenge solutions will be available soon
+- [webinar](https://www.youtube.com/watch?v=-yy_3htRHdU&t=444s) and related [tutorial](https://htmlpreview.github.io/?https://github.com/berkeley-scf/tutorial-R-debugging/blob/master/R-debugging.html) from Chris Paciorek, Department of Statistics, UC Berkley
+- [Debugging in RStudio tutorial](https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio) written by RStudio itself
+- [Debugging chapter](https://adv-r.hadley.nz/debugging.html) from Hadley Wickham's book Advanced R, 2nd edition
+- [123 exercise](https://dodona.ugent.be/en/courses/239/series/2168/activities/192047393/) from Dodona, the programming platform hosted by UGent
 - Video recording of the coding club session will be available soon at the INBO's vimeo channel
 
 ---
