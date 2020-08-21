@@ -120,7 +120,7 @@ Today we will use a R script. Download* it in your folder `src/20200825`.
 
 - R script: [20200825/20200825_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20200825/20200825_challenge.R)
 
-This time we don't have any additional dataset to download.
+This time we don't have any dataset to download.
 
 <small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
@@ -157,11 +157,42 @@ class: left, middle
 
 ## Debug your code: activate debugging mode
 
-1. set breakpoints (red circles) where you suspect something wrong happens after sourcing
-2. set `options(error = recover)` and select the function:
+
+### 1st alternative
+
+Source the file and set breakpoints (red circles) where you think something wrong happens
+<p>
+![:scale 50%]({{ site.baseurl}}/assets/images/20200825/20200825_livecoding_show_breakpoint.png)</p>
+
+---
+class: left, middle
+
+# A memory aid
+
+## Debug your code: activate debugging mode
+
+### 2nd alternative
+
+Set `options(error = recover)` and select the function:
 <p>
 ![:scale 100%]({{ site.baseurl}}/assets/images/20200825/20200825_livecoding_show_error_recovery.png)</p>
-3. activate debugging mode on a specific function by using `debug(function_name`)
+
+---
+class: left, middle
+
+# A memory aid
+
+## Debug your code: activate debugging mode
+
+### 3rd alternative
+
+Activate debugging mode on a specific function by using `debug(function_name)` or `debugonce(function_name)`.
+
+```r
+debug(calc_var) # or debugonce(calc_var)
+```
+
+Once this function is debugged, run `undebug(function_name)`.
 
 ---
 class: left, middle
@@ -255,7 +286,7 @@ class: left, middle
 
 # Challenge 2
 
-Using debug techniques find (and solve) bugs in functions `step()` and `steps()` in [20200825_challenge.R]()
+Use debug techniques to find (and solve) bugs in functions `step()` and `steps()` in [20200825_challenge.R]()
 
 ```r
 #' Function step() takes a positive integer:
