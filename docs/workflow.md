@@ -132,7 +132,7 @@ Tags (in Distribution tab, Discovery section): programming, INBO coding club, R,
 Example: 
 > programming, INBO coding club, R, functional programming, purrr, tidyverse
 
-Language: English
+Language (in Distribution tab, Discovery section): English
 
 Enable video review page: YES
 
