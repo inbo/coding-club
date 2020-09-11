@@ -121,7 +121,7 @@ Description: short description of the topic, typically a copy paste from the inv
 > The topic of this INBO coding club edition is functional programming in R, alias loops on steroids. We will be using the package purrr, part of the tidyverse universe, which provides a complete and consistent set of tools to work with functions and vectors. If you have never heard about it, this INBO coding club session is the perfect occasion to learn it in a friendly and informal environment. For who already knows purrr, e.g. its map() functions, this session will offer the opportunity to increase the knowledge of this very powerful package.
 <br>Slides: https://inbo.github.io/coding-club/sessions/20200630_functional_programming.html#1
 <br>Hackmd: https://hackmd.io/ZDc7gTTHRm-ZcjYq_2f2Fg?view
-Level: intermediate/advanced
+<br>Level: intermediate/advanced
 
 Privacy: "Anyone can see this video"
 
