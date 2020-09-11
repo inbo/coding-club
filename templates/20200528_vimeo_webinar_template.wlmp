@@ -4,7 +4,7 @@
     <MediaItem id="2" filePath="C:\Users\damiano_oldoni\Documents\INBO\repositories\coding-club\docs\assets\images\coding_club_logo_1.png" arWidth="566" arHeight="653" duration="0" songTitle="" songArtist="" songAlbum="" songCopyrightUrl="" songArtistUrl="" songAudioFileUrl="" stabilizationMode="0" mediaItemType="2" />
   </MediaItems>
   <Extents>
-    <TitleClip extentID="5" gapBefore="0" duration="7">
+    <TitleClip extentID="5" gapBefore="0" duration="10">
       <Effects />
       <Transitions />
       <BoundProperties>
@@ -38,7 +38,7 @@
         <BoundPropertyInt Name="rotateStepNinety" Value="0" />
       </BoundProperties>
     </ImageClip>
-    <TitleClip extentID="8" gapBefore="5" duration="7">
+    <TitleClip extentID="8" gapBefore="5" duration="10">
       <Effects>
         <TextEffect effectTemplateID="TextEffectScrollTemplate" TextScriptId="7">
           <BoundProperties>
@@ -66,7 +66,7 @@
             <BoundPropertyInt Name="outlineSizeIndex" Value="0" />
             <BoundPropertyFloatSet Name="position">
               <BoundPropertyFloatElement Value="0" />
-              <BoundPropertyFloatElement Value="1.9069766998291016" />
+              <BoundPropertyFloatElement Value="2.7441859245300293" />
               <BoundPropertyFloatElement Value="0.02500000037252903" />
             </BoundPropertyFloatSet>
             <BoundPropertyFloat Name="size" Value="0.3333333432674408" />
@@ -79,6 +79,13 @@
               <BoundPropertyStringElement Value="Do not forget" />
               <BoundPropertyStringElement Value="to cut " />
               <BoundPropertyStringElement Value="the long breaks" />
+              <BoundPropertyStringElement Value="" />
+              <BoundPropertyStringElement Value="Upload the " />
+              <BoundPropertyStringElement Value="specific badge " />
+              <BoundPropertyStringElement Value="of session as " />
+              <BoundPropertyStringElement Value="thumbnail's " />
+              <BoundPropertyStringElement Value="video" />
+              <BoundPropertyStringElement Value="" />
             </BoundPropertyStringSet>
             <BoundPropertyString Name="style" Value="Plain" />
             <BoundPropertyFloat Name="transparency" Value="0" />
