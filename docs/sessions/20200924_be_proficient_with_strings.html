@@ -1,0 +1,163 @@
+---
+layout: presentation
+title: be proficient with stRings
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 24 SEPTEMBER 2020
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Somewhere other the rainbow
+
+---
+class: center, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20200924/20200924_remote_R_learners.jpg)
+
+<small> Source: [stats-illustrations](https://github.com/allisonhorst/stats-illustrations) of [Allison Horst](https://github.com/allisonhorst/) </small>
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20200924/20200924_badge_strings.png)
+
+---
+class: center, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20200924/20200924_string_theory.jpg)
+<p> No string theory today! </p>
+
+---
+class: center, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20200924/20200924_strings_intro.png)
+
+<p> We will focus on the tidyverse package `stringr` </p>
+
+---
+class: center, middle
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20200924/20200924_stringr_cheatsheet.png)
+[Download cheatsheet here](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20180426_cheat_sheet_stringr.pdf)
+
+---
+class: center, middle
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+<br> No yellow sticky notes online :-( We use hackmd (see next slide) but basic principle doesn't change.
+
+---
+class: center, middle
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/Nb8AFC5gQ7GMJ4FyiTYqow?both
+
+<iframe src="https://hackmd.io/Nb8AFC5gQ7GMJ4FyiTYqow?both" height="400px" width="800px"></iframe>
+
+---
+class: left, middle
+
+# Download data and code
+
+Today instead of downloading file manually, we will test a new inborutils function called `setup_codingclub_session()`. Restart your R session and update the inborutils package by running:
+```r
+devtools::install_github("inbo/inborutils")
+```
+and test it! For downloading the material of the current date, just run `setup_codingclub_session()`. For a paste date, use the "YYYYMMDD" format. For all options, check the [documentation online
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, middle
+
+# Challenge 1
+
+1. Find birds with a 6 characters long metal ring (column `metal_ring`) and a color ring (column `color_ring`) starting with a C and ending with a Y
+2. All color rings should be uppercase. Find anomalies
+3. Solve all anomalies found in (2) by setting all color rings uppercase
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, middle
+
+# Challenge 2
+
+We have to extract all color rings (column `color_ring_inscription`) with a **4-letter only** long inscription where the third letter is an A.
+
+---
+class: left, middle
+
+## Intermezzo: the power of regex
+
+```
+example_string <- "I. love. the. 2019(!!) INBO. Coding. Club! Session. of. 24/09/2020...."
+```
+
+<p>See page 2 of the cheat sheet:</p>
+![:scale 100%]({{ site.baseurl}}/assets/images/20200924/20200924_stringr_cheatsheet_regex.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3
+
+1. The dots in color rings (e.g. `KRO.C`, `KZ.AC`) are used for improving readibility. Apart from that the values in column `color_ring_dots` should be the same of the ones in column `color_ring`. Find anomalies.
+2. Some metal rings start with one or more asterisks. Remove the asterisks.
+3. Find rings containing two consecutive vowels
+
+---
+class: left, middle
+
+# Bonus challenge
+
+1.
+2. As we are all speaking about vaccines: https://dodona.ugent.be/en/activities/303251929/
+
+---
+class: left, middle
+
+## Resources
+
+- Video recording of the coding club session will be available on [INBO's vimeo channel](https://vimeo.com)
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: online <br>
+Date: __27/10/2020__, van 10:00 tot 12:00<br>
+Subject: Dates in R
+(registration announced via DG_useR@inbo.be)
