@@ -90,9 +90,12 @@ class: left, middle
 
 # Download data and code
 
-Today instead of downloading file manually, we will test a new inborutils function called `setup_codingclub_session()`. Restart your R session and update the inborutils package by running:
+Today instead of downloading the files manually, we will test a new inborutils function called `setup_codingclub_session()`. Restart your R session and update the inborutils package by running:
 ```r
-devtools::install_github("inbo/inborutils")
+if (!"remotes" %in% rownames(installed.packages())) {
+  install.packages("remotes")
+}
+remotes::install_github("inbo/inborutils")
 ```
 
 To download the coding club material of today, just run `setup_codingclub_session()`. For a past date, use the "YYYYMMDD" format, e.g. `setup_codingclub_session("20200825")` to download the coding club material of last session on August, 25. For all options, check the [documentation online](https://inbo.github.io/inborutils/reference/setup_codingclub_session.html).
