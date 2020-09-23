@@ -94,7 +94,13 @@ Today instead of downloading file manually, we will test a new inborutils functi
 ```r
 devtools::install_github("inbo/inborutils")
 ```
-and test it! For downloading the material of today, just run `setup_codingclub_session()`. For a past date, use the "YYYYMMDD" format, e.g. setup_codingclub_session("20200825") to download the coding club material of last session on August, 25. For all options, check the [documentation online](https://inbo.github.io/inborutils/reference/setup_codingclub_session.html).
+
+To download the coding club material of today, just run `setup_codingclub_session()`. For a past date, use the "YYYYMMDD" format, e.g. `setup_codingclub_session("20200825")` to download the coding club material of last session on August, 25. For all options, check the [documentation online](https://inbo.github.io/inborutils/reference/setup_codingclub_session.html).
+
+you can of course download [data](https://github.com/inbo/coding-club/blob/master/data/20200924/20200924_bird_rings.tsv) and [scripts](https://github.com/inbo/coding-club/blob/master/src/20200924/20200924_challenges.R) manually* still!
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -112,11 +118,13 @@ class: left, middle
 
 # Challenge 2
 
-1. Create a new column called `color_ring_complete` containing color ring information in this format: `background_color`+`inscription_color`+`"("`+`color_ring`+`")"`, e.g. RW(FJAC)
+1. Create a new column called `color_ring_complete` containing color ring information in this format:
+`background_color`+`inscription_color`+`"("`+`color_ring`+`")"`, e.g. RW(FJAC)
+
 2. We have to extract all color rings (column `color_ring_inscription`) with a **4-letter only** long inscription where the third letter is an A.
 
 ---
-class: left, middle
+class: center, middle
 
 ## Intermezzo: the power of regex
 
@@ -124,8 +132,10 @@ class: left, middle
 example_string <- "I. love. the. 2019(!!) INBO. Coding. Club! Session. of. 24/09/2020...."
 ```
 
-<p>See page 2 of the cheat sheet:</p>
-![:scale 100%]({{ site.baseurl}}/assets/images/20200924/20200924_stringr_cheatsheet_regex.png)
+Go to page 2 of the cheat sheet
+
+
+![:scale 70%]({{ site.baseurl}}/assets/images/20200924/20200924_stringr_cheatsheet_regex.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -134,7 +144,9 @@ class: left, middle
 # Challenge 3
 
 1. The dots in color rings (column `color_ring_dots`), e.g. `KRO.C`, `KZ.AC`, are used for improving readibility. Apart from that the values in column `color_ring_dots` should be exactly the same as the ones in column `color_ring`. Find anomalies.
+
 2. Some metal rings start with one or more asterisks. Remove the asterisks.
+
 3. Find rings containing two consecutive vowels
 
 ---
@@ -142,8 +154,10 @@ class: left, middle
 
 # Bonus challenge
 
-1. Now you removed the asteriks from metal rings you can map metal rings following the [EURING Exchange Code 2000+ standard](https://euring.org/files/documents/EURING2000%2BCodev112.pdf). A ring number should consist of up to ten alphanumeric characters. At page 7:
-> Where the ring number consist of fewer than ten numbers/letters, the number is padded with dots. These dots are always inserted to the left of the rightmost row of numbers. Examples: `H146416` should become `H...146416`, `H67169` should become `H....67169`
+1. Now you removed the asteriks from metal rings, you can map metal rings following the [EURING Exchange Code 2000+ standard](https://euring.org/files/documents/EURING2000%2BCodev112.pdf). A ring number should consist of up to ten alphanumeric characters. At page 7 we read:
+> *Where the ring number consist of fewer than ten numbers/letters, the number is padded with dots. These dots are always inserted to the left of the rightmost row of numbers.*
+<br>Examples: `H146416` → `H...146416`, `H67169` → `H....67169`
+
 2. As we are all speaking about vaccines: https://dodona.ugent.be/en/activities/303251929/. Use `variable <- readline()` to read a line from the terminal and assign it to `variable`.
 
 ---
