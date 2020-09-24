@@ -153,3 +153,41 @@ birds %>%
 
 # Check we did everything correct
 birds %>% filter(str_length(metal_ring_complete) != 10)
+
+# Bonus 2
+
+# read protein sequence of amino acids
+protein <- readline()
+# examples from exercise online
+# CMRPGNNTRKSTHMGPGKAFYAICDTIGDIRGAHC
+# CTRPNNNTRKRTSIIGPGRAFTAARKTIGDIRQAHC
+# CMRPGNNTRKSTHMGPGKAFYAICDTIGDIRGAHC
+m <- as.integer(readline())
+# typically 1 but program should work with m > 1 as well
+n <- as.integer(readline())
+# n >= m
+
+# Read variants
+variants <- vector(mode = "character", length = n)
+for (i in seq(1:n)) {
+  variants[i] <- readline()
+}
+
+# Extract positions and amino acids of the variants
+positions <- map_int(variants, ~as.integer(str_c(str_extract_all(., pattern = "[:digit:]")[[1]], collapse = "")))
+aminos <- map_chr(variants, ~str_c(str_extract_all(variants, pattern = "[:alpha:]")[[1]], collapse = ""))
+
+
+are_aminos_in_variants <-
+  map2_lgl(aminos,
+           positions,
+           function(x,y) {
+             amino <- str_sub(protein, start = y , end = y)
+             pattern <- str_c("[",x,"]")
+             message(amino, " ", pattern)
+             str_detect(amino, pattern = pattern)
+           })
+n_occs <- sum(are_aminos_in_variants)
+if (n_occs >= m) {
+  message(sprintf("positive (%s)", n_occs)) # or message(str_c("positive (", n_occs, ")"))
+} else message(sprintf("negative (%s)", n_occs))
