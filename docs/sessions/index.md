@@ -3,6 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
+| 2020-10-27 | dates en times in R | [slides]({{ site.baseurl }}{% link sessions/20201027_dates_in_r.html  %}) | [hackmd](https://hackmd.io/wjPHZOQnRmmFZdXMG_A5OQ?view) | webinar |  |
 | 2020-09-24 | be proficient with strings | [slides]({{ site.baseurl }}{% link sessions/20200924_be_proficient_with_strings.html  %}) | [hackmd](https://hackmd.io/@CX5eR_y9TP2KGHs5tv61pw/BkTql4vrw) | webinar | https://vimeo.com/463832080 |
 | 2020-08-25 | Debugging R | [slides]({{ site.baseurl }}{% link sessions/20200825_debugging_R.html  %}) | [hackmd](https://hackmd.io/Nb8AFC5gQ7GMJ4FyiTYqow) | webinar | [vimeo](https://vimeo.com/456879450) |
 | 2020-06-30 | Functional programming | [slides]({{ site.baseurl }}{% link sessions/20200630_functional_programming.html  %}) | [hackmd](https://hackmd.io/ZDc7gTTHRm-ZcjYq_2f2Fg?both) | webinar | [vimeo](https://vimeo.com/434253382) |

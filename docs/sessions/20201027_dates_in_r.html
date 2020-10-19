@@ -1,0 +1,153 @@
+---
+layout: presentation
+title: Date(time)s in R
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 27 OCTOBER 2020
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+On the best cinemas in town
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20201027/20201027_badge_dates.png)
+
+---
+class: center, middle
+
+!({{ site.baseurl}}/assets/images/20201027/20201027_iso_8601.png)
+<p>[xkcd comics](https://xkcd.com/1179/)</p>
+
+---
+class: center, middle
+
+!({{ site.baseurl}}/assets/images/20201027/20201027_lubridate_logo.png)
+[lubridate](https://lubridate.tidyverse.org/)
+---
+class: center, middle
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20201027/20201027_cheat_sheet.png)
+[Download cheatsheet here](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20180426_cheat_sheet_lubridate.pdf)
+
+---
+class: center, middle
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+<br> No yellow sticky notes online :-( We use hackmd (see next slide) but basic principle doesn't change.
+
+---
+class: center, middle
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/@CX5eR_y9TP2KGHs5tv61pw/Bke_b0cPw/edit
+
+<iframe src="https://hackmd.io/@CX5eR_y9TP2KGHs5tv61pw/Bke_b0cPw/edit" height="400px" width="800px"></iframe>
+
+---
+class: left, middle
+
+# Download data and code
+
+Instead of downloading the files manually, we will test a new inborutils function called `setup_codingclub_session()`. Restart your R session and update the inborutils package by running:
+```r
+if (!"remotes" %in% rownames(installed.packages())) {
+  install.packages("remotes")
+}
+remotes::install_github("inbo/inborutils")
+```
+
+To download the coding club material of today, just run `setup_codingclub_session()`. For a past date, use the "YYYYMMDD" format, e.g. `setup_codingclub_session("20200825")` to download the coding club material of last session on August, 25. For all options, check the [documentation online](https://inbo.github.io/inborutils/reference/setup_codingclub_session.html).
+
+You can of course download [data](https://github.com/inbo/coding-club/blob/master/data/20200924/20200924_bird_rings.tsv) and [scripts](https://github.com/inbo/coding-club/blob/master/src/20200924/20200924_challenges.R) manually* still as we always did!
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, middle
+
+# Challenge 1
+
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, middle
+
+# Challenge 2
+
+
+
+---
+class: center, middle
+
+## Intermezzo:
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3
+
+
+---
+class: left, middle
+
+# Bonus challenge
+
+
+---
+class: left, middle
+
+## Resources
+
+- Solutions will be available soon
+- Video recording of the coding club session will be published on [INBO's vimeo channel](https://vimeo.com/463832080)
+- [lubridate website](https://lubridate.tidyverse.org/)
+- R for Data Science. [Chapter 16: Dates and times](https://r4ds.had.co.nz/dates-and-times.html)
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.72 (Kaat Tilley)?? & online <br>
+Date: __24/11/2020__, van 10:00 tot 12:00<br>
+Subject: ggplot for dummies
+(registration announced via DG_useR@inbo.be)
