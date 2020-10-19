@@ -59,7 +59,7 @@ More specifically, the core team takes care of:
 * thematic topics, working material and some challenges to work on
 * general agenda, taking into account the feedback of the participants
 
-Check [this page]({{ site.baseurl }}{% link workflow.md  %}) to see the step-by-step workflow to organize an INBO coding club.
+Check the [workflow page]({{ site.baseurl }}{% link workflow.md  %}) to see the step-by-step workflow to organize an INBO coding club.
 
 ### Did we figure that out ourselves?
 
