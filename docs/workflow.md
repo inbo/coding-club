@@ -81,6 +81,9 @@ Dirk, Hans, Damiano, Stijn
 
 ### Hackmd template
 
+We created an [hackmd template](https://hackmd.io/0LROJenYRsekBFCmeHtNWA?both=#) you can start from.
+
+Here below a practical example as well:
 
     # INBO CODING CLUB
     26 April, 2018
@@ -99,6 +102,17 @@ Dirk, Hans, Damiano, Stijn
     ```
     (*you can copy paste this example and add your code further down, but do not fill in your code in this section*)
     
+    ## Yellow sticky notes
+
+    No yellow sticky notes online. Put your name + " | " and add a "*" each time you solve a challenge (see below).
+
+    ## Participants
+
+    Name | Challenges
+    --- | ---
+    Damiano Oldoni | 
+
+
     Your snippets:
     
     ### ADD A TITLE OF YOUR SNIPPET
