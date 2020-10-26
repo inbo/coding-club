@@ -206,20 +206,22 @@ class: left, middle
 
 # Challenge 3
 
+Use the same data as for Challenge 2.
+
 1. Get hour and day information of the observations. You can store them as additional columns
-2. For each observation find whether it happened during "dawn" (between `dawn` and `sunriseEnd`), "day" (between `sunriseEnd` and `sunset`), "evening" (between `sunset` and `nightStart`) or "night" (from midnight to `dawn` or after `night`). You can do it using function `getSunlightTimes()` from [suncalc](https://github.com/datastorm-open/suncalc#suncalc) package.
+2. For each observation find whether it happened during "dawn" (between `dawn` and `sunriseEnd`), "day" (between `sunriseEnd` and `sunset`), "evening" (between `sunset` and `nightStart`) or "night" (from midnight to `dawn` or after `night`). You can do it by using the function `getSunlightTimes()` from the [suncalc](https://github.com/datastorm-open/suncalc#suncalc) package.
 
 ---
 class: left, middle
 
-# The future of UTC: leap or not to leap?
+# The future of UTC: to leap or not to leap?
 
 UTC is based on time as measured by atomic clocks so it is independent of Earth's rotation.
 The [leap second](https://en.wikipedia.org/wiki/Leap_second) is a one-second adjustment that is occasionally applied to Coordinated Universal Time (UTC), to accommodate the imprecise observed solar time (irregularities and slowdown in the Earth's rotation).
 
 ![:scale 75%]({{ site.baseurl}}/assets/images/20201027/20201027_leapsecond2016.png)
 
-So, what to do with these annoying leap seconds? Should the standard UTC getting off of them or not?
+So, what to do with these annoying leap seconds? Should the standard UTC be getting rid of them or not?
 
 ---
 class: left, middle
