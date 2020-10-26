@@ -57,5 +57,8 @@ data_cameratrap <- read_tsv("./data/20201027/20201027_cameratrap_df.txt")
 
 # CHALLENGE 3.2
 
-#' Use suncalc package to get for each observation whether it happened during dawn (between dawn and sunriseEnd), day (between sunriseEnd and sunset), evening (between sunset and nightStart) or night (before nightEnd or after nightStart)
+#' Use suncalc package to get for each observation whether it happened during
+#' dawn (between dawn and sunriseEnd), day (between sunriseEnd and sunset),
+#' evening (between sunset and nauticalDusk) or night (before dawn or after
+#' nauticalDusk)
 
