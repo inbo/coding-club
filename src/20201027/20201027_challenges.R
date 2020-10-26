@@ -7,11 +7,8 @@ library(tidyverse)
 # parse these character columns with lubridate
 datetimes_to_parse <- tibble(
   datetime1 = c("2020-10-24 01:01:45", "2020-10-27 14:23:50"),
-  datetime2 = c("10-24-2020 1:1:45", "10-27-2020 14:23:50"),
-  datetime3 = c("2020/24/10 01;01;45am", "2020/27/10 02;23;50pm"),
-  datetime4 = c("2020:24:10 1-1am", "2020:27:10 2-23pm"),
-  datetime5 = c("24?10?99", "27&10&20"),
-  datetime6 = c("2020-10,24 1-1?45", "2020:Oct:27 2-23-50pm")
+  datetime2 = c("2020/24/10 01;01;45am", "2020/27/10 02;23;50pm"),
+  datetime3 = c("24?10?99 1-1am", "27&10&20 14:23")
 )
 
 
