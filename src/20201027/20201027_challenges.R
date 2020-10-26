@@ -1,6 +1,6 @@
-library(tidyverse)
 library(lubridate)
 library(suncalc)
+library(tidyverse)
 
 # CHALLENGE 1.1
 
