@@ -29,6 +29,13 @@ datetimes_to_parse
 #' https://lubridate.tidyverse.org/reference/parse_date_time.html#details
 options(lubridate.verbose = TRUE)
 
+#' You can use as_datetime() function but then you have to specify the format
+#' yourself if the datetime is not in ISO format
+as_datetime("2020-10-01 12:23:34") # this works
+as_datetime("01-2020-10 02:23:34am") # this doesn't work, format needed
+as_datetime("01-10-2020 02:23:34am",
+            format = "%d-%m-%Y %H:%M:%S%p") # format needed
+
 
 # CHALLENGE 1.2
 
@@ -40,7 +47,7 @@ wday(inbo_string, label = TRUE, abbr = FALSE)
 wday(inbo_string)
 
 # wday() works with multiple dates as well (vector). Handy!
-institutes_string <- c(`in` = "1985-07-17",
+institutes_string <- c(`in` = "1985-07-17", # `in` because in is a reserved name
                        ibw = "1991-03-13",
                        inbo = "2006-04-01")
 institutes_date <- ymd(institutes_string)
@@ -51,6 +58,11 @@ wday(institutes_date, label = TRUE)
 # Not abbreviated weekday
 wday(institutes_date, label = TRUE, abbr = FALSE)
 
+# Change locale to get week day in other language
+wday(institutes_date, label = TRUE, abbr = FALSE, locale = "French")
+wday(institutes_date, label = TRUE, abbr = FALSE, locale = "Italian")
+wday(institutes_date, label = TRUE, abbr = FALSE, locale = "Polish")
+wday(institutes_date, label = TRUE, abbr = FALSE, locale = "German")
 
 # with dfs
 institutes_df <- tibble(institute = c("in", "ibw", "inbo"),
