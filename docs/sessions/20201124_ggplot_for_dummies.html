@@ -84,7 +84,7 @@ class: left, middle
 
 # Download data and code
 
-Just as during the last coding cub session, instead of downloading the files manually we test a new inborutils function called `setup_codingclub_session()`. If you have not used this function yet, restart your R session and update the inborutils package by running:
+Instead of downloading the files manually we have a new inborutils function called `setup_codingclub_session()`. If you have not used this function yet, restart your R session and update the inborutils package by running:
 
 ```r
 if (!"remotes" %in% rownames(installed.packages())) {
@@ -95,10 +95,16 @@ remotes::install_github("inbo/inborutils")
 
 To download the coding club material of today, just run `setup_codingclub_session()`. In general, you can use the date in "YYYYMMDD" format , e.g. `setup_codingclub_session("20201027")`, to download the coding club material of October, 27. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).
 
-Of course, you can download [data](https://github.com/inbo/coding-club/blob/master/data/20201124/) and [scripts](https://github.com/inbo/coding-club/blob/master/src/20201124/) manually* as we did before!
+Of course, you can still download [data](https://github.com/inbo/coding-club/blob/master/data/20201124/) and [scripts](https://github.com/inbo/coding-club/blob/master/src/20201124/) manually*!
 
 <small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
+---
+class: left, middle
+
+# The ggplot recipe: data - mapping - geometry
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20201124/20201124_ggplot_recipe.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -106,14 +112,36 @@ class: left, middle
 
 # Challenge 1
 
+Give a look to the [`CO2` dataset](https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/CO2)
 
+1. Plot `uptake` as function of `conc` using points
+2. Distinguish by `Treatment` using points with different colors
+3. and different shapes for `Type`
+4. Change the y label to "CO2 uptake"
+5. Add a title to the graph, e.g. "Cold tolerance of the grass species Echinochloa crus-galli"
+6. Use a logarithmic scale for the concentration
+7. Set colors to "blue" for chilled plants and "indian red" for nonchilled
 
 ---
 class: left, middle
 
-## Intermezzo
+## Intermezzo. Aesthetics
 
+This works:
 
+```
+ggplot(CO2, aes(x = conc, y = uptake, color = Type)) + geom_violin()
+```
+
+This works too:
+
+```
+ggplot(CO2) +
+  geom_violin(aes(x = conc, y = uptake, color = Type))
+```
+
+What should I use? Both are good, but...
+But what if you want to plot two or more geometries with *different* aesthetics?
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -121,14 +149,48 @@ class: left, middle
 
 # Challenge 2
 
+1. What’s gone wrong with this code? Why are the points not green and transparency not correct? How to solve it?
+```
+ggplot(CO2, aes(x = conc, y = uptake, color = "green", alpha = 0.1)) +
+  geom_point()
+```
+2. With so many points is hard to see the effect of `treatment` or `type` on `uptake`, isn't? A box plot ( `geom_boxplot()`) could help, but what's gone wrong with this code? The x , `conc`, doesn't make any sense. How to solve it?
+```
+ggplot(CO2, aes(x = conc, y = uptake, color = Treatment)) +
+  geom_boxplot()
+```
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, middle
 
-# Challenge 3
+# Challenge 3A
+
+Sometimes using colors, shapes, etc. is not sufficient: you would like to split data in a grid of subplots to ease interpretation. How to modify the code in the R script to show data of each plant apart forming a grid of 12 subplots as shown below?
+
+![:scale 115%]({{ site.baseurl}}/assets/images/20201124/20201124_challenge3_facets.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3B
+
+Let's use `area_biotopes` dataset! The plot on the left is unreadable (see code in R script). The plot on the right is much better, isn't? Try to get something similar* or even better!
+
+![:scale 120%]({{ site.baseurl}}/assets/images/20201124/20201124_challenge3_biotopes.png)
+
+<small>* __Note__: To get same color, run  [`library(INBOtheme)`](https://inbo.github.io/INBOtheme/)
 
 
+---
+class: left, middle
+
+# Bonus challenge
+
+In challenge 1 we tried to understand the effect of `Type`  (`Quebec`, `Mississipi`) and `Treatment` (`chilled` , `nonchilled`) separately via box plots. Now we would like, still by means of a box plot, to see the effect of the interaction of these two variables together, so that we have four different situations (2 Type x 2 Treatment).
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20201124/20201124_interaction_boxplot.png)
 
 ---
 class: left, middle
@@ -139,6 +201,8 @@ class: left, middle
 - Commented solutions of the challenges will be published very soon
 - Video recording of the coding club session will be uploaded very soon
 - R for Data Science: [Chapter 3: Data visualization](https://r4ds.had.co.nz/data-visualisation.html)
+- [Datacarpentry's data visualiation tutorial](https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html)
+- [Stanford University tutorial](https://cengel.github.io/R-data-viz/data-visualization-with-ggplot2.html): chapter 1
 - R for Data Science: [Chapter 28: Graphics for communication](https://r4ds.had.co.nz/graphics-for-communication.html)
 
 ---
