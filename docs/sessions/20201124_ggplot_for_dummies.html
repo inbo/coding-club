@@ -84,7 +84,7 @@ class: left, middle
 
 # Download data and code
 
-Instead of downloading the files manually we have a new inborutils function called `setup_codingclub_session()`. If you have not used this function yet, restart your R session and update the inborutils package by running:
+Instead of downloading the files manually we have a new `inborutils` function called `setup_codingclub_session()`. If you have not used this function yet, restart your R session and update the `inborutils` package by running:
 
 ```r
 if (!"remotes" %in% rownames(installed.packages())) {
@@ -112,12 +112,12 @@ class: left, middle
 
 # Challenge 1
 
-Give a look to the [`CO2` dataset](https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/CO2)
+Give a look at the [`CO2` dataset](https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/CO2)
 
 1. Plot `uptake` as function of `conc` using points
 2. Distinguish by `Treatment` using points with different colors
 3. and different shapes for `Type`
-4. Change the y label to "CO2 uptake"
+4. Change the y-axis label to "CO2 uptake"
 5. Add a title to the graph, e.g. "Cold tolerance of the grass species Echinochloa crus-galli"
 6. Use a logarithmic scale for the concentration
 7. Set colors to "blue" for chilled plants and "indian red" for nonchilled
@@ -154,7 +154,7 @@ class: left, middle
 ggplot(CO2, aes(x = conc, y = uptake, color = "green", alpha = 0.1)) +
   geom_point()
 ```
-2. With so many points is hard to see the effect of `treatment` or `type` on `uptake`, isn't? A box plot ( `geom_boxplot()`) could help, but what's gone wrong with this code? The x , `conc`, doesn't make any sense. How to solve it?
+2. With so many points it is hard to see the effect of `treatment` or `type` on `uptake`? A box plot ( `geom_boxplot()`) could help, but what's gone wrong with this code? The x , `conc`, doesn't make any sense. How to solve it?
 ```
 ggplot(CO2, aes(x = conc, y = uptake, color = Treatment)) +
   geom_boxplot()
@@ -166,7 +166,7 @@ class: left, middle
 
 # Challenge 3A
 
-Sometimes using colors, shapes, etc. is not sufficient: you would like to split data in a grid of subplots to ease interpretation. How to modify the code in the R script to show data of each plant apart forming a grid of 12 subplots as shown below?
+Sometimes using colors, shapes, etc. is not sufficient: you would like to split data in a grid of subplots to ease interpretation. How to modify the code in the R script to show data of each plant forming a grid of 12 subplots as shown below?
 
 ![:scale 115%]({{ site.baseurl}}/assets/images/20201124/20201124_challenge3_facets.png)
 
@@ -176,7 +176,7 @@ class: left, middle
 
 # Challenge 3B
 
-Let's use `area_biotopes` dataset! The plot on the left is unreadable (see code in R script). The plot on the right is much better, isn't? Try to get something similar* or even better!
+Let's use the `area_biotopes` dataset! The plot on the left is unreadable (see code in R script). The plot on the right is much better, isn't it? Try to get something similar* or even better!
 
 ![:scale 120%]({{ site.baseurl}}/assets/images/20201124/20201124_challenge3_biotopes.png)
 
