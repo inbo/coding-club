@@ -154,7 +154,7 @@ class: left, middle
 ggplot(CO2, aes(x = conc, y = uptake, color = "green", alpha = 0.1)) +
   geom_point()
 ```
-2. With so many points it is hard to see the effect of `treatment` or `type` on `uptake`? A box plot ( `geom_boxplot()`) could help, but what's gone wrong with this code? The x , `conc`, doesn't make any sense. How to solve it?
+2. With so many points it is hard to see the effect of `treatment` or `type` on `uptake`. A box plot ( `geom_boxplot()`) could help, but what's gone wrong with this code? The x , `conc`, doesn't make any sense. How to solve it?
 ```
 ggplot(CO2, aes(x = conc, y = uptake, color = Treatment)) +
   geom_boxplot()
