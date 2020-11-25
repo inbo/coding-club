@@ -22,18 +22,25 @@ ggplot(CO2, aes(x = conc, y = uptake, color = Treatment, shape = Type)) +
   ylab("C02 uptake") +
   ggtitle("cold tolerance of the grass species Echinochloa crus-galli")
 
+#' You can maybe opt for labs() if you want to change multiple labels/titles
+ggplot(CO2, aes(x = conc, y = uptake, color = Treatment, shape = Type)) +
+  geom_point() +
+  labs(y = "C02 uptake",
+       title = "cold tolerance of the grass species Echinochloa crus-galli")
+
+
 #' Use a logarithmic scale for the concentration
 ggplot(CO2, aes(x = conc, y = uptake, color = Treatment, shape = Type)) +
   geom_point() +
-  ylab("C02 uptake") +
-  ggtitle("cold tolerance of the grass species Echinochloa crus-galli") +
+  labs(y = "C02 uptake",
+       title = "cold tolerance of the grass species Echinochloa crus-galli") +
   scale_x_log10()
 
 #' Set colors to "blue" for chilled plants and "indian red" for nonchilled
 ggplot(CO2, aes(x = conc, y = uptake, color = Treatment, shape = Type)) +
   geom_point() +
-  ylab("C02 uptake") +
-  ggtitle("cold tolerance of the grass species Echinochloa crus-galli") +
+  labs(y = "C02 uptake",
+       title = "cold tolerance of the grass species Echinochloa crus-galli") +
   scale_x_log10() +
   # use a "named vector" to avoid that order plays a role in color choice
   scale_color_manual(values = c("chilled" = "blue",
@@ -110,7 +117,7 @@ ggplot(CO2, aes(x = conc, y = uptake, color = Treatment)) +
 
 #' SOLUTION 1
 #' Make a factor of concentration (conc) via as.factor()
-#' Notice that conc is now returned as factor so valeus are equally spaced
+#' Notice that conc is now returned as factor so values are equally spaced
 ggplot(CO2, aes(x = as.factor(conc), y = uptake, color = Treatment)) +
   geom_boxplot()
 
