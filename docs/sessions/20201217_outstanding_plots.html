@@ -1,0 +1,171 @@
+---
+layout: presentation
+title: Oustanding plots: ggplot and beyond
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 17 DECEMBER 2020
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Exclusively on INBOflix
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20201217/20201217_badge_ggplot_and_beyond.png)
+
+---
+class: left, middle
+
+## Recap: what did I learn during the last coding club?
+
+1. The ggplot recipe: <strong>data - mapping - geometry</strong>
+2. Mapping can be defined in the geometry
+3. The most important mapping argument? **aes**thetics!
+4. Put all arguments which require variables (= columns) in `aes()`, all other arguments outside in the geomtry
+
+---
+class: center, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20201124/20201124_cheat_sheet_ggplot.png)
+[Download cheatsheet here](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20180522_cheat_sheet_ggplot2.pdf)
+
+---
+class: center, middle
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+<br> No yellow sticky notes online :-( We use hackmd (see next slide) but basic principle doesn't change.
+
+---
+class: center, middle
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/@damianooldoni/Sya032s9P/edit
+
+<iframe src="https://hackmd.io/@damianooldoni/Sya032s9P/edit" height="400px" width="800px"></iframe>
+
+---
+class: left, middle
+
+## Load the required packages
+
+```
+library(tidyverse)
+```
+
+---
+class: left, middle
+
+# Download data and code
+
+Instead of downloading the files manually we have a new `inborutils` function called `setup_codingclub_session()`. If you have not used this function yet, restart your R session and update the `inborutils` package by running:
+
+```r
+if (!"remotes" %in% rownames(installed.packages())) {
+  install.packages("remotes")
+}
+remotes::install_github("inbo/inborutils")
+```
+
+To download the coding club material of today, just run `setup_codingclub_session()`. In general, you can use the date in "YYYYMMDD" format , e.g. `setup_codingclub_session("20201027")`, to download the coding club material of October, 27. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).
+
+Of course, you can still download [data](https://github.com/inbo/coding-club/blob/master/data/20201124/) and [scripts](https://github.com/inbo/coding-club/blob/master/src/20201124/) manually*!
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, middle
+
+# The ggplot recipe: data - mapping - geometry
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20201124/20201124_ggplot_recipe.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, middle
+
+# Challenge 1. colors
+
+- https://cran.r-project.org/web/packages/yarrr/vignettes/piratepal.html
+- ggsci
+
+---
+class: left, middle
+
+## Intermezzo
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, middle
+
+# Challenge 2
+
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3
+
+
+---
+class: left, middle
+
+# Bonus challenge
+
+
+---
+class: left, middle
+
+## Resources
+
+- `ggplot2` website: https://ggplot2.tidyverse.org/
+- Commented solutions will be available soon
+- THE BOOK: [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
+- Blogpost about colorblindness and how taking care of it in your plots: https://www.datanovia.com/en/blog/how-to-stimulate-colorblindness-vision-in-r-figures
+- Handy tutorial with some tricks about colors in ggplot2: https://www.datanovia.com/en/blog/ggplot-colors-best-tricks-you-will-love/
+- Rate your visualization using the Stephanie Evergreen's [data visualizaion checklist](https://stephanieevergreen.com/data-visualization-checklist/)
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: online <br>
+Date: __17/12/2020__, van 10:00 tot 12:00<br>
+Subject: ggplot and more: how to make outstanding plots
+(registration announced via DG_useR@inbo.be)
