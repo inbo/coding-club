@@ -45,7 +45,7 @@ class: left, middle
 ---
 class: center, middle
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20201124/20201124_cheat_sheet_ggplot.png)
+![:scale 100%]({{ site.baseurl}}/assets/images/20201217/20201217_cheat_sheet_ggplot.png)
 [Download cheatsheet here](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20180522_cheat_sheet_ggplot2.pdf)
 
 ---
@@ -82,6 +82,7 @@ class: left, middle
 
 ```
 library(tidyverse)
+library(viridis)
 ```
 
 ---
@@ -100,7 +101,7 @@ remotes::install_github("inbo/inborutils")
 
 To download the coding club material of today, just run `setup_codingclub_session()`. In general, you can use the date in "YYYYMMDD" format , e.g. `setup_codingclub_session("20201027")`, to download the coding club material of October, 27. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).
 
-Of course, you can still download [data](https://github.com/inbo/coding-club/blob/master/data/20201124/) and [scripts](https://github.com/inbo/coding-club/blob/master/src/20201124/) manually*!
+Of course, you can still download [data](https://github.com/inbo/coding-club/blob/master/data/20201217/) and [scripts](https://github.com/inbo/coding-club/blob/master/src/20201217/) manually*!
 
 <small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
@@ -109,7 +110,16 @@ class: left, middle
 
 # The ggplot recipe: data - mapping - geometry
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20201124/20201124_ggplot_recipe.png)
+![:scale 90%]({{ site.baseurl}}/assets/images/20201217/20201217_ggplot_recipe.png)
+
+---
+class: left, middle
+
+# Uesr cases
+
+Today we will work on two usercases (`usercase1`, `usercase2`). Run introductory section in R script to make them.
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20201217/20201217_usercases.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -117,14 +127,36 @@ class: left, middle
 
 # Challenge 1. colors
 
-- https://cran.r-project.org/web/packages/yarrr/vignettes/piratepal.html
-- ggsci
+1. A palette is nothing more than a character vector of colors. Create your own 4-color palette with [color picker](http://tristen.ca/hcl-picker/). Example: https://tristen.ca/hcl-picker/#/clh/4/1/3F2119/EEBEA2.
+
+2. How to apply it to user case 1?
+
+3. How to apply it to user case 2?
 
 ---
 class: left, middle
 
 ## Intermezzo
 
+A color palette should be:
+1. printer-friendly (gray scale)
+2. perceptually
+uniform
+3. easy to read by those with colorblindness.
+
+All of this can be found in the [viridis palette](https://www.r-bloggers.com/2018/07/ggplot2-welcome-viridis/) which avoids the red and to go from blue to yellow passing through green (viridis: green in Latin).
+
+And do you know you can simulate several cases of colorblindness by using `dichromat`? More on this [viridis blogpost](https://www.r-bloggers.com/2018/07/ggplot2-welcome-viridis/).
+
+```
+library(purrr)
+with_palette(
+  compose(
+    partial(dichromat, type = "deutan"),
+    jet.colors
+    )
+)
+```
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -132,7 +164,12 @@ class: left, middle
 
 # Challenge 2
 
+`ggplot2` includes some functions to use viridis palette directly.
 
+1. How to apply viridis discrete color scale to user case 1?
+2. How to apply viridis continuous color scale to user case 2?
+3. Invert the color direction. Note: typically inverted color directions are less intuitive
+4. Use colormap "cividis" instead of default ("viridis")
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -146,6 +183,11 @@ class: left, middle
 
 # Bonus challenge
 
+ggplot functions `scale_color_brewer()` and `scale_fill_brewer()` allows you to use the brewer color palettes, which are also very nice and satisfy the criteria mentioned above.
+1. Which _type_ should you use for better distinguishing different biotopes of user case 1? How to specify a specific palette instead of the default one? Tip: the a-z of rcolorbrewer palette](https://www.datanovia.com/en/blog/the-a-z-of-rcolorbrewer-palette/#display-all-brewer-palettes)
+2. You could think that `scale_fill_brewer()` would allow you to do the same for user case 2. But you get this error below. How to solve it?
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20201217/20201217_error_scale_fill_brewer.png)
 
 ---
 class: left, middle
@@ -155,6 +197,7 @@ class: left, middle
 - `ggplot2` website: https://ggplot2.tidyverse.org/
 - Commented solutions will be available soon
 - THE BOOK: [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
+- Talk about [color theory and the viridis palette](https://www.youtube.com/watch?v=xAoljeRJ3lU] at SciPy 2015
 - Blogpost about colorblindness and how taking care of it in your plots: https://www.datanovia.com/en/blog/how-to-stimulate-colorblindness-vision-in-r-figures
 - Handy tutorial with some tricks about colors in ggplot2: https://www.datanovia.com/en/blog/ggplot-colors-best-tricks-you-will-love/
 - Rate your visualization using the Stephanie Evergreen's [data visualizaion checklist](https://stephanieevergreen.com/data-visualization-checklist/)
