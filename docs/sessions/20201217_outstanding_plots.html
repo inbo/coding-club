@@ -1,6 +1,6 @@
 ---
 layout: presentation
-title: Oustanding plots: ggplot and beyond
+title: Make oustanding plots
 ---
 
 class: center, middle
@@ -37,10 +37,34 @@ class: left, middle
 
 ## Recap: what did I learn during the last coding club?
 
-1. The ggplot recipe: <strong>data - mapping - geometry</strong>
-2. Mapping can be defined in the geometry
-3. The most important mapping argument? **aes**thetics!
-4. Put all arguments which require variables (= columns) in `aes()`, all other arguments outside in the geomtry
+The ggplot recipe: <strong>data - mapping - geometry</strong>
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20201217/20201217_ggplot_recipe.png)
+
+---
+class: left, middle
+
+## Recap: what did I learn during the last coding club?
+
+1. Mapping can be defined in the geometry
+2. The most important mapping argument? **aes**thetics!
+3. Put all arguments which require variables (= columns) in `aes()`, all other arguments outside in the geomtry
+
+Example:
+
+```r
+# Color depends on Treatment, shape on Type
+ggplot(CO2) +
+  geom_point(aes(x = conc,
+                 y = uptake,
+                 color = Treatment,
+                 shape = Type))
+
+# All points are black and hollow
+ggplot(CO2) +
+    geom_point(aes(x = conc, y = uptake),
+               color = "black", shape = 1)
+```
 
 ---
 class: center, middle
@@ -71,9 +95,9 @@ class: center, middle
 ### Share your code during the coding session!
 
 <!-- Create a new hackmd file and replace this link (twice!) -->
-Go to https://hackmd.io/@damianooldoni/Sya032s9P/edit
+Go to https://hackmd.io/SEuVG7pURQmvUGVjeXOrLA?edit
 
-<iframe src="https://hackmd.io/@damianooldoni/Sya032s9P/edit" height="400px" width="800px"></iframe>
+<iframe src="https://hackmd.io/SEuVG7pURQmvUGVjeXOrLA?edit" height="400px" width="800px"></iframe>
 
 ---
 class: left, middle
@@ -83,6 +107,8 @@ class: left, middle
 ```
 library(tidyverse)
 library(viridis)
+library(plotly)
+library(gganimate)
 ```
 
 ---
@@ -108,24 +134,17 @@ Of course, you can still download [data](https://github.com/inbo/coding-club/blo
 ---
 class: left, middle
 
-# The ggplot recipe: data - mapping - geometry
+# User cases
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20201217/20201217_ggplot_recipe.png)
+Today we will basically work on two usercases (`usercase1`, `usercase2`). Run introductory section in R script to create them. You should end up with two plots as shown below (left: `usercase1`, right: `usercase2`).
 
----
-class: left, middle
-
-# Uesr cases
-
-Today we will work on two usercases (`usercase1`, `usercase2`). Run introductory section in R script to make them.
-
-![:scale 80%]({{ site.baseurl}}/assets/images/20201217/20201217_usercases.png)
+![:scale 120%]({{ site.baseurl}}/assets/images/20201217/20201217_usercases.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
 class: left, middle
 
-# Challenge 1. colors
+# Challenge 1. Color palettes
 
 1. A palette is nothing more than a character vector of colors. Create your own 4-color palette with [color picker](http://tristen.ca/hcl-picker/). Example: https://tristen.ca/hcl-picker/#/clh/4/1/3F2119/EEBEA2.
 
@@ -136,7 +155,7 @@ class: left, middle
 ---
 class: left, middle
 
-## Intermezzo
+## Intermezzo. The prerequisites of a color palette
 
 A color palette should be:
 1. printer-friendly (gray scale)
@@ -144,19 +163,11 @@ A color palette should be:
 uniform
 3. easy to read by those with colorblindness.
 
-All of this can be found in the [viridis palette](https://www.r-bloggers.com/2018/07/ggplot2-welcome-viridis/) which avoids the red and to go from blue to yellow passing through green (viridis: green in Latin).
+All of this can be found in the [viridis palette](https://www.r-bloggers.com/2018/07/ggplot2-welcome-viridis/) which avoids the red and goes from blue to yellow passing through green (viridis: _green_ in Latin).
 
-And do you know you can simulate several cases of colorblindness by using `dichromat`? More on this [viridis blogpost](https://www.r-bloggers.com/2018/07/ggplot2-welcome-viridis/).
+And do you know you can simulate several cases of colorblindness (protanopia, deuteranopia, and tritanopia) by using `dichromat` package? More on this [viridis blogpost](https://www.r-bloggers.com/2018/07/ggplot2-welcome-viridis/).
 
-```
-library(purrr)
-with_palette(
-  compose(
-    partial(dichromat, type = "deutan"),
-    jet.colors
-    )
-)
-```
+Another great tool for simulating color blindness is the [`colorblindr` R package](https://www.datanovia.com/en/blog/how-to-stimulate-colorblindness-vision-in-r-figures/).
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -166,17 +177,35 @@ class: left, middle
 
 `ggplot2` includes some functions to use viridis palette directly.
 
-1. How to apply viridis discrete color scale to user case 1?
-2. How to apply viridis continuous color scale to user case 2?
+1. How to apply viridis **discrete** color scale to user case 1?
+2. How to apply viridis **continuous** color scale to user case 2?
 3. Invert the color direction. Note: typically inverted color directions are less intuitive
-4. Use colormap "cividis" instead of default ("viridis")
+4. Use colormap `"cividis"` instead of default (`"viridis"`)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, middle
 
-# Challenge 3
+# Challenge 3A. Interactive plots
 
+1. Make interactive plots of user case 1 and 2 using `plotly` package. Tip: follow this nice [plotly tutorial](https://www.musgraveanalytics.com/blog/2018/8/24/how-to-make-ggplot2-charts-interactive-with-plotly)
+2. How to personalize the text displayed while hovering on the tiles of user case 2? Tip: same tutorial mentioned above or google it
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20201217/20201217_interactive_heatmap.png)
+
+---
+class: left, middle
+
+# Challenge 3B. Animated plots
+
+By making an animation plot you can see the evolution of the average covered area over time from 2000 to 2018. See example below created by using the [gganimate](https://gganimate.com/articles/gganimate.html) package. Some guidelines:
+
+1. Make a basic animation plot and set year in the title
+2. Improve [entering and exiting](https://gganimate.com/articles/gganimate.html#enter-and-exit) among states
+3. Save the animation as gif and set width - height to 800-550 pixels
+4. If you hate gifs you can save the animation as a mp4 video ([ffmpeg executable](https://www.wikihow.com/Install-FFmpeg-on-Windows) needed)
+
+![:scale 70%]({{ site.baseurl}}/assets/images/20201217/20201217_animation_heatmap_biotopes.gif)
 
 ---
 class: left, middle
@@ -184,10 +213,20 @@ class: left, middle
 # Bonus challenge
 
 ggplot functions `scale_color_brewer()` and `scale_fill_brewer()` allows you to use the brewer color palettes, which are also very nice and satisfy the criteria mentioned above.
-1. Which _type_ should you use for better distinguishing different biotopes of user case 1? How to specify a specific palette instead of the default one? Tip: the a-z of rcolorbrewer palette](https://www.datanovia.com/en/blog/the-a-z-of-rcolorbrewer-palette/#display-all-brewer-palettes)
-2. You could think that `scale_fill_brewer()` would allow you to do the same for user case 2. But you get this error below. How to solve it?
+
+1. Which _type_ should you use for better distinguishing different biotopes of user case 1? How to specify a specific palette instead of the default one? Tip: give a look to the blogpost [*The a-z of RcolorBrewer palette*](https://www.datanovia.com/en/blog/the-a-z-of-rcolorbrewer-palette/#display-all-brewer-palettes)
+
+2. You could think that `scale_fill_brewer()` would allow you to do the same for user case 2. But you get this error below. How to solve it? Tip: load `RColorBrewer` pacakge and give a look to the blogpost mentioned above
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20201217/20201217_error_scale_fill_brewer.png)
+
+---
+class: left, middle
+
+
+# Bonus challenge 2
+
+It's almost Christmas. Let's celebrate it with a gift: the [data visualization checklist](https://stephanieevergreen.com/data-visualization-checklist/) of Stephanie Evergreen! Do your plots pass all these tests? ;-)
 
 ---
 class: left, middle
@@ -197,10 +236,47 @@ class: left, middle
 - `ggplot2` website: https://ggplot2.tidyverse.org/
 - Commented solutions will be available soon
 - THE BOOK: [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
-- Talk about [color theory and the viridis palette](https://www.youtube.com/watch?v=xAoljeRJ3lU] at SciPy 2015
+- Talk about [color theory and the viridis palette](https://www.youtube.com/watch?v=xAoljeRJ3lU) at SciPy 2015
 - Blogpost about colorblindness and how taking care of it in your plots: https://www.datanovia.com/en/blog/how-to-stimulate-colorblindness-vision-in-r-figures
 - Handy tutorial with some tricks about colors in ggplot2: https://www.datanovia.com/en/blog/ggplot-colors-best-tricks-you-will-love/
 - Rate your visualization using the Stephanie Evergreen's [data visualizaion checklist](https://stephanieevergreen.com/data-visualization-checklist/)
+- Tutorial about using [plotly package](https://www.musgraveanalytics.com/blog/2018/8/24/how-to-make-ggplot2-charts-interactive-with-plotly) for making interactive plots
+- [gganimate online documentation](https://gganimate.com/articles/gganimate.html) to *animate* your plots
+
+---
+class: center, middle
+
+# Questionnaire
+
+It is never too late for filling the (very short) [INBO coding club questionnaire](https://forms.gle/gy9LV2KrBfYaLbMLA).
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+---
+class: left, middle
+
+```r
+> library(cowsay)
+> cowsay::say(what = "Merry Christmas and Happy New Year!",
+              by = "egret")
+
+ -----
+Merry Christmas and Happy New Year!
+ ------
+    \
+     \
+      \
+       \   _,
+      -==<' `
+          ) /
+         / (_.
+        |  ,-,`\
+         \\   \ \
+          `\,  \ \
+           ||\  \`|,
+ jgs      _|| `=`-'
+         ~~`~`
+```
 
 ---
 class: center, middle
@@ -208,7 +284,7 @@ class: center, middle
 ![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
 
 <!--  Adjust the room and date  -->
-Room: online <br>
-Date: __17/12/2020__, van 10:00 tot 12:00<br>
-Subject: ggplot and more: how to make outstanding plots
+Room: 01.05 - Isala Van Diest(?)<br>
+Date: __26/01/2021__, van 10:00 tot 12:00<br>
+Subject: `inbodb`: INBO databases in R <br>
 (registration announced via DG_useR@inbo.be)
