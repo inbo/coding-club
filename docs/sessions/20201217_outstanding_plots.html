@@ -205,7 +205,7 @@ class: left, middle
 By making an animation plot you can see the evolution of the average covered area over time from 2000 to 2018. See example below created by using the [gganimate](https://gganimate.com/articles/gganimate.html) package. Some guidelines:
 
 1. Make a basic animation plot and set year in the title
-2. Improve [entering and exiting](https://gganimate.com/articles/gganimate.html#enter-and-exit) among states
+2. Use `animate()` to render the animated graphic and use sensible settings for `nframes` and `fps` parameters
 3. Save the animation as gif and set width - height to 800-550 pixels
 4. If you hate gifs you can save the animation as a mp4 video ([ffmpeg executable](https://www.wikihow.com/Install-FFmpeg-on-Windows) needed)
 
