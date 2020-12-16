@@ -109,6 +109,10 @@ library(tidyverse)
 library(viridis)
 library(plotly)
 library(gganimate)
+
+library(patchwork) # for bonus challenge 1
+library(RcolorBrewer) # for bonus challenge 2
+
 ```
 
 ---
@@ -210,7 +214,17 @@ By making an animation plot you can see the evolution of the average covered are
 ---
 class: left, middle
 
-# Bonus challenge
+# Bonus challenge 1
+
+1. Use the `patchwork` package to arrange usercase1 and usercase3 side by side, and above usercase2
+
+2. Improve the patchwork by collecting all legends to the right (and in one go also remove duplicated legends)
+
+
+---
+class: left, middle
+
+# Bonus challenge 2
 
 ggplot functions `scale_color_brewer()` and `scale_fill_brewer()` allow you to use the brewer color palettes, which are also very nice and satisfy the criteria mentioned above.
 
@@ -218,13 +232,13 @@ ggplot functions `scale_color_brewer()` and `scale_fill_brewer()` allow you to u
 
 2. You could think that `scale_fill_brewer()` would allow you to do the same for `usercase2`. But you get this error below. How to solve it? Tip: load `RColorBrewer` pacakge and take a look at the blogpost mentioned above.
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20201217/20201217_error_scale_fill_brewer.png)
+    ![:scale 50%]({{ site.baseurl}}/assets/images/20201217/20201217_error_scale_fill_brewer.png)
 
 ---
 class: left, middle
 
 
-# Bonus challenge 2
+# Bonus challenge 3
 
 It's almost Christmas. Let's celebrate it with a gift: the [data visualization checklist](https://stephanieevergreen.com/data-visualization-checklist/) of Stephanie Evergreen! Do your plots pass all these tests? ;-)
 
