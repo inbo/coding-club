@@ -48,7 +48,7 @@ class: left, middle
 
 1. Mapping can be defined in the geometry
 2. The most important mapping argument? **aes**thetics!
-3. Put all arguments which require variables (= columns) in `aes()`, all other arguments outside in the geomtry
+3. Put all arguments which require variables (= columns) in `aes()`, all other arguments outside in the geometry
 
 Example:
 
@@ -134,9 +134,9 @@ Of course, you can still download [data](https://github.com/inbo/coding-club/blo
 ---
 class: left, middle
 
-# User cases
+# useR cases
 
-Today we will basically work on two usercases (`usercase1`, `usercase2`). Run introductory section in R script to create them. You should end up with two plots as shown below (left: `usercase1`, right: `usercase2`).
+Today we will basically work on two useR cases (`usercase1`, `usercase2`). Run introductory section in R script to create them. You should end up with two plots as shown below (left: `usercase1`, right: `usercase2`).
 
 ![:scale 120%]({{ site.baseurl}}/assets/images/20201217/20201217_usercases.png)
 
@@ -148,9 +148,9 @@ class: left, middle
 
 1. A palette is nothing more than a character vector of colors. Create your own 4-color palette with [color picker](http://tristen.ca/hcl-picker/). Example: https://tristen.ca/hcl-picker/#/clh/4/1/3F2119/EEBEA2.
 
-2. How to apply it to user case 1?
+2. How to apply it to `usercase1`?
 
-3. How to apply it to user case 2?
+3. How to apply it to `usercase2`?
 
 ---
 class: left, middle
@@ -177,8 +177,8 @@ class: left, middle
 
 `ggplot2` includes some functions to use viridis palette directly.
 
-1. How to apply viridis **discrete** color scale to user case 1?
-2. How to apply viridis **continuous** color scale to user case 2?
+1. How to apply viridis **discrete** color scale to `usercase1`?
+2. How to apply viridis **continuous** color scale to `usercase2`?
 3. Invert the color direction. Note: typically inverted color directions are less intuitive
 4. Use colormap `"cividis"` instead of default (`"viridis"`)
 
@@ -188,8 +188,8 @@ class: left, middle
 
 # Challenge 3A. Interactive plots
 
-1. Make interactive plots of user case 1 and 2 using `plotly` package. Tip: follow this nice [plotly tutorial](https://www.musgraveanalytics.com/blog/2018/8/24/how-to-make-ggplot2-charts-interactive-with-plotly)
-2. How to personalize the text displayed while hovering on the tiles of user case 2? Tip: same tutorial mentioned above or google it
+1. Make interactive plots of `usercase1` and `usercase2` using `plotly` package. Tip: follow this nice [plotly tutorial](https://www.musgraveanalytics.com/blog/2018/8/24/how-to-make-ggplot2-charts-interactive-with-plotly)
+2. How to personalize the text displayed while hovering on the tiles of `usercase2`? Tip: same tutorial mentioned above or google it.
 
 ![:scale 80%]({{ site.baseurl}}/assets/images/20201217/20201217_interactive_heatmap.png)
 
@@ -212,11 +212,11 @@ class: left, middle
 
 # Bonus challenge
 
-ggplot functions `scale_color_brewer()` and `scale_fill_brewer()` allows you to use the brewer color palettes, which are also very nice and satisfy the criteria mentioned above.
+ggplot functions `scale_color_brewer()` and `scale_fill_brewer()` allow you to use the brewer color palettes, which are also very nice and satisfy the criteria mentioned above.
 
-1. Which _type_ should you use for better distinguishing different biotopes of user case 1? How to specify a specific palette instead of the default one? Tip: give a look to the blogpost [*The a-z of RcolorBrewer palette*](https://www.datanovia.com/en/blog/the-a-z-of-rcolorbrewer-palette/#display-all-brewer-palettes)
+1. Which _type_ should you use for better distinguishing different biotopes of `usercase1`? How to specify a specific palette instead of the default one? Tip: take a look at the blogpost [*The a-z of RcolorBrewer palette*](https://www.datanovia.com/en/blog/the-a-z-of-rcolorbrewer-palette/#display-all-brewer-palettes)
 
-2. You could think that `scale_fill_brewer()` would allow you to do the same for user case 2. But you get this error below. How to solve it? Tip: load `RColorBrewer` pacakge and give a look to the blogpost mentioned above
+2. You could think that `scale_fill_brewer()` would allow you to do the same for `usercase2`. But you get this error below. How to solve it? Tip: load `RColorBrewer` pacakge and take a look at the blogpost mentioned above.
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20201217/20201217_error_scale_fill_brewer.png)
 
@@ -233,13 +233,15 @@ class: left, middle
 
 ## Resources
 
-- `ggplot2` website: https://ggplot2.tidyverse.org/
 - Commented solutions will be available soon
+- `ggplot2` website: https://ggplot2.tidyverse.org/
+- [`ggplot2` extension packages gallery](https://exts.ggplot2.tidyverse.org/gallery/)
+- [intuitive arranging of multiple plots with the patchwork package](https://cran.r-project.org/web/packages/patchwork/index.html)
 - THE BOOK: [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
 - Talk about [color theory and the viridis palette](https://www.youtube.com/watch?v=xAoljeRJ3lU) at SciPy 2015
 - Blogpost about colorblindness and how taking care of it in your plots: https://www.datanovia.com/en/blog/how-to-stimulate-colorblindness-vision-in-r-figures
 - Handy tutorial with some tricks about colors in ggplot2: https://www.datanovia.com/en/blog/ggplot-colors-best-tricks-you-will-love/
-- Rate your visualization using the Stephanie Evergreen's [data visualizaion checklist](https://stephanieevergreen.com/data-visualization-checklist/)
+- Rate your visualization using Stephanie Evergreen's [data visualizaion checklist](https://stephanieevergreen.com/data-visualization-checklist/)
 - Tutorial about using [plotly package](https://www.musgraveanalytics.com/blog/2018/8/24/how-to-make-ggplot2-charts-interactive-with-plotly) for making interactive plots
 - [gganimate online documentation](https://gganimate.com/articles/gganimate.html) to *animate* your plots
 
@@ -248,7 +250,7 @@ class: center, middle
 
 # Questionnaire
 
-It is never too late for filling the (very short) [INBO coding club questionnaire](https://forms.gle/gy9LV2KrBfYaLbMLA).
+It is never too late for filling out the (very short) [INBO coding club questionnaire](https://forms.gle/gy9LV2KrBfYaLbMLA).
 
 ![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
 
