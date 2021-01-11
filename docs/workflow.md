@@ -12,7 +12,7 @@
 
 *   Define a topic (e.g. "_data wrangling_",...) and the level (introductory, intermediate or advanced). Provide this information to the session info in this sheet.
 *   Create a new column [in the subscription table](https://docs.google.com/spreadsheets/d/1D80p7lxLUnWUxEkTIYOMhhYdL39kZOKgKmLOXsr4HGM/edit) and provide subscription/waiting list as function of the room space availability
-*   Sent out an invitation mail to dg_user@inbo.be AND all email addresses listed on the [external_invites sheet of the subscription sheets](https://docs.google.com/spreadsheets/d/1D80p7lxLUnWUxEkTIYOMhhYdL39kZOKgKmLOXsr4HGM/edit). Introduce the topic, the complexity level and add a link to the subscription table. Add the [coding club logo]({{ site.baseurl }}{% link /assets/images/coding_club_logo_1.png %}) to the mail.
+*   Sent out an invitation mail to dg_user@inbo.be AND all email addresses listed on the [external_invites sheet of the subscription sheets](https://docs.google.com/spreadsheets/d/1D80p7lxLUnWUxEkTIYOMhhYdL39kZOKgKmLOXsr4HGM/edit#gid=337239598). Introduce the topic, the complexity level and add a link to the subscription table. Add the [coding club logo]({{ site.baseurl }}{% link /assets/images/coding_club_logo_1.png %}) to the mail.
 
 #### Within 1 week before coding club
 
