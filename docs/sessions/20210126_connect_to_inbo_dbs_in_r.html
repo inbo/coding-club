@@ -59,6 +59,14 @@ class: left, middle
 ---
 class: left, middle
 
+No cheatsheet, but a well-written [INBO tutorial](https://inbo.github.io/tutorials/tutorials/r_database_access/) is available, yeah!
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210126/20210126_tutorial_INBO_database_access_in_r.png)
+
+<>
+---
+class: left, middle
+
 ## `watina` package
 
 1. Connect to watina database
@@ -98,6 +106,13 @@ Go to https://hackmd.io/SEuVG7pURQmvUGVjeXOrLA?edit
 
 ---
 class: left, middle
+
+## Install the required packages
+
+Follow the
+
+- [inbodb installation instructions](https://inbo.github.io/inbodb/#installation)
+- [watina installation instructions](https://inbo.github.io/watina/index.html#installing-testing-and-using-the-watina-package)
 
 ## Load the required packages
 
@@ -139,7 +154,17 @@ class: left, middle
 
 # Challenge 1
 
-Work in progress...
+1. (Install and) load the `inbodb` and the `watina` package
+2. Use the `connect_inbo_dbase` function from the inbodb package to connect to the databases `D0021_00_userFlora`(FLORABANK) and `D0010_00_Cydonia` (INBOVEG)
+
+---
+class: left, middle
+
+# Intermezzo: the RStudio Connections pane
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210126/20210126_rstudio_connection_pane.png)
+
+<small>Image from [RStudio Connections pane article](https://db.rstudio.com/rstudio/connections/)</small>
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -172,6 +197,7 @@ class: left, middle
 
 - [inbodb package documentation](https://inbo.github.io/inbodb/index.html)
 - [watina package documentation](https://inbo.github.io/watina/index.html). Check also the section with very useful articles
+- the evergreen INBO tutorial about [reading data from INBO databases in R](https://inbo.github.io/tutorials/tutorials/r_database_access/)
 
 ---
 class: center, middle
