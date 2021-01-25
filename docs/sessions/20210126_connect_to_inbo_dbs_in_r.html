@@ -165,14 +165,14 @@ class: left, middle
 
 2. Still using the RStudio connection pane, find the type of the columns of (one of the) tables in 1, e.g. *char*acter, *int*eger
 
-3. what type `bit` stands for? Tip: check e.g. the values contained in column `CURRENT_IND` of table `DimChemVar` opened in 1
+3. What type does `bit` stand for? Tip: check e.g. the values contained in column `CURRENT_IND` of table `DimChemVar` opened in 1
 
 ---
 class: left, middle
 
-# Intermezzo 1: R is lazy... so we are
+# Intermezzo 1: R is lazy... so are we
 
-Let's get the locations from watina database using watina function `get_locs(watina)`. But why do you get an error if you tyr to save them in a text format (e.g. csv)?
+Let us get the locations from watina database using watina function `get_locs(watina)`. Why do you get an error if you try to save them in a text format (e.g. csv)?
 
 ```r
 locations <- get_locs(watina)
@@ -182,7 +182,7 @@ write_csv(locations)
   is.data.frame(x) is not TRUE
 ```
 
-Is locations not a data.frame???
+Is `locations` not a `data.frame`???
 
 ```r
 class(locations)
@@ -197,11 +197,11 @@ All you have is a table (`tbl`), but most of all, it's a _lazy table_... Welcome
 ---
 class: left, middle
 
-# Intermezzo 1: R is lazy... so we are
+# Intermezzo 1: R is lazy... so are we
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20210126/20210126_lazy_query.png)
 
-`locations` is a SQL query, no data are really loaded on your laptop.
+`locations` is an SQL query, no data are really loaded on your laptop.
 It is like a reference to the result of the query but the full result of the query is not brought into memory.
 
 If you are thinking: _"are you kidding me?"_ Well, try this:
