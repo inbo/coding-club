@@ -162,7 +162,7 @@ write_csv(locations)
   is.data.frame(x) is not TRUE
 ```
 
-Is `locations` not a `data.frame`???
+Is locations not a data.frame???
 
 ```r
 class(locations)
@@ -196,7 +196,7 @@ IMPORTANT: to avoid bad surprises (crashes, out of memory issues), first run you
 ---
 class: left, middle
 
-# Intermezzo 1: R is lazy... so we are
+# Intermezzo 1: R is lazy... so are we
 
 <best-practices-for-working-with-databases-march-2018-edgar-ruiz>![:scale 10%]({{ site.baseurl}}/assets/images/20210126/20210126_mister_lazy.jpg)</center>
 
@@ -210,10 +210,10 @@ multiply_by_2 <- function(a, b) {
 multiply_by_2(number) # no value given to argument b
 ```
 
-`b` is a function argument, but never evaluated, so no error. This is what we mean being **lazy**: doing **the strict minimum** of evaluation*. For this reason lazy evaluation is sometimes referred as _call-by-need_.
+`b` is a function argument, but never evaluated, so no error. This is what we mean by being **lazy**: doing **the strict minimum** of evaluation*. For this reason lazy evaluation is sometimes referred as _call-by-need_.
 
 <small>
-*More about lazy evaluation? Give a look to [this tutorial](https://www.r-bloggers.com/2018/07/about-lazy-evaluation/)... or spend a coffiebreak with Thierry ;-)
+*More about lazy evaluation? Give a look at [this tutorial](https://www.r-bloggers.com/2018/07/about-lazy-evaluation/)... or spend a coffeebreak with Thierry ;-)
 </small>
 
 ---
@@ -223,14 +223,14 @@ class: left, middle
 # Challenge 2
 
 1. Using watina package and always in lazy mode:
-  a. How many area codes exist in watina database?
-  b. select locations from watina database with `area_codes` "KAL", "WES" or "ZAB" and depth range between 2 and 4 meters
+    a. How many area codes exist in watina database?
+    b. select locations from watina database with `area_codes` "KAL", "WES" or "ZAB" and depth range between 2 and 4 meters
 
 2. Using inbodb and florabank database and still being lazy:
-  a. get observations of taxon Erigeron from florabank db:
+    a. get observations of taxon Erigeron from florabank db:
 
-3. Usisng inbodb and inboveg connection and still being lazy:
-  a.search information about survey "ABS-LIM2011":
+3. Using inbodb and inboveg connection and still being lazy:
+    a.search information about survey "ABS-LIM2011":
 
 4. How to collect the data we queried in 1, 2 and 3?
 
@@ -251,7 +251,7 @@ tbl(src = florabank,
     sql(gebogen_kransblad_query))
 ```
 
-But you don't have to be a SQL programmer, thanks to tidyverse!
+But you don't have to be an SQL programmer, thanks to tidyverse!
 
 ```r
 tbl(src = florabank, "tblTaxon") %>%
@@ -319,7 +319,7 @@ class: left, middle
 
 Do you have queries you run very often? Do you have queries where you have to change some arguments manually (e.g. taxon name, location code)?
 
-Add an issue to `inbodb` package and help future-you and your colleagues.
+Add an issue to the `inbodb` package and help future-you and your colleagues.
 
 `inbodb` is not a static thing. It is something we can improve, **TOGETHER!** *
 
@@ -335,7 +335,7 @@ class: left, middle
 
 - [inbodb package documentation](https://inbo.github.io/inbodb/index.html)
 - [watina package documentation](https://inbo.github.io/watina/index.html). Check also the section with very useful articles
-- the wonderful INBO tutorial about [reading data from INBO databases in R](https://inbo.github.io/tutorials/tutorials/r_database_access/): a lot of useful informations in a very human language with a lot of examples. Thanks Stijn, Floris and Els!
+- the wonderful INBO tutorial about [reading data from INBO databases in R](https://inbo.github.io/tutorials/tutorials/r_database_access/): a lot of useful information in a very human language with a lot of examples. Thanks Stijn, Floris and Els!
 - if you prefer webinars, here you are: a [RStudio webinar with demo](https://resources.rstudio.com/webinars/best-practices-for-working-with-databases-march-2018-edgar-ruiz?wvideo=vffitvywy6) about RStudio, R and SQL
 - Very nice tutorial from Data Carpenty: [data management with SQL for ecologists](https://datacarpentry.org/sql-ecology-lesson/) lesson, especially on [queries](https://datacarpentry.org/sql-ecology-lesson/01-sql-basic-queries/index.html) and [aggregations](https://datacarpentry.org/sql-ecology-lesson/02-sql-aggregation/index.html)
 
