@@ -32,6 +32,12 @@ class: center, middle
 <!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
 ![:scale 90%]({{ site.baseurl}}/assets/images/20210126/20210126_badge_connect_to_inbo_db.png)
 
+---
+class: center, middle
+
+# No VPN? No party
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20210126/20210126_20210126_vpn_inbo.png)
 
 ---
 class: left, middle
@@ -59,14 +65,6 @@ class: left, middle
 ---
 class: left, middle
 
-No cheatsheet, but a well-written [INBO tutorial](https://inbo.github.io/tutorials/tutorials/r_database_access/) is available, yeah!
-
-![:scale 100%]({{ site.baseurl}}/assets/images/20210126/20210126_tutorial_INBO_database_access_in_r.png)
-
-<>
----
-class: left, middle
-
 ## `watina` package
 
 1. Connect to watina database
@@ -76,6 +74,13 @@ class: left, middle
 [watina functions](https://inbo.github.io/inbodb/reference/index.html)
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20210126/20210126_functions_watina.png)
+
+---
+class: left, middle
+
+No cheatsheet, but a well-written [INBO tutorial](https://inbo.github.io/tutorials/tutorials/r_database_access/) is available, yeah!
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210126/20210126_tutorial_INBO_database_access_in_r.png)
 
 ---
 class: center, middle
@@ -107,23 +112,6 @@ Go to https://hackmd.io/SEuVG7pURQmvUGVjeXOrLA?edit
 ---
 class: left, middle
 
-## Install the required packages
-
-Follow the
-
-- [inbodb installation instructions](https://inbo.github.io/inbodb/#installation)
-- [watina installation instructions](https://inbo.github.io/watina/index.html#installing-testing-and-using-the-watina-package)
-
-## Load the required packages
-
-```
-library(inbodb)
-library(watina)
-```
-
----
-class: left, middle
-
 # Download data and code
 
 Instead of downloading the files manually we have a new `inborutils` function called `setup_codingclub_session()`. If you have not used this function yet, restart your R session and update the `inborutils` package by running:
@@ -144,9 +132,34 @@ Of course, you can still download [data](https://github.com/inbo/coding-club/blo
 ---
 class: left, middle
 
-# useR cases
+## Challenge 0
 
-in progress...
+1. Log in to INBO VPN
+
+2. Install the required packages, by following the instructions:
+  - [inbodb installation instructions](https://inbo.github.io/inbodb/#installation)
+  - [watina installation instructions](https://inbo.github.io/watina/index.html#installing-testing-and-using-the-watina-package)
+
+3. Load the required packages:
+
+```r
+library(inbodb)
+library(watina)
+```
+
+4. Open connections to databases
+
+```r
+watina <- connect_watina()
+inboveg <- connect_inbo_dbase("D0010_00_Cydonia")
+florabank <- connect_inbo_dbase("D0021_00_userFlora")
+```
+
+5. Did you get this error: `"The 'ODBC Driver for SQL Server' is missing. Please install it or contact your system administrator."` Well, contact ICT helpdesk this afternoon, but now just run this after restarting R (Session -> restart R or Ctrl+Shift+F10):
+
+```r
+remotes::install_github("inbo/inbodb@sos")
+```
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -154,24 +167,87 @@ class: left, middle
 
 # Challenge 1
 
-1. (Install and) load the `inbodb` and the `watina` package
-2. Use the `connect_inbo_dbase` function from the inbodb package to connect to the databases `D0021_00_userFlora`(FLORABANK) and `D0010_00_Cydonia` (INBOVEG)
+1. Find the R connection pane of RStudio and open a view of table `tblTaxon` of florabank (D0021_00_userFlora), table `ivRecording` of INBOVEG (D0010_00_Cydonia) and table `DimChemVar` of watina (W0002_00_Watina). Tips: check [RStudio connection pane documentation](https://db.rstudio.com/rstudio/connections/#connections-pane); tables are under (default) schema `dbo`
+
+2. Still using the RStudio connection pane, find the type of the columns of tables in 1, e.g. *char*acter, *int*eger
+
+3. what type `bit` stands for? Tip: check e.g. column which values  are contained in column `CUURENT_IND` of table `DimChemVar` opened in 1
+
 
 ---
 class: left, middle
 
-# Intermezzo: the RStudio Connections pane
+# Intermezzo 1: R is lazy... so we are
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20210126/20210126_rstudio_connection_pane.png)
+Let's get the locations from watina database using watina function `get_locs(watina)`. But why do you get an error if you tyr to save them in a text format (e.g. csv)?
 
-<small>Image from [RStudio Connections pane article](https://db.rstudio.com/rstudio/connections/)</small>
+```r
+locations <- get_locs(watina)
+write_csv(locations)
+
+> Error in write_delim(x, file, delim = ",", na = na, append = append, col_names = col_names,  :
+  is.data.frame(x) is not TRUE
+```
+
+Is locations not a data.frame???
+
+```r
+class(locations)
+[1] "tbl_Microsoft SQL Server" "tbl_dbi"
+[3] "tbl_sql"                  "tbl_lazy"
+[5] "tbl"
+```
+
+All you have is a table (`tbl`), but most of all, it's a _lazy table_... Welcome to the lazy woRld!
+
+
+---
+class: left, middle
+
+# Intermezzo 1: R is lazy... so we are
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210126/20210126_lazy_query.png)
+
+`locations` is a SQL query, no data are really loaded on your laptop.
+It is like a reference to the result of the query but the full result of the query is not brought into memory.
+
+If you are thinking: _"are you kidding me?"_ Well, try this:
+
+
+```r
+locations %>% show_query()
+```
+
+IMPORTANT: to avoid bad surprises (crashes, out of memory issues), first run your queries lazily.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, middle
 
 # Challenge 2
-Work in progres...
+
+1. Using watina package and always in lazy mode:
+  a. How many area codes exist in watina database?
+  b. select locations from watina database with `area_codes` "KAL", "WES" or "ZAB" and depth range between 2 and 4 meters
+
+2. Using inbodb and florabank database and still being lazy:
+  a. get observations of taxon Erigeron from florabank db:
+
+3. Usisng inbodb and inboveg connection and still being lazy:
+  a.search information about survey "ABS-LIM2011":
+
+4. How to collect the data we queried in 1, 2 and 3?
+
+---
+class: left, middle
+
+# Intermezzo 2: do I really need to learn SQL?
+
+If you know SQL syntax, excellent!
+
+```r
+
+```
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -197,7 +273,9 @@ class: left, middle
 
 - [inbodb package documentation](https://inbo.github.io/inbodb/index.html)
 - [watina package documentation](https://inbo.github.io/watina/index.html). Check also the section with very useful articles
-- the evergreen INBO tutorial about [reading data from INBO databases in R](https://inbo.github.io/tutorials/tutorials/r_database_access/)
+- the wonderful INBO tutorial about [reading data from INBO databases in R](https://inbo.github.io/tutorials/tutorials/r_database_access/): a lot of useful informations in a very human language with a lot of examples. Thanks Stijn, Floris and Els!
+- if you prefer webinars, here you are: a [RStudio webinar with demo](https://resources.rstudio.com/webinars/best-practices-for-working-with-databases-march-2018-edgar-ruiz?wvideo=vffitvywy6) about RStudio, R and SQL
+- Very nice tutorial from Data Carpenty: [data management with SQL for ecologists](https://datacarpentry.org/sql-ecology-lesson/) lesson, especially on [queries](https://datacarpentry.org/sql-ecology-lesson/01-sql-basic-queries/index.html) and [aggregations](https://datacarpentry.org/sql-ecology-lesson/02-sql-aggregation/index.html)
 
 ---
 class: center, middle
