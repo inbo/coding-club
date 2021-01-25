@@ -44,7 +44,7 @@ class: left, middle
 
 ## Introduction
 
-We will explore the functionalities provided by two "made in INBO" packages.
+We will explore the functionalities provided by two "made in INBO" packages and then we play with SQL and tidyverse.
 
 1. [inbodb](https://inbo.github.io/inbodb/index.html)
 2. [watina](https://inbo.github.io/watina/index.html)
@@ -141,22 +141,17 @@ class: left, middle
   - [watina installation instructions](https://inbo.github.io/watina/index.html#installing-testing-and-using-the-watina-package)
 
 3. Load the required packages:
-
 ```r
 library(inbodb)
 library(watina)
 ```
-
 4. Open connections to databases
-
 ```r
 watina <- connect_watina()
 inboveg <- connect_inbo_dbase("D0010_00_Cydonia")
 florabank <- connect_inbo_dbase("D0021_00_userFlora")
 ```
-
-5. Did you get this error: `"The 'ODBC Driver for SQL Server' is missing. Please install it or contact your system administrator."` Well, contact ICT helpdesk this afternoon, but now just run this after restarting R (Session -> restart R or Ctrl+Shift+F10):
-
+5. Did you get this error: `"The 'ODBC Driver for SQL Server' is missing. Please install it or contact your system administrator."` Well, contact ICT helpdesk this afternoon, but now run this after restarting R:
 ```r
 remotes::install_github("inbo/inbodb@sos")
 ```
