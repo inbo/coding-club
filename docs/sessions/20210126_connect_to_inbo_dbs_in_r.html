@@ -217,7 +217,9 @@ class: left, middle
 
 # Intermezzo 1: R is lazy... so we are
 
-R is lazy not only with databases, R is ALWAYS lazy...
+<best-practices-for-working-with-databases-march-2018-edgar-ruiz>![:scale 10%]({{ site.baseurl}}/assets/images/20210126/20210126_mister_lazy.jpg)</center>
+
+R is not only lazy with databases, R is ALWAYS lazy
 
 ```r
 number <- 5
@@ -227,11 +229,12 @@ multiply_by_2 <- function(a, b) {
 multiply_by_2(number) # no value given to argument b
 ```
 
-`b` is a function argument, but never evaluated, so no error. This is what we mean being **lazy**: doing **the strict minimum** of evaluation*
+`b` is a function argument, but never evaluated, so no error. This is what we mean being **lazy**: doing **the strict minimum** of evaluation*. For this reason lazy evaluation is sometimes referred as _call-by-need_.
 
-More about lazy evaluation? Give a look to [this tutorial](https://www.r-bloggers.com/2018/07/about-lazy-evaluation/)... or a coffiebreak with Thierry.
+<small>
+More about lazy evaluation? Give a look to [this tutorial](https://www.r-bloggers.com/2018/07/about-lazy-evaluation/)... or spend a coffiebreak with Thierry ;-)
+</small>
 
-<small>*For this reason lazy evaluation is sometimes referred as _call-by-need_</small>
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, middle
@@ -255,10 +258,24 @@ class: left, middle
 
 # Intermezzo 2: do I really need to learn SQL?
 
+Not everything is already wrapped in a function, of course. How to write your own SQL query?
+
 If you know SQL syntax, excellent!
 
 ```r
+gebogen_kransblad_query <- "SELECT NaamWetenschappelijk
+                            FROM tblTaxon
+                            WHERE NaamNederlands = 'Gebogen kransblad'"
+tbl(src = florabank,
+    sql(gebogen_kransblad_query))
+```
 
+But you don't have to be a SQL programmer, thanks to tidyverse!
+
+```r
+tbl(src = florabank, "tblTaxon") %>%
+  filter(NaamNederlands == "Gebogen kransblad") %>%
+  select(NaamWetenschappelijk)
 ```
 
 ---
@@ -267,15 +284,60 @@ class: left, middle
 
 # Challenge 3
 
-Work in progress...
+Feel free to use tidyverse syntax or SQL syntax or experiment both!
 
+1. Using `florabank` and its table `tblTaxon`:
+
+  a. get the first 10 rows
+
+  b. get the scientific name (`NaamWetenschappelijk`) of Dutch name (`NaamNederlands`) _Slank snavelmos_
+
+  c. get the scientific names and Dutch names of taxa with Dutch name starting with _Slank_. [Tip for SQL query](https://www.w3schools.com/SQL/sql_like.asp); [tip for tidyverse](https://github.com/tidyverse/dbplyr/issues/295)
+
+2. Using `INBOVEG` database and its table `ivRecording`, retrieve the 10 locations (`LocationCode`) with the highest number of recordings with
+`Latitude` between 50.9 and 51.1 and `Longitude` between 3.5 and 3.9. Show the locations and the number of recordings and order them by decreasing order (location with highest number of recordings first)
+
+3. How to get the column names of table `ivRecording` from `INBOVEG`?
 
 ---
 class: left, middle
 
-# Bonus challenge
+# Bonus challenge 1
 
-Maybe?
+Writing queries can be hard and we have specialists in house who are great at it... Let's make sure we can reuse our own and their hard work!
+
+Based on solution of challenge 3.2, create a function called `inboveg_locs_most_recs()`:
+
+- the function has four input arguments:
+  - a connection to database ( `con`)
+  - number of locations to return (`n_locations`),
+  - vector with min/max values of `Latitude` (lat)
+  - vector with min/max values of `Longitude` (lng)
+- the function returns a dataframe with two columns: `locationCode` and `n` (number of recordings) arranged by decreasing values of  `n`
+- test your function by using it, e.g. `inboveg_locs_most_recs(con, n_locations = 5, lat = c(50.1, 50.3), lng = c(4.2, 4.9))`
+
+---
+class: left, middle
+
+# Bonus challenge 2
+
+Packages inbodb and watina and their functions can be improved, of course!
+Add a new functionality to one of the `get_` functions of `inbodb` or `watina`, e.g. add an argument, `sf_poly` (a `sf` polygon) to [`get_inboveg_recordings()`](https://inbo.github.io/inbodb/reference/get_inboveg_recordings.html) to retrieve the vegetation recordings located in the polygon `sf_poly`.
+
+---
+class: left, middle
+
+# HELP FUTURE-YOU
+
+Do you have queries you run very often? Do you have queries where you have to change some arguments manually (e.g. taxon name, location code)?
+
+Add an issue to `inbodb` package and help future-you and your colleagues.
+
+`inbodb` is not a static thing. It is something we can improve, **TOGETHER!** *
+
+![:scale 30%]({{ site.baseurl}}/assets/images/20210126/20210126_help_future_you.png)
+
+<small>*Joe Biden would say the same if he would work for INBO</small>
 
 
 ---
