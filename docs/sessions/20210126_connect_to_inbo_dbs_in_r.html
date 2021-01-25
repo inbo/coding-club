@@ -112,26 +112,6 @@ Go to https://hackmd.io/YHvcGxRpSEqHbRaNGDRFaw?edit
 ---
 class: left, middle
 
-# Download data and code
-
-Instead of downloading the files manually we have a new `inborutils` function called `setup_codingclub_session()`. If you have not used this function yet, restart your R session and update the `inborutils` package by running:
-
-```r
-if (!"remotes" %in% rownames(installed.packages())) {
-  install.packages("remotes")
-}
-remotes::install_github("inbo/inborutils")
-```
-
-To download the coding club material of today, just run `setup_codingclub_session()`. In general, you can use the date in "YYYYMMDD" format , e.g. `setup_codingclub_session("20201027")`, to download the coding club material of October, 27. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).
-
-Of course, you can still download [data](https://github.com/inbo/coding-club/blob/master/data/20210126/) and [scripts](https://github.com/inbo/coding-club/blob/master/src/20210126/) manually*!
-
-<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
-
----
-class: left, middle
-
 ## Challenge 0
 
 1. Log in to [INBO VPN](https://vpnvac.inbo.be/sslvpn/Portal/Main)
