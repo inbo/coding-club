@@ -134,12 +134,10 @@ class: left, middle
 
 ## Challenge 0
 
-1. Log in to INBO VPN
-
-2. Install the required packages, by following the instructions:
+1. Log in to [INBO VPN](https://vpnvac.inbo.be/sslvpn/Portal/Main)
+2. If still not done, install the required packages by following the instructions:
   - [inbodb installation instructions](https://inbo.github.io/inbodb/#installation)
   - [watina installation instructions](https://inbo.github.io/watina/index.html#installing-testing-and-using-the-watina-package)
-
 3. Load the required packages:
 ```r
 library(inbodb)
@@ -162,12 +160,11 @@ class: left, middle
 
 # Challenge 1
 
-1. Find the R connection pane of RStudio and open a view of table `tblTaxon` of florabank (D0021_00_userFlora), table `ivRecording` of INBOVEG (D0010_00_Cydonia) and table `DimChemVar` of watina (W0002_00_Watina). Tips: check [RStudio connection pane documentation](https://db.rstudio.com/rstudio/connections/#connections-pane); tables are under (default) schema `dbo`
+1. Find the R connection pane of RStudio and open a view of table `tblTaxon` of `florabank` (`D0021_00_userFlora`), table `ivRecording` of INBOVEG (`D0010_00_Cydonia`) and table `DimChemVar` of watina (`W0002_00_Watina`). Tips: check [RStudio connection pane documentation](https://db.rstudio.com/rstudio/connections/#connections-pane); tables are under (default) `dbo` _schema_
 
-2. Still using the RStudio connection pane, find the type of the columns of tables in 1, e.g. *char*acter, *int*eger
+2. Still using the RStudio connection pane, find the type of the columns of (one of the) tables in 1, e.g. *char*acter, *int*eger
 
-3. what type `bit` stands for? Tip: check e.g. column which values  are contained in column `CUURENT_IND` of table `DimChemVar` opened in 1
-
+3. what type `bit` stands for? Tip: check e.g. the values contained in column `CURRENT_IND` of table `DimChemVar` opened in 1
 
 ---
 class: left, middle
@@ -215,6 +212,26 @@ locations %>% show_query()
 
 IMPORTANT: to avoid bad surprises (crashes, out of memory issues), first run your queries lazily.
 
+---
+class: left, middle
+
+# Intermezzo 1: R is lazy... so we are
+
+R is lazy not only with databases, R is ALWAYS lazy...
+
+```r
+number <- 5
+multiply_by_2 <- function(a, b) {
+  a * 2 # b is not used
+}
+multiply_by_2(number) # no value given to argument b
+```
+
+`b` is a function argument, but never evaluated, so no error. This is what we mean being **lazy**: doing **the strict minimum** of evaluation*
+
+More about lazy evaluation? Give a look to [this tutorial](https://www.r-bloggers.com/2018/07/about-lazy-evaluation/)... or a coffiebreak with Thierry.
+
+<small>*For this reason lazy evaluation is sometimes referred as _call-by-need_</small>
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, middle
