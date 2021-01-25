@@ -314,7 +314,14 @@ Based on solution of challenge 3.2, create a function called `inboveg_locs_most_
   - vector with min/max values of `Latitude` (lat)
   - vector with min/max values of `Longitude` (lng)
 - the function returns a dataframe with two columns: `locationCode` and `n` (number of recordings) arranged by decreasing values of  `n`
-- test your function by using it, e.g. `inboveg_locs_most_recs(con, n_locations = 5, lat = c(50.1, 50.3), lng = c(4.2, 4.9))`
+- test your function by using it, e.g.
+
+```r
+inboveg_locs_most_recs(inboveg, n_locations = 8, lat = c(50.1, 50.3), lng = c(4.2, 4.9))
+```
+- write it in SQL* or in tidyverse syntax
+
+<small>* Package [glue](https://glue.tidyverse.org/) can help you. [This part](https://inbo.github.io/tutorials/tutorials/r_database_access/#create-and-use-query-templates) of the tutorial can also help...</small>
 
 ---
 class: left, middle
