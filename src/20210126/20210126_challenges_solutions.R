@@ -31,7 +31,8 @@ area_codes <-
   count()
 
 
-#' b. select locations from watina database with `area_codes` "KAL", "WES" or "ZAB" and depth range between 2 and 4 meters
+#' b. select locations from watina database with `area_codes` "KAL", "WES" or
+#' "ZAB" and depth range between 2 and 4 meters
 
 info_locs <- get_locs(watina,
                       area_codes = c("KAL", "WES", "ZAB"),
@@ -121,8 +122,10 @@ tbl(florabank, "tblTaxon") %>%
   filter(NaamNederlands == "Slank snavelmos") %>%
   select(NaamWetenschappelijk)
 
-#'   c. get the scientific names (`NaamWetenschappelijk`) and Dutch names
-#' (`NaamNederlands`) of taxa with Dutch name starting with  `Slank`. [Tip for SQL query](https://www.w3schools.com/SQL/sql_like.asp); [tip for tidyverse](https://github.com/tidyverse/dbplyr/issues/295)
+#' c. get the scientific names (`NaamWetenschappelijk`) and Dutch names
+#' (`NaamNederlands`) of taxa with Dutch name starting with  `Slank`. [Tip for
+#' SQL query](https://www.w3schools.com/SQL/sql_like.asp); [tip for
+#' tidyverse](https://github.com/tidyverse/dbplyr/issues/295)
 
 # SQL
 start_with_slank_query <- "SELECT NaamWetenschappelijk, NaamNederlands
