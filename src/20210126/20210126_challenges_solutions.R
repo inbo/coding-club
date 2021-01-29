@@ -231,9 +231,9 @@ inboveg_locs_most_recs(inboveg,
 library(sf)
 west_vlaanderen <- read_sf(
   "https://geoservices.informatievlaanderen.be/overdrachtdiensten/VRBG/wfs?service=wfs&request=GetFeature&typeName=VRBG%3ARefprv&srsName=EPSG%3A31370&cql_filter=NAAM%3D%27West-Vlaanderen%27&outputFormat=text%2Fxml%3B%20subtype%3Dgml%2F3.1.1",
-  crs = 31370
-) %>%
-  st_transform(crs = 4326)
+  crs = 31370)  %>%
+  st_cast("GEOMETRYCOLLECTION") %>%
+  st_collection_extract(type = "POLYGON")
 
 # starting from code for get_inboveg_header
 
@@ -322,8 +322,7 @@ get_inboveg_header_sf <- function(connection,
             crs = 4326) %>%
       st_transform(crs = 31370) %>%
       st_make_valid() %>%
-      st_filter(sf_poly %>%
-                  st_transform(crs = 31370))
+      st_filter(sf_poly)
 
     return(query_result)
   }
@@ -337,10 +336,14 @@ get_inboveg_header_sf <- function(connection,
 }
 
 #debugonce(get_inboveg_header_sf)
-# not working yet....
 testfunctie <- get_inboveg_header_sf(
   connection = inboveg,
   sf_poly = west_vlaanderen)
+
+testfunctie %>%
+  ggplot() +
+  geom_sf(data = west_vlaanderen) +
+  geom_sf()
 
 #' Disconnect
 dbDisconnect(watina)
