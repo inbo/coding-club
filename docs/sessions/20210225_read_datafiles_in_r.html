@@ -1,0 +1,173 @@
+---
+layout: presentation
+title: Read datafiles in R
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 25 FEBRUARY 2021
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Exclusively on dIsNeyBO+
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20210225/20210225_badge_read_datafiles_in_r.png)
+
+
+---
+class: left, middle
+
+## `inbodb` package
+
+1. Connect to any INBO database
+2. Run specific queries for two INBO databases: florabank and INBOVEG
+
+
+[inbodb functions](https://inbo.github.io/inbodb/reference/index.html)
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210225/20210225_functions_inbodb.png)
+
+---
+class: left, middle
+
+## `watina` package
+
+1. Connect to watina database
+2. Run specific queries for watina database
+3. Provide some useful helper functions
+
+[watina functions](https://inbo.github.io/watina/reference/index.html)
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210225/20210225_functions_watina.png)
+
+---
+class: left, middle
+
+No cheatsheet, but a well-written [INBO tutorial](https://inbo.github.io/tutorials/tutorials/r_database_access/) is available, yeah!
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210225/20210225_tutorial_INBO_database_access_in_r.PNG)
+
+---
+class: center, middle
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+<br> No yellow sticky notes online :-( We use hackmd (see next slide) but basic principle doesn't change.
+
+---
+class: center, middle
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/YHvcGxRpSEqHbRaNGDRFaw?edit
+
+<iframe src="https://hackmd.io/YHvcGxRpSEqHbRaNGDRFaw?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, middle
+
+## Challenge 0
+
+1. Install packages
+
+```r
+# install readr if not already installed
+if (!"readr" %in% installed.packages()) {
+  install.packages("readr")
+}
+
+# install readxl if not already installed
+if (!"readxl" %in% installed.packages()) {
+  install.packages("readxl")
+}
+
+if (!"googlesheets4" %in% installed.packages()) {
+  install.packages("googlesheets4")
+}
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, middle
+
+# Challenge 1
+
+
+
+---
+class: left, middle
+
+# Intermezzo
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, middle
+
+# Challenge 2
+
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3
+
+
+---
+class: left, middle
+
+# Bonus challenge
+
+
+---
+class: left, middle
+
+## Resources
+
+- challenge solutions soon available (link will be added here)
+- [readr package documentation](https://readr.tidyverse.org/)
+- [data import cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20210225_cheat_sheet_data_import.pdf): first page is all about `readr` package
+- [INBO tutorial about reading Googlesheets in R](https://inbo.github.io/tutorials/tutorials/r_google_sheets/) via tidyverse package `googlesheets4`
+- [`readxl` package documentation](https://readxl.tidyverse.org/) to read Excel files
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.05 - Isala Van Diest(?)<br>
+Date: __30/03/2021__, van 10:00 tot 12:00<br>
+Subject: **tidy data** <br>
+(registration announced via DG_useR@inbo.be)
