@@ -122,6 +122,8 @@ class: left, middle
 
 # Challenge 1
 
+1. Read a set of research grade observations from file `20210125_occurrence_iNaturalist_researchgrade_obs.txt`
+2.
 
 
 ---
@@ -143,11 +145,30 @@ class: left, middle
 
 # Challenge 3
 
+You  get the data file  `20210225_rainfall_waterloo.csv` containing meteorological data from Wallonia (Waterloo) in Walloon :-(
+1. Parse column `Hour` as a column containing number (by default read as a character column)
+2. Parse column `Absolute Value` as a column containing numbers, although most s
+3. Parse the column `Date` as a date column. Hint: give a look to the readr's [`locale` vignette](https://readr.tidyverse.org/articles/locales.html) and check the structure of a typical date names _locale_, e.g. nl <- locale("nl")$date_names
+
+These are the days, months and correspondent abbreviations in Walloon:
+
+```r
+days_walloon <- c("londi", "mårdi", "mierkidi", "djudi", "vénrdi",
+  "semdi", "dimegne")
+months_walloon <- c("djanvî","fevrî", "måss", "avri", "may", "djun", "djulete",
+                    "awousse","setimbre", "octôbe", "nôvimbe", "decimbe")
+days_abbr_walloon <- c("lon", "mår", "mie", "dju", "vén", "sem", "dim")
+months_abbr_walloon <- c("djan","fev", "mås", "avr", "may", "djun", "djul",
+                         "awou","set", "oct", "nôv", "dec")
+```
+
 
 ---
 class: left, middle
 
 # Bonus challenge
+
+Let's help each other! Read these data files in R.
 
 
 ---
