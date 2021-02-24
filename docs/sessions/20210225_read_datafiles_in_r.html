@@ -32,39 +32,11 @@ class: center, middle
 <!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
 ![:scale 90%]({{ site.baseurl}}/assets/images/20210225/20210225_badge_read_datafiles_in_r.png)
 
-
 ---
-class: left, middle
+class: center, middle
 
-## `inbodb` package
-
-1. Connect to any INBO database
-2. Run specific queries for two INBO databases: florabank and INBOVEG
-
-
-[inbodb functions](https://inbo.github.io/inbodb/reference/index.html)
-
-![:scale 100%]({{ site.baseurl}}/assets/images/20210225/20210225_functions_inbodb.png)
-
----
-class: left, middle
-
-## `watina` package
-
-1. Connect to watina database
-2. Run specific queries for watina database
-3. Provide some useful helper functions
-
-[watina functions](https://inbo.github.io/watina/reference/index.html)
-
-![:scale 100%]({{ site.baseurl}}/assets/images/20210225/20210225_functions_watina.png)
-
----
-class: left, middle
-
-No cheatsheet, but a well-written [INBO tutorial](https://inbo.github.io/tutorials/tutorials/r_database_access/) is available, yeah!
-
-![:scale 100%]({{ site.baseurl}}/assets/images/20210225/20210225_tutorial_INBO_database_access_in_r.PNG)
+![:scale 100%]({{ site.baseurl}}/assets/images/20210225/20210225_data_import_cheat_sheet.png)
+[Download cheatsheet here](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20210225_cheat_sheet_data_import.pdf)
 
 ---
 class: center, middle
@@ -89,16 +61,36 @@ class: center, middle
 ### Share your code during the coding session!
 
 <!-- Create a new hackmd file and replace this link (twice!) -->
-Go to https://hackmd.io/YHvcGxRpSEqHbRaNGDRFaw?edit
+Go to https://hackmd.io/xm_RYj5xTGOh0jHQiiu9_A?edit
 
-<iframe src="https://hackmd.io/YHvcGxRpSEqHbRaNGDRFaw?edit" height="400px" width="800px"></iframe>
+<iframe src="https://hackmd.io/xm_RYj5xTGOh0jHQiiu9_A?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, middle
+
+# Download data and code
+
+Instead of downloading the files manually we have a `inborutils` function called `setup_codingclub_session()`. If you have not used this function yet, restart your R session and update the `inborutils` package by running:
+
+```r
+if (!"remotes" %in% rownames(installed.packages())) {
+  install.packages("remotes")
+}
+remotes::install_github("inbo/inborutils")
+```
+
+To download the coding club material of today, just run `setup_codingclub_session()`. In general, you can use the date in "YYYYMMDD" format , e.g. `setup_codingclub_session("20201027")`, to download the coding club material of October, 27 2020. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).
+
+Of course, you can still download [data](https://github.com/inbo/coding-club/blob/master/data/20210225/) and [scripts](https://github.com/inbo/coding-club/blob/master/src/20210225/) manually*!
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
 ---
 class: left, middle
 
 ## Challenge 0
 
-1. Install packages
+- Install packages*
 
 ```r
 # install readr if not already installed
@@ -116,28 +108,96 @@ if (!"googlesheets4" %in% installed.packages()) {
 }
 ```
 
+- Load packages
+
+```r
+library(readr)
+library(readxl)
+library(googlesheets4)
+```
+
+<p>
+<small>*Note: All these packages are part of the tidyverse universe</small>
+</p>
+
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
 class: left, middle
 
 # Challenge 1
 
-1. Read a set of research grade observations from file `20210125_occurrence_iNaturalist_researchgrade_obs.txt`
-2.
-
+1. Read a set of research grade observations from file [`20210125_occurrence_iNaturalist_researchgrade_obs.txt`](https://github.com/inbo/coding-club/blob/master/data/20210225/20210125_occurrence_iNaturalist_researchgrade_obs.txt)
+2. Read datafile [`20210225_gent_groeiperwijk.csv`](https://github.com/inbo/coding-club/blob/master/data/20210225/20210225_gent_groeiperwijk.csv) containing the demographic evolution of Ghent districts from 1999 to 2009
+3. Read sheet `ALL DATA` from Excel datafile [`20210225_manta_2014_2015.xlsx`](https://github.com/inbo/coding-club/blob/master/data/20210225/20210225_manta_2014_2015.xlsx) with manta related data
+4. Something more difficult now! Read butterfly related data file [`20210225_butterflies_counts.txt`](https://github.com/inbo/coding-club/blob/master/data/20210225/20210225_butterflies_counts.txt) with semicolon (;) as delimiter,
+dot (.) as decimal mark and question mark (?) as NA. Read only the first 500
+rows. Be sure column  `Date` is parsed as datetime. Hint: use this wonderful
+[format specifications compendium](https://www.stat.berkeley.edu/~s133/dates.html)
+to build the correct datetime format
 
 ---
 class: left, middle
 
-# Intermezzo
+# Intermezzo: `datapasta` package
+
+The package [`datapaasta`](https://milesmcbain.github.io/datapasta/) can simplify your life enormously. Watch this video: https://youtu.be/Sz-tEVqZh5s?t=43
+
+Yes, you can copy paste a table from web or Excel directly into R and you get it authomatically in R syntax thanks to the function `df_paste()`!
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, middle
 
-# Challenge 2
+# Challenge 2: googlesheets
 
+Googesheets needs access to your Google account. First time you use this package you will need to authorize it.
 
+1. Read the sheet `HyaHoVrBl` from a googlesheet about [hyacint coverage in Ename] (https://docs.google.com/spreadsheets/d/1Tc8U-ud4dEcxgOojS80w7gdQQ-Ac85A4dN-u47NSmYg) paying attention to import all columns correctly
+2. Get metadata of the googlesheet in 1
+3. But what if you don't want to allow tidyverse API to get access to your INBO
+Google account? Well, you can publish the sheet to the web as csv and then
+import it via `read_delim()` or `read_csv()`. Read the csv generated in this way
+by using this link:
+```r
+hyacint_cov_link <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vRFAWYrZmgBRPXQnw3Io5T_29ZrGkH-Ds4yulFd02MIPcalGPtzyQ3cujgAdwzfnRNYIWQFf1oKjgM3/pub?gid=1007047746&single=true&output=csv"
+```
+
+![:scale 40%]({{ site.baseurl}}/assets/images/20210225/20210225_publish_gsheet_to_web_as_csv.png)
+
+<small>*Note: This method is useful if you don't have to import a lot of Googlesheets and they can be publicly available.</small>
+
+---
+class: left, middle
+
+## INTERMEZZO: _locale_
+
+A [locale](https://readr.tidyverse.org/articles/locales.html) encapsulates common options that vary between languages and localities.
+
+```r
+> Sys.localeconv()
+decimal_point     thousands_sep          grouping   int_curr_symbol   currency_symbol mon_decimal_point mon_thousands_sep
+"."                ""                ""             "USD"               "$"               "."               ","
+mon_grouping     positive_sign     negative_sign   int_frac_digits       frac_digits     p_cs_precedes    p_sep_by_space
+"\003"                ""               "-"               "2"               "2"               "1"               "0"
+n_cs_precedes    n_sep_by_space       p_sign_posn       n_sign_posn
+"1"               "0"               "3"               "0"
+```
+
+Get locale for Dutch :-)
+
+```r
+> locale("nl")
+<locale>
+Numbers:  123,456.78
+Formats:  %AD / %AT
+Timezone: UTC
+Encoding: UTF-8
+<date_names>
+Days:   zondag (zo), maandag (ma), dinsdag (di), woensdag (wo), donderdag (do), vrijdag (vr), zaterdag (za)
+Months: januari (jan.), februari (feb.), maart (mrt.), april (apr.), mei (mei), juni (jun.), juli (jul.), augustus (aug.),
+        september (sep.), oktober (okt.), november (nov.), december (dec.)
+AM/PM:  a.m./p.m.
+```
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -147,8 +207,12 @@ class: left, middle
 
 You  get the data file  `20210225_rainfall_waterloo.csv` containing meteorological data from Wallonia (Waterloo) in Walloon :-(
 1. Parse column `Hour` as a column containing number (by default read as a character column)
-2. Parse column `Absolute Value` as a column containing numbers, although most s
-3. Parse the column `Date` as a date column. Hint: give a look to the readr's [`locale` vignette](https://readr.tidyverse.org/articles/locales.html) and check the structure of a typical date names _locale_, e.g. nl <- locale("nl")$date_names
+2. 2. Parse column `Absolute Value` as a column containing numbers, not as
+logicals
+3. Parse the column `Date` as a date column. Hint: give a look to the readr's
+[`locale` vignette](https://readr.tidyverse.org/articles/locales.html) and check
+the structure of a typical date names _locale_,
+  e.g. nl <- locale("nl")$date_names
 
 These are the days, months and correspondent abbreviations in Walloon:
 
@@ -168,7 +232,7 @@ class: left, middle
 
 # Bonus challenge
 
-Let's help each other! Read these data files in R.
+Let's help each other! Do you have a cryptic datafile? Or did you succeeded to import it but it was a real challenge? Share them with us! Add them to this Google Drive folder [20210225 - datafiles](https://drive.google.com/drive/u/0/folders/114Kvg6KNkFk8P8gCKZvu6bdhNY9nKRIe) (sign-in required)
 
 
 ---
@@ -176,11 +240,14 @@ class: left, middle
 
 ## Resources
 
-- challenge solutions soon available (link will be added here)
+- challenge solutions will be available soon
+- video recording will be available soon
 - [readr package documentation](https://readr.tidyverse.org/)
 - [data import cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20210225_cheat_sheet_data_import.pdf): first page is all about `readr` package
 - [INBO tutorial about reading Googlesheets in R](https://inbo.github.io/tutorials/tutorials/r_google_sheets/) via tidyverse package `googlesheets4`
 - [`readxl` package documentation](https://readxl.tidyverse.org/) to read Excel files
+- a wonderful date and time [format specifications compendium](https://www.stat.berkeley.edu/~s133/dates.html)
+- homepage of [`datapaasta`](https://milesmcbain.github.io/datapasta/) package
 
 ---
 class: center, middle
