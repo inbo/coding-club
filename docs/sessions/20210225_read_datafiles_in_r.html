@@ -135,11 +135,12 @@ class: left, middle
 
 1. Read a set of research grade observations from file [`20210125_occurrence_iNaturalist_researchgrade_obs.txt`](https://github.com/inbo/coding-club/blob/master/data/20210225/20210125_occurrence_iNaturalist_researchgrade_obs.txt)
 2. Read datafile [`20210225_gent_groeiperwijk.csv`](https://github.com/inbo/coding-club/blob/master/data/20210225/20210225_gent_groeiperwijk.csv) containing the demographic evolution of Ghent districts from 1999 to 2009
-3. Read sheet `ALL DATA` from Excel datafile [`20210225_manta_2014_2015.xlsx`](https://github.com/inbo/coding-club/blob/master/data/20210225/20210225_manta_2014_2015.xlsx) with manta related data
+3. Read sheet `ALL DATA` from Excel datafile [`20210225_manta_2014_2015.xlsx`](https://github.com/inbo/coding-club/blob/master/data/20210225/20210225_manta_2014_2015.xlsx) with manta related data*
 4. Something more difficult now! Read butterfly related data file [`20210225_butterflies_counts.txt`](https://github.com/inbo/coding-club/blob/master/data/20210225/20210225_butterflies_counts.txt) with semicolon (;) as delimiter,
 dot (.) as decimal mark and question mark (?) as NA. Read only the first 500
 rows.  Be sure column `Date` is parsed as datetime by using `format = "%d/%m/%Y %H:%M:%S"`
 
+<small>* __Note__: first line contains metadata about the type of variables. This is done by grouping cells, which is not really computer readable, as it is an example of untidy data. Same for the use of colors in cells. In next coding club we will come back on this topic and how to make data both human and computer readable. Stay tuned!</small>
 ---
 class: center, middle
 
