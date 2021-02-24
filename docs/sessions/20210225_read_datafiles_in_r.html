@@ -138,9 +138,7 @@ class: left, middle
 3. Read sheet `ALL DATA` from Excel datafile [`20210225_manta_2014_2015.xlsx`](https://github.com/inbo/coding-club/blob/master/data/20210225/20210225_manta_2014_2015.xlsx) with manta related data
 4. Something more difficult now! Read butterfly related data file [`20210225_butterflies_counts.txt`](https://github.com/inbo/coding-club/blob/master/data/20210225/20210225_butterflies_counts.txt) with semicolon (;) as delimiter,
 dot (.) as decimal mark and question mark (?) as NA. Read only the first 500
-rows. Be sure column  `Date` is parsed as datetime. Hint: use this wonderful
-[format specifications compendium](https://www.stat.berkeley.edu/~s133/dates.html)
-to build the correct datetime format
+rows.  Be sure column `Date` is parsed as datetime by using `format = "%d/%m/%Y %H:%M:%S"`
 
 ---
 class: center, middle
@@ -221,7 +219,8 @@ logicals
 3. Parse the column `Date` as a date column. Hint: give a look to the readr's
 [`locale` vignette](https://readr.tidyverse.org/articles/locales.html) and check
 the structure of a typical date names _locale_,
-  e.g. nl <- locale("nl")$date_names
+e.g. nl <- locale("nl")$date_names. This is a nice datetime
+[format specifications compendium](https://www.stat.berkeley.edu/~s133/dates.html)
 
 These are the days, months and correspondent abbreviations in Walloon:
 
