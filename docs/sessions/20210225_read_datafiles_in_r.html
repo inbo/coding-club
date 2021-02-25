@@ -217,6 +217,8 @@ class: left, middle
 
 You  get the data file  `20210225_rainfall_waterloo.csv` containing meteorological data from Wallonia (Waterloo) in Walloon and using apex as grouping mark (e.g. 1000 -> 1'000)
 
+Be aware of these three aspects:
+
 1. Parse column `Hour` as a column containing number (by default read as a character column)
 2. Parse both columns `Absolute Value` and `AV Quality Code` as numeric columns paying attention to define the right  `grouping_mark`. Hint: check the structure of a typical locale, e.g. nl <- locale("nl")
 3. Parse the column `Date` as a date column. Hint: look at the readr's
