@@ -204,6 +204,9 @@ Days:   zondag (zo), maandag (ma), dinsdag (di), woensdag (wo), donderdag (do), 
 Months: januari (jan.), februari (feb.), maart (mrt.), april (apr.), mei (mei), juni (jun.), juli (jul.), augustus (aug.),
         september (sep.), oktober (okt.), november (nov.), december (dec.)
 AM/PM:  a.m./p.m.
+
+> locale("nl") %>% names
+[1] "date_names"    "date_format"   "time_format"   "decimal_mark"  "grouping_mark" "tz"            "encoding"
 ```
 
 ---
@@ -212,13 +215,14 @@ class: left, middle
 
 # Challenge 3
 
-You  get the data file  `20210225_rainfall_waterloo.csv` containing meteorological data from Wallonia (Waterloo) in Walloon :-(
+You  get the data file  `20210225_rainfall_waterloo.csv` containing meteorological data from Wallonia (Waterloo) in Walloon and using apex as grouping mark (e.g. 1000 -> 1'000)
+
 1. Parse column `Hour` as a column containing number (by default read as a character column)
-2. Parse column `Absolute Value` as a column containing numbers, not as logicals
+2. Parse both columns `Absolute Value` and `AV Quality Code` as numeric columns paying attention to define the right  `grouping_mark`. Hint: check the structure of a typical locale, e.g. nl <- locale("nl")
 3. Parse the column `Date` as a date column. Hint: look at the readr's
-[`locale` vignette](https://readr.tidyverse.org/articles/locales.html) and check
-the structure of a typical date names _locale_,
-e.g. nl <- locale("nl")$date_names. This is a nice datetime
+[`locale` vignette](https://readr.tidyverse.org/articles/locales.html) and again
+check the structure of a typical _locale_. For finding the right datetime
+parsing, this is a nice datetime
 [format specifications compendium](https://www.stat.berkeley.edu/~s133/dates.html)
 
 These are the days, months and correspondent abbreviations in Walloon:
