@@ -1,0 +1,202 @@
+---
+layout: presentation
+title: Tidy data
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 30 MARCH 2021
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Exclusively on <small>d</small>I<small>s</small>N<small>ey</small>BO<small>+</small>
+
+---
+class: center, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210330/20210330_happy_families.png)
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20210330/20210330_badge_tidy_data.png)
+
+---
+class: center, middle
+
+## What does tidy mean?
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210330/20210330_meaning_tidy_data_google_translate.png)
+
+<small>source:[Google Translate](https://translate.google.be/?hl=en&sl=en&tl=nl&text=tidy%20data.%0Atidy.%0Ato%20tidy.&op=translate)</small>
+
+---
+class: center, middle
+
+## What do we really mean?
+
+![:scale 60%]({{ site.baseurl}}/assets/images/20210330/20210330_paper_tidy_data.png)
+
+Hadley Wickham's paper: [Tidy Data](https://www.jstatsoft.org/article/view/v059i10), Journal of Statistical Software, 2014
+
+---
+class: center, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210330/20210330_paper_untidy_data_example.png)
+
+---
+class: center, middle
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20210330/20210330_paper_untidy_to_tidy_data_example.png)
+
+---
+class: center, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210330/20210330_tidy_data_principles_1.png)
+
+---
+class: center, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210330/20210330_tidy_data_principles_2.png)
+
+---
+class: center, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210330/20210330_tidy_data_principles_3.png)
+
+---
+class: center, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210330/20210330_data_import_cheat_sheet.png)
+[Download cheatsheet here](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20210225_cheat_sheet_data_import.pdf)
+
+---
+class: center, middle
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+<br> No yellow sticky notes online :-( We use hackmd (see next slide) but basic principle doesn't change.
+
+---
+class: center, middle
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/6RPBUP5BT9aOt9SQaUoOyg?edit
+
+<iframe src="https://hackmd.io/6RPBUP5BT9aOt9SQaUoOyg?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, middle
+
+# Download data and code
+
+You can download the material:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually, via [data](https://github.com/inbo/coding-club/blob/master/data/20210330/) and [scripts](https://github.com/inbo/coding-club/blob/master/src/20210330/)**!
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format , e.g. `setup_codingclub_session("20201027")`, to download the coding club material of October, 27 2020. If date is omitted, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, middle
+
+Load tidyverse packages
+
+```r
+library(tidyverse)
+```
+
+<p>
+<small>* __Note__: `tidyr` is one of the core packages of the tidyverse universe</small>
+</p>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, middle
+
+# Challenge 1
+
+
+---
+class: center, middle
+
+# Intermezzo
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, middle
+
+# Challenge 2
+
+
+---
+class: left, middle
+
+## INTERMEZZO
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3
+
+
+---
+class: left, middle
+
+# Bonus challenge
+
+---
+class: left, middle
+
+## Resources
+
+- R script with challenge solutions will be uploaded soon
+- video recording will be uploaded soon on INBO vimeo channel
+- [tidyr package documentation](https://tidyr.tidyverse.org/)
+- [tidyr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20210225_cheat_sheet_data_import.pdf): second page is about `tidyr` and tidying data
+- [`pivot_wider()` and `pivot_longer()` specific documentation](https://tidyr.tidyverse.org/articles/pivot.html)
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.05 - Isala Van Diest(?)<br>
+Date: __29/04/2021__, van 10:00 tot 12:00<br>
+Subject: **data manipulation with dplyr** <br>
+(registration announced via DG_useR@inbo.be)
