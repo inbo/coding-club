@@ -132,14 +132,14 @@ You can download the material:
 ---
 class: left, middle
 
-Load tidyverse packages
+Load tidyverse packages *
 
 ```r
 library(tidyverse)
 ```
 
 <p>
-<small>* __Note__: `tidyr` is one of the core packages of the tidyverse universe</small>
+<small> *`tidyr` is one of the core packages of the tidyverse universe</small>
 </p>
 
 ---
@@ -148,12 +148,13 @@ class: left, middle
 
 # Challenge 1
 
+Make the file [20210330_surveys.xlsx](https://github.com/inbo/coding-club/blob/master/data/20210330/20210330_surveys.xlsx) as tidy as possible:
+1. Never modify the raw data: a (very) good practice
+2. Document the issues you encountered in the [hackmd (challenge 1)](https://hackmd.io/6RPBUP5BT9aOt9SQaUoOyg?both#Challenge-1)
 
----
-class: center, middle
-
-# Intermezzo
-
+<p>
+<small>Based on https://datacarpentry.org/spreadsheet-ecology-lesson/</small>
+</p>
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -161,11 +162,33 @@ class: left, middle
 
 # Challenge 2
 
+Make the file [20210330_manta_datasample.xlsx](https://github.com/inbo/coding-club/blob/master/data/20210330/20210330_manta_datasample.xlsx) as tidy as possible:
+
+1. Never modify the raw data: a (very) good practice
+2. Document the issues you encountered in the [hackmd (challenge 2)](https://hackmd.io/6RPBUP5BT9aOt9SQaUoOyg?both#Challenge-2)
 
 ---
 class: left, middle
 
-## INTERMEZZO
+# Intermezzo: metadata
+
+"data that provides information about other data". See
+[definition from Merriam-Webster](https://www.merriam-webster.com/dictionary/metadata/)
+
+<p> meta + data = transcending the data</p>
+
+metadata can describe fields (= columns) used in a standard, e.g. the [Darwin Core standard](https://dwc.tdwg.org/terms/)
+
+<br>![:scale 110%]({{ site.baseurl}}/assets/images/20210330/20210330_example_metadata_standard.png)
+
+---
+class: left, middle
+
+# Intermezzo: metadata
+
+metadata can describe datasets, e.g. a [GBIF checklist](https://www.gbif.org/dataset/6d9e952f-948c-4483-9807-575348147c7e)
+
+<br>![:scale 110%]({{ site.baseurl}}/assets/images/20210330/20210330_example_metadata_dataset.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -173,11 +196,18 @@ class: left, middle
 
 # Challenge 3
 
+In the world of camera trap data, there are people who like making things hard to read and understand. Try to tidy this dataset using R based on the (tidy!) metadata table in [20210330_metadata_cameratrap.csv](https://github.com/inbo/coding-club/blob/master/data/20210330/20210330_metadata_cameratrap.csv)
 
 ---
 class: left, middle
 
 # Bonus challenge
+
+Some real data from one of the INBO databases. The bird rings datafile [bird_rings_untidy.csv](https://github.com/inbo/coding-club/blob/master/data/20210330/20210330_bird_rings_untidy.csv) shows that it's easy to structure data in a tidy way at the beginning of a project, but data can become untidy when project grows up. When this table started, column `inscription` was enough. the researchers probably didn't think that a bird could get a second ring. And what if a bird will get a third ring?!?
+
+Try to make this dataset tidy using R.
+
+<br>![:scale 60%]({{ site.baseurl}}/assets/images/20210330/20210330_bird_rings_preview.png)
 
 ---
 class: left, middle
@@ -188,7 +218,8 @@ class: left, middle
 - video recording will be uploaded soon on INBO vimeo channel
 - [tidyr package documentation](https://tidyr.tidyverse.org/)
 - [tidyr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20210225_cheat_sheet_data_import.pdf): second page is about `tidyr` and tidying data
-- [`pivot_wider()` and `pivot_longer()` specific documentation](https://tidyr.tidyverse.org/articles/pivot.html)
+- the inspiring [datacarpentry lesson](https://datacarpentry.org/spreadsheet-ecology-lesson/) about spreadsheets
+- tidyr's [`pivot_wider()` and `pivot_longer()` specific documentation](https://tidyr.tidyverse.org/articles/pivot.html)
 
 ---
 class: center, middle
