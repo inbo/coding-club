@@ -75,7 +75,7 @@ To subscribe, fill in your name on this [gsheet](https://docs.google.com/spreads
 
 See you all theRe in good shape,
 
-Dirk, Hans, Damiano, Stijn
+Raïsa, Emma, Dirk, Hans, Damiano
 
 ![logo]({{site.baseurl}}/assets/images/coding_club_logo_1.png)
 
