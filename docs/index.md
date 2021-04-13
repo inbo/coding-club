@@ -51,7 +51,7 @@ Bringing your own laptop is mandatory, as we will always work together on the co
 
 ### Who organises the coding club?
 
-The current core team members are Hans Van Calster ([@hansvancalster](https://github.com/hansvancalster)), Emma Cartuyvels ([@EmmaCartuyvels1](https://github.com/EmmaCartuyvels1)), Dirk Maes ([@dirkmaes33](https://github.com/dirkmaes33)), Joost Vanoverbeke ([@joost-vanoverbeke](https://github.com/joost-vanoverbeke)) and Damiano Oldoni ([@damianooldoni](https://github.com/damianooldoni)). The core team is not there to make new course material, but focuses on the practical organisation.
+The current core team members are Hans Van Calster ([@hansvancalster](https://github.com/hansvancalster)), Emma Cartuyvels ([@EmmaCartuyvels1](https://github.com/EmmaCartuyvels1)), Raïsa Carmen ([@RCinbo](https://github.com/RCinbo)), Dirk Maes ([@dirkmaes33](https://github.com/dirkmaes33)), Joost Vanoverbeke ([@joost-vanoverbeke](https://github.com/joost-vanoverbeke)) and Damiano Oldoni ([@damianooldoni](https://github.com/damianooldoni)). The core team is not there to make new course material, but focuses on the practical organisation.
 
 More specifically, the core team takes care of:
 
