@@ -35,7 +35,7 @@ class: center, middle
 ---
 class: center, middle
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20210429_cheatsheet_dplyr.png)
+![:scale 100%]({{ site.baseurl}}/assets/images/20210429/20210429_cheatsheet_dplyr.png)
 [Download cheatsheet here](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20181129_cheat_sheet_data_transformation.pdf)
 
 ---
@@ -66,7 +66,7 @@ class: center, middle
 ### Share your code during the coding session!
 
 <!-- Create a new hackmd file and replace this link (twice!) -->
-Go to https://hackmd.io/4h8gOw_jQquPNV2vXtt9xQ?both
+Go to https://hackmd.io/4h8gOw_jQquPNV2vXtt9xQ?both and start by adding your name in section "Participants".
 
 <iframe src="https://hackmd.io/4h8gOw_jQquPNV2vXtt9xQ?edit" height="400px" width="800px"></iframe>
 
@@ -75,11 +75,13 @@ class: left, middle
 
 # Download data and code
 
+Today no R code script and only one data.frame to download
+
 You can download the material:
 
 - automatically via `inborutils::setup_codingclub_session()`*
 
-- manually, via [data](https://github.com/inbo/coding-club/blob/master/data/20210429/) and [scripts](https://github.com/inbo/coding-club/blob/master/src/20210429/)**!
+- manually**, via [data](https://github.com/inbo/coding-club/blob/master/data/20210429/)
 
 <br>
 <small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20201027")` to download the coding club material of October, 27 2020. If date is omitted, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
@@ -89,10 +91,12 @@ You can download the material:
 ---
 class: left, middle
 
-Load tidyverse packages
+Copy-paste the following code in a R script within your coding-club RStudio session and you can start with challenge 1. Happy coding.
 
 ```r
 library(tidyverse)
+# load aquatic trap data
+df <- read_csv("./data/20210429/20210429_aquatictrap_data.csv")
 ```
 
 ---
@@ -101,6 +105,30 @@ class: left, middle
 
 # Challenge 1
 
+1. Display the columns `id` and `weight_total`
+
+2. Display the distinct values of `location_id` and `location_name`
+
+3. Display data where both `weight` and `weight_total` are missing
+
+4. Order the rows by number of trapped individuals (`n_individuals`).
+How to order in increasing order? And in decreasing order?
+
+4. Improve previous ordering by adding `date` as second variable (in case
+same number of individuals occurs). Order both variables in descending order
+
+5. Display `id`, `species`, `n_individuals`, `weight` and `weight_total` for
+observations with non-empty values of `weight_total`
+
+---
+class: left, middle
+
+# Intermezzo: the _pipe_ %>%
+
+From [dplyr documentation](https://dplyr.tidyverse.org/articles/dplyr.html?q=pipe#the-pipe):
+
+![:scale 110%]({{ site.baseurl}}/assets/images/20210429/20210429_pipe.png)
+
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -108,12 +136,23 @@ class: left, middle
 
 # Challenge 2
 
+We can npw proceed by cleaning `df`.
 
----
-class: left, middle
+1. Set `weight_total` equal to `weight` if empty, remove column `weight` and
+save as new object `df_cleaned`
 
-# Intermezzo
+2. Based on number of trapped individuals (`n_individuals`) and `weight_total`, calculate
+the average weight for each catch and set it in a new column of `df_cleaned`
+called `weight`. Put the columns `id`, `species`,
+`n_individuals`, `n_traps` and all ones starting with "weight" ahead
 
+3. Improve location_name by applying this changes:
+
+original term | new term
+--- | ---
+`"Zandplaat Kastel"` | `"Kastel, zandplaat"`
+`"Antwerpen, Kennedytunnel"` | DO NOT CHANGE
+`"Grens Steendorp/Temse"` | `"Steendorp, grens met Temse"`
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -121,10 +160,27 @@ class: left, middle
 
 # Challenge 3
 
+1. For each combination of species and location, calculate the `weight_mean`,
+`depth_mean`, the `length_mean`, the minimum, the maximum and the total
+number of trapped individuals (`min_n`, `max_n`, `tot_n`),
+the date of the oldest and the most recent
+campaign (`first_deployment_date`, `last_deployment_date`)
+
+2. How many measurement campaigns for each date-location? Select the top 10
+
+3. For each location, calculate number of successful catches, `n_success`,
+(= `n_individuals` > 0 or `species` not `NA`) and number of species,  `n_species`
+
+4. Calculate the statistics in 1 only for locations with more than 5000
+successful catches
+
 
 ---
-class: left, middle
+class: center, middle
 
+# What do you think about breakout rooms?
+
+![:scale 90%]({{ site.baseurl}}/assets/images/time_for_review.jpg)
 
 ---
 class: left, middle
@@ -135,6 +191,7 @@ class: left, middle
 - video recording of this coding club will be available soon on the [INBO vimeo channel](https://vimeo.com/inbo)
 - [dplyr package documentation](https://dplyr.tidyverse.org/)
 - [dplyr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20181129_cheat_sheet_data_transformation.pdf)
+- extra challenges in [coding club of 28-01-2020](https://inbo.github.io/coding-club/sessions/20200128_data_exploration.html#1)
 
 ---
 class: center, middle
