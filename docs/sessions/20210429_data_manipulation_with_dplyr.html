@@ -29,6 +29,13 @@ Exclusively on INBOflix
 ---
 class: center, middle
 
+# Welcome Raisa
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210429/20210429_welcome_raisa_message.png)
+
+---
+class: center, middle
+
 <!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
 ![:scale 90%]({{ site.baseurl}}/assets/images/20210429/20210429_badge_data_manipulation.png)
 
@@ -81,7 +88,7 @@ You can download the material:
 
 - automatically via `inborutils::setup_codingclub_session()`*
 
-- manually**, via [data](https://github.com/inbo/coding-club/blob/master/data/20210429/)
+- manually** from GitHub folder [coding-club/data/20210429](https://github.com/inbo/coding-club/blob/master/data/20210429/)
 
 <br>
 <small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20201027")` to download the coding club material of October, 27 2020. If date is omitted, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
@@ -91,7 +98,9 @@ You can download the material:
 ---
 class: left, middle
 
-Copy-paste the following code in a R script within your coding-club RStudio session and you can start with challenge 1. Happy coding.
+Today we will work with aquatic trap data!
+
+Copy-paste the following code in a R script within your `coding-club` RStudio session and you can start with challenge 1. Happy coding.
 
 ```r
 library(tidyverse)
@@ -136,7 +145,7 @@ class: left, middle
 
 # Challenge 2
 
-We can npw proceed by cleaning `df`.
+We can now proceed by cleaning `df`.
 
 1. Set `weight_total` equal to `weight` if empty, remove column `weight` and
 save as new object `df_cleaned`
@@ -146,7 +155,7 @@ the average weight for each catch and set it in a new column of `df_cleaned`
 called `weight`. Put the columns `id`, `species`,
 `n_individuals`, `n_traps` and all ones starting with "weight" ahead
 
-3. Improve location_name by applying this changes:
+3. Improve location_name by applying these changes:
 
 original term | new term
 --- | ---
