@@ -183,6 +183,30 @@ campaign (`first_deployment_date`, `last_deployment_date`)
 4. Calculate the statistics in 1 only for locations with more than 5000
 successful catches
 
+---
+class: left, middle
+
+# dplyr: make hard things easy
+
+Do you want to calculate the _nonparametric bootstrap for obtaining confidence limits for the population mean without assuming normality_? :scream: With dplyr it's child's play!
+
+```r
+> df_cleaned %>% group_by(species) %>% summarise(mean_cl_boot(length))
+# A tibble: 44 x 4
+   species                       y  ymin  ymax
+   <chr>                     <dbl> <dbl> <dbl>
+ 1 baars                      9.52  8.61 10.5
+ 2 bittervoorn                5.23  4.75  5.66
+ 3 blankvoorn                 9.90  9.48 10.3
+ 4 blauwbandgrondel           5.57  5.36  5.79
+ 5 bot                        7.46  7.28  7.63
+ 6 brakwatergrondel           4.26  4.21  4.32
+ 7 brasem                    13.1  12.4  13.9
+ 8 chinese_wolhandkrab      NaN    NA    NA
+ 9 dikkopje                   4.90  4.78  5.02
+10 driedoornige_stekelbaars   5.62  5.44  5.88
+# ... with 34 more rows
+```
 
 ---
 class: center, middle
