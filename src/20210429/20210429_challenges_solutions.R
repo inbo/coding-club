@@ -39,6 +39,30 @@ result <- filter(result, !is.na(weight_total))
 
 ## the pipe %>% en how it works, use previous exercises as examples
 
+# select(df, id, weight_total)
+df %>% select(id, weight_total)
+
+# distinct(df, location_id, location_name)
+df %>% distinct(location_id, location_name)
+
+# filter(df, is.na(weight), is.na(weight_total))
+df %>% filter(is.na(weight), is.na(weight_total))
+
+# arrange(df, n_individuals)
+df %>% arrange(n_individuals)
+
+# arrange(df, desc(n_individuals))
+df %>% arrange(desc(n_individuals))
+
+# arrange(df, desc(n_individuals), desc(date))
+df %>% arrange(desc(n_individuals), desc(date))
+
+# result <- select(df, id, species, n_individuals, weight, weight_total)
+# result <- filter(result, !is.na(weight_total))
+df %>%
+  select(id, species, n_individuals, weight, weight_total) %>%
+  filter(!is.na(weight_total))
+
 
 ## CHALLENGE 2:  manipulate data
 
@@ -72,8 +96,7 @@ df_cleaned <-
   mutate(location_name = recode(
     location_name,
     "Zandplaat Kastel" = "Kastel, zandplaat",
-    "Grens Steendorp/Temse" = "Steendorp, grens met Temse")) %>%
-  distinct(location_name)
+    "Grens Steendorp/Temse" = "Steendorp, grens met Temse"))
 
 ## CHALLENGE 3
 
