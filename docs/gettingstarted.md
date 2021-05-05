@@ -51,9 +51,19 @@ To complete the challenges, both data sets and R code are used in the sessions:
 * When data sets are used during the challenges: put data inside the `data/yyyymmdd` folder
 * When scripts are used during the challenges: put them in the `src/yyyymmdd` folder
 
-__How to download a single file__? The links to the data sets and source code will be provided, e.g. [this script](https://github.com/inbo/coding-club/blob/master/src/20180821/20180821_challenge_1.R). Go to the page and look for the button `Raw` or `Download`. Next, right click on this button and choose `Save link as...` (or _Link opslaan als..._). Navigate to the respective folder (either `src` or `data`) and save the file.
+### How to download a single file? 
 
-__How to donwload data automatically?__ We wrote an R function to help you downloading all material you need. In your `coding-club` project: just run `inborutils::setup_codingclub_session()`. For downloading a past coding club edition pass the date in the `"yyyymmdd"` format to the function.
+The links to the data sets and source code will be provided, e.g. [this script](https://github.com/inbo/coding-club/blob/master/src/20180821/20180821_challenge_1.R). For all type files except  `csv`, `tsv` (i.e. text files with extensions different than `txt`): 
+1. go to the page and look for the button `Raw` or `Download`
+2. right click on this button and choose `Save link as` (or _Link opslaan als_)
+3. navigate to the respective folder (either `src` or `data`) and save the file
+
+For csv or tsv (all text files with extension not  `txt`):
+1. go to the page and look for the button `Raw` or `Download`. 
+2. right click on this button and choose `Open as new tab` (or _Link openen in nieuw tabblad_)
+3. select in the new tab the option `Save page as` (or  `Pagina opslaan als` )
+4. navigate to the respective folder (either `src` or `data`) and save the file
+
 
 __Note for git-users__: You can do `git pull origin master` (or click the `pull` button in the git tab) to download the new material.
 
