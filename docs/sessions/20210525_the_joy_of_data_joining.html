@@ -158,9 +158,9 @@ class: left, middle
 
 # Challenge 2
 
-1. distribution data.frames from Belgium, Netherlands and Luxembourg should not overlap. How can you check it? There are several ways to do it, but try to use a data joining technique, which is likely the shortest and more readable way
+1. distributions from Belgium, Netherlands and Luxembourg should not overlap. How can you check it? There are several ways to do it, but try to use a data joining technique, which is likely the shortest and more readable way
 
-2. Merge the distributions from Belgium, Netherlands and Luxembourg into a data.frame called `distribution`
+2. Merge the three `distribution_*` dataframes into a data.frame called `distribution`
 
 3. Check that all taxa in `vernacularname` point to taxa in `taxon`
 
@@ -172,23 +172,21 @@ class: left, middle
 
 # Challenge 3
 
-1. Add `vernacularname` information to `taxon`. Save the result as a new df called `extended_taxon`.
-What happens to columns with the same name?
+1. Add `vernacularname` information to `taxon`. Save the result as a new df called `extended_taxon`. What happens to columns with the same name?
 Distinguish them by adding suffix "_taxon" to the column(s) from `taxon`, and
 "_distribution" to the column(s) from `distribution`.
 
 2. Add `distribution` to `extended_taxon` and retain only the
 taxa found in Belgiumn, Netherlands or Luxembourg, i.e. only taxa in `distribution`
 
-3. Dirk aims to include as much national checklists as possible. He needs data
-from the Balcans. His dear Albanian colleagues sent him an Albanian national
+3. Dirk points to East, he wants to include butterfly data from the Balcans.
+His dear Albanian colleagues send him an Albanian national
 list based on the same format as the Belgian/Dutch/Luxembourg ones. He got three files: `taxon_AL`,
 `distribution_AL` and `vernacularname_AL`. Which species are found only in Albania? And which one in West Europe (`taxon`) but not in Albania?
 
 4. Which species are found both in Albania (`taxon_AL`) and in West-Europe?
 
 5. Help him to merge `taxon_AL`,  `distribution_AL` and `vernacularname_AL` to `taxon`, `distribution` and `vernacularname` respecitvely
-
 
 ---
 class: center, middle
