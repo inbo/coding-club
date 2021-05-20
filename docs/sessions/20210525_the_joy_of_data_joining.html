@@ -1,0 +1,172 @@
+---
+layout: presentation
+title: The joy of data joining
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 25 MAY 2021
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Exclusively on INBOflix
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20210429/20210429_badge_data_manipulation.png)
+
+---
+class: center, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210525/20210525_cheatsheet_dplyr.png)
+[Download cheatsheet here](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20181129_cheat_sheet_data_transformation.pdf)
+
+---
+class: center, middle
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, middle
+
+## Coding club tables
+
+**Like** a card club, we will split us in different tables (aka _breakout rooms_) and we will help each other! We return all together after a fixed amount of time to discuss each challenge apart.
+
+**Unlike** a card club, in our club there is no winner, neither within a table nor among tables!
+
+![:scale 65%]({{ site.baseurl}}/assets/images/breakout_rooms.png)
+
+---
+class: center, middle
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/qjtMSYw4Tm2-V60C_hPx5Q?both and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/qjtMSYw4Tm2-V60C_hPx5Q?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, middle
+
+# Download data and code
+
+Today no R code script and only one data.frame to download
+
+You can download the material:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub folder [coding-club/data/20210525](https://github.com/inbo/coding-club/blob/master/data/20210525/)
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20201027")` to download the coding club material of October, 27 2020. If date is omitted, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, middle
+
+# Data description
+
+Today we work on both dummy data and more serious biological data.
+
+## Dummy data
+
+Two datasets: `coding_club_core_team` and  `bmk_team`
+
+## Biological data
+
+GBIF butterfly checklist data, inspired by Dirk's [Eurobutt checklist](https://www.gbif.org/dataset/f9af6ffd-febc-4626-b2e8-809b1c60fa01#description). The downloaded data includes information of butterflies found in West-Europe.
+
+You have just downloadeded:
+- `taxon`: a taxon core data.frame with taxonomic information. Each butterfly has a unique identifier (column `id`)
+- `distribution`: in which countries the taxa are found and their threat status in each country. Link to`taxon` in column `taxon_id`
+- `vernacularname`: vernacular names in English. Link to `taxon` in column `taxon_id`
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, middle
+
+# Challenge 1
+
+1. How to add orcid information to coding club core team dataframe (where available)?
+
+2. How are the columns ordered? Are the columns of coding_club_core_team on the left?
+Try to get same result but putting them on the right
+
+3. Join coding club core team with BMK team and retain only people who are part of both.
+
+4. How to invert the order of the columns?
+
+5. Now, join both again but retain ALL, some NAs will appear, of couse
+
+
+---
+class: left, middle
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, middle
+
+# Challenge 2
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3
+
+
+
+---
+class: left, middle
+
+
+
+---
+class: left, middle
+
+## Resources
+
+- R script with [challenge solutions]() will be added soon
+- [video recording]() of this coding club will be published soon on the [INBO vimeo channel](https://vimeo.com/inbo)
+- [dplyr package documentation](https://dplyr.tidyverse.org/)
+- [dplyr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20181129_cheat_sheet_data_transformation.pdf)
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.05 - Isala Van Diest(?)<br>
+Date: __24/06/2021__, van 10:00 tot 12:00<br>
+Subject: **functions in R** <br>
+(registration announced via DG_useR@inbo.be)
