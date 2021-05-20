@@ -75,7 +75,7 @@ class: left, middle
 
 # Download data and code
 
-Today no R code script and only one data.frame to download
+Today no R code script. We put all dataframes in a unique `.Rda` file
 
 You can download the material:
 
@@ -87,6 +87,22 @@ You can download the material:
 <small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20201027")` to download the coding club material of October, 27 2020. If date is omitted, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
 <br>
 <small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, middle
+
+# Load libraries and data
+
+```r
+install.packages("tidylog")
+library(tidyverse)
+library(tidylog)
+```
+
+```r
+load("./data/20210525/20210525_data.Rda")
+```
+
 
 ---
 class: left, middle
@@ -106,7 +122,6 @@ GBIF butterfly checklist data, inspired by Dirk's [Eurobutt checklist](https://w
 - `taxon`: dataframe with taxonomic information of butterflies found in West-Europe. Each butterfly has a unique identifier (column `id`)
 - `vernacularname`: vernacular names in English. Link to `taxon` in column `taxon_id`
 - `distribution_BE`, `distribution_NL`,  `distribution_LU` : data.frame about distribution and threat status for Belgium (BE), the Netherlands (NL) and Luxembourg (LU). Link to `taxon` dataframe in column `taxon_id`
-
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
