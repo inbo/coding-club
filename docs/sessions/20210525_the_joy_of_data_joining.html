@@ -93,6 +93,8 @@ class: left, middle
 
 # Load libraries and data
 
+The R package [`tidylog`](https://github.com/elbersb/tidylog#tidylog) can be very helpful as it provides feedback about dplyr and tidyr operations.
+
 ```r
 install.packages("tidylog")
 library(tidyverse)
@@ -113,7 +115,7 @@ Today we work on both dummy data and more serious biological data.
 
 ## Dummy data
 
-Two datasets: `coding_club_core_team` and  `bmk_team`
+Two dataframes: `coding_club_core_team` and  `bmk_team`
 
 ## Biological data
 
@@ -121,7 +123,7 @@ GBIF butterfly checklist data, inspired by Dirk's [Eurobutt checklist](https://w
 
 - `taxon`: dataframe with taxonomic information of butterflies found in West-Europe. Each butterfly has a unique identifier (column `id`)
 - `vernacularname`: vernacular names in English. Link to `taxon` in column `taxon_id`
-- `distribution_BE`, `distribution_NL`,  `distribution_LU` : data.frame about distribution and threat status for Belgium (BE), the Netherlands (NL) and Luxembourg (LU). Link to `taxon` dataframe in column `taxon_id`
+- `distribution_BE`, `distribution_NL`,  `distribution_LU` : data.frames about distribution and threat status of butterflies in Belgium (BE), the Netherlands (NL) and Luxembourg (LU). Link to `taxon` in column `taxon_id`
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -138,7 +140,7 @@ Try to get same result but putting them on the right
 
 4. How to invert the order of the columns?
 
-5. Now, join both again but retain ALL
+5. Now, join both again but retain ALL people
 
 
 ---
@@ -191,10 +193,11 @@ list based on the same format as the Belgian/Dutch/Luxembourg ones. He got three
 ---
 class: center, middle
 
+# Feedback
+
 We would like to know your opinion about the coding club structure (breaking rooms, participation in discussing solutions, ...)
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/time_for_review.jpg)
-
 
 ---
 class: left, middle
