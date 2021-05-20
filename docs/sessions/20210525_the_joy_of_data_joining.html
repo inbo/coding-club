@@ -30,7 +30,7 @@ Exclusively on INBOflix
 class: center, middle
 
 <!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
-![:scale 90%]({{ site.baseurl}}/assets/images/20210429/20210429_badge_data_manipulation.png)
+![:scale 90%]({{ site.baseurl}}/assets/images/20210525/20210525_badge_data_joining.png)
 
 ---
 class: center, middle
@@ -101,12 +101,12 @@ Two datasets: `coding_club_core_team` and  `bmk_team`
 
 ## Biological data
 
-GBIF butterfly checklist data, inspired by Dirk's [Eurobutt checklist](https://www.gbif.org/dataset/f9af6ffd-febc-4626-b2e8-809b1c60fa01#description). The downloaded data includes information of butterflies found in West-Europe.
+GBIF butterfly checklist data, inspired by Dirk's [Eurobutt checklist](https://www.gbif.org/dataset/f9af6ffd-febc-4626-b2e8-809b1c60fa01#description).
 
-You have just downloadeded:
-- `taxon`: a taxon core data.frame with taxonomic information. Each butterfly has a unique identifier (column `id`)
-- `distribution`: in which countries the taxa are found and their threat status in each country. Link to`taxon` in column `taxon_id`
+- `taxon`: dataframe with taxonomic information of butterflies found in West-Europe. Each butterfly has a unique identifier (column `id`)
 - `vernacularname`: vernacular names in English. Link to `taxon` in column `taxon_id`
+- `distribution_BE`, `distribution_NL`,  `distribution_LU` : data.frame about distribution and threat status for Belgium (BE), the Netherlands (NL) and Luxembourg (LU). Link to `taxon` dataframe in column `taxon_id`
+
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -114,21 +114,26 @@ class: left, middle
 
 # Challenge 1
 
-1. How to add orcid information to coding club core team dataframe (where available)?
+1. How to add orcid information to `coding_club_core_team`?
 
-2. How are the columns ordered? Are the columns of coding_club_core_team on the left?
+2. How are the columns ordered? Are the columns of `coding_club_core_team` on the left?
 Try to get same result but putting them on the right
 
-3. Join coding club core team with BMK team and retain only people who are part of both.
+3. Join`coding_club_core_team` with `bmk_team` and retain only people who are part of both
 
 4. How to invert the order of the columns?
 
-5. Now, join both again but retain ALL, some NAs will appear, of couse
+5. Now, join both again but retain ALL
 
 
 ---
 class: left, middle
 
+# Intermezzo: combine variables vs cases
+
+In 5 of 1st challenge, we do not only add columns (_variables_), but also rows (_cases_). Why cannot we do it then by functions which combine rows?
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20210525/20210525_cobmine_variables_cases.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -136,6 +141,13 @@ class: left, middle
 
 # Challenge 2
 
+1. distribution data.frames from Belgium, Netherlands and Luxembourg should not overlap. How can you check it? There are several ways to do it, but try to use a data joining technique, which is likely the shortest and more readable way
+
+2. Merge the distributions from Belgium, Netherlands and Luxembourg into a data.frame called `distribution`
+
+3. Check that all taxa in `vernacularname` point to taxa in `taxon`
+
+4. Which taxa in `taxon` do not have vernacular names?
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -143,11 +155,30 @@ class: left, middle
 
 # Challenge 3
 
+1. Add `vernacularname` information to `taxon`. Save the result as a new df called `extended_taxon`.
+What happens to columns with the same name?
+Distinguish them by adding suffix "_taxon" to the column(s) from `taxon`, and
+"_distribution" to the column(s) from `distribution`.
+
+2. Add `distribution` to `extended_taxon` and retain only the
+taxa found in Belgiumn, Netherlands or Luxembourg, i.e. only taxa in `distribution`
+
+3. Dirk aims to include as much national checklists as possible. He needs data
+from the Balcans. His dear Albanian colleagues sent him an Albanian national
+list based on the same format as the Belgian/Dutch/Luxembourg ones. He got three files: `taxon_AL`,
+`distribution_AL` and `vernacularname_AL`. Which species are found only in Albania? And which one in West Europe (`taxon`) but not in Albania?
+
+4. Which species are found both in Albania (`taxon_AL`) and in West-Europe?
+
+5. Help him to merge `taxon_AL`,  `distribution_AL` and `vernacularname_AL` to `taxon`, `distribution` and `vernacularname` respecitvely
 
 
 ---
-class: left, middle
+class: center, middle
 
+We would like to know your opinion about the coding club structure (breaking rooms, participation in discussing solutions, ...)
+
+![:scale 90%]({{ site.baseurl}}/assets/images/time_for_review.jpg)
 
 
 ---

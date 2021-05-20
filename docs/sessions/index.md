@@ -3,6 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
+| 2021-05-25 | the joy of data joining | [slides]({{ site.baseurl }}{% link sessions/20210525_the_joy_of_data_joining.html  %}) | [hackmd](https://hackmd.io/qjtMSYw4Tm2-V60C_hPx5Q?view) | webinar |  |
 | 2021-04-29 | data manipulation with dplyr | [slides]({{ site.baseurl }}{% link sessions/20210429_data_manipulation_with_dplyr.html  %}) | [hackmd](https://hackmd.io/4h8gOw_jQquPNV2vXtt9xQ?view) | webinar | [vimeo](https://vimeo.com/544524895) |
 | 2021-03-30 | tidy data | [slides]({{ site.baseurl }}{% link sessions/20210330_tidy_data.html  %}) | [hackmd](https://hackmd.io/6RPBUP5BT9aOt9SQaUoOyg?view) | webinar | [vimeo](https://vimeo.com/532185427) |
 | 2021-02-25 | read datafiles in R | [slides]({{ site.baseurl }}{% link sessions/20210225_read_datafiles_in_r.html  %}) | [hackmd](https://hackmd.io/xm_RYj5xTGOh0jHQiiu9_A?view) | webinar | [vimeo](https://vimeo.com/519026595) |
