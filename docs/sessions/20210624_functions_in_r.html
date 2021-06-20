@@ -1,0 +1,209 @@
+---
+layout: presentation
+title: Functions in R
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 24 JUNE 2021
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Exclusively on INBOflix
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20210624/20210624_badge_functions_in_r.png)
+
+---
+class: center, middle
+
+# Introduction: what's a function (in R)?
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20210624/20210624_function_flow.png)
+
+```r
+# create your function
+my_function <- function(var1) {
+    # "do something" with var1 to generate an output
+    return(output)
+}
+
+# use your function as many times as you want
+input1 <- 5
+my_value1 <- my_function(input1)
+input2 <- 6
+my_value2 <- my_function(input2)
+```
+
+When do we **absolutely** need functions? If both these conditions are true:
+
+1. the "do something" is longer than one line of code
+2. you need to "do something" at least for two different inputs
+
+---
+class: center, middle
+
+Functions are the building blocks of your data analysis.
+
+Give your functions understandable and short enough names.
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20210624/20210624_functions_as_building_blocks.jpg)
+
+---
+class: center, middle
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, middle
+
+## Coding club play tables
+
+**Like** a card club, we will split us in different tables (aka _breakout rooms_) and we will help each other! We return all together after a fixed amount of time to discuss each challenge apart.
+
+**Unlike** a card club, in our club there is no winner, neither within a table nor among tables!
+
+![:scale 65%]({{ site.baseurl}}/assets/images/breakout_rooms.png)
+
+---
+class: center, middle
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/HoRyIsrqR9-uAGoGGDKbVA?both and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/HoRyIsrqR9-uAGoGGDKbVA?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, middle
+
+# Download data and code
+
+Today no R code script. We put all dataframes in a unique `.Rda` file
+
+You can download the material:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub folder [coding-club/data/20210624](https://github.com/inbo/coding-club/blob/master/data/20210624/)
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20201027")` to download the coding club material of October, 27 2020. If date is omitted, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, middle
+
+# Load libraries and data
+
+
+```r
+```
+
+```r
+load("./data/20210624/20210624_data.Rda")
+```
+
+
+---
+class: left, middle
+
+# Data description
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, middle
+
+# Challenge 1
+
+
+
+---
+class: left, middle
+
+# Intermezzo
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, middle
+
+# Challenge 2
+
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3
+
+
+---
+class: center, middle
+
+# Did you write a function useful for yourself and your colleagues?
+
+Share it by adding it to [`inborutils`](https://github.com/inbo/inborutils) package.
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20210624/20210624_inborutils.png)
+
+
+---
+class:center, middle
+
+# Do you want more?
+
+<p>Go [in depth](http://adv-r.had.co.nz/Functions.html#function-arguments), do a check [under the hood](https://swcarpentry.github.io/r-novice-inflammation/14-supp-call-stack/) or learn more about [programming with `dplyr`](https://dplyr.tidyverse.org/articles/programming.html).</p>
+![:scale 90%]({{ site.baseurl}}/assets/images/20210624/20210624_more_info_functions.png)
+
+---
+class:center, middle
+
+# Summer break
+
+July = summer = no INBO coding club
+
+```r
+library(cowsay)
+cowsay::say(what = "Enjoy the summeR!", by = "egret", what_color = c("red", "orange", "green", "blue", "purple"))
+```
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20210624/20210624_summerbreak.png)
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.05 - Isala Van Diest<br>
+Date: __31/08/2021__, van 10:00 tot 12:00<br>
+Subject: **ggplot basics** <br>
+(registration announced via DG_useR@inbo.be)
