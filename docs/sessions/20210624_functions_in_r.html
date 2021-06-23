@@ -194,21 +194,35 @@ get now observations of Chorthippus biguttulus. Write a function called
 as argument a species (e.g. "Harmonia axyridis") and returns the observations
 of 2010 as a data.frame
 
-2. It's January 2012. Mrs Z got observations of Harmonia axyridis collected in
-2011. How does she read these data? Does she create a new function, `get_obs_2011` or does she change the function she wrote one year before by adding the  `year` as extra argument and renaming it  `get_obs()`?
-
----
-class: left, middle
-
-# Intermezzo
+2. It's January 2012. Mrs Z got observations of Harmonia axyridis collected in 2011. How does she read these data? Does she create a new function, `get_obs_2011()` or does she best change the function she wrote one year before by renaming it  `get_obs()` and adding `year` as extra argument?
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, middle
 
-# Challenge 2
+# Challenge 2 part 1
 
+1. Write a function called `clean_data()` to handle step 2 and return the cleaned data.frame without suspected or not enough precise observations. Input arguments:
+    - `df` data.frame with observations
+    -  `max_coord_uncertain`: maximum of `coordinateUncertaintyInMeters` (numeric), deafult value as in script
+    - `issues_to_discard` (character vector), default value as in script
+    - `occurrenceStatus_to_discard` (character vector), default value as in script
+2. Write a function called `assign_eea_cell()` to handle step 3. Return  a `df` as input, with two extra columns: `geometry` and `eea_cell_code`, the last one containing the EEA cell code each observation belongs to. Input argument:
+    - `df` data.frame with observations
+    - `longitude_colname`: character, name of the column with longitude values*
+    - `latitude_colname`: character, name of the column with latitude values*
+<br>
+<small> __\* Note__: `!!sym()` can help you to use the longitude/latitude colnames in the `mutate()` step</small>
 
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, middle
+
+# Challenge 2 part 2
+
+3. Although short, step 4 should be put in a function apart, instead of being part of the previous function. Do you agree? Why? If you agree, put it in a function called  `get_n_obs_per_cell()`
+
+4. Write a function for step 5. Would you read the shapefile with the EEA grid of Belgium in the function or outside the function? up to you to find a good name to the function :-)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -216,6 +230,11 @@ class: left, middle
 
 # Challenge 3
 
+1. We are almost there. Adapt the last part of the code to be able to personalize the interactive leaflet. Write a function called `visualize_obs_cells()`, which should allow the user to make leaflet maps for any `species` and any `year`. Allow the user also to specify his/her own color palette (`pal`) and the filling color opacity of the cells. You can use the values in the code as default values. Test the function providing other input values.
+
+2. Now that we have all blocks, what do you think to automatize the entire workflow by creating a function called `make_report()`? Think about which arguments you need as input. Return a list containing:
+- the data.frame returned by step 4
+- the leaflet map
 
 ---
 class: center, middle
