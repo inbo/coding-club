@@ -75,15 +75,35 @@ class: left, top
 ]
 
 ---
-class: center, middle
+class: left, top
 
-.left[
 - functions are the building blocks of your data analysis
 - give your functions understandable and short enough names
-]
+
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20210624/20210624_functions_as_building_blocks.jpg)
 
+---
+class: left, top
+
+# Introduction: output of R Functions
+
+Can a R function return multiple outputs? NO! But you can put your outputs (e.g. a data.frame and a plot) in a list. A named list will make you and any other using the function happy...
+
+```r
+library(tidyverse)
+my_summary_function <- function(df, x_colname, y_colname) {
+  my_summary <- str(df)
+  my_plot <- ggplot(df) + geom_point(aes(!!sym(x_colname), !!sym(y_colname)))
+  return(list(summary = my_summary, plot = my_plot))
+}
+
+mtcars_mpg_disp <- my_summary_function(df = mtcars,
+                                       x_colname = "mpg",
+                                       y_colname = "disp")
+mtcars_mpg_disp$summary
+mtcars_mpg_disp$plot
+```
 ---
 class: center, middle
 
@@ -121,13 +141,11 @@ class: left, middle
 
 # Download data and code
 
-Today no R code script. We put all dataframes in a unique `.Rda` file
-
-You can download the material:
+You can download the material of today:
 
 - automatically via `inborutils::setup_codingclub_session()`*
 
-- manually** from GitHub folder [coding-club/data/20210624](https://github.com/inbo/coding-club/blob/master/data/20210624/)
+- manually** from GitHub folders [coding-club/data/20210624](https://github.com/inbo/coding-club/tree/master/data/20210624) and [coding-club/src/20210624](https://github.com/inbo/coding-club/tree/master/src/20210624)
 
 <br>
 <small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20201027")` to download the coding club material of October, 27 2020. If date is omitted, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
@@ -140,14 +158,29 @@ class: left, middle
 # Load libraries and data
 
 ```r
-load("./data/20210624/20210624_data.Rda")
+library(tidyverse)
+library(tidylog) # not mandatory, just I find it useful
+library(sf)
+library(leaflet)
+library(htmltools)
 ```
 
 ---
 class: left, middle
 
-# Data description
+# The data world of Mrs. Z
 
+Today you play the role of a researcher, Mrs Z. She received in January 2011 observations of the asian ladybeetle (_Harmonia axyridis_) collected in the surroundings of Antwerp by a contractor. These observations are stored in [20210624_harmonia_axyridis_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20210624/harmonia_axyridis_2010.txt). She wrote some code to read, analyze, group and visualize these obsevations. You can find the code in [20210624_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20210624/20210624_challenges.R). She got also a geopacakge shapefile, [20210624_eea_1x1km_grid_BE.gpkg](https://github.com/inbo/coding-club/blob/master/data/20210624/20210624_eea_1x1km_grid_BE.gpkg), containing the official [1x1km square grid](https://www.eea.europa.eu/data-and-maps/data/eea-reference-grids-2) for Belgium, as provided by the [European Environment Agency](https://www.eea.europa.eu/).
+
+What it seemed to be a one shot anlysis, becomes some days later something more: she receives a similar file from another contractor containing observations of the bow-winged grasshopper (_Chorthippus biguttulus_) collected in the same area: [20210624_chorthippus_biguttulus_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20210624/20210624_chorthippus_biguttulus_2010.txt). Important to note that the columns containing the coordinates are called slightly different.
+
+She also get to know that she will have to redo the same analysis the next years, at least on observations of the Asian ladybeetle. And here you are:
+- [20210624_harmonia_axyridis_2011.txt](https://github.com/inbo/coding-club/blob/master/data/20210624/20210624_harmonia_axyridis_2011.txt)
+- [20210624_harmonia_axyridis_2012.txt](https://github.com/inbo/coding-club/blob/master/data/20210624/20210624_harmonia_axyridis_2012.txt)
+
+I think you can find yourself in the role of Mrs Z in this Oscar awarded movie.
+
+Before starting, a best practice reminder: write and save the functions in a separate file. You can call it `20210624_functions.R`. You can use your functions in the challenge file by _sourcing_ this file, e.g. `source("./src/20210624/20210624_functions.R")`.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -155,7 +188,14 @@ class: left, middle
 
 # Challenge 1
 
+1. It's January 2011. After getting the observations of Harmonia axyridis, you
+get now observations of Chorthippus biguttulus. Write a function called
+`get_obs_2010()` which takes
+as argument a species (e.g. "Harmonia axyridis") and returns the observations
+of 2010 as a data.frame
 
+2. It's January 2012. Mrs Z got observations of Harmonia axyridis collected in
+2011. How does she read these data? Does she create a new function, `get_obs_2011` or does she change the function she wrote one year before by adding the  `year` as extra argument and renaming it  `get_obs()`?
 
 ---
 class: left, middle
@@ -194,6 +234,8 @@ class:center, middle
 
 <p>Go [in depth](http://adv-r.had.co.nz/Functions.html#function-arguments), do a check [under the hood](https://swcarpentry.github.io/r-novice-inflammation/14-supp-call-stack/) or learn more about [programming with `dplyr`](https://dplyr.tidyverse.org/articles/programming.html).</p>
 ![:scale 90%]({{ site.baseurl}}/assets/images/20210624/20210624_more_info_functions.png)
+
+<p>More challenges? Check the [coding club session](https://inbo.github.io/coding-club/sessions/20190924_make_your_code_functional_use_functions.html) of 24-09-2019. Have fun!</p>
 
 ---
 class:center, middle
