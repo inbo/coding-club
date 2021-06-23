@@ -33,11 +33,11 @@ class: center, middle
 ![:scale 90%]({{ site.baseurl}}/assets/images/20210624/20210624_badge_functions_in_r.png)
 
 ---
-class: center, middle
+class: left, middle
 
 # Introduction: what's a function (in R)?
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20210624/20210624_function_flow.png)
+.center[![:scale 50%]({{ site.baseurl}}/assets/images/20210624/20210624_function_flow.png)]
 
 ```r
 # create your function
@@ -54,30 +54,33 @@ my_value2 <- my_function(input2)
 ```
 
 ---
-class: center, middle
+class: left, middle
 
 # Introduction: When do we ABSOLUTELY need functions?
 
-When do we **absolutely** need functions? If both these conditions are true:
+If both these conditions are true:
 
 - you have to `"do something"` longer than one line of code
 - you need to `"do something"` at least for two different inputs
 
 ---
-class: center, middle
+class: left, top
 
-# Introduction: When do we SHOULD use functions?
+# Introduction: When SHOULD we use functions?
 
 - the "do something" is actually a workflow: split it in (small) functions
 - the "do something" is very short (e.g. a one-line formula) but often used: putting it in a function will give it an understandable name and will avoid typos
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20210624/20210824_logical_process_from_just_code_to_functions.png)
+.center[![:scale 60%]({{ site.baseurl}}/assets/images/20210624/20210824_logical_process_from_just_code_to_functions.png)
+]
 
 ---
 class: center, middle
 
+.left[
 - functions are the building blocks of your data analysis
 - give your functions understandable and short enough names
+]
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20210624/20210624_functions_as_building_blocks.jpg)
 
@@ -136,14 +139,9 @@ class: left, middle
 
 # Load libraries and data
 
-
-```r
-```
-
 ```r
 load("./data/20210624/20210624_data.Rda")
 ```
-
 
 ---
 class: left, middle
@@ -209,7 +207,7 @@ library(cowsay)
 cowsay::say(what = "Enjoy the summeR!", by = "egret", what_color = c("red", "orange", "green", "blue", "purple"))
 ```
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20210624/20210624_summerbreak.png)
+![:scale 30%]({{ site.baseurl}}/assets/images/20210624/20210624_summerbreak.png)
 
 ---
 class: center, middle
