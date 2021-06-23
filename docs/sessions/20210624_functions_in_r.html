@@ -86,26 +86,30 @@ class: left, top
 ---
 class: left, top
 
-# Introduction: output of R Functions
+# Introduction: output of R functions
 
-Can a R function return multiple outputs? NO! But you can put your outputs (e.g. a data.frame and a plot) in a list. A named list will make you and any other using the function happy...
+Can a R function return multiple outputs?
+
+NO. R functions return only **one output**: `return(my_output)`
+
+But you can put your outputs (e.g. a data.frame and a plot) in a list. A named list will make the future-you and any other using the function very happy: documentation begins by coding with style :-)
 
 ```r
 library(tidyverse)
 my_summary_function <- function(df, x_colname, y_colname) {
-  my_summary <- str(df)
-  my_plot <- ggplot(df) + geom_point(aes(!!sym(x_colname), !!sym(y_colname)))
-  return(list(summary = my_summary, plot = my_plot))
+  df_prev <- head(df)
+  point_overview <- ggplot(df) + geom_point(aes(!!sym(x_colname), !!sym(y_colname)))
+  return(list(df_preview = df_prev, plot_overview = point_overview))
 }
 
-mtcars_mpg_disp <- my_summary_function(df = mtcars,
-                                       x_colname = "mpg",
-                                       y_colname = "disp")
-mtcars_mpg_disp$summary
-mtcars_mpg_disp$plot
+overview_mtcars_mpg_disp <- my_summary_function(df = mtcars,
+                                                x_colname = "mpg",
+                                                y_colname = "disp")
+overview_mtcars_mpg_disp$df_preview
+overview_mtcars_mpg_disp$plot_overview
 ```
 ---
-class: center, middle
+class: center, top
 
 ### How to get started?
 
@@ -116,7 +120,7 @@ Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted
 Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
 
 ---
-class: left, middle
+class: left, top
 
 ## Coding club play tables
 
@@ -129,7 +133,7 @@ class: left, middle
 ---
 class: center, middle
 
-### Share your code during the coding session!
+# Share your code during the coding session
 
 <!-- Create a new hackmd file and replace this link (twice!) -->
 Go to https://hackmd.io/HoRyIsrqR9-uAGoGGDKbVA?both and start by adding your name in section "Participants".
@@ -137,7 +141,7 @@ Go to https://hackmd.io/HoRyIsrqR9-uAGoGGDKbVA?both and start by adding your nam
 <iframe src="https://hackmd.io/HoRyIsrqR9-uAGoGGDKbVA?edit" height="400px" width="800px"></iframe>
 
 ---
-class: left, middle
+class: left, top
 
 # Download data and code
 
@@ -153,7 +157,7 @@ You can download the material of today:
 <small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
 ---
-class: left, middle
+class: left, top
 
 # Load libraries and data
 
@@ -166,25 +170,25 @@ library(htmltools)
 ```
 
 ---
-class: left, middle
+class: left, top
 
 # The data world of Mrs. Z
 
-Today you play the role of a researcher, Mrs Z. She received in January 2011 observations of the asian ladybeetle (_Harmonia axyridis_) collected in the surroundings of Antwerp by a contractor. These observations are stored in [20210624_harmonia_axyridis_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20210624/harmonia_axyridis_2010.txt). She wrote some code to read, analyze, group and visualize these obsevations. You can find the code in [20210624_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20210624/20210624_challenges.R). She got also a geopacakge shapefile, [20210624_eea_1x1km_grid_BE.gpkg](https://github.com/inbo/coding-club/blob/master/data/20210624/20210624_eea_1x1km_grid_BE.gpkg), containing the official [1x1km square grid](https://www.eea.europa.eu/data-and-maps/data/eea-reference-grids-2) for Belgium, as provided by the [European Environment Agency](https://www.eea.europa.eu/).
+Today you play the role of a researcher, Mrs Z. She received in January 2011 observations of the asian ladybeetle (_Harmonia axyridis_) collected in the surroundings of Antwerp by a contractor. These observations are stored in [20210624_harmonia_axyridis_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20210624/20210624_harmonia_axyridis_2010.txt). She wrote some code to read, analyze and visualize these obsevations. You can find the code in [20210624_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20210624/20210624_challenges.R). She uses a geopacakge shapefile, [20210624_eea_1x1km_grid_BE.gpkg](https://github.com/inbo/coding-club/blob/master/data/20210624/20210624_eea_1x1km_grid_BE.gpkg), containing the official [Belgian 1x1km square grid](https://www.eea.europa.eu/data-and-maps/data/eea-reference-grids-2), as provided by the [European Environment Agency](https://www.eea.europa.eu/), useful to group observations in a grid.
 
-What it seemed to be a one shot anlysis, becomes some days later something more: she receives a similar file from another contractor containing observations of the bow-winged grasshopper (_Chorthippus biguttulus_) collected in the same area: [20210624_chorthippus_biguttulus_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20210624/20210624_chorthippus_biguttulus_2010.txt). Important to note that the columns containing the coordinates are called slightly different.
+What it seemed to be a one -shot anlysis, becomes very soon something more: she receives a similar file from another contractor containing observations of the bow-winged grasshopper (_Chorthippus biguttulus_) collected in the same area: [20210624_chorthippus_biguttulus_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20210624/20210624_chorthippus_biguttulus_2010.txt). Important: the columns containing the coordinates are called differently.
 
-She also get to know that she will have to redo the same analysis the next years, at least on observations of the Asian ladybeetle. And here you are:
+She also get to know that she will have to redo the same analysis the next years, at least on observations of the Asian ladybeetle:
 - [20210624_harmonia_axyridis_2011.txt](https://github.com/inbo/coding-club/blob/master/data/20210624/20210624_harmonia_axyridis_2011.txt)
 - [20210624_harmonia_axyridis_2012.txt](https://github.com/inbo/coding-club/blob/master/data/20210624/20210624_harmonia_axyridis_2012.txt)
 
 I think you can find yourself in the role of Mrs Z in this Oscar awarded movie.
 
-Before starting, a best practice reminder: write and save the functions in a separate file. You can call it `20210624_functions.R`. You can use your functions in the challenge file by _sourcing_ this file, e.g. `source("./src/20210624/20210624_functions.R")`.
+Before starting, a best practice reminder: write the functions in a separate file. You can call it `20210624_functions.R`. You can use your functions in the challenge file by first _sourcing_ this file, e.g. `source("./src/20210624/20210624_functions.R")`.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
-class: left, middle
+class: left, top
 
 # Challenge 1
 
@@ -198,7 +202,7 @@ of 2010 as a data.frame
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
-class: left, middle
+class: left, top
 
 # Challenge 2 part 1
 
@@ -216,7 +220,7 @@ class: left, middle
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
-class: left, middle
+class: left, top
 
 # Challenge 2 part 2
 
@@ -226,7 +230,7 @@ class: left, middle
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
-class: left, middle
+class: left, top
 
 # Challenge 3
 
