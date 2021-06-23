@@ -29,7 +29,7 @@ species <- str_replace_all(
 )
 
 ## compose filename
-file_name <- paste0(species, "_2010", ".txt")
+file_name <- paste0("20210624_", species, "_2010", ".txt")
 
 ## read file
 ha_2010 <- read_tsv(paste0("./data/20210624/",
@@ -96,7 +96,7 @@ n_obs_ha_2010 <-
 #' without observations are removed
 
 # Read EEA grid
-be_grid <- st_read("./data/20210624/eea_1x1km_grid_BE.geojson")
+be_grid <- st_read("./data/20210624/20210624_eea_1x1km_grid_BE.gpkg")
 
 ## add number of observations via inner_join (cells with no obs automatically
 ## excluded)
