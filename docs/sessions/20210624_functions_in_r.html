@@ -213,7 +213,7 @@ class: left, top
     -  `max_coord_uncertain`: maximum of `coordinateUncertaintyInMeters` (numeric), deafult value as in script
     - `issues_to_discard` (character vector), default value as in script
     - `occurrenceStatus_to_discard` (character vector), default value as in script
-2. Write a function called `assign_eea_cell()` to handle step 3. Return  a `df` as input, with two extra columns: `geometry` and `eea_cell_code`, the last one containing the EEA cell code each observation belongs to. Input argument:
+2. Write a function called `assign_eea_cell()` to handle step 3. Return  a `df` as output, with two extra columns: `geometry` and `eea_cell_code`, the last one containing the EEA cell code each observation belongs to. Input argument:
     - `df` data.frame with observations
     - `longitude_colname`: character, name of the column with longitude values*
     - `latitude_colname`: character, name of the column with latitude values*
