@@ -232,6 +232,33 @@ class: left, top
 4. Write a function for step 5. Would you read the shapefile with the EEA grid of Belgium in the function or outside the function? up to you to find a good name to the function :-)
 
 ---
+class: left, top
+
+# Intermezzo: what happens in the function stays in the function!
+
+Not in R unfortunately...
+
+If you use a variable in a function (`c` in the example below) which is not defined as argument, but it is defined outside the function, R doesn't throw any error, as many other programming languages do!
+
+```r
+c <- 3
+tricky_function <- function(a, b) {
+  sum <- a + b + c # c is not defined as argument! Sitll, the function works...
+  return(sum)
+}
+
+tricky_function(1, 2)
+#> [1] 6
+tricky_function(5, 6)
+#> [1] 14
+tricky_function(10, 20)
+#> [1] 33
+```
+
+Still, it's bad practice as it can end up in wrong results. Better an error than a wrong result! Be careful.
+
+
+---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
@@ -258,11 +285,12 @@ class:left, top
 
 # Do you want more?
 
-Go [in depth](http://adv-r.had.co.nz/Functions.html#function-arguments), do a check [under the hood](https://swcarpentry.github.io/r-novice-inflammation/14-supp-call-stack/) or learn more about [programming with `dplyr`](https://dplyr.tidyverse.org/articles/programming.html).
+Get a more [formal framework](https://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/functions.pdf), go [in depth](http://adv-r.had.co.nz/Functions.html#function-arguments), do a check [under the hood](https://swcarpentry.github.io/r-novice-inflammation/14-supp-call-stack/) or learn more about [programming with `dplyr`](https://dplyr.tidyverse.org/articles/programming.html).
 
 .center[![:scale 90%]({{ site.baseurl}}/assets/images/20210624/20210624_more_info_functions.png)
 ]
 
+Solutions: [20210624_challenges_solutions.R](https://github.com/inbo/coding-club/blob/master/src/20210624/20210624_challenges_solutions.R) and [20210624_functions_solutions.R](https://github.com/inbo/coding-club/blob/master/src/20210624/20210624_functions_solutions.R)
 More challenges? Check the [coding club session](https://inbo.github.io/coding-club/sessions/20190924_make_your_code_functional_use_functions.html) of 24-09-2019. Have fun!
 
 ---
