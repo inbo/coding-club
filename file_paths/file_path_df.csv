@@ -73,7 +73,7 @@ data/20210330/20210330_manta_datasample.xlsx,20210330_manta_datasample.xlsx,data
 data/20210330/20210330_surveys.xlsx,20210330_surveys.xlsx,data,20210330
 data/20210429/20210429_aquatictrap_data.csv,20210429_aquatictrap_data.csv,data,20210429
 data/20210525/20210525_data.Rda,20210525_data.Rda,data,20210525
-data/20210624/20210624_chorthippus_biguttulus_2010.txt,chorthippus_biguttulus_2010.txt,data,20210624
+data/20210624/20210624_chorthippus_biguttulus_2010.txt,20210624_chorthippus_biguttulus_2010.txt,data,20210624
 data/20210624/20210624_eea_1x1km_grid_BE.gpkg,20210624_eea_1x1km_grid_BE.gpkg,data,20210624
 data/20210624/20210624_harmonia_axyridis_2010.txt,20210624_harmonia_axyridis_2010.txt,data,20210624
 data/20210624/20210624_harmonia_axyridis_2011.txt,20210624_harmonia_axyridis_2011.txt,data,20210624
