@@ -1,0 +1,208 @@
+---
+layout: presentation
+title: ggplot2 for dummies
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 31 AUGUST 2021
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Exclusively on INBOflix
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20210831/20210831_badge_ggplot2.png)
+
+---
+class: center, middle
+
+![:scale 70%]({{ site.baseurl}}/assets/images/20210831/20210831_ggplot2_for_dummies.png)
+<br> [ggplot2](https://ggplot2.tidyverse.org/)
+---
+class: center, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210831/20210831_cheat_sheet_ggplot.png)
+[Download cheatsheet here](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20180522_cheat_sheet_ggplot2.pdf)
+
+---
+class: center, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+## Coding club play tables
+
+**Like** a card club, we will split us in different tables (aka _breakout rooms_) and we will help each other! We return all together after a fixed amount of time to discuss each challenge apart.
+
+**Unlike** a card club, in our club there is no winner, neither within a table nor among tables!
+
+![:scale 65%]({{ site.baseurl}}/assets/images/breakout_rooms.png)
+
+---
+class: center, middle
+
+# Share your code during the coding session
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/HoRyIsrqR9-uAGoGGDKbVA?both and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/HoRyIsrqR9-uAGoGGDKbVA?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub folders [coding-club/data/20210831](https://github.com/inbo/coding-club/tree/master/data/20210831) and [coding-club/src/20210831](https://github.com/inbo/coding-club/tree/master/src/20210831)
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20201027")` to download the coding club material of October, 27 2020. If date is omitted, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, middle
+
+# The ggplot recipe: data - mapping - geometry
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20210831/20210831_ggplot_recipe.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, middle
+
+# Challenge 1
+
+Give a look at the [`CO2` dataset](https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/CO2)
+
+1. Plot `uptake` as function of `conc` using points
+2. Distinguish by `Treatment` using points with different colors
+3. and different shapes for `Type`
+4. Change the y-axis label to "CO2 uptake"
+5. Add a title to the graph, e.g. "Cold tolerance of the grass species Echinochloa crus-galli"
+6. Use a logarithmic scale for the concentration
+7. Set colors to "blue" for chilled plants and "indian red" for nonchilled
+
+---
+class: left, middle
+
+## Intermezzo. Aesthetics
+
+This works:
+
+```
+ggplot(CO2, aes(x = conc, y = uptake, color = Type)) + geom_violin()
+```
+
+This works too:
+
+```
+ggplot(CO2) +
+  geom_violin(aes(x = conc, y = uptake, color = Type))
+```
+
+What should I use? Both are good, but...
+But what if you want to plot two or more geometries with *different* aesthetics?
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, middle
+
+# Challenge 2
+
+1. What’s gone wrong with this code? Why are the points not green and transparency not correct? How to solve it?
+```
+ggplot(CO2, aes(x = conc, y = uptake, color = "green", alpha = 0.1)) +
+  geom_point()
+```
+2. With so many points it is hard to see the effect of `treatment` or `type` on `uptake`. A box plot ( `geom_boxplot()`) could help, but what's gone wrong with this code? The x , `conc`, doesn't make any sense. How to solve it?
+```
+ggplot(CO2, aes(x = conc, y = uptake, color = Treatment)) +
+  geom_boxplot()
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3A
+
+Sometimes using colors, shapes, etc. is not sufficient: you would like to split data in a grid of subplots to ease interpretation. How to modify the code in the R script to show data of each plant forming a grid of 12 subplots as shown below?
+
+![:scale 115%]({{ site.baseurl}}/assets/images/20210831/20210831_challenge3_facets.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3B
+
+Let's use the `area_biotopes` dataset! The plot on the left is unreadable (see code in R script). The plot on the right is much better, isn't it? Try to get something similar* or even better!
+
+![:scale 120%]({{ site.baseurl}}/assets/images/20210831/20210831_challenge3_biotopes.png)
+
+<small>* __Note__: To get same color, run  [`library(INBOtheme)`](https://inbo.github.io/INBOtheme/)
+
+
+---
+class: left, middle
+
+# Bonus challenge
+
+In challenge 1 we tried to understand the effect of `Type`  (`Quebec`, `Mississipi`) and `Treatment` (`chilled` , `nonchilled`) separately via box plots. Now we would like, still by means of a box plot, to see the effect of the interaction of these two variables together, so that we have four different situations (2 Type x 2 Treatment).
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210831/20210831_interaction_boxplot.png)
+
+---
+class: left, middle
+
+## Resources
+
+- `ggplot2` website: https://ggplot2.tidyverse.org/
+- [Commented solutions](https://github.com/inbo/coding-club/blob/master/src/20210831/20210831_challenges_solutions.R) of the challenges
+- R for Data Science: [Chapter 3: Data visualization](https://r4ds.had.co.nz/data-visualisation.html)
+- [Datacarpentry's data visualiation tutorial](https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html)
+- [Stanford University tutorial](https://cengel.github.io/R-data-viz/data-visualization-with-ggplot2.html): chapter 1
+- R for Data Science: [Chapter 28: Graphics for communication](https://r4ds.had.co.nz/graphics-for-communication.html)
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: [Herman Teirlinck](https://goo.gl/maps/cN4kHPtX4vKLCTAH7) - 01.05 - Isala Van Diest <br>
+Date: __30/09/2021__, van 10:00 tot 12:00<br>
+Subject: ggplot and more: how to make outstanding plots
+(registration announced via DG_useR@inbo.be)
