@@ -106,7 +106,7 @@ class: left, middle
 
 Give a look at the [`ToothGrowth` dataset](https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/ToothGrowth)
 
-1. Plot length of odontoblasts, (`len`) as function of the supplement (`supp`) using points
+1. Plot length of odontoblasts (`len`) as function of the supplement (`supp`) using points
 2. Plot length of odontoblasts (`len`) as function of the dose (`dose`) using points
 3. Starting from 2, distinguish `supp` using points with different colors and different shapes
 4. Starting from 3, change the y-axis label to "length (mm)", change the x-axis label to "dose (mg/day)", change the legend title to "supplement" and add a title to the graph, e.g. "The Effect of Vitamin C on Tooth Growth in Guinea Pigs"
@@ -137,7 +137,7 @@ But what if you want to plot two or more geometries with *different* aesthetics?
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, middle
 
-# Challenge 2
+# Challenge 2A
 
 1. What’s gone wrong with this code? Why are the points not red and transparency not correct? How to solve it?
 ```
@@ -151,7 +151,13 @@ ggplot(ToothGrowth, aes(x = dose, y = len, color = supp, group = supp)) +
   geom_boxplot()
 ```
 
-3. Let's work with dataset `Orange` containing data about the growth of some orange trees. The point plot on the left is difficult to understand. Smoother lines can help. Try to reproduce the right figure. Do not show the standard error for the smoothers at tree level and try to get the tree numbers in legend using an increasing order.
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, middle
+
+# Challenge 2B
+
+Let's work with dataset `Orange` containing data about the growth of some orange trees. The point plot on the left is difficult to understand. Smoother lines can help. Try to reproduce the right figure. Do not show the standard error for the smoothers at tree level and try to get the tree numbers in legend using an increasing order.
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20210831/20210831_challenge2_growth.png)
 
