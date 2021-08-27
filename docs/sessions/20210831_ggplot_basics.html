@@ -120,14 +120,14 @@ class: left, middle
 This works:
 
 ```
-ggplot(CO2, aes(x = conc, y = uptake, color = Type)) + geom_violin()
+ggplot(ToothGrowth, aes(x = dose, y = len, color = supp)) + geom_violin()
 ```
 
 This works too:
 
 ```
-ggplot(CO2) +
-  geom_violin(aes(x = conc, y = uptake, color = Type))
+ggplot(ToothGrowth) +
+  geom_violin(aes(x = dose, y = len, color = supp))
 ```
 
 What should I use? Both are good, but...
@@ -139,16 +139,22 @@ class: left, middle
 
 # Challenge 2
 
-1. What’s gone wrong with this code? Why are the points not green and transparency not correct? How to solve it?
+1. What’s gone wrong with this code? Why are the points not red and transparency not correct? How to solve it?
 ```
-ggplot(CO2, aes(x = conc, y = uptake, color = "green", alpha = 0.1)) +
+ggplot(ToothGrowth, aes(x = dose, y = len, color = "blue", alpha = 0.3)) +
   geom_point()
 ```
-2. With so many points it is hard to see the effect of `treatment` or `type` on `uptake`. A box plot ( `geom_boxplot()`) could help, but what's gone wrong with this code? The x , `conc`, doesn't make any sense. How to solve it?
+
+2. With so many points it is hard to see the effect of `supp` and `dose` on `len`. A box plot ( `geom_boxplot()`) could help, but what's gone wrong with this code? The x , `dose`, doesn't make any sense. How to solve it?
 ```
-ggplot(CO2, aes(x = conc, y = uptake, color = Treatment)) +
+ggplot(ToothGrowth, aes(x = dose, y = len, color = supp, group = supp)) +
   geom_boxplot()
 ```
+
+3. Let's work with dataset `Orange` containing data about the growth of some orange trees. The point plot on the left is difficult to understand. Smoother lines can help. Try to reproduce the right figure. Do not show the standard error for the smoothers at tree level and try to get the tree numbers in legend using an increasing order.
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210831/20210831_challenge2_growth.png)
+
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
