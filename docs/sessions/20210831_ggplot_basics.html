@@ -168,9 +168,12 @@ class: left, middle
 
 # Challenge 3A
 
-Sometimes using colors, shapes, etc. is not sufficient: you would like to split data in a grid of subplots to ease interpretation. How to modify the code in the R script to show data of each plant forming a grid of 12 subplots as shown below?
+Sometimes using colors or shapes is not sufficient: you would like to split data in a grid of subplots.
 
-![:scale 115%]({{ site.baseurl}}/assets/images/20210831/20210831_challenge3_facets.png)
+1. How to plot the growth of each tree as separate subplots and as shown in the figure below?
+2. How to replace   `1`, `2`, `3`, etc. above each subplot with `"Tree 1"`, `"Tree 2"`, `"Tree 3"`, etc.?
+
+![:scale 115%]({{ site.baseurl}}/assets/images/20210831/20210831_challenge3_trees.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -178,29 +181,37 @@ class: left, middle
 
 # Challenge 3B
 
-Let's use the `area_biotopes` dataset! The plot on the left is unreadable (see code in R script). The plot on the right is much better, isn't it? Try to get something similar* or even better!
+After transforming `HairEyeColor` to a data.frame:
 
-![:scale 120%]({{ site.baseurl}}/assets/images/20210831/20210831_challenge3_biotopes.png)
+```
+hair_eye_color_df <- as.data.frame(HairEyeColor)
+```
 
-<small>* __Note__: To get same color, run  [`library(INBOtheme)`](https://inbo.github.io/INBOtheme/)
+try to best show the difference of the distribution between males and females for each combinations of hair-eye color. Here below one possible way*.
 
+![:scale 120%]({{ site.baseurl}}/assets/images/20210831/)
+
+<small>* __Note__: To get same color, run [`library(INBOtheme)`](https://inbo.github.io/INBOtheme/).
 
 ---
 class: left, middle
 
 # Bonus challenge
 
-In challenge 1 we tried to understand the effect of `Type`  (`Quebec`, `Mississipi`) and `Treatment` (`chilled` , `nonchilled`) separately via box plots. Now we would like, still by means of a box plot, to see the effect of the interaction of these two variables together, so that we have four different situations (2 Type x 2 Treatment).
+Using `airquality` dataset, how to plot each air quality variables (`Ozone`,
+`Solar.R`, `Wind` and `Temp`) as function of the date (`month`- `day` combination) and add a smoother on on it as shown in the figure* below? Note that the code to combine `month` and `day` to a variable called `date` is already provided. Hint: `ggplot2` alone could be not enough, you could opt for combining `ggplot2` with another `tidyverse` package
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20210831/20210831_interaction_boxplot.png)
+![:scale 100%]({{ site.baseurl}}/assets/images/20210831/20210831_airquality_bonus_challenge.png)
 
+<small>* __Note__: To get same color, run [`library(INBOtheme)`](https://inbo.github.io/INBOtheme/).
 ---
 class: left, middle
 
 ## Resources
 
 - `ggplot2` website: https://ggplot2.tidyverse.org/
-- [Commented solutions](https://github.com/inbo/coding-club/blob/master/src/20210831/20210831_challenges_solutions.R) of the challenges
+- Commented solutions of the challenges will be added soon
+- Recording of this coding club session will be added soon
 - R for Data Science: [Chapter 3: Data visualization](https://r4ds.had.co.nz/data-visualisation.html)
 - [Datacarpentry's data visualiation tutorial](https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html)
 - [Stanford University tutorial](https://cengel.github.io/R-data-viz/data-visualization-with-ggplot2.html): chapter 1
