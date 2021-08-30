@@ -145,7 +145,8 @@ ggplot(ToothGrowth, aes(x = dose, y = len, color = "blue", alpha = 0.3)) +
   geom_point()
 ```
 
-2. With so many points it is hard to see the effect of `supp` and `dose` on `len`. A box plot ( `geom_boxplot()`) could help, but what's gone wrong with this code? The x , `dose`, doesn't make any sense. How to solve it?
+2. With so many points it is hard to see the effect of `supp` and `dose` on `len`. A box plot ( `geom_boxplot()`) could help, but what's gone wrong with this code? The x , `dose`, doesn't make any sense. How to solve it? Hint: look at the examples in the help file of `?geom_boxplot`.
+
 ```
 ggplot(ToothGrowth, aes(x = dose, y = len, color = supp, group = supp)) +
   geom_boxplot()
@@ -189,7 +190,7 @@ hair_eye_color_df <- as.data.frame(HairEyeColor)
 
 try to best show the difference of the distribution between males and females for each combinations of hair-eye color. Here below one possible way*.
 
-![:scale 120%]({{ site.baseurl}}/assets/images/20210831/)
+![:scale 120%]({{ site.baseurl}}/assets/images/20210831/20210831_hair_eye_color.png)
 
 <small>* __Note__: To get same color, run [`library(INBOtheme)`](https://inbo.github.io/INBOtheme/).
 
@@ -199,7 +200,7 @@ class: left, middle
 # Bonus challenge
 
 Using `airquality` dataset, how to plot each air quality variables (`Ozone`,
-`Solar.R`, `Wind` and `Temp`) as function of the date (`month`- `day` combination) and add a smoother on on it as shown in the figure* below? Note that the code to combine `month` and `day` to a variable called `date` is already provided. Hint: `ggplot2` alone could be not enough, you could opt for combining `ggplot2` with another `tidyverse` package
+`Solar.R`, `Wind` and `Temp`) as function of the date (`month`- `day` combination) with a smoother on top of it as shown in the figure* below? Think about the best way to display the y-axis scale(s) of the subplots. Note that the code to combine `month` and `day` to a variable called `date` is already provided, see code below. Hint: `ggplot2` alone could be not enough, you could opt for combining `ggplot2` with another `tidyverse` package.
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20210831/20210831_airquality_bonus_challenge.png)
 
