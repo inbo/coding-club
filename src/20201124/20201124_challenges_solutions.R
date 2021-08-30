@@ -67,7 +67,7 @@ ggplot(CO2, aes(x = Type, y = uptake, color = Treatment)) +
   geom_violin() +
   geom_violin(aes(color = NULL), alpha = 0.5)
 
-# Option 2 (specify both aesthetics separately, maybe reduandant)
+# Option 2 (specify both aesthetics separately, maybe redundant)
 ggplot(CO2) +
   geom_violin(aes(x = Type, y = uptake, color = Treatment)) +
   geom_violin(aes(x = Type, y = uptake), alpha = 0.5)
@@ -82,7 +82,7 @@ ggplot(CO2, aes(x = Type, y = uptake)) +
 # Option 1
 ggplot(CO2, aes(x = conc, y = uptake, colour = Type, group = Plant)) +
   geom_line() +
-  geom_smooth(group = NULL)
+  geom_smooth(aes(group = NULL))
 
 # Option 2
 ggplot(CO2) +
@@ -109,7 +109,9 @@ ggplot(CO2, aes(x = conc, y = uptake)) +
   geom_point(color = "green", alpha = 0.1)
 
 
-#' With so many points it is hard to see the effect of `treatment` or `type` on `uptake`, isn't it? A box plot ( `geom_boxplot()`) could help, but what's gone wrong here? The x , `conc`, doesn't make any sense
+#' With so many points it is hard to see the effect of `treatment` or `type` on
+#' `uptake`, isn't it? A box plot ( `geom_boxplot()`) could help, but what's
+#' gone wrong here? The x , `conc`, doesn't make any sense
 ggplot(CO2, aes(x = conc, y = uptake, color = Treatment)) +
   geom_boxplot()
 
