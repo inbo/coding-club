@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2021-08-31 | ggplot basics | [slides]({{ site.baseurl }}{% link sessions/20210831_ggplot_basics.html  %}) | [hackmd](https://hackmd.io/T9b0ChbyTj2C0zjMm99Wog?view) | webinar |  |
+| 2021-08-31 | ggplot basics | [slides]({{ site.baseurl }}{% link sessions/20210831_ggplot_basics.html  %}) | [hackmd](https://hackmd.io/T9b0ChbyTj2C0zjMm99Wog?view) | webinar | [vimeo](https://vimeo.com/596087475) |
 | 2021-06-24 | Functions in R | [slides]({{ site.baseurl }}{% link sessions/20210624_functions_in_r.html  %}) | [hackmd](https://hackmd.io/HoRyIsrqR9-uAGoGGDKbVA?view) | webinar | [vimeo](https://vimeo.com/567520656) |
 | 2021-05-25 | the joy of data joining | [slides]({{ site.baseurl }}{% link sessions/20210525_the_joy_of_data_joining.html  %}) | [hackmd](https://hackmd.io/qjtMSYw4Tm2-V60C_hPx5Q?view) | webinar | [vimeo](https://vimeo.com/558065790) |
 | 2021-04-29 | data manipulation with dplyr | [slides]({{ site.baseurl }}{% link sessions/20210429_data_manipulation_with_dplyr.html  %}) | [hackmd](https://hackmd.io/4h8gOw_jQquPNV2vXtt9xQ?view) | webinar | [vimeo](https://vimeo.com/544524895) |
