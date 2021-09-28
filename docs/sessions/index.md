@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2021-09-30 | ggplot basics | [slides]({{ site.baseurl }}{% link sessions/20210930_ggplot_advanced_and_beyond.html  %}) | [hackmd](https://hackmd.io/XN3rKUuzRbGOn1GUouqr0g?view) | 01.23 - Léon Stynen |  |
+| 2021-09-30 | ggplot advanced & beyond | [slides]({{ site.baseurl }}{% link sessions/20210930_ggplot_advanced_and_beyond.html  %}) | [hackmd](https://hackmd.io/XN3rKUuzRbGOn1GUouqr0g?view) | 01.23 - Léon Stynen |  |
 | 2021-08-31 | ggplot basics | [slides]({{ site.baseurl }}{% link sessions/20210831_ggplot_basics.html  %}) | [hackmd](https://hackmd.io/T9b0ChbyTj2C0zjMm99Wog?view) | webinar | [vimeo](https://vimeo.com/596087475) |
 | 2021-06-24 | Functions in R | [slides]({{ site.baseurl }}{% link sessions/20210624_functions_in_r.html  %}) | [hackmd](https://hackmd.io/HoRyIsrqR9-uAGoGGDKbVA?view) | webinar | [vimeo](https://vimeo.com/567520656) |
 | 2021-05-25 | the joy of data joining | [slides]({{ site.baseurl }}{% link sessions/20210525_the_joy_of_data_joining.html  %}) | [hackmd](https://hackmd.io/qjtMSYw4Tm2-V60C_hPx5Q?view) | webinar | [vimeo](https://vimeo.com/558065790) |
