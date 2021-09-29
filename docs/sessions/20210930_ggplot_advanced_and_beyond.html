@@ -36,7 +36,7 @@ class: left, middle
 
 The ggplot recipe: <strong>data - mapping - geometry</strong>
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20201217/20201217_ggplot_recipe.png)
+![:scale 80%]({{ site.baseurl}}/assets/images/20210831/20210831_ggplot_recipe.png)
 
 ---
 class: left, middle
@@ -50,10 +50,11 @@ class: left, middle
 Example:
 
 ```r
-# Color depends on supplement (supp)
+# you want color represents the supplement (supp)
 ggplot(ToothGrowth, aes(x = dose, y = len)) +
   geom_point(aes(color = supp))
-# All points are blue hollow triangles
+
+# you want all points are blue hollow triangles
 ggplot(ToothGrowth, aes(x = dose, y = len)) +
   geom_point(color = "blue", shape = 2)
 ```
@@ -85,20 +86,44 @@ Go to https://hackmd.io/XN3rKUuzRbGOn1GUouqr0g?both and start by adding your nam
 
 <iframe src="https://hackmd.io/XN3rKUuzRbGOn1GUouqr0g?edit" height="400px" width="800px"></iframe>
 
+
+---
+class: left, top
+
+# Load libraries
+
+```r
+library(tidyverse)
+library(patchwork)
+library(viridis)
+library(plotly)
+```
+
+If you get an error because a package is not yet installed, just install it first via `install.packages("put here the name of the package")`.
+
 ---
 class: left, top
 
 # Download data and code
 
+You can download the material:
 
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually, via [data](https://github.com/inbo/coding-club/blob/master/data/20210930/) and [scripts](https://github.com/inbo/coding-club/blob/master/src/20210930/)**!
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20201027")` to download the coding club material of October, 27 2020. If date is omitted, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
 class: left, middle
 
-# Challenge 1. Palette
+# Challenge 1. Palettes
 
-1. A palette is nothing more than a character vector of colors. Create your own 3-color palette with [color picker](http://tristen.ca/hcl-picker/). Here an [example](https://tristen.ca/hcl-picker/#/hlc/4/1/124B46/7DC979):
+1. A _palette_ is nothing more than a character vector of colors. Create your own 4-color palette with [color picker](http://tristen.ca/hcl-picker/). Here an [example](https://tristen.ca/hcl-picker/#/hlc/4/1/124B46/7DC979):
 2. How to use it for `usercase1`?
 3. How to use it for `usercase3`?
 4. How to invert the color scale of `usercase3`?
