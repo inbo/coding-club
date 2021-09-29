@@ -78,6 +78,7 @@ data/20210624/20210624_eea_1x1km_grid_BE.gpkg,20210624_eea_1x1km_grid_BE.gpkg,da
 data/20210624/20210624_harmonia_axyridis_2010.txt,20210624_harmonia_axyridis_2010.txt,data,20210624
 data/20210624/20210624_harmonia_axyridis_2011.txt,20210624_harmonia_axyridis_2011.txt,data,20210624
 data/20210624/20210624_harmonia_axyridis_2012.txt,20210624_harmonia_axyridis_2012.txt,data,20210624
+data/20210930/20210930_area_biotopes.txt,20210930_area_biotopes.txt,data,20210930
 messy_project/data/bird obs 20170621.csv,bird obs 20170621.csv,messy_project,data
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
@@ -149,3 +150,5 @@ src/20210525/20210525_challenges_solutions.R,20210525_challenges_solutions.R,src
 src/20210624/20210624_challenges.R,20210624_challenges.R,src,20210624
 src/20210624/20210624_challenges_solutions.R,20210624_challenges_solutions.R,src,20210624
 src/20210624/20210624_functions_solutions.R,20210624_functions_solutions.R,src,20210624
+src/20210831/20210831_challenges_solutions.R,20210831_challenges_solutions.R,src,20210831
+src/20210930/20210930_challenges.R,20210930_challenges.R,src,20210930
