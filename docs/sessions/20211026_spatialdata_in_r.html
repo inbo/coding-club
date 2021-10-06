@@ -1,0 +1,173 @@
+---
+layout: presentation
+title: Spatial data in R
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+  <!-- Adjust the presentation to the session. Focus on the challenges,
+this is not a coding tutorial.
+
+Note, to include figures, store the image in the `/docs/assets/images`
+folder and use the jekyll base.url reference as done in this template
+or see https://jekyllrb.com/docs/liquid/tags/#links.
+  using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 26 OCTOBER 2021
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck<br>
+01.05 - Isala Van Diest
+
+---
+class: left, top
+
+## ROOMIE: room reservation
+
+!! Do not forget to confirm the room reservation via _roomie_ !!
+
+---
+class: left, top
+
+While preparing the coding club of May, we found a bug in `dplyr` package: https://github.com/tidyverse/dplyr/issues/5891#event-5404935191
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20211126/20211026_issue_solved_dplyr.png)
+
+R and its packages are not static: software is written by humans. And humans can make errors. If you find something wrong in a R package, please contact the package maintainer!<br>
+Open software: it's good for you, for us, for everyone.
+
+---
+class: center, top
+
+<!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20211026/20211026_spatialdata_badge.png)
+
+---
+class: left, top
+
+Install the package:
+```r
+install.packages("sf")
+```
+
+Load the package:
+```r
+library(sf)
+```
+
+---
+class: center, top
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20211026/20211026_cheasheet.png)<br>
+  [`sf` cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20200326_cheat_sheet_sf.pdf)
+
+See also this very nice [article with some examples](https://r-spatial.github.io/sf/articles/sf2.html) and the excellent book [geocomputation with R](https://geocompr.robinlovelace.net/).
+
+---
+class: center, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+                               ### First time coding club?
+
+                               Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+                                                            <br> No yellow sticky notes online :-( We use hackmd (see next slide) but basic principle doesn't change.
+
+---
+class: center, top
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/VSZBnLm-SE6N8fBKOG1zYw?both
+
+<iframe src="https://hackmd.io/VSZBnLm-SE6N8fBKOG1zYw?edit" height="450px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+
+---
+class: left, top
+
+### CRS
+
+No geospatial data without specifying the Coordinate Reference System you work with!<br> Why? Because we need to project a sphere on a flat map! The typical Mercator projection stretches at the Poles:
+![:scale 80%]({{ site.baseurl}}/assets/images/20200326/20200326_greenland_vs_africa.png).<br>
+For more strange effects of the mercator projection see this [video](https://youtu.be/KUF_Ckv8HbE) from this [tutorial](https://www.earthdatascience.org/courses/earth-analytics/spatial-data-r/intro-to-coordinate-reference-systems/).
+
+---
+class: left, top
+
+### CRS by EPSG codes
+
+A common way to specify the CRS is by providing the EPSG code. EPSG stands for European Petroleum Survey Group and is an organization that maintains a geodetic parameter database with standard codes, the EPSG codes, for coordinate systems, datums, spheroids, units and such alike.  There are a lot of EPSG codes! Full list: https://spatialreference.org/
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20200326/20200326_epsg_codes.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3
+
+
+
+---
+class: left, top
+
+# Bonus challenge
+
+
+---
+class: left, top
+
+# Resources
+
+- [Geocomputation with R](https://geocompr.robinlovelace.net/)
+- [Spatial Data Science](https://keen-swartz-3146c4.netlify.com/)
+- INBO tutorial on [how to use open vector file formats in R](https://inbo.github.io/tutorials/tutorials/spatial_standards_vector/)
+- [`sf` cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20200326/20200326_cheat_sheet_sf.pdf)
+- [`sf` article with some examples](https://r-spatial.github.io/sf/articles/sf2.html)
+
+
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room number and name  -->
+Room: Herman Teirlinck - 1.69 - Paul Janssen<br>
+Date: 26/11/2021, van 10:00 tot 12:00<br>
+(registration announced via DG_useR@inbo.be)
