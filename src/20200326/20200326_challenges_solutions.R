@@ -39,7 +39,7 @@ st_crs(utm10_belgium)
 
 # the proj4string is the most important thing. If you google it you will see
 # that it refers to EPSG 3035. So you can add it just to know it for future use
-# If you assign it without getting a warningn it means it's the right code.
+# If you assign it without getting a warning it means it's the right code.
 # Otherwise, use st_transform()
 st_crs(utm10_belgium) <- 3035
 
