@@ -85,6 +85,6 @@ impatiens_df <- read_tsv("./data/20211026/20211026_impatiens_glandulifera.txt")
 
 
 #' 2. How to get only the observations, as circles, **totally** contained in
-#' protected areas? Hint: no hint, I've no clue!
+#' protected areas? Hint: check the cheat sheet
 
 
