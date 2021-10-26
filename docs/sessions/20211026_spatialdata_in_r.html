@@ -146,7 +146,7 @@ class: left, top
 
 1. Transform `impatiens_df` to a geospatial data.frame using `sf` package. Note that
 GBIF data are stored using WGS 84. Hint: find which numeric code is associated with WGS84 coordinate reference system.
-2. How many layers does the  geospatial file `20211026_protected_areas1.gpkg` contain?
+2. How many layers does the  geospatial file `20211026_protected_areas.gpkg` contain?
 3. Read the layer `ps_hbtrl`: call it `prot_areas`
 4. What is the CRS declared by user? Does it coincide with the real Geographic Coordinate Reference System (GEOCRS)?
 5. Are the CRS of `prot_areas` and `spatial_impatiens_df` the same?
@@ -208,8 +208,8 @@ class: left, top
 
 # Bonus challenge
 
-1. Not a sf question, but still nice to solve: based on the answer of 2 and 3, how to add to `prot_areas_3035` a column called `n_impatiens` with the number of observations for each protected area?
-2. How to get only the observations, as circles, **totally** contained in protected areas? Hint: check the cheat sheet
+1. How to get only the observations, as circles, **totally** contained in protected areas? Hint: check the cheat sheet
+2. Not a sf question, but still nice to solve: based on the answer of 2 and 3, how to add to `prot_areas_3035` a column called `n_impatiens` with the number of observations for each protected area?
 
 ---
 class: left, top
