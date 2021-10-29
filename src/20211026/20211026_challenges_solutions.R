@@ -161,9 +161,15 @@ length(impatiens_circles_intersect_prot_areas[[geb_code_bos_oost_antwerpen]])
 
 st_centroid(prot_areas)
 
-# it seems that two polygons are not valid (FALSE): duplicated vertices
+# it seems that two polygons are not valid (FALSE)
 st_is_valid(prot_areas)
 st_is_valid(prot_areas_3035)
+# to know why they are not valid, add argument reason and notice that the reason
+# for invalidity changes while changing CRS (spherical geometry with crs = 4326 vs
+# planar geometry with crs = 3035)
+st_is_valid(prot_areas, reason = TRUE)
+st_is_valid(prot_areas_3035, reason = TRUE)
+
 
 # validate the polygons
 prot_areas_valid <- st_make_valid(prot_areas)
@@ -172,6 +178,12 @@ prot_areas_3035_valid <- st_make_valid(prot_areas_3035)
 # calculate centroids of the valid polygons
 cts_prot_areas <- st_centroid(prot_areas_valid)
 cts_prot_areas_3035 <- st_centroid(prot_areas_valid_3035)
+
+# notice how not all reasons for invalidity affect the computation of centroids
+# https://github.com/r-spatial/sf/issues/1829#issuecomment-953763358
+# Actually you don't need to validate the polygons in crs 3035 to calculate
+# the centroids
+cts_prot_areas_3035 <- st_centroid(prot_areas_3035)
 
 
 
