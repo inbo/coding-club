@@ -1,0 +1,263 @@
+---
+layout: presentation
+title: Rasters in R
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+  <!-- Adjust the presentation to the session. Focus on the challenges,
+this is not a coding tutorial.
+
+Note, to include figures, store the image in the `/docs/assets/images`
+folder and use the jekyll base.url reference as done in this template
+or see https://jekyllrb.com/docs/liquid/tags/#links.
+  using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 25 NOVEMBER 2021
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck<br>
+back to INBOflix
+
+---
+class: left, top
+
+## Introduction: open software
+
+While preparing the coding club...
+
+
+Open software: it's good for you, for us, for everyone.
+
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20211125/20211125_issue_solved_dplyr.png)
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20211125/20211125_rasters_badge.png)
+
+---
+class: left, top
+
+## raster, terra, stars, sf, sp, ... HELP!
+
+R is rapidly evolving to fill the gap with Python and C++. Downside: new packages are being developed, old ones are modified or superseded.
+
+### Spatial vector data (coding club of October)
+
+- **sf** : newest and recommended package
+- **sp** : its predecessor
+
+### Spatial raster data
+
+- [**terra**](https://rspatial.github.io/terra/reference/terra-package.html) : newest and recommended package
+- [**raster**](https://rspatial.org/raster/pkg/index.html) : its predecessor (no support for sf)
+- [**stars**](https://r-spatial.github.io/stars/) : for **s**patio**t**emporal *ar*ray*s*
+
+For more info, read this great [article](https://geocompr.github.io/post/2021/spatial-classes-conversion/) about conversions among different spatial classes in R.
+
+---
+class: left, top
+
+## A raster is ...
+
+
+- a `SpatRaster` object in `terra`
+- a  `RasterLayer` object in  `raster`
+- a `stars` object in `stars`
+
+---
+class: left, top
+
+## Continuous vs categorical rasters
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20211125/20211125_continuous_vs_caterogical_rasters.png)
+
+---
+class: left, top
+
+Install the packages:
+```r
+ install.packages(c("raster", "terra", "exactextractr", "sf"))
+```
+
+Load the package:
+
+```r
+library(raster)
+library(terra)
+library(exactextractr)
+library(sf)
+```
+
+---
+class: center, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/i544o05cSs6bYbxKBxIbDA?both
+
+<iframe src="https://hackmd.io/i544o05cSs6bYbxKBxIbDA?edit" height="450px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+Download* the R script in folder `src/20211125/` and data in `data/20211125/`.
+
+- R script: [20211125/20211125_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20211125/20211125_challenges.R)
+- `20211125_lu_nara_2016_100m.tif`: a categorical raster of land use of Flanders with 9 land use categories. Thanks, NARA team!
+- `20211125_lu_nara_legend.csv`: legend to map land use index (1-9) to meaningful land use category ("Grasland", "Bos", "Akker", ...)
+- [color-infrared image](https://eo.belspo.be/en/colour-composites) `20211125_cir_ename.tif` in the neighborhood of the village Ename (East Flanders)
+- `20211125_dsm_ename.tif`: a digital **surface** model of Ename
+- `20211125_dtm_ename.tif`: a digital **terrain** model of Ename
+
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+1. read GeoTIFF `20211125_lu_nara_2016_100m.tif` as a SpatRaster (terra) called `lu_nara_2016`
+2. Which layers (**names**) does it contain? What is the **crs**? The **ext**ent? The **res**olution? What are the **minmax** values of the raster?
+3. **plot** the raster. Note: if you get a bunch of errors:  `Error in x$.self$finalize() : attempt to apply non-function`, just ignore them!
+4. Read `20211125_lu_nara_legend.csv` (code is provided!) so that you can set the
+color table associated with `lu_nara_2016`.
+5. Calculate the most and least occurring land use category in each of the Natura2000 protected areas. Tip: use `exactextractr::exact_extract()` with the right [summary operations](https://isciences.gitlab.io/exactextractr/#summary-operations).
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+1. Read the color-infrared image `20211125_cir_ename.tif` as ``
+2. How many layers does it contain? What are their names? What is the raster's CR? The extent? The resolution?
+3. Rename the layers: `fill_1` to `nir` (near-infrared), `fill_2` to `red`, `fill_3` to `green`. Plto the raster.
+4. Calculate the [Normalized difference vegetation index](https://en.wikipedia.org/wiki/Normalized_difference_vegetation_index) (NDVI) based on near infrared and red layers: `ndvi = (nir - red)/(nir + red)`.
+5. Notice how the calculated `ndvi` is a raster itself. Assign name  `ndvi` to the raster layer you have just created
+6. Plot `ndvi` and write it as a new GeoTIFF (*.tif) file: `ndvi_ename.tif`
+
+---
+class: left, top
+
+## INTERMEZZO: big files? No problem
+
+Big rasters? No problem! From [`raster` documentation](https://rspatial.github.io/raster/reference/raster-package.html):
+
+> The package can work with large files because the objects it creates from these files only contain information about the structure of the data, such as the number of rows and columns, the
+spatial extent, and the filename, but it does not attempt to read all the cell values in memory. In computations with these objects, data is processed in chunks.
+
+
+This holds true for `terra` and `stars` as well, of course.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3
+
+Calculate a canopy height raster from a digital **terrain** model (DTM) and a digital **surface** model (DSM). In other words: `dtm` is the height of the terrain in meters while `dsm` is the height of the top of the vegetation canopy in meters. Both heights are measured using mean sea level as reference zero.
+
+Read `20211125_dtm_ename.tif` and `20211125_dsm_ename.tif` as `dtm` and `dsm` respectively. This doesn't work:
+
+```r
+# canopy height model
+chm <- dsm - dtm
+```
+
+How to fix it?
+
+
+---
+class: left, top
+
+## Bonus challenge
+
+### Appendices to challenge 1
+
+1. Calculate the areal proportion of land cover classes in each of the Natura2000 protected areas. Note: exact_extract() should be combined with a function. It requires data manipulation knowledge (dplyr) as well.
+2. We do now something similar working with continuous rasters. Calculate dataframe with min max and mean altitude for each Belgian province using `exact_extract()`. How to include the province name in the output? (code to get the data is provided in R script!). Tip: https://isciences.gitlab.io/exactextractr/#basic-usage
+
+
+### Appendices to challenge 2
+
+1. Add layers `nir` and `red` from `cir_ename` to GeoTIFF "ndvi_ename.tif"
+
+---
+class: left, top
+
+# Resources
+
+- solutions and video recording soon available
+- `terra` [documentation](https://rspatial.github.io/terra/reference/terra-package.html): extensive and easy to use at the same time
+- `raster` [documentation](https://rspatial.github.io/raster/reference/raster-package.html): written in the same style as the one for `terra` package
+- [exactextractr](https://isciences.gitlab.io/exactextractr/) very well written documentation
+- [INBO tutorial](https://inbo.github.io/tutorials/tutorials/spatial_standards_raster/) about open rasters file formats and comparison table. Thanks, Floris!
+- [spatial classes conversion](https://geocompr.github.io/post/2021/spatial-classes-conversion/) with very useful conversion tables
+
+---
+class: left, top
+
+![:scale 50%]({{ site.baseurl}}/assets/images/20211125/20211125_ask_feedback_icon.png)
+
+# Ideas for 2022
+
+We propose: you decide!
+
+- Coding club of 2.5 hrs: from 10am to **12.30pm**?
+- More real data and questions from you: ask for it at each announcement (begin of the month)
+
+---
+class: left, top
+
+# Ideas for 2022
+
+## Timeline and topics
+
+As for 2021, the coding club would like to reflect the research process: read, process, visualize, report. What do you think about?
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20211125/20211125_timeline_coding_clubs_2022.png)
+
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room number and name  -->
+Topic: spatial data visualization in R (together with GIS club!)
+Room: living, kitchen, bedroom ... The choice is yours! <br>
+Date: 09/12/2021, van 14:00 tot 16:00<br>
+Topic: write repoRts with RMarkdown
+Room: 01.19 - Paul Van Ostaijen(??) <br>
+Date: 16/12/2021, van 10:00 tot 12:00<br>
+(registration announced via DG_useR@inbo.be)
