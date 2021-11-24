@@ -30,11 +30,10 @@ class: left, top
 
 ## Introduction: open software
 
-While preparing the coding club, I got this quite revealing quote from R:
-
-
+While preparing the coding club, I got this revealing quote from R:
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20211125/20211125_quote_about_arcgis.PNG)
+
 ---
 class: center, middle
 
@@ -128,15 +127,17 @@ class: left, top
 
 # Download data and code
 
-Download* the R script in folder `src/20211125/` and data in `data/20211125/`.
+- Download everything automatically via `inborutils::setup_codingclub_session()`
+- manually*, from [data/20211125](https://github.com/inbo/coding-club/blob/master/data/20211125/) and [src/20211125](https://github.com/inbo/coding-club/blob/master/src/20211125). Place the R script in your folder `src/20211125/` and data in `data/20211125/`.
 
-- [20211125/20211125_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20211125/20211125_challenges.R): R script to start from
-- `20211125_lu_nara_2016_100m.tif`: a categorical raster of land use of Flanders with 9 land use categories. Thanks, NARA team!
-- `20211125_lu_nara_legend.csv`: legend to map land use index (1-9) to meaningful land use category ("Grasland", "Bos", "Akker", ...)
-- `20211125_protected_areas_Lambert72.gpkg`: geopackage with NATURA2000 protected areas in Lambert 1972 coordinate reference system
-- [color-infrared image](https://eo.belspo.be/en/colour-composites) `20211125_cir_ename.tif` in the neighborhood of the village Ename (East Flanders)
-- `20211125_dsm_ename.tif`: a digital **surface** model of Ename
-- `20211125_dtm_ename.tif`: a digital **terrain** model of Ename
+
+1. [20211125/20211125_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20211125/20211125_challenges.R): R script to start from
+2. `20211125_lu_nara_2016_100m.tif`: a categorical raster of land use of Flanders with 9 land use categories. Thanks, NARA team!
+3. `20211125_lu_nara_legend.csv`: legend to map land use index (1-9) to meaningful land use category ("Grasland", "Bos", "Akker", ...)
+4. `20211125_protected_areas_Lambert72.gpkg`: geopackage with NATURA2000 protected areas in Lambert 1972 coordinate reference system
+5. `20211125_cir_ename.tif`: a [color-infrared image](https://eo.belspo.be/en/colour-composites) of Ename, East Flanders
+6. `20211125_dsm_ename.tif`: a digital **surface** model of Ename
+7. `20211125_dtm_ename.tif`: a digital **terrain** model of Ename
 
 
 <small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
