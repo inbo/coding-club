@@ -148,12 +148,14 @@ class: left, top
 
 # Challenge 1
 
-1. read GeoTIFF `20211125_lu_nara_2016_100m.tif` as a SpatRaster (terra) called `lu_nara_2016`
+1. Read `20211125_lu_nara_2016_100m.tif` as a SpatRaster (terra) and call it `lu_nara_2016`. Tip: [basics](https://rspatial.github.io/terra/reference/terra-package.html#i-creating-combining-and-sub-setting-spatraster-objects) from terra documentation
 2. Which layers (**names**) does it contain? What is the **crs**? The **ext**ent? The **res**olution? What are the **minmax** values of the raster?
-3. **plot** the raster. Note: if you get a bunch of errors:  `Error in x$.self$finalize() : attempt to apply non-function`, just ignore them!
+3. **plot** the raster. Note: ignore the errors "`Error in x$.self$finalize() : attempt to apply non-function`"
 4. Read `20211125_lu_nara_legend.csv` (code is provided!) so that you can set the
 color table associated with `lu_nara_2016`.
 5. Calculate the most and least occurring land use category in each of the Natura2000 protected areas. Tip: use `exactextractr::exact_extract()` with the right [summary operations](https://isciences.gitlab.io/exactextractr/#summary-operations).
+
+![:scale 70%]({{ site.baseurl}}/assets/images/20211125/20211125_set_color_table_raster.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)

@@ -6,7 +6,7 @@ library(exactextractr)
 
 ## CHALLENGE 1
 
-#' 1. Read GeoTIFF `20211125_lu_nara_2016_100m.tif` as a terra SpatRaster called
+#' 1. Read `20211125_lu_nara_2016_100m.tif` as a SpatRaster (terra) and call it
 #' `lu_nara_2016`
 
 
