@@ -163,13 +163,26 @@ class: left, top
 
 # Challenge 2
 
-1. Read the color-infrared image `20211125_cir_ename.tif` as ``
-2. How many layers does it contain? What are their names? What is the raster's CR? The extent? The resolution?
+1. Read the color-infrared image `20211125_cir_ename.tif` as `cir`
+2. How many layers does it contain? What are their names? What is the CRS? The extent? The resolution?
 3. Rename the layers: `fill_1` to `nir` (near-infrared), `fill_2` to `red`, `fill_3` to `green`. Plot the raster
 4. Calculate the [Normalized difference vegetation index](https://en.wikipedia.org/wiki/Normalized_difference_vegetation_index) (NDVI) based on near infrared and red layers: `ndvi = (nir - red)/(nir + red)`
 5. Notice how the calculated `ndvi` is a raster itself. Assign name  `ndvi` to the raster layer you have just created
 6. Plot `ndvi` and write it as a new GeoTIFF (*.tif) file: `ndvi_ename.tif`
 
+
+---
+class: left, top
+
+
+## INTERMEZZO: big files? No problem
+
+Big rasters? No problem! From [`raster` documentation](https://rspatial.github.io/raster/reference/raster-package.html):
+
+  _The package can work with large files because the objects it creates from these files only contain information about the structure of the data, such as the number of rows and columns, the
+spatial extent, and the filename, but it does not attempt to read all the cell values in memory. In computations with these objects, data is processed in chunks._
+
+This holds true for `terra` and `stars` as well, of course.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
