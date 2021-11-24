@@ -3,6 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
+| 2021-10-26 | rasters in R | [slides]({{ site.baseurl }}{% link sessions/20211125_rasters_in_r.html  %}) | [hackmd](https://hackmd.io/i544o05cSs6bYbxKBxIbDA?view) | online |  |
 | 2021-10-26 | spatial data in R | [slides]({{ site.baseurl }}{% link sessions/20211026_spatialdata_in_r.html  %}) | [hackmd](https://hackmd.io/VSZBnLm-SE6N8fBKOG1zYw?view) | 01.05 - Isala Van Diest | [vimeo](https://vimeo.com/640317182) |
 | 2021-09-30 | ggplot advanced & beyond | [slides]({{ site.baseurl }}{% link sessions/20210930_ggplot_advanced_and_beyond.html  %}) | [hackmd](https://hackmd.io/XN3rKUuzRbGOn1GUouqr0g?view) | 01.23 - Léon Stynen |  |
 | 2021-08-31 | ggplot basics | [slides]({{ site.baseurl }}{% link sessions/20210831_ggplot_basics.html  %}) | [hackmd](https://hackmd.io/T9b0ChbyTj2C0zjMm99Wog?view) | webinar | [vimeo](https://vimeo.com/596087475) |
