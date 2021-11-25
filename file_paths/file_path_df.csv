@@ -81,6 +81,12 @@ data/20210624/20210624_harmonia_axyridis_2012.txt,20210624_harmonia_axyridis_201
 data/20210930/20210930_area_biotopes.txt,20210930_area_biotopes.txt,data,20210930
 data/20211026/20211026_impatiens_glandulifera.txt,20211026_impatiens_glandulifera.txt,data,20211026
 data/20211026/20211026_protected_areas.gpkg,20211026_protected_areas.gpkg,data,20211026
+data/20211125/20211125_lu_nara_2016_100m.tif,20211125_lu_nara_2016_100m.tif,data,20211125
+data/20211125/20211125_lu_nara_legend.txt,20211125_lu_nara_legend.txt,data,20211125
+data/20211125/20211125_protected_areas_Lambert72.gpkg,20211125_protected_areas_Lambert72.gpkg,data,20211125
+data/20211125/20211125_cir_ename.tif,20211125_cir_ename.tif,data,20211125
+data/20211125/20211125_dsm_ename.tif,20211125_dsm_ename.tif,data,20211125
+data/20211125/20211125_dtm_ename.tif,20211125_dtm_ename.tif,data,20211125
 messy_project/data/bird obs 20170621.csv,bird obs 20170621.csv,messy_project,data
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
@@ -157,3 +163,4 @@ src/20210930/20210930_challenges.R,20210930_challenges.R,src,20210930
 src/20210930/20210930_challenges_solutions.R,20210930_challenges_solutions.R,src,20210930
 src/20211026/20211026_challenges.R,20211026_challenges.R,src,20211026
 src/20211026/20211026_challenges_solutions.R,20211026_challenges_solutions.R,src,20211026
+src/20211125/20211125_challenges.R,20211125_challenges.R,src,20211125

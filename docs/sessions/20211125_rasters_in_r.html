@@ -133,7 +133,7 @@ class: left, top
 
 1. [20211125_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20211125/20211125_challenges.R): R script to start from
 2. [`20211125_lu_nara_2016_100m.tif`](https://github.com/inbo/coding-club/blob/master/data/20211125/20211125_lu_nara_2016_100m.tif): a categorical raster of land use of Flanders with 9 land use categories. Thanks, NARA team!
-3. [`20211125_lu_nara_legend.csv`](https://github.com/inbo/coding-club/blob/master/data/20211125/20211125_lu_nara_legend.csv): legend to map land use index (1-9) to meaningful land use category ("Grasland", "Bos", "Akker", ...)
+3. [`20211125_lu_nara_legend.txt`](https://github.com/inbo/coding-club/blob/master/data/20211125/20211125_lu_nara_legend.txt): legend to map land use index (1-9) to meaningful land use category ("Grasland", "Bos", "Akker", ...)
 4. [`20211125_protected_areas_Lambert72.gpkg`](https://github.com/inbo/coding-club/blob/master/data/20211125/20211125_protected_areas_Lambert72.gpkg): geopackage with NATURA2000 protected areas in Lambert 1972 coordinate reference system
 5. [`20211125_cir_ename.tif`](https://github.com/inbo/coding-club/blob/master/data/20211125/20211125_cir_ename.tif): a [color-infrared image](https://eo.belspo.be/en/colour-composites) of Ename, East Flanders
 6. [`20211125_dsm_ename.tif`](https://github.com/inbo/coding-club/blob/master/data/20211125/20211125_dsm_ename.tif): a digital **surface** model of Ename
@@ -151,7 +151,7 @@ class: left, top
 1. Read `20211125_lu_nara_2016_100m.tif` as a SpatRaster (terra) and call it `lu_nara_2016`. Tip: [basics](https://rspatial.github.io/terra/reference/terra-package.html#i-creating-combining-and-sub-setting-spatraster-objects) from terra documentation
 2. Which layers (**names**) does it contain? What is the **crs**? The **ext**ent? The **res**olution? What are the **minmax** values of the raster?
 3. **plot** the raster. Note: ignore the errors "`Error in x$.self$finalize() : attempt to apply non-function`"
-4. Read `20211125_lu_nara_legend.csv` (code is provided!) so that you can set the
+4. Read `20211125_lu_nara_legend.txt` (code is provided!) so that you can set the
 color table associated with `lu_nara_2016`
 5. Calculate the most and least occurring land use category in each of the Natura2000 protected areas. Tip: use `exactextractr::exact_extract()` with the right [summary operations](https://isciences.gitlab.io/exactextractr/#summary-operations)
 
