@@ -1,0 +1,232 @@
+---
+layout: presentation
+title: Geospatial data visualization in R
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+  <!-- Adjust the presentation to the session. Focus on the challenges,
+this is not a coding tutorial.
+
+Note, to include figures, store the image in the `/docs/assets/images`
+folder and use the jekyll base.url reference as done in this template
+or see https://jekyllrb.com/docs/liquid/tags/#links.
+  using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 9 DECEMBER 2021
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Back to INBOflix
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20211209/20211209_badge.png)
+
+---
+class: left, top
+
+## INBO coding club meets GIS club
+
+Today we will play together with our mates from the GIS club :-)
+
+Which topic do we speak about today?
+
+Visualization of:
+
+- categorical rasters (static and dynamic maps)
+- quantiative rasters (static and dynamic maps)
+- vector geospatial data: points and polygons (dynamic maps)
+
+---
+class: left, top
+
+### Vector data
+
+- [sf](https://r-spatial.github.io/sf/articles/sf2.html) pâckage: the most updated package to work with geospatial vector data (points, polygons, ...)
+- [sp](http://cran.nexr.com/web/packages/sp/vignettes/intro_sp.pdf) still working fine but less user friendly as sf
+
+### Raster packages
+
+- [**terra**](https://rspatial.github.io/terra/reference/terra-package.html) : newest and recommended package for working with rasters
+- [**raster**](https://rspatial.org/raster/pkg/index.html) : its predecessor (no support for sf), match with sp
+
+A must read [post](https://geocompr.github.io/post/2021/spatial-classes-conversion/) about conversions among different spatial classes in R.
+
+---
+class:left, top
+
+### Dinamic visualization packages
+
+- [**leaflet**](https://rstudio.github.io/leaflet/) package: create and fine tune your HTML maps. Maps use **WGS84** (EPSG 4326)! **Note**: leaflet doesn't support SpatRasters from `terra`, convert them to `raster` before.
+- [leaflet.minicharts](https://cran.r-project.org/web/packages/leaflet.minicharts/vignettes/introduction.html) package: to add minicharts on top of leaflet maps. **Note**: it supports only standard data.frames, with lon-lat as two columns (see [issues #8](https://github.com/rte-antares-rpackage/leaflet.minicharts/issues/8)).
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20211209/20211209_leaflet_rasters.PNG
+
+---
+class: left, top
+
+## Continuous vs categorical rasters
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20211209/20211209_continuous_vs_categorical_rasters.png)
+
+---
+class: left, top
+
+Install the packages if still not done:
+
+```r
+ install.packages(c("raster", "terra", "sf", "leaflet", "grDevices",
+   "RColorBrewer", "htmltools", "leaflet.minicharts"))
+```
+
+Load the packages:
+
+```r
+library(tidyverse)
+library(grDevices)
+library(RColorBrewer)
+library(sf)
+library(terra)
+library(raster)
+library(leaflet)
+library(htmltools)
+library(leaflet.minicharts)
+```
+
+---
+class: center, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+## Coding club play tables
+
+**Like** a card club, we will split us in different tables (aka _breakout rooms_) and we will help each other! We return all together after a fixed amount of time to discuss each challenge apart.
+
+**Unlike** a card club, in our club there is no winner, neither within a table nor among tables!
+
+We will mix GISsers and R programmers within tables. Have fun!
+
+![:scale 60%]({{ site.baseurl}}/assets/images/breakout_rooms.png)
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+<br> No yellow sticky notes online. HELP EACH OTHER.
+
+---
+class: center, top
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/8PWG36-GQoec4ZHCfwuNnw?both
+
+<iframe src="https://hackmd.io/8PWG36-GQoec4ZHCfwuNnw?edit" height="450px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+- Download everything automatically via `inborutils::setup_codingclub_session()`
+- manually*: datasets from [data/20211209](https://github.com/inbo/coding-club/blob/master/data/20211209/) and R script from [src/20211209](https://github.com/inbo/coding-club/blob/master/src/20211209). Place the R script in your folder `src/20211209/` and data in `data/20211209/`.
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data description
+
+1. [20211209_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20211209/20211209_challenges.R): R script to start from
+2. [`20211209_lu_nara_2016_100m.tif`](https://github.com/inbo/coding-club/blob/master/data/20211209/20211209_lu_nara_2016_100m.tif): a categorical raster of land use of Flanders with 9 land use categories. Thanks, NARA team!
+3. [20211209_vlops_tmd_1km_20MZ17M517.tif](https://github.com/inbo/coding-club/blob/master/data/20211209/20211209_vlops_tmd_1km_20MZ17M517.tif): a continuous raster containing the nitrogen deposition in Flanders
+4. [`20211209_province_vl.shp`](https://github.com/inbo/coding-club/blob/master/data/20211209/20211209_province_vl.shp): shapefile with Flemish provinces. Download also the files with the other extensions!)
+5. [`20211209_vlinders_20002013_xy_prov.txt`](https://github.com/inbo/coding-club/blob/master/data/20211209/20211209_vlinders_20002013_xy_prov.txt): semicolon separated text file containing average number of observations of 4 butterfly species during campaigns over all Flanders from 2000 to 2013
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1A
+
+- Create a `legend` data.frame based on information in table below. Notice that you need to convert rgb to hex colors to use them for plotting. Tip: use [`rgb()`](https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/rgb.html) function from  `grDevices` package.
+
+![:scale 60%]({{ site.baseurl}}/assets/images/20211209/20211209_table_land_use_legend.png)
+
+- Read `20211209_lu_nara_2016_100m.tif` categorical raster as `lu_nara_2016` and plot it as a static map  via `plot()` using the legend you have just created. Tip: check [solution](https://github.com/inbo/coding-club/blob/master/src/20211125/20211125_challenges_solutions.R#L37-L40) of November's coding club.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1B
+
+- After reading `20211209_vlops_tmd_1km_20MZ17M517.tif` continuous raster as `nitrogen`, plot it as a static map (`plot()`) with a **legend**, **range** from 10 to 47 and color scale `hcl.colors(n = 100, palette = "Blue-Red 3")`. See more about color scales via help `?grDevices::hcl.colors()`. Check all possible color palettes via `hcl.pals()` and try out some other palettes.
+
+- How to plot `nitrogen` with only 6 different color intervals? Use the color palette you prefer.
+
+# Challenge 1C
+
+Try to make dynamic maps of the same plots in 1A and 1B with `leaflet`. Tip: dedicated page about [rasters](https://rstudio.github.io/leaflet/raster.html) in the leaflet documentation.
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20211209/20211209_set_color_table_raster.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+- Visualize observations using **circle markers**. How to add the given labels? How to clusterize the obsrevation points? Tip: the leaflet documentation on [markers](https://rstudio.github.io/leaflet/markers.html).
+- Visualize provinces (polygons!) and assign a color to them based on the sum of `n` over all year and species. Use the provided labels. Tip: the leaflet documentation on [choropleths maps](https://rstudio.github.io/leaflet/choropleths.html)
+- Add histograms to show the sum of `n` over the years for each species. How to show pie charts instead? Tip: do it with [`leaflet.minicharts`](https://cran.r-project.org/web/packages/leaflet.minicharts/vignettes/introduction.html)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Bonus challenge
+
+Make a dynamic map showing the province borders and pie charts on top of it related to the land use.
+
+---
+class: left, top
+
+# Resources
+
+- solutions and video recording soon available
+- the well-written [leaflet documentation](https://rstudio.github.io/leaflet/)
+- vignette about using [leaflet.minicharts](https://cran.r-project.org/web/packages/leaflet.minicharts/vignettes/introduction.html)
+- [spatial classes conversion](https://geocompr.github.io/post/2021/spatial-classes-conversion/) with very useful conversion tables
+
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room number and name  -->
+Topic: write reports with RMarkdown
+Room: online <br>
+Date: **16/12/2021**, van **10:00** tot **12:00** <br>
+([subscriptions]() are open!)
