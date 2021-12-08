@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2021-11-25 | geospatial data visualization in R | [slides]({{ site.baseurl }}{% link sessions/20211209_geospatial_data_visualization_in_r.html  %}) | [hackmd](https://hackmd.io/8PWG36-GQoec4ZHCfwuNnw?view) | online |  |
+| 2021-12-09 | geospatial data visualization in R | [slides]({{ site.baseurl }}{% link sessions/20211209_geospatial_data_visualization_in_r.html  %}) | [hackmd](https://hackmd.io/8PWG36-GQoec4ZHCfwuNnw?view) | online |   |
 | 2021-11-25 | rasters in R | [slides]({{ site.baseurl }}{% link sessions/20211125_rasters_in_r.html  %}) | [hackmd](https://hackmd.io/i544o05cSs6bYbxKBxIbDA?view) | online | [vimeo](https://vimeo.com/652008081) |
 | 2021-10-26 | spatial data in R | [slides]({{ site.baseurl }}{% link sessions/20211026_spatialdata_in_r.html  %}) | [hackmd](https://hackmd.io/VSZBnLm-SE6N8fBKOG1zYw?view) | 01.05 - Isala Van Diest | [vimeo](https://vimeo.com/640317182) |
 | 2021-09-30 | ggplot advanced & beyond | [slides]({{ site.baseurl }}{% link sessions/20210930_ggplot_advanced_and_beyond.html  %}) | [hackmd](https://hackmd.io/XN3rKUuzRbGOn1GUouqr0g?view) | 01.23 - Léon Stynen |  |
