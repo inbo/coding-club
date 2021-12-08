@@ -69,7 +69,7 @@ class:left, top
 - [**leaflet**](https://rstudio.github.io/leaflet/) package: create and fine tune your HTML maps. Maps use **WGS84** (EPSG 4326)! **Note**: leaflet doesn't support SpatRasters from `terra`, convert them to `raster` before.
 - [leaflet.minicharts](https://cran.r-project.org/web/packages/leaflet.minicharts/vignettes/introduction.html) package: to add minicharts on top of leaflet maps. **Note**: it supports only standard data.frames, with lon-lat as two columns (see [issues #8](https://github.com/rte-antares-rpackage/leaflet.minicharts/issues/8)).
 
-![:scale 80%]({{ site.baseurl}}/assets/images/20211209/20211209_leaflet_rasters.PNG
+![:scale 80%]({{ site.baseurl}}/assets/images/20211209/20211209_leaflet_rasters.PNG)
 
 ---
 class: left, top
@@ -124,12 +124,12 @@ class: left, top
 
 We will mix GISsers and R programmers within tables. Have fun!
 
-![:scale 60%]({{ site.baseurl}}/assets/images/breakout_rooms.png)
+![:scale 55%]({{ site.baseurl}}/assets/images/breakout_rooms.png)
 
 ---
 class: left, top
 
-![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+![:scale 85%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
 
 <br> No yellow sticky notes online. HELP EACH OTHER.
 
@@ -161,7 +161,7 @@ class: left, top
 1. [20211209_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20211209/20211209_challenges.R): R script to start from
 2. [`20211209_lu_nara_2016_100m.tif`](https://github.com/inbo/coding-club/blob/master/data/20211209/20211209_lu_nara_2016_100m.tif): a categorical raster of land use of Flanders with 9 land use categories. Thanks, NARA team!
 3. [20211209_vlops_tmd_1km_20MZ17M517.tif](https://github.com/inbo/coding-club/blob/master/data/20211209/20211209_vlops_tmd_1km_20MZ17M517.tif): a continuous raster containing the nitrogen deposition in Flanders
-4. [`20211209_province_vl.shp`](https://github.com/inbo/coding-club/blob/master/data/20211209/20211209_province_vl.shp): shapefile with Flemish provinces. Download also the files with the other extensions!)
+4. [`20211209_province_vl.shp`](https://github.com/inbo/coding-club/blob/master/data/20211209/20211209_province_vl.shp): shapefile with Flemish provinces. Download also the files with the other extensions!
 5. [`20211209_vlinders_20002013_xy_prov.txt`](https://github.com/inbo/coding-club/blob/master/data/20211209/20211209_vlinders_20002013_xy_prov.txt): semicolon separated text file containing average number of observations of 4 butterfly species during campaigns over all Flanders from 2000 to 2013
 
 ---
@@ -186,11 +186,14 @@ class: left, top
 
 - How to plot `nitrogen` with only 6 different color intervals? Use the color palette you prefer.
 
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
 # Challenge 1C
 
 Try to make dynamic maps of the same plots in 1A and 1B with `leaflet`. Tip: dedicated page about [rasters](https://rstudio.github.io/leaflet/raster.html) in the leaflet documentation.
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20211209/20211209_set_color_table_raster.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
