@@ -87,6 +87,13 @@ data/20211125/20211125_protected_areas_Lambert72.gpkg,20211125_protected_areas_L
 data/20211125/20211125_cir_ename.tif,20211125_cir_ename.tif,data,20211125
 data/20211125/20211125_dsm_ename.tif,20211125_dsm_ename.tif,data,20211125
 data/20211125/20211125_dtm_ename.tif,20211125_dtm_ename.tif,data,20211125
+data/20211209/20211209_lu_nara_2016_100m.tif,20211209_lu_nara_2016_100m.tif,data,20211209
+data/20211209/20211209_province_vl.dbf,20211209_province_vl.dbf,data,20211209
+data/20211209/20211209_province_vl.prj,20211209_province_vl.prj,data,20211209
+data/20211209/20211209_province_vl.shp,20211209_province_vl.shp,data,20211209
+data/20211209/20211209_province_vl.shx,20211209_province_vl.shx,data,20211209
+data/20211209/20211209_vlinders_20002013_xy_prov.txt,20211209_vlinders_20002013_xy_prov.txt,data,20211209
+data/20211209/20211209_vlops_tmd_1km_20MZ17M517.tif,20211209_vlops_tmd_1km_20MZ17M517.tif,data,20211209
 messy_project/data/bird obs 20170621.csv,bird obs 20170621.csv,messy_project,data
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
@@ -165,3 +172,4 @@ src/20211026/20211026_challenges.R,20211026_challenges.R,src,20211026
 src/20211026/20211026_challenges_solutions.R,20211026_challenges_solutions.R,src,20211026
 src/20211125/20211125_challenges.R,20211125_challenges.R,src,20211125
 src/20211125/20211125_challenges_solutions.R,20211125_challenges_solutions.R,src,20211125
+src/20211209/20211209_challenges.R,20211209_challenges.R,src,20211209
