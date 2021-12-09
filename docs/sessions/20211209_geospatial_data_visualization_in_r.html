@@ -76,7 +76,7 @@ class: left, top
 
 ## Continuous vs categorical rasters
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20211209/20211209_continuous_vs_categorical_rasters.png)
+![:scale 115%]({{ site.baseurl}}/assets/images/20211209/20211209_continuous_vs_categorical_rasters.png)
 
 ---
 class: left, top
@@ -84,8 +84,8 @@ class: left, top
 Install the packages if still not done:
 
 ```r
- install.packages(c("raster", "terra", "sf", "leaflet", "grDevices",
-   "RColorBrewer", "htmltools", "leaflet.minicharts"))
+ install.packages(c("sf", "raster", "terra", "exactextractr", "leaflet",
+ "grDevices", "RColorBrewer", "htmltools", "leaflet.minicharts"))
 ```
 
 Load the packages:
@@ -97,6 +97,7 @@ library(RColorBrewer)
 library(sf)
 library(terra)
 library(raster)
+library(exactextractr)
 library(leaflet)
 library(htmltools)
 library(leaflet.minicharts)
