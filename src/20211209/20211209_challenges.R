@@ -38,7 +38,7 @@ library(leaflet.minicharts)
 
 #' - Read `lu_nara_2016` and plot it as static map (`plot()`) using the legend
 #' you have just created. Tip: check solution of November's coding club session
-
+help(topic = "plot", package = "terra")
 lu_nara_2016 <- rast("./data/20211209/20211209_lu_nara_2016_100m.tif")
 
 
