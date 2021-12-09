@@ -9,24 +9,44 @@ library(htmltools)
 library(leaflet.minicharts)
 
 
-## Challenge 1
+## Challenge 1A - categorical rasters
 
-#' 1. Create a `legend` data.frame based on information in table below.
+#' - Create a `legend` data.frame based on information in table below.
 #' Notice that you need to convert rgb to hex colors to use them for plotting.
 #' Tip: use
 #' [`rgb()`](https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/rgb.html)
 #' function from  `grDevices` package.
 
+#' red, green, blue
+#' 223, 115, 255
+#' 38, 115, 0
+#' 152, 230, 0
+#' 255, 255, 0
+#' 168, 0, 0
+#' 137, 205, 102
+#' 92, 137, 68
+#' 0, 197, 255
+#' 204, 204, 204
 
 
-#' 2. Read `lu_nara_2016` and plot it as static map (`plot()`) using the legend
-#' you created in 1. Tip: check solution of November's coding club session
+
+
+
+
+
+
+#' - Read `lu_nara_2016` and plot it as static map (`plot()`) using the legend
+#' you have just created. Tip: check solution of November's coding club session
 
 lu_nara_2016 <- rast("./data/20211209/20211209_lu_nara_2016_100m.tif")
 
 
 
-#' Read `20211209_vlops_tmd_1km_20MZ17M517.tif` continuous raster as
+
+
+## Challenge 1B - continous rasters
+
+#' - Read `20211209_vlops_tmd_1km_20MZ17M517.tif` continuous raster as
 #' `nitrogen` and plot it as a static map (`plot()`) with a **legend**, a **range** from 10 to
 #' 47, and the color scale `hcl.colors(n = 100, palette = "Blue-Red 3")`. See
 #' more about color scales in `?grDevices::hcl.colors()`. Check all possible
@@ -35,10 +55,12 @@ lu_nara_2016 <- rast("./data/20211209/20211209_lu_nara_2016_100m.tif")
 nitrogen <- rast("./data/20211209/20211209_vlops_tmd_1km_20MZ17M517.tif")
 nitrogen
 
-
-
-#' How to plot `nitrogen` with only 6 different color intervals? Use the color
+#' - How to plot `nitrogen` with only 6 different color intervals? Use the color
 #' palette you prefer.
+
+
+
+
 
 
 
@@ -65,7 +87,14 @@ raster_nitrogen_wgs84 <- raster(nitrogen_wgs84)
 
 
 
+
+
+
+
+
 ## CHALLENGE 2 - vector data
+
+## CHALLENGE 2A
 
 #' First read `20211209_province_vl.shp` shapefie as `provinces` and
 #' `20211209_vlinders_20002013_xy_prov.txt` text file as `obs` using the
@@ -88,6 +117,11 @@ labels <- sprintf(
   "<strong>%s</strong><br/>%s<br/>%s observations",
   obs$species, obs$year, obs$n
 ) %>% lapply(htmltools::HTML)
+
+
+
+
+
 
 
 
@@ -118,6 +152,10 @@ labels <- sprintf(
   "<strong>%s</strong><br/>%g observations",
   provinces$NAAM, provinces$total
 ) %>% lapply(htmltools::HTML)
+
+
+
+
 
 
 
@@ -162,3 +200,44 @@ tot_n_obs_species <-
 
 
 
+
+
+
+## CHALLENGE 2B
+
+#' Make a dynamic map showing the province borders and pie charts on top of it
+#' showing the areal proportion of land cover classes. The code is given.
+
+#' Use exact_extract() by almost coy-pasting from this
+#' [very similar example](https://isciences.gitlab.io/exactextractr/articles/vig2_categorical.html#summarizing-land-cover-classifications)
+#' or from previous coding club
+land_use_fracs <- exact_extract(lu_nara_2016, provinces, function(df) {
+  df %>%
+    dplyr::mutate(frac_total = coverage_fraction / sum(coverage_fraction)) %>%
+    dplyr::group_by(NAAM, value) %>%
+    dplyr::summarize(freq = sum(frac_total), .groups = "drop")
+}, summarize_df = TRUE, include_cols = "NAAM")
+
+land_use_fracs
+
+#' Add land cover use names
+land_use_fracs <- land_use_fracs %>%
+  left_join(legend_land_use, by = c("value" = "id")) %>%
+  rename(id = value)
+land_use_fracs
+
+#' Remove id and color columns and make a wide version with land use category
+#' names as columns (this is the way leaflet.minicharts wants the data to plot)
+land_use_fracs <-
+  land_use_fracs  %>%
+  dplyr::select(-c(color, id)) %>%
+  pivot_wider(names_from = land_use, values_from = freq)
+land_use_fracs
+
+# add lon_lat of province centroids
+land_use_fracs <-
+  land_use_fracs %>%
+  left_join(lon_lat, by = "NAAM") %>%
+  relocate(NAAM, lon, lat)
+
+land_use_fracs
