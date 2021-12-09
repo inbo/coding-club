@@ -169,7 +169,7 @@ class: left, top
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
 class: left, top
 
-# Challenge 1A
+## Challenge 1A - categorical rasters (static maps)
 
 - Create a `legend` data.frame based on information in table below. Notice that you need to convert rgb to hex colors to use them for plotting. Tip: use [`rgb()`](https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/rgb.html) function from  `grDevices` package.
 
@@ -181,7 +181,7 @@ class: left, top
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
 class: left, top
 
-# Challenge 1B
+## Challenge 1B - continuous rasters (static maps)
 
 - After reading `20211209_vlops_tmd_1km_20MZ17M517.tif` continuous raster as `nitrogen`, plot it as a static map (`plot()`) with a **legend**, **range** from 10 to 47 and color scale `hcl.colors(n = 100, palette = "Blue-Red 3")`. See more about color scales via help `?grDevices::hcl.colors()`. Check all possible color palettes via `hcl.pals()` and try out some other palettes.
 
@@ -191,16 +191,16 @@ class: left, top
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
 class: left, top
 
-# Challenge 1C
+## Challenge 1C - rasters (dynamic maps)
 
-Try to make dynamic maps of the same plots in 1A and 1B with `leaflet`. Tip: dedicated page about [rasters](https://rstudio.github.io/leaflet/raster.html) in the leaflet documentation.
+Try to make dynamic maps of the static maps in 1A and 1B with `leaflet`. Tip: dedicated page about [rasters](https://rstudio.github.io/leaflet/raster.html) in the leaflet documentation.
 
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
-# Challenge 2A
+## Challenge 2A
 
 First read `20211209_province_vl.shp` shapefie as `provinces` and `20211209_vlinders_20002013_xy_prov.txt` text file as `obs` using the provided code.
 
@@ -212,7 +212,7 @@ First read `20211209_province_vl.shp` shapefie as `provinces` and `20211209_vlin
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
-# Challenge 2B
+## Challenge 2B
 
 Previous month we calculated the areal proportion of land cover classes in each of the Natura2000 protected areas. Today we do the same with provinces instead of the protected areas. The code is given.
 

@@ -65,9 +65,11 @@ nitrogen
 
 
 
-#' Try to make dynamic maps of the same plots in 1A and 1B with `leaflet`. Tip:
+## Challenge 1C - dynamic maps of rasters
+
+#' Try to make dynamic maps of the static maps in 1A and 1B with `leaflet`. Tip:
 #' dedicated page about [rasters](https://rstudio.github.io/leaflet/raster.html)
-#' in the leaflet documentation
+#' in the leaflet documentation.
 
 #' transform to WGS84 (crs = 4326)
 lu_nara_2016_wgs84 <- terra::project(
