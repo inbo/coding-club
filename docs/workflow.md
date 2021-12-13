@@ -141,12 +141,22 @@ Privacy: "Anyone can see this video"
 
 Folder: INBO Coding Club
 
+Language (in Distribution tab, Discovery section): English
+
 Tags (in Distribution tab, Discovery section): programming, INBO coding club, R, other session related tags
 
 Example: 
 > programming, INBO coding club, R, functional programming, purrr, tidyverse
 
-Language (in Distribution tab, Discovery section): English
+Credits & collaborators (in Distribution tab, Discovery section): an _author_ (main author of the slides and typically the moderator of the coding club session) and any other _contributor_.
+
+Example: 
+Damiano Oldoni (role: author), Hans Van Calster (role: contributor)
+
+Categories: Educational
+
+Creative Common license (in Distribution tab, Discovery section):
+Attribution
 
 Enable video review page: YES
 
