@@ -14,7 +14,7 @@
 | 2021-03-30 | tidy data | [slides]({{ site.baseurl }}{% link sessions/20210330_tidy_data.html  %}) | [hackmd](https://hackmd.io/6RPBUP5BT9aOt9SQaUoOyg?view) | webinar | [vimeo](https://vimeo.com/532185427) |
 | 2021-02-25 | read datafiles in R | [slides]({{ site.baseurl }}{% link sessions/20210225_read_datafiles_in_r.html  %}) | [hackmd](https://hackmd.io/xm_RYj5xTGOh0jHQiiu9_A?view) | webinar | [vimeo](https://vimeo.com/519026595) |
 | 2021-01-26 | connect to INBO databases in R | [slides]({{ site.baseurl }}{% link sessions/20210126_connect_to_inbo_dbs_in_r.html  %}) | [hackmd](https://hackmd.io/YHvcGxRpSEqHbRaNGDRFaw?view) | webinar | |
-| 2020-12-17 | oustanding plots | [slides]({{ site.baseurl }}{% link sessions/20201217_outstanding_plots.html  %}) | [hackmd](https://hackmd.io/SEuVG7pURQmvUGVjeXOrLA?view) | webinar | |
+| 2020-12-17 | outstanding plots | [slides]({{ site.baseurl }}{% link sessions/20201217_outstanding_plots.html  %}) | [hackmd](https://hackmd.io/SEuVG7pURQmvUGVjeXOrLA?view) | webinar | |
 | 2020-11-24 | ggplot for dummies | [slides]({{ site.baseurl }}{% link sessions/20201124_ggplot_for_dummies.html  %}) | [hackmd](https://hackmd.io/tnyi5K3lSHKANhb3UtIggA?view) | webinar | |
 | 2020-10-27 | dates en times in R | [slides]({{ site.baseurl }}{% link sessions/20201027_dates_in_r.html  %}) | [hackmd](https://hackmd.io/wjPHZOQnRmmFZdXMG_A5OQ?view) | webinar | [vimeo](https://vimeo.com/473564881) |
 | 2020-09-24 | be proficient with strings | [slides]({{ site.baseurl }}{% link sessions/20200924_be_proficient_with_strings.html  %}) | [hackmd](https://hackmd.io/@CX5eR_y9TP2KGHs5tv61pw/BkTql4vrw) | webinar | [vimeo](https://vimeo.com/463832080) |
