@@ -1,0 +1,249 @@
+---
+layout: presentation
+title: markdown your report
+---
+
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 16 DECEMBER 2021
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+online<br>
+
+---
+class: center, top
+
+<!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20211216/20211216_badge.png)
+
+---
+class: center, top
+
+## Introduction: open software
+
+During the coding club about spatial vector data in October, we found that the description of the arguments of `sf::st_contains()` are inverted in the cheat sheet. Issue already open since 2019. Sometimes daring to ask for updates helps :-)
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20211216/20211216_bug_cheat_sheet_sf_update.png)
+
+---
+class: center, top
+
+## Markdown, R Markdown, bookdown, INBOmd: help!
+
+Some definitions:
+
+- **Markdown**: a markup language for creating formatted text using a plain-text editor. E.g. make text italic by surrounding it with underscores or asterisks, e.g., __text__ or **text**
+- R Markdown: a file type with extension `Rmd` to _knit_ text (in Markdown) and code (in R) together. goal: save and execute code and generate high quality shareable reports.
+- [rmarkdown](https://rmarkdown.rstudio.com/lesson-1.html): the R package to write R Markdown documents. **note**: by default installed within RStudio!
+- [bookdown](https://bookdown.org/yihui/bookdown/): R package to make authoring _books_ or technical documents out of a series of R Markdown documents
+- [INBOmd](https://github.com/inbo/INBOmd): R package containing templates to generate reports, slides or posters with the corporate identity of INBO or the Flemish government.
+
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20211216/20211216_hexlogos.png)
+
+---
+class: center, top
+
+The main reference material for today's coding club:
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20211216_reference_material.png)
+
+- [R Markdown cheat sheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+- book about [bookdown](https://bookdown.org/yihui/bookdown/)
+- [Thierry's slides](https://inbo.github.io/inbomd_examples/inbomd_workshop/inbomd_workshop.pdf) about writing a report with INBOmd
+
+---
+class: center, middle
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+## Coding club play tables
+
+**Like** a card club, we will split us in different tables (aka _breakout rooms_) and we will help each other! We return all together after a fixed amount of time to discuss each challenge apart.
+
+**Unlike** a card club, in our club there is no winner, neither within a table nor among tables!
+
+![:scale 65%]({{ site.baseurl}}/assets/images/breakout_rooms.png)
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+<br> No yellow sticky notes online. We use hackmd (see next slide) but basic principle doesn't change.
+
+---
+class: center, middle
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/DXQK5B3OSjmpbgQK5Ft9KA?edit
+
+<iframe src="https://hackmd.io/DXQK5B3OSjmpbgQK5Ft9KA?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Challenge 0
+
+Using Rstudio interface to create a new R Markdown document:
+
+- `File` ->  `New File` -> `R Markdown...` -> Title: "test", Author: your name, Output format: HTML (deafult)
+![:scale 50%]({{ site.baseurl}}/assets/images/20211216/20211216_challenge0_new_rmd.png)
+- Save it as `test.Rmd`
+- **knit** it (shortcut: Ctrl+Shift+k) to render it (= `render()` in console)
+![:scale 65%]({{ site.baseurl}}/assets/images/20211216/20211216_knit_does_the_magic.png)
+
+---
+class: left, top
+
+# The YAML header: iammol what???
+
+The firs lines between triple dashes (`---`) is our **header**, needed to configurate the output to generate by setting up the title, the author, the output type, etc. And what does YAML satnds for? YAML is the programming language used to write such configuration file. Why YAML? Because it is very, very **human readable** and easy to understand.
+
+```r
+---
+title: "test"
+author: "Damiano Oldoni"
+date: "14-12-2021"
+output: html_document
+---
+```
+
+---
+class: left, top
+
+# Download data and code
+
+- Download everything automatically via `inborutils::setup_codingclub_session()`
+- manually*, from [data/20211216](https://github.com/inbo/coding-club/blob/master/data/20211216/) and [src/20211216](https://github.com/inbo/coding-club/blob/master/src/20211216). Place the R script in your folder `src/20211216/` and data in `data/20211216/`.
+
+
+1. [20211216_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20211216/20211216_challenges.R): R script about geese counts.
+2. [20211216_geese_counts.txt](https://github.com/inbo/coding-club/blob/master/src/20211216/20211216_geese_counts.txt): geese cath data to use within `20211216_challenges.R`.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+Convert the challenge 1 section in `20211216_challenges.R` to a R Markdown document called `1_read_data_overview`. Please, take care of:
+
+1. Converting the comments to the text of your Rmd
+2. Show the library you need to load but avoid to return any message (errors or warnings allowed)
+3. Set date authomatically by setting: `Date:  "``Sys.Date()``"`
+4. Do you want always nice tables with the smallest effort possible? Set `df_print` argument in header (see example below)
+5. Add a table of content (see example below)
+
+![:scale 65%]({{ site.baseurl}}/assets/images/20211216/20211216_markdown_toc_df_paged.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3
+
+
+
+You want to try something special? See some alternative [format options](https://rmarkdown.rstudio.com/formats.html).
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: center, middle
+
+<!-- Always try to include some type of reviewing (can be short and entertaining).
+    Remove this slide if no reviewing is included -->
+![:scale 100%]({{ site.baseurl}}/assets/images/time_for_review.jpg)
+
+---
+class: center, middle
+
+## Did you know that...
+
+1. Many INBO tutorials are written in R markdown and then _knitted_ as markdown documents? See [example](https://inbo.github.io/tutorials/tutorials/r_gbif_name_matching/).
+2. [Data processing pipelines](https://trias-project.github.io/alien-plants-belgium/dwc_mapping.html) published as GitHub pages are R markdown documents?
+3. Hackmd pages follow markdown syntax?
+
+## Go pro
+
+From a R markdown document to a full INBO report? Get inspired by nice [Thierry's workshop](https://inbomd-examples.netlify.com/inbomd_workshop/inbomd_workshop.pdf).
+
+---
+class: left, top
+
+# Resources
+
+1. Solutions and video recording available soon
+2. x
+3. x
+4. x
+5. [Article](https://www.educative.io/blog/yaml-tutorial) about YAML
+
+---
+class: left, top
+
+# Ideas for 2022
+
+We propose. You decide!
+
+- Coding club of 2.5 hrs: from 10am to **12.30pm**?
+- More real data and questions from you: ask for it at each announcement (begin of the month)
+
+![:scale 50%]({{ site.baseurl}}/assets/images/20211125/20211125_ask_feedback_icon.png)
+
+
+---
+class: left, top
+
+# Ideas for 2022
+
+## Timeline and topics
+
+As for 2021, the coding club would like to reflect the research process: read, process, visualize, report. What do you think about? Which topics do you miss? Would you like to give a special edition on a specific topic?
+
+![:scale 120%]({{ site.baseurl}}/assets/images/20211125/20211125_timeline_coding_clubs_2022.png)
+
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+Topic: connect to INBO databases in R (draft)
+Room: 01.05 - Isala Van Diest(??) <br>
+Date: **25/01/2022**, van **10:00** tot **12:00** <br>
+(registration announced via DG_useR@inbo.be)
