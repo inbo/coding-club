@@ -1,22 +1,33 @@
-# load libraries (don't forget to install packages if not already done!)
-library(geepack)
-library(tidyverse)        # to do datascience
+## CHALLENGE 1
+
+#' Convert the code below to a Rmd document called `1_geese_read_data.Rmd` and
+#' make an html version of it
+
+
+
+#' ## Setup
+
+#' Load libraries:
+library(tidyverse)    # to do datascience
+library(geepack)      # to do modelling
 library(INBOtheme)    # to apply INBO style to graphs
-library(here)         # to work with paths
-
-##############################################
-### Read dataset in and data manipulation  ###
-##############################################
-
-##
-##1) All geese
-##
 
 
-##1.1) Alle geese - all provinces
-
-dataset <- read_csv(here::here("data", "20190829", "20190829_goose_counts_2018.csv"),
-                     na = "NA",
+#' ## Introduction
+#'
+#' In this document we will:
+#'
+#' 1. read geese data
+#' 2. explore data
+#' 3. preprocess data
+#'
+#'
+#'
+#' ## Read data
+#'
+#' Read catches and counts of geese in Flanders:
+catch_fl <- read_csv("./data/20211216/20211216_geese_counts.txt",
+                    na = "NA",
                     col_types = cols(
                       province = col_character(),
                       location = col_character(),
@@ -28,23 +39,42 @@ dataset <- read_csv(here::here("data", "20190829", "20190829_goose_counts_2018.c
                       adult = col_double(),
                       pulli = col_double(),
                       not_catched = col_double()
-                    )) %>% as_tibble()
+                    ))
 
-dim(dataset)
+#' General preview
+head(catch_fl, n = 10)
 
-# General Preview
-head(dataset, n = 10)
+#' ## Explore data
 
-## provinces
-dataset %>% distinct(province)
+#' ### Taxonomic information
+#'
+#' Species present:
+catch_fl %>% distinct(latinName, commonName)
 
-## geese species
-dataset %>% distinct(latinName, commonName)
+#' ### Geographic information
+#'
+#' Data are geographically grouped by province and municipality (`location`):
+#'
+catch_fl %>% distinct(province, location)
 
-## remove Dutch neighboring provinces in case present
-catch_be <-
-  dataset %>%
-  filter(province != "NL_Noord-Brabant" & province != "NL_Zeeland")
+#' ### Temporal information
+#'
+#' The data are temporally defined at year level:
+#'
+years <- catch_fl %>% distinct(year) %>% pull()
+
+#' from:
+min(years)
+
+#' to:
+max(years)
+
+#' ## Preprocess data
+#'
+#' Remove data not linked to any `province` or `location` (`NAs`):
+catch_fl <- catch_fl %>% filter(!is.na(province), !is.na(location))
+
+
 
 ## catch per year and province
 catch_per_year_province <-

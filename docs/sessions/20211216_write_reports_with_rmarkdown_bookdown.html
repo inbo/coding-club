@@ -125,7 +125,7 @@ class: left, top
 
 # The YAML header: iammol what???
 
-The firs lines between triple dashes (`---`) is our **header**, needed to configurate the output to generate by setting up the title, the author, the output type, etc. And what does YAML satnds for? YAML is the programming language used to write such configuration file. Why YAML? Because it is very, very **human readable** and easy to understand.
+The firs lines between triple dashes (`---`) is our **header**, needed to configurate the output to generate by setting up the title, the author, the output type, etc. And what does YAML satnds for? YAML is a programming language typically used to write such kind of **configurations**. Why YAML? Because it is very, very **human readable**.
 
 ```r
 ---
@@ -154,12 +154,12 @@ class: left, top
 
 # Challenge 1
 
-Convert the challenge 1 section in `20211216_challenges.R` to a R Markdown document called `1_read_data_overview`. Please, take care of:
+Convert the code below to a Rmd document called `1_geese_read_data.Rmd` and make an html version of it. Please, take care of:
 
-1. Converting the comments to the text of your Rmd
-2. Show the library you need to load but avoid to return any message (errors or warnings allowed)
-3. Set date authomatically by setting: `Date:  "``Sys.Date()``"`
-4. Do you want always nice tables with the smallest effort possible? Set `df_print` argument in header (see example below)
+1. Converting the comments to text
+2. Show the library you need to load but avoid to return any **message** (but errors or warnings are allowed). Tip: one test output chunk option from [this list](https://yihui.org/knitr/options/#text-output). How to avoid showing **warnings** as well?
+3. Set date authomatically in YAML header by setting: `Date:  "``Sys.Date()``"`
+4. Do you want always good looking tables with the smallest effort possible? Set `df_print` argument in header (see example below)
 5. Add a table of content (see example below)
 
 ![:scale 65%]({{ site.baseurl}}/assets/images/20211216/20211216_markdown_toc_df_paged.png)
