@@ -112,12 +112,13 @@ class: left, top
 
 # Challenge 0
 
-Using Rstudio interface to create a new R Markdown document:
+Using Rstudio interface to create and work with a new R Markdown document:
 
 - `File` ->  `New File` -> `R Markdown...` -> Title: "test", Author: your name, Output format: HTML (deafult)
 ![:scale 50%]({{ site.baseurl}}/assets/images/20211216/20211216_challenge0_new_rmd.png)
+- Switch to Visual Markdown Editor (VME) and try to write further (and say OOOHHH)
 - Save it as `test.Rmd`
-- **knit** it (shortcut: Ctrl+Shift+k) to render it (= `render()` in console)
+- **knit** it (shortcut: Ctrl+Shift+k) to render it (= `rmarkdown::render("test.Rmd")` in console)
 ![:scale 65%]({{ site.baseurl}}/assets/images/20211216/20211216_knit_does_the_magic.png)
 
 ---
@@ -158,11 +159,21 @@ Convert the code below to a Rmd document called `1_geese_read_data.Rmd` and make
 
 1. Converting the comments to text
 2. Show the library you need to load but avoid to return any **message** (but errors or warnings are allowed). Tip: one test output chunk option from [this list](https://yihui.org/knitr/options/#text-output). How to avoid showing **warnings** as well?
-3. Set date authomatically in YAML header by setting: `Date:  "``Sys.Date()``"`
-4. Do you want always good looking tables with the smallest effort possible? Set `df_print` argument in header (see example below)
-5. Add a table of content (see example below)
+3. Do not show the code in lines 81-83 and 87-88. Tip: shown in template (challenge 0) and in the list mentioned in 2.
+4. Set date authomatically in YAML header by setting: `date: "`r Sys.Date()`"`
+5. Do you want always good looking tables with the smallest effort possible? Set `df_print` argument in header (see example below)
+6. Add a table of content (see example below)
 
 ![:scale 65%]({{ site.baseurl}}/assets/images/20211216/20211216_markdown_toc_df_paged.png)
+
+
+---
+class: left, top
+
+# Intermezzo
+
+There are plenty chunk options. For example, do you want to restyle your code authomatically? Use chunk option: `tidy='styler'`. It will run `styler::style_text()` behind the screen. Handy!
+
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -170,25 +181,43 @@ class: left, top
 
 # Challenge 2
 
+Put the code in challenge 2 in a second R Markdown document called `2_visualize_model_data.Rmd` and make an html document out of it. Take case of the following:
+
+1. If you do it "blindly", you will get errors, probably at the very beginning: why? How to solve it? Tip: you have to include some code from previous document. Do it in a chunk with option `include=FALSE` to evaluate it but not showing it at all.
+2. When it goes about plotting and modelling, the chunk codes could be quite long and so potentially distracting to readers. Please, fold them. Readers can then choose to display them by clicking the fold buttons: Tip: check this [fold-show](https://bookdown.org/yihui/rmarkdown-cookbook/fold-show.html) section
+
+---
+class: left, top
+
+# Intermezzo 2
+
+Rerunning some code from a previous document as we did in challenge 2 is far from a good solution, of course. You have two options, depending on the length of your document/report/blogpost/...
+
+1. Put everything in a Rmd document (typical for blogposts, tutorials)
+2. Make a Rmd per chapter and bind them together with bookdown!
+
+Let's apply solution 2 to our case! First, make a new book with the RStudio Project Wizard (File > New Project > New Directory > Book project using bookdown) and select gitbook from the dropdown menu. Call the directory, and so, the project `my_report`. More about in [this](https://bookdown.org/yihui/bookdown/html.html#gitbook-style) chapter fo the bookdown guide. Notice you can _build_ your book via a "Buid book" option!
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
+
 # Challenge 3
 
+Try to convert the content of your two Rmd documents in the book we have just created. Follow these tips, from Thierry's guide. Notice that some files are already present, you just need to edit them:
 
-
-You want to try something special? See some alternative [format options](https://rmarkdown.rstudio.com/formats.html).
-
-<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+![:scale 80%]({{ site.baseurl}}/assets/images/20211216/20211216_tip_challenge3.png)
 
 ---
-class: center, middle
+class: left, top
 
-<!-- Always try to include some type of reviewing (can be short and entertaining).
-    Remove this slide if no reviewing is included -->
-![:scale 100%]({{ site.baseurl}}/assets/images/time_for_review.jpg)
+# Bonus challenge
+
+Now you can become a pro!
+
+1. Add a figure caption. Tip: fig.cap = "your caption" in chunk option
+2. Add some cross references, e.g. try to refer to a section within another section and refer to a figure. Tip: change outputin YAML header from `html_document` to `html_document2`, a type of output specific of bookdown, not available in RMarkdown. This allows numbering and cross-referencing figures/tables/equations. Handy!
 
 ---
 class: center, middle
@@ -197,11 +226,7 @@ class: center, middle
 
 1. Many INBO tutorials are written in R markdown and then _knitted_ as markdown documents? See [example](https://inbo.github.io/tutorials/tutorials/r_gbif_name_matching/).
 2. [Data processing pipelines](https://trias-project.github.io/alien-plants-belgium/dwc_mapping.html) published as GitHub pages are R markdown documents?
-3. Hackmd pages follow markdown syntax?
-
-## Go pro
-
-From a R markdown document to a full INBO report? Get inspired by nice [Thierry's workshop](https://inbomd-examples.netlify.com/inbomd_workshop/inbomd_workshop.pdf).
+3. Hackmd pages follow markdown syntax? Yes, you know already!
 
 ---
 class: left, top
@@ -209,10 +234,11 @@ class: left, top
 # Resources
 
 1. Solutions and video recording available soon
-2. x
-3. x
-4. x
-5. [Article](https://www.educative.io/blog/yaml-tutorial) about YAML
+2. Article to learn more about [Visual Markdown Editor](https://rstudio.github.io/visual-markdown-editing/) in RStudio
+3. [R Markdown cheat sheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+4. book about [bookdown](https://bookdown.org/yihui/bookdown/)
+5. [Thierry's slides](https://inbo.github.io/inbomd_examples/inbomd_workshop/inbomd_workshop.pdf) about writing a report with INBOmd
+6. [Article](https://www.educative.io/blog/yaml-tutorial) about YAML
 
 ---
 class: left, top
