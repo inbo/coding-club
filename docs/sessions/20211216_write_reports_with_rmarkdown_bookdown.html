@@ -33,16 +33,16 @@ class: center, top
 ![:scale 90%]({{ site.baseurl}}/assets/images/20211216/20211216_badge.png)
 
 ---
-class: center, top
+class: left, top
 
 ## Introduction: open software
 
 During the coding club about spatial vector data in October, we found that the description of the arguments of `sf::st_contains()` are inverted in the cheat sheet. Issue already open since 2019. Sometimes daring to ask for updates helps :-)
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20211216/20211216_bug_cheat_sheet_sf_update.png)
+![:scale 80%]({{ site.baseurl}}/assets/images/20211216/20211216_bug_cheat_sheet_sf_update.png)
 
 ---
-class: center, top
+class: left, top
 
 ## Markdown, R Markdown, bookdown, INBOmd: help!
 
@@ -55,14 +55,14 @@ Some definitions:
 - [INBOmd](https://github.com/inbo/INBOmd): R package containing templates to generate reports, slides or posters with the corporate identity of INBO or the Flemish government.
 
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20211216/20211216_hexlogos.png)
+![:scale 90%]({{ site.baseurl}}/assets/images/20211216/20211216_hexlogos.png)
 
 ---
-class: center, top
+class: left, top
 
 The main reference material for today's coding club:
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20211216_reference_material.png)
+![:scale 90%]({{ site.baseurl}}/assets/images/20211216/20211216_reference_material.png)
 
 - [R Markdown cheat sheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
 - book about [bookdown](https://bookdown.org/yihui/bookdown/)
@@ -115,10 +115,12 @@ class: left, top
 Using Rstudio interface to create and work with a new R Markdown document:
 
 - `File` ->  `New File` -> `R Markdown...` -> Title: "test", Author: your name, Output format: HTML (deafult)
-![:scale 50%]({{ site.baseurl}}/assets/images/20211216/20211216_challenge0_new_rmd.png)
+
+![:scale 40%]({{ site.baseurl}}/assets/images/20211216/20211216_challenge0_new_rmd.png)
+
 - Switch to Visual Markdown Editor (VME) and try to write further (and say OOOHHH)
 - Save it as `test.Rmd`
-- **knit** it (shortcut: Ctrl+Shift+k) to render it (= `rmarkdown::render("test.Rmd")` in console)
+- **knit** it to create html (= `rmarkdown::render("test.Rmd")` in console)
 ![:scale 65%]({{ site.baseurl}}/assets/images/20211216/20211216_knit_does_the_magic.png)
 
 ---
@@ -126,7 +128,11 @@ class: left, top
 
 # The YAML header: iammol what???
 
-The firs lines between triple dashes (`---`) is our **header**, needed to configurate the output to generate by setting up the title, the author, the output type, etc. And what does YAML satnds for? YAML is a programming language typically used to write such kind of **configurations**. Why YAML? Because it is very, very **human readable**.
+The firs lines between triple dashes (`---`) is our **header**, needed to configurate the output to generate by setting up the title, the author, the output type, etc.
+
+And why is it called a YAML header? Because it is written in YAML :-) YAML is a programming language typically used to write such kind of **configurations**.
+
+And Why using YAML? Because it is very, very **human readable**.
 
 ```r
 ---
@@ -155,16 +161,16 @@ class: left, top
 
 # Challenge 1
 
-Convert the code below to a Rmd document called `1_geese_read_data.Rmd` and make an html version of it. Please, take care of:
+Convert the code below to a Rmd document called `1_geese_read_data.Rmd` and _knit_ it as html. Please, take care of:
 
 1. Converting the comments to text
 2. Show the library you need to load but avoid to return any **message** (but errors or warnings are allowed). Tip: one test output chunk option from [this list](https://yihui.org/knitr/options/#text-output). How to avoid showing **warnings** as well?
-3. Do not show the code in lines 81-83 and 87-88. Tip: shown in template (challenge 0) and in the list mentioned in 2.
+3. Do not show the code in lines 81-83 and 87-88. Tip: this is shown in test.Rmd (challenge 0) and in the list mentioned in 2.
 4. Set date authomatically in YAML header by setting: `date: "`r Sys.Date()`"`
 5. Do you want always good looking tables with the smallest effort possible? Set `df_print` argument in header (see example below)
 6. Add a table of content (see example below)
 
-![:scale 65%]({{ site.baseurl}}/assets/images/20211216/20211216_markdown_toc_df_paged.png)
+![:scale 85%]({{ site.baseurl}}/assets/images/20211216/20211216_markdown_toc_df_paged.png)
 
 
 ---
@@ -181,7 +187,7 @@ class: left, top
 
 # Challenge 2
 
-Put the code in challenge 2 in a second R Markdown document called `2_visualize_model_data.Rmd` and make an html document out of it. Take case of the following:
+Put the code in challenge 2 in a second R Markdown document called `2_visualize_model_data.Rmd` and make an html document out of it. Take care of the following:
 
 1. If you do it "blindly", you will get errors, probably at the very beginning: why? How to solve it? Tip: you have to include some code from previous document. Do it in a chunk with option `include=FALSE` to evaluate it but not showing it at all.
 2. When it goes about plotting and modelling, the chunk codes could be quite long and so potentially distracting to readers. Please, fold them. Readers can then choose to display them by clicking the fold buttons: Tip: check this [fold-show](https://bookdown.org/yihui/rmarkdown-cookbook/fold-show.html) section
@@ -191,10 +197,10 @@ class: left, top
 
 # Intermezzo 2
 
-Rerunning some code from a previous document as we did in challenge 2 is far from a good solution, of course. You have two options, depending on the length of your document/report/blogpost/...
+Rerunning some code from a previous document as we did in challenge 2 is far from being a good solution! You have two options, depending on the length of your document/report/blogpost/...
 
 1. Put everything in a Rmd document (typical for blogposts, tutorials)
-2. Make a Rmd per chapter and bind them together with bookdown!
+2. Make a Rmd per chapter and bind all chapters together with bookdown!
 
 Let's apply solution 2 to our case! First, make a new book with the RStudio Project Wizard (File > New Project > New Directory > Book project using bookdown) and select gitbook from the dropdown menu. Call the directory, and so, the project `my_report`. More about in [this](https://bookdown.org/yihui/bookdown/html.html#gitbook-style) chapter fo the bookdown guide. Notice you can _build_ your book via a "Buid book" option!
 
@@ -217,10 +223,10 @@ class: left, top
 Now you can become a pro!
 
 1. Add a figure caption. Tip: fig.cap = "your caption" in chunk option
-2. Add some cross references, e.g. try to refer to a section within another section and refer to a figure. Tip: change outputin YAML header from `html_document` to `html_document2`, a type of output specific of bookdown, not available in RMarkdown. This allows numbering and cross-referencing figures/tables/equations. Handy!
+2. Add some cross references, e.g. try to refer to a section within another section and refer to a figure. Tip: change the output in YAML header from `html_document` to `html_document2`, a type of output specific of bookdown, not available in RMarkdown. This allows numbering and cross-referencing figures/tables/equations. Handy!
 
 ---
-class: center, middle
+class: left, top
 
 ## Did you know that...
 
@@ -265,9 +271,9 @@ As for 2021, the coding club would like to reflect the research process: read, p
 ![:scale 120%]({{ site.baseurl}}/assets/images/20211125/20211125_timeline_coding_clubs_2022.png)
 
 ---
-class: center, top
+class: center, middle
 
-![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+![:scale 40%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
 
 Topic: connect to INBO databases in R (draft)
 Room: 01.05 - Isala Van Diest(??) <br>
