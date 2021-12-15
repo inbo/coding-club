@@ -48,15 +48,16 @@ class: left, top
 
 Some definitions:
 
-- **Markdown**: a markup language for creating formatted text using a plain-text editor. E.g. make text italic by surrounding it with underscores or asterisks, e.g., __text__ or **text**
+- **Markdown**: a markup language* for creating formatted text using a plain-text editor. E.g. make text italic by surrounding it with underscores or asterisks, e.g., __text__ or **text**
 - R Markdown: a file type with extension `Rmd` to _knit_ text (in Markdown) and code (in R) together. goal: save and execute code and generate high quality shareable reports.
 - [rmarkdown](https://rmarkdown.rstudio.com/lesson-1.html): the R package to write R Markdown documents. **note**: by default installed within RStudio!
 - [bookdown](https://bookdown.org/yihui/bookdown/): R package to make authoring _books_ or technical documents out of a series of R Markdown documents
 - [INBOmd](https://github.com/inbo/INBOmd): R package containing templates to generate reports, slides or posters with the corporate identity of INBO or the Flemish government.
 
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20211216/20211216_hexlogos.png)
+![:scale 60%]({{ site.baseurl}}/assets/images/20211216/20211216_hexlogos.png)
 
+<small>* __Note__:  a markup language is a language that annotates text so that the computer can manipulate that text. Most markup languages are human-readable. More on [Wikipedia](https://en.wikipedia.org/wiki/Markup_language#Descriptive_markup).
 ---
 class: left, top
 
@@ -67,6 +68,20 @@ The main reference material for today's coding club:
 - [R Markdown cheat sheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
 - book about [bookdown](https://bookdown.org/yihui/bookdown/)
 - [Thierry's slides](https://inbo.github.io/inbomd_examples/inbomd_workshop/inbomd_workshop.pdf) about writing a report with INBOmd
+
+---
+class: left, top
+
+Load the packages (or install them first):
+
+```r
+library(tidyverse)    # to do datascience
+library(geepack)      # to do modelling
+library(INBOtheme)    # to apply INBO style to graphs
+library(sf)           # to work with geospatial vector data
+library(leaflet)      # to make dynamic maps
+library(htmltools)    # to make nice html labels for dynamic maps
+```
 
 ---
 class: center, middle
@@ -224,6 +239,7 @@ Now you can become a pro!
 
 1. Add a figure caption. Tip: fig.cap = "your caption" in chunk option
 2. Add some cross references, e.g. try to refer to a section within another section and refer to a figure. Tip: change the output in YAML header from `html_document` to `html_document2`, a type of output specific of bookdown, not available in RMarkdown. This allows numbering and cross-referencing figures/tables/equations. Handy!
+3. Now you know how to create a _book_, you can understand the phylosophy behind the INBO package `INBOmd`! Give it a try by creating the same book as in challenge 3: a report fully INBO-styled, yeah! Tip: check `?INBOmd::report()`
 
 ---
 class: left, top
