@@ -3,7 +3,7 @@ layout: presentation
 title: markdown your report
 ---
 
-class: center, top
+class: center, middle
 
 ![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
 
@@ -27,7 +27,7 @@ class: center, top
 online<br>
 
 ---
-class: center, top
+class: center, middle
 
 <!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
 ![:scale 90%]({{ site.baseurl}}/assets/images/20211216/20211216_badge.png)
@@ -46,16 +46,14 @@ class: left, top
 
 ## Markdown, R Markdown, bookdown, INBOmd: help!
 
-Some definitions:
-
-- **Markdown**: a markup language* for creating formatted text using a plain-text editor. E.g. make text italic by surrounding it with underscores or asterisks, e.g., __text__ or **text**
+- Markdown: a markup language* for creating formatted text using a plain-text editor. E.g. make text italic by surrounding it with underscores or asterisks, e.g., `__text__` or  `**text**`
 - R Markdown: a file type with extension `Rmd` to _knit_ text (in Markdown) and code (in R) together. goal: save and execute code and generate high quality shareable reports.
 - [rmarkdown](https://rmarkdown.rstudio.com/lesson-1.html): the R package to write R Markdown documents. **note**: by default installed within RStudio!
 - [bookdown](https://bookdown.org/yihui/bookdown/): R package to make authoring _books_ or technical documents out of a series of R Markdown documents
 - [INBOmd](https://github.com/inbo/INBOmd): R package containing templates to generate reports, slides or posters with the corporate identity of INBO or the Flemish government.
 
 
-![:scale 60%]({{ site.baseurl}}/assets/images/20211216/20211216_hexlogos.png)
+![:scale 40%]({{ site.baseurl}}/assets/images/20211216/20211216_hexlogos.png)
 
 <small>* __Note__:  a markup language is a language that annotates text so that the computer can manipulate that text. Most markup languages are human-readable. More on [Wikipedia](https://en.wikipedia.org/wiki/Markup_language#Descriptive_markup).
 ---
@@ -63,7 +61,7 @@ class: left, top
 
 The main reference material for today's coding club:
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20211216/20211216_reference_material.png)
+![:scale 80%]({{ site.baseurl}}/assets/images/20211216/20211216_reference_material.png)
 
 - [R Markdown cheat sheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
 - book about [bookdown](https://bookdown.org/yihui/bookdown/)
@@ -71,6 +69,8 @@ The main reference material for today's coding club:
 
 ---
 class: left, top
+
+# R Packges
 
 Load the packages (or install them first):
 
@@ -125,9 +125,7 @@ Go to https://hackmd.io/DXQK5B3OSjmpbgQK5Ft9KA?edit
 ---
 class: left, top
 
-# Challenge 0
-
-Using Rstudio interface to create and work with a new R Markdown document:
+# Challenge 0: create a new R Markdown document with Rstudio
 
 - `File` ->  `New File` -> `R Markdown...` -> Title: "test", Author: your name, Output format: HTML (deafult)
 
@@ -179,11 +177,11 @@ class: left, top
 Convert the code below to a Rmd document called `1_geese_read_data.Rmd` and _knit_ it as html. Please, take care of:
 
 1. Converting the comments to text
-2. Show the library you need to load but avoid to return any **message** (but errors or warnings are allowed). Tip: one test output chunk option from [this list](https://yihui.org/knitr/options/#text-output). How to avoid showing **warnings** as well?
-3. Do not show the code in lines 81-83 and 87-88. Tip: this is shown in test.Rmd (challenge 0) and in the list mentioned in 2.
-4. Set date authomatically in YAML header by setting: `date: "`r Sys.Date()`"`
-5. Do you want always good looking tables with the smallest effort possible? Set `df_print` argument in header (see example below)
-6. Add a table of content (see example below)
+2. Show the library you need to load but avoid to show any **message** (errors or warnings are allowed). Tip: one test output chunk option from [this list](https://yihui.org/knitr/options/#text-output). How to avoid showing **warnings** as well?
+3. Do not show the code in lines 81-83 and 87-88. Tip: this is shown in `test.Rmd` (challenge 0) and in the list mentioned in 2.
+4. Set date authomatically in YAML header by setting: `date: "``r Sys.Date()``"`
+5. Do you want always good looking tables with the smallest effort possible? Set `df_print` argument in header (see screenshot below)
+6. Add a table of content (see screenshot below)
 
 ![:scale 85%]({{ site.baseurl}}/assets/images/20211216/20211216_markdown_toc_df_paged.png)
 
@@ -217,7 +215,7 @@ Rerunning some code from a previous document as we did in challenge 2 is far fro
 1. Put everything in a Rmd document (typical for blogposts, tutorials)
 2. Make a Rmd per chapter and bind all chapters together with bookdown!
 
-Let's apply solution 2 to our case! First, make a new book with the RStudio Project Wizard (File > New Project > New Directory > Book project using bookdown) and select gitbook from the dropdown menu. Call the directory, and so, the project `my_report`. More about in [this](https://bookdown.org/yihui/bookdown/html.html#gitbook-style) chapter fo the bookdown guide. Notice you can _build_ your book via a "Buid book" option!
+Let's apply solution 2 to our case! First, make a new book with the RStudio Project Wizard (File > New Project > New Directory > Book project using bookdown) and select gitbook from the dropdown menu. Call the directory, and so, the project `my_report`. More about it in [this](https://bookdown.org/yihui/bookdown/html.html#gitbook-style) chapter of the bookdown guide. Notice you can _build_ your book via a "Buid book" option in the Build pane of RStudio!
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -226,7 +224,7 @@ class: left, top
 
 # Challenge 3
 
-Try to convert the content of your two Rmd documents in the book we have just created. Follow these tips, from Thierry's guide. Notice that some files are already present, you just need to edit them:
+Try to convert the content of your two Rmd documents in the book we have just created. Follow these tips, from [Thierry's slides](https://inbo.github.io/inbomd_examples/inbomd_workshop/inbomd_workshop.pdf). Notice that some files are already present, you just need to edit them:
 
 ![:scale 80%]({{ site.baseurl}}/assets/images/20211216/20211216_tip_challenge3.png)
 
@@ -239,7 +237,7 @@ Now you can become a pro!
 
 1. Add a figure caption. Tip: fig.cap = "your caption" in chunk option
 2. Add some cross references, e.g. try to refer to a section within another section and refer to a figure. Tip: change the output in YAML header from `html_document` to `html_document2`, a type of output specific of bookdown, not available in RMarkdown. This allows numbering and cross-referencing figures/tables/equations. Handy!
-3. Now you know how to create a _book_, you can understand the phylosophy behind the INBO package `INBOmd`! Give it a try by creating the same book as in challenge 3: a report fully INBO-styled, yeah! Tip: check `?INBOmd::report()`
+3. Now you know how to create a _book_, you can understand the phylosophy behind the INBO package `INBOmd`! Give it a try by creating the same book as in challenge 3: your report is 100% INBO-styled, yeah! Tip: check `?INBOmd::report()`
 
 ---
 class: left, top
@@ -284,7 +282,7 @@ class: left, top
 
 As for 2021, the coding club would like to reflect the research process: read, process, visualize, report. What do you think about? Which topics do you miss? Would you like to give a special edition on a specific topic?
 
-![:scale 120%]({{ site.baseurl}}/assets/images/20211125/20211125_timeline_coding_clubs_2022.png)
+![:scale 100%]({{ site.baseurl}}/assets/images/20211125/20211125_timeline_coding_clubs_2022.png)
 
 ---
 class: center, middle
