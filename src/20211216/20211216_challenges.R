@@ -114,7 +114,7 @@ catch_per_province <- catch_fl %>%
 ggplot(catch_per_province,
        aes(x = province, y = catched_total)) +
   geom_bar(stat = 'identity') +
-  scale_x_continuous(breaks = 2009:2018)
+  scale_x_discrete(breaks = 2009:2018)
 
 #' ## Catches per year
 
