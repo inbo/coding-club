@@ -187,64 +187,16 @@ Convert the code below to a Rmd document called `1_geese_read_data.Rmd` and _kni
 ---
 class: left, top
 
-# Intermezzo 1
+# Resources: part 2
 
-There are plenty chunk options. For example, do you want to restyle your code authomatically? Use chunk option: `tidy='styler'`. It will run `styler::style_text()` behind the screen. Handy!
+## Useful links
 
-
----
-background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
-class: left, top
-
-# Challenge 2
-
-Put the code in challenge 2 in a second R Markdown document called `2_visualize_model_data.Rmd` and make an html document out of it. Take care of the following:
-
-1. If you do it "blindly", you will get errors, probably at the very beginning: why? How to solve it?
-2. When it goes about plotting and modelling, the chunk codes could be quite long and so potentially distracting to readers. Please, fold them. Readers can then choose to display them by clicking the fold buttons: Tip: check this [fold-show](https://bookdown.org/yihui/rmarkdown-cookbook/fold-show.html) section
-
----
-class: left, top
-
-# Intermezzo 2
-
-Any solution you found for Challenge 2 is far from being an ideal solution! You have two options, depending on the length of your document/report/blogpost/...
-
-1. Put everything in a Rmd document (typical for blogposts, tutorials)
-2. Make a Rmd per chapter and bind all chapters together with bookdown!
-
-Let's apply solution 2 to our case! First, make a new book with the RStudio Project Wizard (File > New Project > New Directory > Book project using bookdown) and select gitbook from the dropdown menu. Call the directory, and so, the project `my_report`. More about it in [this](https://bookdown.org/yihui/bookdown/html.html#gitbook-style) chapter of the bookdown guide. Notice you can _build_ your book via a "Buid book" option in the Build pane of RStudio!
-
----
-background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
-class: left, top
-
-
-# Challenge 3
-
-Try to convert the content of your two Rmd documents in the book we have just created. Follow these tips, from [Thierry's slides](https://inbo.github.io/inbomd_examples/inbomd_workshop/inbomd_workshop.pdf). Notice that some files are already present, you just need to edit them:
-
-![:scale 80%]({{ site.baseurl}}/assets/images/20211216/20211216_tip_challenge3.png)
-
----
-class: left, top
-
-# Bonus challenge
-
-Now you can become a pro!
-
-1. Add a figure caption. Tip: fig.cap = "your caption" in chunk option
-2. Add some cross references, e.g. try to refer to a section within another section and refer to a figure. Tip: change the output in YAML header from `html_document` to `html_document2`, a type of output specific of bookdown, not available in RMarkdown. This allows numbering and cross-referencing figures/tables/equations. Handy!
-3. Now you know how to create a _book_, you can understand the phylosophy behind the INBO package `INBOmd` and can fully understand the [slides](https://inbo.github.io/inbomd_examples/inbomd_workshop/inbomd_workshop.pdf) of Thierry! Give `INBOmd` a try by creating the same book as in challenge 3: your report is 100% INBO-styled, yeah! Tip: check `?INBOmd::report()` as well.
-
----
-class: left, top
-
-## Did you know that...
-
-1. Many INBO tutorials are written in R markdown and then _knitted_ as markdown documents? See [example](https://inbo.github.io/tutorials/tutorials/r_gbif_name_matching/).
-2. [Data processing pipelines](https://trias-project.github.io/alien-plants-belgium/dwc_mapping.html) published as GitHub pages are R markdown documents?
-3. Hackmd pages follow markdown syntax? Yes, you know already!
+1. Article to learn more about [Visual Markdown Editor](https://rstudio.github.io/visual-markdown-editing/) in RStudio
+2. [R Markdown cheat sheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+3. book about [bookdown](https://bookdown.org/yihui/bookdown/)
+4. [Thierry's slides](https://inbo.github.io/inbomd_examples/inbomd_workshop/inbomd_workshop.pdf) about writing a report with INBOmd
+5. Examples of reports/slides/posters/... created with INBO templates from `INBOmd` (with links to source code!): https://inbo.github.io/inbomd_examples/
+6. [Article](https://www.educative.io/blog/yaml-tutorial) about YAML
 
 ---
 class: left, top
@@ -257,7 +209,6 @@ We propose. You decide!
 - More real data and questions from you: ask for it at each announcement (begin of the month)
 
 ![:scale 50%]({{ site.baseurl}}/assets/images/20211125/20211125_ask_feedback_icon.png)
-
 
 ---
 class: left, top
