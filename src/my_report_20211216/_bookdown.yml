@@ -10,11 +10,11 @@ output_dir: docs
 # Order of the chapters (= which Rmd files to include)
 rmd_files: [
   index.Rmd,
-  src/1_geese_read_data_revisited.Rmd,
-  src/2_visualize_data_revisited.Rmd
+  1_geese_read_data_revisited.Rmd,
+  2_visualize_data_revisited.Rmd
 ]
 
 # Where Rmd files are kept
-edit: https://github.com/inbo/coding-club/blob/master/src/20211216/my_report_20211216/%s
+edit: https://github.com/inbo/coding-club/blob/master/src/my_report_20211216/%s
 
 # All other settings are defined in index.Rmd

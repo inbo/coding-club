@@ -181,8 +181,8 @@ src/20211216/1_geese_read_data.Rmd,1_geese_read_data.Rmd,src,20211216
 src/20211216/2_visualize_data.Rmd,2_visualize_data.Rmd,src,20211216
 src/my_report_20211216/_bookdown.yml,_bookdown.yml,src,my_report_20211216
 src/my_report_20211216/index.Rmd,index.Rmd,src,my_report_20211216
-src/my_report_20211216/data/20211216_flemish_provinces.gpkg,data/20211216_flemish_provinces.gpkg,src,my_report_20211216
-src/my_report_20211216/data/20211216_geese_counts.txt,data/20211216_geese_counts.txt,src,my_report_20211216
-src/my_report_20211216/src/1_geese_read_data_revisited.Rmd,src/1_geese_read_data_revisited.Rmd,src,my_report_20211216
-src/my_report_20211216/src/2_visualize_data_revisited.Rmd,src/2_visualize_data_revisited.Rmd,src,my_report_20211216
+src/my_report_20211216/20211216_flemish_provinces.gpkg,20211216_flemish_provinces.gpkg,src,my_report_20211216
+src/my_report_20211216/20211216_geese_counts.txt,20211216_geese_counts.txt,src,my_report_20211216
+src/my_report_20211216/1_geese_read_data_revisited.Rmd1_geese_read_data_revisited.Rmd,src,my_report_20211216
+src/my_report_20211216/2_visualize_data_revisited.Rmd,2_visualize_data_revisited.Rmd,src,my_report_20211216
 src/my_report_20211216/my_report_20211216.Rproj,my_report_20211216.Rproj,src,my_report_20211216

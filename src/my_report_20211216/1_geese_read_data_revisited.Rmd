@@ -14,7 +14,7 @@ Set _Global Options_ -> _RMarkdown pane_ -> _Evaluate chunks in directory_: **Pr
 
 ```{r read-data}
 catch_fl <- read_csv(
-  here("data", "20211216_geese_counts.txt"),
+  here("20211216_geese_counts.txt"),
   na = "NA",
   col_types = cols(
     province = col_character(),
@@ -128,7 +128,6 @@ This section is added as part of the solution of challenge 2. By saving the clea
 
 ```{r save-cleaned-data}
 write_csv(x = catch_fl, 
-          file = here("data",
-                      "20211216_geese_counts_cleaned.txt"),
+          file = here("20211216_geese_counts_cleaned.txt"),
           na = "")
 ```
