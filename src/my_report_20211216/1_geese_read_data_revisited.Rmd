@@ -14,7 +14,7 @@ Set _Global Options_ -> _RMarkdown pane_ -> _Evaluate chunks in directory_: **Pr
 
 ```{r read-data}
 catch_fl <- read_csv(
-  here("20211216_geese_counts.txt"),
+  file = "20211216_geese_counts.txt",
   na = "NA",
   col_types = cols(
     province = col_character(),
@@ -33,8 +33,8 @@ catch_fl <- read_csv(
 If you don't want to change this global option, fine! Then, you can find interesting to work with package [`here`](https://www.rdocumentation.org/packages/here/versions/1.0.1) to do the same without changing anything:
 
 ```{r read-againi-with-here}
-library(here) # install it first if not yet done
-path_catch_file <- here("data", "20211216_geese_counts.txt")
+library(here) # install it first, if not yet done
+path_catch_file <- here("20211216_geese_counts.txt")
 catch_fl <- read_csv(path_catch_file,
                      na = "NA",
                      col_types = cols(

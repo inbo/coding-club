@@ -139,7 +139,7 @@ ggplot(overview_gee,
 We make dynamic _leaflet_ maps of total number of catches per province. **Note**: same data used as in \@ref(catches-per-province).
 
 ```{r leaflet-maps, fig.cap="Map showing the total number of catches per province."}
-pr_fl <- st_read(here("data", "20211216_flemish_provinces.gpkg"))
+pr_fl <- st_read("20211216_flemish_provinces.gpkg")
 pr_fl <- pr_fl %>%
   dplyr::left_join(catch_per_province,
                    by = c("TX_PROV_DESCR_NL" = "province"))
