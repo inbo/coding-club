@@ -25,7 +25,6 @@ knitr::opts_chunk$set(echo = TRUE,
 Load packages:
 
 ```{r load-pkgs}
-
 library(tidyverse)    # to do datascience
 library(geepack)      # to do modelling
 library(INBOtheme)    # to apply INBO style to graphs
