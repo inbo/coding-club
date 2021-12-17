@@ -94,8 +94,6 @@ data/20211209/20211209_province_vl.shp,20211209_province_vl.shp,data,20211209
 data/20211209/20211209_province_vl.shx,20211209_province_vl.shx,data,20211209
 data/20211209/20211209_vlinders_20002013_xy_prov.txt,20211209_vlinders_20002013_xy_prov.txt,data,20211209
 data/20211209/20211209_vlops_tmd_1km_20MZ17M517.tif,20211209_vlops_tmd_1km_20MZ17M517.tif,data,20211209
-data/20211216/20211216_flemish_provinces.gpkg,20211216_flemish_provinces.gpkg,data,20211216
-data/20211216/20211216_geese_counts.txt,20211216_geese_counts.txt,data,20211216
 messy_project/data/bird obs 20170621.csv,bird obs 20170621.csv,messy_project,data
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
