@@ -15,6 +15,6 @@ rmd_files: [
 ]
 
 # Where Rmd files are kept
-edit: https://github.com/inbo/coding-club/blob/master/src/my_report_20211216/%s
+edit: https://github.com/inbo/coding-club/blob/master/src/20211216/my_report_20211216/%s
 
 # All other settings are defined in index.Rmd
