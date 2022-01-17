@@ -1,0 +1,349 @@
+---
+layout: presentation
+title: Read data from INBO databases in R
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 25 JANUARY 2021
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Online edition
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20220125/20220125_read_data_INBO_dbs_in_r_badge.png)
+
+---
+class: center, middle
+
+# No VPN? No party
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20220125/20220125_vpn_inbo.png)
+
+---
+class: left, middle
+
+## Introduction
+
+We will explore the functionalities provided by two "made in INBO" packages and then we play with SQL and tidyverse.
+
+1. [inbodb](https://inbo.github.io/inbodb/index.html)
+2. [watina](https://inbo.github.io/watina/index.html)
+
+---
+class: left, middle
+
+## `inbodb` package
+
+1. Connect to any INBO database
+2. Run specific queries for two INBO databases: florabank and INBOVEG
+
+
+[inbodb functions](https://inbo.github.io/inbodb/reference/index.html)
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20220125/20220125_functions_inbodb.png)
+
+---
+class: left, middle
+
+## `watina` package
+
+1. Connect to watina database
+2. Run specific queries for watina database
+3. Provide some useful helper functions
+
+[watina functions](https://inbo.github.io/watina/reference/index.html)
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20220125/20220125_functions_watina.png)
+
+---
+class: left, middle
+
+No cheatsheet, but a well-written [INBO tutorial](https://inbo.github.io/tutorials/tutorials/r_database_access/) is available, yeah!
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20220125/20220125_tutorial_INBO_database_access_in_r.PNG)
+
+---
+class: center, middle
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+<br> No yellow sticky notes online :-( We use hackmd (see next slide) but basic principle doesn't change.
+
+---
+class: center, middle
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/CK0CKFCERrewCOVBU8W6JA?edit
+
+<iframe src="https://hackmd.io/CK0CKFCERrewCOVBU8W6JA?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, middle
+
+## Challenge 0
+
+1. Log in to [INBO VPN](https://vpnvac.inbo.be/sslvpn/Portal/Main)
+2. If not done, install the required packages by following the instructions:
+  - [inbodb installation instructions](https://inbo.github.io/inbodb/#installation)
+  - [watina installation instructions](https://inbo.github.io/watina/index.html#installing-testing-and-using-the-watina-package)
+3. Load the required packages:
+```r
+library(tidyverse)
+library(inbodb)
+library(watina)
+```
+4. Open connections to databases
+```r
+watina <- connect_watina()
+inboveg <- connect_inbo_dbase("D0010_00_Cydonia")
+florabank <- connect_inbo_dbase("D0021_00_userFlora")
+```
+5. Did you get this error: `"The 'ODBC Driver for SQL Server' is missing. Please install it or contact your system administrator."`? We will contact ICT helpdesk this afternoon, but now run this after restarting R:
+```r
+remotes::install_github("inbo/inbodb@sos")
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, middle
+
+# Challenge 1
+
+1. Find the R connection pane of RStudio and open a view of table `tblTaxon` of `florabank` (`D0021_00_userFlora`), table `ivRecording` of INBOVEG (`D0010_00_Cydonia`) and table `DimChemVar` of watina (`W0002_00_Watina`). Tips: check [RStudio connection pane documentation](https://db.rstudio.com/rstudio/connections/#connections-pane); tables are under (default) `dbo` _schema_
+
+2. Still using the RStudio connection pane, find the type of the columns of (one of the) tables in 1, e.g. *char*acter, *int*eger
+
+3. What type does `bit` stand for? Tip: check e.g. the values contained in column `CURRENT_IND` of table `DimChemVar` opened in 1
+
+---
+class: left, middle
+
+# Intermezzo 1: R is lazy... so are we
+
+Let us get the locations from watina database using watina function `get_locs(watina)`. Why do you get an error if you try to save them in a text format (e.g. csv)?
+
+```r
+locations <- get_locs(watina)
+write_csv(locations)
+
+> Error in write_delim(x, file, delim = ",", na = na, append = append, col_names = col_names,  :
+  is.data.frame(x) is not TRUE
+```
+
+Is locations not a data.frame???
+
+```r
+class(locations)
+[1] "tbl_Microsoft SQL Server" "tbl_dbi"
+[3] "tbl_sql"                  "tbl_lazy"
+[5] "tbl"
+```
+
+All you have is a table (`tbl`), but most of all, it's a _lazy table_... Welcome to the lazy woRld!
+
+
+---
+class: left, middle
+
+# Intermezzo 1: R is lazy... so are we
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20220125/20220125_lazy_query.png)
+
+`locations` is an SQL query, no data are really loaded on your laptop.
+It is like a reference to the result of the query but the full result of the query is not brought into memory.
+
+If you are thinking: _"are you kidding me?"_ Well, try this:
+
+
+```r
+locations %>% show_query()
+```
+
+IMPORTANT: to avoid bad surprises (crashes, out of memory issues), first run your queries lazily.
+
+---
+class: left, middle
+
+# Intermezzo 1: R is lazy... so are we
+
+<best-practices-for-working-with-databases-march-2018-edgar-ruiz>![:scale 10%]({{ site.baseurl}}/assets/images/20220125/20220125_mister_lazy.jpg)</center>
+
+R is not only lazy with databases, R is ALWAYS lazy
+
+```r
+number <- 5
+multiply_by_2 <- function(a, b) {
+  a * 2 # b is not used
+}
+multiply_by_2(number) # no value given to argument b
+```
+
+`b` is a function argument, but never evaluated, so no error. This is what we mean by being **lazy**: doing **the strict minimum** of evaluation*. For this reason lazy evaluation is sometimes referred as _call-by-need_.
+
+<small>
+*More about lazy evaluation? Give a look at [this tutorial](https://www.r-bloggers.com/2018/07/about-lazy-evaluation/)... or spend a coffeebreak with Thierry ;-)
+</small>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, middle
+
+# Challenge 2
+
+1. Using watina package and always in lazy mode:
+
+    a. How many area codes exist in watina database?
+
+    b. select locations from watina database with `area_codes` `"KAL"`, `"WES"` or `"ZAB"` and depth range between 2 and 4 meters
+
+2. Using inbodb and florabank database and still being lazy, get observations of taxon _Erigeron_
+
+3. Using inbodb and inboveg database and still being lazy, search information about survey `"ABS-LIM2011"`
+
+4. How to collect the data we queried in 1, 2 and 3?
+
+---
+class: left, middle
+
+# Intermezzo 2: do I really need to learn SQL?
+
+Not everything is already wrapped in a function, of course. How to write your own SQL query?
+
+If you know SQL syntax, excellent!
+
+```r
+gebogen_kransblad_query <- "SELECT NaamWetenschappelijk
+                            FROM tblTaxon
+                            WHERE NaamNederlands = 'Gebogen kransblad'"
+tbl(src = florabank,
+    sql(gebogen_kransblad_query))
+```
+
+But you do not have to be an SQL programmer, thanks to tidyverse!
+
+```r
+tbl(src = florabank, "tblTaxon") %>%
+  filter(NaamNederlands == "Gebogen kransblad") %>%
+  select(NaamWetenschappelijk)
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3
+
+Feel free to use tidyverse syntax or SQL syntax or experiment both!
+
+1. Using `florabank` and its table `tblTaxon`:
+
+  a. get the first 10 rows
+
+  b. get the scientific name (`NaamWetenschappelijk`) of Dutch name (`NaamNederlands`) _Slank snavelmos_
+
+  c. get the scientific names and Dutch names of taxa with Dutch name starting with _Slank_. [Tip for SQL query](https://www.w3schools.com/SQL/sql_like.asp); [tip for tidyverse](https://github.com/tidyverse/dbplyr/issues/295)
+
+2. Using `INBOVEG` database and its table `ivRecording`, retrieve the 10 locations (`LocationCode`) with the highest number of recordings with
+`Latitude` between 50.9 and 51.1 and `Longitude` between 3.5 and 3.9. Show the locations and the number of recordings and order them by decreasing order (location with highest number of recordings first)
+
+3. How to get the column names of table `ivRecording` from `INBOVEG`?
+
+---
+class: left, middle
+
+# Bonus challenge 1
+
+Writing queries can be hard and we have specialists in house who are great at it... Let's make sure we can reuse our own and their hard work!
+
+Based on solution of challenge 3.2, create a function called `inboveg_locs_most_recs()`:
+
+- the function has four input arguments:
+  - a connection to database ( `con`)
+  - number of locations to return (`n_locations`),
+  - vector with min/max values of `Latitude` (lat)
+  - vector with min/max values of `Longitude` (lng)
+- the function returns a dataframe with two columns: `locationCode` and `n` (number of recordings) arranged by decreasing values of  `n`
+- test your function by using it, e.g.
+
+```r
+inboveg_locs_most_recs(inboveg, n_locations = 8, lat = c(50.1, 50.3), lng = c(4.2, 4.9))
+```
+- write it in SQL* or in tidyverse syntax
+
+<small>* Package [glue](https://glue.tidyverse.org/) can help you. [This part](https://inbo.github.io/tutorials/tutorials/r_database_access/#create-and-use-query-templates) of the tutorial can also help...</small>
+
+---
+class: left, middle
+
+# Bonus challenge 2
+
+Packages inbodb and watina and their functions can be improved, of course!
+Add a new functionality to one of the `get_` functions of `inbodb` or `watina`, e.g. add an argument, `sf_poly` (a `sf` polygon) to [`get_inboveg_header()`](https://inbo.github.io/inbodb/reference/get_inboveg_header.html) to retrieve metadata for vegetation recordings located in the polygon `sf_poly`.
+
+---
+class: left, middle
+
+# HELP FUTURE-YOU
+
+Do you have queries you run very often? Do you have queries where you have to change some arguments manually (e.g. taxon name, location code)?
+
+Add an issue to the `inbodb` package and help future-you and your colleagues.
+
+`inbodb` is not a static thing. It is something **we** can improve.
+
+![:scale 30%]({{ site.baseurl}}/assets/images/20220125/20220125_help_future_you.png)
+
+---
+class: left, middle
+
+## Resources
+
+- challenge solutions will be available soon
+- [inbodb package documentation](https://inbo.github.io/inbodb/index.html)
+- [watina package documentation](https://inbo.github.io/watina/index.html). Check also the section with very useful articles.
+- the wonderful INBO tutorial about [reading data from INBO databases in R](https://inbo.github.io/tutorials/tutorials/r_database_access/): a lot of useful information in a very human language with a lot of examples.
+- if you prefer webinars, here you are: a [RStudio webinar with demo](https://resources.rstudio.com/webinars/best-practices-for-working-with-databases-march-2018-edgar-ruiz?wvideo=vffitvywy6) about RStudio, R and SQL.
+- Very nice tutorial from Data Carpentry: [data management with SQL for ecologists](https://datacarpentry.org/sql-ecology-lesson/) lesson, especially on [queries](https://datacarpentry.org/sql-ecology-lesson/01-sql-basic-queries/index.html) and [aggregations](https://datacarpentry.org/sql-ecology-lesson/02-sql-aggregation/index.html).
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.05 - Isala Van Diest(?)<br>
+Date: __24/02/2022__, van 10:00 tot 12:30<br>
+Subject: **read data files in R** <br>
+(registration announced via DG_useR@inbo.be)
