@@ -3,7 +3,7 @@ layout: presentation
 title: Read data from INBO databases in R
 ---
 
-class: center, middle
+class: center, top
 
 ![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
 
@@ -27,20 +27,20 @@ class: center, middle
 Online edition
 
 ---
-class: center, middle
+class: center, top
 
 <!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
 ![:scale 90%]({{ site.baseurl}}/assets/images/20220125/20220125_read_data_INBO_dbs_in_r_badge.png)
 
 ---
-class: center, middle
+class: center, top
 
 # No VPN? No party
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20220125/20220125_vpn_inbo.png)
 
 ---
-class: left, middle
+class: left, top
 
 ## Introduction
 
@@ -50,7 +50,7 @@ We will explore the functionalities provided by two "made in INBO" packages and 
 2. [watina](https://inbo.github.io/watina/index.html)
 
 ---
-class: left, middle
+class: left, top
 
 ## `inbodb` package
 
@@ -63,7 +63,7 @@ class: left, middle
 ![:scale 100%]({{ site.baseurl}}/assets/images/20220125/20220125_functions_inbodb.png)
 
 ---
-class: left, middle
+class: left, top
 
 ## `watina` package
 
@@ -76,14 +76,14 @@ class: left, middle
 ![:scale 100%]({{ site.baseurl}}/assets/images/20220125/20220125_functions_watina.png)
 
 ---
-class: left, middle
+class: left, top
 
 No cheatsheet, but a well-written [INBO tutorial](https://inbo.github.io/tutorials/tutorials/r_database_access/) is available, yeah!
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20220125/20220125_tutorial_INBO_database_access_in_r.PNG)
 
 ---
-class: center, middle
+class: center, top
 
 ### How to get started?
 
@@ -94,13 +94,24 @@ Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted
 Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
 
 ---
-class: left, middle
+class: left, top
 
-![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
-<br> No yellow sticky notes online :-( We use hackmd (see next slide) but basic principle doesn't change.
+## Coding club play tables
+
+**Like** a card club, we will split us in different tables (aka _breakout rooms_) and we will help each other! We return all together after a fixed amount of time to discuss each challenge apart.
+
+**Unlike** a card club, in our club there is no winner, neither within a table nor among tables!
+
+![:scale 65%]({{ site.baseurl}}/assets/images/breakout_rooms.png)
 
 ---
-class: center, middle
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+<br> No yellow sticky notes online :-( We use hackmd (see next slide) but the principle doesn't change.
+
+---
+class: center, top
 
 ### Share your code during the coding session!
 
@@ -110,7 +121,7 @@ Go to https://hackmd.io/CK0CKFCERrewCOVBU8W6JA?edit
 <iframe src="https://hackmd.io/CK0CKFCERrewCOVBU8W6JA?edit" height="400px" width="800px"></iframe>
 
 ---
-class: left, middle
+class: left, top
 
 ## Challenge 0
 
@@ -137,7 +148,7 @@ remotes::install_github("inbo/inbodb@sos")
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
-class: left, middle
+class: left, top
 
 # Challenge 1
 
@@ -148,7 +159,7 @@ class: left, middle
 3. What type does `bit` stand for? Tip: check e.g. the values contained in column `CURRENT_IND` of table `DimChemVar` opened in 1
 
 ---
-class: left, middle
+class: left, top
 
 # Intermezzo 1: R is lazy... so are we
 
@@ -175,7 +186,7 @@ All you have is a table (`tbl`), but most of all, it's a _lazy table_... Welcome
 
 
 ---
-class: left, middle
+class: left, top
 
 # Intermezzo 1: R is lazy... so are we
 
@@ -194,7 +205,7 @@ locations %>% show_query()
 IMPORTANT: to avoid bad surprises (crashes, out of memory issues), first run your queries lazily.
 
 ---
-class: left, middle
+class: left, top
 
 # Intermezzo 1: R is lazy... so are we
 
@@ -218,7 +229,7 @@ multiply_by_2(number) # no value given to argument b
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
-class: left, middle
+class: left, top
 
 # Challenge 2
 
@@ -235,7 +246,7 @@ class: left, middle
 4. How to collect the data we queried in 1, 2 and 3?
 
 ---
-class: left, middle
+class: left, top
 
 # Intermezzo 2: do I really need to learn SQL?
 
@@ -261,7 +272,7 @@ tbl(src = florabank, "tblTaxon") %>%
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
-class: left, middle
+class: left, top
 
 # Challenge 3
 
@@ -281,7 +292,7 @@ Feel free to use tidyverse syntax or SQL syntax or experiment both!
 3. How to get the column names of table `ivRecording` from `INBOVEG`?
 
 ---
-class: left, middle
+class: left, top
 
 # Bonus challenge 1
 
@@ -305,7 +316,7 @@ inboveg_locs_most_recs(inboveg, n_locations = 8, lat = c(50.1, 50.3), lng = c(4.
 <small>* Package [glue](https://glue.tidyverse.org/) can help you. [This part](https://inbo.github.io/tutorials/tutorials/r_database_access/#create-and-use-query-templates) of the tutorial can also help...</small>
 
 ---
-class: left, middle
+class: left, top
 
 # Bonus challenge 2
 
@@ -313,7 +324,7 @@ Packages inbodb and watina and their functions can be improved, of course!
 Add a new functionality to one of the `get_` functions of `inbodb` or `watina`, e.g. add an argument, `sf_poly` (a `sf` polygon) to [`get_inboveg_header()`](https://inbo.github.io/inbodb/reference/get_inboveg_header.html) to retrieve metadata for vegetation recordings located in the polygon `sf_poly`.
 
 ---
-class: left, middle
+class: left, top
 
 # HELP FUTURE-YOU
 
@@ -326,7 +337,7 @@ Add an issue to the `inbodb` package and help future-you and your colleagues.
 ![:scale 30%]({{ site.baseurl}}/assets/images/20220125/20220125_help_future_you.png)
 
 ---
-class: left, middle
+class: left, top
 
 ## Resources
 
@@ -338,7 +349,7 @@ class: left, middle
 - Very nice tutorial from Data Carpentry: [data management with SQL for ecologists](https://datacarpentry.org/sql-ecology-lesson/) lesson, especially on [queries](https://datacarpentry.org/sql-ecology-lesson/01-sql-basic-queries/index.html) and [aggregations](https://datacarpentry.org/sql-ecology-lesson/02-sql-aggregation/index.html).
 
 ---
-class: center, middle
+class: center, top
 
 ![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
 
