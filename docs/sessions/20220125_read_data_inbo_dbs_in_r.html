@@ -167,7 +167,7 @@ Let us get the locations from watina database using watina function `get_locs(wa
 
 ```r
 locations <- get_locs(watina)
-write_csv(locations)
+write_csv(x = locations, file = "./data/locations.csv")
 
 > Error in write_delim(x, file, delim = ",", na = na, append = append, col_names = col_names,  :
   is.data.frame(x) is not TRUE
