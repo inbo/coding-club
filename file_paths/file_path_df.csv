@@ -94,6 +94,13 @@ data/20211209/20211209_province_vl.shp,20211209_province_vl.shp,data,20211209
 data/20211209/20211209_province_vl.shx,20211209_province_vl.shx,data,20211209
 data/20211209/20211209_vlinders_20002013_xy_prov.txt,20211209_vlinders_20002013_xy_prov.txt,data,20211209
 data/20211209/20211209_vlops_tmd_1km_20MZ17M517.tif,20211209_vlops_tmd_1km_20MZ17M517.tif,data,20211209
+data/20220224/20220224_butterflies_counts.txt,20220224_butterflies_counts.txt,data,20220224
+data/20220224/20220224_forest_index.txt,20220224_forest_index.txt,data,20220224
+data/20220224/20220224_gent_groeiperwijk.txt,20220224_gent_groeiperwijk.txt,data,20220224
+data/20220224/20220224_latin-1_character_set.txt,20220224_latin-1_character_set.txt,data,20220224
+data/20220224/20220224_manta_2014_2015.xlsx,20220224_manta_2014_2015.xlsx,data,20220224
+data/20220224/20220224_rainfall_waterloo.txt,20220224_manta_2014_2015.xlsx,data,20220224
+data/20220224/20220224_turkish_iso8859-9_encoding.txt,20220224_turkish_iso8859-9_encoding.txt,data,20220224
 messy_project/data/bird obs 20170621.csv,bird obs 20170621.csv,messy_project,data
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
