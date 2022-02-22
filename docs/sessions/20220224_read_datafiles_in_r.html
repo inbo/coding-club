@@ -155,6 +155,7 @@ dot (.) as decimal mark** and question mark (?) as NA. Read only the first 500
 rows.  Be sure column `Date` is parsed as datetime by using `format = "%d/%m/%Y %H:%M:%S"`.
 
 <small>* __Note__: first line contains metadata about the type of variables. This is done by grouping cells, which is not really computer readable, as it is an example of untidy data. Same for the use of colors in cells. In next coding club we will come back on this topic and how to make data both human and computer readable. Stay tuned!
+
 ** __Note__:  `read_csv2()` uses `;` for the delimiter and `,` for the decimal mark. Useful for standard MS Excel exports.
 </small>
 
@@ -163,7 +164,7 @@ class: left, top
 
 # INTERMEZZO: why readr?
 
-Why using read_* functions instead of the basic R read.* functions?
+Why using readr functions instead of the basic R read functions?
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20220224/20220224_readr_vs_basicR_01.png)
 
@@ -187,10 +188,9 @@ class: left, top
 
 [`googesheets4`](https://googlesheets4.tidyverse.org/) needs access to your Google account. First time you use this package you will need to authorize it.
 1. Read the sheet `HyaHoVrBl` from a googlesheet about [hyacint coverage in Ename](https://docs.google.com/spreadsheets/d/1qHcx3eEhAv6LBI9R2kmV4IHgxdBw_Eq1ho6yuvi2xJM/edit?usp=sharing) paying attention to import all columns correctly
-2. Get metadata of the googlesheet in 1
+2. Get metadata of the googlesheet in 1. Hint: use the cheatsheet
 3. But what if you don't want to allow tidyverse API to get access to your INBO
-Google account? Well, you can publish the sheet to the web as csv for exmaple and then import it via `read_delim()` or `read_csv()`. Read the csv generated in this way
-by using this link:
+Google account? Well, you can publish the sheet to the web as csv for exmaple and then import it via `read_delim()` or `read_csv()`. Read the csv generated in this way by using this link:
 
 ```r
 hyacint_cov_link <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vTpyMEyzb_M8vrSFUSzTegR4czallWdSUsDCuivdUIwdy7g8PIfrEJtgGBIXPV2UKKRaIZxN7o2O085/pub?gid=1007047746&single=true&output=csv"
@@ -203,7 +203,7 @@ To publish, go to File -> Share -> Publish to the web
 ---
 class: left, top
 
-## INTERMEZZO: _locale_
+## INTERMEZZO: locale
 
 A [locale](https://readr.tidyverse.org/articles/locales.html) encapsulates common options that vary between languages and localities.
 
@@ -249,10 +249,9 @@ Some concepts:
 - Words and sentences in text are created from __characters__
 - Characters that are needed for a specific purpose are grouped into a __character set__. Example: Unicode
 - The characters are stored in the computer as one or more __bytes__
-- The (character) encoding is a __set of mappings_ between the bytes in the computer and the characters in the character set. Without it, the data looks like garbage. Example: UTF-8
-
-
-"UTF-8 is the most widely used way to represent Unicode text in web pages, and you should always use UTF-8 when creating your web pages and databases. But, in principle, UTF-8 is only one of the possible ways of encoding Unicode characters. In other words, a single code point in the Unicode character set can actually be mapped to different byte sequences, depending on which encoding was used for the document."
+- The (character) encoding is a __set of mappings__ between the bytes in the computer and the characters in the character set. Without it, the data looks like garbage. Example: UTF-8
+- __UTF-8__ is the most widely used way to represent Unicode text. Please, use it always
+- But, UTF-8 is only one of the possible ways of encoding Unicode characters: a character can actually be mapped to different byte sequences, depending on which encoding was used for the document
 
 <small>* __Note__: this page is an extract from the article [Character encodings for beginners](https://www.w3.org/International/questions/qa-what-is-encoding)</small>
 
@@ -291,12 +290,11 @@ class: left, top
 
 # Third challenge: Encoding
 
-In a `locale` you can also specify the encoding used while saving a file, e.g.
+In a locale you can also specify the encoding used while saving a file, e.g.
 
 ```r
 read_tsv(filename, locale = locale(encoding = "UTF-8"))
 ```
-
 
 By default readr package uses `UTF-8` encoding and you are 99% of the time happy with it.  A typical problem is that sometimes in Western Europe "old" latin-1 (iso8859-1) encoding is used. The same can happen in other regions of the world where old encodings could be  used.
 
