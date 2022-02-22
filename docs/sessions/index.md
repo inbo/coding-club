@@ -3,6 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
+| 2022-02-24 | read datafiles in R | [slides]({{ site.baseurl }}{% link sessions/20220224_read_datafiles_in_r.html  %}) | [hackmd](https://hackmd.io/PJB01rSLRq-PI73mCtbcGw?view) | online |  |
 | 2022-01-25 | read data from INBO dbs in R | [slides]({{ site.baseurl }}{% link sessions/20220125_read_data_inbo_dbs_in_r.html  %}) | [hackmd](https://hackmd.io/CK0CKFCERrewCOVBU8W6JA?view) | online | [vimeo](https://vimeo.com/678699212) |
 | 2021-12-16 | write reports: R Markdown & bookdown | [slides]({{ site.baseurl }}{% link sessions/20211216_write_reports_with_rmarkdown_bookdown.html  %}) | [hackmd](https://hackmd.io/DXQK5B3OSjmpbgQK5Ft9KA?view) | online | [vimeo](https://vimeo.com/657889213) |
 | 2021-12-09 | geospatial data visualization in R | [slides]({{ site.baseurl }}{% link sessions/20211209_geospatial_data_visualization_in_r.html  %}) | [hackmd](https://hackmd.io/8PWG36-GQoec4ZHCfwuNnw?view) | online | [vimeo](https://vimeo.com/656042481)  |
