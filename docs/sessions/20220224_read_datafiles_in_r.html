@@ -296,7 +296,7 @@ In a locale you can also specify the encoding used while saving a file, e.g.
 read_tsv(filename, locale = locale(encoding = "UTF-8"))
 ```
 
-By default readr package uses `UTF-8` encoding and you are 99% of the time happy with it.  A typical problem is that sometimes in Western Europe "old" latin-1 (iso8859-1) encoding is used. The same can happen in other regions of the world where old encodings could be  used.
+By default readr package uses `UTF-8` encoding and you are 99% of the time happy with it.  A typical problem is that sometimes in Western Europe "old" latin-1 (iso8859-1) encoding is used. The same can happen in other regions of the world where old encodings could be  used. Which encodings are supported by your machine in R? Run `iconvlist()`.
 
 1. Read file `20220224_latin-1_character_set.txt`
 2. Read file `20220224_turkish_iso8859-9.txt`. Use View() to open the data.frame. Do you get the same while printing the data.frame on Console? Why?
