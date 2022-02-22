@@ -1,0 +1,329 @@
+---
+layout: presentation
+title: Read datafiles in R
+---
+
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 24 FEBRUARY 2022
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Online
+
+---
+class: center, top
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20220224/20220224_badge_read_datafiles_in_r.png)
+
+---
+class: center, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20220224/20220224_data_import_cheat_sheet.png)
+[Download cheatsheet here](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20220224_cheat_sheet_data_import.pdf)
+
+---
+class: center, top
+
+# `datapasta` package
+
+The package [`datapasta`](https://milesmcbain.github.io/datapasta/) can simplify your life enormously. Watch [this Youtube video](https://youtu.be/Sz-tEVqZh5s?t=43).
+
+Yes, you can copy-paste a table from web or Excel directly to R, thanks to the datapasta's function `df_paste()`!
+
+![:scale 40%]({{ site.baseurl}}/assets/images/20220224/20220224_datapasta_hex.png)
+
+---
+class: center, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+## Coding club play tables
+
+**Like** a card club, we will split us in different tables (aka _breakout rooms_) and we will help each other! We return all together after a fixed amount of time to discuss each challenge apart.
+
+**Unlike** a card club, in our club there is no winner, neither within a table nor among tables!
+
+![:scale 65%]({{ site.baseurl}}/assets/images/breakout_rooms.png)
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+<br> No yellow sticky notes online :-( We use hackmd (see next slide) but the principle doesn't change.
+
+---
+class: center, top
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/PJB01rSLRq-PI73mCtbcGw?edit
+
+<iframe src="https://hackmd.io/PJB01rSLRq-PI73mCtbcGw?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+- Download everything automatically via `inborutils::setup_codingclub_session()`
+- manually*, from [data/20220224](https://github.com/inbo/coding-club/blob/master/data/20220224/) and [src/20220224](https://github.com/inbo/coding-club/blob/master/src/20220224). Place the R script in your folder `src/20220224/` and data in `data/20220224/`.
+
+In general, you can use the date in "YYYYMMDD" format , e.g. `setup_codingclub_session("20201027")`, to download the coding club material of October, 27 2020. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).
+
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+## Challenge 0
+
+- Install packages*
+
+```r
+# install readr if not already installed
+if (!"readr" %in% installed.packages()) {
+  install.packages("readr")
+}
+
+# install readxl if not already installed
+if (!"readxl" %in% installed.packages()) {
+  install.packages("readxl")
+}
+
+if (!"googlesheets4" %in% installed.packages()) {
+  install.packages("googlesheets4")
+}
+```
+
+- Load packages
+
+```r
+library(readr)
+library(readxl)
+library(googlesheets4)
+```
+
+<p>
+<small>*Note: All these packages are part of the tidyverse _universe_, but only `readr` is loaded while running `library(tidyverse)`. </small>
+</p>
+
+---
+class: center, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20220224/20220224_read_txt_files_in_r.png)
+
+Welcome to the `read_*` world of  `readr` package!
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+2. Read the demographic evolution of Ghent districts from 1999 to 2009 from datafile [`20220224_gent_groeiperwijk.txt`](https://github.com/inbo/coding-club/blob/master/data/20220224/20220224_gent_groeiperwijk.txt)
+3. Read manta related data* from sheet `ALL DATA` of the Excel datafile [`20220224_manta_2014_2015.xlsx`](https://github.com/inbo/coding-club/blob/master/data/20220224/20220224_manta_2014_2015.xlsx)
+4. Something more difficult now! Read butterfly related data file [`20220224_butterflies_counts.txt`](https://github.com/inbo/coding-club/blob/master/data/20220224/20220224_butterflies_counts.txt) with semicolon (;) as delimiter,
+dot (.) as decimal mark** and question mark (?) as NA. Read only the first 500
+rows.  Be sure column `Date` is parsed as datetime by using `format = "%d/%m/%Y %H:%M:%S"`.
+
+<small>* __Note__: first line contains metadata about the type of variables. This is done by grouping cells, which is not really computer readable, as it is an example of untidy data. Same for the use of colors in cells. In next coding club we will come back on this topic and how to make data both human and computer readable. Stay tuned!
+** __Note__:  `read_csv2()` uses `;` for the delimiter and `,` for the decimal mark. Useful for standard MS Excel exports.
+</small>
+
+---
+class: left, top
+
+# INTERMEZZO: why readr?
+
+Why using read_* functions instead of the basic R read.* functions?
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20220224/20220224_readr_vs_basicR_01.png)
+
+---
+class: left, top
+
+# INTERMEZZO: why readr?
+
+Why using read_* functions instead of the basic R read.* functions?
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20220224/20220224_readr_vs_basicR_02.png)
+
+
+Still, notice you can solve this by specifying argument  `colClasses = c("numeric", "character"))`
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2: googlesheets
+
+[`googesheets4`](https://googlesheets4.tidyverse.org/) needs access to your Google account. First time you use this package you will need to authorize it.
+1. Read the sheet `HyaHoVrBl` from a googlesheet about [hyacint coverage in Ename](https://docs.google.com/spreadsheets/d/1qHcx3eEhAv6LBI9R2kmV4IHgxdBw_Eq1ho6yuvi2xJM/edit?usp=sharing) paying attention to import all columns correctly
+2. Get metadata of the googlesheet in 1
+3. But what if you don't want to allow tidyverse API to get access to your INBO
+Google account? Well, you can publish the sheet to the web as csv for exmaple and then import it via `read_delim()` or `read_csv()`. Read the csv generated in this way
+by using this link:
+
+```r
+hyacint_cov_link <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vTpyMEyzb_M8vrSFUSzTegR4czallWdSUsDCuivdUIwdy7g8PIfrEJtgGBIXPV2UKKRaIZxN7o2O085/pub?gid=1007047746&single=true&output=csv"
+```
+
+![:scale 40%]({{ site.baseurl}}/assets/images/20220224/20220224_publish_gsheet_to_web_as_csv.png)
+
+To publish, go to File -> Share -> Publish to the web
+
+---
+class: left, top
+
+## INTERMEZZO: _locale_
+
+A [locale](https://readr.tidyverse.org/articles/locales.html) encapsulates common options that vary between languages and localities.
+
+```r
+> Sys.localeconv()
+    decimal_point     thousands_sep          grouping   int_curr_symbol   currency_symbol
+              "."                ""                ""             "EUR"               "€"
+mon_decimal_point mon_thousands_sep      mon_grouping     positive_sign     negative_sign
+              ","               "."            "\003"                ""               "-"
+  int_frac_digits       frac_digits     p_cs_precedes    p_sep_by_space     n_cs_precedes
+              "2"               "2"               "1"               "1"               "1"
+   n_sep_by_space       p_sign_posn       n_sign_posn
+              "1"               "4"               "4"
+```
+
+Get locale for Dutch :-)
+
+```r
+> locale("nl")
+<locale>
+Numbers:  123,456.78
+Formats:  %AD / %AT
+Timezone: UTC
+Encoding: UTF-8
+<date_names>
+Days:   zondag (zo), maandag (ma), dinsdag (di), woensdag (wo), donderdag (do), vrijdag (vr),
+        zaterdag (za)
+Months: januari (jan.), februari (feb.), maart (mrt.), april (apr.), mei (mei), juni (jun.), juli
+        (jul.), augustus (aug.), september (sep.), oktober (okt.), november (nov.),
+        december (dec.)
+AM/PM:  a.m./p.m.
+```
+
+Which are the arguments you can set up with `locale()`. Check it with `?readr::locale()`.
+
+---
+class: left, top
+
+## INTERMEZZO: encoding*
+
+Some concepts:
+
+- Words and sentences in text are created from __characters__
+- Characters that are needed for a specific purpose are grouped into a __character set__. Example: Unicode
+- The characters are stored in the computer as one or more __bytes__
+- The (character) encoding is a __set of mappings_ between the bytes in the computer and the characters in the character set. Without it, the data looks like garbage. Example: UTF-8
+
+
+"UTF-8 is the most widely used way to represent Unicode text in web pages, and you should always use UTF-8 when creating your web pages and databases. But, in principle, UTF-8 is only one of the possible ways of encoding Unicode characters. In other words, a single code point in the Unicode character set can actually be mapped to different byte sequences, depending on which encoding was used for the document."
+
+<small>* __Note__: this page is an extract from the article [Character encodings for beginners](https://www.w3.org/International/questions/qa-what-is-encoding)</small>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3
+
+Read the data file [`20220224_rainfall_waterloo.csv`](https://github.com/inbo/coding-club/blob/master/data/20220224/20220224_rainfall_waterloo.csv) containing meteorological data from Waterloo in Walloon language and using apex (') as grouping mark (e.g. 1000 -> 1'000)
+
+Be aware of these three aspects:
+
+1. Parse column `Hour` as a column containing numbers
+2. Parse column `Absolute Value` as a numeric column paying attention to define the right  `grouping_mark`. Hint: check the structure of a typical locale, e.g. nl <- locale("nl")
+3. Parse the column `Date` as a date column. Hint: look at the
+[`locale` vignette](https://readr.tidyverse.org/articles/locales.html) of readr package and again
+check the structure of a typical _locale_. For finding the right datetime
+parsing, this is a nice datetime
+[format specifications compendium](https://www.stat.berkeley.edu/~s133/dates.html)
+
+These are the days, months and correspondent abbreviations in Walloon:
+
+```r
+days_walloon <- c("londi", "mårdi", "mierkidi", "djudi", "vénrdi",
+  "semdi", "dimegne")
+months_walloon <- c("djanvî","fevrî", "måss", "avri", "may", "djun", "djulete",
+                    "awousse","setimbre", "octôbe", "nôvimbe", "decimbe")
+days_abbr_walloon <- c("lon", "mår", "mie", "dju", "vén", "sem", "dim")
+months_abbr_walloon <- c("djan","fev", "mås", "avr", "may", "djun", "djul",
+                         "awou","set", "oct", "nôv", "dec")
+```
+
+---
+class: left, top
+
+# Third challenge: Encoding
+
+In a `locale` you can also specify the encoding used while saving a file, e.g.
+
+```r
+read_tsv(filename, locale = locale(encoding = "UTF-8"))
+```
+
+
+By default readr package uses `UTF-8` encoding and you are 99% of the time happy with it.  A typical problem is that sometimes in Western Europe "old" latin-1 (iso8859-1) encoding is used. The same can happen in other regions of the world where old encodings could be  used.
+
+1. Read file `20220224_latin-1_character_set.txt`
+2. Read file `20220224_turkish_iso8859-9.txt`. Use View() to open the data.frame. Do you get the same while printing the data.frame on Console? Why?
+
+
+---
+class: left, top
+
+## Resources
+
+- challenge solutions & video recording available soon
+- [readr package documentation](https://readr.tidyverse.org/)
+- [data import cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20220224_cheat_sheet_data_import.pdf)
+- [INBO tutorial about reading Googlesheets in R](https://inbo.github.io/tutorials/tutorials/r_google_sheets/) via tidyverse package `googlesheets4`
+- [`readxl` package documentation](https://readxl.tidyverse.org/) to read Excel files
+- a wonderful date and time [format specifications compendium](https://www.stat.berkeley.edu/~s133/dates.html)
+- homepage of [`datapasta`](https://milesmcbain.github.io/datapasta/) R package
+
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.05 - Isala Van Diest(?)<br>
+Date: __29/03/2022__, van 10:00 tot 12:30<br>
+Subject: **tidy data** <br>
+(registration announced via DG_useR@inbo.be)
