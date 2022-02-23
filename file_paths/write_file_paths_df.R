@@ -4,7 +4,7 @@ library(tidyr)
 library(rprojroot)
 library(readr)
 
-x <- dir_ls(regexp = "(src/)|(data/)", recurse = TRUE, type = "file")
+x <- dir_ls(regexp = "(src/20)|(data/20)", recurse = TRUE, type = "file")
 file_path_df <- tibble(
   path = x,
   filename = path_file(x),
