@@ -80,5 +80,5 @@ months_abbr_walloon <- c("djan","fev", "mås", "avr", "may", "djun", "djul",
 # Read file 20220224_latin-1_character_set.txt
 
 
-# Read file 20220224_turkish_iso8859-9.txt. Use View() to open the data.frame.
+# Read file 20220224_turkish_iso8859-9_encoding.txt. Use View() to open the data.frame.
 # Do you get the same while printing the data.frame on Console? Why?
