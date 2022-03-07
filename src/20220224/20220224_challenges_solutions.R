@@ -119,15 +119,19 @@ rainfall_waterloo_df <- read_csv(
   "./data/20220224/20220224_rainfall_waterloo.txt",
   skip = 6,
   col_types = cols(
+    Date = col_date(format = walloon$date_format),
     Hour = col_double(),
-    `AV Quality Code` = col_number(),
-    Date = col_date(format = walloon$date_format)),
+    `AV Quality Code` = col_number()),
   locale = walloon
 )
 
 rainfall_waterloo_df
 
-problems(rainfall_waterloo_df)
+# why two dates (vén 3 djun 2016 and vén 1 djulete 2016) are not parsed (run
+# problems(rainfall_waterloo_df)) is still
+# a mistery. Reported to readr in issue:
+# https://github.com/tidyverse/readr/issues/1383
+
 
 # Notice the col_number() instead of col_double() for columns containing
 # numbers with grouping mark, i.e. `Absoulte Value`, `AV Quality Code`
@@ -137,11 +141,12 @@ spec(rainfall_waterloo_df)
 # the type of each column. In this way you don't need to specify the type for
 # column `AV Quality Code`
 rainfall_waterloo_df <- read_csv(
-  "./data/20220224/20220224_rainfall_waterloo.csv",
+  "./data/20220224/20220224_rainfall_waterloo.txt",
   skip = 6,
   col_types = cols(
-    Hour = col_double(),
-    Date = col_date(format = walloon$date_format)),
+    Date = col_date(format = walloon$date_format),
+    Hour = col_double()
+    ),
   guess_max = 2000,
   locale = walloon
 )
@@ -154,9 +159,10 @@ spec(rainfall_waterloo_df)
 # https://github.com/tidyverse/readr/issues/1119
 rainfall_with_parsing_failures <-
   read_csv(
-  "./data/20220224/20220224_rainfall_waterloo.csv",
+  "./data/20220224/20220224_rainfall_waterloo.txt",
   skip = 6,
   col_types = cols(
+    Date = col_date(format = walloon$date_format),
     Hour = col_double(),
     `AV Quality Code` = col_double(), # this is not allowed and returns parsing failures!
     ),
