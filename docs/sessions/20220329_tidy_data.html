@@ -29,13 +29,13 @@ class: center, top
 ---
 class: center, middle
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20210330/20210330_happy_families.png)
+![:scale 100%]({{ site.baseurl}}/assets/images/20220329/20220329_happy_families.png)
 
 ---
 class: center, middle
 
 <!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
-![:scale 90%]({{ site.baseurl}}/assets/images/20210330/20210330_badge_tidy_data.png)
+![:scale 90%]({{ site.baseurl}}/assets/images/20220329/20220329_badge_tidy_data.png)
 
 ---
 class: center, top
@@ -139,40 +139,24 @@ class: left, top
 
 # Challenge 3
 
-In the world of camera trap data, there are people who like making things hard to read and understand. Try to tidy the dataset [20220329_data_camtrap.csv](https://github.com/inbo/coding-club/blob/master/data/20220329/20220329_camtrap_data.csv) using R and based on the (tidy!) metadata table* [20220329_metadata_camtrap.csv](https://github.com/inbo/coding-club/blob/master/data/20220329/20220329_camtrap_metadata.csv)
+1. In the world of camera trap data, there are people who like making things hard to read and understand. Try to tidy the dataset [20220329_data_camtrap.csv](https://github.com/inbo/coding-club/blob/master/data/20220329/20220329_camtrap_data.csv) using R and based on the (tidy!) metadata table* [20220329_metadata_camtrap.csv](https://github.com/inbo/coding-club/blob/master/data/20220329/20220329_camtrap_metadata.csv)
+2. In the world of habitat studies, if multiple vegetation types occur in the same polygon, they are listed separated by comma's. Human readable? YES. Machine readable: it can be better :-) Make the data.frame tidy.**
 
 <br>
-<small> * Hint: you don't need to read this metadata table in R. It's more for copy pasting in your code and to show how metadata should be tidy as well.</small>
-
+<small> * Hint: do NOT read the metadata table in R. It's just for copy pasting in your code.
+** Hint: check [online documentation](https://tidyr.tidyverse.org/articles/pivot.html) of the pivot_*() functions or type `vignette("pivot")` in R Console
+</small>
 
 ---
 class: left, top
 
 # Bonus challenge
 
-The bird rings datafile [bird_rings_untidy.csv](https://github.com/inbo/coding-club/blob/master/data/20220329/20220329_bird_rings_untidy.csv) shows how data not always untidy at the beginning of a project. They can become untidy when the project grows up. When this table with bird rings inscriptions was conceived, column `inscription` was enough to uniquely identify a bird. When a bird lost its ring and had to get a second ring the data manager decided to add a new column called `last_inscription`. But what if a bird will get a third ring?
+The bird rings datafile [bird_rings_untidy.csv](https://github.com/inbo/coding-club/blob/master/data/20220329/20220329_bird_rings_untidy.csv) shows how data can be typically nicely tidy at the beginning of a project. They can become untidy when the project grows up. When this table with bird rings inscriptions was conceived, column `inscription` was enough to uniquely identify a bird. When a bird lost its ring and had to get a second ring the data manager decided to add a new column called `last_inscription`. But what if a bird will get a third ring? Or a fourth?
 
-Try to make this dataset tidy using R. Hint: check [online documentation](https://tidyr.tidyverse.org/articles/pivot.html) of the pivot_*() functions or type `vignette("pivot")` in R Console
+Try to make this dataset tidy using R.
 
 <br>![:scale 60%]({{ site.baseurl}}/assets/images/20220329/20220329_bird_rings_preview.png)
-
-
----
-class: left, top
-
-# Third challenge: Encoding
-
-In a locale you can also specify the encoding used while saving a file, e.g.
-
-```r
-read_tsv(filename, locale = locale(encoding = "UTF-8"))
-```
-
-By default readr package uses `UTF-8` encoding and you are 99% of the time happy with it.  A typical problem is that sometimes in Western Europe "old" latin-1 (iso8859-1) encoding is used. The same can happen in other regions of the world where old encodings could be  used. Which encodings are supported by your machine in R? Run `iconvlist()`.
-
-1. Read file `20220329_latin-1_character_set.txt`
-2. Read file `20220329_turkish_iso8859-9.txt`. Use View() to open the data.frame. Do you get the same while printing the data.frame on Console? Why?
-
 
 ---
 class: left, top
@@ -181,9 +165,9 @@ class: left, top
 
 - solutions and video recording will be published soon
 - [tidyr package documentation](https://tidyr.tidyverse.org/)
-- [tidyr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20210225_cheat_sheet_data_import.pdf): second page is about `tidyr` and tidying data
+- [tidyr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20220329_cheat_sheet_tidyr.pdf): very instructive and complete
 - the inspiring [datacarpentry lesson](https://datacarpentry.org/spreadsheet-ecology-lesson/) about spreadsheets
-- specific documentation about [pivot functions](https://tidyr.tidyverse.org/articles/pivot.html) of tidyr package
+- specific documentation about [pivot functions](https://tidyr.tidyverse.org/articles/pivot.html)
 
 ---
 class: center, top
@@ -192,6 +176,6 @@ class: center, top
 
 <!--  Adjust the room and date  -->
 Room: 01.05 - Isala Van Diest(?)<br>
-Date: __29/03/2022__, van 10:00 tot 12:30<br>
-Subject: **tidy data** <br>
+Date: __28/04/2022__, van 10:00 tot 12:30<br>
+Subject: **data manipluation with dplyr** <br>
 (registration announced via DG_useR@inbo.be)
