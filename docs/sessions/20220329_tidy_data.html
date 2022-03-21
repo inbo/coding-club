@@ -1,0 +1,197 @@
+---
+layout: presentation
+title: Read datafiles in R
+---
+
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 29 March 2022
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+01.05 - Isala Van Diest
+
+---
+class: center, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20210330/20210330_happy_families.png)
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20210330/20210330_badge_tidy_data.png)
+
+---
+class: center, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20220329/20220329_cheat_sheet_tidyr.png)
+[Download cheatsheet here](https://github.com/inbo/coding-club/blob/master/20220329_cheat_sheet_tidyr.pdf)
+
+
+---
+class: center, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+
+---
+class: center, top
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/EzGX1Ws9TzCTRUZuFtgcJQ?edit
+
+<iframe src="https://hackmd.io/EzGX1Ws9TzCTRUZuFtgcJQ?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+- Download everything automatically via `inborutils::setup_codingclub_session()`
+- manually*, from [data/20220329](https://github.com/inbo/coding-club/blob/master/data/20220329/) and [src/20220329](https://github.com/inbo/coding-club/blob/master/src/20220329). Place the R script in your folder `src/20220329/` and data in `data/20220329/`.
+
+In general, you can use the date in "YYYYMMDD" format , e.g. `setup_codingclub_session("20201027")`, to download the coding club material of October, 27 2020. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).
+
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+
+---
+class: left, top
+
+Load tidyverse packages
+
+```r
+library(tidyverse)
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+Make the file [20220329_surveys.xlsx](https://github.com/inbo/coding-club/blob/master/data/20220329/20220329_surveys.xlsx) as tidy as possible:
+1. Never modify the raw data: a (very) good practice
+2. Document the issues you encountered in the [hackmd (challenge 1)](https://hackmd.io/6RPBUP5BT9aOt9SQaUoOyg?both#Challenge-1)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+Make the file [20220329_manta_datasample.xlsx](https://github.com/inbo/coding-club/blob/master/data/20220329/20220329_manta_datasample.xlsx) as tidy as possible:
+
+1. Never modify the raw data: a (very) good practice
+2. Document the issues you encountered in the [hackmd (challenge 2)](https://hackmd.io/6RPBUP5BT9aOt9SQaUoOyg?both#Challenge-2)
+
+---
+class: left, top
+
+# Intermezzo: metadata
+
+"data that provides information about other data". See
+[definition from Merriam-Webster](https://www.merriam-webster.com/dictionary/metadata/)
+
+<p> meta + data = transcending the data</p>
+
+metadata can describe fields (= columns) used in a standard, e.g. the [Darwin Core standard](https://dwc.tdwg.org/terms/)
+
+<br>![:scale 110%]({{ site.baseurl}}/assets/images/20220329/20220329_example_metadata_standard.png)
+
+---
+class: left, top
+
+# Intermezzo: metadata
+
+metadata can describe datasets, e.g. a [GBIF checklist](https://www.gbif.org/dataset/6d9e952f-948c-4483-9807-575348147c7e)
+
+<br>![:scale 110%]({{ site.baseurl}}/assets/images/20220329/20220329_example_metadata_dataset.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3
+
+In the world of camera trap data, there are people who like making things hard to read and understand. Try to tidy the dataset [20220329_data_camtrap.csv](https://github.com/inbo/coding-club/blob/master/data/20220329/20220329_camtrap_data.csv) using R and based on the (tidy!) metadata table* [20220329_metadata_camtrap.csv](https://github.com/inbo/coding-club/blob/master/data/20220329/20220329_camtrap_metadata.csv)
+
+<br>
+<small> * Hint: you don't need to read this metadata table in R. It's more for copy pasting in your code and to show how metadata should be tidy as well.</small>
+
+
+---
+class: left, top
+
+# Bonus challenge
+
+The bird rings datafile [bird_rings_untidy.csv](https://github.com/inbo/coding-club/blob/master/data/20220329/20220329_bird_rings_untidy.csv) shows how data not always untidy at the beginning of a project. They can become untidy when the project grows up. When this table with bird rings inscriptions was conceived, column `inscription` was enough to uniquely identify a bird. When a bird lost its ring and had to get a second ring the data manager decided to add a new column called `last_inscription`. But what if a bird will get a third ring?
+
+Try to make this dataset tidy using R. Hint: check [online documentation](https://tidyr.tidyverse.org/articles/pivot.html) of the pivot_*() functions or type `vignette("pivot")` in R Console
+
+<br>![:scale 60%]({{ site.baseurl}}/assets/images/20220329/20220329_bird_rings_preview.png)
+
+
+---
+class: left, top
+
+# Third challenge: Encoding
+
+In a locale you can also specify the encoding used while saving a file, e.g.
+
+```r
+read_tsv(filename, locale = locale(encoding = "UTF-8"))
+```
+
+By default readr package uses `UTF-8` encoding and you are 99% of the time happy with it.  A typical problem is that sometimes in Western Europe "old" latin-1 (iso8859-1) encoding is used. The same can happen in other regions of the world where old encodings could be  used. Which encodings are supported by your machine in R? Run `iconvlist()`.
+
+1. Read file `20220329_latin-1_character_set.txt`
+2. Read file `20220329_turkish_iso8859-9.txt`. Use View() to open the data.frame. Do you get the same while printing the data.frame on Console? Why?
+
+
+---
+class: left, top
+
+## Resources
+
+- solutions and video recording will be published soon
+- [tidyr package documentation](https://tidyr.tidyverse.org/)
+- [tidyr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20210225_cheat_sheet_data_import.pdf): second page is about `tidyr` and tidying data
+- the inspiring [datacarpentry lesson](https://datacarpentry.org/spreadsheet-ecology-lesson/) about spreadsheets
+- specific documentation about [pivot functions](https://tidyr.tidyverse.org/articles/pivot.html) of tidyr package
+
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.05 - Isala Van Diest(?)<br>
+Date: __29/03/2022__, van 10:00 tot 12:30<br>
+Subject: **tidy data** <br>
+(registration announced via DG_useR@inbo.be)
