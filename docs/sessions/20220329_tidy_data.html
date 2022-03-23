@@ -139,12 +139,12 @@ class: left, top
 
 # Challenge 3
 
-1. In the world of camera trap data, there are people who like making things hard to read and understand. Try to tidy the dataset [20220329_data_camtrap.csv](https://github.com/inbo/coding-club/blob/master/data/20220329/20220329_camtrap_data.csv) using R and based on the (tidy!) metadata table* [20220329_metadata_camtrap.csv](https://github.com/inbo/coding-club/blob/master/data/20220329/20220329_camtrap_metadata.csv)
-2. In the world of habitat studies, if multiple vegetation types occur in the same polygon, they are listed separated by comma's. Human readable? YES. Machine readable: it can be better :-) Make the data.frame tidy.**
+1. In the world of habitat studies, if multiple vegetation types occur in the same polygon, they are listed separated by semicolons. Human readable? YES. Machine readable: it can be better :-) Make the data.frame in [20220329_habitat_types.txt](https://github.com/inbo/coding-club/blob/master/data/20220329/20220329_habitat_types.txt) tidy.*
+2. In the world of camera trap data, there are people who like making things hard to read and understand. Try to tidy the dataset [20220329_data_camtrap.csv](https://github.com/inbo/coding-club/blob/master/data/20220329/20220329_camtrap_data.csv) using R and based on the (tidy!) metadata table** [20220329_metadata_camtrap.csv](https://github.com/inbo/coding-club/blob/master/data/20220329/20220329_camtrap_metadata.csv)
 
 <br>
-<small> * Hint: do NOT read the metadata table in R. It's just for copy pasting in your code.
-** Hint: check [online documentation](https://tidyr.tidyverse.org/articles/pivot.html) of the pivot_*() functions or type `vignette("pivot")` in R Console
+<small> * Hint: use the cheat sheet.
+** Hint: do NOT read the metadata table in R. It's just for copy pasting in your code.
 </small>
 
 ---
@@ -154,7 +154,7 @@ class: left, top
 
 The bird rings datafile [bird_rings_untidy.csv](https://github.com/inbo/coding-club/blob/master/data/20220329/20220329_bird_rings_untidy.csv) shows how data can be typically nicely tidy at the beginning of a project. They can become untidy when the project grows up. When this table with bird rings inscriptions was conceived, column `inscription` was enough to uniquely identify a bird. When a bird lost its ring and had to get a second ring the data manager decided to add a new column called `last_inscription`. But what if a bird will get a third ring? Or a fourth?
 
-Try to make this dataset tidy using R.
+Try to make this dataset tidy using R. Hint: check [online documentation](https://tidyr.tidyverse.org/articles/pivot.html) of the pivot_*() functions or type `vignette("pivot")` in R Console
 
 <br>![:scale 60%]({{ site.baseurl}}/assets/images/20220329/20220329_bird_rings_preview.png)
 
