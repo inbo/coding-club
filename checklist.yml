@@ -1,0 +1,5 @@
+description: Configuration file for checklist::check_pkg()
+package: no
+allowed:
+  warnings: []
+  notes: []
