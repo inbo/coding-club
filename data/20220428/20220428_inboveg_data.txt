@@ -1,0 +1,373 @@
+Name,RecordingGivid,UserReference,Observer,QualifierType,Q1Code,Q1Description,Q2Code,Q2Description,Q3Code,Q3Description,Elucidation,NotSure,ParentID,QualifierResource
+HT31xx_LSVI_StilstaandeWateren,IV2019102909140237,AN_BLA_002_3130a_19,Dipper Pines & Ford Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"2,85",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102909140237,AN_BLA_002_3130a_19,Dipper Pines & Ford Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"4,00",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102909140237,AN_BLA_002_3130a_19,Dipper Pines & Ford Pines,MQ,A,Heden,Peil,31xx_Peil,Ulaag,Uitzonderlijk laag,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102909140237,AN_BLA_002_3130a_19,Dipper Pines & Ford Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"1,00",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102909140237,AN_BLA_002_3130a_19,Dipper Pines & Ford Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),2,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102909140237,AN_BLA_002_3130a_19,Dipper Pines & Ford Pines,MQ,A,Heden,Helde,31xx_Helderheid,GBoZ,"Vrij helder, geen bodemzicht",,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102909140237,AN_BLA_002_3130a_19,Dipper Pines & Ford Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,4-6m,>= 4m - < 6m,"max= 5,20",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102909140237,AN_BLA_002_3130a_19,Dipper Pines & Ford Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,BoOev,bomen tot op de oever,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102909140237,AN_BLA_002_3130a_19,Dipper Pines & Ford Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,10m2,> 1m& - < 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100111311608,AN_BLA_003_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"2,60",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100111311608,AN_BLA_003_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Ulaag,Uitzonderlijk laag,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100111311608,AN_BLA_003_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"2,60",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100111311608,AN_BLA_003_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100111311608,AN_BLA_003_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),2,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100111311608,AN_BLA_003_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100111311608,AN_BLA_003_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,2-4m,>= 2m - < 4m,"max= 3,50",1,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100111311608,AN_BLA_003_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,1m2,<= 1m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100111311608,AN_BLA_003_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,BoOev,bomen tot op de oever,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913483666,AN_DIE_001_3130a_19,"Dipper Pines, Wendy, Grunkle Stan & Robbie Valentino",MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"2,00",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913483666,AN_DIE_001_3130a_19,"Dipper Pines, Wendy, Grunkle Stan & Robbie Valentino",MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"3,80",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913483666,AN_DIE_001_3130a_19,"Dipper Pines, Wendy, Grunkle Stan & Robbie Valentino",MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913483666,AN_DIE_001_3130a_19,"Dipper Pines, Wendy, Grunkle Stan & Robbie Valentino",MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,05",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913483666,AN_DIE_001_3130a_19,"Dipper Pines, Wendy, Grunkle Stan & Robbie Valentino",MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),10,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913483666,AN_DIE_001_3130a_19,"Dipper Pines, Wendy, Grunkle Stan & Robbie Valentino",MQ,A,Heden,Helde,31xx_Helderheid,GBoZ,"Vrij helder, geen bodemzicht",,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913483666,AN_DIE_001_3130a_19,"Dipper Pines, Wendy, Grunkle Stan & Robbie Valentino",MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,G10m²,>= 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913483666,AN_DIE_001_3130a_19,"Dipper Pines, Wendy, Grunkle Stan & Robbie Valentino",MQ,A,Heden,Boom,31xx_LSVI_Boom,BoOev,bomen tot op de oever,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913483666,AN_DIE_001_3130a_19,"Dipper Pines, Wendy, Grunkle Stan & Robbie Valentino",MQ,A,Heden,Diept,31xx_Diepteklasse,2-4m,>= 2m - < 4m,"max= 3,80",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100112164262,AN_DVH_002_3130a_19,"Dipper Pines, Wendy & Mabel Pines",MQ,A,Heden,Diept,31xx_Diepteklasse,4-6m,>= 4m - < 6m,"max= 4,90",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100112164262,AN_DVH_002_3130a_19,"Dipper Pines, Wendy & Mabel Pines",MQ,A,Heden,Boom,31xx_LSVI_Boom,BoOev,bomen tot op de oever,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100112164262,AN_DVH_002_3130a_19,"Dipper Pines, Wendy & Mabel Pines",MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,10m2,> 1m& - < 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100112164262,AN_DVH_002_3130a_19,"Dipper Pines, Wendy & Mabel Pines",MQ,A,Heden,Helde,31xx_Helderheid,FytoG,Gekleurd door fytoplankton - groen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100112164262,AN_DVH_002_3130a_19,"Dipper Pines, Wendy & Mabel Pines",MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),1,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100112164262,AN_DVH_002_3130a_19,"Dipper Pines, Wendy & Mabel Pines",MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100112164262,AN_DVH_002_3130a_19,"Dipper Pines, Wendy & Mabel Pines",MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"3,80",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100112164262,AN_DVH_002_3130a_19,"Dipper Pines, Wendy & Mabel Pines",MQ,A,Heden,Peil,31xx_Peil,Ulaag,Uitzonderlijk laag,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100112164262,AN_DVH_002_3130a_19,"Dipper Pines, Wendy & Mabel Pines",MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,70",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119284977,AN_ELS_001_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,65",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119284977,AN_ELS_001_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,65",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119284977,AN_ELS_001_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,60",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119284977,AN_ELS_001_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,M2xHo,>= 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119284977,AN_ELS_001_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,HumuZ,Gekleurd door humuszuren,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119284977,AN_ELS_001_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119284977,AN_ELS_001_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),2,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119284977,AN_ELS_001_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,G10m²,>= 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119284977,AN_ELS_001_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119284977,AN_ELS_001_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,65",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119325130,AN_ELS_002_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,80",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119325130,AN_ELS_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119325130,AN_ELS_002_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,2xHo,< 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119325130,AN_ELS_002_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,1m2,<= 1m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119325130,AN_ELS_002_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),50,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119325130,AN_ELS_002_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119325130,AN_ELS_002_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,65",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119325130,AN_ELS_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,60",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119325130,AN_ELS_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,60",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100407044021,AN_FOR_001_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Boom,31xx_LSVI_Boom,BoOev,bomen tot op de oever,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100407044021,AN_FOR_001_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Diept,31xx_Diepteklasse,2-4m,>= 2m - < 4m,"max= 3,80",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100407044021,AN_FOR_001_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100407044021,AN_FOR_001_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100407044021,AN_FOR_001_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,65",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100407044021,AN_FOR_001_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"1,20",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100407044021,AN_FOR_001_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Helde,31xx_Helderheid,TrSub,Troebel door substraat,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080914355110,AN_GSV_008_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,TrSub,Troebel door substraat,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080914355110,AN_GSV_008_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,38",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080914355110,AN_GSV_008_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,38",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080914355110,AN_GSV_008_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,M2xHo,>= 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080914355110,AN_GSV_008_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080914355110,AN_GSV_008_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,05",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080914355110,AN_GSV_008_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,60",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080914355110,AN_GSV_008_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080914355110,AN_GSV_008_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,G10m²,>= 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080914355110,AN_GSV_008_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),55,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111308423568,AN_HGA_004_3130a_19,Wendy,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,65",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111308423568,AN_HGA_004_3130a_19,Wendy,MQ,A,Heden,Peil,31xx_Peil,Ulaag,Uitzonderlijk laag,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111308423568,AN_HGA_004_3130a_19,Wendy,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,65",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111308423568,AN_HGA_004_3130a_19,Wendy,MQ,A,Heden,Helde,31xx_Helderheid,HumuZ,Gekleurd door humuszuren,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111308423568,AN_HGA_004_3130a_19,Wendy,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"1,00",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111308423568,AN_HGA_004_3130a_19,Wendy,MQ,A,Heden,Boom,31xx_LSVI_Boom,2xHo,< 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111308423568,AN_HGA_004_3130a_19,Wendy,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,10m2,> 1m& - < 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111308423568,AN_HGA_004_3130a_19,Wendy,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111308423568,AN_HGA_004_3130a_19,Wendy,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,65",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111308423568,AN_HGA_004_3130a_19,Wendy,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),50,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111308550924,AN_HGA_005_3130a_19,Wendy,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),15,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111308550924,AN_HGA_005_3130a_19,Wendy,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,G10m²,>= 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111308550924,AN_HGA_005_3130a_19,Wendy,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,,"max= 0,70",1,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111308550924,AN_HGA_005_3130a_19,Wendy,MQ,A,Heden,Boom,31xx_LSVI_Boom,M2xHo,>= 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111308550924,AN_HGA_005_3130a_19,Wendy,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111308550924,AN_HGA_005_3130a_19,Wendy,MQ,L,Lente,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,45",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111308550924,AN_HGA_005_3130a_19,Wendy,MQ,L,Lente,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,95",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119474811,AN_KDN_005_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,Helde,31xx_Helderheid,TrAnd,Troebel anders,Grijskleuring,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119474811,AN_KDN_005_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,90",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119474811,AN_KDN_005_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,90",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119474811,AN_KDN_005_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119474811,AN_KDN_005_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119474811,AN_KDN_005_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 1,10",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119474811,AN_KDN_005_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,1m2,<= 1m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119474811,AN_KDN_005_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,Boom,31xx_LSVI_Boom,BoOev,bomen tot op de oever,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119474811,AN_KDN_005_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119474811,AN_KDN_005_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),2,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119582918,AN_KSV_006_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,95",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119582918,AN_KSV_006_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"1,00",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119582918,AN_KSV_006_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,,"0,50",1,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119582918,AN_KSV_006_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119582918,AN_KSV_006_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,HumuZ,Gekleurd door humuszuren,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119582918,AN_KSV_006_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 1,10",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119582918,AN_KSV_006_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,BoOev,bomen tot op de oever,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119582918,AN_KSV_006_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,10m2,> 1m& - < 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103119582918,AN_KSV_006_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),13,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508094879,AN_KVD_002_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),55,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508094879,AN_KVD_002_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,10m2,> 1m& - < 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508094879,AN_KVD_002_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,BoOev,bomen tot op de oever,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508094879,AN_KVD_002_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508094879,AN_KVD_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,HumuZ,Gekleurd door humuszuren,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508094879,AN_KVD_002_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508094879,AN_KVD_002_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,60",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508094879,AN_KVD_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508094879,AN_KVD_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,10",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508094879,AN_KVD_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,TrSub,Troebel door substraat,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508240678,AN_LIL_002_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,2xHo,< 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508240678,AN_LIL_002_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,1m2,<= 1m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508240678,AN_LIL_002_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 1,90",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508240678,AN_LIL_002_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),15,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508240678,AN_LIL_002_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508240678,AN_LIL_002_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508240678,AN_LIL_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,TrSub,Troebel door substraat,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508240678,AN_LIL_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"1,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508240678,AN_LIL_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"1,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080912374366,AN_LIL_003_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,43",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080912374366,AN_LIL_003_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,TrSub,Troebel door substraat,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080912374366,AN_LIL_003_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Ulaag,Uitzonderlijk laag,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080912374366,AN_LIL_003_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080912374366,AN_LIL_003_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),30,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080912374366,AN_LIL_003_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,G10m²,>= 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080912374366,AN_LIL_003_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,65",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080912374366,AN_LIL_003_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,2xHo,< 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508292047,AN_LIL_004_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508292047,AN_LIL_004_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508292047,AN_LIL_004_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,75",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508292047,AN_LIL_004_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508292047,AN_LIL_004_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,Boom,31xx_LSVI_Boom,M2xHo,>= 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508292047,AN_LIL_004_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),85,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508292047,AN_LIL_004_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508292047,AN_LIL_004_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,10m2,> 1m& - < 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508292047,AN_LIL_004_3130a_19,Dipper Pines & Robbie Valentino,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102916124425,AN_NEE_001_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,1m2,<= 1m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102916124425,AN_NEE_001_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,2xHo,< 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102916124425,AN_NEE_001_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102916124425,AN_NEE_001_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102916124425,AN_NEE_001_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,,40,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102916124425,AN_NEE_001_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102916124425,AN_NEE_001_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,70",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102916124425,AN_NEE_001_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102916124425,AN_NEE_001_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508472188,AN_OLB_003_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,04",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508472188,AN_OLB_003_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,04",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508472188,AN_OLB_003_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,45",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508472188,AN_OLB_003_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Droog,Droogstaand (groot deel),,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508472188,AN_OLB_003_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),40,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508472188,AN_OLB_003_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,04",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508472188,AN_OLB_003_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508472188,AN_OLB_003_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,2xHo,< 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508472188,AN_OLB_003_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,10m2,> 1m& - < 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508522557,AN_RAV_004_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,45",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508522557,AN_RAV_004_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Ulaag,Uitzonderlijk laag,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508522557,AN_RAV_004_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,45",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508522557,AN_RAV_004_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,55",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508522557,AN_RAV_004_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,HumuZ,Gekleurd door humuszuren,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508522557,AN_RAV_004_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),75,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508522557,AN_RAV_004_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508522557,AN_RAV_004_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,10m2,> 1m& - < 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508522557,AN_RAV_004_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,2xHo,< 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110508522557,AN_RAV_004_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 1,00",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102908381915,AN_RIN_001_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"1,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102908381915,AN_RIN_001_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"1,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102908381915,AN_RIN_001_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102908381915,AN_RIN_001_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102908381915,AN_RIN_001_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Boom,31xx_LSVI_Boom,2xHo,< 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102908381915,AN_RIN_001_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 1,80",1,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102908381915,AN_RIN_001_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),4,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102908381915,AN_RIN_001_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,G10m²,>= 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102908381915,AN_RIN_001_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2021102611020783,AN_SNE_001_3130a_19,Wendy,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,10",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2021102611020783,AN_SNE_001_3130a_19,Wendy,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,10",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2021102611020783,AN_SNE_001_3130a_19,Wendy,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,65",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2021102611020783,AN_SNE_001_3130a_19,Wendy,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,10",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2021102611020783,AN_SNE_001_3130a_19,Wendy,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,1m2,<= 1m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2021102611020783,AN_SNE_001_3130a_19,Wendy,MQ,A,Heden,Boom,31xx_LSVI_Boom,2xHo,< 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2021102611020783,AN_SNE_001_3130a_19,Wendy,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2021102611020783,AN_SNE_001_3130a_19,Wendy,MQ,A,Heden,Helde,31xx_Helderheid,HumuZ,Gekleurd door humuszuren,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2021102611020783,AN_SNE_001_3130a_19,Wendy,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),55,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2021102611020783,AN_SNE_001_3130a_19,Wendy,MQ,A,Heden,Peil,31xx_Peil,Droog,Droogstaand (groot deel),,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110510064438,AN_TIE_006_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,60",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110510064438,AN_TIE_006_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,60",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110510064438,AN_TIE_006_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"1,00",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110510064438,AN_TIE_006_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110510064438,AN_TIE_006_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,60",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110510064438,AN_TIE_006_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110510064438,AN_TIE_006_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,2xHo,< 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110510064438,AN_TIE_006_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),7,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110510064438,AN_TIE_006_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,G10m²,>= 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019112914463370,AN_TIE_007_3130a_19,Gravity Falls,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,G10m²,>= 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019112914463370,AN_TIE_007_3130a_19,Gravity Falls,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),60,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019112914463370,AN_TIE_007_3130a_19,Gravity Falls,MQ,A,Heden,Boom,31xx_LSVI_Boom,2xHo,< 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019112914463370,AN_TIE_007_3130a_19,Gravity Falls,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019112914463370,AN_TIE_007_3130a_19,Gravity Falls,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,35",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019112914463370,AN_TIE_007_3130a_19,Gravity Falls,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019112914463370,AN_TIE_007_3130a_19,Gravity Falls,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,35",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019112914463370,AN_TIE_007_3130a_19,Gravity Falls,MQ,A,Heden,Peil,31xx_Peil,Ulaag,Uitzonderlijk laag,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019112914463370,AN_TIE_007_3130a_19,Gravity Falls,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,35",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103117435471,AN_TIK_004_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Droog,Droogstaand (groot deel),,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103117435471,AN_TIK_004_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),80,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103117435471,AN_TIK_004_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103117435471,AN_TIK_004_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,10m2,> 1m& - < 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103117435471,AN_TIK_004_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,15",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103117435471,AN_TIK_004_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,70",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103117435471,AN_TIK_004_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,M2xHo,>= 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103117435471,AN_TIK_004_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,15",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019103117435471,AN_TIK_004_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,15",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110510174735,AN_VVM_006_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,80",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110510174735,AN_VVM_006_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,80",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110510174735,AN_VVM_006_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Ulaag,Uitzonderlijk laag,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110510174735,AN_VVM_006_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,M2xHo,>= 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110510174735,AN_VVM_006_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,90",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110510174735,AN_VVM_006_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),66,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110510174735,AN_VVM_006_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,G10m²,>= 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110510174735,AN_VVM_006_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110510174735,AN_VVM_006_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,80",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080910510887,AN_WZA_001_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"1,25",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080910510887,AN_WZA_001_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Ulaag,Uitzonderlijk laag,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080910510887,AN_WZA_001_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,TrSub,Troebel door substraat,Fe-kleuring,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080910510887,AN_WZA_001_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080910510887,AN_WZA_001_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),3,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080910510887,AN_WZA_001_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,BoOev,bomen tot op de oever,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080910510887,AN_WZA_001_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 1,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080910510887,AN_WZA_001_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,10m2,> 1m& - < 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082908240827,LI_ABH_002_3130a_19,Wendy,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082908240827,LI_ABH_002_3130a_19,Wendy,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082908240827,LI_ABH_002_3130a_19,Wendy,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,60",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082908240827,LI_ABH_002_3130a_19,Wendy,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082908240827,LI_ABH_002_3130a_19,Wendy,MQ,A,Heden,Boom,31xx_LSVI_Boom,2xHo,< 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082908240827,LI_ABH_002_3130a_19,Wendy,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,1m2,<= 1m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082908240827,LI_ABH_002_3130a_19,Wendy,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),50,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082908240827,LI_ABH_002_3130a_19,Wendy,MQ,A,Heden,Helde,31xx_Helderheid,HumuZ,Gekleurd door humuszuren,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082908240827,LI_ABH_002_3130a_19,Wendy,MQ,A,Heden,Peil,31xx_Peil,Droog,Droogstaand (groot deel),,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082908240827,LI_ABH_002_3130a_19,Wendy,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100111453143,LI_ACH_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"1,20",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100111453143,LI_ACH_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"1,20",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100111453143,LI_ACH_002_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100111453143,LI_ACH_002_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,40",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100111453143,LI_ACH_002_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,10m2,> 1m& - < 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100111453143,LI_ACH_002_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 1,40",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100111453143,LI_ACH_002_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,2xHo,< 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100111453143,LI_ACH_002_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),5,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100111453143,LI_ACH_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100407203298,LI_ASP_001_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100407203298,LI_ASP_001_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100407203298,LI_ASP_001_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Ulaag,Uitzonderlijk laag,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100407203298,LI_ASP_001_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100407203298,LI_ASP_001_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100407203298,LI_ASP_001_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,10m2,> 1m& - < 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100407203298,LI_ASP_001_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,2xHo,< 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100407203298,LI_ASP_001_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),50,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100407203298,LI_ASP_001_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,HumuZ,Gekleurd door humuszuren,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100407203298,LI_ASP_001_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110513274182,LI_ASP_002_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,62",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110513274182,LI_ASP_002_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,62",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110513274182,LI_ASP_002_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,75",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110513274182,LI_ASP_002_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Helde,31xx_Helderheid,HumuZ,Gekleurd door humuszuren,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110513274182,LI_ASP_002_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110513274182,LI_ASP_002_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,62",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110513274182,LI_ASP_002_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Boom,31xx_LSVI_Boom,2xHo,< 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110513274182,LI_ASP_002_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110513274182,LI_ASP_002_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),30,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110513274182,LI_ASP_002_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,G10m²,>= 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082913333356,LI_BEG_002_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082913333356,LI_BEG_002_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,35",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082913333356,LI_BEG_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,,"0,60",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082913333356,LI_BEG_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,55",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082913333356,LI_BEG_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,TrSub,Troebel door substraat,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082913333356,LI_BEG_002_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,65",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082913333356,LI_BEG_002_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,BoOev,bomen tot op de oever,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082913333356,LI_BEG_002_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),15,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082913333356,LI_BEG_002_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,G10m²,>= 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019083014205073,LI_LUY_001_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"1,00",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019083014205073,LI_LUY_001_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,M2xHo,>= 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019083014205073,LI_LUY_001_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,02",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019083014205073,LI_LUY_001_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,02",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019083014205073,LI_LUY_001_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019083014205073,LI_LUY_001_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Droog,Droogstaand (groot deel),,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019083014205073,LI_LUY_001_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),80,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019083014205073,LI_LUY_001_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,02",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019083014205073,LI_LUY_001_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,1m2,<= 1m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102914385814,LI_MAT_010_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102914385814,LI_MAT_010_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102914385814,LI_MAT_010_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Peil,31xx_Peil,Ulaag,Uitzonderlijk laag,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102914385814,LI_MAT_010_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),45,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102914385814,LI_MAT_010_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102914385814,LI_MAT_010_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,1m2,<= 1m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102914385814,LI_MAT_010_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102914385814,LI_MAT_010_3130a_19,Dipper Pines & Wendy,MQ,A,Heden,Boom,31xx_LSVI_Boom,BoOev,bomen tot op de oever,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019102914385814,LI_MAT_010_3130a_19,Dipper Pines & Wendy,MQ,B,Recent,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,35",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2020040813400970,LI_MLV_013_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2020040813400970,LI_MLV_013_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,M2xHo,>= 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2020040813400970,LI_MLV_013_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,45",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2020040813400970,LI_MLV_013_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,45",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2020040813400970,LI_MLV_013_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,45",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2020040813400970,LI_MLV_013_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,1m2,<= 1m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2020040813400970,LI_MLV_013_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2020040813400970,LI_MLV_013_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),90,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2020040813400970,LI_MLV_013_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Droog,Droogstaand (groot deel),,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913170487,LI_MLV_020_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,M2xHo,>= 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913170487,LI_MLV_020_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913170487,LI_MLV_020_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913170487,LI_MLV_020_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"1,00",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913170487,LI_MLV_020_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"1,00",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913170487,LI_MLV_020_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,1m2,<= 1m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913170487,LI_MLV_020_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913310713,LI_MLV_025_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913310713,LI_MLV_025_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,M2xHo,>= 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913310713,LI_MLV_025_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913310713,LI_MLV_025_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,55",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913310713,LI_MLV_025_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,55",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913310713,LI_MLV_025_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,55",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913310713,LI_MLV_025_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,HumuZ,Gekleurd door humuszuren,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913310713,LI_MLV_025_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),75,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913310713,LI_MLV_025_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019080913310713,LI_MLV_025_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,G10m²,>= 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110514294765,LI_TEU_006_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,G10m²,>= 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110514294765,LI_TEU_006_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),1,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110514294765,LI_TEU_006_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 1,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110514294765,LI_TEU_006_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,BoOev,bomen tot op de oever,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110514294765,LI_TEU_006_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,TrSub,Troebel door substraat,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110514294765,LI_TEU_006_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,90",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110514294765,LI_TEU_006_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"1,30",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110514294765,LI_TEU_006_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,15",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110514294765,LI_TEU_006_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110515035863,LI_VOB_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,HumuZ,Gekleurd door humuszuren,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110515035863,LI_VOB_002_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110515035863,LI_VOB_002_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,50",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110515035863,LI_VOB_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,35",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110515035863,LI_VOB_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,35",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110515035863,LI_VOB_002_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,35",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110515035863,LI_VOB_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110515035863,LI_VOB_002_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110515035863,LI_VOB_002_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,1m2,<= 1m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110515035863,LI_VOB_002_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,2xHo,< 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019110515035863,LI_VOB_002_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),85,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082910171726,LI_WIK_009_3130a_19,Dipper Pines & Mabel Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,65",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082910171726,LI_WIK_009_3130a_19,Dipper Pines & Mabel Pines,MQ,A,Heden,Peil,31xx_Peil,Ulaag,Uitzonderlijk laag,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082910171726,LI_WIK_009_3130a_19,Dipper Pines & Mabel Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,65",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082910171726,LI_WIK_009_3130a_19,Dipper Pines & Mabel Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,80",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082910171726,LI_WIK_009_3130a_19,Dipper Pines & Mabel Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),33,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082910171726,LI_WIK_009_3130a_19,Dipper Pines & Mabel Pines,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082910171726,LI_WIK_009_3130a_19,Dipper Pines & Mabel Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,G10m²,>= 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082910171726,LI_WIK_009_3130a_19,Dipper Pines & Mabel Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,65",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019082910171726,LI_WIK_009_3130a_19,Dipper Pines & Mabel Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,2xHo,< 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100112032024,VB_VOR_004_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,60",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100112032024,VB_VOR_004_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Secch,Secchi-diepte in meter,"0,45",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100112032024,VB_VOR_004_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,TrSub,Troebel door substraat,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100112032024,VB_VOR_004_3130a_19,Dipper Pines,MQ,A,Heden,Peil,31xx_Peil,Ulaag,Uitzonderlijk laag,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100112032024,VB_VOR_004_3130a_19,Dipper Pines,MQ,A,Heden,Helde,31xx_Helderheid,Seccd,Diepte van Secchibepaling,"0,70",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100112032024,VB_VOR_004_3130a_19,Dipper Pines,MQ,A,Heden,Boom,31xx_LSVI_Boom,2xHo,< 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100112032024,VB_VOR_004_3130a_19,Dipper Pines,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,10m2,> 1m& - < 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100112032024,VB_VOR_004_3130a_19,Dipper Pines,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 1,00",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019100112032024,VB_VOR_004_3130a_19,Dipper Pines,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),70,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111309075445,WV_POB_001_3130a_19,Wendy,MQ,A,Heden,VerSt,31xx_LSVI_VertikaleStructuur,Helo,bedekking helofyten (%),<1,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111309075445,WV_POB_001_3130a_19,Wendy,MQ,A,Heden,HorSt,31xx_LSVI_HorizontaleStructuur,G10m²,>= 10m²,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111309075445,WV_POB_001_3130a_19,Wendy,MQ,A,Heden,Diept,31xx_Diepteklasse,0-2m,0 - < 2m,"max= 0,65",0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111309075445,WV_POB_001_3130a_19,Wendy,MQ,A,Heden,Helde,31xx_Helderheid,BoZi,Bodemzicht,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111309075445,WV_POB_001_3130a_19,Wendy,MQ,A,Heden,Peil,31xx_Peil,Norm,Normaal,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111309075445,WV_POB_001_3130a_19,Wendy,MQ,A,Heden,Boom,31xx_LSVI_Boom,M2xHo,>= 2x hoogte van bomen,,0,,RS2014070915553622
+HT31xx_LSVI_StilstaandeWateren,IV2019111309075445,WV_POB_001_3130a_19,Wendy,MQ,A,Heden,Peil,31xx_Peil,Schom,Schommeling winter/zomer in m,"0,15",0,,RS2014070915553622
