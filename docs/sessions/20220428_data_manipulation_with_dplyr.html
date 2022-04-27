@@ -1,0 +1,291 @@
+---
+layout: presentation
+title: Data manipulation with `dplyr`
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 28 APRIL 2022
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+01.05 - Isala Van Diest
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20220428/20220428_badge_data_manipulation.png)
+
+---
+class: center, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20220428/20220428_cheatsheet_dplyr.png)
+New [dplyr cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20220428_cheat_sheet_data_transformation.pdf) available.
+
+---
+class: center, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20220428/20220428_cheat_sheet_stringr.png)
+New [stringr cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20220428_cheat_sheet_stringr.pdf) available. Interesting for manipulating strings in an intuitive way.
+---
+class: center, middle
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+
+---
+class: center, middle
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/yOf5vGvvT5GN9X5EGkoeIw?both and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/yOf5vGvvT5GN9X5EGkoeIw?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+Today no R code script and only one data.frame to download
+
+You can download the material:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub folder [coding-club/data/20220428](https://github.com/inbo/coding-club/blob/master/data/20220428/)
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20201027")` to download the coding club material of October, 27 2020. If date is omitted, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+Today we will work with vegetation data!
+
+Copy-paste the following code in a R script within your `coding-club` RStudio session and you can start with challenge 1. Happy coding.
+
+```r
+library(tidyverse)
+veg_df <- read_csv(file = "./data/20220428/20220428_inboveg_data.txt", na = "")
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+1. Display the very first 8 rows. Display the very last 8 rows.
+
+2. Display columns `Q1Code` and `Q1Description`
+
+3. Display the _distinct_ values of `Q1Code` and `Q1Description`. Do the same for `Q2Code` and `Q2Description`.
+
+3. _count_ how many data are reliable and how many are not (`NotSure` = `0` or `1`).
+
+4. How to remove not reliable data?
+
+
+---
+class: left, top
+
+# Intermezzo: the _pipe_ %>%
+
+From [dplyr documentation](https://dplyr.tidyverse.org/articles/dplyr.html?q=pipe#the-pipe):
+
+![:scale 110%]({{ site.baseurl}}/assets/images/20220428/20220428_pipe.jpg)
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2A
+
+1. All `Q2Description` and all `Name` values contain the string `"31xx_"`. Please, remove it from botoh columns.
+
+
+2. Select rows where `UserReference` contains `HGA`, `LIL` or `RIN`. Hint: combine dplyr and stringr.
+
+3. The observers were anonymized and gender neutralized by using [Gravity Falls](https://en.wikipedia.org/wiki/Gravity_Falls) characters. This is not needed anymore, so we can use the real names. Change values in column `Observer` as follows:
+
+cartoon term | real name
+--- | ---
+`"Dipper Pines"` | `"Vincent Smeekens"`
+`"Wendy"` | `"Kevin Scheers"`
+`"Dipper Pines & Ford Pines"` | `"Vincent Smeekens & Jo Packet"`
+`"Dipper Pines & Wendy"` | `"Vincent Smeekens & Kevin Scheers"`
+`"Dipper Pines & Mabel Pines"` | `"Vincent Smeekens & An Leyssen"`
+`"Dipper Pines & Robbie Valentino"` | `"Vincent Smeekens & Geert de Knijf"`
+`"Dipper Pines, Wendy, Grunkle Stan & Robbie Valentino"` | `"Vincent Smeekens, Kevin Scheers, Luc Denys & Geert"`
+`"Dipper Pines, Wendy & Mabel Pines"` | `"Vincent Smeekens, Kevin Scheers & An Leyssen"`
+`"Gravity Falls"`|  `"Team zoetwaterhabitats"`
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2B
+
+Try to apply the pipe to concatenate all steps below.
+
+1. Save the rows containing the maximal depth of the watercourse (`Q2Code`= `Diept`)
+or  the Secchi depth in meters (`Q3Code`= `Secch`) as a new dataframe called `extract_df`.
+
+2. Remove from `extract_df` the columns `Name`, `QualifierType`, `ParentID`, `QualifierResource` and all the columns whose name starts with `Q1`.
+
+3. Add to `extract_df` a new column called `value` containing the numeric values
+extracted from column `Elucidation`. After that, remove `Elucidation` column as well.
+
+4. Map the values 0, 1 in column `NotSure` to `FALSE`, `TRUE` respectively. Hint: [basic R](https://datacornering.com/convert-r-true-and-false-values-to-1-and-0-and-vice-versa/) can help.
+
+5. Get the rows from `extract_df` with the 5 deepest measuring points.
+
+---
+
+# INTERMEZZO: recap tidy data
+
+During the [last session](https://inbo.github.io/coding-club/sessions/20220329_tidy_data.html#1)
+we sproke about tidy data. This dataset is not tidy, and so `extract_df`: the
+watercourse depth and the Secchi depth should be spread over two columns as
+they are two different variables. Here the code to create a tidy version of
+`extract_df` called `extract_df_tidy` and which we will use for the rest of
+the challenge:
+
+```
+extract_df_tidy <-
+  extract_df %>%
+  tidyr::pivot_wider(names_from = Q2Code,
+                     values_from = c(Q2Description,
+                                     Q3Code,
+                                     Q3Description,
+                                     value, NotSure))
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3A
+
+1. Change the column order of `extract_df_tidy` by showing first `RecordingGivid `, `UserReference`,
+`Observer`, then the columns related to clarity (column name ending with
+`_Helde`), and then the ones related to watercourse depth (column name ending
+with `_Dept`).
+
+2. Create a _summary_ for each recording event (`RecordingGivid`) to show the relative water clarity, as column `RelWaterClarity`. We define the relative water clarity as the Secchi depth divided by the total depth.
+
+3. As not all data are declared as reliable (`NotSure_*` = `TRUE`), set `RelWaterClarity` as NA in these cases
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3B
+
+1. Create a column called `datetime` containing the datetime of the measurement as
+encoded in `RecordingGivid`, e.g. IV**20190809105108**87. Hint: to transform a
+string yyyymmddhhmmss to a datetime object, you can use
+lubridate::as_datetime(), e.g. `lubridate::as_datetime("20190809105108")`
+
+2. Create a _summary_ for each observer with the number of recordings (call it `n`), the deepest watercourse
+ever measured (`max_depth`), the most cloudy water ever measured
+(`min_secch_depth`), the oldest (`first_rec`) and the most recent
+recording (`last_rec`). Show the results ordered by the number of recordings `n`, from
+highest to lowest and by `last_rec`, most recent recordings first.
+
+3. Calculate the _summary_ above only for `Observers` with less than 10% unreliable
+recordings, i.e. less than 1 out of 10 recorded depth or clarity. Hint: you can make use of help columns, i.e. columns created as an intermediate step and then removed from final result.
+
+---
+class: left, top
+
+# dplyr: make hard things easy
+
+Do you want to calculate the _nonparametric bootstrap for obtaining confidence limits for the population mean without assuming normality_? :scream: With dplyr it's child's play!
+
+```r
+> df_cleaned %>% group_by(species) %>% summarise(mean_cl_boot(length))
+# A tibble: 44 x 4
+   species                       y  ymin  ymax
+   <chr>                     <dbl> <dbl> <dbl>
+ 1 baars                      9.52  8.61 10.5
+ 2 bittervoorn                5.23  4.75  5.66
+ 3 blankvoorn                 9.90  9.48 10.3
+ 4 blauwbandgrondel           5.57  5.36  5.79
+ 5 bot                        7.46  7.28  7.63
+ 6 brakwatergrondel           4.26  4.21  4.32
+ 7 brasem                    13.1  12.4  13.9
+ 8 chinese_wolhandkrab      NaN    NA    NA
+ 9 dikkopje                   4.90  4.78  5.02
+10 driedoornige_stekelbaars   5.62  5.44  5.88
+# ... with 34 more rows
+```
+
+
+---
+class: left, top
+
+## Resources
+
+- Challenge solutions and video recording will be available soon
+- [dplyr package documentation](https://dplyr.tidyverse.org/)
+- [dplyr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20220428_cheat_sheet_data_transformation.pdf)
+- Extra challenges needed? Check the sessions of [29-04-2021](https://inbo.github.io/coding-club/sessions/20210429_data_manipulation_with_dplyr.html) and [28-01-2020](https://inbo.github.io/coding-club/sessions/20200128_data_exploration.html#1).
+
+---
+class: left, top
+
+# R workshop
+
+- **What**? VLIZ organizes a R workshop: "Bringing together marine biodiversity, environmental and maritime boundaries data in R". You will learn how to combine data from a number of VLIZ data systems through their R packages and APIs. Packages discussed in the workshop: [lwdataexplorer](), [worrms](), [mregions](), [eurobis](), [sdmpredictors]() and [EMODnetWFS]().
+
+- **Where**? Brussels as part of the VLIZ cointribution of the [Empowering Biodiversity Research conference](https://www.biodiversity.be/5031/). Joining remotely is also posssible.
+
+- **When**? 30th of May.
+
+- **More info**? https://www.biodiversity.be/5147/ (Workshop 6)
+
+- **Registrations**? https://registration.vliz.be/vliz-ebr2022
+
+- **Questions**? Mail to [Salvador Fernandez](mailto:salvador.fernandez@vliz.be), [Lennert Schepers](mailto:lennert.schepers@vliz.be) or [Laura Marquez](mailto:laura.marquez@vliz.be).
+
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.05 - Isala Van Diest(?)<br>
+Date: __31/05/2022__, van 10:00 tot 12:00<br>
+Subject: **join, join, join!** <br>
+(registration announced via DG_useR@inbo.be)
