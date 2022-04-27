@@ -128,7 +128,7 @@ class: left, top
 
 # Challenge 2A
 
-1. All `Q2Description` and all `Name` values contain the string `"31xx_"`. Please, remove it from botoh columns.
+1. All `Q2Description` and all `Name` values contain the string `"31xx_"`. Please, remove it from both columns.
 2. Select rows where `UserReference` contains `HGA`, `LIL` or `RIN`. Hint: combine dplyr and stringr.
 3. The observers were anonymized and gender neutralized by using [Gravity Falls](https://en.wikipedia.org/wiki/Gravity_Falls) characters. This is not needed anymore, so we can use the real names. Change values in column `Observer` as follows:
 
@@ -170,7 +170,7 @@ extracted from column `Elucidation`. After that, remove `Elucidation` column as 
 # INTERMEZZO: recap tidy data
 
 During the [last session](https://inbo.github.io/coding-club/sessions/20220329_tidy_data.html#1)
-we sproke about tidy data. `veg_df` is not tidy, and so `extract_df`: the
+we spoke about tidy data. `veg_df` is not tidy, and so `extract_df`: the
 watercourse depth and the Secchi depth should be spread over two columns as
 they are two different variables. Here the code to create a tidy version of
 `extract_df` called `extract_df_tidy` and which we will use for challenge 3:
