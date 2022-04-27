@@ -196,7 +196,7 @@ class: left, top
 `_Helde`), and then the ones related to watercourse depth (column name ending
 with `_Dept`).
 
-2. Create a _summary_ for each recording event (`RecordingGivid`) to show the relative water clarity, as column `RelWaterClarity`. We define the relative water clarity as the Secchi depth divided by the total depth.
+2. Create a _summary_ for each recording event (`RecordingGivid`) to show the relative water clarity, as column `RelWaterClarity`. We define the relative water clarity as the Secchi depth (`value_Helde`) divided by the total depth (`value_Diept`).
 
 3. As not all data are declared as reliable (`NotSure_*` = `TRUE`), set `RelWaterClarity` as NA in these cases
 
