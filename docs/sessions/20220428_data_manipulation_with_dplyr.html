@@ -86,7 +86,7 @@ You can download the material:
 ---
 class: left, top
 
-Today we will work with vegetation data!
+Today we will work with data from INBOVEG database and containing features of standing waters. Thanks to An for giving us such inspiration.
 
 Copy-paste the following code in a R script within your `coding-club` RStudio session and you can start with challenge 1. Happy coding.
 
@@ -107,7 +107,7 @@ class: left, top
 
 3. Display the _distinct_ values of `Q1Code` and `Q1Description`. Do the same for `Q2Code` and `Q2Description`.
 
-3. _count_ how many data are reliable and how many are not (`NotSure` = `0` or `1`).
+3. _Count_ how many data are reliable and how many are not (`NotSure` = `0` or `1`).
 
 4. How to remove not reliable data?
 
@@ -129,10 +129,7 @@ class: left, top
 # Challenge 2A
 
 1. All `Q2Description` and all `Name` values contain the string `"31xx_"`. Please, remove it from botoh columns.
-
-
 2. Select rows where `UserReference` contains `HGA`, `LIL` or `RIN`. Hint: combine dplyr and stringr.
-
 3. The observers were anonymized and gender neutralized by using [Gravity Falls](https://en.wikipedia.org/wiki/Gravity_Falls) characters. This is not needed anymore, so we can use the real names. Change values in column `Observer` as follows:
 
 cartoon term | real name
@@ -173,11 +170,10 @@ extracted from column `Elucidation`. After that, remove `Elucidation` column as 
 # INTERMEZZO: recap tidy data
 
 During the [last session](https://inbo.github.io/coding-club/sessions/20220329_tidy_data.html#1)
-we sproke about tidy data. This dataset is not tidy, and so `extract_df`: the
+we sproke about tidy data. `veg_df` is not tidy, and so `extract_df`: the
 watercourse depth and the Secchi depth should be spread over two columns as
 they are two different variables. Here the code to create a tidy version of
-`extract_df` called `extract_df_tidy` and which we will use for the rest of
-the challenge:
+`extract_df` called `extract_df_tidy` and which we will use for challenge 3:
 
 ```
 extract_df_tidy <-
@@ -230,7 +226,9 @@ class: left, top
 
 # dplyr: make hard things easy
 
-Do you want to calculate the _nonparametric bootstrap for obtaining confidence limits for the population mean without assuming normality_? :scream: With dplyr it's child's play!
+Do you want to calculate the _nonparametric bootstrap for obtaining confidence limits for the population mean without assuming normality_? What????
+
+With dplyr it's child's play!
 
 ```r
 > df_cleaned %>% group_by(species) %>% summarise(mean_cl_boot(length))
@@ -257,9 +255,27 @@ class: left, top
 ## Resources
 
 - Challenge solutions and video recording will be available soon
-- [dplyr package documentation](https://dplyr.tidyverse.org/)
-- [dplyr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20220428_cheat_sheet_data_transformation.pdf)
+- [dplyr](https://dplyr.tidyverse.org/) package documentation.
+- [dplyr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20220428_cheat_sheet_data_transformation.pdf).
+- [stringr](https://stringr.tidyverse.org/) package documentation.
+- [stringr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20220428_cheat_sheet_stringr.pdf).
 - Extra challenges needed? Check the sessions of [29-04-2021](https://inbo.github.io/coding-club/sessions/20210429_data_manipulation_with_dplyr.html) and [28-01-2020](https://inbo.github.io/coding-club/sessions/20200128_data_exploration.html#1).
+
+
+---
+class: left, top
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20220428/20220428_ebr_conference.png)
+
+[Empowering Biodiversity Research conference](https://www.biodiversity.be/5031/)
+
+24-25 May 2022
+
+AfricaMuseum
+Leuvensesteenweg 13
+Tervuren, 1970
+Belgium
+
 
 ---
 class: left, top
