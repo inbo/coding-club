@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2022-04-28 | data manipulation with dplyr | [slides]({{ site.baseurl }}{% link sessions/20220428_data_manipulation_with_dplyr.html  %}) | [hackmd](https://hackmd.io/yOf5vGvvT5GN9X5EGkoeIw?view) | 01.05 - Isala Van Diest | |[vimeo](https://vimeo.com/706019616)
+| 2022-04-28 | data manipulation with dplyr | [slides]({{ site.baseurl }}{% link sessions/20220428_data_manipulation_with_dplyr.html  %}) | [hackmd](https://hackmd.io/yOf5vGvvT5GN9X5EGkoeIw?view) | 01.05 - Isala Van Diest | | [vimeo](https://vimeo.com/706019616)
 | 2022-03-29 | tidy data | [slides]({{ site.baseurl }}{% link sessions/20220329_tidy_data.html  %}) | [hackmd](https://hackmd.io/EzGX1Ws9TzCTRUZuFtgcJQ?view) | 01.05 - Isala Van Diest | |
 | 2022-02-24 | read datafiles in R | [slides]({{ site.baseurl }}{% link sessions/20220224_read_datafiles_in_r.html  %}) | [hackmd](https://hackmd.io/PJB01rSLRq-PI73mCtbcGw?view) | online | [vimeo](https://vimeo.com/684574217) |
 | 2022-01-25 | read data from INBO dbs in R | [slides]({{ site.baseurl }}{% link sessions/20220125_read_data_inbo_dbs_in_r.html  %}) | [hackmd](https://hackmd.io/CK0CKFCERrewCOVBU8W6JA?view) | online | [vimeo](https://vimeo.com/678699212) |
