@@ -1,0 +1,162 @@
+---
+layout: presentation
+title: join, join, join!
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 31 MAY 2021
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+01.05 - Isala Van Diest
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20220531/20220531_badge_data_joining.png)
+
+---
+class: center, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20220531/20220531_cheatsheet_dplyr.png)
+[Download cheatsheet here](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20220428_cheat_sheet_data_transformation.pdf)
+
+---
+class: center, middle
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+<br> No yellow sticky notes online. We use hackmd (see next slide) but basic principle doesn't change.
+
+---
+class: center, middle
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/a-J196OqTX-hqaHMyWanlA?both and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/a-J196OqTX-hqaHMyWanlA?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, middle
+
+# Download data and code
+
+Today no R code script. We put all dataframes in a unique `.Rda` file
+
+You can download the material:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub folder [coding-club/data/20220531](https://github.com/inbo/coding-club/blob/master/data/20220531/)
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20201027")` to download the coding club material of October, 27 2020. If date is omitted, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, middle
+
+# Load libraries and data
+
+The R package [`tidylog`](https://github.com/elbersb/tidylog#tidylog) can be very helpful as it provides feedback about dplyr and tidyr operations.
+
+```r
+install.packages("tidylog")
+library(tidyverse)
+library(tidylog)
+```
+
+
+
+---
+class: left, middle
+
+# Data description
+
+
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, middle
+
+# Challenge 1
+
+
+---
+class: left, middle
+
+# Intermezzo: combine variables vs cases
+
+In number 5 of the 1st challenge, we not only add columns (_variables_), but also rows (_cases_). Why can't we do this using functions which combine rows?
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20220531/20220531_cobmine_variables_cases.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, middle
+
+# Challenge 2
+
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3
+
+
+
+---
+class: left, middle
+
+## Resources
+
+- Challenge solutions and video recording will be soon available
+- [dplyr package documentation](https://dplyr.tidyverse.org/)
+- [dplyr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20220428_cheat_sheet_data_transformation.pdf)
+- [tidylog package](https://github.com/elbersb/tidylog#tidylog) on GitHub
+- [tutorial on joining with dplyr](https://dplyr.tidyverse.org/articles/two-table.html)
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.05 - Isala Van Diest(?)<br>
+Date: __30/06/2021__, van 10:00 tot 12:30<br>
+Subject: **functions in R** <br>
+(registration announced via DG_useR@inbo.be)
