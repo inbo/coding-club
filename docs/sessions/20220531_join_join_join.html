@@ -71,7 +71,7 @@ class: left, middle
 
 # Download data and code
 
-Today no R code script. We put all dataframes in a unique `.Rda` file
+We've put all dataframes in a unique `.Rda` file
 
 You can download the material:
 
@@ -106,7 +106,7 @@ class: left, middle
 
 Partridge data is inspired by the [yearly partridge counting](https://www.natuurenbos.be/patrijs) that is done from January 15th untill March 31st. Each game management unit (wildbeheerseenheid, WBE) is required to count partridges in their territory if they want to hunt partridge. There are two dataframes:
 
-- `partridge`: a dataset with observations of birds. This includes the date of the observation, the fieldworker who submitted the observation, the type of observation (couple, single, group, or only noise), and location location (WBE number and x & y).
+- `partridge`: a dataset with observations of birds. This includes the date of the observation, the fieldworker who submitted the observation, the type of observation (couple, single, group, or only noise), and location (WBE number and x & y).
 - `WBE`: for each game management unit (WBE), this dataframe containse the unique identification number (wbe number), name, province, and surface area.
 
 GBIF butterfly checklist data, inspired by Dirk's [Eurobutt checklist](https://www.gbif.org/dataset/f9af6ffd-febc-4626-b2e8-809b1c60fa01#description).
@@ -121,17 +121,17 @@ class: left, middle
 
 # Challenge 1
 
-1. Make an overview of the number of observations there are for each WBE and call it *table1* (recap of last class; use group_by and summarize).
+1. Make an overview of the number of observations in each WBE and call it *table1* (recap of last class; use group_by and summarize).
 
 2. Add province, WBE name, and surface area to *table1* (where available)?
 
-2. How are the columns ordered? Are the columns of *table1* on the left? Try to get same result but putting them on the right.
+3. How are the columns ordered? Are the columns of *table1* on the left? Try to get the same result but putting them on the right.
 
-3. Some observations have a missing value for column `wbe` and some WBE did not count at all. Join both *table1* and *WBE* and retain only WBE who are part of both.
+4. Some observations have a missing value for column `wbe` and some WBE did not count at all. Join both *table1* and *WBE* and retain only WBE who are part of both.
 
-4. How to invert the order of the columns?
+5. How to invert the order of the columns?
 
-5. Now, join both again but retain ALL EXISTING WBE. use the dplyr function `replace_na` to show a zero for those WBE that have not observed any partridges.
+6. Now, join both again but retain ALL EXISTING WBE. use the dplyr function `replace_na` to show a zero for those WBE that have not observed any partridges.
 
 ---
 class: left, middle
@@ -140,7 +140,7 @@ class: left, middle
 
 In number 5 of the 1st challenge, we not only add columns (_variables_), but also rows (_cases_). Why can't we do this using functions which combine rows?
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20220531/20220531_cobmine_variables_cases.png)
+![:scale 90%]({{ site.baseurl}}/assets/images/20220531/20220531_combine_variables_cases.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
