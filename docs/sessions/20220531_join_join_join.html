@@ -24,7 +24,7 @@ class: center, middle
 ## INBO coding club
 
 <!--  Adjust the room number and name  -->
-01.05 - Isala Van Diest
+Online due to strike at public transport
 
 ---
 class: center, middle
@@ -105,7 +105,11 @@ class: left, middle
 # Data description
 
 
+GBIF butterfly checklist data, inspired by Dirk's [Eurobutt checklist](https://www.gbif.org/dataset/f9af6ffd-febc-4626-b2e8-809b1c60fa01#description).
 
+- `taxon`: dataframe with taxonomic information of butterflies found in West-Europe. Each butterfly has a unique identifier (column `id`)
+- `vernacularname`: vernacular names in English. Link to `taxon` in column `taxon_id`
+- `distribution_BE`, `distribution_NL`,  `distribution_LU` : data.frames about distribution and threat status of butterflies in Belgium (BE), the Netherlands (NL) and Luxembourg (LU). Link to `taxon` in column `taxon_id`
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -113,6 +117,15 @@ class: left, middle
 
 # Challenge 1
 
+1. How to add province, WBE name, and surface area to each observation (where available)?
+
+2. How are the columns ordered? Are the columns of coding_club_core_team on the left? Try to get same result but putting them on the right.
+
+3. Join both tables and retain only WBE who are part of both.
+
+4. How to invert the order of the columns?
+
+5. Now, join both again but retain ALL WBE
 
 ---
 class: left, middle
@@ -129,6 +142,13 @@ class: left, middle
 
 # Challenge 2
 
+1. Distributions from Belgium, Netherlands and Luxembourg should not overlap. How can you check it? There are several ways to do it, but try to use a data joining technique, which is likely the shortest and more readable way
+
+2. Merge the three `distribution_*` dataframes into a data.frame called `distribution`
+
+3. Check that all taxa in `vernacularname` point to taxa in `taxon`
+
+4. Which taxa in `taxon` do not have vernacular names?
 
 
 ---
@@ -136,6 +156,22 @@ background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png
 class: left, middle
 
 # Challenge 3
+
+1. Add `vernacularname` information to `taxon`. Save the result as a new df called `extended_taxon`. What happens to columns with the same name?
+Distinguish them by adding suffix "_taxon" to the column(s) from `taxon`, and
+"_distribution" to the column(s) from `distribution`.
+
+2. Add `distribution` to `extended_taxon` and retain only the
+taxa found in Belgium, Netherlands or Luxembourg, i.e. only taxa in `distribution`
+
+3. Dirk points to East, he wants to include butterfly data from the Balcans.
+His dear Albanian colleagues send him an Albanian national
+list based on the same format as the Belgian/Dutch/Luxembourg ones. He got three files: `taxon_AL`,
+`distribution_AL` and `vernacularname_AL`. Which species are found only in Albania? And which one in West Europe (`taxon`) but not in Albania?
+
+4. Which species are found both in Albania (`taxon_AL`) and in West-Europe?
+
+5. Help him to merge `taxon_AL`,  `distribution_AL` and `vernacularname_AL` to `taxon`, `distribution` and `vernacularname` respecitvely
 
 
 
@@ -149,6 +185,7 @@ class: left, middle
 - [dplyr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20220428_cheat_sheet_data_transformation.pdf)
 - [tidylog package](https://github.com/elbersb/tidylog#tidylog) on GitHub
 - [tutorial on joining with dplyr](https://dplyr.tidyverse.org/articles/two-table.html)
+- [stats 545 on multiple tibbles](https://stat545.com/multiple-tibbles.html)
 
 ---
 class: center, middle
