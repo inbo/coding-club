@@ -181,11 +181,18 @@ Today you play the role of a researcher, dr Z. She received in January 2011 obse
 
 What it seemed to be a one-shot anlysis, becomes very soon something more: she receives a similar file from another contractor containing observations of the bow-winged grasshopper (_Chorthippus biguttulus_) collected in the same area: [20220630_chorthippus_biguttulus_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20220630/20220630_chorthippus_biguttulus_2010.txt). Important: the columns containing the coordinates are called differently.
 
-She also get to know that she will have to redo the same analysis the next years, for sure on observations of the Asian ladybeetle:
+---
+class: left, top
+
+.center[![:scale 10%]({{ site.baseurl}}/assets/images/20220630/20220630_film.png)]
+
+# The data world of doctor Z
+
+She also gets to know that she will have to redo the same analysis in the future, for sure on observations of the Asian ladybeetle:
 - [20220630_harmonia_axyridis_2011.txt](https://github.com/inbo/coding-club/blob/master/data/20220630/20220630_harmonia_axyridis_2011.txt)
 - [20220630_harmonia_axyridis_2012.txt](https://github.com/inbo/coding-club/blob/master/data/20220630/20220630_harmonia_axyridis_2012.txt)
 
-And, she is afraid, data of bow-winged grasshopper will get her sooner or later.
+And, she is afraid, new data of bow-winged grasshopper will find her sooner or later.
 
 I think you can find yourself in the role of dr Z in this Oscar awarded movie. Before starting, a best practice reminder: write the functions in a separate file. You can call it `20220630_functions.R`. You can use your functions in the challenge file by first _sourcing_ this file, e.g. `source("./src/20220630/20220630_functions.R")`.
 
@@ -201,7 +208,7 @@ get now observations of Chorthippus biguttulus. Write a function called
 as argument a species (e.g. "Harmonia axyridis") and returns the observations
 of 2010 as a data.frame
 
-2. It's January 2012. dr Z got observations of Harmonia axyridis collected in 2011. How does she read these data? Does she create a new function, `get_obs_2011()` or does she best change the function she wrote one year before by renaming it  `get_obs()` and adding `year` as extra argument?
+2. It's January 2012. dr Z got observations of Harmonia axyridis collected in 2011. She is wise enough to understand that she needs to change the function she wrote one year before by renaming it  `get_obs()` and adding `year` as extra argument. How does she proceed?
 
 ---
 class: left, top
