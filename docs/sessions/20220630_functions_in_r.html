@@ -194,7 +194,10 @@ She also gets to know that she will have to redo the same analysis in the future
 
 And, she is afraid, new data of bow-winged grasshopper will find her sooner or later.
 
-I think you can find yourself in the role of dr Z in this Oscar awarded movie. Before starting, a best practice reminder: write the functions in a separate file. You can call it `20220630_functions.R`. You can use your functions in the challenge file by first _sourcing_ this file, e.g. `source("./src/20220630/20220630_functions.R")`.
+I think you can find yourself in the role of dr Z in this Oscar awarded movie.
+
+Before starting, a best practice reminder: write the functions in a *separate file*.
+You can call it `20220630_functions.R`. You can use your functions in the challenge file by first *sourcing* this file, e.g. `source("./src/20220630/20220630_functions.R")`.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -274,20 +277,20 @@ class: left, top
 
 # Intermezzo 2: document your functions with style
 
-C. Bukowski ever said that [_"Style is the answer to everything."_](https://www.elyrics.net/read/c/charles-bukowski-lyrics/style-lyrics.html). If not really everything, it's often more than just a nice-to-have feature.
+C. Bukowski ever wrote that [_"Style is the answer to everything"_](https://www.elyrics.net/read/c/charles-bukowski-lyrics/style-lyrics.html). If not really everything, it's often more than just a nice-to-have feature.
 
 Function documentation is essential while using R. How many times did you use the help (`?function_name`) in your daily woRk?
 
 Documenting your functions can be done with style by following the [Roxygen](https://roxygen2.r-lib.org/index.html) conventions as programmers writing functions for R packages do. Again, future-you and your colleagues will praise you. Do you know you can use the [`docstring`](https://github.com/dasonk/docstring) package to create help pages of your functions even if they are not in a package?
 
-We, at INBO, follow the official [INBO Styleguide for R code](https://inbo.github.io/tutorials/tags/styleguide/).
+We, at INBO, follow the official [INBO Styleguide for R code](https://inbo.github.io/tutorials/tutorials/styleguide_r_code/).
 
 ---
 class: left, top
 
 # Intermezzo 2: document your functions with style
 
-```
+```r
 install.packages("docstring")
 library(docstring)
 
@@ -316,12 +319,12 @@ class: left, top
 
 # Intermezzo 2: document your functions with style
 
-```
+```r
 docstring(remove_uneven) # or just
 ?remove_uneven
 ```
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20220630/20220630_docstring.png)
+![:scale 70%]({{ site.baseurl}}/assets/images/20220630/20220630_docstring.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -344,8 +347,10 @@ class: left, top
 Now that we have all blocks, what do you think to automatize the entire
 workflow by creating a function called `make_report()`? Think about which
 arguments you need as input. Return a named list containing:
-    - the data.frame returned by step 4
-    - the leaflet map
+
+- the data.frame returned by step 4
+
+- the leaflet map
 
 ---
 class: center, middle
@@ -363,8 +368,9 @@ class:left, top
 # Resources
 
 - Do you want to learn more about functions?  Get a more [formal framework](https://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/functions.pdf), go [in depth](http://adv-r.had.co.nz/Functions.html#function-arguments), do a check [under the hood](https://swcarpentry.github.io/r-novice-inflammation/14-supp-call-stack/) or learn more about [programming with `dplyr`](https://dplyr.tidyverse.org/articles/programming.html).
-- The [INBO styleguide for R code](https://inbo.github.io/tutorials/tags/styleguide/).
+- The [INBO styleguide for R code](https://inbo.github.io/tutorials/tutorials/styleguide_r_code/).
 - Some advices from [tidyverse style guide](https://style.tidyverse.org/documentation.html) can also be useful.
+- Packages [ROxygen2](https://roxygen2.r-lib.org/index.html) and [docstring](https://github.com/dasonk/docstring).
 - Solutions and video recording will be soon available.
 
 .center[![:scale 75%]({{ site.baseurl}}/assets/images/20220630/20220630_more_info_functions.png)
