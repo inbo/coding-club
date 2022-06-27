@@ -215,11 +215,7 @@ class: left, top
 
 # Intermezzo 1: what happens in the function stays in the function!
 
-Not in R unfortunately...
-
-If you use a variable in a function (`c` in the example below) which is not defined as argument,
-but it is defined outside the function, R doesn't throw any error,
-as many other programming languages do!
+Uunfortunately not in R :-/
 
 ```r
 c <- 3
@@ -237,14 +233,14 @@ tricky_function(10, 20)
 #> [1] 33
 ```
 
-Still, it's **bad** practice as it can end up in wrong results.
-Better an error than a wrong result, right? Be careful!
+Even if it works what you see above is (very) **bad** practice as it can end up in wrong results.
+Better an error than a wrong result, right? So, please be careful!
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
-# Challenge 2 part 1
+# Challenge 2 - part 1
 
 1. Write a function called `clean_data()` to handle step 2 and return the cleaned data.frame without suspected or not enough precise observations. Input arguments:
     - `df` data.frame with observations
@@ -263,7 +259,7 @@ class: left, top
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
-# Challenge 2 part 2
+# Challenge 2 - part 2
 
 3. Although short, step 4 should be put in a function apart, instead of being
 part of the previous function. Do you agree? Why?
@@ -278,9 +274,9 @@ class: left, top
 
 # Intermezzo 2: document your functions with style
 
-C. Bukowski ever said that [_"Style is the answer to everything."_](https://www.elyrics.net/read/c/charles-bukowski-lyrics/style-lyrics.html). If not really everything, it's most of the time more that just a nice -to-have feature.
+C. Bukowski ever said that [_"Style is the answer to everything."_](https://www.elyrics.net/read/c/charles-bukowski-lyrics/style-lyrics.html). If not really everything, it's often more than just a nice-to-have feature.
 
-Function documentation is essential while using R. How many times did you use  the help `?function_name` in your daily woRk?
+Function documentation is essential while using R. How many times did you use the help (`?function_name`) in your daily woRk?
 
 Documenting your functions can be done with style by following the [Roxygen](https://roxygen2.r-lib.org/index.html) conventions as programmers writing functions for R packages do. Again, future-you and your colleagues will praise you. Do you know you can use the [`docstring`](https://github.com/dasonk/docstring) package to create help pages of your functions even if they are not in a package?
 
