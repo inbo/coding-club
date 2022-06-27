@@ -208,10 +208,10 @@ class: left, top
 1. It's January 2011. After getting the observations of Harmonia axyridis, you
 get now observations of Chorthippus biguttulus. Write a function called
 `get_obs_2010()` which takes
-as argument a species (e.g. "Harmonia axyridis") and returns the observations
+as argument a species (e.g. `"Harmonia axyridis"`) and returns the observations
 of 2010 as a data.frame
 
-2. It's January 2012. dr Z got observations of Harmonia axyridis collected in 2011. She is wise enough to understand that she needs to change the function she wrote one year before by renaming it  `get_obs()` and adding `year` as extra argument. How does she proceed?
+2. It's January 2012. dr Z got observations of Harmonia axyridis collected in 2011. She is wise so she is going to change the function she wrote the year before by renaming it `get_obs()` and adding `year` as extra argument. How does she proceed?
 
 ---
 class: left, top
@@ -246,14 +246,14 @@ class: left, top
 # Challenge 2 - part 1
 
 1. Write a function called `clean_data()` to handle step 2 and return the cleaned data.frame without suspected or not enough precise observations. Input arguments:
-    - `df` data.frame with observations
-    -  `max_coord_uncertain`: maximum of `coordinateUncertaintyInMeters` (numeric), deafult value as in script
-    - `issues_to_discard` (character vector), default value as in script
-    - `occurrenceStatus_to_discard` (character vector), default value as in script
+    - `df`: data.frame with observations
+    -  `max_coord_uncertain`: maximum of `coordinateUncertaintyInMeters` (numeric), deafult value as in script.
+    - `issues_to_discard`: issues whose obs have to be filtered out (character vector), default value as in script.
+    - `occurrenceStatus_to_discard`: the `occurrenceStatus` values whose obs have to be filtered out (character vector), default value as in script.
 2. Write a function called `assign_eea_cell()` to handle step 3. Return  a `df` as output, with two extra columns: `geometry` and `eea_cell_code`, the last one containing the EEA cell code each observation belongs to. Input argument:
-    - `df` data.frame with observations
-    - `longitude_colname`: character, name of the column with longitude values*
-    - `latitude_colname`: character, name of the column with latitude values*
+    - `df`: data.frame with observations.
+    - `longitude_colname`: character, name of the column with longitude values*.
+    - `latitude_colname`: character, name of the column with latitude values*.
 
 <br>
 <small> __\* Note__: `!!sym()` can help you to use the longitude/latitude colnames in the `mutate()` step</small>
