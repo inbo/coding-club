@@ -34,13 +34,13 @@ file_name <- paste0("20220630_", species, "_2010", ".txt")
 ha_2010 <- read_tsv(paste0("./data/20220630/",
                            file_name))
 
-#' STEP 2: data cleaning, remove imprecise or unverified observations, absences
-#' Remove data with coordinate uncertainty higher than 1000 meters
+# STEP 2: data cleaning, remove imprecise or unverified observations, absences
+# Remove data with coordinate uncertainty higher than 1000 meters
 ha_2010 <-
   ha_2010 %>%
   filter(coordinateUncertaintyInMeters < 1000 | is.na(coordinateUncertaintyInMeters))
 
-#' Remove data with some issues
+## Remove data with some issues
 ha_2010 <-
   ha_2010 %>%
   filter(!issue %in% c(
@@ -50,7 +50,7 @@ ha_2010 <-
     "COUNTRY_COORDINATE_MISMATCH"
   ))
 
-#' Remove obs linked to absences or exclusions
+## Remove obs linked to absences or exclusions
 
 ha_2010 <-
   ha_2010 %>%
@@ -59,9 +59,10 @@ ha_2010 <-
     "excluded"
   ))
 
-#' STEP 3: get the 1x1km EAA grid cellcode each observation belongs to and add
-#' it to the observation data.frame
-#' Step 3a: reprojection
+# STEP 3: get the 1x1km EAA grid cellcode each observation belongs to and add
+# it to the observation data.frame
+
+## Step 3a: reprojection
 ha_2010 <- ha_2010 %>%
   mutate(x = decimalLongitude,
          y = decimalLatitude)
@@ -74,6 +75,7 @@ coords <- st_coordinates(ha_2010) %>%
 ha_2010 <-
   ha_2010 %>%
   bind_cols(coords)
+
 ## Step 3b: get the EAA grid cell code each observation belongs to and add it to
 ## the data.frame
 ha_2010 <-
@@ -91,10 +93,10 @@ n_obs_ha_2010 <-
   group_by(eea_cell_code) %>%
   count()
 
-#' STEP 5: read the EEA grid and get number of observations for each cell. Cells
-#' without observations are removed
+# STEP 5: read the EEA grid and get number of observations for each cell. Cells
+# without observations are removed
 
-# Read EEA grid
+## Read EEA grid
 be_grid <- st_read("./data/20220630/20220630_eea_1x1km_grid_BE.gpkg")
 
 ## add number of observations via inner_join (cells with no obs automatically
