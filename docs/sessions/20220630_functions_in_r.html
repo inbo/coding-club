@@ -181,7 +181,7 @@ class: left, top
 
 Today you play the role of a researcher, dr Z. She received in January 2011 observations of the asian ladybeetle (_Harmonia axyridis_) collected in the surroundings of Antwerp by a contractor. These observations are stored in [20220630_harmonia_axyridis_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20220630/20220630_harmonia_axyridis_2010.txt). She wrote some code to read, analyze and visualize these obsevations. You can find the code in [20220630_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20220630/20220630_challenges.R). She uses a geopacakge shapefile, [20220630_eea_1x1km_grid_BE.gpkg](https://github.com/inbo/coding-club/blob/master/data/20220630/20220630_eea_1x1km_grid_BE.gpkg), containing the official [Belgian 1x1km square grid](https://www.eea.europa.eu/data-and-maps/data/eea-reference-grids-2), as provided by the [European Environment Agency](https://www.eea.europa.eu/), useful to group observations in a grid.
 
-What it seemed to be a one-shot anlysis, becomes very soon something more: she receives a similar file from another contractor containing observations of the bow-winged grasshopper (_Chorthippus biguttulus_) collected in the same area: [20220630_chorthippus_biguttulus_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20220630/20220630_chorthippus_biguttulus_2010.txt). Important: the columns containing the coordinates are called differently.
+What seemed to be a one-shot anlysis, becomes very soon something more: she receives a similar file from another contractor containing observations of the bow-winged grasshopper (_Chorthippus biguttulus_) collected in the same area: [20220630_chorthippus_biguttulus_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20220630/20220630_chorthippus_biguttulus_2010.txt). Important: the columns containing the coordinates are called differently.
 
 ---
 class: left, top
@@ -190,7 +190,7 @@ class: left, top
 
 # The data world of doctor Z
 
-She also gets to know that she will have to redo the same analysis in the future, for sure on observations of the Asian ladybeetle:
+She also learns that she will have to redo the same analysis in the future, for sure on observations of the Asian ladybeetle:
 - [20220630_harmonia_axyridis_2011.txt](https://github.com/inbo/coding-club/blob/master/data/20220630/20220630_harmonia_axyridis_2011.txt)
 - [20220630_harmonia_axyridis_2012.txt](https://github.com/inbo/coding-club/blob/master/data/20220630/20220630_harmonia_axyridis_2012.txt)
 
@@ -220,7 +220,7 @@ class: left, top
 
 # Intermezzo 1: what happens in the function stays in the function!
 
-Uunfortunately not in R :-/
+Unfortunately not in R :-/
 
 ```r
 c <- 3
@@ -279,7 +279,7 @@ class: left, top
 
 # Intermezzo 2: document your functions with style
 
-C. Bukowski ever wrote that [_"Style is the answer to everything"_](https://www.elyrics.net/read/c/charles-bukowski-lyrics/style-lyrics.html). If not really everything, it's often more than just a nice-to-have feature.
+C. Bukowski once wrote that [_"Style is the answer to everything"_](https://www.elyrics.net/read/c/charles-bukowski-lyrics/style-lyrics.html). If not really everything, it's often more than just a nice-to-have feature.
 
 Function documentation is essential while using R. How many times did you use the help (`?function_name`) in your daily woRk?
 
@@ -339,14 +339,14 @@ personalize the interactive leaflet. Write a function called
 `visualize_obs_cells()`, to allow the user to make leaflet maps for
 any `species` and any `year`. Allow the user also to specify his/her own color
 palette (`pal`) and the filling color opacity of the cells. You can use the
-values in the code as default values. Test the function providing other input values.
+values in the code as default values. Test the function with other input values.
 
 ---
 class: left, top
 
 # Bonus challenge
 
-Now that we have all blocks, what do you think to automatize the entire
+Now that we have all blocks, think about automatizing the entire
 workflow by creating a function called `make_report()`? Think about which
 arguments you need as input. Return a named list containing:
 
