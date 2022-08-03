@@ -106,18 +106,28 @@ ha_2010 %>%
   visualize_obs_cells()
 
 # report of 2011 in one click
-make_report(species = "Harmonia axyridis",
-            year = 2011,
-            longitude_colname = "decimalLongitude",
-            latitude_colname = "decimalLatitude",
-            grid_cells = be_grid)
+harmonia_2011_report <- make_report(
+  species = "Harmonia axyridis",
+  year = 2011,
+  longitude_colname = "decimalLongitude",
+  latitude_colname = "decimalLatitude",
+  grid_cells = be_grid
+)
+
+harmonia_2011_report$df
+harmonia_2011_report$map
 
 # report of 2012 in one click
-make_report(species = "Harmonia axyridis",
-            year = 2012,
-            longitude_colname = "decimalLongitude",
-            latitude_colname = "decimalLatitude",
-            grid_cells = be_grid)
+harmonia_2012_report <- make_report(
+  species = "Harmonia axyridis",
+  year = 2012,
+  longitude_colname = "decimalLongitude",
+  latitude_colname = "decimalLatitude",
+  grid_cells = be_grid
+)
+
+harmonia_2012_report$df
+harmonia_2012_report$map
 
 #' Notice how making big functions can arise some new challenges. For example,
 #' the cleaning step in function `clean_data()` can remove all observations (no
