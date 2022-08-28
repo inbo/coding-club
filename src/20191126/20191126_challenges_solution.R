@@ -55,11 +55,11 @@ ggplot(data = survey, mapping = aes(x = year, fill = sex)) +
 ## INTERMEZZO
 
 # First plot
-ggplot(data = survey, mapping = aes(x = weight,
-                                    y = hindfoot_length,
-                                    color = sex,
-                                    alpha = 0.5)) +
-  geom_point() +
+ggplot(data = survey,
+       mapping = aes(x = weight,
+                     y = hindfoot_length,
+                     color = sex)) +
+  geom_point(alpha = 0.5) +
   ylab("hindfoot length") +
   ggtitle("hindfoot length vs weight") +
   scale_x_log10() +
