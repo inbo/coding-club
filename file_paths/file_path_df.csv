@@ -118,6 +118,8 @@ data/20220630/20220630_eea_1x1km_grid_BE.gpkg,20220630_eea_1x1km_grid_BE.gpkg,da
 data/20220630/20220630_harmonia_axyridis_2010.txt,20220630_harmonia_axyridis_2010.txt,data,20220630
 data/20220630/20220630_harmonia_axyridis_2011.txt,20220630_harmonia_axyridis_2011.txt,data,20220630
 data/20220630/20220630_harmonia_axyridis_2012.txt,20220630_harmonia_axyridis_2012.txt,data,20220630
+data/20220830/20220830_surveys.txt,20220830_surveys.txt,data,20220830
+data/20220830/20220830_surveys_per_year.txt,20220830_surveys_per_year.txt,data,20220830
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
@@ -214,3 +216,4 @@ src/20220531/20220531_challenges_solutions.R,20220531_challenges_solutions.R,src
 src/20220630/20220630_challenges.R,20220630_challenges.R,src,20220630
 src/20220630/20220630_challenges_solutions.R,20220630_challenges_solutions.R,src,20220630
 src/20220630/20220630_functions_solutions.R,20220630_functions_solutions.R,src,20220630
+src/20220830/20220830_challenges.R,20220830_challenges.R,src,20220830
