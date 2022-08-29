@@ -22,7 +22,7 @@ survey <- read_csv("./data/20220830/20220830_surveys.txt")
 
 
 
-# How to get the same plot starting from the summarised data, `survey_per_year`
+# How to get the same plot starting from the summarised data, `survey_per_year`?
 survey_per_year <- read_csv("./data/20220830/20220830_surveys_per_year.txt")
 
 
@@ -74,8 +74,8 @@ ggplot(data = survey) +
 # 2. First plot
 
 # Basic plot to start with
-ggplot(data = survey, mapping = aes(x = weight, y = hindfoot_length))
-
+ggplot(data = survey, mapping = aes(x = weight, y = hindfoot_length)) +
+  geom_point()
 
 
 # 3. Second plot
@@ -88,7 +88,7 @@ ggplot(data = survey, mapping = aes(x = year)) + geom_bar()
 
 ## INTERMEZZO
 
-# First plot
+# First plot (shown in slides)
 ggplot(data = survey,
        mapping = aes(x = weight,
                      y = hindfoot_length,
