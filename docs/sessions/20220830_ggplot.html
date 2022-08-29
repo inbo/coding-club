@@ -97,7 +97,7 @@ class: left, top
 
 # Challenge 1
 
-After reading data.frame `survey` (code provided):
+After reading the data.frame `survey` (code provided):
 
 1. Plot `hindfoot_length` as function of `weight` using points
 
@@ -132,6 +132,7 @@ ggplot(data = survey) +
 ```
 
 What should I use? Both are good, but...
+
 But what if you want to plot two or more geometries with *different* aesthetics?
 
 ---
@@ -179,13 +180,13 @@ x and sex as color?
 years interval. How to do it? Hint: Check examples at ?geom_boxplot.
 
 3. In the intermezzo we saw how to facet based on values of one column, `sex`.
-How to facet based on two columns? Transform the given plot by using sex as
-facet column, and plot_id as facet row. Improve labels of facets by showing
-"variable name : variable value", e.g. `"plot_id : 1"` or `"sex : F"`.
+How to facet based on two columns? Transform the given plot by using `sex` as
+facet on the rows and `plot_id` as facet on the columns. Improve labels of facets by showing
+"var name : var value", e.g. `"plot_id : 1"` for the column  or `"sex : F"` for the rows.
 
 4. Customize the non-data components of your plots by using `theme()`. E.g.
-set text size to 8 and text font italic for the facet labels. Use font family Courier New for both legend title and text. Hint: to know the family fonts
-installed on your (Windows) laptop, use `windowsFonts()`.
+set text size to 8 and text font italic for the facet labels. Use font family
+Courier New for both legend title and text. Set also legend background color to green. Hint: to know the family fonts installed on your (Windows) laptop, use `windowsFonts()`.
 
 
 ---
