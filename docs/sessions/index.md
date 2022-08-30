@@ -3,8 +3,8 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2022-06-30 | ggplot | [slides]({{ site.baseurl }}{% link sessions/20220830_ggplot.html  %}) | [hackmd](https://hackmd.io/0LqX6RaATmuklv35n38LeQ?view) | 01.05 - Isala Van Diest |  |
-| 2022-08-30 | functions in R | [slides]({{ site.baseurl }}{% link sessions/20220630_functions_in_r.html  %}) | [hackmd](https://hackmd.io/eweGY1PnSFiULmBskYMyow?view) | 01.05 - Isala Van Diest | [vimeo](https://vimeo.com/737814426) |
+| 2022-08-30 | ggplot | [slides]({{ site.baseurl }}{% link sessions/20220830_ggplot.html  %}) | [hackmd](https://hackmd.io/0LqX6RaATmuklv35n38LeQ?view) | 01.05 - Isala Van Diest |  |
+| 2022-06-30 | functions in R | [slides]({{ site.baseurl }}{% link sessions/20220630_functions_in_r.html  %}) | [hackmd](https://hackmd.io/eweGY1PnSFiULmBskYMyow?view) | 01.05 - Isala Van Diest | [vimeo](https://vimeo.com/737814426) |
 | 2022-05-31 | join join join | [slides]({{ site.baseurl }}{% link sessions/20220531_join_join_join.html  %}) | [hackmd](https://hackmd.io/a-J196OqTX-hqaHMyWanlA?view) | online | 
 | 2022-04-28 | data manipulation with dplyr | [slides]({{ site.baseurl }}{% link sessions/20220428_data_manipulation_with_dplyr.html  %}) | [hackmd](https://hackmd.io/yOf5vGvvT5GN9X5EGkoeIw?view) | 01.05 - Isala Van Diest | [vimeo](https://vimeo.com/706019616)
 | 2022-03-29 | tidy data | [slides]({{ site.baseurl }}{% link sessions/20220329_tidy_data.html  %}) | [hackmd](https://hackmd.io/EzGX1Ws9TzCTRUZuFtgcJQ?view) | 01.05 - Isala Van Diest | |
