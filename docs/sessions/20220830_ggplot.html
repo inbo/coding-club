@@ -179,16 +179,18 @@ class: left, top
 x and sex as color?
 
 2. To improve readability of the previous plot we choose to group data at 5
-years interval. How to do it? Hint: Check examples at ?geom_boxplot.
+years interval. How to do it? Hint: Check examples at ?geom_boxplot
 
 3. In the intermezzo we saw how to facet based on values of one column, `sex`.
 How to facet based on two columns? Transform the given plot by using `sex` as
 facet on the rows and `plot_id` as facet on the columns. Improve labels of facets by showing
-"var name : var value", e.g. `"plot_id : 1"` for the column  or `"sex : F"` for the rows.
+"var name : var value", e.g. `"plot_id : 1"` for the column  or `"sex : F"` for the rows
 
 4. Customize the non-data components of your plots by using `theme()`. E.g.
 set text size to 8 and text font italic for the facet labels. Use font family
-Courier New for both legend title and text. Set also legend background color to green. Hint: to know the family fonts installed on your (Windows) laptop, use `windowsFonts()`.
+Courier New for both legend title and text. Set also legend background color to green. Hint: to know the family fonts installed on your (Windows) laptop, use `windowsFonts()`
+
+5. There are a lot of ggplot themes ready for you to use! Do you know that INBO has its own ggplot theme? Load [INBOtheme](https://inbo.github.io/INBOtheme/) and see how your plots get an INBO charm
 
 
 ---
@@ -203,6 +205,7 @@ class: left, top
 - [Datacarpentry's data visualiation tutorial](https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html)
 - [Stanford University tutorial](https://cengel.github.io/R-data-viz/data-visualization-with-ggplot2.html): chapter 1
 - R for Data Science: [Chapter 28: Graphics for communication](https://r4ds.had.co.nz/graphics-for-communication.html)
+- INBOtheme [homepage](https://inbo.github.io/INBOtheme/)
 
 ---
 class: center, middle
