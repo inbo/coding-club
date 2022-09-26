@@ -120,6 +120,7 @@ data/20220630/20220630_harmonia_axyridis_2011.txt,20220630_harmonia_axyridis_201
 data/20220630/20220630_harmonia_axyridis_2012.txt,20220630_harmonia_axyridis_2012.txt,data,20220630
 data/20220830/20220830_surveys.txt,20220830_surveys.txt,data,20220830
 data/20220830/20220830_surveys_per_year.txt,20220830_surveys_per_year.txt,data,20220830
+data/20220929/20220929_area_biotopes.txt,20220929_area_biotopes.txt,data,20220929
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
@@ -218,3 +219,4 @@ src/20220630/20220630_challenges_solutions.R,20220630_challenges_solutions.R,src
 src/20220630/20220630_functions_solutions.R,20220630_functions_solutions.R,src,20220630
 src/20220830/20220830_challenges.R,20220830_challenges.R,src,20220830
 src/20220830/20220830_challenges_solution.R,20220830_challenges_solution.R,src,20220830
+src/20220929/20220929_challenges.R,20220929_challenges.R,src,20220929
