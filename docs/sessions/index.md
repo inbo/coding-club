@@ -3,6 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
+| 2022-09-31 | boost your graphs | [slides]({{ site.baseurl }}{% link sessions/20220929_graph-booster.html  %}) | [hackmd](https://hackmd.io/QSoki6koSxqvvN8YPL5YeQ?view) | 01.71 - Frans Breziers |  |
 | 2022-08-30 | ggplot | [slides]({{ site.baseurl }}{% link sessions/20220830_ggplot.html  %}) | [hackmd](https://hackmd.io/0LqX6RaATmuklv35n38LeQ?view) | 01.05 - Isala Van Diest |  |
 | 2022-06-30 | functions in R | [slides]({{ site.baseurl }}{% link sessions/20220630_functions_in_r.html  %}) | [hackmd](https://hackmd.io/eweGY1PnSFiULmBskYMyow?view) | 01.05 - Isala Van Diest | [vimeo](https://vimeo.com/737814426) |
 | 2022-05-31 | join join join | [slides]({{ site.baseurl }}{% link sessions/20220531_join_join_join.html  %}) | [hackmd](https://hackmd.io/a-J196OqTX-hqaHMyWanlA?view) | online | 
