@@ -92,14 +92,14 @@ library(tidyverse)
 ```
 
 ---
-class: left, middle
+class: left, top
 
 # RECAP: ggplot recipe: data - mapping - geometry
 
 ![:scale 80%]({{ site.baseurl}}/assets/images/20220929/20220929_ggplot_recipe.png)
 
 ---
-class: left, middle
+class: left, top
 
 ## Recap: mapping
 
@@ -128,7 +128,7 @@ ggplot(ToothGrowth, mapping = aes(x = dose, y = len)) +
 ```
 
 ---
-class: left, middle
+class: left, top
 
 ## Recap: mapping - aesthetics
 
@@ -278,9 +278,6 @@ class: left, top
 around the colored area. How to fill the entire plot space?
 
 2. Remove the title and the legend of `usecase3`
-usecase3 +
-  labs(title = element_blank()) +
-  theme(legend.position = "none")
 
 3. Set legend of `usecase4` below the heatmap. The title of the legend,
 "Area (%)", is set too low in comparison with the colorbar, right? How to
