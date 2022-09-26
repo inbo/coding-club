@@ -176,9 +176,9 @@ Check: [`INBOtheme::inbo_palette()`](https://inbo.github.io/INBOtheme/reference/
 Install the package `INBOtheme` first, see [INBOtheme website](https://inbo.github.io/INBOtheme/#installation).
 
 ---
-class: left, middle
+class: left, top
 
-## Intermezzo. How to choose a color palette
+# Intermezzo. How to choose a color palette
 
 A color palette should be:
 1. printer-friendly (gray scale)
@@ -188,9 +188,9 @@ A color palette should be:
 All of this can be found in the [viridis palette](https://www.r-bloggers.com/2018/07/ggplot2-welcome-viridis/) which avoids the red and to go from blue to yellow passing through green (_viridis_: green in Latin).
 
 ---
-class: left, middle
+class: left, top
 
-## Intermezzo. The _viridis_ color palette
+# Intermezzo. The _viridis_ color palette
 
 `ggplot2` includes some functions to use the viridis palette directly.
 
@@ -207,9 +207,9 @@ usecase1 +
 ```
 
 ---
-class: left, middle
+class: left, top
 
-## Intermezzo. The _viridis_ color palette
+# Intermezzo. The _viridis_ color palette
 
 `ggplot2` includes some functions to use the viridis palette directly.
 
@@ -245,9 +245,10 @@ usecase3 +
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
-# Challenge 2. Combine separate ggplots with `patchwork`
+# Challenge 2. Combine separate ggplots
 
-Using the `patchwork` [documentation](https://patchwork.data-imaginist.com/index.html) online:
+Combining ggplots has never been so intuitive thanks to `patchwork` R package.
+Using the online package [documentation](https://patchwork.data-imaginist.com/index.html):
 
 1. Display `usecase1` and `usecase2` next to each other
 
@@ -257,7 +258,7 @@ Using the `patchwork` [documentation](https://patchwork.data-imaginist.com/index
 `usecase4` in the second row creating a 2x2 plot grid.
 Use lowercase roman numerals to enumerate the subplots. Hint: check pacthwork function `plot_annotation()`
 
-4. `usecase1` and `usecase2` share same legend. How to avoid duplicating it in 1 and 2? Check [guides controlling section](https://patchwork.data-imaginist.com/articles/guides/layout.html#controlling-guides) of "Controlloing Layout" vignette
+4. `usecase1` and `usecase2` share the same legend. How to avoid duplicating it in 1 and 2? Check [guides controlling section](https://patchwork.data-imaginist.com/articles/guides/layout.html#controlling-guides)
 
 5. What if you try to avoid duplicating the legend of `usecase3` and
 `usecase4`? Can you understand why? How to solve it? Hint: _scale_ your
@@ -281,12 +282,13 @@ usecase3 +
   labs(title = element_blank()) +
   theme(legend.position = "none")
 
-3. Set legend of  `usecase4` below the heatmap. The title of the legend,
+3. Set legend of `usecase4` below the heatmap. The title of the legend,
 "Area (%)", is set too low in comparison with the colorbar, right? How to
 align it with the colorbar? How to customize the legend background and border
 by using light grey as background color and blue as border color?
 
-4. Starting from 3, how to set a space of 0.5cm between plotting area and legend box?
+4. Starting from 3, how to set a space of 0.5cm between plotting area and
+legend box?
 
 ---
 class: left, top
