@@ -6,7 +6,7 @@ library(viridis)
 ## create the four use cases (plots)
 
 # read dataset
-area_biotopes <- read_csv("./data/20210930/20210930_area_biotopes.txt", na = "")
+area_biotopes <- read_csv("./data/20220929/20220929_area_biotopes.txt", na = "")
 
 # usecase1 and usecase2 (colors = categorical/qualitative variable)
 
