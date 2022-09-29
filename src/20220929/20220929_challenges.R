@@ -35,7 +35,7 @@ area_biotopes_limenitis <-
   filter(species == "Limenitis camilla")
 
 usecase2 <-
-  ggplot(area_biotopes_pararge,
+  ggplot(area_biotopes_limenitis,
          aes(x = year,
              y = meanArea,
              color = biotope)) +
