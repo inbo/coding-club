@@ -205,6 +205,5 @@ usecase3 +
 
 # 4. Starting from 3, how to set a space of 0.5cm between plotting area and legend
 # box?
-usecase3 + theme(legend.position="bottom", legend.box.spacing = unit(0.05,units = "cm"))
 
 
