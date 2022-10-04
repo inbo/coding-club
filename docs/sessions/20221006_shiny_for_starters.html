@@ -1,0 +1,163 @@
+---
+layout: presentation
+title: shiny for starters
+---
+
+  class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+  <!-- Adjust the presentation to the session. Focus on the challenges,
+this is not a coding tutorial.
+
+Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+folder and use the jekyll base.url reference as done in this template
+or see https://jekyllrb.com/docs/liquid/tags/#links.
+  using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 6 OCTOBER 2022
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+
+06.C.03 & 07.C.03
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20221006/20221006_badge_shiny.png)
+
+---
+class: center, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20221006/20221006_cheat_sheet_ggplot.png)
+Download [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20221006_cheat_sheet_shiny.pdf)
+
+---
+class: left, middle
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+# Share your code during the coding session
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/wvuvcT1oTRuDby0C__O9AQ?edit and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/wvuvcT1oTRuDby0C__O9AQ?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub folders [coding-club/data/20221006](https://github.com/inbo/coding-club/tree/master/data/20221006) and [coding-club/src/20221006](https://github.com/inbo/coding-club/tree/master/src/20221006)
+
+<br>
+
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20220428")` to download the coding club material of April, 28 2022. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Load libraries
+
+                                                                                                    ```r
+install.packages("shiny")
+library(tidyverse)
+library(shiny)
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+1. RStudio help us by providing you a template for our first Shiny web application. Clikc on File -> New File -> Shiny Web App -> Select "Single File" as Application type and create the app within the `src` directory.
+
+2. Which file is created? Run it by clicking the green play button "Run App". How to run the app in viewer pane or externally on a browser? How to run the app as background job instead of "stealing" your console? Hint: click on the downwards black triangle to explore all options.
+
+3. Every Shiny web application has 3 components (functions). Find them in the web application you are running. What are they responsible for?
+
+4. What does the template show? Where are the data loaded? Where is the histogram generated?
+
+5. What is the `input` and where is generated? What is the `output` and where is generated?
+
+6. Show the eruption time in minutes instead of the waiting time to next eruption. Use "Distribution of eruption times" as histogram title, "minutes" as x label, "number of eruptions" as y label. Hint: check `?hist`
+
+7. Set 20 as default number of bins
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2 - Basics
+
+We will start to make our own shiny app for visualizing the distribution of two butterflies (_Limenitis camilla_, _Pararge aegeria_) depending on the biotope (Agriculture, Forest, Open, Urban).
+
+1. We first focus on the user interface, the so called UI (`ui <- fluidPage()`). Remove all code within the `server()` function and add in the **sidebarPanel** radio buttons to switch among biotopes and a box with the species to select from. Specify also a general title for your app, a specific title for the biotope radio buttons and a title for the species selection box. Hint: check [lesson 2](https://shiny.rstudio.com/tutorial/written-tutorial/lesson2/) and [lesson 3](https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/)
+2. On the **mainPanel**, please, **render** the choices as basic **text**. Hint: check [lesson 4](https://shiny.rstudio.com/tutorial/written-tutorial/lesson4/)
+
+At the end you should end up with something like this:
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20221006/20221006_render_text.png)
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 3 - Plot
+
+Are you ready for your fist interactive plot? Based on what you learned up to here and [lesson 5](https://shiny.rstudio.com/tutorial/written-tutorial/lesson5/) we are going to create an interactive ggplot based on the code provided in 20221006_challenges.R.
+
+1. We need to read the `20221006_butterflies_data.txt` file. What is the best folder to store the data our app needs? Hint: see [lesson 5](https://shiny.rstudio.com/tutorial/written-tutorial/lesson5/)
+2. Read the data and substitute the hard coded choices in challenge 2 using the provided variables `biotopes` and `sp`. Code provided in 20221006_challenges.R.
+3. Render the ggplot. You should get something like image below
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20221006/20221006_shiny_plot.png)
+
+---
+class: left, top
+
+# Resources
+
+- Challenges solutions will be available soon
+- `shiny` [tutorials](https://shiny.rstudio.com/tutorial/) for any level (getting started -> pro users). In particular, this coding club is partly based on the shiny [basics tutorial](https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/)
+
+
+                                                                                                                                                                                                          ---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+<!--  Adjust the room and date  -->
+Room: 01.05 - Isala Van Diest<br>
+Date: __25/10/2022__, van 10:00 tot 12:30<br>
+Subject: **geospatial data in R with sf** <br>
+(registration announced via DG_useR@inbo.be)
