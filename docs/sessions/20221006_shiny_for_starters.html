@@ -117,7 +117,7 @@ class: left, top
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
-# Challenge 2 - Basics
+# Challenge 2. Basics
 
 We will start to make our own shiny app for visualizing the distribution of two butterflies (_Limenitis camilla_, _Pararge aegeria_) depending on the biotope (Agriculture, Forest, Open, Urban).
 
@@ -133,20 +133,20 @@ At the end you should end up with something like this:
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
-# Challenge 3 - Plot
+# Challenge 3. Plot
 
 Are you ready for your fist interactive plot? Based on what you learned up to here and [lesson 5](https://shiny.rstudio.com/tutorial/written-tutorial/lesson5/) we are going to create an interactive ggplot based on the code provided in 20221006_challenges.R.
 
 1. We need to read the `20221006_butterflies_data.txt` file. What is the best folder to store the data our app needs? Hint: see [lesson 5](https://shiny.rstudio.com/tutorial/written-tutorial/lesson5/)
 2. Read the data and substitute the hard coded choices in challenge 2 using the provided variables `biotopes` and `sp` in 20221006_challenges.R.
-3. Render the ggplot. You should get something like image below
+3. Render the ggplot. You should get something like this:
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20221006/20221006_shiny_plot.png)
 
 ---
 class: left, top
 
-# Bonus challenge 1 - multiple outputs
+# Bonus challenge 1. Multiple outputs
 
 1. Add a *data table* with the shown data below the plot. Start simple: filter by species and biotope within each of the two `render*()` functions
 2. Now try to avoid filtering twice by making your code *reactive*. Hint: see [lesson 6](https://shiny.rstudio.com/tutorial/written-tutorial/lesson6/)
