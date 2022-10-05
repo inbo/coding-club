@@ -138,10 +138,43 @@ class: left, top
 Are you ready for your fist interactive plot? Based on what you learned up to here and [lesson 5](https://shiny.rstudio.com/tutorial/written-tutorial/lesson5/) we are going to create an interactive ggplot based on the code provided in 20221006_challenges.R.
 
 1. We need to read the `20221006_butterflies_data.txt` file. What is the best folder to store the data our app needs? Hint: see [lesson 5](https://shiny.rstudio.com/tutorial/written-tutorial/lesson5/)
-2. Read the data and substitute the hard coded choices in challenge 2 using the provided variables `biotopes` and `sp`. Code provided in 20221006_challenges.R.
+2. Read the data and substitute the hard coded choices in challenge 2 using the provided variables `biotopes` and `sp` in 20221006_challenges.R.
 3. Render the ggplot. You should get something like image below
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20221006/20221006_shiny_plot.png)
+
+---
+class: left, top
+
+# Bonus challenge 1 - multiple outputs
+
+1. Add a *data table* with the shown data below the plot. Start simple: filter by species and biotope within each of the two `render*()` functions
+2. Now try to avoid filtering twice by making your code *reactive*. Hint: see [lesson 6](https://shiny.rstudio.com/tutorial/written-tutorial/lesson6/)
+
+
+---
+class: left, top
+
+# Bonus challenge 2. The User Experience
+
+You are now a web developer and so you should start think about the user experience, alias *UX*! One of the main principles to develop a nice web interface is to distinguish filters and selectors:
+- group *filters* (typically) on the left
+- *select* output by tabs
+
+GBIF website is a very nice example of such principle:
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20221006/20221006_user_experience.png)
+
+---
+class: left, top
+
+# Bonus challenge 2. The User Experience
+
+Apply this easy principle to your web application. Allow the users to visualize the plot or the data as two different tabs. Hint: give a look to this article about [tabsets](https://shiny.rstudio.com/articles/tabsets.html).
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20221006/20221006_tabs.png)
+
+
 
 ---
 class: left, top
@@ -150,7 +183,8 @@ class: left, top
 
 - Challenges solutions will be available soon
 - `shiny` [tutorials](https://shiny.rstudio.com/tutorial/) for any level (getting started -> pro users). In particular, this coding club is partly based on the shiny [basics tutorial](https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/)
-
+- Dive in shiny [reactivity](https://shiny.rstudio.com/articles/reactivity-overview.html)
+- so many wel written [articles](https://shiny.rstudio.com/articles/) on shiny website!
 
 ---
 class: center, middle
