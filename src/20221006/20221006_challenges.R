@@ -24,6 +24,6 @@ ggplot(butterfly_data %>%
              y = meanArea)) +
   geom_point() +
   geom_smooth() +
-  labs(title = "Distribution of Pararge aegeria",
+  labs(title = paste("Distribution of ", s, "- biotope:", b),
        y = "Area (%)") +
   facet_wrap(~ region)
