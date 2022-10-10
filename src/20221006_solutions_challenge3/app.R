@@ -12,7 +12,8 @@ library(tidyverse)
 
 # CHALLENGE 3
 
-# read dataset (path to be checked)
+# read dataset - txt file should be placed in the /data folder within the folder
+# containing app.R
 butterfly_data <- read_csv("./data/20221006_butterflies_data.txt", na = "")
 # biotopes
 biotopes <- unique(butterfly_data$biotope)

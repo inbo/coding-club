@@ -10,7 +10,7 @@
 library(shiny)
 library(tidyverse)
 
-# Define UI for application that draws a histogram
+# Define UI for application
 ui <- fluidPage(
 
     # Application title
@@ -34,7 +34,8 @@ ui <- fluidPage(
     )
 )
 
-# Define server logic required to draw a histogram
+# Define server logic required to create plot and data table in a tabset
+# reactively
 server <- function(input, output) {
   data <- reactiveValues(
     butterfly = read.csv("./data/20221006_butterflies_data.txt", na = ""),

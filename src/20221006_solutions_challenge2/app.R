@@ -12,7 +12,7 @@ library(ggplot2)
 
 # CHALLENGE 2
 
-# Define UI for application that draws a histogram
+# Define UI for application that prints a text with the choices
 ui <- fluidPage(
 
     # Application title
@@ -40,7 +40,7 @@ ui <- fluidPage(
     )
 )
 
-# Define server logic required to draw a histogram
+# Define server logic required to print the user choices as text
 server <- function(input, output) {
   output$selected_var <- renderText({
     paste("You have selected the biotope", input$b, "and the species", input$s)

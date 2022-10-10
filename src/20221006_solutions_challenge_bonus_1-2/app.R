@@ -12,7 +12,8 @@ library(tidyverse)
 
 # BONUS CHALLENGE 1 - 2
 
-# read dataset (path to be checked)
+# read dataset - txt file should be placed in the /data folder within the folder
+# containing app.R
 butterfly_data <- read_csv("./data/20221006_butterflies_data.txt", na = "")
 # biotopes
 biotopes <- unique(butterfly_data$biotope)
@@ -20,7 +21,7 @@ biotopes <- unique(butterfly_data$biotope)
 sp <- unique(butterfly_data$species)
 
 
-# Define UI for application that draws a histogram
+# Define UI for application
 ui <- fluidPage(
 
   # Application title
@@ -47,7 +48,7 @@ ui <- fluidPage(
       # plotOutput("plot"),
       # dataTableOutput("df")
 
-      # bonus challenge 2
+      # bonus challenge 2 - plot and data table in two different tabs
       tabsetPanel(type = "tabs",
                   tabPanel("Plot", plotOutput("plot")),
                   tabPanel("Table", dataTableOutput("df"))
@@ -57,7 +58,7 @@ ui <- fluidPage(
   )
 )
 
-# Define server logic required to draw a histogram
+# Define server logic required to create plot and data table
 server <- function(input, output) {
   # filter data reactively
   dataInput <- reactive(
