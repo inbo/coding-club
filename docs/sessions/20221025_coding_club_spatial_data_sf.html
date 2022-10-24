@@ -152,14 +152,14 @@ class: left, top
 
 Using the cheatsheet:
 
-1. Transform `ludwigia_df` to a geospatial data.frame using `sf` package. Note that
+1. Transform `ludwigia_df` to a geospatial data.frame using sf. Note that
 GBIF data are stored using WGS 84. Hint: find first which numeric code is associated with WGS84 coordinate reference system and use the cheatsheet.
 2. How many layers does the  geospatial file `20221025_protected_areas.gpkg` contain?
-3. Read the layer `ps_hbtrl`: call it `prot_areas`
+3. Import the layer `ps_hbtrl`: call it `prot_areas`
 4. What is the CRS declared by user? Does it coincide with the real Geographic Coordinate Reference System (GEOCRS)?
-5. Do `prot_areas` and `spatial_ludwigia_df` the same CRS?
+5. Do `prot_areas` and `spatial_ludwigia_df` have the same CRS?
 6. Read the Belgian provinces rds file as `20221025_be_provinces_sp` (the code is given!). What is the class of this variable? From which package? How to transform it to a sf object?
-7. Extract the Flemish provinces. Hint: do it as you would do it in a standard data.frame. The motto of the sf package is "Spatial data ... simplified" for a reason!
+7. Extract the Flemish provinces. Hint: do it as you would do it in a standard data.frame. The motto of the sf package is "Spatial data, simplified" for a reason!
 
 ---
 class: left, top
@@ -236,7 +236,7 @@ class: left, top
 - everything what Edzer Pebesma says or write, actually
 
 ---
-class: center, top
+class: center, middle
 
 ![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
 
