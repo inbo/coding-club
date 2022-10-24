@@ -155,6 +155,98 @@ class: left, top
 - [20221025_protected_areas.gpkg](https://github.com/inbo/coding-club/blob/master/data/20221025/20221025_protected_areas.gpkg): the Flemish protected areas. Source: [geopunt](https://www.geopunt.be/catalogus/datasetfolder/a84a87f5-5607-4019-a8db-9d52a827786b)
 - [20221025_flemish_provinces.rds](https://github.com/inbo/coding-club/blob/master/data/20221025/20221025_flemish_provinces.rds): the Belgian provinces as an sp object and saved as a rds file. Source: the R package [BelgiumMaps.StatBel](https://www.bnosac.be/index.php/blog/55-belgiummaps-statbel-r-package-with-administrative-boundaries-of-belgium)
 
+
+---
+class: left, top
+
+# Spatial coordinates
+
+Two types of spatial coordinates:
+
+- **projected** (or Cartesian) coordinates: refer to points on a flat space. The coordinates are the distance along the x and y axis
+- **unprojected** or **geographic** coordinates: refer to angles (latitude, longitude) pointing to locations on a sphere (or ellipsoid).
+
+For the math lovers: the flat space is also referred to as R<sup>2</sup>, the sphere as S<sup>2</sup>.
+
+No geospatial data without specifying the **Coordinate Reference System** (CRS) you work with!
+
+And what is a projection? A way to visualize a surface of a sphere on a flat space.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+Using the cheatsheet:
+
+1. Transform `ludwigia_df` to a geospatial data.frame using sf. Note that
+GBIF data are stored using WGS 84. Hint: find first which numeric code is associated with WGS84 coordinate reference system and use the cheatsheet.
+2. How many layers does the  geospatial file `20221025_protected_areas.gpkg` contain?
+3. Import the layer `ps_hbtrl`: call it `prot_areas`
+4. What is the CRS declared by user? Does it coincide with the real Geographic Coordinate Reference System (GEOCRS)?
+5. Do `prot_areas` and `spatial_ludwigia_df` have the same CRS?
+6. Read the Belgian provinces rds file as `20221025_be_provinces_sp` (the code is given!). What is the class of this variable? From which package? How to transform it to a sf object?
+7. Extract the Flemish provinces. Hint: do it as you would do it in a standard data.frame. The motto of the sf package is "Spatial data, simplified" for a reason!
+
+---
+class: left, top
+
+# Intermezzo: CRS & EPSG codes
+
+A common way to specify the CRS is by providing the EPSG (numeric) code. EPSG stands for European Petroleum Survey Group and is an organization that maintains a geodetic parameter database with standard codes, the EPSG codes, for coordinate systems, datums, spheroids, units and such alike.  There are a lot of EPSG codes! Full list: https://spatialreference.org/
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20221025/20221025_epsg_codes.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+1. Transform both `prot_areas` and `spatial_ludwigia_df` to [European Terrestrial Reference System 1989](https://epsg.io/3035) (EPSG: 3035), the coordinate reference system used at EU level
+2. Write the transformed data as a geopackage file called `prot_areas_and_ludwigia_3035.gpkg` with two layers: the first called `prot_areas`, containing the protected areas, the second layer, `ludwigia_obs`, containing the observations of water primrose
+3. Due to spatial uncertainty (gridded data, GPS uncertainty, etc.) observations
+ should not be idealized as points in space, but as circles. Create such circles
+ using the values store in column `coordinateUncertaintyInMeters` for
+ `spatial_ludwigia_df_3035`
+
+---
+class: left, top
+
+## Intermezzo: what happened in 2020?
+
+Up to version 0.9.x `sf` returned warnings to the user when it was doing R<sup>2</sup> flat computations with data using geographical coordinates (spherical coords, e.g. WGS84) with messages like
+
+```
+although coordinates are longitude/latitude, st_intersects assumes that they are planar
+```
+
+Starting with version 1.0, `sf` uses the new package `s2` (Dunnington, Pebesma, Rubak 2020) for **spherical geometry**! They made our life much easier. Nice to know: s2 package is a wrapper around the C++ `s2geometry` library, written by Google and used e.g. in Google Maps, Google Earth Engine, Bigquery GIS.
+
+More info in the vignette [Spherical geometry in sf using s2geometry](https://r-spatial.github.io/sf/articles/sf7.html).
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3
+
+Using data saved in CRS 3035:
+
+1. Find which observations, as points, are _contained_ in each protected area?
+2. But we should better check which observations, as circles (!), _intersect_ each protected area. How to do it?
+3. So, how many observations in the "Demervallei"?
+4. Sometimes it's interesting to calculate the centroid of a polygon, e.g. for visualizations. Easy by using sf function `st_centroids()`. However, you get an error while calculating the centroids of `prot_areas`. What does it mean? How to solve the problem?
+
+---
+class: left, top
+
+# Bonus challenge
+
+1. How to get only the observations, as circles, **totally** contained in protected areas? Hint: check the cheat sheet
+2. Not a sf question, but still nice to solve: how to add to `prot_areas_3035` a column called `n_ludwigia` with the number of observations for each protected area?
+
 ---
 class: left, top
 
