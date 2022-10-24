@@ -122,6 +122,9 @@ data/20220830/20220830_surveys.txt,20220830_surveys.txt,data,20220830
 data/20220830/20220830_surveys_per_year.txt,20220830_surveys_per_year.txt,data,20220830
 data/20220929/20220929_area_biotopes.txt,20220929_area_biotopes.txt,data,20220929
 data/20221006/20221006_butterflies_data.txt,20221006_butterflies_data.txt,data,20221006
+data/20221025/20221025_ludwigia_grandiflora.txt,20221025_ludwigia_grandiflora.txt,data,20221025
+data/20221025/20221025_protected_areas.gpkg,20221025_protected_areas.gpkg,data,20221025
+data/20221025/20221025_be_provinces_sp.rds,20221025_be_provinces_sp.rds,data,20221025
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
@@ -223,3 +226,4 @@ src/20220830/20220830_challenges_solutions.R,20220830_challenges_solutions.R,src
 src/20220929/20220929_challenges.R,20220929_challenges.R,src,20220929
 src/20220929/20220929_challenges_solutions.R,20220929_challenges_solutions.R,src,20220929
 src/20221006/20221006_challenges.R,20221006_challenges.R,src,20221006
+src/20221025/20221025_challenges.R,20221025_challenges.R,src,20221025
