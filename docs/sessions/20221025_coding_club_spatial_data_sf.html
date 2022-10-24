@@ -1,0 +1,216 @@
+---
+layout: presentation
+title: Spatial data in R
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+  <!-- Adjust the presentation to the session. Focus on the challenges,
+this is not a coding tutorial.
+
+Note, to include figures, store the image in the `/docs/assets/images`
+folder and use the jekyll base.url reference as done in this template
+or see https://jekyllrb.com/docs/liquid/tags/#links.
+  using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 25 OCTOBER 2022
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck<br>
+01.05 - Isala Van Diest
+
+---
+class: left, top
+
+## ROOMIE: room reservation
+
+!! Do not forget to confirm the room reservation via _roomie_ !!
+
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20221025/20221025_spatialdata_badge.png)
+
+---
+class: left, top
+
+Install the package:
+
+```r
+install.packages("sf")
+```
+
+Load the package:
+
+```r
+library(sf)
+```
+
+---
+class: center, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20221025/20221025_sf_cheatsheet.png)<br>
+[`sf` cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20211026_cheat_sheet_sf.pdf)
+
+See also this very nice [article with some examples](https://r-spatial.github.io/sf/articles/sf2.html) and the excellent book [geocomputation with R](https://geocompr.robinlovelace.net/).
+
+---
+class: center, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/rBatlgcTREOTnAYCs7VLrQ?both
+
+<iframe src="https://hackmd.io/rBatlgcTREOTnAYCs7VLrQ?edit" height="450px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+Today we will use an R script and some datasets. Download* the R script in `src ` and datasets in `data`.
+
+- R script: [20221025_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20221025/20221025_challenges.R)
+- Dataset with GBIF observations of parrot's-feather/parelvederkruid (_Myriophyllum_aquaticum_) in Flanders from 2020 up to now** [20221025_Myriophyllum_aquaticum.txt](https://github.com/inbo/coding-club/blob/master/data/20221025/20221025_Myriophyllum_aquaticum.txt). Source: GBIF.org (21 October 2022) GBIF Occurrence Download  https://doi.org/10.15468/dl.bkqmna
+- the Flemish protected areas: [`20221025/20221025_protected_areas.gpkg`](https://github.com/inbo/coding-club/blob/master/data/20221025/20221025_protected_areas.gpkg). Source: [geopunt](https://www.geopunt.be/catalogus/datasetfolder/a84a87f5-5607-4019-a8db-9d52a827786b)
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+## Spatial coordinates
+
+Two types of spatial coordinates:
+- **projected** (or Cartesian) coordinates: refer to points on a flat space
+- **unprojected** or **geographic** coordinates: refer to angles (latitude, longitude) pointing to locations on a sphere (or ellipsoid).
+
+The flat space is also referred to as R<sup>2</sup>, the sphere as S<sup>2</sup>
+
+No geospatial data without specifying the **Coordinate Reference System** (CRS) you work with!
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+1. Transform `myriophyllum_df` to a geospatial data.frame using `sf` package. Note that
+GBIF data are stored using WGS 84. Hint: find which numeric code is associated with WGS84 coordinate reference system.
+2. How many layers does the  geospatial file `20221025_protected_areas.gpkg` contain?
+3. Read the layer `ps_hbtrl`: call it `prot_areas`
+4. What is the CRS declared by user? Does it coincide with the real Geographic Coordinate Reference System (GEOCRS)?
+5. Are the CRS of `prot_areas` and `spatial_myriophyllum_df` the same?
+
+---
+class: left, top
+
+### CRS by EPSG codes
+
+A common way to specify the CRS is by providing the EPSG (numeric) code. EPSG stands for European Petroleum Survey Group and is an organization that maintains a geodetic parameter database with standard codes, the EPSG codes, for coordinate systems, datums, spheroids, units and such alike.  There are a lot of EPSG codes! Full list: https://spatialreference.org/
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20221025/20221025_epsg_codes.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+1. Transform both `prot_areas` and `spatial_myriophyllum_df` to [European Terrestrial Reference System 1989](https://epsg.io/3035)(EPSG: 3035), the coordinate reference system used at EU level
+2. Write the transformed data as a geopackage file called `prot_areas_and_myriophyllum_3035.gpkg` with two layers: the first called `prot_areas`, containing the protected areas, the second layer, `myriophyllum_obs`, containing the observations of parrot's-feather
+3. Due to spatial uncertainty (gridded data, GPS uncertainty, etc.) observations
+ should not be idealized as points in space, but as circles. Create such circles
+ using the values store in column `coordinateUncertaintyInMeters` for
+ `spatial_myriophyllum_df_3035`
+
+---
+class: left, top
+
+## INTERMEZZO - what happened in 2020?
+
+Up to version 0.9.x `sf` returned warnings to the user when it was doing R<sup>2</sup> flat computations with data using geographical coordinates (spherical coords, e.g. WGS84) with messages like
+
+```
+although coordinates are longitude/latitude, st_intersects assumes that they are planar
+```
+
+Starting with version 1.0, `sf` uses the new package `s2` (Dunnington, Pebesma, Rubak 2020) for **spherical geometry**! They made our life much easier. Nice to know: s2 package is a wrapper around the C++ `s2geometry` library, written by Google and used e.g. in Google Maps, Google Earth Engine, Bigquery GIS.
+
+More info in the vignette [Spherical geometry in sf using s2geometry](https://r-spatial.github.io/sf/articles/sf7.html).
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3
+
+Using data saved in CRS 3035:
+
+1. Find which observations, as points, are _contained_ in each protected area?
+2. But we should better check which observations, as circles (!), _intersect_ each protected area. How to do it?
+3. So, how many observations in the "Bos- en heidegebieden ten oosten van Antwerpen"?
+4. Sometimes it's interesting to calculate the centroid of a polygon, e.g. for visualizations. Easy by using sf function `st_centroids()`. However, you get an error while calculating the centroids of `prot_areas`. What does it mean?
+
+![:scale 60%]({{ site.baseurl}}/assets/images/20221025/20221025_wood_east_antwerp_myriophyllum.png)
+
+---
+class: left, top
+
+# Bonus challenge
+
+1. How to get only the observations, as circles, **totally** contained in protected areas? Hint: check the cheat sheet
+2. Not a sf question, but still nice to solve: based on the answer of 2 and 3, how to add to `prot_areas_3035` a column called `n_myriophyllum` with the number of observations for each protected area?
+
+---
+class: left, top
+
+# Resources
+
+- solutions and video recording will follow soon
+- [Geocomputation with R](https://geocompr.robinlovelace.net/)
+- [Spatial Data Science](https://keen-swartz-3146c4.netlify.com/)
+- INBO tutorial on [how to use open vector file formats](https://inbo.github.io/tutorials/tutorials/spatial_standards_vector/) such as geopackage in R
+- [`sf` cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20221025_cheat_sheet_sf.pdf)
+- What your favorite [map projection](https://xkcd.com/977/) says about you (extremely funny!)
+- Keynote "Spherical geometry" of Edzer Pebesma at the OpenGeoHub summer school 2021: [slides](https://edzer.github.io/spherical_geometry/#1)
+- [`sf` article with some examples](https://r-spatial.github.io/sf/articles/sf2.html)
+- Keynote "R spatial" of Edzer Pebesma at the useR! 2021 conference: [video](https://www.youtube.com/watch?v=cK08bxUJn5A) and [slides](https://edzer.github.io/UseR2021/#1)
+- everything what Edzer Pebesma says or write, actually
+
+
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room number and name  -->
+Room: Herman Teirlinck - 01.17 - Clara Peeters <br>
+Date: 24/11/2022, van 10:00 tot 12:30<br>
+(registration announced via DG_useR@inbo.be)
