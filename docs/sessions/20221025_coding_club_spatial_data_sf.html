@@ -134,14 +134,26 @@ class: left, top
 
 # Download data and code
 
-Today we will use an R script and some datasets. Download* the R script in `src/20221025/` and datasets in `data/20221025/`.
+You can download the material of today:
 
-- R script: [20221025_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20221025/20221025_challenges.R)
-- Dataset with GBIF observations of water primrose (EN) / waterteunisbloem (NL) (_Ludwigia grandiflora_) in Flanders from 2021: [20221025_ludwigia_aquaticum.txt](https://github.com/inbo/coding-club/blob/master/data/20221025/20221025_Ludwigia_grandiflora.txt). Source: GBIF.org (24 October 2022) GBIF Occurrence Download https://doi.org/10.15468/dl.sg4x9v
-- the Flemish protected areas: [20221025_protected_areas.gpkg](https://github.com/inbo/coding-club/blob/master/data/20221025/20221025_protected_areas.gpkg). Source: [geopunt](https://www.geopunt.be/catalogus/datasetfolder/a84a87f5-5607-4019-a8db-9d52a827786b)
-- the Belgian provinces as an sp object and saved as a `rds` file: [20221025_flemish_provinces.rds](https://github.com/inbo/coding-club/blob/master/data/20221025/20221025_flemish_provinces.rds). Source: the R package [BelgiumMaps.StatBel](https://www.bnosac.be/index.php/blog/55-belgiummaps-statbel-r-package-with-administrative-boundaries-of-belgium`).
+- automatically via `inborutils::setup_codingclub_session()`*
 
-<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+- manually** from GitHub folders [coding-club/data/20221025](https://github.com/inbo/coding-club/tree/master/data/20221025) and [coding-club/src/20221025](https://github.com/inbo/coding-club/tree/master/src/20221025)
+
+<br>
+
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20220428")` to download the coding club material of April, 28 2022. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data description
+
+- [20221025_ludwigia_aquaticum.txt](https://github.com/inbo/coding-club/blob/master/data/20221025/20221025_Ludwigia_grandiflora.txt): dataset with GBIF observations of water primrose (EN) - waterteunisbloem (NL) (_Ludwigia grandiflora_) in Flanders from 2021. Source: GBIF.org (24 October 2022) GBIF Occurrence Download https://doi.org/10.15468/dl.sg4x9v
+- [20221025_protected_areas.gpkg](https://github.com/inbo/coding-club/blob/master/data/20221025/20221025_protected_areas.gpkg): the Flemish protected areas. Source: [geopunt](https://www.geopunt.be/catalogus/datasetfolder/a84a87f5-5607-4019-a8db-9d52a827786b)
+- [20221025_flemish_provinces.rds](https://github.com/inbo/coding-club/blob/master/data/20221025/20221025_flemish_provinces.rds): the Belgian provinces as an sp object and saved as a rds file. Source: the R package [BelgiumMaps.StatBel](https://www.bnosac.be/index.php/blog/55-belgiummaps-statbel-r-package-with-administrative-boundaries-of-belgium`)
 
 ---
 class: left, top
