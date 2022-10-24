@@ -98,7 +98,7 @@ Once upon a time...
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20221025/20221025_sp_package.png)
 
-Still, this package has been used by a lot of researchers/developers.
+Still, [sp](https://edzer.github.io/sp) package has been used by a lot of researchers/developers. Some packages could still depend on it.
 
 ---
 class: left, top
@@ -131,9 +131,10 @@ Today we will use an R script and some datasets. Download* the R script in `src/
 ---
 class: left, top
 
-## Spatial coordinates
+# Spatial coordinates
 
 Two types of spatial coordinates:
+
 - **projected** (or Cartesian) coordinates: refer to points on a flat space. The coordinates are the distance along the x and y axis
 - **unprojected** or **geographic** coordinates: refer to angles (latitude, longitude) pointing to locations on a sphere (or ellipsoid).
 
@@ -141,7 +142,7 @@ For the math lovers: the flat space is also referred to as R<sup>2</sup>, the sp
 
 No geospatial data without specifying the **Coordinate Reference System** (CRS) you work with!
 
-And what is a projection? A way to visualize stuff on a map (flat space).
+And what is a projection? A way to visualize a surface of a sphere on a flat space.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -156,14 +157,14 @@ GBIF data are stored using WGS 84. Hint: find first which numeric code is associ
 2. How many layers does the  geospatial file `20221025_protected_areas.gpkg` contain?
 3. Read the layer `ps_hbtrl`: call it `prot_areas`
 4. What is the CRS declared by user? Does it coincide with the real Geographic Coordinate Reference System (GEOCRS)?
-5. Are the CRS of `prot_areas` and `spatial_ludwigia_df` the same?
+5. Do `prot_areas` and `spatial_ludwigia_df` the same CRS?
 6. Read the Belgian provinces rds file as `20221025_be_provinces_sp` (the code is given!). What is the class of this variable? From which package? How to transform it to a sf object?
 7. Extract the Flemish provinces. Hint: do it as you would do it in a standard data.frame. The motto of the sf package is "Spatial data ... simplified" for a reason!
 
 ---
 class: left, top
 
-### CRS by EPSG codes
+# Intermezzo: CRS & EPSG codes
 
 A common way to specify the CRS is by providing the EPSG (numeric) code. EPSG stands for European Petroleum Survey Group and is an organization that maintains a geodetic parameter database with standard codes, the EPSG codes, for coordinate systems, datums, spheroids, units and such alike.  There are a lot of EPSG codes! Full list: https://spatialreference.org/
 
@@ -175,8 +176,8 @@ class: left, top
 
 # Challenge 2
 
-1. Transform both `prot_areas` and `spatial_ludwigia_df` to [European Terrestrial Reference System 1989](https://epsg.io/3035)(EPSG: 3035), the coordinate reference system used at EU level
-2. Write the transformed data as a geopackage file called `prot_areas_and_ludwigia_3035.gpkg` with two layers: the first called `prot_areas`, containing the protected areas, the second layer, `ludwigia_obs`, containing the observations of parrot's-feather
+1. Transform both `prot_areas` and `spatial_ludwigia_df` to [European Terrestrial Reference System 1989](https://epsg.io/3035) (EPSG: 3035), the coordinate reference system used at EU level
+2. Write the transformed data as a geopackage file called `prot_areas_and_ludwigia_3035.gpkg` with two layers: the first called `prot_areas`, containing the protected areas, the second layer, `ludwigia_obs`, containing the observations of water primrose
 3. Due to spatial uncertainty (gridded data, GPS uncertainty, etc.) observations
  should not be idealized as points in space, but as circles. Create such circles
  using the values store in column `coordinateUncertaintyInMeters` for
@@ -185,7 +186,7 @@ class: left, top
 ---
 class: left, top
 
-## INTERMEZZO - what happened in 2020?
+## Intermezzo: what happened in 2020?
 
 Up to version 0.9.x `sf` returned warnings to the user when it was doing R<sup>2</sup> flat computations with data using geographical coordinates (spherical coords, e.g. WGS84) with messages like
 
@@ -233,7 +234,6 @@ class: left, top
 - [`sf` article with some examples](https://r-spatial.github.io/sf/articles/sf2.html)
 - Keynote "R spatial" of Edzer Pebesma at the useR! 2021 conference: [video](https://www.youtube.com/watch?v=cK08bxUJn5A) and [slides](https://edzer.github.io/UseR2021/#1)
 - everything what Edzer Pebesma says or write, actually
-
 
 ---
 class: center, top
