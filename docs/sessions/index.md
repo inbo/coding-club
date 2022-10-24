@@ -3,6 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
+| 2022-10-25 | spatial data with sf | [slides]({{ site.baseurl }}{% link sessions/20221025_coding_club_spatial_data_sf.html  %} | [hackmd](https://hackmd.io/rBatlgcTREOTnAYCs7VLrQ?view) | 01.05 - Isala Van Diest |  |
 | 2022-10-06 | shiny for starters | [slides]({{ site.baseurl }}{% link sessions/20221006_shiny_for_starters.html  %}) | [hackmd](https://hackmd.io/wvuvcT1oTRuDby0C__O9AQ?view) | 01.72 - Kaat Tilley | [vimeo](https://vimeo.com/758703504) |
 | 2022-09-29 | boost your graphs | [slides]({{ site.baseurl }}{% link sessions/20220929_graph-booster.html  %}) | [hackmd](https://hackmd.io/QSoki6koSxqvvN8YPL5YeQ?view) | 01.71 - Frans Breziers |  |
 | 2022-08-30 | ggplot | [slides]({{ site.baseurl }}{% link sessions/20220830_ggplot.html  %}) | [hackmd](https://hackmd.io/0LqX6RaATmuklv35n38LeQ?view) | 01.05 - Isala Van Diest |  |
