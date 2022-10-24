@@ -207,8 +207,8 @@ Using data saved in CRS 3035:
 
 1. Find which observations, as points, are _contained_ in each protected area?
 2. But we should better check which observations, as circles (!), _intersect_ each protected area. How to do it?
-3. So, how many observations in the "Bos- en heidegebieden ten oosten van Antwerpen"?
-4. Sometimes it's interesting to calculate the centroid of a polygon, e.g. for visualizations. Easy by using sf function `st_centroids()`. However, you get an error while calculating the centroids of `prot_areas`. What does it mean?
+3. So, how many observations in the "Demervallei"?
+4. Sometimes it's interesting to calculate the centroid of a polygon, e.g. for visualizations. Easy by using sf function `st_centroids()`. However, you get an error while calculating the centroids of `prot_areas`. What does it mean? How to solve the problem?
 
 ---
 class: left, top
@@ -216,7 +216,7 @@ class: left, top
 # Bonus challenge
 
 1. How to get only the observations, as circles, **totally** contained in protected areas? Hint: check the cheat sheet
-2. Not a sf question, but still nice to solve: based on the answer of 2 and 3, how to add to `prot_areas_3035` a column called `n_ludwigia` with the number of observations for each protected area?
+2. Not a sf question, but still nice to solve: how to add to `prot_areas_3035` a column called `n_ludwigia` with the number of observations for each protected area?
 
 ---
 class: left, top
