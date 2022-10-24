@@ -92,13 +92,39 @@ Go to https://hackmd.io/rBatlgcTREOTnAYCs7VLrQ?both
 ---
 class: left, top
 
+# Introduction: sp package
+
+Once upon a time...
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20221025/20221025_sp_package.png)
+
+Still, this package has been used by a lot of researchers/developers.
+
+---
+class: left, top
+
+# Introduction: sf package - simple features
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20221025/20221025_simple_features_sf.png)
+
+---
+class: left, top
+
+# Introduction: sf package - simple features
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20221025/20221025_sf_object.png)
+
+---
+class: left, top
+
 # Download data and code
 
 Today we will use an R script and some datasets. Download* the R script in `src ` and datasets in `data`.
 
 - R script: [20221025_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20221025/20221025_challenges.R)
-- Dataset with GBIF observations of parrot's-feather/parelvederkruid (_Myriophyllum_aquaticum_) in Flanders from 2020 up to now** [20221025_Myriophyllum_aquaticum.txt](https://github.com/inbo/coding-club/blob/master/data/20221025/20221025_Myriophyllum_aquaticum.txt). Source: GBIF.org (21 October 2022) GBIF Occurrence Download  https://doi.org/10.15468/dl.bkqmna
-- the Flemish protected areas: [`20221025/20221025_protected_areas.gpkg`](https://github.com/inbo/coding-club/blob/master/data/20221025/20221025_protected_areas.gpkg). Source: [geopunt](https://www.geopunt.be/catalogus/datasetfolder/a84a87f5-5607-4019-a8db-9d52a827786b)
+- Dataset with GBIF observations of water primrose (EN) / waterteunisbloem (NL) (_Ludwigia grandiflora_) in Flanders from 2021** [20221025_ludwigia_aquaticum.txt](https://github.com/inbo/coding-club/blob/master/data/20221025/20221025_Ludwigia_grandiflora.txt). Source: GBIF.org (24 October 2022) GBIF Occurrence Download https://doi.org/10.15468/dl.sg4x9v
+- the Flemish protected areas: [20221025_protected_areas.gpkg](https://github.com/inbo/coding-club/blob/master/data/20221025/20221025_protected_areas.gpkg). Source: [geopunt](https://www.geopunt.be/catalogus/datasetfolder/a84a87f5-5607-4019-a8db-9d52a827786b)
+- the Belgian provinces as an sp object and saved as a `rds` file: [20221025_flemish_provinces.rds](https://github.com/inbo/coding-club/blob/master/data/20221025/20221025_flemish_provinces.rds). Source: the R package [BelgiumMaps.StatBel](https://www.bnosac.be/index.php/blog/55-belgiummaps-statbel-r-package-with-administrative-boundaries-of-belgium`).
 
 <small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
@@ -108,12 +134,14 @@ class: left, top
 ## Spatial coordinates
 
 Two types of spatial coordinates:
-- **projected** (or Cartesian) coordinates: refer to points on a flat space
+- **projected** (or Cartesian) coordinates: refer to points on a flat space. The coordinates are the distance along the x and y axis
 - **unprojected** or **geographic** coordinates: refer to angles (latitude, longitude) pointing to locations on a sphere (or ellipsoid).
 
-The flat space is also referred to as R<sup>2</sup>, the sphere as S<sup>2</sup>
+For the math lovers: the flat space is also referred to as R<sup>2</sup>, the sphere as S<sup>2</sup>.
 
 No geospatial data without specifying the **Coordinate Reference System** (CRS) you work with!
+
+And what is a projection? A way to visualize stuff on a map (flat space).
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -121,12 +149,16 @@ class: left, top
 
 # Challenge 1
 
-1. Transform `myriophyllum_df` to a geospatial data.frame using `sf` package. Note that
-GBIF data are stored using WGS 84. Hint: find which numeric code is associated with WGS84 coordinate reference system.
+Using the cheatsheet:
+
+1. Transform `ludwigia_df` to a geospatial data.frame using `sf` package. Note that
+GBIF data are stored using WGS 84. Hint: find first which numeric code is associated with WGS84 coordinate reference system and use the cheatsheet.
 2. How many layers does the  geospatial file `20221025_protected_areas.gpkg` contain?
 3. Read the layer `ps_hbtrl`: call it `prot_areas`
 4. What is the CRS declared by user? Does it coincide with the real Geographic Coordinate Reference System (GEOCRS)?
-5. Are the CRS of `prot_areas` and `spatial_myriophyllum_df` the same?
+5. Are the CRS of `prot_areas` and `spatial_ludwigia_df` the same?
+6. Read the Belgian provinces rds file as `20221025_be_provinces_sp` (the code is given!). What is the class of this variable? From which package? How to transform it to a sf object?
+7. Extract the Flemish provinces. Hint: do it as you would do it in a standard data.frame. The motto of the sf package is "Spatial data ... simplified" for a reason!
 
 ---
 class: left, top
@@ -143,12 +175,12 @@ class: left, top
 
 # Challenge 2
 
-1. Transform both `prot_areas` and `spatial_myriophyllum_df` to [European Terrestrial Reference System 1989](https://epsg.io/3035)(EPSG: 3035), the coordinate reference system used at EU level
-2. Write the transformed data as a geopackage file called `prot_areas_and_myriophyllum_3035.gpkg` with two layers: the first called `prot_areas`, containing the protected areas, the second layer, `myriophyllum_obs`, containing the observations of parrot's-feather
+1. Transform both `prot_areas` and `spatial_ludwigia_df` to [European Terrestrial Reference System 1989](https://epsg.io/3035)(EPSG: 3035), the coordinate reference system used at EU level
+2. Write the transformed data as a geopackage file called `prot_areas_and_ludwigia_3035.gpkg` with two layers: the first called `prot_areas`, containing the protected areas, the second layer, `ludwigia_obs`, containing the observations of parrot's-feather
 3. Due to spatial uncertainty (gridded data, GPS uncertainty, etc.) observations
  should not be idealized as points in space, but as circles. Create such circles
  using the values store in column `coordinateUncertaintyInMeters` for
- `spatial_myriophyllum_df_3035`
+ `spatial_ludwigia_df_3035`
 
 ---
 class: left, top
@@ -178,15 +210,13 @@ Using data saved in CRS 3035:
 3. So, how many observations in the "Bos- en heidegebieden ten oosten van Antwerpen"?
 4. Sometimes it's interesting to calculate the centroid of a polygon, e.g. for visualizations. Easy by using sf function `st_centroids()`. However, you get an error while calculating the centroids of `prot_areas`. What does it mean?
 
-![:scale 60%]({{ site.baseurl}}/assets/images/20221025/20221025_wood_east_antwerp_myriophyllum.png)
-
 ---
 class: left, top
 
 # Bonus challenge
 
 1. How to get only the observations, as circles, **totally** contained in protected areas? Hint: check the cheat sheet
-2. Not a sf question, but still nice to solve: based on the answer of 2 and 3, how to add to `prot_areas_3035` a column called `n_myriophyllum` with the number of observations for each protected area?
+2. Not a sf question, but still nice to solve: based on the answer of 2 and 3, how to add to `prot_areas_3035` a column called `n_ludwigia` with the number of observations for each protected area?
 
 ---
 class: left, top
