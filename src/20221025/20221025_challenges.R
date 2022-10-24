@@ -3,34 +3,33 @@ library(sf)
 
 ludwigia_df <- read_tsv("./data/20221025/20221025_ludwigia_grandiflora.txt")
 
-# 1. Transform ludwigia_df to a geospatial data.frame using sf package. Note that
-# GBIF data are stored using WGS 84. Hint: find which numeric code is
-# associated with WGS84 coordinate reference system.
+# 1. Transform both `prot_areas` and `spatial_ludwigia_df` to [European
+# Terrestrial Reference System 1989](https://epsg.io/3035) (EPSG: 3035), the
+# coordinate reference system used at EU level
 
 
 
-# 2. How many layers does the  geospatial file 20221025_protected_areas1.gpkg
+# 2. How many layers does the  geospatial file `20221025_protected_areas.gpkg`
 # contain?
 
 
 
-# 3. Read the layer `ps_hbtrl`: call it `prot_areas`
+# 3. Import the layer `ps_hbtrl`: call it `prot_areas`
 
 
 
-# 4. What is the coordinate reference system declared by user? Does it coincide
-# with the real Geographic Coordinate Reference System (GEOCRS)?
+# 4. What is the CRS declared by user? Does it coincide with the real Geographic
+# Coordinate Reference System (GEOCRS)?
 
 
 
-# 5. Check that the CRS of `prot_areas` and `spatial_ludwigia_df` are the same
+# 5. Do `prot_areas` and `spatial_ludwigia_df` have the same CRS?
 
 
 
-# 6. Read the Belgian provinces rds file as `20221025_be_provinces_sp` (the code
-# is given!). What is the class of this variable? From which package? Transform
-# it to a sf object. Is the CRS of the provinces the same as the CRS of the
-# observations?
+# 6. Read the Belgian provinces rds file as `be_provinces_sp` (the code is
+# given!). What is the class of this variable? From which package? How to
+# transform it to a sf object?
 
 be_provinces_sp <- read_rds(
   file = "./data/20221025/20221025_be_provinces_sp.rds"
@@ -66,7 +65,7 @@ be_provinces_sp <- read_rds(
 # 3. Due to spatial uncertainty (gridded data, GPS uncertainty, etc.) GBIF
 # observations should not be idealized as points in space, but as circles.
 # Create such circles using the values store in column
-# `coordinateUncertaintyInMeters` for `spatial_ludwigia_df_3035`
+# `coordinateUncertaintyInMeters` of `spatial_ludwigia_df_3035`
 
 
 
