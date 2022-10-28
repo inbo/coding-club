@@ -3,10 +3,7 @@ library(sf)
 
 ludwigia_df <- read_tsv("./data/20221025/20221025_ludwigia_grandiflora.txt")
 
-# 1. Transform both `prot_areas` and `spatial_ludwigia_df` to [European
-# Terrestrial Reference System 1989](https://epsg.io/3035) (EPSG: 3035), the
-# coordinate reference system used at EU level
-
+# 1.Create a geospatial data.frame called `spatial_ludwigia_df` starting from `ludwigia_df`. Note that GBIF data are stored using WGS 84. Hint: find first which numeric code is associated with WGS84 coordinate reference system and use the cheatsheet.
 
 
 # 2. How many layers does the  geospatial file `20221025_protected_areas.gpkg`
