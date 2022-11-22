@@ -125,6 +125,13 @@ data/20221006/20221006_butterflies_data.txt,20221006_butterflies_data.txt,data,2
 data/20221025/20221025_ludwigia_grandiflora.txt,20221025_ludwigia_grandiflora.txt,data,20221025
 data/20221025/20221025_protected_areas.gpkg,20221025_protected_areas.gpkg,data,20221025
 data/20221025/20221025_be_provinces_sp.rds,20221025_be_provinces_sp.rds,data,20221025
+data/20221124/20221124_lu_nara_2016_100m.tif,20221124_lu_nara_2016_100m.tif,data,20221124
+data/20221124/20221124_lu_nara_legend.txt,20221124_lu_nara_legend.txt,data,20221124
+data/20221124/20221124_protected_areas_Lambert72.gpkg,20221124_protected_areas_Lambert72.gpkg,data,20221124
+data/20221124/20221124_wc2.1_10m_tmin_tmax_01.tif,20221124_wc2.1_10m_tmin_tmax_01.tif,data,20221124
+data/20221124/20221124_wc2.1_5m_srad_01.tif,20221124_wc2.1_5m_srad_01.tif,data,20221124
+data/20221124/20221124_wc2.1_10m_vapr_01.tif,20221124_wc2.1_10m_vapr_01.tif,data,20221124
+data/20221124/20221124_wc2.1_10m_wind_01.tif,20221124_wc2.1_10m_wind_01.tif,data,20221124
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222

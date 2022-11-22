@@ -158,9 +158,10 @@ class: left, top
 2. [`20221124_lu_nara_2016_100m.tif`](https://github.com/inbo/coding-club/blob/master/data/20221124/20221124_lu_nara_2016_100m.tif): a categorical raster of land use of Flanders with 9 land use categories. Thanks, NARA team!
 3. [`20221124_lu_nara_legend.txt`](https://github.com/inbo/coding-club/blob/master/data/20221124/20221124_lu_nara_legend.txt): legend to map land use index (1-9) to meaningful land use category ("Grasland", "Bos", "Akker", ...)
 4. [`20221124_protected_areas_Lambert72.gpkg`](https://github.com/inbo/coding-club/blob/master/data/20221124/20221124_protected_areas_Lambert72.gpkg): geopackage with NATURA2000 protected areas in Lambert 1972 coordinate reference system
-5. [`tdiff_tmax_tmin_01.tif`](https://github.com/inbo/coding-club/blob/master/data/20221124/tdiff_tmax_tmin_01.tif): raster with January average maximum and minimum temperature at 10 minutes precision*
-6. [`wc2.1_5m_srad_01.tif`](https://github.com/inbo/coding-club/blob/master/data/20221124/tdiff_tmax_tmin_01.tif): raster with January average solar radiation at 5 minutes precision*
-7. [`wc2.1_10m_vapr_01.tif`](https://github.com/inbo/coding-club/blob/master/data/20221124/wc2.1_10m_vapr_01.tif): raster with January average water vapor pressure at 10 minutes precision*
+5. [`20221124_tdiff_tmax_tmin_01.tif`](https://github.com/inbo/coding-club/blob/master/data/20221124/20221124_tdiff_tmax_tmin_01.tif): raster with January average maximum and minimum temperature at 10 minutes precision*
+6. [`20221124_wc2.1_5m_srad_01.tif`](https://github.com/inbo/coding-club/blob/master/data/20221124/20221124_wc2.1_5m_srad_01.tif): raster with January average solar radiation at 5 minutes precision*
+7. [`20221124_wc2.1_10m_vapr_01.tif`](https://github.com/inbo/coding-club/blob/master/data/20221124/20221124_wc2.1_10m_vapr_01.tif): raster with January average water vapor pressure at 10 minutes precision*
+8. [`20221124_wc2.1_10m_wind_01.tif`](https://github.com/inbo/coding-club/blob/master/data/20221124/20221124_wc2.1_10m_wind_01.tif): raster with January average wind speed at 10 minutes precision*
 
 <small>* Source: [WorldClim](https://worldclim.org/data/worldclim21.html) historical data</small>
 
@@ -197,14 +198,14 @@ class: left, top
 
 # Challenge 2
 
-1. Read the `tdiff_tmax_tmin_01.tif` as `tmin_max`
+1. Read the `20221124_tdiff_tmax_tmin_01.tif` as `tmin_max`
 2. How many layers does it contain? What are their names? What is the CRS? The extent? The resolution?
 3. Rename the layers: `wc2.1_10m_tmin_01` to `tmin_01`, `wc2.1_10m_tmax_01` to `tmax_01`.
 4. Plot the raster
 5. Calculate the difference tmax - tmin and store it as a new raster called `tdiff_tmax_tmin`. How is called the layer? Rename it as `tdiff_01`
-6. Save the one layer raster `tdiff_tmax_tmin` as a new GeoTIFF (*.tif) file:  `tdiff_tmax_tmin_01.tif`
+6. Save the one layer raster `tdiff_tmax_tmin` as a new GeoTIFF (*.tif) file:  `20221124_tdiff_tmax_tmin_01.tif`
 7. Add minimum and maximum temperature as two extra layers to `tdiff_tmax_tmin`
-8. Save the three layer raster: overwrite `tdiff_tmax_tmin_01.tif`
+8. Save the three layer raster: overwrite `20221124_tdiff_tmax_tmin_01.tif`
 9. After loading country boundaries as polygons (code provided!), calculate the minimum and maximum values of all layers in `tdiff_tmax_tmin` for each country. The output is a data.frame. Tip: use exactextractr::exact_extract() and find the right [summary operations](https://isciences.gitlab.io/exactextractr/#summary-operations)
 
 ---
