@@ -18,7 +18,7 @@ library(exactextractr)
 
 #' 3. **plot** the raster. Note: if you get a bunch of errors:  `Error in
 #' x$.self$finalize() : attempt to apply non-function`, just ignore them.
-plot(lu_nara_2016)
+
 
 
 
@@ -101,28 +101,7 @@ natura2000 <- st_read("./data/20211125/20211125_protected_areas_Lambert72.gpkg",
 #' Natura2000 protected areas. Note: exact_extract() should be combined with a
 #' function. It requires data manipulation knowledge (dplyr) as well.
 
-# Notice that variable `value` is created by extract_exact() internally and refers to the land use
-landcoverfraction <- function(df) {
-  print(names(df))
-  df %>%
-    mutate(frac_total = coverage_fraction / sum(coverage_fraction)) %>%
-    group_by(NAAM, value) %>%
-    summarize(prop_landuse = sum(frac_total), .groups = "drop_last")
-}
 
-lu_prot_areas <- exactextractr::exact_extract(
-  x = lu_nara_2016,
-  y = natura2000,
-  fun = landcoverfraction,
-  summarize_df = TRUE,
-  include_cols = "NAAM")
-
-lu_prot_areas
-
-lu_prot_areas %>%
-  ggplot() +
-  geom_bar(aes(x = value, y = prop_landuse), stat = "identity") +
-  facet_wrap(~NAAM)
 
 #' 2. Let's do something similar working with continuous rasters. Calculate
 #dataframe with min max and mean altitude for each Belgian province using
