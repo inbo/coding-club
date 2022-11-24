@@ -10,10 +10,10 @@ library(geodata)
 
 
 
-# 4. Read `20211125_lu_nara_legend.csv` (code is provided!) so that you can set
+# 4. Read `20221124_lu_nara_legend.txt` (code is provided!) so that you can set
 # the color table associated with `lu_nara_2016`.
 legend <- read_csv(
-  "./data/20211125/20211125_lu_nara_legend.csv",
+  "./data/20221124/20221124_lu_nara_legend.txt",
   col_types = cols(
     id = col_double(),
     land_use = col_character(),
