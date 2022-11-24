@@ -26,7 +26,7 @@ legend
 #' 5. Calculate the most and least occurring land use category in each of the
 #' Natura2000 protected areas (read these areas using the provided code). Tip: use exactextractr::exact_extract() and find
 #' the right [summary operations](https://isciences.gitlab.io/exactextractr/#summary-operations)
-natura2000 <- st_read("./data/20211125/20211125_protected_areas_Lambert72.gpkg",
+natura2000 <- sf::st_read("./data/20221124/20221124_protected_areas_Lambert72.gpkg",
                       layer = "ps_hbtrl")
 
 
