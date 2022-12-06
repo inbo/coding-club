@@ -86,7 +86,7 @@ class: left, top
 You can **plot** geospatial data.
 
 But a plot is not a map, as chocolate is not (yet) a chocolate pie.
-You need one "ingredient"" more. What?
+You need one "ingredient" more. What?
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20221206/20221206_plot.png)
 
@@ -127,13 +127,13 @@ class: left, top
 
 # Packages of the day
 
-There are a lot of packages. Really a lot! What should we use? Choose for the pacakges actively maintained.
+There are a lot of packages. Really a lot! What should we use? Choose the actively maintained packages.
 
 Today we will use:
 
 - ggplot: allows to plot geospatial vector data. No maps!
-- [maptiles](https://github.com/riatelab/maptiles): the best way to add tiles to your plots. A lot of tiles freely available for the entire world. Option to use also specific endpoints (tile repositories on the web)
-- leaflet: a R wrapper for the very popular [Leaflet JavaScript library](http://leafletjs.com/) by [Vladamir Agafonkin](http://agafonkin.com/en/). A very good package for fine tuning dynamic maps. A little knowledge of html needed for labels and pop ups.
+- [maptiles](https://github.com/riatelab/maptiles): the best way to add tiles to your plots. A lot of tiles are freely available for the entire world. Option to use also specific endpoints (tile repositories on the web)
+- leaflet: a R wrapper for the very popular [Leaflet JavaScript library](http://leafletjs.com/) by [Vladamir Agafonkin](http://agafonkin.com/en/). A very good package for fine tuning dynamic maps. A little knowledge of html is needed for labels and pop ups.
 - mapview: the package for creating interactive maps very quickly and conveniently. Fill the gap of quick (not presentation grade) interactive plotting to examine and visually investigate both aspects of spatial data. It uses [Leaflet](http://leafletjs.com/) or [Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/api/)+ [Deck.gl](https://deck.gl/) javascript libraries in the background via [mapdeck](https://symbolixau.github.io/mapdeck/articles/mapdeck.html).
 
 ---
@@ -236,7 +236,7 @@ class: left, top
 
 # Challenge 2 - static maps
 
-1. Let's make a static map of the borders of the natura2000 areas in Flanders via R package [maptiles](https://github.com/riatelab/maptiles#readme). Use OpenStreetMaps tiles as background. Do not forget to add credits for the tiles. Hint: read the [README](https://github.com/riatelab/maptiles#readme)] of maptiles package
+1. Let's make a static map of the borders of the natura2000 areas in Flanders via R package [maptiles](https://github.com/riatelab/maptiles#readme). Use OpenStreetMaps tiles as background. Do not forget to add credits for the tiles. Hint: read the [README](https://github.com/riatelab/maptiles#readme) of maptiles package
 2. Use another tile provider and assign colors to the Natura2000 areas based on their area (column `Shape_area`)
 
 ---
@@ -249,9 +249,9 @@ Using [mapview](https://r-spatial.github.io/mapview/):
 
 1. Show Natura2000 areas on a map. The color of the areas should represent the number of giant hogweed occurrences in Flanders collected from 2010. Display the legend as well. Set the contour of the polygons in red. What happens when clicking on an area? Beautiful, isn't?
 
-2. Let's fine tuning this map. Use "OpenStreetMap" only as map tiles, set the opacity of the areas to 0.9 and the contour lines to 0.2. Set "n obs" as legend title.  Hint: mapview's [advanced vignette](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html)
+2. Let's fine-tune this map. Use "OpenStreetMap" only as map tiles, set the opacity of the areas to 0.9 and the contour lines to 0.2. Set "n obs" as legend title.  Hint: mapview's [advanced vignette](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html)
 
-3. You have already installed leafem, so you should see by default the mouse coordindates (lat,lon) and zoom level on top right. If not, check how to add them in the [extra leaflet functionalities](https://r-spatial.github.io/mapview/articles/mapview_06-add.html) vignette. Add also the INO coding club logo to the map with a link to the INBO coding club homepage: https://inbo.github.io/coding-club/. Link to the image provided in the code.
+3. You have already installed leafem, so you should see by default the mouse coordinates (lat, lon) and zoom level on top right. If not, check how to add them in the [extra leaflet functionalities](https://r-spatial.github.io/mapview/articles/mapview_06-add.html) vignette. Add also the INBO coding club logo to the map with a link to the INBO coding club homepage: https://inbo.github.io/coding-club/. Link to the image provided in the code.
 
 
 ---
@@ -259,7 +259,7 @@ class: left, top
 
 ## BONUS CHALLENGE: leaflet + crosstalk
 
-leaflet or not to leaflet? It's up to you! You can stick to work with mapview or you can go full throttle with leaflet. One thing is sure: the [leaflet for R](https://rstudio.github.io/leaflet/) documentation is one of the best package documentation ever written!
+leaflet or not to leaflet? It's up to you! You can stick to work with mapview or you can go full throttle with leaflet. One thing is sure: the [leaflet for R](https://rstudio.github.io/leaflet/) documentation is one of the best package documentations ever written!
 
 1. To challenge yourself with leaflet, create a leaflet map similar to the one you created with mapview in challenge 2. Make sure that the label shows the number of occurrences while the pop up diplays the name of the area. The color of the areas should show the number of occurrences by using the viridis palette. Show the legend as well. Hint: [choropleths](https://rstudio.github.io/leaflet/choropleths.html) chapter
 
