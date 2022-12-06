@@ -44,9 +44,9 @@ class: left, top
 
 ## Introduction: open software
 
-Geospatial visualization in R is open software and it is evolving continuously. See e.g. this [issue](https://github.com/r-spatial/mapview/issues/432) about supporting terra data inputs, spatRasters and spatVectors.
+Geospatial visualization in R is open software and it is evolving continuously. See e.g. this [issue](https://github.com/r-spatial/mapview/issues/432) about supporting the terra data inputs spatRasters and spatVectors.
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20221206/20221206_SpatVector_SpatRaster_inputs_issue.png)
+![:scale 120%]({{ site.baseurl}}/assets/images/20221206/20221206_SpatVector_SpatRaster_inputs_issue.png)
 
 ---
 class: center, middle
@@ -72,7 +72,7 @@ Topic of the coding club of [24 November](https://inbo.github.io/coding-club/ses
 
 - [**terra**](https://rspatial.github.io/terra/reference/terra-package.html) : newest and recommended package
 - [**raster**](https://rspatial.org/raster/pkg/index.html) : its predecessor (no support for sf), match with sp
-- [**stars**](https://r-spatial.github.io/stars/): for **s**patio**t**emporal **ar**ray**s**. Not covered here, but Floris says we ever should start learning it!*
+- [**stars**](https://r-spatial.github.io/stars/): for **s**patio**t**emporal **ar**ray**s**. Not covered here, but Floris says we should ever start learning it!*
 
 For more info, read this great [article](https://geocompr.github.io/post/2021/spatial-classes-conversion/) about conversions among different spatial classes in R.
 
@@ -83,12 +83,12 @@ class: left, top
 
 # Plot vs maps
 
-You can **plot** geospatial data
-
-![:scale 90%]({{ site.baseurl}}/assets/images/20221206/20221206_plot.png)
+You can **plot** geospatial data.
 
 But a plot is not a map, as chocolate is not (yet) a chocolate pie.
 You need one "ingredient"" more. What?
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20221206/20221206_plot.png)
 
 ---
 class: left, top
@@ -110,7 +110,8 @@ You have a lot of tiles. Some are available for being used with an open license,
 
 There are tiles covering the entire world, or just a specific region (= Flanders, see the [Web Map (Tile) Service](https://www.vlaanderen.be/digitaal-vlaanderen/onze-oplossingen/geografische-webdiensten/ons-gis-aanbod/raadpleegdiensten#wat-is-een-wmts) of the Flemish Authority)
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20221206/20221206_tiles.png)
+* Image from [README](https://github.com/riatelab/maptiles#readme) of maptiles package
+![:scale 80%]({{ site.baseurl}}/assets/images/20221206/20221206_tiles.png)
 
 ---
 class: left, top
@@ -212,6 +213,7 @@ class: left, top
 3. [20221206_protected_areas.gpkg](https://github.com/inbo/coding-club/blob/master/data/20221206/20221206_protected_areas.gpkg): geopackage with NATURA2000 protected areas in WG84 coordinate reference system
 4. [20221206_gbif_occs_hogweed.txt](https://github.com/inbo/coding-club/blob/master/data/20221206/20221206_gbif_occs_hogweed.txt) with occurrences of Giant hogweed in Flanders from 2010*
 4. [20221206_nitrogen.tif](https://github.com/inbo/coding-club/blob/master/data/20221206/20221206_nitrogen.tif): nitrogen deposit in Flanders
+
 <small>* Derived from GBIF download: https://doi.org/10.15468/dl.8sdqyu </small>
 
 ---
@@ -226,7 +228,7 @@ class: left, top
 possible color palettes via `hcl.pals()` and try out some other palettes
 
 3. Raster data (categorical values): plot the land use with the legend
-provided as data.frame. Add a title to the plot.
+provided as data.frame. Add a title to the plot as well.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -234,9 +236,8 @@ class: left, top
 
 # Challenge 2 - static maps
 
-1. Let's make a static map of the borders of the natura2000 areas in Flanders via R package [maptiles](https://github.com/riatelab/maptiles#readme). Use OpenStreetMaps tiles as background. Do not forget to add credits for the tiles.
+1. Let's make a static map of the borders of the natura2000 areas in Flanders via R package [maptiles](https://github.com/riatelab/maptiles#readme). Use OpenStreetMaps tiles as background. Do not forget to add credits for the tiles. Hint: read the [README](https://github.com/riatelab/maptiles#readme)] of maptiles package
 2. Use another tile provider and assign colors to the Natura2000 areas based on their area (column `Shape_area`)
-
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -248,9 +249,9 @@ Using [mapview](https://r-spatial.github.io/mapview/):
 
 1. Show Natura2000 areas on a map. The color of the areas should represent the number of giant hogweed occurrences in Flanders collected from 2010. Display the legend as well. Set the contour of the polygons in red. What happens when clicking on an area? Beautiful, isn't?
 
-2. Let's fine tuning this map. Use "OpenStreetMap" only as map tiles, set the opacity of the areas to 0.9 and the contour lines to 0.2. Set "n obs" as legend title.  Hint: mapview [advance vignette](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html)
+2. Let's fine tuning this map. Use "OpenStreetMap" only as map tiles, set the opacity of the areas to 0.9 and the contour lines to 0.2. Set "n obs" as legend title.  Hint: mapview's [advanced vignette](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html)
 
-3. You have already installed leafem, so you should see by default the mouse coordindates (lat,lon) and zoom level on top right. If not check how to add on [extra leaflet functionalities](https://r-spatial.github.io/mapview/articles/mapview_06-add.html) vignette. Add also the INO coding club logo to the map with a link to the INBO coding club homepage: https://inbo.github.io/coding-club/. Link to the image provided in the code.
+3. You have already installed leafem, so you should see by default the mouse coordindates (lat,lon) and zoom level on top right. If not, check how to add them in the [extra leaflet functionalities](https://r-spatial.github.io/mapview/articles/mapview_06-add.html) vignette. Add also the INO coding club logo to the map with a link to the INBO coding club homepage: https://inbo.github.io/coding-club/. Link to the image provided in the code.
 
 
 ---
@@ -258,7 +259,7 @@ class: left, top
 
 ## BONUS CHALLENGE: leaflet + crosstalk
 
-leaflet or not to leaflet? It's up to you! You can stick to work with mapview or you can go full throttle with leaflet. One thing is sure: the [leaflet](https://rstudio.github.io/leaflet/) for R documentation is one of the best ever written!
+leaflet or not to leaflet? It's up to you! You can stick to work with mapview or you can go full throttle with leaflet. One thing is sure: the [leaflet for R](https://rstudio.github.io/leaflet/) documentation is one of the best package documentation ever written!
 
 1. To challenge yourself with leaflet, create a leaflet map similar to the one you created with mapview in challenge 2. Make sure that the label shows the number of occurrences while the pop up diplays the name of the area. The color of the areas should show the number of occurrences by using the viridis palette. Show the legend as well. Hint: [choropleths](https://rstudio.github.io/leaflet/choropleths.html) chapter
 
@@ -266,7 +267,7 @@ leaflet or not to leaflet? It's up to you! You can stick to work with mapview or
 
 3. How to add a **filter slider** based on the number of observations? Hint: you need to put the code in a RMarkdown and knit it otherwise the slider and the leaflet + table are not combined together.
 
-![:scale 20%]({{ site.baseurl}}/assets/images/20221206/20221206_crosstalk_slider.png
+![:scale 20%]({{ site.baseurl}}/assets/images/20221206/20221206_crosstalk_slider.png)
 
 ---
 class: left, top
