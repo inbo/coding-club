@@ -222,7 +222,7 @@ class: left, top
 
 # Challenge 1 - plots
 
-1. GIS data (continuous variable): how to plot the Natura2000 areas with ggplot? **Fill** the areas based on their `shape_area` using viridis palette
+1. GIS data (continuous variable): how to plot the Natura2000 areas with ggplot? **Fill** the areas based on their `Shape_area` using viridis palette
 
 2. Raster data (continuous variable): plot the nitrogen deposition in Flanders setting a **legend** with **range** from 10 to 47 and color scale `hcl.colors(n = 100, palette = "Blue-Red 3")`. See more about color scales via help `?grDevices::hcl.colors()`. Check all
 possible color palettes via `hcl.pals()` and try out some other palettes
@@ -249,7 +249,7 @@ Using [mapview](https://r-spatial.github.io/mapview/):
 
 1. Show Natura2000 areas on a map. The color of the areas should represent the number of giant hogweed occurrences in Flanders collected from 2010. Display the legend as well. Set the contour of the polygons in red. What happens when clicking on an area? Beautiful, isn't?
 
-2. Let's fine-tune this map. Use "OpenStreetMap" only as map tiles, set the opacity of the areas to 0.9 and the contour lines to 0.2. Set "n obs" as legend title.  Hint: mapview's [advanced vignette](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html)
+2. Let's fine-tune this map. Use "OpenStreetMap" only as map tiles, set the opacity of the areas to 0.9 and the contour line width to 0.2. Set "n obs" as legend title.  Hint: mapview's [advanced vignette](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html)
 
 3. You have already installed leafem, so you should see by default the mouse coordinates (lat, lon) and zoom level on top right. If not, check how to add them in the [extra leaflet functionalities](https://r-spatial.github.io/mapview/articles/mapview_06-add.html) vignette. Add also the INBO coding club logo to the map with a link to the INBO coding club homepage: https://inbo.github.io/coding-club/. Link to the image provided in the code.
 
