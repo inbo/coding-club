@@ -134,7 +134,7 @@ Today we will use:
 - ggplot: allows to plot geospatial vector data. No maps!
 - [maptiles](https://github.com/riatelab/maptiles): the best way to add tiles to your plots. A lot of tiles are freely available for the entire world. Option to use also specific endpoints (tile repositories on the web)
 - leaflet: a R wrapper for the very popular [Leaflet JavaScript library](http://leafletjs.com/) by [Vladamir Agafonkin](http://agafonkin.com/en/). A very good package for fine tuning dynamic maps. A little knowledge of html is needed for labels and pop ups.
-- mapview: the package for creating interactive maps very quickly and conveniently. Fill the gap of quick (not presentation grade) interactive plotting to examine and visually investigate both aspects of spatial data. It uses [Leaflet](http://leafletjs.com/) or [Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/api/)+ [Deck.gl](https://deck.gl/) javascript libraries in the background via [mapdeck](https://symbolixau.github.io/mapdeck/articles/mapdeck.html).
+- [mapview](https://r-spatial.github.io/mapview/): the package for creating interactive maps very quickly and conveniently. Fill the gap of quick (not presentation grade) interactive plotting to examine and visually investigate both aspects of spatial data. It uses [Leaflet](http://leafletjs.com/) or [Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/api/)+ [Deck.gl](https://deck.gl/) javascript libraries in the background via [mapdeck](https://symbolixau.github.io/mapdeck/articles/mapdeck.html).
 
 ---
 class: left, top
@@ -251,7 +251,7 @@ Using [mapview](https://r-spatial.github.io/mapview/):
 
 2. Let's fine-tune this map. Use "OpenStreetMap" only as map tiles, set the opacity of the areas to 0.9 and the contour line width to 0.2. Set "n obs" as legend title.  Hint: mapview's [advanced vignette](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html)
 
-3. You have already installed leafem, so you should see by default the mouse coordinates (lat, lon) and zoom level on top right. If not, check how to add them in the [extra leaflet functionalities](https://r-spatial.github.io/mapview/articles/mapview_06-add.html) vignette. Add also the INBO coding club logo to the map with a link to the INBO coding club homepage: https://inbo.github.io/coding-club/. Link to the image provided in the code.
+3. You have already installed leafem, so you should see by default the mouse coordinates (lat, lon) and zoom level on top left. If not, check how to add them in the [extra leaflet functionalities](https://r-spatial.github.io/mapview/articles/mapview_06-add.html) vignette. Add also the INBO coding club logo to the map with a link to the INBO coding club homepage: https://inbo.github.io/coding-club/. Link to the image provided in the code.
 
 
 ---
