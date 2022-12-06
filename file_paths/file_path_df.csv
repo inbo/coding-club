@@ -132,6 +132,10 @@ data/20221124/20221124_wc2.1_10m_tmin_tmax_01.tif,20221124_wc2.1_10m_tmin_tmax_0
 data/20221124/20221124_wc2.1_5m_srad_01.tif,20221124_wc2.1_5m_srad_01.tif,data,20221124
 data/20221124/20221124_wc2.1_10m_vapr_01.tif,20221124_wc2.1_10m_vapr_01.tif,data,20221124
 data/20221124/20221124_wc2.1_10m_wind_01.tif,20221124_wc2.1_10m_wind_01.tif,data,20221124
+data/20221206/20221206_gbif_occs_hogweed.txt,20221206_gbif_occs_hogweed.txt,data,20221206
+data/20221206/20221206_lu_nara_2016_100m.tif,20221206_lu_nara_2016_100m.tif,data,20221206
+data/20221206/20221206_nitrogen.tif,20221206_nitrogen.tif,data,20221206
+data/20221206/20221206_protected_areas.gpkg,20221206_protected_areas.gpkg,data,20221206
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
@@ -237,3 +241,4 @@ src/20221025/20221025_challenges.R,20221025_challenges.R,src,20221025
 src/20221025/20221025_challenges_solutions.R,20221025_challenges_solutions.R,src,20221025
 src/20221124/20221124_challenges.R,20221124_challenges.R,src,20221124
 src/20221124/20221124_challenges_solutions.R,20221124_challenges.R,src,20221124
+src/20221206/20221206_challenges.R,20221206_challenges.R,src,20221206
