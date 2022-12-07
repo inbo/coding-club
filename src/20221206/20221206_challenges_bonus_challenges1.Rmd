@@ -1,7 +1,7 @@
 ---
-title: "20121206_challenges_solutions_bonus_challenges1"
+title: "20121206_challenges_solutions_bonus_challenges 1"
 output: html_document
-date: "2022-12-05"
+date: "2022-12-06"
 ---
 
 ```{r setup, include=FALSE}
@@ -27,7 +27,7 @@ library(here)
 
 ### Data
 
-Read and prepare data:
+Read and prepare data (same code as provided in `20221206_challenges.R`):
 
 ```{r read_data}
 # natura2000
@@ -53,7 +53,7 @@ natura2000$n_occs <- purrr::map_dbl(occs_in_areas, function(x) length(x))
 
 Create leaflet map (see Bonus challenge 1.1):
 
-```{r echo=FALSE}
+```{r bonus_challenge_1_1}
 pal <- colorNumeric(
   palette = "viridis",
   domain = natura2000$n_occs)
@@ -73,7 +73,7 @@ leaflet(natura2000) %>%
 
 Combine leaflet with data table via crosstalk. Unfortunately, crosstalk doesn't support polygons at the moment (see https://github.com/rstudio/crosstalk/issues/55). Make a leaflet with markers using the centroids of the areas (use `st_centroids()`):
 
-```{r echo=FALSE}
+```{r bonus_challenge_1_2}
 natura2000_centroids <- st_centroid(natura2000)
 shared_natura2000 <- SharedData$new(natura2000_centroids)
 
@@ -90,9 +90,9 @@ bscols(leaflet_map, data_table)
 
 ## Bonus challenge 1.3
 
-Add filter slider:
+Add filter slider (see Bonus challenge 1.3):
 
-```{r echo=FALSE}
+```{r bonus_challenge_1_3}
 filter_slider(id = "n_occs",
               label = "Number of observations",
               sharedData = shared_natura2000,
@@ -101,3 +101,5 @@ filter_slider(id = "n_occs",
               width = max(natura2000$n_occs))
 bscols(leaflet_map, data_table)
 ```
+
+That's all. I hope you enjoyed it! 
