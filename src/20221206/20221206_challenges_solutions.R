@@ -215,4 +215,4 @@ bscols(leaflet_map, data_table)
 
 # 3. How to add a **filter slider** based on the number of observations?
 # See 20221206_challenges_bonus_challenges1.Rmd and its rendered html version
-# 20221206_challenges_bonus_challenges1.html in src/20221206 folder
+# 20221206_challenges_bonus_challenge.html in src/20221206 folder
