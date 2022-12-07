@@ -1,0 +1,103 @@
+---
+title: "20121206_challenges_solutions_bonus_challenges1"
+output: html_document
+date: "2022-12-05"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Only by knitting this document you will be able to see the slider of challenge 1.3 in action!
+
+Libraries:
+
+```{r message=FALSE, warning=FALSE}
+library(crosstalk)
+library(leaflet)
+library(htmltools)
+library(DT)
+library(sf)
+library(here)
+```
+
+# Bonus challenge 1
+
+## Prepare data and maps
+
+### Data
+
+Read and prepare data:
+
+```{r read_data}
+# natura2000
+natura2000 <- st_read(here::here("data",
+                                 "20221206",
+                                 "20221206_protected_areas.gpkg"))
+# occurrences giant hogweed
+occs_hogweed <- readr::read_tsv(here::here("data",
+                                 "20221206",
+                                 "20221206_gbif_occs_hogweed.txt"),
+                                na = "")
+# transform to sf spatial data.frame
+occs_hogweed <- st_as_sf(occs_hogweed,
+                         coords = c("decimalLongitude", "decimalLatitude"),
+                         crs = 4326)
+
+# count number of "points" in Natura2000 areas
+occs_in_areas <- st_contains(natura2000, occs_hogweed)
+# get number of points in each polygon as a vector
+natura2000$n_occs <- purrr::map_dbl(occs_in_areas, function(x) length(x))
+```
+## Bonus challenge 1.1
+
+Create leaflet map (see Bonus challenge 1.1):
+
+```{r echo=FALSE}
+pal <- colorNumeric(
+  palette = "viridis",
+  domain = natura2000$n_occs)
+
+leaflet(natura2000) %>%
+  addTiles() %>%
+  addPolygons(popup = ~htmlEscape(NAAM),
+              label = ~htmlEscape(n_occs),
+              color = ~pal(n_occs)) %>%
+  addLegend("bottomright", pal = pal, values = ~n_occs,
+            title = "Number of occurrences",
+            opacity = 1
+  )
+```
+
+## Bonus Challenge 1.2
+
+Combine leaflet with data table via crosstalk. Unfortunately, crosstalk doesn't support polygons at the moment (see https://github.com/rstudio/crosstalk/issues/55). Make a leaflet with markers using the centroids of the areas (use `st_centroids()`):
+
+```{r echo=FALSE}
+natura2000_centroids <- st_centroid(natura2000)
+shared_natura2000 <- SharedData$new(natura2000_centroids)
+
+leaflet_map <- leaflet(shared_natura2000) %>%
+  addTiles() %>%
+  addMarkers(popup = ~htmlEscape(NAAM),
+             label = ~htmlEscape(n_occs))
+data_table <- datatable(
+  shared_natura2000, extensions="Scroller", style="bootstrap", class="compact", width="100%",
+  options=list(deferRender=TRUE, scrollY=300, scroller=TRUE)
+)
+bscols(leaflet_map, data_table)
+```
+
+## Bonus challenge 1.3
+
+Add filter slider:
+
+```{r echo=FALSE}
+filter_slider(id = "n_occs",
+              label = "Number of observations",
+              sharedData = shared_natura2000,
+              column=~n_occs,
+              step=10,
+              width = max(natura2000$n_occs))
+bscols(leaflet_map, data_table)
+```
