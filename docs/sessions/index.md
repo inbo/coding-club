@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2022-12-06 | geospatial data visualization in R | [slides]({{ site.baseurl }}{% link sessions/20221206_rmaps.html  %}) | [hackmd](https://hackmd.io/3QWSEge3TtOs7xwgmrG-JQ?view) | 01.20 - Willy Van Der Meeren |  |
+| 2022-12-06 | geospatial data visualization in R | [slides]({{ site.baseurl }}{% link sessions/20221206_rmaps.html  %}) | [hackmd](https://hackmd.io/3QWSEge3TtOs7xwgmrG-JQ?view) | 01.20 - Willy Van Der Meeren | [vimeo](https://vimeo.com/778846811) |
 | 2022-11-24 | rasteRs | [slides]({{ site.baseurl }}{% link sessions/20221124_coding_club_rasters.html  %}) | [hackmd](https://hackmd.io/hHFWW3y6STS9UgdZ8bSH0A?view) | 01.17 - Clara Peeters | [vimeo](https://vimeo.com/775952986) |
 | 2022-10-25 | spatial data with sf | [slides]({{ site.baseurl }}{% link sessions/20221025_coding_club_spatial_data_sf.html  %}) | [hackmd](https://hackmd.io/rBatlgcTREOTnAYCs7VLrQ?view) | 01.05 - Isala Van Diest | [vimeo](https://vimeo.com/764880947) |
 | 2022-10-06 | shiny for starters | [slides]({{ site.baseurl }}{% link sessions/20221006_shiny_for_starters.html  %}) | [hackmd](https://hackmd.io/wvuvcT1oTRuDby0C__O9AQ?view) | 01.72 - Kaat Tilley | [vimeo](https://vimeo.com/758703504) |
