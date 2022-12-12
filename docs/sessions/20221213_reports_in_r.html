@@ -136,50 +136,6 @@ class: left, top
 - Switch to Visual Markdown Editor (VME) and try to write further (and say OOOHHH)
 - Save it as `test.Rmd`
 - **knit** it to create html (= `rmarkdown::render("test.Rmd")` in console)
-![:scale 70%]({{ site.baseurl}}/assets/images/20221213/20221213_knit_does_the_magic.png)
-
----
-class: left, top
-
-# The YAML header: iammol what???
-
-The firs lines between triple dashes (`---`) is our **header**, needed to configure the output to generate by setting up the title, the author, the output type, etc.
-
-And why is it called a YAML header? Because it is written in YAML :-) YAML is a programming language typically used to write such kind of **configurations**.
-
-And Why using YAML? Because it is very, very **human readable**.
-
-```r
----
-title: "test"
-author: "Damiano Oldoni"
-date: "13-12-2022"
-output: html_document
----
-```
-
----
-class: left, top
-
-# Download data and code
-
-- Download everything automatically via `inborutils::setup_codingclub_session()`
-- manually*, from [data/20221213](https://github.com/inbo/coding-club/blob/master/data/20221213/) and [src/20221213](https://github.com/inbo/coding-club/blob/master/src/20221213). Place the R script in your folder `src/20221213/` and data in `data/20221213/`.
-
-
-1. [20221213_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20221213/20221213_challenges.R): R script about geese counts.
-2. [20221213_geese_counts.txt](https://github.com/inbo/coding-club/blob/master/data/20221213/20221213_geese_counts.txt): comma separated text file with geese catch data to use in `20221213_challenges.R`.
-3. [20221213_flemish_provinces.gpkg,data](https://github.com/inbo/coding-club/blob/master/data/20221213/20221213_flemish_provinces.gpkg): geopackage with the Flemish provinces to use in `20221213_challenges.R`
-
----
-class: left, top
-
-# Challenge 0: R Markdown in a nutshell
-
-- `File` ->  `New File` -> `R Markdown...` -> Title: "test", Author: your name, Output format: HTML (deafult)
-- Switch to Visual Markdown Editor (VME) and try to write further (and say OOOHHH)
-- Save it as `test.Rmd`
-- **knit** it to create html (= `rmarkdown::render("test.Rmd")` in console)
 
 ![:scale 70%]({{ site.baseurl}}/assets/images/20221213/20221213_knit_does_the_magic.png)
 
@@ -231,12 +187,12 @@ class: left, top
 Convert the code below to a Rmd document called `1_geese_read_data.Rmd` and _knit_ it as html. Please, take care of:
 
 1. Converting the comments to text
-2. Show the library you need to load but avoid to show any **message** (errors or warnings are allowed). Tip: choose one test-output chunk option from [this list](https://yihui.org/knitr/options/#text-output). How to avoid showing **warnings** as well?
+2. Show the library you need to load but avoid to show any **message** (errors or warnings are allowed). Tip: see [list](https://yihui.org/knitr/options/#text-output) with all test-output chunk options. How to avoid showing **warnings** as well?
 3. Do not show the code in lines 83-85 and 89-90. Tip: this is shown in `test.Rmd` (challenge 0) and in the list mentioned in previous tip.
 4. Set date authomatically in YAML header. Tip: https://bookdown.org/yihui/rmarkdown-cookbook/update-date.html
-5. Do you want always good looking tables with the smallest effort possible? Set `df_print` argument in header (see screenshot below)
-6. Add a table of content. How to allow the table of contents being always visible even when the document is scrolled? Tip: https://bookdown.org/yihui/rmarkdown/html-document.html#table-of-contents
-7. How to add section numbers to the table of content? Tip: https://bookdown.org/yihui/rmarkdown/html-document.html#section-numbering
+5. Do you want always good looking data.frames (tables) with the smallest effort possible? Page them! Tip: https://bookdown.org/yihui/rmarkdown/html-document.html#data-frame-printing
+6. Add a table of content. Allow the table of contents being always visible even when the document is scrolled. Tip: https://bookdown.org/yihui/rmarkdown/html-document.html#table-of-contents
+7. Add section numbers to the table of content. Tip: https://bookdown.org/yihui/rmarkdown/html-document.html#section-numbering
 
 ---
 class: left, top
