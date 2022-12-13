@@ -195,7 +195,7 @@ overview_gee <- map2_dfr(
       as_tibble() %>%
       mutate(species = name,
              year = str_sub(year, start = 5)) %>%
-      select(species, everything())
+      dplyr::select(species, everything())
   })
 overview_gee <-
   overview_gee %>%
