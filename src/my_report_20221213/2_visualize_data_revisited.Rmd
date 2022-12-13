@@ -1,4 +1,6 @@
-# Introduction
+# Plotting, modelling and mapping
+
+This section up to the end of the book is derived from the second challenge.
 
 In this section we will show how number of catches varies by year, province and species. 
 Both static plots and dynamic maps are generated.
@@ -11,9 +13,11 @@ Both static plots and dynamic maps are generated.
 
 Notice that the option `{.tabset}` is not a supported feature of bookdown.
 
+We fold long distracting code chunks by adding the chunk option `class.source = "fold-hide"`. It's up to the reader to unfold the code if interested.
+
 ### Catches per province
 
-```{r echo=FALSE, fig.cap = "Total number of catched geese per province from 2009 to 2018"}
+```{r catch-per-province, class.source = "fold-hide", fig.cap = "Total number of catched geese per province from 2009 to 2018"}
 catch_per_province <- catch_fl %>%
   group_by(province) %>%
   summarize(catched_total = sum(catched, na.rm = TRUE)) %>%
@@ -27,7 +31,7 @@ ggplot(catch_per_province,
 
 ### Catches per year
 
-```{r catch-per-year, fig.cap = "Annual number of catched geese"}
+```{r catch-per-year, class.source = "fold-hide", fig.cap = "Annual number of catched geese"}
 catch_per_year <- catch_fl %>%
   group_by(year) %>%
   summarize(catched_total = sum(catched, na.rm = TRUE)) %>%
@@ -41,7 +45,7 @@ ggplot(catch_per_year,
 
 ### Catches per year and province
 
-```{r catch-year-pr, fig.cap = "Catched geese per year from 2009 to 2018. The color indicates the province where catch occurred."}
+```{r catch-year-pr, class.source = "fold-hide", fig.cap = "Catched geese per year from 2009 to 2018. The color indicates the province where catch occurred."}
 catch_per_year_province <-
   catch_fl %>%
   group_by(year, province) %>%
@@ -60,7 +64,7 @@ ggplot(catch_per_year_province,
 
 Before we proceed to analyse the catches at species level, specify the species we are interested to by `commonName`:
 
-```{r species-to-model, class.source = "fold-show"}
+```{r species-to-model, class.source = "fold-hide"}
 species <- c(
   "Brandgans",
   "Canadese gans",
@@ -72,7 +76,7 @@ species <- c(
 
 ### Catches per per year and species
 
-```{r catch-species}
+```{r catch-species, class.source = "fold-hide", message=FALSE}
 catch_species <-
   catch_fl %>%
   filter(commonName %in% species) %>%
@@ -89,7 +93,7 @@ ggplot(catch_species,
 
 We apply a GEE (generalized estimating equations) model to data from 2010.
 
-```{r apply-gee-model}
+```{r apply-gee-model, class.source = "fold-hide"}
 model_per_species <-
   map(
     species,
@@ -126,7 +130,7 @@ overview_gee <-
 )
 ```
 
-```{r show_model_plots, fig.cap = "Modelized catch data for five species from 2010 to 2018."}
+```{r show_model_plots, class.source = "fold-hide", fig.cap = "Modelized catch data for five species from 2010 to 2018."}
 ggplot(overview_gee,
        aes(x = year, y = Estimate, ymin = lwr, ymax = upr)) +
   geom_errorbar(colour = "cyan3") + geom_point(colour = "cyan4") +
@@ -148,7 +152,7 @@ pr_fl <- st_read("./data/20221213_flemish_provinces.gpkg")
 
 We make dynamic _leaflet_ maps of total number of catches per province. **Note**: same data used as in \@ref(catches-per-province).
 
-```{r leaflet-maps, fig.cap="Map showing the total number of catches per province."}
+```{r leaflet-maps, class.source = "fold-hide", fig.cap="Map showing the total number of catches per province."}
 
 pr_fl <- pr_fl %>%
   dplyr::left_join(catch_per_province,

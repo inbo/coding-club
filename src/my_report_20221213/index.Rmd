@@ -13,6 +13,7 @@ output:
     number_sections: true
     df_print: paged
     split_by: rmd
+    code_folding: show
 ---
 
 

@@ -156,7 +156,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="4.1" data-path="1_geese_read_data_revisited.html"><a href="1_geese_read_data_revisited.html#save-cleaned-data"><i class="fa fa-check"></i><b>4.1</b> Save cleaned data</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="2_visualize_data_revisited.html"><a href="2_visualize_data_revisited.html"><i class="fa fa-check"></i><b>5</b> Introduction</a></li>
+<li class="chapter" data-level="5" data-path="2_visualize_data_revisited.html"><a href="2_visualize_data_revisited.html"><i class="fa fa-check"></i><b>5</b> Plotting, modelling and mapping</a></li>
 <li class="chapter" data-level="6" data-path="2_visualize_data_revisited.html"><a href="2_visualize_data_revisited.html#static-plots"><i class="fa fa-check"></i><b>6</b> Static plots</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="2_visualize_data_revisited.html"><a href="2_visualize_data_revisited.html#show-catches"><i class="fa fa-check"></i><b>6.1</b> Show catches</a>
@@ -215,6 +215,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>To allow you to download all files for this bookdown project via <code>inborutils::setup_codingclub_session("my_report_20211216")</code>, we had to put both data and R Markdown files in the same root folder. However, we really recommend to distinguish them by putting them in two different subfolders of your bookdown project: <code>./data</code> and <code>./src</code>. The only Rmd file which needs to stay in root folder is <code>index.Rmd</code>.</li>
 </ol>
 <p>Load packages. I set <code>warning=FALSE</code> and <code>message=FALSE</code> to this specific chunk of code to not show all warnings and messages you get while loading the packages (see challenge 1):</p>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># to do datascience</span></span>
 <span id="cb1-2"><a href="index.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(geepack) <span class="co"># to do modelling</span></span>
 <span id="cb1-3"><a href="index.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(INBOtheme) <span class="co"># to apply INBO style to graphs</span></span>
@@ -222,6 +223,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-5"><a href="index.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet) <span class="co"># to make dynamic maps</span></span>
 <span id="cb1-6"><a href="index.html#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmltools) <span class="co"># to make nice html labels for dynamic maps</span></span>
 <span id="cb1-7"><a href="index.html#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here) <span class="co"># to work with paths</span></span></code></pre></div>
+</details>
 
             </section>
 

@@ -1,4 +1,4 @@
-fig:unnamed-chunk-1
+fig:catch-per-province
 fig:catch-per-year
 fig:catch-year-pr
 fig:leaflet-maps
@@ -10,7 +10,7 @@ geographic-information
 temporal-information
 preprocess-data
 save-cleaned-data
-introduction-1
+plotting-modelling-and-mapping
 static-plots
 show-catches
 catches-per-province
