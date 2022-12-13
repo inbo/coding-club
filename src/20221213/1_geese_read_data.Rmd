@@ -1,0 +1,166 @@
+---
+title: "Read and preprocess geese data"
+author: 
+- "Damiano Oldoni"
+- "Coauthor 1"
+- "Coauthor 2"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    number_sections: true
+    df_print: paged
+---
+
+
+# Setup 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Load packages:
+
+```{r load-pkgs, message=FALSE, warning=FALSE}
+library(tidyverse)    # to do datascience
+```
+
+Notice that all the other packages are for challenge 2, you don't need to load them in this document.
+
+# Introduction
+
+In this document we will:
+
+1. read geese data
+2. explore data
+3. preprocess data
+
+
+# Read data
+
+Read catches and counts of geese in Flanders:
+
+Set _Global Options_ -> _RMarkdown pane_ -> _Evaluate chunks in directory_: **Project**. In this way RMarkdown knows that he has to read paths starting from the root folder, i.e. the folder containing `coding-club.Rproj`.
+
+```{r read-data}
+catch_fl <- read_csv("./data/20221213/20221213_geese_counts.txt",
+                     na = "NA",
+                     col_types = cols(
+                       province = col_character(),
+                       location = col_character(),
+                       year = col_double(),
+                       latinName = col_character(),
+                       commonName = col_character(),
+                       counts = col_double(),
+                       catched = col_double(),
+                       adult = col_double(),
+                       pulli = col_double(),
+                       not_catched = col_double()
+                     ))
+```
+
+If you don't want to change this global option, fine! Then, you can find interesting to work with package [`here`](https://www.rdocumentation.org/packages/here/versions/1.0.1) to do the same without changing anything:
+
+```{r read-againi-with-here}
+library(here) # install it first if not yet done
+path_catch_file <- here("data", "20221213", "20221213_geese_counts.txt")
+catch_fl <- read_csv(path_catch_file,
+                     na = "NA",
+                     col_types = cols(
+                       province = col_character(),
+                       location = col_character(),
+                       year = col_double(),
+                       latinName = col_character(),
+                       commonName = col_character(),
+                       counts = col_double(),
+                       catched = col_double(),
+                       adult = col_double(),
+                       pulli = col_double(),
+                       not_catched = col_double()
+                     ))
+```
+
+The nice thing of using `here` is that your paths will work always, no matter you run your code manually or you knit it.
+
+Number of geese catch data:
+
+```{r nrows}
+nrow(catch_fl)
+```
+
+Preview:
+
+```{r preview-data}
+head(catch_fl, n = 10)
+```
+
+
+# Explore data
+
+## Taxonomic information
+
+Species present:
+
+```{r species}
+catch_fl %>% distinct(latinName, commonName)
+```
+
+
+## Geographic information
+
+Data are geographically grouped by province and municipality (`location`):
+
+```{r get-provinces&municipalities}
+catch_fl %>% distinct(province, location)
+```
+
+## Temporal information
+
+The data are temporally defined at year level:
+
+```{r get-years}
+years <- catch_fl %>% distinct(year) %>% pull()
+```
+
+from:
+
+```{r min-years}
+min(years)
+```
+
+to:
+
+```{r max-years}
+max(years)
+```
+
+# Preprocess data
+
+Data not linked to any `province` or `location` (`NAs`) will be removed. 
+
+Number of rows removed:
+
+```{r  remove-NAs,  echo=FALSE}
+catch_fl %>% filter(is.na(province) | is.na(location)) %>% nrow
+```
+
+Final dataset:
+
+```{r  show-cleaned-data, echo=FALSE}
+catch_fl <- catch_fl %>% filter(!is.na(province) & !is.na(location))
+catch_fl
+```
+
+## Save cleaned data
+
+This section is added as part of the solution of challenge 2. By saving the cleaned dataframe at the end of this document we can read it at the beginning of the second R Markdown document as input for modelling and plotting.
+
+```{r save-cleaned-data}
+write_csv(x = catch_fl, 
+          file = here("data",
+                      "20221213",
+                      "20221213_geese_counts_cleaned.txt"),
+          na = "")
+```
