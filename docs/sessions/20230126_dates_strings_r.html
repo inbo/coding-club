@@ -1,0 +1,221 @@
+---
+layout: presentation
+title: dates and strings in R
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+  <!-- Adjust the presentation to the session. Focus on the challenges,
+this is not a coding tutorial.
+
+Note, to include figures, store the image in the `/docs/assets/images`
+folder and use the jekyll base.url reference as done in this template
+or see https://jekyllrb.com/docs/liquid/tags/#links.
+  using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 26 JANUARY 2023
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck<br>
+ <br>
+
+---
+class: left, top
+
+## ROOMIE: room reservation
+
+```
+> if (isFALSE(roomie)) {
++   warning("Please confirm asap the room reservation on the roomie")
++ }
+Warning message:
+Please confirm asap the room reservation on the roomie
+```
+
+---
+class: left, top
+
+## Open software: the LIFE RIPARIAS example
+
+
+![:scale 110%]({{ site.baseurl}}/assets/images/20230126/20230126_gbif_issue.png)
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20230126/20230126_badge.png)
+
+---
+class: left, top
+
+## Markdown, R Markdown, bookdown, INBOmd: help!
+
+- Markdown: a markup language \* for creating formatted text using a plain-text editor (= no MS Word!).
+E.g. make text italic by surrounding it with underscores or asterisks, e.g. `__text__` or  `**text**`
+- R Markdown: a file type with extension `Rmd` to _knit_ text (in Markdown) and code (in R) together. Goal: generate high quality shareable reports.
+- [`rmarkdown`](https://rmarkdown.rstudio.com/lesson-1.html): the R package to write R Markdown documents**.
+- [bookdown](https://bookdown.org/yihui/bookdown/): R package to make authoring _books_ or technical documents out of a series of R Markdown documents
+- [INBOmd](https://github.com/inbo/INBOmd#readme): R package containing templates to generate reports, slides or posters with the corporate identity of INBO or the Flemish government.
+
+
+![:scale 40%]({{ site.baseurl}}/assets/images/20230126/20230126_hexlogos.png)
+
+<small>* __Note__: a markup language is a language that annotates text so that the computer can manipulate that text. Most markup languages are human-readable. More on [Wikipedia](https://en.wikipedia.org/wiki/Markup_language#Descriptive_markup).<br>
+\** R Markdown is by default installed within RStudio!
+</small>
+
+---
+class: left, top
+
+The main reference material for today's coding club:
+
+- [lubridate cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/02/lubridate-cheatsheet.pdf)
+- [stringr cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/02/lubridate-cheatsheet.pdf)
+
+---
+class: left, top
+
+# R Packages
+
+Load the packages (or install them first):
+
+```r
+library(tidyverse)    # this imports stringr as well
+library(lubridate)      # lubridate is not part of the tidyverse core packages
+```
+
+---
+class: center, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/BzTg8o1tS6W4-R9HjCCv0Q?both
+
+<iframe src="https://hackmd.io/BzTg8o1tS6W4-R9HjCCv0Q?edit" height="450px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+- Download everything automatically via `inborutils::setup_codingclub_session()`
+- manually*, from [data/20230126](https://github.com/inbo/coding-club/blob/master/data/20230126/) and [src/20230126](https://github.com/inbo/coding-club/blob/master/src/20230126). Place the R script in `/src/20230126/` and data in `/data/20230126/`.
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data and scripts description
+
+1. [20230126_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20230126/20230126_challenges.R): R script about geese counts.
+2. [20230126_geese_counts.txt](https://github.com/inbo/coding-club/blob/master/data/20230126/20230126_geese_counts.txt): comma separated text file with geese catch data to use in `20230126_challenges.R`.
+3. [20230126_flemish_provinces.gpkg](https://github.com/inbo/coding-club/blob/master/data/20230126/20230126_flemish_provinces.gpkg): geopackage with the Flemish provinces to use in `20230126_challenges.R`
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+
+---
+class: left, top
+
+# Intermezzo 1
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+
+---
+class: left, top
+
+# Intermezzo 2
+
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+
+# Challenge 3
+
+---
+class: left, top
+
+# Bonus challenge
+
+---
+class: left, top
+
+## Did you know that...
+
+
+---
+class: left, top
+
+
+---
+class: left, top
+
+# Resources
+
+1. Solutions and video recording will be available soon
+
+---
+class: left, top
+
+# Coding club topics 2023: you vote!
+
+![ ]({{ site.baseurl}}/assets/images/20230126/20230126_ballot.gif)
+
+Every month you can vote among **two topics**!
+
+Poll for February's coding club is open! Let us know your favorite before **1 February 2023**
+
+https://forms.gle/V4w6U39FkHUqTjYu5
+
+![60%]({{ site.baseurl}}/assets/images/20230126/20230126_packages_fight.jpg)
+
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room number and name  -->
+Topic: data manipulation OR making outstanding plots with ggplot <br>
+Room:  HT - 01.04 - Transitielab <br>
+Date: **28/02/2023**, from **10:00** to **12:30** <br>
+Help needed with technical setup? You are welcom from **9:45am**
