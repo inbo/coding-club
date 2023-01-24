@@ -42,9 +42,18 @@ Please confirm asap the room reservation on the roomie
 ---
 class: left, top
 
+## Record the session
+
+![:scale 50%]({{ site.baseurl}}/assets/images/20230126/20230126_rec.png)
+
+Kind reminder to myself.
+
+---
+class: left, top
+
 ## Open software: the LIFE RIPARIAS example
 
-Sometimes a blank space can cause serious damages to a web application... Reporting the bug to GBIF, it was solved incredibly fast!
+Sometimes a blank space can cause serious damages to a web application... Reporting the bug to GBIF and the problem was solved incredibly fast! Good for you, good for everybody else!
 
 ![:scale 50%]({{ site.baseurl}}/assets/images/20230126/20230126_gbif_issue.png)
 
@@ -61,8 +70,8 @@ The main reference material for today's coding club:
 
 ![:scale 80%]({{ site.baseurl}}/assets/images/20230126/20230126_packages_homepage.png)
 
-- [lubridate cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/02/lubridate-cheatsheet.pdf)
-- [stringr cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/02/lubridate-cheatsheet.pdf)
+- [lubridate cheat sheet](https://github.com/inbo/coding-club/blob/main/cheat_sheets/20230126_cheat_sheet_lubridate.pdf)
+- [stringr cheat sheet](https://github.com/inbo/coding-club/blob/main/cheat_sheets/20220428_cheat_sheet_stringr.pdf)
 
 
 ---
@@ -74,7 +83,7 @@ Load the packages (or install them first):
 
 ```r
 library(tidyverse)    # it imports stringr as well
-library(lubridate)      # lubridate is not part of the tidyverse core packages
+library(lubridate)    # lubridate is not part of the tidyverse core packages
 ```
 
 ---
@@ -119,6 +128,9 @@ class: left, top
 
 # Data and scripts description
 
+- Presences of Persian hogweed (_Heracleum persicum_) in Scandinavia (Finland, Sweden and Norway) in 2022. Source: GBIF.org (19 January 2023) GBIF Occurrence Download https://doi.org/10.15468/dl.85bnkw
+- Deployments of a camera trap project in Belgium. Source: the official [example](https://github.com/tdwg/camtrap-dp/blob/ab9f0be7a3fd10113ab00392b8df9d4630683fc5/example/deployments.csv) of the [Camera Trap Data Package](https://tdwg.github.io/camtrap-dp) data exchange format.
+
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -126,12 +138,63 @@ class: left, top
 
 # Challenge 1
 
+1. After reading the dataset `persian_hogweed_2022_scandinavia.csv` (code given), add a new column `date` to the data.frame of the type "Date" (see screenshot).
+2. Add a column called `weekday` with the day of the week, e.g. "Monday".  Do you get week names in other language, e.g. Dutch? You probably need to specify the language `"English"` somewhere in the function :-) Tip: use [day.html](https://lubridate.tidyverse.org/reference/day.html) or the lubridate cheat sheet.
+3. Use a *stamp* to create dates like this `"Occurrence recorded on Monday, Jan 23, 2023"`. Put them in a new column called `date_stamp`.
+4. Add a column called `label` combining the values in columns `species`, `countryCode` and `date` in this way: "Occurrence of Heracleum persicum found in SE on Fri, 25-9-22.". Tip: for the date part
+
+
+![:scale 60%]({{ site.baseurl}}/assets/images/20230126/20230126_dataframe_with_date_challenge1.png)
 
 ---
 class: left, top
 
-# Intermezzo 1
+## Intermezzo. UTC, time zones & Daylight Saving Time
 
+Some definitions:
+
+- UTC (Coordinated Universal Time): not a time zone, but THE ** time standard**. See https://24timezones.com/time-zone/utc
+
+- GMT (Greenwich Mean Time) : one of the well-known names of UTC+0 ** time zone**). GMT does observe Daylight Saving Time (unlike UTC which is not a time zone!), more on https://24timezones.com/gmt-vs-utc
+
+- World time zone map: https://24timezones.com/timezone-map
+
+- DST (Daylight Saving Time): “spring forward, fall back". 2019-03-26: [European Parliament voted in favor of a ban of DST by end 2021](https://www.dw.com/en/eu-parliament-votes-to-end-daylight-savings/a-48064185). However, finding a compromise with each EU member state was not as smooth as expected. Reasons? Pandemic, Brexit, bureaucracy and a substantial lack of  support from the state governements. Read [more](https://www.bloomberg.com/news/articles/2021-03-11/will-daylight-saving-time-ever-end) if interested.
+
+
+<p>![:scale 55%]({{ site.baseurl}}/assets/images/20230126/20230126_daylight_saving_time.png)
+
+---
+class: left, middle
+
+## Intermezzo. UTC, time zones & Daylight Saving Time
+
+- How to define time zones? Typically `"Continent/City"` works well:
+
+```r
+as_datetime("2020-08-01 09:00:00", tz = "Asia/Tehran")
+[1] "2020-08-01 09:00:00 +0430"
+as_datetime("2020-08-01 09:00:00", tz = "Europe/Brussels")
+[1] "2020-08-01 09:00:00 CEST"
+```
+
+or a time zone abbreviation:
+
+```r
+as_datetime("2020-08-01 09:00:00", tz = "CET")
+[1] "2020-08-01 09:00:00 CEST"
+```
+
+Note the authomatic conversion to CEST (Central Europe *Summer* Time). However, if you use CEST it will not work, and you get the GMT version:
+
+```r
+as_datetime("2020-08-01 09:00:00", tz = "CEST")
+[1] "2020-08-01 07:00:00 GMT"
+Warning message:
+In as.POSIXlt.POSIXct(x, tz) : unknown timezone 'CEST'
+```
+
+CEST is ** NOT **  a time zone!
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -139,13 +202,29 @@ class: left, top
 
 # Challenge 2
 
+First, read 20230126_deployments.txt (code provided!). Notice how the datetimes are authomatically read as standard UTC times if expressed in the ISO standard , i.e. yyyy-mm-ddThh:mm:ss!
+
+1. Add a column called local_start and local_end with clock time showing the timezone. The deployments are all located in Belgium. Notice that the datetimes in `start` and `end` are UTC times. Tip: read the [time-zones][https://lubridate.tidyverse.org/reference/lubridate-package.html#time-zones) section from the "Get started".
+2. Oh no, the data manager said us that `start` and `end` are not UTC times but local times: a bug in the system  caused the loss of the time zone while writing the datetime. How to set `local_time` and `local_end` properly in this case? Tip: the same as before. Correct UTC `start` and `end` columns as well.
+3. Based on `start` and `end`, calculate the duration of each deployment and store it in column `duration`
+4. Get hour and day information of the start of the deployments. You can store them as additional columns called `hour_start`, `day_start`
+
 
 ---
 class: left, top
 
-# Intermezzo 2
+## Intermezzo: <b>reg</b><small>ular</small> <b>ex</b><small>pressions</small>
 
+How to detect/remove/extract:
+- any kind of digit?
+- anything but letters `a `, `b` and `e`?
+- all  full stops (`.`)?
+- any extra full stop (`.`)?
 
+![:scale 40%]({{ site.baseurl}}/assets/images/20230126/20230126_regular_expresssions.png)
+<br>Try yourself some of these rules before moving to challenge 3.
+
+Also check the very useful [regex101](https://regex101.com) website.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -154,27 +233,48 @@ class: left, top
 
 # Challenge 3
 
+1. Select the occurrences of persian hogweed coming from the [Finnish Biodiversity Information Facility](https://laji.fi/en) (FinBIF), i.e. the occurrences with occurrenceID starting with `http://tun.fi/`. Store them in a new data.frame called `finbif_occs`.
+2. Retrieve the authorship from column `scientificName`, i.e. the string after the value in column `species`. Store it in a new column called `authorship`.
+3. Get the "internal" ID for each occurrence of `persian_hogweed` dataframe. Such ID is the number after the very last colon (`:`), dot (`.`) or slash (`/`), e.g. `105853683` for `urn:lsid:artportalen.se:sighting:105853683` or `36631219` for `http://tun.fi/MKC.36631219` or `63a587a8d5de65595547a609#Unit1` for `http://tun.fi/KE.176/63a587a8d5de65595547a609#Unit1`. Tip: one of [these functions](https://stringr.tidyverse.org/reference/str_split.html) and a simple regex can help you a lot!
+
 ---
 class: left, top
 
 # Bonus challenge
 
----
-class: left, top
+## strings
 
-## Did you know that...
+Regex is very powerful but can become quite complex. Fortunately, we have the cheat sheet and regex101 website. But also we have the entire internet, full of regex questions/answers :-)
 
+1. The occurrences in `finbif_occs` are coming from different projects. They can be identified by the letters following the prefix `"http://tun.fi/"` and preceding a dot, e.g.  `MKC` for `http://tun.fi/MKC.36631219`,  `JX` for `http://tun.fi/JX.1443935#3`. Extract the project acronyms from the `occurrenceID` of `finbif_occs` and store them in column `project`. Tip: check the cheat sheet and use [regex101](https://regex101.com) website.
 
----
-class: left, top
+2. Metal rings, typically applied to animals such as birds, should be expressed
+as a letter followed by a sequence of 10 digits. If less than 10 digits are
+present on the ring, dots should be added between the letter and the digits.
+Example: `E123456` should become `E.....123456`. Tip: cheat sheet helps a lot!
 
+```
+metal_rings <- c("A1234567890", "B123456789", "C12345678", "D1234567")
+```
+
+## dates
+
+Challenge of Dirk
 
 ---
 class: left, top
 
 # Resources
 
-1. Solutions and video recording will be available soon
+- Solutions and video recording will be available soon
+- [lubridate](https://lubridate.tidyverse.org) package homepage
+- [stringr](https://stringr.tidyverse.org) package homepage
+- [lubridate cheat sheet](https://github.com/inbo/coding-club/blob/main/cheat_sheets/20230126_cheat_sheet_lubridate.pdf)
+- [stringr cheat sheet](https://github.com/inbo/coding-club/blob/main/cheat_sheets/20220428_cheat_sheet_stringr.pdf)
+- [Chapter 16: Dates and times](https://r4ds.had.co.nz/dates-and-times.html) from the "R for Data Science" digital book
+- The [world time zone map](https://24timezones.com/timezone-map)
+- [GMT versus UTC](https://24timezones.com/gmt-vs-utc)
+- News about the [ban of day-light saving time](https://www.dw.com/en/eu-parliament-votes-to-end-daylight-savings/a-48064185) by end 2021 and the subsequent [obstacles](https://www.bloomberg.com/news/articles/2021-03-11/will-daylight-saving-time-ever-end).
 
 ---
 class: left, top

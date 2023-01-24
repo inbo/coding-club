@@ -1,0 +1,479 @@
+gbifID	occurrenceID	species	scientificName	countryCode	decimalLatitude	decimalLongitude	coordinateUncertaintyInMeters	day	month	year	speciesKey
+4013999693	urn:lsid:artportalen.se:sighting:105853683	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.42394	15.60291	50	25	11	2022	3628745
+4007595301	http://tun.fi/KE.176/63a587a8d5de65595547a609#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.605543	27.149036	1	23	12	2022	3628745
+3993744050	urn:lsid:artportalen.se:sighting:104987412	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.94753	19.60093	400	9	12	2022	3628745
+3993661397	urn:lsid:artportalen.se:sighting:104825009	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.70973	14.05502	10	30	6	2022	3628745
+3993642598	urn:lsid:artportalen.se:sighting:104824997	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.81259	14.80007	10	6	9	2022	3628745
+3993619816	urn:lsid:artportalen.se:sighting:104824998	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.17557	14.61274	10	17	8	2022	3628745
+3993593978	urn:lsid:artportalen.se:sighting:104824999	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.17565	14.61282	10	17	8	2022	3628745
+3993585530	urn:lsid:artportalen.se:sighting:104825006	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.48601	15.46335	10	30	6	2022	3628745
+3993550379	urn:lsid:artportalen.se:sighting:104824996	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.81205	14.800230000000001	10	6	9	2022	3628745
+3993511884	urn:lsid:artportalen.se:sighting:104825007	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.70973	14.05559	10	30	6	2022	3628745
+3993500172	urn:lsid:artportalen.se:sighting:104825008	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.72102	14.04095	10	30	6	2022	3628745
+3993467886	urn:lsid:artportalen.se:sighting:104825004	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.42375	15.60316	10	1	7	2022	3628745
+3993415193	urn:lsid:artportalen.se:sighting:104825005	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.46292	15.52746	10	30	6	2022	3628745
+3993354389	urn:lsid:artportalen.se:sighting:104825002	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.20969	15.92974	10	3	7	2022	3628745
+3993333174	urn:lsid:artportalen.se:sighting:104888353	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.81523	20.67205	5	1	12	2022	3628745
+3993283625	urn:lsid:artportalen.se:sighting:104825003	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.2235	15.9051	10	1	7	2022	3628745
+3993231221	urn:lsid:artportalen.se:sighting:104824995	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.81205	14.80047	10	6	9	2022	3628745
+3993167195	urn:lsid:artportalen.se:sighting:104825001	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.32594	14.82266	10	17	8	2022	3628745
+3993152833	urn:lsid:artportalen.se:sighting:104657085	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	66.14439	19.9949	10	25	6	2022	3628745
+3993121157	urn:lsid:artportalen.se:sighting:104440651	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.91752	14.5564	75	2	11	2022	3628745
+3993060003	urn:lsid:artportalen.se:sighting:104825000	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.32581	14.82269	10	17	8	2022	3628745
+3987921483	urn:uuid:ff2dbd52-e8d4-458d-86cf-8c2c6c00c0eb	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.387171	10.3775	5	13	9	2022	3628745
+3970254421	urn:uuid:601f22df-e7a1-4920-a017-32e5fbfac49d	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	68.820432	16.535191	10	15	7	2022	3628745
+3970244431	urn:uuid:61611df3-cf2e-4e44-95ed-64200209dd09	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.660392	18.91596	10	17	8	2022	3628745
+3970181426	urn:uuid:619e48a8-2ce8-45e7-91d0-b00f862f31b4	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.662443	18.911163	10	12	9	2022	3628745
+3970171583	urn:uuid:c08a031e-7a7b-4c0d-8a67-23f4d58217de	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	68.79648	16.444353	5	20	6	2022	3628745
+3966237547	http://tun.fi/MKC.36764006	Heracleum persicum	Heracleum persicum Desf.	FI	62.353843	27.064288	1000	9	7	2022	3628745
+3966215528	http://tun.fi/MKC.36631219	Heracleum persicum	Heracleum persicum Desf.	FI	62.873271	24.195966	1000	26	6	2022	3628745
+3966094401	urn:uuid:5fa5180e-43f9-4d6a-b5ba-288cde40e0d1	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	67.322416	15.092397	5	27	6	2022	3628745
+3964598353	urn:lsid:artportalen.se:sighting:104029771	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.94532	19.6035	29	5	10	2022	3628745
+3964243259	urn:lsid:artportalen.se:sighting:104029545	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.94756	19.6026	5	5	10	2022	3628745
+3964211034	urn:lsid:artportalen.se:sighting:103928308	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.75035	20.95935	10	3	10	2022	3628745
+3962664361	urn:uuid:32a12df2-723c-41b6-8f56-0bf95cf37fcd	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	58.082091	7.914212	5	9	6	2022	3628745
+3962279331	http://tun.fi/KE.176/6350f6c4d5de399eb9ca552e#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.211937	28.233067	1	19	10	2022	3628745
+3962279304	http://tun.fi/KE.176/634503c6d5de399eb9ca5438#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.133786	25.673354	1	11	10	2022	3628745
+3927153448	urn:uuid:7a7137f6-82ad-424c-ba76-7b86cdb1ff76	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	70.046662	22.972392	10	2	8	2022	3628745
+3924317510	urn:uuid:bf65a077-945f-47a7-87a1-83676b1378eb	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.410566	10.38518	5	15	6	2022	3628745
+3924314347	urn:uuid:298ec778-4ae8-4a8e-8f70-42caa3d4b618	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.410500999999996	10.385737	5	15	6	2022	3628745
+3924312494	urn:uuid:957b4e31-f9d2-4426-a0c5-06eefe9c8390	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.408941	10.384722	5	15	6	2022	3628745
+3924304304	urn:uuid:03729aff-3183-42b9-b21a-c5599acd4b26	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.409038	10.384102	5	15	6	2022	3628745
+3924302585	urn:uuid:d88e396c-f141-4345-939e-d45d4c6686fb	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.408688	10.385019	5	15	6	2022	3628745
+3924302343	urn:uuid:1e3ae738-2466-4a5d-a5cf-33cd31adf336	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.362245	17.052396	10	1	10	2022	3628745
+3924292356	urn:uuid:2d42a0a6-7995-42ac-83fc-494461f13e1b	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.411004	10.385657	5	15	6	2022	3628745
+3924289323	urn:uuid:15282e7a-5f40-4b5c-a6d2-49022cb66566	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.409741	10.383312	5	15	6	2022	3628745
+3924277485	urn:uuid:933fbb0b-ad15-43e6-8114-5a637893897c	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.408752	10.386079	5	15	6	2022	3628745
+3924275496	urn:uuid:a4eddcf2-ee21-4a68-b929-8123fc9cd57d	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.41059	10.38536	5	15	6	2022	3628745
+3924267350	urn:uuid:282c507c-5cea-419d-b044-6c09daa109ea	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.41059	10.385154	5	15	6	2022	3628745
+3924262604	urn:uuid:e22b4bd9-6d41-48c6-8b4e-50f845f02f9e	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.408808	10.385648	5	15	6	2022	3628745
+3924261500	urn:uuid:a2f663dd-89c9-4b11-a623-ea749efe3981	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.405057	10.387795	5	15	6	2022	3628745
+3924260379	urn:uuid:450a01cd-bd9d-4dbb-975d-baacd5ae88f0	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.409078	10.384498	5	15	6	2022	3628745
+3924255366	urn:uuid:3fd25a55-401c-4b18-be14-48277f99c776	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.407417	10.385692	5	15	6	2022	3628745
+3924244510	urn:uuid:a9af62b4-97d4-43f7-841e-a1ce2a429834	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.410907	10.385531	5	15	6	2022	3628745
+3924243403	urn:uuid:52bfc033-29d0-4c61-9d2f-6650bd583268	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.407244	10.385621	5	15	6	2022	3628745
+3924236443	urn:uuid:7822ac05-91fb-41e2-b66b-5ede92c5ae6f	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.410747	10.385773	5	15	6	2022	3628745
+3924233508	urn:uuid:b645957e-1cd9-4cb4-9dea-054a8487f5c9	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.410558	10.385162	5	15	6	2022	3628745
+3924233311	urn:uuid:0722f63a-4341-4f54-806a-df49fea16063	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.40876	10.384453	5	15	6	2022	3628745
+3924223457	urn:uuid:91be0310-7ab8-4368-b250-dfd4f04b51d1	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.406167	10.385692	5	15	6	2022	3628745
+3924211309	urn:uuid:057d4bbe-357a-4c75-ab83-6cf9680d6db4	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.408455	10.385297	5	15	6	2022	3628745
+3924198450	urn:uuid:75912a6c-c3c2-41f5-bbdf-cd052c84bec6	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.410196	10.382953	5	15	6	2022	3628745
+3924197531	urn:uuid:c7c8f614-b68e-44cb-865f-02a872e0258d	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.410521	10.38527	5	15	6	2022	3628745
+3924193322	urn:uuid:1b032029-589a-4d5a-b157-4e58e75e8c08	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.409263	10.383887	5	15	6	2022	3628745
+3921299355	urn:uuid:2fcedba8-bd98-4750-b584-6bc147143c91	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.776495	19.339506	200	29	9	2022	3628745
+3921284468	urn:uuid:81c44cfd-c96b-4830-8916-ec9d2981fb7b	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.718392	19.090359	300	5	10	2022	3628745
+3920447474	urn:lsid:artportalen.se:sighting:103532582	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	59.08037	14.1382	200	13	8	2022	3628745
+3920311323	urn:lsid:artportalen.se:sighting:103680115	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.28364	18.78176	10	2	9	2022	3628745
+3919399253	urn:lsid:artportalen.se:sighting:103471391	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.46649	21.39161	25	10	9	2022	3628745
+3916033671	http://tun.fi/JX.1443935#3	Heracleum persicum	Heracleum persicum Desf.	FI	61.101631	24.358274	100	21	9	2022	3628745
+3916032724	http://tun.fi/JX.1445089#3	Heracleum persicum	Heracleum persicum Desf.	FI	60.552038	22.224146	1	9	8	2022	3628745
+3916030499	http://tun.fi/JX.1441201#3	Heracleum persicum	Heracleum persicum Desf.	FI	60.62565	25.212674	100	10	9	2022	3628745
+3914243351	http://tun.fi/KE.176/63319ef0d5de8bf0374dfa6f#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.576433	29.827521	1	25	9	2022	3628745
+3912814482	urn:uuid:b1591879-6ff9-406a-9a87-016bb548c852	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.745631	11.366006	5	3	8	2022	3628745
+3909336304	urn:catalog:TROM:V:971939	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.2324	17.9976	1	25	7	2022	3628745
+3909327309	urn:catalog:TROM:V:971995	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.2348	18.0355	1	26	7	2022	3628745
+3909305310	http://tun.fi/MKC.36542561	Heracleum persicum	Heracleum persicum Desf.	FI	61.041257	27.820374	1000	4	6	2022	3628745
+3909286562	http://tun.fi/MKC.36462393	Heracleum persicum	Heracleum persicum Desf.	FI	60.27125	24.527133	1	27	8	2022	3628745
+3909275784	http://tun.fi/MKC.36326464	Heracleum persicum	Heracleum persicum Desf.	FI	60.29925	24.55487	1	6	6	2022	3628745
+3909275783	http://tun.fi/MKC.36326310	Heracleum persicum	Heracleum persicum Desf.	FI	60.29881	24.556332	1	6	6	2022	3628745
+3909254443	http://tun.fi/MKC.36326282	Heracleum persicum	Heracleum persicum Desf.	FI	60.298516	24.556481	1	6	6	2022	3628745
+3907680486	urn:uuid:8f97212d-17bc-4e50-b78e-78a89bb2a6bc	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	65.469285	12.133158	5	14	9	2022	3628745
+3901407435	http://tun.fi/KE.176/631e25add5debf694eaa57fa#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.174	27.661	1	11	9	2022	3628745
+3899684308	http://tun.fi/KE.176/631b5cfdd5debf694eaa576d#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.274912	24.958458	100	9	9	2022	3628745
+3899540779	urn:lsid:artportalen.se:sighting:103436522	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.94762	19.60125	10	6	9	2022	3628745
+3899459427	urn:lsid:artportalen.se:sighting:103362485	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.67566	17.83009	25	4	9	2022	3628745
+3899358916	urn:lsid:artportalen.se:sighting:103276601	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.79979	20.28143	100	30	8	2022	3628745
+3899165325	urn:lsid:artportalen.se:sighting:103113187	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.46649	21.39161	25	24	8	2022	3628745
+3898995643	urn:uuid:e932d0a8-b95d-461b-a177-19d59d75b234	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.681127	18.908252	10	1	9	2022	3628745
+3898993450	urn:uuid:576513f0-be93-43b1-a9b8-ccdf129069a3	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.254695	19.419654	10	1	9	2022	3628745
+3898991613	urn:uuid:e26bdda4-2915-423f-8acc-2c5bf01aea8f	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.681127	18.908252	10	4	9	2022	3628745
+3898528304	http://tun.fi/JX.1439737#3	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	FI	62.173723	30.246074	100	6	9	2022	3628745
+3898524352	http://tun.fi/KE.176/631890e8d5debf694eaa570a#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.891867	25.826017	1	14	7	2022	3628745
+3898233551	http://tun.fi/KE.176/6311ed5ad5debf694eaa55e0#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	59.986815	23.413948	1	27	6	2022	3628745
+3898065353	http://tun.fi/KE.176/630c6222d5dedc2cc40da977#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.770135	25.231332	1	20	8	2022	3628745
+3898065347	http://tun.fi/KE.176/631117b8d5debf694eaa55b3#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.519824	24.497767	1	1	9	2022	3628745
+3898065322	http://tun.fi/KE.176/630f5e08d5dedc2cc40daa48#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.771437	25.229444	1	31	8	2022	3628745
+3897525473	urn:uuid:793d35da-f842-4ab0-a86c-2ebccb27d45b	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	68.821653	16.559715	25	21	6	2022	3628745
+3897489401	urn:uuid:48afccfa-36fd-41ce-bd94-21f03aae8a84	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	68.822821	16.558735	10	16	6	2022	3628745
+3897470362	urn:uuid:2c822435-0f0a-427e-aebc-dabb575af173	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	68.822367	16.555322	25	26	8	2022	3628745
+3897164306	http://tun.fi/JX.1436649#3	Heracleum persicum	Heracleum persicum Desf.	FI	60.287549	25.500264	100	26	8	2022	3628745
+3894151406	http://tun.fi/KE.176/630b0e54d5dedc2cc40da8dd#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.593926	29.740416	1	24	8	2022	3628745
+3894151392	http://tun.fi/KE.176/6309f200d5dedc2cc40da87e#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.584009	22.887707	1	27	8	2022	3628745
+3894151381	http://tun.fi/KE.176/63089f18d5dedc2cc40da807#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.954448	23.121592	1000	26	8	2022	3628745
+3894151370	http://tun.fi/KE.176/6305c6a9d5dedc2cc40da75b#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.789373	23.516914	1	23	8	2022	3628745
+3894151309	http://tun.fi/KE.176/6300f8acd5dedc2cc40da616#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.48616	22.669913	1	20	8	2022	3628745
+3893762325	urn:lsid:artportalen.se:sighting:103011608	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.82667	15.94916	25	21	8	2022	3628745
+3893706377	urn:lsid:artportalen.se:sighting:102983875	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.78907	15.97697	25	19	8	2022	3628745
+3893251437	urn:uuid:4f1f8064-f88f-4051-a4f8-dc0af58d66b3	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.439999	10.476997	5	18	8	2022	3628745
+3893154458	urn:uuid:73632708-7bad-41b6-9518-ec43d2c66d47	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.777501	19.27401	500	19	8	2022	3628745
+3893141423	urn:uuid:579bef86-8ffc-4256-90ae-03ca44aab0a2	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.667628	18.969778	10	19	8	2022	3628745
+3892777575	http://tun.fi/KE.176/62fc91f7d5de0b49ae925c2e#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.734523	28.884122	1	14	8	2022	3628745
+3890977301	urn:lsid:artportalen.se:sighting:101825873	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.34792	13.4539	25	22	6	2022	3628745
+3890716301	urn:lsid:artportalen.se:sighting:101825798	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.34871	13.45115	25	22	6	2022	3628745
+3890613562	http://tun.fi/KE.176/62eba71ed5deb24e3def42f8#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.388229	23.792261	1	4	8	2022	3628745
+3890613516	http://tun.fi/KE.176/62eb399bd5de816d9a95120f#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.136855	25.658275	1	4	8	2022	3628745
+3890613509	http://tun.fi/KE.176/62fb527dd5de0b49ae925bcf#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.017169	24.50043	1	16	8	2022	3628745
+3890613489	http://tun.fi/KE.176/62eca452d5deb24e3def4334#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.075808	27.68133	1	4	8	2022	3628745
+3890613473	http://tun.fi/KE.176/62ea44ead5de816d9a9511c4#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.505986	21.815203	1	3	8	2022	3628745
+3890613471	http://tun.fi/KE.176/62fb7622d5de0b49ae925be1#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.574021	25.877576	10	20	7	2022	3628745
+3890613470	http://tun.fi/KE.176/62f2997ed5de0b49ae9259a6#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.468379	24.012314	1	7	8	2022	3628745
+3890613457	http://tun.fi/KE.176/62f12da5d5deb24e3def4427#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.22557	25.704825	100	8	8	2022	3628745
+3890613444	http://tun.fi/KE.176/62effa78d5deb24e3def43e1#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.573099	29.798959	1	6	8	2022	3628745
+3890613440	http://tun.fi/KE.176/62fb34b0d5de0b49ae925bc4#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	64.371943	27.89072	1	16	8	2022	3628745
+3890613418	http://tun.fi/KE.176/62eea1c5d5deb24e3def43a9#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.016653	25.713905	1	6	8	2022	3628745
+3890613410	http://tun.fi/KE.176/62f68d8ad5de0b49ae925a86#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.737328	24.706712	1000	12	8	2022	3628745
+3890613401	http://tun.fi/KE.176/62efa1ead5deb24e3def43c3#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.617948	29.824332	1	7	8	2022	3628745
+3890613397	http://tun.fi/KE.176/62ea864bd5de816d9a9511ea#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.692	24.661	1	3	8	2022	3628745
+3890613392	http://tun.fi/KE.176/62f12d77d5deb24e3def4426#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.22557	25.704825	100	8	8	2022	3628745
+3890613389	http://tun.fi/KE.176/62fa57ccd5de0b49ae925b80#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.888364	26.273361	1	12	8	2022	3628745
+3890613388	http://tun.fi/KE.176/62ee7dc3d5deb24e3def439d#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	65.883203	27.972022	1	6	8	2022	3628745
+3890613375	http://tun.fi/KE.176/62ea2320d5de816d9a9511af#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.396937	24.641418	1	30	7	2022	3628745
+3890613372	http://tun.fi/KE.176/62ea6c58d5de816d9a9511d8#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.558558	23.640694	1	30	7	2022	3628745
+3890613358	http://tun.fi/KE.176/62f0a10dd5deb24e3def43f2#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.571809	25.873606	1	18	7	2022	3628745
+3890613353	http://tun.fi/KE.176/62fb2349d5de0b49ae925bc1#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.95274	25.12617	1000	16	8	2022	3628745
+3890613344	http://tun.fi/KE.176/62f9e8cfd5de0b49ae925b55#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.26481	24.742485	1	15	8	2022	3628745
+3890613337	http://tun.fi/KE.176/62f09c40d5deb24e3def43f1#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.425484	23.735054	1	8	8	2022	3628745
+3890613327	http://tun.fi/KE.176/62ee440fd5deb24e3def438e#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.499981	27.439615	1	17	7	2022	3628745
+3890613313	http://tun.fi/KE.176/62fc8b8dd5de0b49ae925c26#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.392667	24.5245	1	17	8	2022	3628745
+3889996377	urn:uuid:48c1aa84-0ee1-410b-b4dd-22f8506b23cb	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.222399	17.97325	200	15	8	2022	3628745
+3887720303	urn:lsid:artportalen.se:sighting:102316135	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	67.8556	20.25199	25	15	7	2022	3628745
+3887709303	urn:lsid:artportalen.se:sighting:102361289	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	65.63152	22.02141	2	20	7	2022	3628745
+3887437310	urn:lsid:artportalen.se:sighting:102662407	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.33798	19.18098	25	2	8	2022	3628745
+3887318302	urn:lsid:artportalen.se:sighting:102346759	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	65.21834	21.42529	25	17	7	2022	3628745
+3887305302	urn:lsid:artportalen.se:sighting:102438295	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.33802	19.18074	25	18	7	2022	3628745
+3887267448	urn:lsid:artportalen.se:sighting:102740918	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.43629	15.12544	25	6	8	2022	3628745
+3887194302	urn:lsid:artportalen.se:sighting:102297765	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	65.64268	21.9938	4	17	7	2022	3628745
+3886581349	urn:uuid:3c13b014-02c1-4772-bf2a-685caad46039	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.68642	18.927395	100	25	7	2022	3628745
+3886396521	urn:uuid:e21d7b31-002f-46e7-bffd-836b5a7a0ee4	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	67.290809	14.579765	5	28	7	2022	3628745
+3886384384	urn:uuid:6abb03fb-250c-4b3f-9142-b9fe3c79434a	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.349932	10.318049	10	9	8	2022	3628745
+3880574882	urn:lsid:artportalen.se:sighting:102352709	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	59.60967	17.63928	10	19	6	2022	3628745
+3880543823	urn:lsid:artportalen.se:sighting:102475592	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	65.26191	19.63245	250	25	7	2022	3628745
+3880399581	urn:lsid:artportalen.se:sighting:102488646	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.17562	14.6128	5	12	7	2022	3628745
+3880315867	urn:lsid:artportalen.se:sighting:102599407	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.78649	15.97037	25	20	7	2022	3628745
+3880290608	urn:lsid:artportalen.se:sighting:102671257	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.68389	17.82814	50	4	8	2022	3628745
+3880250443	urn:lsid:artportalen.se:sighting:102318699	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.84048	20.30648	10	17	7	2022	3628745
+3880232763	urn:lsid:artportalen.se:sighting:102308613	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	65.84794	14.70618	50	25	6	2022	3628745
+3880212684	urn:lsid:artportalen.se:sighting:102599382	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.78785	15.96595	25	20	7	2022	3628745
+3880113625	urn:lsid:artportalen.se:sighting:102671176	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.68295	17.82658	30	4	8	2022	3628745
+3880005610	urn:lsid:artportalen.se:sighting:102234815	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.19571	14.4769	50	13	7	2022	3628745
+3880000463	urn:lsid:artportalen.se:sighting:102190884	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.20498	19.71253	20	11	7	2022	3628745
+3879888341	urn:lsid:artportalen.se:sighting:102671223	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.68293	17.82832	25	4	8	2022	3628745
+3879781454	urn:lsid:artportalen.se:sighting:102378587	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.83892	20.309	50	21	7	2022	3628745
+3879781348	urn:lsid:artportalen.se:sighting:101831128	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.80149	20.27977	25	23	6	2022	3628745
+3879712531	urn:lsid:artportalen.se:sighting:102431203	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.92874	19.22023	100	23	7	2022	3628745
+3879306396	http://tun.fi/KE.176/62ebed08d5deb24e3def4318#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.153407	23.686233	1	30	7	2022	3628745
+3879048506	urn:uuid:e4abf489-e6a4-433f-bcd1-23e488c4479f	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	60.726328	10.598773	25	27	7	2022	3628745
+3879039470	urn:uuid:8dda29e6-8bbb-443d-896f-16493b93d5e2	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	70.043105	22.951857	500	29	7	2022	3628745
+3879032499	urn:uuid:e1e99865-82a7-452e-82ae-62e68e448a94	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	60.730136	10.617188	75	20	7	2022	3628745
+3878975434	urn:uuid:99ed3888-7bb9-4f45-863c-c27531ed38db	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	64.734816	11.211972	1	22	7	2022	3628745
+3878939338	urn:uuid:3276bdb1-1ce5-4202-ae81-5e275e6c9597	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	68.7878	17.161298	10	23	7	2022	3628745
+3878889490	urn:uuid:bd1791e1-c7e8-4ebe-86d0-39ad6e330108	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	60.730496	10.615913	50	27	7	2022	3628745
+3878886310	urn:uuid:052f725d-bc48-4bc3-a255-565b41661f6b	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	68.698279	15.415683	100	16	7	2022	3628745
+3878883359	urn:uuid:40edf4a8-66df-46c0-aa86-b3ad7df5e702	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	60.730075	10.617197	50	27	7	2022	3628745
+3874894418	http://tun.fi/KE.176/62e17c7dd5de816d9a950fad#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	66.781944	23.98808	1	27	7	2022	3628745
+3874894410	http://tun.fi/KE.176/62e97ffcd5de816d9a951191#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.667382	26.605327	1	2	8	2022	3628745
+3874894408	http://tun.fi/KE.176/62e67a3fd5de816d9a9510b0#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.759521	22.654227	1	30	7	2022	3628745
+3874894398	http://tun.fi/KE.176/62e8f584d5de816d9a95115e#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.706752	28.89563	1	1	8	2022	3628745
+3874894389	http://tun.fi/KE.176/62e9a4c9d5de816d9a95119b#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.409454	25.319003	1	2	8	2022	3628745
+3874894385	http://tun.fi/KE.176/62e4c542d5de816d9a951051#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.400369	22.152024	1	29	7	2022	3628745
+3874894378	http://tun.fi/KE.176/62e16e11d5de816d9a950fa9#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.604491	22.0304	100	27	7	2022	3628745
+3874894376	http://tun.fi/KE.176/62e3b70ad5de816d9a95102c#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.768512	26.540939	1	29	7	2022	3628745
+3874894357	http://tun.fi/KE.176/62e25e7fd5de816d9a950fd2#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.982401	25.856452	1	28	7	2022	3628745
+3874894355	http://tun.fi/KE.176/62e16e0ed5de816d9a950fa8#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.604491	22.0304	100	27	7	2022	3628745
+3874894352	http://tun.fi/KE.176/62e3954bd5de816d9a951022#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.891039	24.875317	1	29	7	2022	3628745
+3874894348	http://tun.fi/KE.176/62e78fa6d5de816d9a9510f9#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.496828	27.2124	1	11	7	2022	3628745
+3874894340	http://tun.fi/KE.176/62e8199ad5de816d9a951131#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.409306	25.318811	1	1	8	2022	3628745
+3874894337	http://tun.fi/KE.176/62e4d4dad5de816d9a951053#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	64.823893	27.943249	1	29	7	2022	3628745
+3874894335	http://tun.fi/KE.176/62e1ae9ad5de816d9a950fbb#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.625223	25.212852	1	27	7	2022	3628745
+3874894317	http://tun.fi/KE.176/62e7b88bd5de816d9a951104#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.387708	23.755933	1	27	7	2022	3628745
+3874894305	http://tun.fi/KE.176/62e67b1bd5de816d9a9510b1#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.626885	29.71275	1	31	7	2022	3628745
+3874894304	http://tun.fi/KE.176/62e565e9d5de816d9a951084#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	64.932211	28.674366	100	30	7	2022	3628745
+3874893304	http://tun.fi/JX.1427050#3	Heracleum persicum	Heracleum persicum Desf.	FI	65.242087	25.329215	100	31	7	2022	3628745
+3874893303	http://tun.fi/JX.1427170#3	Heracleum persicum	Heracleum persicum Desf.	FI	60.249956	24.886818	100	25	7	2022	3628745
+3874446431	http://tun.fi/KE.176/62dd79bfd5de816d9a950e5d#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.245499	25.652191	1	24	7	2022	3628745
+3874446430	http://tun.fi/KE.176/62d933cdd5de816d9a950d4d#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.971954	24.518449	1	21	7	2022	3628745
+3874446423	http://tun.fi/KE.176/62de6616d5de816d9a950ec3#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.304316	25.116892	1	25	7	2022	3628745
+3874446422	http://tun.fi/KE.176/62d42720d5de816d9a950c01#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.545367	24.122222	1000	17	7	2022	3628745
+3874446420	http://tun.fi/KE.176/62d5237cd5de816d9a950c2e#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.74443	26.103077	1	18	7	2022	3628745
+3874446419	http://tun.fi/KE.176/62dd44fdd5de816d9a950e47#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.266878	25.206721	1	24	7	2022	3628745
+3874446417	http://tun.fi/KE.176/62d6ce12d5de816d9a950ca4#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	64.24596	27.763344	1	19	7	2022	3628745
+3874446413	http://tun.fi/KE.176/62d7b6c0d5de816d9a950cd7#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.933028	27.668585	1	20	7	2022	3628745
+3874446412	http://tun.fi/KE.176/62dd31a8d5de816d9a950e3d#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.18546	25.147821	1	23	7	2022	3628745
+3874446405	http://tun.fi/KE.176/62d68604d5de816d9a950c8a#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.579055	25.858587	1	19	7	2022	3628745
+3874446404	http://tun.fi/KE.176/62d6c754d5de816d9a950ca2#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.608392	22.583963	1	19	7	2022	3628745
+3874446401	http://tun.fi/KE.176/62d66d3bd5de816d9a950c7f#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.491463	23.792554	1	19	7	2022	3628745
+3874446400	http://tun.fi/KE.176/62dd7b3dd5de816d9a950e5f#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.9691	24.729661	100	24	7	2022	3628745
+3874446398	http://tun.fi/KE.176/62da8008d5de816d9a950dae#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.566541	21.799734	100000	21	7	2022	3628745
+3874446396	http://tun.fi/KE.176/62de6140d5de816d9a950ebf#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.503219	23.62903	1	25	7	2022	3628745
+3874446395	http://tun.fi/KE.176/62d55d9ad5de816d9a950c55#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.810909	25.742953	100	18	7	2022	3628745
+3874446390	http://tun.fi/KE.176/62dd7f37d5de816d9a950e63#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.604238	22.03072	1	23	7	2022	3628745
+3874446388	http://tun.fi/KE.176/62d7fcbbd5de816d9a950cf2#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.486764	23.833056	1	20	7	2022	3628745
+3874446386	http://tun.fi/KE.176/62d72b6cd5de816d9a950cc6#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.30591	23.609934	1	19	7	2022	3628745
+3874446384	http://tun.fi/KE.176/62de88ccd5de816d9a950ecd#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.439437	22.19442	1	22	7	2022	3628745
+3874446382	http://tun.fi/KE.176/62d5b889d5de816d9a950c6e#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.486579	23.520591	100	18	7	2022	3628745
+3874446380	http://tun.fi/KE.176/62d672d9d5de816d9a950c83#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.982935	25.856143	1	19	7	2022	3628745
+3874446379	http://tun.fi/KE.176/62d42288d5de816d9a950bff#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.316306	23.644594	1	17	7	2022	3628745
+3874446376	http://tun.fi/KE.176/62d67686d5de816d9a950c85#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.972	25.756	1	19	7	2022	3628745
+3874446374	http://tun.fi/KE.176/62dfc18dd5de816d9a950f24#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.070372	27.633096	1	26	7	2022	3628745
+3874446370	http://tun.fi/KE.176/62dbda7dd5de816d9a950dfc#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.145352	28.816585	1	23	7	2022	3628745
+3874446368	http://tun.fi/KE.176/62d4d72ad5de816d9a950c1f#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.503388	23.629644	1	18	7	2022	3628745
+3874446367	http://tun.fi/KE.176/62e0035ed5de816d9a950f37#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.498538	26.866228	1	25	7	2022	3628745
+3874446366	http://tun.fi/KE.176/62d47616d5de816d9a950c1c#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	64.249495	27.775137	1000	17	7	2022	3628745
+3874446364	http://tun.fi/KE.176/62d6cbdfd5de816d9a950ca3#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.607366	22.585245	1	19	7	2022	3628745
+3874446363	http://tun.fi/KE.176/62e00f12d5de816d9a950f39#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.621691	26.268248	1	26	7	2022	3628745
+3874446360	http://tun.fi/KE.176/62d3adcdd5de816d9a950be5#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.43789	27.103684	50000	16	7	2022	3628745
+3874446359	http://tun.fi/KE.176/62dd9740d5de816d9a950e85#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.04472	23.429339	1	24	7	2022	3628745
+3874446357	http://tun.fi/KE.176/62d7e3cbd5de816d9a950cec#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.794498	27.563141	1	20	7	2022	3628745
+3874446350	http://tun.fi/KE.176/62de9f6ad5de816d9a950edd#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.439917	23.465618	1	25	7	2022	3628745
+3874446349	http://tun.fi/KE.176/62de469ed5de816d9a950eb5#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.946569	25.152432	10	25	7	2022	3628745
+3874446348	http://tun.fi/KE.176/62d71eeed5de816d9a950cc5#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.494513	23.543364	1	19	7	2022	3628745
+3874446346	http://tun.fi/KE.176/62d3f8a0d5de816d9a950bf7#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.45354	23.791023	100	17	7	2022	3628745
+3874446343	http://tun.fi/KE.176/62d8edebd5de816d9a950d32#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.982156	27.688175	1	21	7	2022	3628745
+3874446340	http://tun.fi/KE.176/62dfd874d5de816d9a950f2e#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.556289	29.027446	1	26	7	2022	3628745
+3874446339	http://tun.fi/KE.176/62d6f45bd5de816d9a950cad#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.336007	23.753254	1	19	7	2022	3628745
+3874446337	http://tun.fi/KE.176/62da93d3d5de816d9a950db3#Unit1	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	FI	60.191547	24.927443	100	21	7	2022	3628745
+3874446332	http://tun.fi/KE.176/62d92097d5de816d9a950d3d#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	64.059056	26.923109	100	21	7	2022	3628745
+3874446327	http://tun.fi/KE.176/62dd8470d5de816d9a950e6b#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.62583	25.216371	1	24	7	2022	3628745
+3874446326	http://tun.fi/KE.176/62d71edbd5de816d9a950cc4#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.494513	23.543364	1	19	7	2022	3628745
+3874446323	http://tun.fi/KE.176/62d45a42d5de816d9a950c10#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.214512	25.715865	1	17	7	2022	3628745
+3874446319	http://tun.fi/KE.176/62d62d20d5de816d9a950c72#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	64.240936	27.752104	1	18	7	2022	3628745
+3874446318	http://tun.fi/KE.176/62d54034d5de816d9a950c3e#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.98303	25.438179	1	10	7	2022	3628745
+3874446317	http://tun.fi/KE.176/62d46ee4d5de816d9a950c17#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.694196	23.305979	100	13	7	2022	3628745
+3874446312	http://tun.fi/KE.176/62d52caad5de816d9a950c35#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.693236	26.855729	1	18	7	2022	3628745
+3874446310	http://tun.fi/KE.176/62e01badd5de816d9a950f3f#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.234695	25.669714	1	26	7	2022	3628745
+3874446307	http://tun.fi/KE.176/62da93b0d5de816d9a950db2#Unit1	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	FI	60.191547	24.927443	100	21	7	2022	3628745
+3874446305	http://tun.fi/KE.176/62d8fde5d5de816d9a950d38#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.525905	23.718981	1	21	7	2022	3628745
+3874446304	http://tun.fi/KE.176/62dd8254d5de816d9a950e68#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.667182	26.548246	1	24	7	2022	3628745
+3874446302	http://tun.fi/KE.176/62d4040dd5de816d9a950bf9#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.261775	24.554735	1	17	7	2022	3628745
+3874446301	http://tun.fi/KE.176/62db0956d5de816d9a950ddc#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.265731	22.424228	1	22	7	2022	3628745
+3874296407	http://tun.fi/KE.176/62e25ab6d5de816d9a950fd0#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.638871	24.334722	1	27	7	2022	3628745
+3874296400	http://tun.fi/KE.176/62e604edd5de816d9a95108f#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.50727	21.876097	1	20	7	2022	3628745
+3867695321	http://tun.fi/JX.1425250#3	Heracleum persicum	Heracleum persicum Desf.	FI	62.014695	25.567837	100	26	7	2022	3628745
+3867695320	http://tun.fi/JX.1423889#3	Heracleum persicum	Heracleum persicum Desf.	FI	60.250624	24.886834	1000	22	7	2022	3628745
+3867695316	http://tun.fi/JX.1418644#3	Heracleum persicum	Heracleum persicum Desf.	FI	61.879831	25.190528	10000	10	7	2022	3628745
+3867695314	http://tun.fi/JX.1418724#3	Heracleum persicum	Heracleum persicum Desf.	FI	64.220316	28.203451	100	11	7	2022	3628745
+3867695312	http://tun.fi/JX.1423090#3	Heracleum persicum	Heracleum persicum Desf.	FI	60.184619	25.081537	100	21	7	2022	3628745
+3867695311	http://tun.fi/JX.1426356#3	Heracleum persicum	Heracleum persicum Desf.	FI	60.251373	24.886384	100	27	7	2022	3628745
+3867695310	http://tun.fi/JX.1418643#3	Heracleum persicum	Heracleum persicum Desf.	FI	61.879831	25.190528	10000	10	7	2022	3628745
+3867695309	http://tun.fi/JX.1421565#3	Heracleum persicum	Heracleum persicum Desf.	FI	61.492211	22.243771	100	17	7	2022	3628745
+3867695307	http://tun.fi/JX.1418645#3	Heracleum persicum	Heracleum persicum Desf.	FI	61.879831	25.190528	10000	10	7	2022	3628745
+3867695305	http://tun.fi/JX.1418384#3	Heracleum persicum	Heracleum persicum Desf.	FI	62.834121	27.594041	100	7	7	2022	3628745
+3867626553	http://tun.fi/JX.1424068#3	Heracleum persicum	Heracleum persicum Desf.	FI	61.429034	23.451068	1	16	7	2022	3628745
+3866464528	urn:uuid:f59c3f06-a80e-489b-a32c-73c8c9f9c1e5	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	59.823213	10.434767	25	25	7	2022	3628745
+3866062304	http://tun.fi/KE.176/62dfd754d5de816d9a950f2c#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.297	22.641	1	26	7	2022	3628745
+3865868795	http://tun.fi/KE.176/62d689f2d5de816d9a950c8d#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.406808	25.93705	1	17	7	2022	3628745
+3864356311	urn:uuid:10aa16a2-d346-442c-bcea-c7bd05a69c2e	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	68.857945	18.353012	100	9	7	2022	3628745
+3864248434	urn:uuid:a671db6e-00b9-41df-8c05-b72b9729abbe	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	67.260566	15.408506	100	9	7	2022	3628745
+3864192425	urn:uuid:84a68d9c-fea5-41c7-9543-d79e84f19e65	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.711488	19.092362	150	13	7	2022	3628745
+3864189438	urn:uuid:affac638-4e19-481d-92c9-cc8be1b33998	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.64892	18.98592	300	13	7	2022	3628745
+3864169480	urn:uuid:c6895f0a-84c3-4834-baea-67b3a37ecdda	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.402459	10.359983	5	14	7	2022	3628745
+3864159323	urn:uuid:17df1aa1-97a1-434b-90aa-5c17bf9344da	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.658862	19.014613	200	13	7	2022	3628745
+3863873329	http://tun.fi/KE.176/62d11b7dd5de816d9a950b2a#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	64.217567	27.775889	1	15	7	2022	3628745
+3863873326	http://tun.fi/KE.176/62d2e886d5de816d9a950bca#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	66.666254	26.031709	100000	16	7	2022	3628745
+3863873325	http://tun.fi/KE.176/62d1103fd5de816d9a950b25#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.795819	29.450631	1	15	7	2022	3628745
+3863873324	http://tun.fi/KE.176/62d160e8d5de816d9a950b5b#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.886568	27.59834	1	15	7	2022	3628745
+3863873323	http://tun.fi/KE.176/62d2e87ed5de816d9a950bc9#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	66.666254	26.031709	100000	16	7	2022	3628745
+3863873320	http://tun.fi/KE.176/62d2693ed5de816d9a950b87#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.706762	24.005712	1	16	7	2022	3628745
+3863873315	http://tun.fi/KE.176/62d3010cd5de816d9a950bd1#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.061402	26.638608	1	9	7	2022	3628745
+3863873313	http://tun.fi/KE.176/62d17a89d5de816d9a950b62#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.404309	25.647503	1	9	7	2022	3628745
+3863873312	http://tun.fi/KE.176/62d2d6ded5de816d9a950bc5#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.510147	23.624828	100	16	7	2022	3628745
+3863873308	http://tun.fi/KE.176/62d25497d5de816d9a950b81#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.636546	27.127105	1	16	7	2022	3628745
+3863873303	http://tun.fi/KE.176/62d300cdd5de816d9a950bd0#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.061402	26.638608	1	9	7	2022	3628745
+3863873302	http://tun.fi/KE.176/62d2d243d5de816d9a950bc4#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.160966	25.68005	1	16	7	2022	3628745
+3862725335	http://tun.fi/KE.176/62ceab7fd5de816d9a950a86#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.633763	24.486507	100	12	7	2022	3628745
+3862725332	http://tun.fi/KE.176/62d00fe1d5de816d9a950aea#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.654688	30.943112	1	13	7	2022	3628745
+3862725331	http://tun.fi/KE.176/62ce704ad5de816d9a950a6e#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.386908	23.418158	1	12	7	2022	3628745
+3862725329	http://tun.fi/KE.176/62cf3de2d5de816d9a950ab9#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.923235	23.103882	1	13	7	2022	3628745
+3862725326	http://tun.fi/KE.176/62d0822fd5de816d9a950b0c#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.123665	24.673865	1	13	7	2022	3628745
+3862725324	http://tun.fi/KE.176/62d08c92d5de816d9a950b0e#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.910216	24.87817	1	14	7	2022	3628745
+3862725323	http://tun.fi/KE.176/62cfefaad5de816d9a950ad8#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.777922	26.097182	1	14	7	2022	3628745
+3862725322	http://tun.fi/KE.176/62cea777d5de816d9a950a85#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.369878	25.273863	1	13	7	2022	3628745
+3862725321	http://tun.fi/KE.176/62ce6f5bd5de816d9a950a6d#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.380845	23.437273	1	12	7	2022	3628745
+3862725319	http://tun.fi/KE.176/62cedb7dd5de816d9a950a97#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.917214	26.72481	1	11	7	2022	3628745
+3862725317	http://tun.fi/KE.176/62cfceddd5de816d9a950aca#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.664794	27.077063	100	14	7	2022	3628745
+3862725311	http://tun.fi/KE.176/62ce7387d5de816d9a950a6f#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.625473	23.828745	1	12	7	2022	3628745
+3862725304	http://tun.fi/KE.176/62cf3d50d5de816d9a950ab8#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.923261	23.102924	1	13	7	2022	3628745
+3862725302	http://tun.fi/KE.176/62d09569d5de816d9a950b0f#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.574398	26.081122	1	14	7	2022	3628745
+3862725301	http://tun.fi/KE.176/62ce6f31d5de816d9a950a6c#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.380845	23.437273	1	12	7	2022	3628745
+3862129406	urn:uuid:8d4195d6-1dbd-4e53-9793-58de6e9f2aec	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.350138	10.253874	1	7	7	2022	3628745
+3861984309	urn:uuid:04d2a050-4a08-425a-8244-a2b36dca5701	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.440039	10.477177	10	5	7	2022	3628745
+3861869362	http://tun.fi/KE.176/62cc61ead5de816d9a9509da#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.519749	23.937418	1	11	7	2022	3628745
+3861869360	http://tun.fi/KE.176/62c95245d5de816d9a9508f6#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.111796	25.810216	1	9	7	2022	3628745
+3861869356	http://tun.fi/KE.176/62cc24d4d5de816d9a9509c1#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.982456	25.856758	1	11	7	2022	3628745
+3861869353	http://tun.fi/KE.176/62cc543ed5de816d9a9509d2#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.983024	25.437916	1	10	7	2022	3628745
+3861869351	http://tun.fi/KE.176/62c96a08d5de816d9a9508fc#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.922234	24.634895	1	9	7	2022	3628745
+3861869350	http://tun.fi/KE.176/62cae847d5de816d9a95095a#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.219647	25.756138	100	10	7	2022	3628745
+3861869349	http://tun.fi/KE.176/62cd2043d5de816d9a950a02#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.573325	29.810198	1	11	7	2022	3628745
+3861869347	http://tun.fi/KE.176/62cc7edbd5de816d9a9509ee#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.180135	29.432727	1	11	7	2022	3628745
+3861869345	http://tun.fi/KE.176/62cc6cf3d5de816d9a9509e4#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.32404	24.305099	1	4	7	2022	3628745
+3861869344	http://tun.fi/KE.176/62cc7eccd5de816d9a9509ed#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.180135	29.432727	1	11	7	2022	3628745
+3861869343	http://tun.fi/KE.176/62cb0b87d5de816d9a950978#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.025931	24.447703	1	9	7	2022	3628745
+3861869340	http://tun.fi/KE.176/62c94d69d5de816d9a9508f5#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.715772	25.26296	1	9	7	2022	3628745
+3861869339	http://tun.fi/KE.176/62cafe04d5de816d9a950975#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.192169	24.593176	1	10	7	2022	3628745
+3861869333	http://tun.fi/KE.176/62cae7c2d5de816d9a950959#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.228803	25.728654	100	9	7	2022	3628745
+3861869324	http://tun.fi/KE.176/62c9d6d8d5de816d9a950929#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.866035	28.815184	1	8	7	2022	3628745
+3861869320	http://tun.fi/KE.176/62cd51e9d5de816d9a950a13#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.940302	27.648047	1	11	7	2022	3628745
+3861869318	http://tun.fi/KE.176/62ca7c3cd5de816d9a950937#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.958936	22.634006	1	10	7	2022	3628745
+3861869317	http://tun.fi/KE.176/62cabd1fd5de816d9a95094d#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	65.10523	25.39782	1	10	7	2022	3628745
+3861869316	http://tun.fi/KE.176/62cbaa8bd5de816d9a950991#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.425435	23.735516	1	10	7	2022	3628745
+3861869312	http://tun.fi/KE.176/62c949d0d5de816d9a9508f4#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.474071	24.662227	1	9	7	2022	3628745
+3861869307	http://tun.fi/KE.176/62cbfe77d5de816d9a9509ab#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.654344	25.725082	1	11	7	2022	3628745
+3861869306	http://tun.fi/KE.176/62c922fdd5de816d9a9508eb#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.981311	24.471151	1	8	7	2022	3628745
+3861869303	http://tun.fi/KE.176/62c9d73bd5de816d9a95092a#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.863768	28.811951	1	8	7	2022	3628745
+3861869302	http://tun.fi/KE.176/62ca8876d5de816d9a950939#Unit1	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	FI	61.359349	21.999376	1	9	7	2022	3628745
+3861868612	http://tun.fi/KE.176/62c351acd5de065503aa3093#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.451794	23.74984	1	3	7	2022	3628745
+3861699353	http://tun.fi/JX.1410735#3	Heracleum persicum	Heracleum persicum Desf.	FI	60.050282	23.947575	1	26	6	2022	3628745
+3857927657	urn:lsid:artportalen.se:sighting:101389396	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.62676	16.64436	25	4	6	2022	3628745
+3857886746	urn:lsid:artportalen.se:sighting:101641550	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	57.63981	11.92001	10	12	6	2022	3628745
+3857775339	urn:lsid:artportalen.se:sighting:101791521	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	65.96202	16.19608	10	21	6	2022	3628745
+3857449883	urn:lsid:artportalen.se:sighting:101169265	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	59.09227	14.13022	25	25	5	2022	3628745
+3857370862	urn:lsid:artportalen.se:sighting:101539577	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	56.23239	15.26976	25	9	6	2022	3628745
+3857368115	urn:lsid:artportalen.se:sighting:101485547	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	59.09226	14.13024	10	6	6	2022	3628745
+3857360317	urn:lsid:artportalen.se:sighting:101780154	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	56.19795	14.85304	5	20	6	2022	3628745
+3857282085	urn:lsid:artportalen.se:sighting:102019324	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	64.21134	19.7163	5	2	7	2022	3628745
+3857121193	urn:lsid:artportalen.se:sighting:101485808	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	59.09506	14.13045	10	6	6	2022	3628745
+3856997625	urn:lsid:artportalen.se:sighting:101472417	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.90532	19.73444	25	4	6	2022	3628745
+3856780057	urn:lsid:artportalen.se:sighting:101665412	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.92865	17.93554	25	13	6	2022	3628745
+3856639796	urn:lsid:artportalen.se:sighting:101831116	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.8015	20.27959	25	23	6	2022	3628745
+3856635814	urn:lsid:artportalen.se:sighting:101708132	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	57.70752	11.93159	25	17	6	2022	3628745
+3856490974	urn:lsid:artportalen.se:sighting:101171806	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	63.93369	19.21593	10	26	5	2022	3628745
+3856481785	urn:lsid:artportalen.se:sighting:101794858	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	56.24048	15.27583	25	21	6	2022	3628745
+3856421878	urn:lsid:artportalen.se:sighting:101169047	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	59.09506	14.13045	25	25	5	2022	3628745
+3856101333	http://tun.fi/KE.176/62c70d41d5de816d9a95087b#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.347789	25.093876	1	7	7	2022	3628745
+3856101326	http://tun.fi/KE.176/62c8519bd5de816d9a9508c1#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.626015	25.212749	1	8	7	2022	3628745
+3856101325	http://tun.fi/KE.176/62c85ba3d5de816d9a9508ca#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.644161	27.610024	1	8	7	2022	3628745
+3856101314	http://tun.fi/KE.176/62c6d299d5de816d9a950862#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.210126	24.817826	1	7	7	2022	3628745
+3856101311	http://tun.fi/KE.176/62c70d37d5de816d9a95087a#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.347789	25.093876	1	7	7	2022	3628745
+3856101310	http://tun.fi/KE.176/62c6f685d5de816d9a950870#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.483209	22.597047	1	7	7	2022	3628745
+3856101309	http://tun.fi/KE.176/62c7e365d5de816d9a9508a1#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.59775	24.862681	1	7	7	2022	3628745
+3856101304	http://tun.fi/KE.176/62c82b2ed5de816d9a9508b9#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.115286	21.662401	1	8	7	2022	3628745
+3855609314	http://tun.fi/KE.176/62c57186d5de065503aa30f6#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.098489	23.055995	1	6	7	2022	3628745
+3855609313	http://tun.fi/KE.176/62c57842d5de065503aa30f7#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.539927	26.904966	1	5	7	2022	3628745
+3855609312	http://tun.fi/KE.176/62c62453d5de065503aa3127#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.663367	27.076317	1	6	7	2022	3628745
+3855609311	http://tun.fi/KE.176/62c5a6f9d5de065503aa3104#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.026974	24.44754	1	6	7	2022	3628745
+3855609307	http://tun.fi/KE.176/62c6637bd5de065503aa3128#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.591078	26.586891	1	7	7	2022	3628745
+3855609306	http://tun.fi/KE.176/62c53bcbd5de065503aa30ed#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.52022	27.210223	1	6	7	2022	3628745
+3855609304	http://tun.fi/KE.176/62c540aed5de065503aa30ee#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.268981	25.107561	10	6	7	2022	3628745
+3855609302	http://tun.fi/KE.176/62c6239fd5de065503aa3126#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.663563	27.078271	1	6	7	2022	3628745
+3846062581	urn:uuid:dd930822-bba6-4d1f-a9f1-6283e2236337	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.718361	19.092829	10	1	7	2022	3628745
+3845983335	urn:uuid:14e092a6-a006-4477-ba4e-07b9413112dd	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	68.820926	16.554531	346	27	6	2022	3628745
+3844650433	urn:uuid:5f6330c4-b110-4f04-aee8-58ffbb44fffb	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.395367	10.377563	10	1	7	2022	3628745
+3844596310	urn:uuid:06846810-a3de-4789-909d-e7076710e98f	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.413251	10.370852	5	4	7	2022	3628745
+3844073632	http://tun.fi/KE.176/62a23a38d5deb0fafdc61d30#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.135073	21.598367	1	9	6	2022	3628745
+3844073628	http://tun.fi/KE.176/62ab1ed3d5deb0fafdc61f3c#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.860837	22.990321	100	16	6	2022	3628745
+3844073622	http://tun.fi/KE.176/629f9110d5deb0fafdc61ca9#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.674514	27.06497	1	7	6	2022	3628745
+3844073610	http://tun.fi/KE.176/62af6bbed5deb0fafdc6209a#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	64.116286	29.491807	1	19	6	2022	3628745
+3844073602	http://tun.fi/KE.176/62c3e99ed5de065503aa30a9#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.694983	24.282699	1	4	7	2022	3628745
+3844073597	http://tun.fi/KE.176/62aff8f4d5deb0fafdc620aa#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.391258	23.037402	1	20	6	2022	3628745
+3844073593	http://tun.fi/KE.176/62a0f458d5deb0fafdc61cec#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.808029	29.025843	1	8	6	2022	3628745
+3844073591	http://tun.fi/KE.176/62c48c19d5de065503aa30d8#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.519762	23.937461	100	5	7	2022	3628745
+3844073589	http://tun.fi/KE.176/62c44811d5de065503aa30c7#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.274731	24.956307	1	5	7	2022	3628745
+3844073587	http://tun.fi/KE.176/62a574cad5deb0fafdc61dd5#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.699026	23.142203	1	12	6	2022	3628745
+3844073581	http://tun.fi/KE.176/62aca694d5deb0fafdc61fbe#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.334096	25.857795	1	17	6	2022	3628745
+3844073578	http://tun.fi/KE.176/62b4593dd5deb0fafdc621e0#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.076198	28.282375	1	23	6	2022	3628745
+3844073577	http://tun.fi/KE.176/62c42ef5d5de065503aa30be#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.292811	24.961644	1	4	7	2022	3628745
+3844073572	http://tun.fi/KE.176/629ee7b8d5deb0fafdc61c61#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.449927	23.375231	50000	3	6	2022	3628745
+3844073569	http://tun.fi/KE.176/62c304a4d5de065503aa307d#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.402246	25.648575	1	4	7	2022	3628745
+3844073565	http://tun.fi/KE.176/62c44806d5de065503aa30c6#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.274731	24.956307	1	5	7	2022	3628745
+3844073560	http://tun.fi/KE.176/6299eacfd5deb0fafdc61b3c#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.244737	25.781851	1	2	6	2022	3628745
+3844073558	http://tun.fi/KE.176/62bbfb58d5deb0fafdc6240d#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.542967	23.864025	1	29	6	2022	3628745
+3844073555	http://tun.fi/KE.176/62c31f1ad5de065503aa3084#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.10417	21.661498	1	4	7	2022	3628745
+3844073553	http://tun.fi/KE.176/62a7625ed5deb0fafdc61e53#Unit1	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	FI	62.734247	29.445079	1	12	6	2022	3628745
+3844073551	http://tun.fi/KE.176/62acd472d5deb0fafdc61fc9#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.919348	24.667564	100	14	6	2022	3628745
+3844073549	http://tun.fi/KE.176/62a4c48ed5deb0fafdc61db2#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.144371	24.877839	1	11	6	2022	3628745
+3844073547	http://tun.fi/KE.176/629cd7fad5deb0fafdc61beb#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.24335	25.888291	1	5	6	2022	3628745
+3844073544	http://tun.fi/KE.176/62a87f12d5deb0fafdc61e8e#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.06005	22.298747	1	14	6	2022	3628745
+3844073543	http://tun.fi/KE.176/62c31f0cd5de065503aa3083#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.10417	21.661498	1	4	7	2022	3628745
+3844073535	http://tun.fi/KE.176/62c48399d5de065503aa30d4#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.880428	24.808807	100	5	7	2022	3628745
+3844073528	http://tun.fi/KE.176/62a97cebd5deb0fafdc61ec3#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.485245	22.10429	1	15	6	2022	3628745
+3844073522	http://tun.fi/KE.176/62c48e20d5de065503aa30da#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.508792	23.92051	100	5	7	2022	3628745
+3844073520	http://tun.fi/KE.176/629f6544d5deb0fafdc61c8b#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.545509	22.651632	1	6	6	2022	3628745
+3844073519	http://tun.fi/KE.176/62992505d5deb0fafdc61b28#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.479286	28.398615	100000	2	6	2022	3628745
+3844073518	http://tun.fi/KE.176/62c3d093d5de065503aa30a1#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.430968	28.714185	50000	4	7	2022	3628745
+3844073503	http://tun.fi/KE.176/62bebe57d5de065503aa2f3d#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.063145	26.636249	1	30	6	2022	3628745
+3844073499	http://tun.fi/KE.176/62b15e7ed5deb0fafdc62113#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.4025	25.6485	1000	20	6	2022	3628745
+3844073490	http://tun.fi/KE.176/62b9803cd5deb0fafdc62353#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.077602	22.771951	1	27	6	2022	3628745
+3844073489	http://tun.fi/KE.176/62a0fa89d5deb0fafdc61cef#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.252269	24.450448	1	8	6	2022	3628745
+3844073487	http://tun.fi/KE.176/62b9c68ed5deb0fafdc62379#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.042626	27.740403	1	27	6	2022	3628745
+3844073480	http://tun.fi/KE.176/62b6b731d5deb0fafdc6226e#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.620583	22.931269	1	25	6	2022	3628745
+3844073479	http://tun.fi/KE.176/629fd422d5deb0fafdc61cbe#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.626	29.668	1	7	6	2022	3628745
+3844073478	http://tun.fi/KE.176/62bab7f1d5deb0fafdc623b7#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.63199	23.830407	50000	27	6	2022	3628745
+3844073473	http://tun.fi/KE.176/62ab5504d5deb0fafdc61f4e#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.555846	29.821052	1	24	5	2022	3628745
+3844073471	http://tun.fi/KE.176/62bc5706d5deb0fafdc62432#Unit1	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	FI	60.231153	25.11756	1000	28	6	2022	3628745
+3844073469	http://tun.fi/KE.176/629f1425d5deb0fafdc61c73#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.796386	26.923889	1	4	6	2022	3628745
+3844073467	http://tun.fi/KE.176/629fab5dd5deb0fafdc61cbb#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.936239	26.405951	1	7	6	2022	3628745
+3844073466	http://tun.fi/KE.176/62baa577d5deb0fafdc623b0#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.890964	24.792612	1	28	6	2022	3628745
+3844073461	http://tun.fi/KE.176/62a0cc61d5deb0fafdc61ce3#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.752348	26.12529	100	8	6	2022	3628745
+3844073459	http://tun.fi/KE.176/62c3619dd5de065503aa309a#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.673472	21.647979	1	5	7	2022	3628745
+3844073442	http://tun.fi/KE.176/62c018f1d5de065503aa2f91#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.172967	24.760269	100	2	7	2022	3628745
+3844073441	http://tun.fi/KE.176/62b97ecbd5deb0fafdc62352#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.706646	25.222588	1	27	6	2022	3628745
+3844073440	http://tun.fi/KE.176/62a24cc2d5deb0fafdc61d41#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.706884	25.223401	1	9	6	2022	3628745
+3844073437	http://tun.fi/KE.176/62b59c79d5deb0fafdc62231#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.860977	22.988543	1	24	6	2022	3628745
+3844073431	http://tun.fi/KE.176/629c9135d5deb0fafdc61bc3#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.571712	25.825531	1000	4	6	2022	3628745
+3844073419	http://tun.fi/KE.176/62a23a73d5deb0fafdc61d31#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.135073	21.598367	1	9	6	2022	3628745
+3844073414	http://tun.fi/KE.176/629f2c2fd5deb0fafdc61c77#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.852003	23.141483	1	7	6	2022	3628745
+3844073412	http://tun.fi/KE.176/62a1c8c4d5deb0fafdc61d0d#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	65.687356	24.670337	100	9	6	2022	3628745
+3844073403	http://tun.fi/KE.176/62ae189dd5deb0fafdc62024#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.472884	23.757426	100	18	6	2022	3628745
+3844073400	http://tun.fi/KE.176/62a59f77d5deb0fafdc61de0#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.063028	25.84328	1	12	6	2022	3628745
+3844073397	http://tun.fi/KE.176/62ab600bd5deb0fafdc61f56#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.337842	27.419367	1	16	6	2022	3628745
+3844073391	http://tun.fi/KE.176/62c17062d5de065503aa2fff#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.668213	26.551288	1	3	7	2022	3628745
+3844073387	http://tun.fi/KE.176/62b14f90d5deb0fafdc6210b#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.38768	23.755872	1	20	6	2022	3628745
+3844073386	http://tun.fi/KE.176/6299d59cd5deb0fafdc61b32#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.58247	29.869733	1	3	6	2022	3628745
+3844073383	http://tun.fi/KE.176/62aca686d5deb0fafdc61fbd#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.334096	25.857795	1	17	6	2022	3628745
+3844073363	http://tun.fi/KE.176/62a0e385d5deb0fafdc61ce7#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.669196	22.660009	1	8	6	2022	3628745
+3844073356	http://tun.fi/KE.176/629af469d5deb0fafdc61b59#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.918608	24.667809	1	4	6	2022	3628745
+3844073352	http://tun.fi/KE.176/62b9b773d5deb0fafdc62374#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	65.024289	25.458834	100	27	6	2022	3628745
+3844073347	http://tun.fi/KE.176/62bd8a16d5deb0fafdc6247e#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.021553	24.672443	1	30	6	2022	3628745
+3844073340	http://tun.fi/KE.176/62c2ba80d5de065503aa304f#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.044347	24.548598	50000	4	7	2022	3628745
+3844073334	http://tun.fi/KE.176/62a0f423d5deb0fafdc61ceb#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.808029	29.025843	1	8	6	2022	3628745
+3844073332	http://tun.fi/KE.176/62a96a7bd5deb0fafdc61ec0#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.495937	23.905486	1	14	6	2022	3628745
+3844073320	http://tun.fi/KE.176/62a035cbd5deb0fafdc61cc1#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.258244	24.87305	1	8	6	2022	3628745
+3844073311	http://tun.fi/KE.176/62b7469fd5deb0fafdc622a9#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	65.727726	24.581169	1	25	6	2022	3628745
+3844073309	http://tun.fi/KE.176/62ab159ed5deb0fafdc61f35#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.398469	25.907341	1	29	5	2022	3628745
+3844073308	http://tun.fi/KE.176/629b6817d5deb0fafdc61b83#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.871014	28.897886	1	4	6	2022	3628745
+3844073304	http://tun.fi/KE.176/62a08c7ad5deb0fafdc61cd6#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.349621	24.199693	1	8	6	2022	3628745
+3844073301	http://tun.fi/KE.176/62a61dafd5deb0fafdc61e08#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.562	21.599	1	12	6	2022	3628745
+3821088461	http://tun.fi/KE.176/62bd552fd5deb0fafdc62465#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.445133	22.263957	1	30	6	2022	3628745
+3818909373	http://tun.fi/JX.1392045#3	Heracleum persicum	Heracleum persicum Desf.	FI	63.673795	26.381711	100	7	6	2022	3628745
+3818887548	http://tun.fi/JX.1395856#3	Heracleum persicum	Heracleum persicum Desf.	FI	60.630381	22.310876	100	14	6	2022	3628745
+3816502496	urn:uuid:db73d7a5-dd6b-4b9d-b081-36764306c69f	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.401578	10.443921	25	20	5	2022	3628745
+3815788303	http://tun.fi/JX.1406793#3	Heracleum persicum	Heracleum persicum Desf.	FI	60.175652	23.961519	100	19	6	2022	3628745
+3807894419	urn:uuid:6b2222ab-c9f2-4315-acf9-af66af6d0252	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	67.283893	14.421994	5	8	6	2022	3628745
+3807810518	urn:uuid:bd352ff5-4574-46fe-b350-acbb909f39e6	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	68.575865	16.496419	3699	4	6	2022	3628745
+3807797387	urn:uuid:470096f1-0289-416b-a3d0-4849fa7b7dca	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	68.82188	16.553399	222	4	6	2022	3628745
+3807725495	urn:uuid:c3771a59-26f4-4a0b-a4da-e8d78fd548dc	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	67.283473	14.418014	5	8	6	2022	3628745
+3807453304	http://tun.fi/JX.1393018#3	Heracleum persicum	Heracleum persicum Desf.	FI	60.23589	25.063613	100	9	6	2022	3628745
+3803995513	urn:uuid:b346bbd7-210e-4c6c-aa47-a247d37c5287	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.62866	18.915079	200	4	6	2022	3628745
+3803995385	urn:uuid:3d8f5978-abf6-4c09-9850-a437ed0f1c47	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	63.350138	10.253874	1	3	6	2022	3628745
+3803972389	urn:uuid:48d9397f-9469-4124-9d2e-c5127934c2dc	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.569702	18.770936	75	25	5	2022	3628745
+3803826462	urn:uuid:898340d6-dc71-447d-aa0b-13e79e6b3c17	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	68.78679	17.162206	5	4	6	2022	3628745
+3803824351	urn:uuid:2a9a3a65-9dff-4c1b-ba10-dbb4b97685a3	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.679174	18.900185	400	4	6	2022	3628745
+3801080315	http://tun.fi/KE.176/62985e21d5deb0fafdc61aec#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.339881	24.192677	1	2	6	2022	3628745
+3801080309	http://tun.fi/KE.176/6298b8add5deb0fafdc61b1a#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.438056	23.465087	1	1	6	2022	3628745
+3799870326	http://tun.fi/KE.176/62971bb8d5de8498afc216ad#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.709351	25.217454	1	1	6	2022	3628745
+3799870322	http://tun.fi/KE.176/6295b57dd5de8498afc21669#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	63.719313	25.354021	1	31	5	2022	3628745
+3799870314	http://tun.fi/KE.176/629795f3d5de8498afc216c7#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.989559	29.945172	100000	1	6	2022	3628745
+3798353541	urn:uuid:e2201396-c20c-4635-81ca-839d1d166842	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	67.296995	14.405626	50	21	5	2022	3628745
+3798322346	urn:uuid:28c213b9-8341-4c5e-a06c-3835df11ceeb	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	58.97492	9.877327	10	28	5	2022	3628745
+3798235325	urn:uuid:15df11e7-c383-438e-8546-5ba85c1e4837	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.638121	17.985655	10	27	5	2022	3628745
+3784530314	http://tun.fi/KE.176/628f8f31d5de8498afc21553#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.938538	27.655997	100	26	5	2022	3628745
+3784530308	http://tun.fi/KE.176/628f58f0d5de8498afc21539#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	60.592684	27.173683	100	26	5	2022	3628745
+3783615301	http://tun.fi/JX.1380004#3	Heracleum persicum	Heracleum persicum Desf.	FI	61.083806	26.71876	10000	13	5	2022	3628745
+3780827319	http://tun.fi/KE.176/628a3006d5de8498afc21445#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.508933	23.669657	100	22	5	2022	3628745
+3780827308	http://tun.fi/KE.176/628a2feed5de8498afc21444#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.508933	23.669657	100	22	5	2022	3628745
+3780420302	http://tun.fi/JX.1380005#3	Heracleum persicum	Heracleum persicum Desf.	FI	61.062272	26.636967	1	13	5	2022	3628745
+3780417302	http://tun.fi/JX.1380002#3	Heracleum persicum	Heracleum persicum Desf.	FI	61.062564	26.636797	100	13	5	2022	3628745
+3777101474	urn:lsid:artportalen.se:sighting:100805105	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	SE	59.09227	14.13022	25	13	5	2022	3628745
+3776329365	http://tun.fi/KE.176/626ecae8d5de48b7f1c2ae2f#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	62.134125	25.656049	100000	1	5	2022	3628745
+3770560458	urn:uuid:858c6967-7143-4aea-a8d1-d8a2ec8a23da	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.684739	18.902638	347	10	5	2022	3628745
+3760844304	urn:uuid:05413a0a-64ca-4060-b3b4-f24dabd36c53	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.718361	19.092829	10	25	4	2022	3628745
+3760705346	urn:uuid:1ba45700-8077-4d2c-827f-16ad4f10d652	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.718392	19.090359	300	25	4	2022	3628745
+3757718303	http://tun.fi/KE.176/62611179d5de48b7f1c2ab78#Unit1	Heracleum persicum	Heracleum persicum Desf.	FI	61.876565	25.188041	1	20	4	2022	3628745
+3757542357	urn:uuid:3f8f349b-d77e-4fa4-bd14-e6b52fc299c3	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.644602	18.949557	50	22	4	2022	3628745
+3757505565	urn:uuid:f7e847f6-d7c7-4b3a-9605-43a04fbdcb97	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.643774	18.950913	135	22	4	2022	3628745
+3757401308	urn:uuid:0761cf7b-be16-4598-b6f7-1816ae04baee	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.678709	18.979839	10	20	4	2022	3628745
+3757347476	urn:uuid:a9b0aa64-f40c-41d1-8145-ef6e4e67ac3a	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.688073	18.90977	492	18	4	2022	3628745
+3735958405	urn:uuid:79e6febf-ef20-4bbe-8e73-bd8f641e147d	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.642909	18.942685	192	25	3	2022	3628745
+3704321343	urn:uuid:344d2e45-d552-4e2c-888e-a1648a2e106e	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.713983	19.012268	400	6	3	2022	3628745
+3704318342	urn:uuid:34c21641-e1a6-41b8-aa5f-59ec17cad565	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.721223	19.093341	100	19	2	2022	3628745
+3465534389	urn:uuid:b464a71c-c681-460a-b289-79cd53da8a2f	Heracleum persicum	Heracleum persicum Desf. ex Fisch., C.A.Mey. & Avé-Lall.	NO	69.718361	19.092829	10	5	1	2022	3628745
