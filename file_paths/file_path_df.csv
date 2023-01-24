@@ -139,6 +139,8 @@ data/20221206/20221206_protected_areas.gpkg,20221206_protected_areas.gpkg,data,2
 data/20221213/20221213_flemish_provinces.gpkg,20221213_flemish_provinces.gpkg,data,20221213
 data/20221213/20221213_geese_counts.txt,20221213_geese_counts.txt,data,20221213
 data/20221213/20221213_geese_counts_cleaned.txt,20221213_geese_counts_cleaned.txt,data,20221213
+data/20230126/20230126_persian_hogweed_2022_scandinavia.txt,20230126_persian_hogweed_2022_scandinavia.txt,data,20230126
+data/20230126/20230126_deployments.txt,20230126_deployments.txt,data,20230126
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
@@ -255,3 +257,4 @@ src/20221213/1_geese_read_data.Rmd,1_geese_read_data.Rmd,src,20221213
 src/20221213/2_visualize_data.html,2_visualize_data.html,src,20221213
 src/20221213/2_visualize_data.Rmd,2_visualize_data.Rmd,src,20221213
 src/20221213/my_report_20221213.zip,my_report_20221213.zip,src,20221213
+src/20230126/20230126_challenges.R,20230126_challenges.R,src,20230126
