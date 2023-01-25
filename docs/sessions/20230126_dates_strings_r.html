@@ -53,9 +53,9 @@ class: left, top
 
 ## Open software: the LIFE RIPARIAS example
 
-Sometimes a blank space can cause serious damages to a web application... Reporting the bug to GBIF and the problem was solved incredibly fast! Good for you, good for everybody else!
+Sometimes, a blank space can cause serious damages to a web application... Reporting the bug to GBIF and the problem was solved incredibly fast! Good for you, good for everybody else!
 
-![:scale 80%]({{ site.baseurl}}/assets/images/20230126/20230126_gbif_issue.png)
+![:scale 75%]({{ site.baseurl}}/assets/images/20230126/20230126_gbif_issue.png)
 
 ---
 class: center, middle
@@ -204,7 +204,7 @@ class: left, top
 
 First, read 20230126_deployments.txt (code provided!). Notice how the datetimes are authomatically read as standard UTC times if expressed in the ISO standard , i.e. yyyy-mm-ddThh:mm:ss!
 
-1. Add a column called local_start and local_end with clock time showing the timezone. The deployments are all located in Belgium. Notice that the datetimes in `start` and `end` are UTC times. Tip: read the [time-zones][https://lubridate.tidyverse.org/reference/lubridate-package.html#time-zones) section from the "Get started".
+1. Add a column called local_start and local_end with clock time showing the timezone. The deployments are all located in Belgium. Notice that the datetimes in `start` and `end` are UTC times. Tip: read the [time-zones](https://lubridate.tidyverse.org/reference/lubridate-package.html#time-zones) section from the "Get started".
 2. Oh no, the data manager said us that `start` and `end` are not UTC times but local times: a bug in the system  caused the loss of the time zone while writing the datetime. How to set `local_time` and `local_end` properly in this case? Tip: the same as before. Correct UTC `start` and `end` columns as well.
 3. Based on `start` and `end`, calculate the duration of each deployment and store it in column `duration`
 4. Get hour and day information of the start of the deployments. You can store them as additional columns called `hour_start`, `day_start`
@@ -289,7 +289,7 @@ Poll for February's coding club is open! Let us know your favorite before **1 Fe
 
 https://forms.gle/V4w6U39FkHUqTjYu5
 
-![30%]({{ site.baseurl}}/assets/images/20230126/20230126_packages_fight.jpg)
+![25%]({{ site.baseurl}}/assets/images/20230126/20230126_packages_fight.jpg)
 
 ---
 class: center, middle
