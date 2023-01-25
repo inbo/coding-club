@@ -141,6 +141,7 @@ data/20221213/20221213_geese_counts.txt,20221213_geese_counts.txt,data,20221213
 data/20221213/20221213_geese_counts_cleaned.txt,20221213_geese_counts_cleaned.txt,data,20221213
 data/20230126/20230126_persian_hogweed_2022_scandinavia.txt,20230126_persian_hogweed_2022_scandinavia.txt,data,20230126
 data/20230126/20230126_deployments.txt,20230126_deployments.txt,data,20230126
+data/20230126/20230126_pheno_phlogo.txt,20230126_pheno_phlogo.txt,data,20230126
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
