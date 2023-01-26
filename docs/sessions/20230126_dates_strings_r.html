@@ -60,6 +60,17 @@ Sometimes, a blank space can cause serious damages to a web application... Repor
 ---
 class: center, middle
 
+---
+class: center, middle
+
+![]({{ site.baseurl}}/assets/images/20230126/20230126_iso_8601.png)
+<br> [xkcd comics](https://xkcd.com/1179)
+
+
+
+---
+class: center, middle
+
 <!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
 ![:scale 90%]({{ site.baseurl}}/assets/images/20230126/20230126_badge.png)
 
@@ -128,10 +139,30 @@ class: left, top
 
 # Data and scripts description
 
-- Presences of Persian hogweed (_Heracleum persicum_) in Scandinavia (Finland, Sweden and Norway) in 2022. Source: GBIF.org (19 January 2023) GBIF Occurrence Download https://doi.org/10.15468/dl.85bnkw
-- Deployments of a camera trap project in Belgium. Source: the official [example](https://github.com/tdwg/camtrap-dp/blob/ab9f0be7a3fd10113ab00392b8df9d4630683fc5/example/deployments.csv) of the [Camera Trap Data Package](https://tdwg.github.io/camtrap-dp) data exchange format.
-- Phenology observations of Angle shades (_Phlogophora meticulosa_). Source: Dirk Maes.
+- [20230126_persian_hogweed_2022_scandinavia.txt](https://github.com/inbo/coding-club/blob/master/data/20230126/20230126_persian_hogweed_2022_scandinavia.txt): presences of Persian hogweed (_Heracleum persicum_) in Scandinavia (Finland, Sweden and Norway) in 2022. Source: GBIF.org (19 January 2023) GBIF Occurrence Download https://doi.org/10.15468/dl.85bnkw
+- [20230126_deployments.txt](https://github.com/inbo/coding-club/blob/master/data/20230126/20230126_deployments.txt): deployments of a camera trap project in Belgium. Source: the official [example](https://github.com/tdwg/camtrap-dp/blob/ab9f0be7a3fd10113ab00392b8df9d4630683fc5/example/deployments.csv) of the [Camera Trap Data Package](https://tdwg.github.io/camtrap-dp) data exchange format.
+- [20230126_pheno_phlogo.txt](https://github.com/inbo/coding-club/blob/master/data/20230126/20230126_pheno_phlogo.txt): phenology observations of Angle shades (_Phlogophora meticulosa_). Source: Dirk Maes.
+- [20230126_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20230126/20230126_challenges.R): R script to start from (some code is already provided)
 
+---
+class: left, top
+
+# Why lubridate?
+
+A lot of reasons. But the main one is that it is very flexible while reading heterogenous strings representing date(times). I hope this example is enough:
+
+```
+horrible_mix_datetimes <- c(
+  "2022-01-03a02;01;01",
+  "20220103x02:01:01",
+  "2022-01-03a02.01.01",
+  "20220103T02:01:01",
+  "2022010302:01:01"
+)
+lubridate::ymd_hms(horrible_mix_datetimes)
+[1] "2022-01-03 02:01:01 UTC" "2022-01-03 02:01:01 UTC" "2022-01-03 02:01:01 UTC"
+[4] "2022-01-03 02:01:01 UTC" "2022-01-03 02:01:01 UTC"
+```
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -267,6 +298,18 @@ The provided code in 20230126_challenges.R analyzes produces a plot where data a
 ![110%]({{ site.baseurl}}/assets/images/20230126/20230126_bonus_challenge_dates_result.png)
 
 ---
+class: left, middle
+
+# The future of UTC: to leap or not to leap?
+
+UTC is based on time as measured by atomic clocks so it is independent of Earth's rotation.
+The [leap second](https://en.wikipedia.org/wiki/Leap_second) is a one-second adjustment that is occasionally applied to Coordinated Universal Time (UTC), to accommodate the imprecise observed solar time (irregularities and slowdown in the Earth's rotation).
+
+![:scale 75%]({{ site.baseurl}}/assets/images/20230126/20230126_leapsecond2016.png)
+
+So, what to do with these annoying leap seconds? Should the standard UTC be getting rid of them or not?
+
+---
 class: left, top
 
 # Resources
@@ -281,6 +324,7 @@ class: left, top
 - The [world time zone map](https://24timezones.com/timezone-map)
 - [GMT versus UTC](https://24timezones.com/gmt-vs-utc)
 - News about the [ban of day-light saving time](https://www.dw.com/en/eu-parliament-votes-to-end-daylight-savings/a-48064185) by end 2021 and the subsequent [obstacles](https://www.bloomberg.com/news/articles/2021-03-11/will-daylight-saving-time-ever-end).
+- The fascinating world of the [leap second](https://en.wikipedia.org/wiki/Leap_second)
 
 ---
 class: left, top
