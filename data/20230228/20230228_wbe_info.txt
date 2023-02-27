@@ -1,0 +1,183 @@
+wbe,wbename,area,province
+523,"Land van Demer, Dijle en Winge",102889659.54,Vlaams_Brabant
+115,Wulfsberg - Hollendries,98000737.12,West-Vlaanderen
+433,Patrijzenkuilen,32622826.41,Limburg
+106,Damme Oostkust,105653882.33,West-Vlaanderen
+113,Baekeland,112605723.41,West-Vlaanderen
+120,De Kemmelbeek,17691359.05,West-Vlaanderen
+121,De Mandelvallei,223064943.53,West-Vlaanderen
+421,Herkenrode,,Limburg
+439,Voeren,50605847.82,Limburg
+128,De Middenkust-vallei,88660903.77,West-Vlaanderen
+401,De Grote Beek,49364362.02,Limburg
+422,Hesbania,27352966.24,Limburg
+425,Jekervallei,23716812.48,Limburg
+405,De Burcht,47336069.08,Limburg
+532,Tussen Vaart en Molenbeek,63258184.03,Vlaams_Brabant
+531,Ter Rijst & Holland,50853544.77,Vlaams_Brabant
+503,Bertembos,46752188.67,Vlaams_Brabant
+109,Hoppeland,134361004.66,West-Vlaanderen
+101,Westhoek,265400693.24,West-Vlaanderen
+522,Land van Asse,,Vlaams_Brabant
+528,Sint-Pieters ter Waerden,13787843.37,Vlaams_Brabant
+403,Bosbeekvallei,22360142.43,Limburg
+446,De Prinsenloop,19470313.8,Limburg
+539,Winge en Losting,18341163.73,Vlaams_Brabant
+108,De Hazebeek,86880304.15,West-Vlaanderen
+114,Tussen Ijzer en Houtland,101743115.13,West-Vlaanderen
+542,Demervallei-Zuid,15375188.94,Vlaams_Brabant
+250,Zuid-Vlaamse Valleien regio 2,24614073.93,Oost-Vlaanderen
+215,Durmevallei,47822020.22,Oost-Vlaanderen
+249,Hemelrijk,18310999.92,Oost-Vlaanderen
+252,Gewest Aalst,38396102.75,Oost-Vlaanderen
+239,Tussen Schelde en Leie,110333927.62,Oost-Vlaanderen
+251,De Nieuwe Meerskantvallei,33642221.8,Oost-Vlaanderen
+221,Laagland,38033517.41,Oost-Vlaanderen
+202,Meetjesland-Noord,58575811.43,Oost-Vlaanderen
+209,De Twee Ambachten,47070972.11,Oost-Vlaanderen
+238,Tussen Leie en Schipdonk,80994115.13,Oost-Vlaanderen
+203,Baggaart,28256062.5,Oost-Vlaanderen
+216,Etbos,21999466.98,Oost-Vlaanderen
+253,Dendervallei-West,13840140.94,Oost-Vlaanderen
+217,De Reynaert,56450287.54,Oost-Vlaanderen
+232,Scheldeoord,70601073.9,Oost-Vlaanderen
+235,Stoepe-Houtland,40427964.79,Oost-Vlaanderen
+240,Vlaamse Ardennen,274749493.72,Oost-Vlaanderen
+210,De Zavelputten,89797955.94,Oost-Vlaanderen
+229,"Rond Kale, Lieve en Burggrave",73545021.18,Oost-Vlaanderen
+204,Generale Vrije Polders,45929955.5,Oost-Vlaanderen
+245,Zultoutem,57537908.57,Oost-Vlaanderen
+220,Kruitem,33666732.52,Oost-Vlaanderen
+228,Moervaart-Noord,59152167.36,Oost-Vlaanderen
+206,De Lavondel,51786290.13,Oost-Vlaanderen
+248,Zuid-Vlaamse Valleien regio 3,29298033.44,Oost-Vlaanderen
+241,Waas en Durme,41976498.2,Oost-Vlaanderen
+243,Zoetendaele - De Polders,58256361.84,Oost-Vlaanderen
+242,Waasland,273204233.25,Oost-Vlaanderen
+231,Scaldiana,35125516.48,Oost-Vlaanderen
+236,Tusschenbeeck,17172918.55,Oost-Vlaanderen
+230,Rozenland,,Oost-Vlaanderen
+525,Nederbrabant,90011523.21,Vlaams_Brabant
+126,Lapscheursche Gat,17021509.33,West-Vlaanderen
+529,Suikerstreek,33088183.08,Vlaams_Brabant
+419,Haspengouw,78239982.55,Limburg
+102,In Flanders Fields,209136528.79,West-Vlaanderen
+512,Getevallei,23351280.09,Vlaams_Brabant
+540,Zennevallei,49707166.66,Vlaams_Brabant
+508,De Molenbeek,32269147.52,Vlaams_Brabant
+510,Dendervallei West-Pajottenland,29392262.44,Vlaams_Brabant
+537,Walshoutem,17343405.1,Vlaams_Brabant
+526,Oost-Pajottenland,181005830.94,Vlaams_Brabant
+116,De Harelbeek- en Heulebeekvallei,129319069,West-Vlaanderen
+122,'t Veld,157282934.33,West-Vlaanderen
+527,R.O.W.,55774160.25,Vlaams_Brabant
+303,Antwerpse Polders Noord,152477410.91,Antwerpen
+312,Essen,52151493.88,Antwerpen
+332,Noorderkempen,53461887.69,Antwerpen
+326,Maxburg,47195975.06,Antwerpen
+308,De Beneden-Marck,25625515.08,Antwerpen
+327,Meerle-Heerle-Hal,18908797.23,Antwerpen
+307,De Aa-Ravels,83461072.55,Antwerpen
+309,De Vart,,Antwerpen
+339,Tulderheide,16208925.32,Antwerpen
+335,Retie,40880919.95,Antwerpen
+304,Bos en Duin Kasterlee,90343506.08,Antwerpen
+314,Groot-Lille,55918845.36,Antwerpen
+323,Klei en Zand,68904172.14,Antwerpen
+328,Merksplas,80852507.69,Antwerpen
+315,Groot-Brecht,,Antwerpen
+305,Brechtse Heide,38275048.81,Antwerpen
+316,Groot-Malle,60197089.82,Antwerpen
+338,Schijnvallei,68347472.56,Antwerpen
+342,Zandhovense Heide,25833827.94,Antwerpen
+344,Antwerpse Voorkempen,23162835.39,Antwerpen
+318,Herentals-Vorselaar-Heerle,40696335.5,Antwerpen
+306,Breeven,29753817.85,Antwerpen
+319,Het Netebroek Balen,38414292.15,Antwerpen
+325,Laakdal,60787907.86,Antwerpen
+341,Westerlo-West,42311364.1,Antwerpen
+343,Zuiderkempen,107717387.01,Antwerpen
+331,Nete & Wimp,95677264.01,Antwerpen
+317,Groot-Ranst,73655249.52,Antwerpen
+346,Pitsemburg,43566853.77,Antwerpen
+337,Rupeldal - De Bocht,53857207.83,Antwerpen
+324,Klein-Brabant Rupelstreek,28867028.39,Antwerpen
+441,Warmbeekvallei,67595409.4,Limburg
+534,Vallei van de Kleine Gete,31899228.1,Vlaams_Brabant
+431,Maaslandia,19797023.98,Limburg
+415,De Vier Rivieren,35335082.21,Limburg
+434,Perdix,56542532.36,Limburg
+521,Kravaal,26751002.63,Vlaams_Brabant
+409,De Korhaan,80536694.12,Limburg
+223,Land Van Rhode,54935473.39,Oost-Vlaanderen
+201,Scheldevallei,14188093.56,Oost-Vlaanderen
+407,De Herk,80285380.05,Limburg
+424,Jacht en Natuur Lommel,107763185.1,Limburg
+301,4B,24744226.48,Antwerpen
+334,Regio Lier,104539811.7,Antwerpen
+426,KEHA,103159652.09,Limburg
+524,Meerdaal-Honsem,77076016.8,Vlaams_Brabant
+105,Houtland,234506387.69,West-Vlaanderen
+110,Driekoningen,222758210.16,West-Vlaanderen
+213,Dendervallei,130161974.36,Oost-Vlaanderen
+225,Lijsdonk,35189035.35,Oost-Vlaanderen
+310,Dessel,32195928.2,Antwerpen
+320,Jaboom,76744336.06,Antwerpen
+505,De Bekkevoortse,59937736.67,Vlaams_Brabant
+506,De Kitsen,80454227.21,Vlaams_Brabant
+507,Klaverbeek,92721938.1,Vlaams_Brabant
+514,Het Hageland,14762071.43,Vlaams_Brabant
+535,Velpedal,95202518.66,Vlaams_Brabant
+543,Austerlitz,11079401.7,Vlaams_Brabant
+321,Postel Jacht en Natuur,22782240.18,Antwerpen
+345,Berg en Dal,57027364.45,Antwerpen
+402,Bocholt,53577711.96,Limburg
+404,Capreolus,90867880.05,Limburg
+406,De Hei,83939165.02,Limburg
+411,Mangelbeek,46814637.31,Limburg
+412,De Molenbeekvallei,34529064.28,Limburg
+420,Hasselt-Oost,73248909.45,Limburg
+430,Het Land van Haspengouw,25901556.75,Limburg
+432,Nieuwenhoven,45128994.99,Limburg
+437,Suetendael,104501391.56,Limburg
+440,Vogelsanck,41525848.96,Limburg
+444,Molenbeersel,20238812.51,Limburg
+445,Halense Jachtvrienden,21482501.52,Limburg
+504,De Barebeek,69163403.8,Vlaams_Brabant
+104,'t Boompje,43995107.93,West-Vlaanderen
+117,De Yzervalleien,149410185.45,West-Vlaanderen
+124,De Talingbeke,63291047.36,West-Vlaanderen
+130,Paddegat,90023369.31,West-Vlaanderen
+329,Mol,32087112.99,Antwerpen
+417,De Zwarte Beek,132773191.18,Limburg
+436,St-Michiel,56990936.52,Limburg
+509,Demervallei,22477445.88,Vlaams_Brabant
+322,De Voorkempen - Kalmthout,147293145.47,Antwerpen
+103,Westland,82961147.36,West-Vlaanderen
+107,Leie en Scheldekouters,74440347.53,West-Vlaanderen
+118,Ieperlee,153152332.27,West-Vlaanderen
+125,De Vlaamse Zonnebergen,48718681.94,West-Vlaanderen
+227,Moerstuiver-Damkeuken,40443863.42,Oost-Vlaanderen
+254,Kampel,14430869.58,Oost-Vlaanderen
+413,De Oetervallei,44701221.16,Limburg
+416,De Zandhaas,96912063.65,Limburg
+429,Kinrooi,59127131.42,Limburg
+533,Tussen Voer & Yse,93556353.77,Vlaams_Brabant
+541,Demerdal,46745086.38,Vlaams_Brabant
+410,De Leeuwerik,33393598.37,Limburg
+442,Willekesberg,80235433,Limburg
+544,"Wild-, Jacht-, Natuurbeheer Diest Oost",24309460.27,Vlaams_Brabant
+207,De Ledebeek,48516072.19,Oost-Vlaanderen
+214,Donkmeer,104948601.67,Oost-Vlaanderen
+218,Goudbloem-Denderland,19768358.63,Oost-Vlaanderen
+222,Land van Aalst,122661586.59,Oost-Vlaanderen
+224,Langs de Hoge Kale,149676558.54,Oost-Vlaanderen
+237,Tussen Dender en Schelde,24254940.11,Oost-Vlaanderen
+246,Canteclaer,43317235.76,Oost-Vlaanderen
+302,Antwerpen-Zuid Rupelstreek,86988740.15,Antwerpen
+313,Geel-Olen 1,61274571.64,Antwerpen
+347,Middenkempen,49064649.52,Antwerpen
+438,Tessenderlo,65168190.61,Limburg
+447,De Pereleer,18214321.82,Limburg
+511,"De Gete-,de Velpe-, de Menevallei",62891860.62,Vlaams_Brabant
+536,Walenbos,74369612.21,Vlaams_Brabant
