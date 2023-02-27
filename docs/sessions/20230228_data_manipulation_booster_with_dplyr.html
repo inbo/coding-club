@@ -60,7 +60,7 @@ class: left, top
 ## The open source community: stackoverflow
 
 Very few days after the last coding club about dates and strings I got this mail referring to a string related [question](https://stackoverflow.com/questions/63631764/how-to-sort-data-frame-by-columns-with-strings-containing-different-number-of-di/75282551#75282551) of mine of two years ago
-![:scale 75%]({{ site.baseurl}}/assets/images/20230228/20230228_stackoverflowmail.png)
+![:scale 95%]({{ site.baseurl}}/assets/images/20230228/20230228_stackoverflowmail.png)
 
 ---
 class: left, top
@@ -124,12 +124,12 @@ class: left, top
 
 # Data and scripts description
 
-Partridge data is inspired by the [yearly partridge counting](https://www.natuurenbos.be/patrijs) that is done from January 15th untill March 31st. Each game management unit (wildbeheerseenheid, **WBE**) is required to count partridges in their territory if they want to hunt them. There are two dataframes:
+- Partridge data is inspired by the [yearly partridge counting](https://www.natuurenbos.be/patrijs) that is done from January 15th untill March 31st. Each game management unit (wildbeheerseenheid, **WBE**) is required to count partridges in their territory if they want to hunt them. There are two dataframes:
 
-- [20230228_partridge.txt](https://github.com/inbo/coding-club/blob/main/data/20230228/20230228_partridge.txt): a dataset with observations of partridges. This includes the date of the observation, the fieldworker who submitted the observation, the type of observation (`couple`, `single`, `group`, or only `sound`), and location (WBE number and coordinates `x`, `y`).
-- [20230228_wbe_info.txt](https://github.com/inbo/coding-club/blob/main/data/20230228/20230228_wbe_info.txt): for each WBE, this dataframe contains the unique identification number (`wbe`), name, province, and surface area.
+1. [20230228_partridge.txt](https://github.com/inbo/coding-club/blob/main/data/20230228/20230228_partridge.txt): a dataset with observations of partridges. This includes the date of the observation, the fieldworker who submitted the observation, the type of observation (`couple`, `single`, `group`, or only `sound`), and location (WBE number and coordinates `x`, `y`).
+2. [20230228_wbe_info.txt](https://github.com/inbo/coding-club/blob/main/data/20230228/20230228_wbe_info.txt): for each WBE, this dataframe contains the unique identification number (`wbe`), name, province, and surface area.
 
-[20230228_ias_plants.txt](https://github.com/inbo/coding-club/blob/main/data/20230228/20230228_ias_plants.txt): a list of invasive alien plants. One column contain the scientific names, while the others contain vernacular names in English, Dutch and French.
+- [20230228_ias_plants.txt](https://github.com/inbo/coding-club/blob/main/data/20230228/20230228_ias_plants.txt): a list of invasive alien plants. One column contain the scientific names, while the others contain vernacular names in English, Dutch and French.
 
 - [20230228_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20230228/20230228_challenges.R): R script to start from (some code is already provided)
 
@@ -205,7 +205,7 @@ class: left, top
 ---
 class: left, top
 
-## Intermezzo -  two-table verbs
+## Intermezzo - Two-table verbs
 
 Two-table verbs = functions which take two data.frames as input to typically return one data.frame as output. A nice [article](https://dplyr.tidyverse.org/articles/two-table.html) on dplyr website.
 
@@ -355,7 +355,7 @@ class: center, middle
 ![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
 
 <!--  Adjust the room number and name  -->
-Topic: data manipulation OR making outstanding plots with ggplot <br>
+Topic: making outstanding plots with ggplot OR read data from INBO databases in R <br>
 Room:  HT - 01.05 - Isala Van Diest <br>
 Date: **30/03/2023**, from **10:00** to **12:30** <br>
 Help needed with technical setup? You are welcom from **9:45am**
