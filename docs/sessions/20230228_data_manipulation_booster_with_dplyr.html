@@ -51,6 +51,13 @@ Kind reminder to... myself.
 ---
 class: center, middle
 
+Well done, Dirk! Oops, prof. Maes, I mean!
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20230228/20230228_DirkMaes_professor.jpg)
+
+---
+class: center, middle
+
 <!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
 ![:scale 90%]({{ site.baseurl}}/assets/images/20230228/20230228_badge.png)
 
@@ -228,6 +235,50 @@ After reading the game management units details as `WBE` (code provided):
 4. Some observations have a missing value for column `wbe` and some WBEs have no observations at all. Get rid of them while joining.
 
 5. Now, join both again but retain ALL EXISTING WBEs. Set 0 to WBEs where no partridges were observed.
+
+---
+class: left, top
+
+# dplyr is a living thing
+
+We said at the beginning that dplyr is actively maintained. There is more! dplyr is actually moving forward to get better and better.
+
+dplyr released recently an important new version, dplyr 1.1.0. It means new very nice functions have been added, other older functions got superseded or some arguments are deprecated etc. Read more in this 4 blogposts:
+
+- [dplyr 1.1.0: joins](https://www.tidyverse.org/blog/2023/01/dplyr-1-1-0-joins/)
+- [dplyr 1.1.0: Per-operation grouping](https://www.tidyverse.org/blog/2023/02/dplyr-1-1-0-per-operation-grouping/)
+- [dplyr 1.1.0: The power of vctrs](https://www.tidyverse.org/blog/2023/02/dplyr-1-1-0-vctrs/)
+- [dplyr 1.1.0: pick(), reframe(), and arrange()](https://www.tidyverse.org/blog/2023/02/dplyr-1-1-0-pick-reframe-arrange/)
+
+
+---
+class: left, top
+
+# dplyr is a living thing
+
+An example:
+
+```
+people <- tibble(
+  first_name = c("Amber", "Damiano", "Dirk", "Emma", "Raïsa", "Hans"),
+  second_name = c("Mertens", "Oldoni", "Maes",
+                  "Cartuyvels", "Carmen", "Vancalster")
+)
+
+hobbys <- tibble( # purely invented!
+  people = c("Hans", "Damiano", "Dirk", "Amber", "Emma", "Raïsa"),
+  sport = c("rugby", "football", "hockey", "ski", "tennis", "bowling")
+)
+
+# old dplyr, still works! You need "" = "".
+people %>%
+  left_join(hobbys, by = c("first_name" = "people")
+)
+
+# now you can use join_by() and colnames without " "
+people %>%
+  left_join(hobbys, join_by(first_name == people))
+```
 
 ---
 class: left, top
