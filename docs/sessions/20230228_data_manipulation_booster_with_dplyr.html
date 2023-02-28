@@ -59,7 +59,7 @@ class: left, top
 
 ## The open source community: stackoverflow
 
-Very few days after the last coding club about dates and strings I got this mail referring to a string related [question](https://stackoverflow.com/questions/63631764/how-to-sort-data-frame-by-columns-with-strings-containing-different-number-of-di/75282551#75282551) of mine of two years ago
+A couple of days after the last coding club about dates and strings, I got this mail referring to a string related [question](https://stackoverflow.com/questions/63631764/how-to-sort-data-frame-by-columns-with-strings-containing-different-number-of-di/75282551#75282551) of mine of two years ago.
 ![:scale 95%]({{ site.baseurl}}/assets/images/20230228/20230228_stackoverflowmail.png)
 
 ---
@@ -140,7 +140,7 @@ class: left, top
 
 A lot of reasons. But the main one is that it makes data manipulation code easy to read (in comparison with basic R). Other important reasons?
 
-- very actively maintained (people from posit, the company behind RStudio) and works nicely with all other tidyverse packages
+- very actively maintained (people from posit, the company behind RStudio) and works nicely with all other tidyverse packages.
 - open development on [GitHub](https://github.com/tidyverse/dplyr/): issues, questions, dev ideas etc. are welcome.
 - functions have very good names. Some of them are exactly the same as in SQL, e.g. `filter()`, `select()`.
 
@@ -200,7 +200,7 @@ class: left, top
 
 3. Order the previous output per n_obs (descending order), wbe (ascending order) and type (alphabetically).
 
-4. For each month, returns the wbe with the highest number of observations and such number
+4. For each month, return the wbe with the highest number of observations and report the number of observations for those wbe that month.
 
 ---
 class: left, top
@@ -227,14 +227,14 @@ After reading the game management units details as `WBE` (code provided):
 
 4. Some observations have a missing value for column `wbe` and some WBEs have no observations at all. Get rid of them while joining.
 
-5. Now, join both again but retain ALL EXISTING WBEs. Set 0 to WBEs where no partridges were observed.
+5. Now, join both again but retain ALL EXISTING WBEs. Set the number of observations equal to 0 for all WBEs where no partridges were observed.
 
 ---
 class: left, top
 
 # Bonus challenge - Create tidy data with tidyr
 
-Sometimes the first data manipulation you have to perform is to create tidy data. dplyr could be not enough: you will need another important tidyverse package: [tidyr](https://tidyr.tidyverse.org/).
+Sometimes, the first data manipulation you have to perform is to create tidy data. dplyr might not suffice: you will need another important tidyverse package: [tidyr](https://tidyr.tidyverse.org/).
 
 Tidy data is data where:
 
@@ -247,7 +247,7 @@ class: left, top
 
 # Bonus challenge - Create tidy data with tidyr
 
-After reading `20230228_ias_plants.txt` dataset make it tidy. Please, notice that for some species two vernacular names are given. See figure below.
+After reading `20230228_ias_plants.txt` dataset, make it tidy. Please notice that, for some species, two vernacular names are given. See figure below.
 
 ![:scale 110%]({{ site.baseurl}}/assets/images/20230228/20230228_tidy_data_ias.png)
 
@@ -256,14 +256,14 @@ class: left, top
 
 # Bonus challenge - Sharing is caring
 
-This is not really a challenge. As we are learning from each other, why not sharing in the hackmd your experience with dplyr? Have you ever written a tough data manipulation piece of code using dplyr functions? Share it! If you can provide a minimal input example will help reproducibility. Thanks!
+This is not really a challenge. As we are learning from each other, why not share your experience with dplyr in the hackmd? Have you ever written a tough data manipulation piece of code using dplyr functions? Share it! If you can, provide a minimal input example tomake it reproducible. Thanks!
 
 ---
 class: left, top
 
 # The package of the month. Damiano's choice
 
-[tidylog](https://github.com/elbersb/tidylog): provides feedback about dplyr and tidyr operations. I like it a lot especially while joining dataframes and using long pipes:
+[tidylog](https://github.com/elbersb/tidylog): provides feedback about dplyr and tidyr operations. I like it a lot, especially while joining dataframes and using long pipes:
 
 ```
 joined <- left_join(nycflights13::flights, nycflights13::weather,
@@ -325,13 +325,13 @@ class: left, top
 
 # Resources
 
-- Solutions and video recording will be available soon
+- Solutions and video recording will be available soon.
 - [dplyr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20230228_cheat_sheet_data_transformation.pdf).
 - [tidyr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20230228_cheat_sheet_tidyr.pdf).
 - [dplyr](https://dplyr.tidyverse.org/) package documentation.
 - [tidyr](https://tidyr.tidyverse.org/) package documentation.
 - [data transformation chapter](https://r4ds.had.co.nz/transform.html) in the [R for data science](https://r4ds.had.co.nz/index.html) book.
-- [tidylog](https://github.com/elbersb/tidylog) package
+- [tidylog](https://github.com/elbersb/tidylog) package.
 
 ---
 class: left, top
@@ -340,14 +340,14 @@ class: left, top
 
 Every month you can vote among **two topics**!
 
-Poll for March's coding club is still open! Let us know your favorite before tomorrow
+Poll for March's coding club is still open! Let us know your favorite before tomorrow!
 
 https://forms.gle/pEQi153z8q9juDEy7
 
 You can choose between:
 
-- Make great plots with ggplot (level: beginner/intermediate)
-- Read data from INBO databases in R (credentials needed)
+- Make great plots with ggplot (level: beginner/intermediate).
+- Read data from INBO databases in R (credentials needed).
 
 ---
 class: center, middle
