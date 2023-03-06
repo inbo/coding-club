@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2023-02-28 | data manipulation booster with dplyr | [slides]({{ site.baseurl }}{% link sessions/20230228_data_manipulation_booster_with_dplyr.html  %}) | [hackmd](https://hackmd.io/B8aoQT_YRUOVks-j916YPA?view) | 01.04 - Transitielab |  |
+| 2023-02-28 | data manipulation booster with dplyr | [slides]({{ site.baseurl }}{% link sessions/20230228_data_manipulation_booster_with_dplyr.html  %}) | [hackmd](https://hackmd.io/B8aoQT_YRUOVks-j916YPA?view) | 01.04 - Transitielab | [vimeo](https://vimeo.com/805138374) |
 | 2023-01-26 | dates and strings in R | [slides]({{ site.baseurl }}{% link sessions/20230126_dates_strings_r.html  %}) | [hackmd](https://hackmd.io/BzTg8o1tS6W4-R9HjCCv0Q?view) | 01.72 - Kaat Tilley | [vimeo](https://vimeo.com/796590222) |
 | 2022-12-13 | reports in R | [slides]({{ site.baseurl }}{% link sessions/20221213_reports_in_r.html  %}) | [hackmd](https://hackmd.io/we1NBDrCSQi5wkETQWSdVg?view) | 01.05 - Isala Van Diest | |
 | 2022-12-06 | geospatial data visualization in R | [slides]({{ site.baseurl }}{% link sessions/20221206_rmaps.html  %}) | [hackmd](https://hackmd.io/3QWSEge3TtOs7xwgmrG-JQ?view) | 01.20 - Willy Van Der Meeren | [vimeo](https://vimeo.com/778846811) |
