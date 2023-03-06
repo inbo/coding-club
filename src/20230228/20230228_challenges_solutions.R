@@ -231,6 +231,11 @@ ias_tidy <- ias %>%
   # to take care of double vernacular names in same language
   separate_longer_delim(vernacular_name, delim = ";")
 
+## BONUS CHALLENGE 2 - sharing is caring
+
+# see related section on hackmd
+# https://hackmd.io/B8aoQT_YRUOVks-j916YPA?view#Bonus-challenge-2
+
 
 ## Closing the circle ;-)
 
