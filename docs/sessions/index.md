@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2023-03-30 | ggplot | [slides]({{ site.baseurl }}{% link sessions/20230330_ggplot.html  %}) | [hackmd]() | 01.04 - Isala Van Diest |  |
+| 2023-03-30 | great plots with ggplot | [slides]({{ site.baseurl }}{% link sessions/20230330_ggplot.html  %}) | [hackmd](https://hackmd.io/Tgu8AXQTRP2OgZZHnInVRw?view) | 01.04 - Isala Van Diest |  |
 | 2023-02-28 | data manipulation booster with dplyr | [slides]({{ site.baseurl }}{% link sessions/20230228_data_manipulation_booster_with_dplyr.html  %}) | [hackmd](https://hackmd.io/B8aoQT_YRUOVks-j916YPA?view) | 01.04 - Transitielab | [vimeo](https://vimeo.com/805138374) |
 | 2023-01-26 | dates and strings in R | [slides]({{ site.baseurl }}{% link sessions/20230126_dates_strings_r.html  %}) | [hackmd](https://hackmd.io/BzTg8o1tS6W4-R9HjCCv0Q?view) | 01.72 - Kaat Tilley | [vimeo](https://vimeo.com/796590222) |
 | 2022-12-13 | reports in R | [slides]({{ site.baseurl }}{% link sessions/20221213_reports_in_r.html  %}) | [hackmd](https://hackmd.io/we1NBDrCSQi5wkETQWSdVg?view) | 01.05 - Isala Van Diest | |
