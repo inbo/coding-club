@@ -1,0 +1,205 @@
+---
+layout: presentation
+title: Great plots with ggplot
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 30 MARCH 2023
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+
+01.05 - Isala Van Diest
+
+---
+class: left, top
+
+## ROOMIE: room reservation
+
+```
+> if (isFALSE(roomie)) {
++   warning("Please confirm asap the room reservation on the roomie")
++ }
+Warning message:
+Please confirm asap the room reservation on the roomie
+```
+
+---
+class: left, top
+
+## Record the session
+
+Kind reminder to... myself.
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20230330/20230330_badge_ggplot.png)
+
+---
+class: center, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20230330/20230330_cheat_sheet_ggplot.png)
+Download [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20230330_cheat_sheet_ggplot2.pdf)
+
+---
+class: left, middle
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+# Share your code during the coding session
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/Tgu8AXQTRP2OgZZHnInVRw?both and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/Tgu8AXQTRP2OgZZHnInVRw?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub foders [coding-club/data/20230330](https://github.com/inbo/coding-club/tree/master/data/20230330) and [coding-club/src/20230330](https://github.com/inbo/coding-club/tree/master/src/20230330)
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20230228")` to download the coding club material of February, 28 2023. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, middle
+
+# ggplot recipe: data - mapping - geometry
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20230330/20230330_ggplot_recipe.png)
+
+---
+class: left, top
+
+# Load libraries
+
+```r
+library(tidyverse)
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+
+
+---
+class: left, top
+
+## Intermezzo: aesthetics
+
+This works:
+
+```
+ggplot(data = survey, mapping = aes(x = species_id, y = weight)) +
+  geom_boxplot()
+```
+
+This works too:
+
+```
+ggplot(data = survey) +
+  geom_boxplot(mapping = aes(x = species_id, y = weight))
+```
+
+What should I use? Both are good, but...
+
+But what if you want to plot two or more geometries with *different* aesthetics?
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+
+---
+class: left, top
+
+## Intermezzo: facets
+
+How to make subplots, one per each `sex` value? One line of code is sufficient! Welcome to the fantastic world of *facets*!
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20230330/20230330_facets.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3
+
+
+
+---
+class: left, top
+
+# The package of the month. X's choice
+
+
+---
+class: left, top
+
+## Resources
+
+- [Challenges solutions](https://github.com/inbo/coding-club/blob/master/src/20230330/20230330_challenges_solutions.R)
+- `ggplot2` website: https://ggplot2.tidyverse.org/
+- R for Data Science: [Chapter 3: Data visualization](https://r4ds.had.co.nz/data-visualisation.html)
+- Article of H. Wickham about the layered [grammar of graphics](http://vita.had.co.nz/papers/layered-grammar.pdf)
+- [Datacarpentry's data visualiation tutorial](https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html)
+- [Stanford University tutorial](https://cengel.github.io/R-data-viz/data-visualization-with-ggplot2.html): chapter 1
+- R for Data Science: [Chapter 28: Graphics for communication](https://r4ds.had.co.nz/graphics-for-communication.html)
+- INBOtheme [homepage](https://inbo.github.io/INBOtheme/)
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.05 - Isala Van Diest<br>
+Date: __25/04/2023__, van 10:00 tot 12:30<br>
+Subject: **boost your graphs** <br>
+(registration announced via DG_useR@inbo.be)
