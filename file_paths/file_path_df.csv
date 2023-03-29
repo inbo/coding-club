@@ -145,6 +145,9 @@ data/20230126/20230126_pheno_phlogo.txt,20230126_pheno_phlogo.txt,data,20230126
 data/20230228/20230228_partridge.txt,20230228_partridge.txt,data,20230228
 data/20230228/20230228_wbe_info.txt,20230228_wbe_info.txt,data,20230228
 data/20230228/20230228_ias_plants.txt,20230228_ias_plants.txt,data,20230228
+data/20230330/20230330_ias_first_observed_BE.txt,20230330_ias_first_observed_BE.txt,data,20230330
+data/20230330/20230330_ias_first_observed_regions.txt,20230330_ias_first_observed_regions.txt,data,20230330
+data/20230330/20230330_ias_pathways.txt,20230330_ias_pathways.txt,data,20230330
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
