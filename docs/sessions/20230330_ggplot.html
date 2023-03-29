@@ -103,6 +103,19 @@ You can download the material of today:
 <small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
 ---
+class: left, top
+
+# Data and scripts description
+
+TOday we will work with national/regional checklist data about Invasive Alien Species (IAS).
+
+- `20230330_ias_first_observed_BE.txt`: dataset about year of first observation of IAS in Belgium from 1950
+- `20230330_ias_first_observed_regions.txt`: dataset about year of first observation of IAS in Belgian regions from 1950
+- `20230330_ias_pathways.txt`: dataset about pathway of introduction of IAS in Belgium from 1950
+
+- `20230330_challenges.R`: R script with code to starts with
+
+---
 class: left, middle
 
 # ggplot recipe: data - mapping - geometry
@@ -124,30 +137,51 @@ class: left, top
 
 # Challenge 1
 
-
+1. Make a bar chart with the number of taxa observed for the first time in Belgium per year. Tip: check the difference between `geom_bar()` and `geom_col()`.
+2. Change x and y labels to "year of introduction" and "number of taxa" respectively.
+3. Show only data from 1980 up to the latest year of `first_observed`.
+4. **Fill** all bars with color blue and set contour to red.
+5. Sometimes is better to show aggregated data to better deal with outliers and show trends. In this case, how to group years in bins of 5 years. Tip: choose another geomtry or use a **scale** function.
 
 ---
 class: left, top
 
 ## Intermezzo: aesthetics
 
-This works:
 
 ```
-ggplot(data = survey, mapping = aes(x = species_id, y = weight)) +
-  geom_boxplot()
+ggplot(data = ias_be, mapping = aes(x = first_observed)) +
+  geom_bar()
+
 ```
 
 This works too:
 
 ```
-ggplot(data = survey) +
-  geom_boxplot(mapping = aes(x = species_id, y = weight))
+ggplot(data = ias_be) +
+  geom_bar(mapping = aes(x = first_observed))
 ```
 
-What should I use? Both are good, but...
+What should I use? Both are good. Still, we have the feeling that the second version is used more often. The only exception where you really should go for the second option is when you plot two or more geometries with *different* aesthetics with same data. Example, plot pressure and temperature vs time* :
 
-But what if you want to plot two or more geometries with *different* aesthetics?
+```
+# dummy dataset
+press_temp <- tibble::tibble(
+  year = c(2000:2004),
+  press = c(1.0, 1.1, 1.4, 1.2, 1.6),
+  temp = c(13.2, 15.1, 12.2, 11.8, 10.9)
+)
+ggplot(press_temp) +
+  geom_point(mapping = aes(x = year, y = press)) +
+  geom_point(mapping = aes(x = year, y = temp), color = "red") +
+  scale_y_continuous(sec.axis = sec_axis(~., name = "temperature")) +
+  theme(axis.line.y.right = element_line(color = "red"),
+        axis.text.y.right = element_text(color = "red"),
+        axis.title.y.right = element_text(color = "red"))
+```
+
+<br>
+<small> __\* Note__: such kind of plot is bad practice, by the way.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -155,29 +189,92 @@ class: left, top
 
 # Challenge 2
 
+1. Make a bar chart plot similar to the ones in challenge 1 at regional level. How are the bars displayed per region, by default?
+2. How to set them next to each other?
+3. How to split the bar chart in subplots based on kingdom? Set the y scale free.
+4. Set order of the subplots as in figure on the left
+5. Split sublots by kingdom and location as in figure on the right
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20230330/20230330_facets.png)
 
 ---
 class: left, top
 
-## Intermezzo: facets
+## Intermezzo: customize non-data components - themes
 
-How to make subplots, one per each `sex` value? One line of code is sufficient! Welcome to the fantastic world of *facets*!
 
-![:scale 80%]({{ site.baseurl}}/assets/images/20230330/20230330_facets.png)
+You can personalize almost everything within your plots. ggplot2 provides some predefined themes via functions named `theme_*()`, e.g. `theme_bw()` for a white background with black lines. See more on cheat sheet.
+
+
+```r
+ggplot(data = ias_be, mapping = aes(x = first_observed)) +
+    geom_bar() + theme_bw()
+```
+
+But you can also customize any non-data component via function `theme()`! Give a look to help `?theme`. Notice the help functions `element_*()`, e.g. `element_line()`, `element_text()` and  `element_rect()`.
+
+```r
+ggplot(data = ias_be, mapping = aes(x = first_observed)) +
+  geom_bar() +
+  theme(panel.background = element_rect(fill = "red"),
+        panel.grid.major = element_line(colour = "blue", linewidth = 2))
+```
+
+
+Do you know that INBO has its own theme? It's called [INBOtheme](https://inbo.github.io/INBOtheme/): it's a package. Install it, load it and all figures will have authomatically an INBO touch. Read nice tutorials for more.
+
+```r
+library(INBOtheme)
+
+ggplot(data = ias_be, mapping = aes(x = first_observed)) +
+  geom_bar() +
+  ggtitle(label = "Temporal distribution of alien species introdutions")
+```
+
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
-# Challenge 3
+# Challenge 3 - Categorical variables
 
+1. Create a bar chart plot with number of introduced taxa per pathway and kingdom, see figure on the left. Note the space among the bars within same pathway. You can use INBOtheme to get same colors and text style.
+2. After adding `bins_first_observed_label` column (code provided), try to reproduce the plot on the right.
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20230330/20230330_challenge3.png)
 
 
 ---
 class: left, top
 
-# The package of the month. X's choice
+# Bonus challenge
 
+Starting from the [ToothGrowth](https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/ToothGrowth) dataset,
+you can plot the tooth length against the dose of the supplement using
+
+```
+ggplot(ToothGrowth, aes(x = dose, y = len, color = supp)) +
+  geom_point()
+```
+
+However, with so many points it is hard to see the effect of supp and dose on
+len. A box plot (`geom_boxplot()`) could help, but what's gone wrong with this
+code? The x , dose, doesn't make any sense. How to solve it?
+
+---
+class: left, top
+
+# The package of the month. Hans' choice
+
+The [ggforce](https://ggforce.data-imaginist.com/index.html) package will give a boost to your plots created via ggplot2.
+
+Examples:
+
+- `facet_matrix()`: to put different data columns into different rows and columns in a grid of panels
+- `geom_sina()`: to plot any single variable in a multiclass dataset
+- `facet_zoom()`: to zoom in on a subset of the data, while keeping the view of the full dataset
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20230330/20230330_ggforce.png)
 
 ---
 class: left, top
@@ -191,7 +288,8 @@ class: left, top
 - [Datacarpentry's data visualiation tutorial](https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html)
 - [Stanford University tutorial](https://cengel.github.io/R-data-viz/data-visualization-with-ggplot2.html): chapter 1
 - R for Data Science: [Chapter 28: Graphics for communication](https://r4ds.had.co.nz/graphics-for-communication.html)
-- INBOtheme [homepage](https://inbo.github.io/INBOtheme/)
+- [INBOtheme](https://inbo.github.io/INBOtheme/) homepage
+- [ggforce](https://ggforce.data-imaginist.com/index.html) homepage
 
 ---
 class: center, middle
