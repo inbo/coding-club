@@ -1,0 +1,1231 @@
+key	scientificName	locationId	kingdom	first_observed
+152543101	Gyrodactylus proterorhini Ergens, 1967	ISO_3166:BE-VLG	Animalia	2011
+152543132	Graptemys pseudogeographica kohnii (Baur, 1890)	ISO_3166:BE-VLG	Animalia	2005
+152543136	Graptemys pseudogeographica pseudogeographica	ISO_3166:BE-VLG	Animalia	2005
+152543139	Trachemys scripta troostii (Holbrook, 1836)	ISO_3166:BE-BRU	Animalia	2012
+152543139	Trachemys scripta troostii (Holbrook, 1836)	ISO_3166:BE-VLG	Animalia	2003
+152543139	Trachemys scripta troostii (Holbrook, 1836)	ISO_3166:BE-WAL	Animalia	2018
+152543140	Trachemys scripta elegans (Wied, 1838)	ISO_3166:BE-BRU	Animalia	2009
+152543140	Trachemys scripta elegans (Wied, 1838)	ISO_3166:BE-VLG	Animalia	1975
+152543140	Trachemys scripta elegans (Wied, 1838)	ISO_3166:BE-WAL	Animalia	2009
+152543141	Trachemys scripta scripta	ISO_3166:BE-BRU	Animalia	2010
+152543141	Trachemys scripta scripta	ISO_3166:BE-VLG	Animalia	1997
+152543141	Trachemys scripta scripta	ISO_3166:BE-WAL	Animalia	2010
+152543142	Lentinula edodes (Berk.) Pegler	ISO_3166:BE-VLG	Fungi	2018
+152543147	Natrix helvetica Lacépède, 1789	ISO_3166:BE-BRU	Animalia	1996
+152543147	Natrix helvetica Lacépède, 1789	ISO_3166:BE-VLG	Animalia	1968
+152543155	Orthriophis taeniurus (Cope, 1861)	ISO_3166:BE-VLG	Animalia	2006
+152543163	Lacerta viridis (Laurenti, 1768)	ISO_3166:BE-VLG	Animalia	2006
+152543168	Podarcis siculus (Rafinesque-schmaltz, 1810)	ISO_3166:BE-VLG	Animalia	2004
+152543169	Podarcis muralis (Laurenti, 1768)	ISO_3166:BE-BRU	Animalia	1999
+152543169	Podarcis muralis (Laurenti, 1768)	ISO_3166:BE-VLG	Animalia	2004
+152543178	Dendrocoelum romanodanubiale (Codreanu, 1949)	ISO_3166:BE-VLG	Animalia	2001
+152543188	Caenoplana bicolor (Graff, 1899)	ISO_3166:BE-VLG	Animalia	2015
+152543200	Chloephaga picta (Gmelin, 1789)	ISO_3166:BE-VLG	Animalia	1993
+152543206	Branta canadensis (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	1950
+152543207	Batrachochytrium salamandrivorans A.Martel, Blooi, Bossuyt & Pasmans	ISO_3166:BE-WAL	Fungi	2013
+152543209	Batrachochytrium dendrobatidis Longcore, Pessier & D.K.Nichols	ISO_3166:BE-VLG	Fungi	2018
+152543210	Aix sponsa (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	1957
+152543211	Aix galericulata (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	1953
+152543218	Alopochen aegyptiaca (Linnaeus, 1766)	ISO_3166:BE-VLG	Animalia	1984
+152543221	Oxyura jamaicensis (Gmelin, 1789)	ISO_3166:BE-VLG	Animalia	1979
+152543221	Oxyura jamaicensis (Gmelin, 1789)	ISO_3166:BE-WAL	Animalia	2018
+152543224	Cygnus atratus (Latham, 1790)	ISO_3166:BE-VLG	Animalia	1970
+152543235	Anser indicus (Latham, 1790)	ISO_3166:BE-VLG	Animalia	1966
+152543236	Lophocolea semiteres (Lehm.) Mitt.	ISO_3166:BE-VLG	Plantae	1956
+152543248	Ilex ×altaclerensis (Loud.) Dallim.	ISO_3166:BE-VLG	Plantae	2006
+152543250	Ilex crenata Thunb.	ISO_3166:BE-VLG	Plantae	2012
+152543251	Ilex ×meserveae S.Y.Hu	ISO_3166:BE-VLG	Plantae	2014
+152543252	Rupicapra rupicapra (Linnaeus, 1758)	ISO_3166:BE-WAL	Animalia	2013
+152543254	Ovis ammon (Linnaeus, 1758)	ISO_3166:BE-WAL	Animalia	2018
+152543258	Dama dama (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2018
+152543260	Cervus nippon Temminck, 1838	ISO_3166:BE-VLG	Animalia	2018
+152543264	Muntiacus reevesi (Ogilby, 1839)	ISO_3166:BE-VLG	Animalia	2005
+152543269	Ondatra zibethicus (Linnaeus, 1766)	ISO_3166:BE-VLG	Animalia	2018
+152543273	Myocastor coypus (Molina, 1782)	ISO_3166:BE-VLG	Animalia	2018
+152543277	Castor canadensis Kuhl, 1820	ISO_3166:BE-VLG	Animalia	2018
+152543282	Hydrochoerus hydrochaeris (Linnaeus, 1766)	ISO_3166:BE-VLG	Animalia	2003
+152543284	Dolichotis patagonum (Zimmermann, 1780)	ISO_3166:BE-VLG	Animalia	2014
+152543289	Meriones unguiculatus (Milne-Edwards, 1867)	ISO_3166:BE-VLG	Animalia	2010
+152543292	Melia azedarach L.	ISO_3166:BE-VLG	Plantae	2006
+152543293	Rattus norvegicus (Berkenhout, 1769)	ISO_3166:BE-VLG	Animalia	2018
+152543299	Sciurus carolinensis Gmelin, 1788	ISO_3166:BE-VLG	Animalia	2000
+152543300	Sciurus niger Linnaeus, 1758	ISO_3166:BE-WAL	Animalia	2014
+152543304	Tamias sibiricus (Laxmann, 1769)	ISO_3166:BE-BRU	Animalia	2018
+152543304	Tamias sibiricus (Laxmann, 1769)	ISO_3166:BE-VLG	Animalia	1976
+152543309	Cynomys ludovicianus (Ord, 1815)	ISO_3166:BE-VLG	Animalia	2018
+152543313	Callosciurus prevostii (Desmarest, 1822)	ISO_3166:BE-VLG	Animalia	2011
+152543314	Callosciurus erythraeus (Pallas, 1779)	ISO_3166:BE-VLG	Animalia	2004
+152543316	Tamiasciurus hudsonicus (Erxleben, 1777)	ISO_3166:BE-VLG	Animalia	2015
+152543323	Mephitis mephitis (Schreber, 1776)	ISO_3166:BE-VLG	Animalia	2014
+152543327	Procyon cancrivorus G	ISO_3166:BE-VLG	Animalia	2006
+152543329	Procyon lotor (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	1980
+152543329	Procyon lotor (Linnaeus, 1758)	ISO_3166:BE-WAL	Animalia	1986
+152543332	Nasua nasua (Linnaeus, 1766)	ISO_3166:BE-VLG	Animalia	2007
+152543337	Felis catus Linnaeus, 1758	ISO_3166:BE-VLG	Animalia	2018
+152543341	Nyctereutes procyonoides (Gray, 1834)	ISO_3166:BE-VLG	Animalia	2018
+152543348	Sarcophilus harrisii (Boitard, 1841)	ISO_3166:BE-VLG	Animalia	2007
+152543350	Cardiospermum halicacabum L.	ISO_3166:BE-VLG	Plantae	1994
+152543351	Cardiospermum grandiflorum Sw.	ISO_3166:BE-WAL	Plantae	1959
+152543356	Oryctolagus cuniculus (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2018
+152543365	Pleurodeles waltl Michahelles, 1830	ISO_3166:BE-VLG	Animalia	2011
+152543366	Acer monspessulanum L.	ISO_3166:BE-VLG	Plantae	2015
+152543372	Triturus marmoratus (Latreille, 1800)	ISO_3166:BE-VLG	Animalia	2018
+152543377	Rhinella marina (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2010
+152543379	Acer rubrum L.	ISO_3166:BE-VLG	Plantae	2008
+152543383	Xenopus laevis (Daudin, 1802)	ISO_3166:BE-VLG	Animalia	2006
+152543383	Xenopus laevis (Daudin, 1802)	ISO_3166:BE-WAL	Animalia	2006
+152543388	Lithobates catesbeianus (Shaw, 1802)	ISO_3166:BE-VLG	Animalia	1996
+152543388	Lithobates catesbeianus (Shaw, 1802)	ISO_3166:BE-WAL	Animalia	1992
+152543390	Pelophylax ridibundus (Pallas, 1771)	ISO_3166:BE-BRU	Animalia	2006
+152543390	Pelophylax ridibundus (Pallas, 1771)	ISO_3166:BE-VLG	Animalia	1975
+152543390	Pelophylax ridibundus (Pallas, 1771)	ISO_3166:BE-WAL	Animalia	2020
+152543391	Aesculus parviflora Walter	ISO_3166:BE-VLG	Plantae	2013
+152543392	Pelophylax bedriagae (Camerano, 1882)	ISO_3166:BE-BRU	Animalia	2004
+152543392	Pelophylax bedriagae (Camerano, 1882)	ISO_3166:BE-VLG	Animalia	2000
+152543392	Pelophylax bedriagae (Camerano, 1882)	ISO_3166:BE-WAL	Animalia	2020
+152543399	Ammannia coccinea Rottb.	ISO_3166:BE-VLG	Plantae	2016
+152543413	Lopezia racemosa Cav.	ISO_3166:BE-VLG	Plantae	1978
+152543417	Oreochromis niloticus (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	1990
+152543421	Ponticola kessleri (Günther, 1861)	ISO_3166:BE-VLG	Animalia	2012
+152543422	Clarkia amoena (Lehm.) A.Nelson & J.F.Macbr.	ISO_3166:BE-VLG	Plantae	2012
+152543426	Gobiosoma bosc (Lacepède, 1800)	ISO_3166:BE-VLG	Animalia	2018
+152543430	Neogobius melanostomus (Pallas, 1814)	ISO_3166:BE-VLG	Animalia	2010
+152543432	Neogobius fluviatilis (Pallas, 1814)	ISO_3166:BE-VLG	Animalia	2015
+152543436	Proterorhinus semilunaris (Heckel, 1837)	ISO_3166:BE-VLG	Animalia	2010
+152543440	Oenothera suaveolens Desf. ex Pers.	ISO_3166:BE-VLG	Plantae	2015
+152543458	Oenothera curtiflora W.L.Wagner & Hoch	ISO_3166:BE-WAL	Plantae	1958
+152543459	Oenothera paradoxa Hudziok	ISO_3166:BE-VLG	Plantae	2001
+152543464	Oenothera royfraseri R.R.Gates	ISO_3166:BE-VLG	Plantae	2007
+152543465	Acipenser baerii Brandt, 1869	ISO_3166:BE-VLG	Animalia	2001
+152543466	Oenothera subterminalis R.R.Gates	ISO_3166:BE-WAL	Plantae	1979
+152543467	Oenothera rubricauloides Rostanski	ISO_3166:BE-VLG	Plantae	2007
+152543468	Acipenser gueldenstaedtii Brandt & Ratzeburg, 1833	ISO_3166:BE-VLG	Animalia	2005
+152543470	Acipenser ruthenus Linnaeus, 1758	ISO_3166:BE-VLG	Animalia	2000
+152543473	Oenothera moravica V.Jehlík & Rostanski	ISO_3166:BE-VLG	Plantae	2017
+152543481	Clarias gariepinus (Burchell, 1822)	ISO_3166:BE-VLG	Animalia	1980
+152543497	Epilobium dodonaei Vill.	ISO_3166:BE-WAL	Plantae	1992
+152543500	Epilobium ×floridulum Smejkal	ISO_3166:BE-VLG	Plantae	1965
+152543535	Ballerus ballerus (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2016
+152543538	Pimephales promelas Rafinesque, 1820	ISO_3166:BE-VLG	Animalia	1984
+152543541	Euonymus japonicus Thunb.	ISO_3166:BE-VLG	Plantae	2010
+152543545	Euonymus alatus (Thunb.) Siebold	ISO_3166:BE-VLG	Plantae	2011
+152543546	Pseudorasbora parva (Temminck & Schlegel, 1846)	ISO_3166:BE-VLG	Animalia	1992
+152543548	Hypophthalmichthys nobilis (Richardson, 1845)	ISO_3166:BE-VLG	Animalia	1975
+152543550	Hypophthalmichthys molitrix (Valenciennes, 1844)	ISO_3166:BE-VLG	Animalia	1975
+152543553	Ctenopharyngodon idella (Valenciennes, 1844)	ISO_3166:BE-VLG	Animalia	1967
+152543557	Scaevola aemula R.Br.	ISO_3166:BE-VLG	Plantae	2014
+152543565	Menetus dilatatus (Gould, 1841)	ISO_3166:BE-VLG	Animalia	1998
+152543566	Campanula poscharskyana Degen	ISO_3166:BE-VLG	Plantae	2001
+152543570	Campanula erinus L.	ISO_3166:BE-VLG	Plantae	1999
+152543575	Campanula lactiflora M.Bieb.	ISO_3166:BE-VLG	Plantae	2000
+152543587	Lobelia sessilifolia Lamb.	ISO_3166:BE-VLG	Plantae	2004
+152543589	Lobelia pedunculata R.Br.	ISO_3166:BE-VLG	Plantae	2003
+152543593	Arion vulgaris Moquin-Tandon, 1855	ISO_3166:BE-VLG	Animalia	2018
+152543596	Trachelium caeruleum L.	ISO_3166:BE-VLG	Plantae	2005
+152543602	Triodanis perfoliata (L.) Nieuwl.	ISO_3166:BE-VLG	Plantae	2018
+152543605	Platycodon grandiflorus (Jacq.) A.DC.	ISO_3166:BE-VLG	Plantae	2013
+152543609	Deroceras panormitanum (Lessona & Pollonera, 1882)	ISO_3166:BE-VLG	Animalia	1972
+152543624	Hygromia cinctella (Draparnaud, 1801)	ISO_3166:BE-VLG	Animalia	2018
+152543624	Hygromia cinctella (Draparnaud, 1801)	ISO_3166:BE-WAL	Animalia	1994
+152543629	Boettgerilla pallens Simroth, 1912	ISO_3166:BE-VLG	Animalia	1971
+152543639	Tandonia sowerbyi (A.Férussac, 1823)	ISO_3166:BE-VLG	Animalia	1981
+152543641	Milax gagates (Draparnaud, 1801)	ISO_3166:BE-VLG	Animalia	2018
+152543646	Xerosecta cespitum (Draparnaud, 1801)	ISO_3166:BE-VLG	Animalia	1965
+152543649	Cernuella aginnica (Locard, 1882)	ISO_3166:BE-VLG	Animalia	2018
+152543652	Chondrilla juncea L.	ISO_3166:BE-VLG	Plantae	2004
+152543656	Trochoidea elegans (Gmelin, 1791)	ISO_3166:BE-VLG	Animalia	1976
+152543663	Tasserkidrilus americanus (Brinkhurst & Cook, 1966)	ISO_3166:BE-VLG	Animalia	2006
+152543667	Bratislavia dadayi (Michaelsen, 1905)	ISO_3166:BE-VLG	Animalia	2002
+152543671	Monopylephorus limosus (Hatai, 1898)	ISO_3166:BE-VLG	Animalia	2002
+152543676	Quistadrilus multisetosus (Smith, 1900)	ISO_3166:BE-VLG	Animalia	1996
+152543682	Psammoryctides moravicus (Hrabĕ, 1934)	ISO_3166:BE-VLG	Animalia	2008
+152543683	Bidens triplinervia var. macrantha (Wedd.) Sherff	ISO_3166:BE-VLG	Plantae	2000
+152543685	Bidens radiata Thuill.	ISO_3166:BE-VLG	Plantae	2005
+152543686	Branchiodrilus hortensis (Stephenson, 1910)	ISO_3166:BE-VLG	Animalia	2010
+152543692	Potamothrix heuscheri (Bretscher, 1900)	ISO_3166:BE-VLG	Animalia	2014
+152543694	Bidens vulgata Greene	ISO_3166:BE-VLG	Plantae	2000
+152543695	Potamothrix vejdovskyi (Hrabĕ, 1941)	ISO_3166:BE-VLG	Animalia	2009
+152543699	Limnodrilus cervix Brinkhurst, 1963	ISO_3166:BE-VLG	Animalia	2009
+152543706	Hypania invalida (Grube, 1860)	ISO_3166:BE-VLG	Animalia	2000
+152543710	Solidago altissima L.	ISO_3166:BE-VLG	Plantae	2016
+152543712	Laonome calida Capa, 2007	ISO_3166:BE-VLG	Animalia	2014
+152543718	Ficopomatus enigmaticus (Fauvel, 1923)	ISO_3166:BE-VLG	Animalia	1950
+152543725	Marenzelleria neglecta Sikorski & Bick, 2004	ISO_3166:BE-VLG	Animalia	2008
+152543727	Marenzelleria viridis (Verrill, 1873)	ISO_3166:BE-VLG	Animalia	1995
+152543736	Tragopogon ×mirabilis Rouy	ISO_3166:BE-VLG	Plantae	2000
+152543738	Sinanodonta woodiana (I.Lea, 1834)	ISO_3166:BE-VLG	Animalia	1999
+152543758	Dahlia coccinea Cav.	ISO_3166:BE-VLG	Plantae	2015
+152543762	Aster amellus L.	ISO_3166:BE-BRU	Plantae	1951
+152543765	Aster ageratoides Turcz.	ISO_3166:BE-VLG	Plantae	2014
+152543778	Corbicula fluminea (O.F.Müller, 1774)	ISO_3166:BE-VLG	Animalia	1992
+152543779	Emilia fosbergii Nicolson	ISO_3166:BE-VLG	Plantae	1997
+152543781	Corbicula fluminalis (O.F.Müller, 1774)	ISO_3166:BE-VLG	Animalia	1992
+152543786	Helenium ×clementii Verloove & Lambinon	ISO_3166:BE-WAL	Plantae	1972
+152543787	Rangia cuneata (G.B.Sowerby I, 1832)	ISO_3166:BE-VLG	Animalia	2004
+152543793	Dimorphotheca pluvialis (L.) Moench	ISO_3166:BE-VLG	Plantae	2007
+152543796	Iva annua L.	ISO_3166:BE-VLG	Plantae	1994
+152543800	Eupatorium perfoliatum L.	ISO_3166:BE-VLG	Plantae	2007
+152543805	Ensis directus (Conrad, 1844)	ISO_3166:BE-VLG	Animalia	1987
+152543809	Ligularia dentata (A.Gray) Hara	ISO_3166:BE-VLG	Plantae	2010
+152543811	Heliopsis helianthoides (L.) Sweet	ISO_3166:BE-VLG	Plantae	2006
+152543814	Meloidogyne artiellia Franklin, 1961	ISO_3166:BE-WAL	Animalia	2011
+152543818	Tithonia rotundifolia (Mill.) S.F.Blake	ISO_3166:BE-VLG	Plantae	2015
+152543820	Mastophorus Diesing, 1853	ISO_3166:BE-VLG	Animalia	2004
+152543821	Vernonia fasciculata Michx.	ISO_3166:BE-VLG	Plantae	2013
+152543827	Ageratina altissima (L.) R.King & H.Rob.	ISO_3166:BE-WAL	Plantae	1953
+152543833	Sinelobus vanhaareni Bamber, 2014	ISO_3166:BE-VLG	Animalia	2007
+152543839	Hemimysis anomala G.O.Sars, 1907	ISO_3166:BE-VLG	Animalia	1999
+152543842	Limnomysis benedeni Czerniavsky, 1882	ISO_3166:BE-VLG	Animalia	2005
+152543849	Rhithropanopeus harrisii (Gould, 1841)	ISO_3166:BE-VLG	Animalia	1991
+152543854	Palaemon macrodactylus Rathbun, 1902	ISO_3166:BE-VLG	Animalia	1999
+152543856	Crepis foetida subsp. rhoeadifolia (M.Bieb.) Celak.	ISO_3166:BE-VLG	Plantae	2003
+152543858	Crepis bursifolia L.	ISO_3166:BE-VLG	Plantae	2016
+152543859	Pacifastacus leniusculus (Dana, 1852)	ISO_3166:BE-VLG	Animalia	1986
+152543866	Procambarus clarkii (Girard, 1852)	ISO_3166:BE-VLG	Animalia	2008
+152543870	Anacyclus radiatus Loisel.	ISO_3166:BE-VLG	Plantae	1998
+152543877	Callinectes sapidus Rathbun, 1896	ISO_3166:BE-VLG	Animalia	1993
+152543886	Hemigrapsus takanoi Asakura & Watanabe, 2005	ISO_3166:BE-VLG	Animalia	2003
+152543888	Melampodium montanum Benth.	ISO_3166:BE-VLG	Plantae	2003
+152543889	Hemigrapsus sanguineus (De Haan, 1835)	ISO_3166:BE-VLG	Animalia	2006
+152543890	Melampodium perfoliatum (Cav.) Kunth	ISO_3166:BE-VLG	Plantae	1995
+152543897	Jaera istri Veuille, 1979	ISO_3166:BE-VLG	Animalia	2000
+152543901	Eutrochium maculatum (L.) E.E.Lamont	ISO_3166:BE-VLG	Plantae	2004
+152543903	Eutrochium purpureum (L.) E.E.Lamont	ISO_3166:BE-VLG	Plantae	2009
+152543904	Cordioniscus stebbingi (Patience, 1907)	ISO_3166:BE-VLG	Animalia	1956
+152543907	Synarmadillo Dollfus, 1892	ISO_3166:BE-VLG	Animalia	2015
+152543911	Reductoniscus costulatus Kesselyak, 1930	ISO_3166:BE-VLG	Animalia	2015
+152543918	Nagurus cristatus (Dollfus, 1889)	ISO_3166:BE-VLG	Animalia	2015
+152543924	Proasellus coxalis (Dollfus, 1892)	ISO_3166:BE-VLG	Animalia	1998
+152543929	Synidotea laticauda Benedict, 1897	ISO_3166:BE-VLG	Animalia	2005
+152543938	Chelicorophium curvispinum (G.O.Sars, 1895)	ISO_3166:BE-VLG	Animalia	1990
+152543939	Rhaponticum repens (L.) Hidalgo	ISO_3166:BE-VLG	Plantae	1956
+152543942	Monocorophium sextonae (Crawford, 1937)	ISO_3166:BE-VLG	Animalia	1993
+152543947	Caprella mutica Schurin, 1935	ISO_3166:BE-VLG	Animalia	1998
+152543950	Centaurea pectinata L.	ISO_3166:BE-WAL	Plantae	2004
+152543953	Incisocalliope aestuarius (Watling & Maurer, 1973)	ISO_3166:BE-VLG	Animalia	1996
+152543963	Centaurea calocephala Willd.	ISO_3166:BE-VLG	Plantae	2014
+152543968	Echinogammarus trichiatus (Martynov, 1932)	ISO_3166:BE-VLG	Animalia	2009
+152543975	Dikerogammarus villosus (Sowinsky, 1894)	ISO_3166:BE-VLG	Animalia	1997
+152543983	Gammarus tigrinus Sexton, 1939	ISO_3166:BE-VLG	Animalia	1991
+152543986	Anaphalis triplinervis (Sims) C.B.Clarke	ISO_3166:BE-VLG	Plantae	2005
+152543987	Synurella ambulans (F.Müller, 1846)	ISO_3166:BE-VLG	Animalia	2003
+152543992	Crangonyx pseudogracilis Bousfield, 1958	ISO_3166:BE-VLG	Animalia	1992
+152543993	Catananche caerulea L.	ISO_3166:BE-VLG	Plantae	1953
+152543997	Adenostyles alliariae (Gouan) A.Kern.	ISO_3166:BE-WAL	Plantae	1971
+152543999	Melita nitida Smith, 1873	ISO_3166:BE-VLG	Animalia	1996
+152544002	Coreopsis lanceolata L.	ISO_3166:BE-VLG	Plantae	2001
+152544007	Helichrysum petiolare Hilliard & B.L.Burtt	ISO_3166:BE-VLG	Plantae	2008
+152544009	Helichrysum italicum (Roth) G.Don	ISO_3166:BE-VLG	Plantae	2009
+152544011	Amphibalanus reticulatus (Utinomi, 1967)	ISO_3166:BE-VLG	Animalia	1997
+152544016	Amberboa moschata (L.) DC.	ISO_3166:BE-BRU	Plantae	1952
+152544017	Amphibalanus amphitrite (Darwin, 1854)	ISO_3166:BE-VLG	Animalia	1952
+152544023	Megabalanus coccopoma (Darwin, 1854)	ISO_3166:BE-VLG	Animalia	1997
+152544030	Artemisia sieversiana Ehrh. ex Willd.	ISO_3166:BE-VLG	Plantae	2011
+152544031	Artemisia princeps Pamp.	ISO_3166:BE-VLG	Plantae	2011
+152544035	Austrominius modestus (Darwin, 1854)	ISO_3166:BE-VLG	Animalia	1950
+152544039	Achillea salicifolia subsp. salicifolia	ISO_3166:BE-VLG	Plantae	1986
+152544041	Achillea ageratum L.	ISO_3166:BE-VLG	Plantae	1953
+152544050	Erigeron ×flahaultianus Thell.	ISO_3166:BE-VLG	Plantae	2002
+152544067	Santolina chamaecyparissus L.	ISO_3166:BE-VLG	Plantae	1953
+152544070	Uroctea durandi (Latreille, 1809)	ISO_3166:BE-VLG	Animalia	2018
+152544075	Oecobius amboseli Shear & Benoit, 1974	ISO_3166:BE-VLG	Animalia	2007
+152544076	Oecobius navus Blackwall, 1859	ISO_3166:BE-VLG	Animalia	1985
+152544080	Heteropoda venatoria (Linnaeus, 1767)	ISO_3166:BE-VLG	Animalia	1999
+152544081	Olios (Walckenaer, 1806)	ISO_3166:BE-VLG	Animalia	2011
+152544083	Olios argelasius (Walckenaer, 1806)	ISO_3166:BE-VLG	Animalia	2011
+152544084	Nolavia Kammerer, 2006	ISO_3166:BE-VLG	Animalia	2016
+152544085	Cerbalus Simon, 1897	ISO_3166:BE-VLG	Animalia	2000
+152544087	Pilosella fuscoatra (Nägeli & Peter) Soják	ISO_3166:BE-VLG	Plantae	2006
+152544089	Nephila Leach, 1815	ISO_3166:BE-VLG	Animalia	2010
+152544091	Pilosella stoloniflora (Waldst. & Kit.) F.W.Schultz & Sch.Bip.	ISO_3166:BE-VLG	Plantae	2016
+152544093	Neoscona nautica (L.Koch, 1875)	ISO_3166:BE-VLG	Animalia	2001
+152544098	Hasarius adansoni (Audouin, 1826)	ISO_3166:BE-VLG	Animalia	2001
+152544103	Philaeus chrysops (Poda, 1761)	ISO_3166:BE-VLG	Animalia	2014
+152544105	Phidippus C.L.Koch, 1846	ISO_3166:BE-VLG	Animalia	2009
+152544108	Saitis barbipes (Simon, 1868)	ISO_3166:BE-VLG	Animalia	2006
+152544108	Saitis barbipes (Simon, 1868)	ISO_3166:BE-WAL	Animalia	2013
+152544111	Parthenium hysterophorus L.	ISO_3166:BE-VLG	Plantae	1999
+152544112	Pellenes geniculatus (Simon, 1868)	ISO_3166:BE-VLG	Animalia	2001
+152544115	Evarcha jucunda (Lucas, 1846)	ISO_3166:BE-VLG	Animalia	1995
+152544118	Plexippus paykulli (Audouin, 1826)	ISO_3166:BE-VLG	Animalia	2001
+152544120	Petasites japonicus (Siebold & Zucc.) Maxim.	ISO_3166:BE-VLG	Plantae	1989
+152544122	Heliophanus kochii Simon, 1868	ISO_3166:BE-VLG	Animalia	2006
+152544126	Macaroeris nidicolens (Walckenaer, 1802)	ISO_3166:BE-VLG	Animalia	2006
+152544130	Sinacalia tangutica (Maxim.) B.Nord.	ISO_3166:BE-VLG	Plantae	2004
+152544131	Cheiracanthium furculatum Karsch, 1879	ISO_3166:BE-VLG	Animalia	2013
+152544135	Cryptachaea blattea (Urquhart, 1886)	ISO_3166:BE-VLG	Animalia	2002
+152544136	Cryptachaea veruculata (Urquhart, 1886)	ISO_3166:BE-VLG	Animalia	1992
+152544141	Nesticodes rufipes (Lucas, 1846)	ISO_3166:BE-VLG	Animalia	2004
+152544145	Euryopis episinoides (Walckenaer, 1847)	ISO_3166:BE-VLG	Animalia	2002
+152544148	Coleosoma floridanum Banks, 1900	ISO_3166:BE-VLG	Animalia	2014
+152544151	Steatoda nobilis (Thorell, 1875)	ISO_3166:BE-VLG	Animalia	2009
+152544152	Steatoda paykulliana (Walckenaer, 1806)	ISO_3166:BE-VLG	Animalia	1999
+152544153	Helianthus salicifolius A.Dietr.	ISO_3166:BE-VLG	Plantae	1952
+152544155	Steatoda grossa (C.L.Koch, 1838)	ISO_3166:BE-VLG	Animalia	1978
+152544156	Helianthus decapetalus L.	ISO_3166:BE-VLG	Plantae	2011
+152544161	Hadrotarsus ornatus Hickman, 1943	ISO_3166:BE-VLG	Animalia	1999
+152544162	Cirsium rivulare (Jacq.) All.	ISO_3166:BE-VLG	Plantae	1972
+152544165	Latrodectus mactans (Fabricius, 1775)	ISO_3166:BE-VLG	Animalia	1967
+152544165	Latrodectus mactans (Fabricius, 1775)	ISO_3166:BE-WAL	Animalia	1996
+152544166	Cirsium ×subalpinum Gaudich.	ISO_3166:BE-VLG	Plantae	1972
+152544167	Latrodectus hasselti Thorell, 1870	ISO_3166:BE-VLG	Animalia	1999
+152544168	Latrodectus geometricus C.L.Koch, 1841	ISO_3166:BE-VLG	Animalia	2006
+152544170	Latrodectus hesperus Chamberlin & Ivie, 1935	ISO_3166:BE-VLG	Animalia	2013
+152544172	Gutenbergia rueppellii Sch.Bip.	ISO_3166:BE-VLG	Plantae	2013
+152544174	Zoropsis spinimana (Dufour, 1820)	ISO_3166:BE-VLG	Animalia	2004
+152544178	Rudbeckia amplexicaulis Vahl	ISO_3166:BE-BRU	Plantae	1950
+152544179	Brachypelma albopilosum Valerio, 1980	ISO_3166:BE-VLG	Animalia	1986
+152544182	Grammostola rosea (Walckenaer, 1837)	ISO_3166:BE-VLG	Animalia	2008
+152544186	Phormictopus cancerides (Latreille, 1806)	ISO_3166:BE-VLG	Animalia	2008
+152544188	Chaetopelma olivaceum (C.L.Koch, 1841)	ISO_3166:BE-VLG	Animalia	2011
+152544194	Selenops radiatus Latreille, 1819	ISO_3166:BE-VLG	Animalia	2004
+152544199	Holocnemus pluchei (Scopoli, 1763)	ISO_3166:BE-VLG	Animalia	1994
+152544202	Spermophora senoculata (Dugès, 1836)	ISO_3166:BE-VLG	Animalia	1998
+152544205	Micropholcus fauroti (Simon, 1887)	ISO_3166:BE-VLG	Animalia	2001
+152544209	Crossopriza lyoni (Blackwall, 1867)	ISO_3166:BE-VLG	Animalia	2001
+152544210	Pholcus Walckenaer, 1805	ISO_3166:BE-VLG	Animalia	2015
+152544212	Pholcus opilionoides (Schrank, 1781)	ISO_3166:BE-VLG	Animalia	2003
+152544214	Artema atlanta Walckenaer, 1837	ISO_3166:BE-VLG	Animalia	2001
+152544220	Phoneutria boliviensis (F.O.Pickard-Cambridge, 1897)	ISO_3166:BE-VLG	Animalia	2015
+152544221	Phoneutria nigriventer (Keyserling, 1891)	ISO_3166:BE-VLG	Animalia	1986
+152544229	Triaeris stenaspis Simon, 1892	ISO_3166:BE-VLG	Animalia	2018
+152544234	Erigone dentosa O.Pickard-Cambridge, 1894	ISO_3166:BE-VLG	Animalia	2012
+152544238	Mermessus denticulatus (Banks, 1898)	ISO_3166:BE-VLG	Animalia	1997
+152544242	Cynara cardunculus L.	ISO_3166:BE-VLG	Plantae	2015
+152544244	Cynara scolymus L.	ISO_3166:BE-VLG	Plantae	2015
+152544246	Callobius nomeus (Chamberlin, 1919)	ISO_3166:BE-VLG	Animalia	2014
+152544249	Argyranthemum frutescens (L.) Sch.Bip.	ISO_3166:BE-VLG	Plantae	2017
+152544250	Uloborus plumipes Lucas, 1846	ISO_3166:BE-VLG	Animalia	1984
+152544253	Thanatus vulgaris Simon, 1870	ISO_3166:BE-VLG	Animalia	1999
+152544257	Macrothele calpeiana (Walckenaer, 1805)	ISO_3166:BE-VLG	Animalia	2008
+152544257	Macrothele calpeiana (Walckenaer, 1805)	ISO_3166:BE-WAL	Animalia	2014
+152544270	Fulvius subnitens Poppius, 1909	ISO_3166:BE-VLG	Animalia	2008
+152544272	Fulvius anthocoroides (Reuter, 1875)	ISO_3166:BE-VLG	Animalia	2008
+152544277	Tropidosteptes pacificus (Van Duzee, 1921)	ISO_3166:BE-VLG	Animalia	2009
+152544278	Sonchus tenerrimus L.	ISO_3166:BE-VLG	Plantae	2004
+152544283	Nysius huttoni F.B.White, 1878	ISO_3166:BE-VLG	Animalia	2004
+152544283	Nysius huttoni F.B.White, 1878	ISO_3166:BE-WAL	Animalia	2004
+152544288	Thaumatotibia leucotreta (Meyrick, 1913)	ISO_3166:BE-VLG	Animalia	2016
+152544292	Amphiachyris dracunculoides (DC.) Nutt.	ISO_3166:BE-VLG	Plantae	1991
+152544293	Cydalima perspectalis (Walker, 1859)	ISO_3166:BE-VLG	Animalia	2018
+152544293	Cydalima perspectalis (Walker, 1859)	ISO_3166:BE-WAL	Animalia	2018
+152544299	Callopistria floridensis Guenée, 1852	ISO_3166:BE-VLG	Animalia	2016
+152544304	Cacyreus marshalli Butler, 1898	ISO_3166:BE-BRU	Animalia	1991
+152544304	Cacyreus marshalli Butler, 1898	ISO_3166:BE-VLG	Animalia	2018
+152544309	Paysandisia archon (Burmeister, 1880)	ISO_3166:BE-VLG	Animalia	2011
+152544312	Heteranthemis viscidehirta Schott	ISO_3166:BE-VLG	Plantae	1954
+152544314	Cameraria gaultheriella (Walsingham, 1889)	ISO_3166:BE-VLG	Animalia	2018
+152544315	Cameraria ohridella Deschka & Dimic, 1986	ISO_3166:BE-VLG	Animalia	1999
+152544320	Tripleurospermum decipiens (Fisch. & C.A.Mey.) Bornm.	ISO_3166:BE-VLG	Plantae	2011
+152544321	Aedes albopictus Skuse, 1894	ISO_3166:BE-VLG	Animalia	2000
+152544324	Aedes japonicus (Theobald, 1901)	ISO_3166:BE-WAL	Animalia	2002
+152544327	Aedes koreicus (Edwards, 1917)	ISO_3166:BE-VLG	Animalia	2008
+152544328	Cosmos sulphureus Cav.	ISO_3166:BE-VLG	Plantae	2015
+152544332	Anopheles pharoensis Theobald, 1901	ISO_3166:BE-WAL	Animalia	2017
+152544342	Acheta domesticus (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2018
+152544342	Acheta domesticus (Linnaeus, 1758)	ISO_3166:BE-WAL	Animalia	2018
+152544350	Gryllomorpha dalmatina (Ocskay, 1832)	ISO_3166:BE-BRU	Animalia	2018
+152544350	Gryllomorpha dalmatina (Ocskay, 1832)	ISO_3166:BE-WAL	Animalia	2018
+152544353	Acanthospermum hispidum DC.	ISO_3166:BE-VLG	Plantae	1997
+152544356	Gryllus bimaculatus De Geer, 1773	ISO_3166:BE-VLG	Animalia	2018
+152544359	Eumodicogryllus bordigalensis (Latreille, 1804)	ISO_3166:BE-VLG	Animalia	2018
+152544364	Gryllodes sigillatus (F.Walker, 1869)	ISO_3166:BE-VLG	Animalia	2018
+152544369	Anacridium aegyptium (Linnaeus, 1764)	ISO_3166:BE-VLG	Animalia	2010
+152544369	Anacridium aegyptium (Linnaeus, 1764)	ISO_3166:BE-WAL	Animalia	2018
+152544374	Yersinella raymondii (Yersin, 1860)	ISO_3166:BE-VLG	Animalia	2012
+152544377	Meconema meridionale A.Costa, 1860	ISO_3166:BE-VLG	Animalia	2018
+152544377	Meconema meridionale A.Costa, 1860	ISO_3166:BE-WAL	Animalia	1995
+152544379	Onopordum tauricum Willd.	ISO_3166:BE-VLG	Plantae	2014
+152544381	Onopordum macracanthum Schousb.	ISO_3166:BE-VLG	Plantae	1973
+152544386	Nicoletia phytophila Gervais, 1844	ISO_3166:BE-VLG	Animalia	2016
+152544387	Symphyotrichum lateriflorum (L.) Á.Löve & D.Löve	ISO_3166:BE-WAL	Plantae	2008
+152544404	Guizotia schimperi Sch.Bip.	ISO_3166:BE-VLG	Plantae	2015
+152544407	Ischnura senegalensis Rambur, 1842	ISO_3166:BE-VLG	Animalia	2013
+152544408	Tagetes tenuifolia Cav.	ISO_3166:BE-WAL	Plantae	1992
+152544412	Pseudagrion microcephalum Rambur, 1842	ISO_3166:BE-VLG	Animalia	2011
+152544419	Acmella Rich., 1807	ISO_3166:BE-WAL	Plantae	1955
+152544421	Acmella oleracea (L.) R.K.Jansen	ISO_3166:BE-VLG	Plantae	2008
+152544459	Euborellia annulipes (H.F.Lucas, 1847)	ISO_3166:BE-VLG	Animalia	2016
+152544465	Aproceros leucopoda Takeuchi, 1939	ISO_3166:BE-VLG	Animalia	2013
+152544468	Fatsia japonica (Thunb.) Decne. & Planch.	ISO_3166:BE-VLG	Plantae	2005
+152544474	Sceliphron caementarium (Drury, 1773)	ISO_3166:BE-VLG	Animalia	2015
+152544475	Hedera maroccana McAll.	ISO_3166:BE-VLG	Plantae	2010
+152544480	Aralia racemosa L.	ISO_3166:BE-VLG	Plantae	1972
+152544481	Vespa velutina Lepeletier, 1836	ISO_3166:BE-VLG	Animalia	2016
+152544481	Vespa velutina Lepeletier, 1836	ISO_3166:BE-WAL	Animalia	2011
+152544487	Technomyrmex vitiensis Mann, 1921	ISO_3166:BE-VLG	Animalia	1980
+152544490	Lasius neglectus Van Loon, Boomsma & Andrasfalvy, 1990	ISO_3166:BE-VLG	Animalia	1978
+152544495	Torilis africana Spreng.	ISO_3166:BE-VLG	Plantae	1999
+152544506	Pastinaca sativa subsp. sativa	ISO_3166:BE-VLG	Plantae	2015
+152544512	Tetramorium bicarinatum (Nylander, 1846)	ISO_3166:BE-WAL	Animalia	1980
+152544514	Tapinoma melanocephalum (Fabricius, 1793)	ISO_3166:BE-WAL	Animalia	2005
+152544515	Pimpinella peregrina L.	ISO_3166:BE-VLG	Plantae	2000
+152544520	Tetraponera allaborans (Walker, 1859)	ISO_3166:BE-WAL	Animalia	1980
+152544523	Linepithema humile (Mayr, 1868)	ISO_3166:BE-VLG	Animalia	2003
+152544526	Camponotus vagus (Scopoli, 1763)	ISO_3166:BE-VLG	Animalia	1998
+152544533	Anoplophora glabripennis (Motschulsky, 1854)	ISO_3166:BE-VLG	Animalia	2008
+152544536	Anoplophora chinensis (Forster, 1771)	ISO_3166:BE-VLG	Animalia	2005
+152544551	Coccinella miranda Wollaston, 1864	ISO_3166:BE-BRU	Animalia	2013
+152544558	Harmonia axyridis (Pallas, 1773)	ISO_3166:BE-BRU	Animalia	2001
+152544558	Harmonia axyridis (Pallas, 1773)	ISO_3166:BE-VLG	Animalia	2001
+152544558	Harmonia axyridis (Pallas, 1773)	ISO_3166:BE-WAL	Animalia	2002
+152544562	Scandix stellata Banks & Sol.	ISO_3166:BE-BRU	Plantae	2013
+152544563	Rhyzobius forestieri (Mulsant, 1853)	ISO_3166:BE-BRU	Animalia	2006
+152544563	Rhyzobius forestieri (Mulsant, 1853)	ISO_3166:BE-VLG	Animalia	2018
+152544567	Scandix balansae Reut. ex Boiss.	ISO_3166:BE-VLG	Plantae	1997
+152544571	Tordylium maximum L.	ISO_3166:BE-VLG	Plantae	2004
+152544576	Heracleum sphondylium subsp. sibiricum (L.) Simonk.	ISO_3166:BE-VLG	Plantae	2017
+152544587	Hoplopleura erismata Ferris, 1921	ISO_3166:BE-VLG	Animalia	2004
+152544591	Enderleinellus kumadai Kaneko, 1954	ISO_3166:BE-VLG	Animalia	2004
+152544601	Eryngium bourgatii Gouan	ISO_3166:BE-VLG	Plantae	2013
+152544622	Bupleurum fruticosum L.	ISO_3166:BE-WAL	Plantae	1975
+152544645	Cylindroiulus britannicus (Verhoeff, 1891)	ISO_3166:BE-VLG	Animalia	2015
+152544652	Hydrocotyle verticillata Thunb.	ISO_3166:BE-VLG	Plantae	2009
+152544657	Laurus nobilis L.	ISO_3166:BE-VLG	Plantae	2009
+152544659	Persea americana Mill.	ISO_3166:BE-VLG	Plantae	2017
+152544663	Cercidiphyllum japonicum Siebold & Zucc.	ISO_3166:BE-VLG	Plantae	2014
+152544670	Liquidambar styraciflua L.	ISO_3166:BE-VLG	Plantae	2007
+152544673	Paeonia lactiflora Pall.	ISO_3166:BE-VLG	Plantae	2014
+152544674	Paeonia officinalis L.	ISO_3166:BE-BRU	Plantae	1968
+152544677	Bergenia schmidtii (Regel) Silva Tar.	ISO_3166:BE-VLG	Plantae	2007
+152544679	Bergenia crassifolia (L.) Fritsch	ISO_3166:BE-VLG	Plantae	2011
+152544681	Tiarella cordifolia L.	ISO_3166:BE-VLG	Plantae	2012
+152544683	Tolmiea menziesii (Pursh) Torr. & A.Gray	ISO_3166:BE-VLG	Plantae	2015
+152544685	Rodgersia aesculifolia Batalin	ISO_3166:BE-VLG	Plantae	2011
+152544686	Rodgersia podophylla A.Gray	ISO_3166:BE-VLG	Plantae	2016
+152544692	Saxifraga cymbalaria L.	ISO_3166:BE-WAL	Plantae	1977
+152544694	Darmera peltata (Torr. ex Benth.) Voss	ISO_3166:BE-VLG	Plantae	2011
+152544705	Umbilicus rupestris (Salisb.) Dandy	ISO_3166:BE-VLG	Plantae	2000
+152544712	Petrosedum sediforme (Jacq.) Grulich	ISO_3166:BE-WAL	Plantae	2013
+152544720	Kalanchoe blossfeldiana Poelln.	ISO_3166:BE-VLG	Plantae	2012
+152544723	Sempervivum ×barbulatum Schott	ISO_3166:BE-VLG	Plantae	2009
+152544734	Pachysandra terminalis Siebold & Zucc.	ISO_3166:BE-VLG	Plantae	1994
+152544741	Morus nigra L.	ISO_3166:BE-VLG	Plantae	2014
+152544746	Broussonetia papyrifera (L.) Vent.	ISO_3166:BE-VLG	Plantae	2011
+152544749	Hippophae rhamnoides subsp. caucasica Rousi	ISO_3166:BE-VLG	Plantae	2010
+152544751	Elaeagnus macrophylla Thunb.	ISO_3166:BE-VLG	Plantae	2013
+152544752	Elaeagnus ×submacrophylla Serv.	ISO_3166:BE-VLG	Plantae	2005
+152544753	Elaeagnus multiflora Thunb.	ISO_3166:BE-VLG	Plantae	2005
+152544759	Ceanothus ×delilianus Spach	ISO_3166:BE-VLG	Plantae	1992
+152544761	Ziziphus lotus (L.) Lam.	ISO_3166:BE-VLG	Plantae	2006
+152544764	Zelkova serrata (Thunb.) Makino	ISO_3166:BE-VLG	Plantae	2015
+152544771	Pilea hyalina Fenzl	ISO_3166:BE-VLG	Plantae	1980
+152544772	Pilea peperomioides Diels	ISO_3166:BE-VLG	Plantae	1985
+152544773	Pilea microphylla (L.) Liebm.	ISO_3166:BE-VLG	Plantae	1995
+152544792	Aronia melanocarpa (Michx.) Elliott	ISO_3166:BE-VLG	Plantae	1956
+152544796	Geum ternatum (Stephan) Smedmark	ISO_3166:BE-VLG	Plantae	2008
+152544797	Geum quellyon Sweet	ISO_3166:BE-VLG	Plantae	2004
+152544798	Geum macrophyllum Willd.	ISO_3166:BE-VLG	Plantae	1994
+152544800	Potentilla supina subsp. costata Soják	ISO_3166:BE-VLG	Plantae	2017
+152544802	Potentilla recta subsp. obscura (Willd.) Arcang.	ISO_3166:BE-VLG	Plantae	2011
+152544804	Potentilla rivalis Nutt. ex Torr. & A.Gray	ISO_3166:BE-VLG	Plantae	2001
+152544805	Potentilla nepalensis Hook.	ISO_3166:BE-VLG	Plantae	2010
+152544807	Potentilla montana Brot.	ISO_3166:BE-VLG	Plantae	1955
+152544820	Cotoneaster lucidus Schltdl.	ISO_3166:BE-VLG	Plantae	2011
+152544821	Cotoneaster ambiguus Rehder & E.H.Wilson	ISO_3166:BE-VLG	Plantae	2010
+152544822	Cotoneaster moupinensis Franch.	ISO_3166:BE-VLG	Plantae	2010
+152544823	Cotoneaster hylmoei Flinck & J.Fryer	ISO_3166:BE-VLG	Plantae	2011
+152544824	Cotoneaster qungbixiensis J.Fryer & B.Hylmö	ISO_3166:BE-VLG	Plantae	2011
+152544825	Cotoneaster fangianus T.T.Yu	ISO_3166:BE-VLG	Plantae	2001
+152544826	Cotoneaster conspicuus Comber ex Marquand	ISO_3166:BE-VLG	Plantae	2010
+152544828	Cotoneaster ganghobaensis J.Fryer & B.Hylmö	ISO_3166:BE-VLG	Plantae	2011
+152544830	Cotoneaster nanshan Vilm. ex Mottet	ISO_3166:BE-VLG	Plantae	2010
+152544831	Cotoneaster mairei H.Lév.	ISO_3166:BE-VLG	Plantae	2010
+152544832	Cotoneaster dammeri C.K.Schneid.	ISO_3166:BE-VLG	Plantae	2007
+152544838	Cotoneaster villosulus (Rehder & E.H.Wilson) Flinck & B.Hylmö	ISO_3166:BE-VLG	Plantae	1997
+152544839	Cotoneaster integrifolius (Roxb.) Klotz	ISO_3166:BE-VLG	Plantae	2001
+152544845	Cotoneaster laetevirens (Rehder & E.H.Wilson) G.Klotz	ISO_3166:BE-VLG	Plantae	2017
+152544846	Cotoneaster boisianus G.Klotz	ISO_3166:BE-VLG	Plantae	2011
+152544853	Alchemilla tytthantha Juz.	ISO_3166:BE-BRU	Plantae	1960
+152544864	Spiraea nipponica Maxim.	ISO_3166:BE-VLG	Plantae	2010
+152544870	Spiraea canescens D.Don	ISO_3166:BE-VLG	Plantae	2001
+152544878	Rosa nitida Willd.	ISO_3166:BE-VLG	Plantae	2015
+152544883	Stranvaesia davidiana Decne.	ISO_3166:BE-VLG	Plantae	2007
+152544886	Malus ×purpurea (E.Barbier) Rehder	ISO_3166:BE-VLG	Plantae	2010
+152544900	Prunus virginiana L.	ISO_3166:BE-VLG	Plantae	2001
+152544904	Prunus ×fruticans Weihe	ISO_3166:BE-VLG	Plantae	2019
+152544906	Crataegus pedicellata Sarg.	ISO_3166:BE-VLG	Plantae	2010
+152544909	Sorbaria tomentosa (Lindl.) Rehder	ISO_3166:BE-VLG	Plantae	2000
+152544910	Sorbaria kirilowii (Regel) Maxim.	ISO_3166:BE-VLG	Plantae	2013
+152544918	Rubus tricolor Focke	ISO_3166:BE-VLG	Plantae	2002
+152544921	Rubus cockburnianus Hemsl.	ISO_3166:BE-VLG	Plantae	2011
+152544924	Neillia incisa (Thunb.) S.H.Oh	ISO_3166:BE-VLG	Plantae	2004
+152544925	Neillia tanakae Franch. & Sav.	ISO_3166:BE-VLG	Plantae	2012
+152544931	Blumenbachia hieronymi Urb.	ISO_3166:BE-VLG	Plantae	1974
+152544934	Cornus sanguinea subsp. hungarica (Kárpáti) Soó	ISO_3166:BE-VLG	Plantae	2010
+152544940	Hydrangea paniculata Siebold	ISO_3166:BE-VLG	Plantae	2006
+152544942	Philadelphus ×virginalis Rehder	ISO_3166:BE-WAL	Plantae	2008
+152544943	Philadelphus pubescens Loisel.	ISO_3166:BE-VLG	Plantae	2003
+152544953	Physalis philadelphica Lam.	ISO_3166:BE-VLG	Plantae	1976
+152544962	Nicotiana glauca Graham	ISO_3166:BE-VLG	Plantae	2011
+152544986	Solanum elaeagnifolium Cav.	ISO_3166:BE-VLG	Plantae	1997
+152544992	Solanum viarum Dunal	ISO_3166:BE-VLG	Plantae	2000
+152544997	Salpiglossis sinuata Ruiz & Pav.	ISO_3166:BE-VLG	Plantae	1978
+152545010	Ipomoea tricolor Cav.	ISO_3166:BE-WAL	Plantae	2005
+152545011	Ipomoea ×leucantha Jacq.	ISO_3166:BE-VLG	Plantae	1997
+152545013	Ipomoea hederacea (L.) Jacq.	ISO_3166:BE-VLG	Plantae	1952
+152545016	Dichondra micrantha Urb.	ISO_3166:BE-VLG	Plantae	2017
+152545019	Cuscuta lupuliformis Krock.	ISO_3166:BE-VLG	Plantae	2013
+152545020	Cuscuta suaveolens Ser.	ISO_3166:BE-VLG	Plantae	1976
+152545022	Cuscuta epilinum Weihe	ISO_3166:BE-VLG	Plantae	2011
+152545038	Lathyrus heterophyllus L.	ISO_3166:BE-VLG	Plantae	2011
+152545051	Trifolium sylvaticum Gérard ex Loisel.	ISO_3166:BE-VLG	Plantae	2016
+152545054	Trifolium nigrescens Viv.	ISO_3166:BE-VLG	Plantae	2016
+152545055	Trifolium constantinopolitanum Ser.	ISO_3166:BE-VLG	Plantae	1995
+152545056	Trifolium stellatum L.	ISO_3166:BE-WAL	Plantae	1977
+152545062	Trifolium suffocatum L.	ISO_3166:BE-VLG	Plantae	2015
+152545063	Trifolium pannonicum Jacq.	ISO_3166:BE-BRU	Plantae	2006
+152545067	Trifolium michelianum Savi	ISO_3166:BE-VLG	Plantae	1994
+152545070	Trifolium spumosum L.	ISO_3166:BE-WAL	Plantae	1954
+152545073	Trifolium pallidum Waldst. & Kit.	ISO_3166:BE-VLG	Plantae	1995
+152545076	Trifolium strictum L.	ISO_3166:BE-VLG	Plantae	1995
+152545083	Scorpiurus vermiculatus L.	ISO_3166:BE-BRU	Plantae	1957
+152545103	Cercis siliquastrum L.	ISO_3166:BE-VLG	Plantae	2005
+152545115	Arachis hypogaea L.	ISO_3166:BE-VLG	Plantae	1950
+152545117	Glycine max (L.) Merr.	ISO_3166:BE-VLG	Plantae	1980
+152545120	Trigonella esculenta Willd.	ISO_3166:BE-VLG	Plantae	2003
+152545123	Trigonella arabica Delile	ISO_3166:BE-VLG	Plantae	1955
+152545124	Trigonella maritima Delile ex Poir.	ISO_3166:BE-VLG	Plantae	1977
+152545131	Astragalus oxyglottis Steven ex M.Bieb.	ISO_3166:BE-WAL	Plantae	1955
+152545137	Astragalus hamosus L.	ISO_3166:BE-VLG	Plantae	2001
+152545142	Vigna radiata (L.) R.Wilczek	ISO_3166:BE-VLG	Plantae	1995
+152545158	Melilotus infestus Guss.	ISO_3166:BE-VLG	Plantae	2012
+152545160	Melilotus wolgicus Poir.	ISO_3166:BE-VLG	Plantae	1958
+152545171	Vicia cuspidata Boiss.	ISO_3166:BE-VLG	Plantae	2016
+152545176	Vicia noeana Boiss. & Reut.	ISO_3166:BE-VLG	Plantae	2000
+152545178	Vicia assyriaca Boiss.	ISO_3166:BE-VLG	Plantae	1960
+152545184	Vicia hyrcanica Fisch. & C.A.Mey.	ISO_3166:BE-VLG	Plantae	2000
+152545188	Colutea ×media Willd.	ISO_3166:BE-VLG	Plantae	1974
+152545193	Senna occidentalis (L.) Link	ISO_3166:BE-VLG	Plantae	1998
+152545194	Senna obtusifolia (L.) H.S.Irwin & Barneby	ISO_3166:BE-VLG	Plantae	1992
+152545203	Lupinus albus L.	ISO_3166:BE-WAL	Plantae	1983
+152545222	Medicago monspeliaca (L.) Trautv.	ISO_3166:BE-VLG	Plantae	2015
+152545230	Aeschynomene americana L.	ISO_3166:BE-VLG	Plantae	2003
+152545231	Aeschynomene indica L.	ISO_3166:BE-VLG	Plantae	1999
+152545236	Gentiana asclepiadea L.	ISO_3166:BE-WAL	Plantae	1961
+152545237	Gentiana lutea L.	ISO_3166:BE-WAL	Plantae	2008
+152545240	Gomphocarpus fruticosus (L.) W.T.Aiton	ISO_3166:BE-VLG	Plantae	2017
+152545244	Vincetoxicum rossicum (Kleopow) Barbar.	ISO_3166:BE-VLG	Plantae	1965
+152545248	Asclepias incarnata L.	ISO_3166:BE-VLG	Plantae	2009
+152545264	Galium verum subsp. wirtgenii (F.W.Schultz) Oborny	ISO_3166:BE-VLG	Plantae	2007
+152545276	Oxalis articulata Savigny	ISO_3166:BE-VLG	Plantae	2005
+152545286	Pelargonium candicans Spreng.	ISO_3166:BE-VLG	Plantae	2017
+152545291	Erodium trifolium (Cav.) Cav.	ISO_3166:BE-VLG	Plantae	2017
+152545293	Erodium manescavii Coss.	ISO_3166:BE-VLG	Plantae	2009
+152545294	Erodium stephanianum Willd.	ISO_3166:BE-VLG	Plantae	1997
+152545302	Geranium psilostemon Ledeb.	ISO_3166:BE-VLG	Plantae	2013
+152545303	Geranium carolinianum L.	ISO_3166:BE-VLG	Plantae	1998
+152545313	Limnanthes douglasii R.Br.	ISO_3166:BE-VLG	Plantae	1994
+152545319	Matthiola incana (L.) R.Br.	ISO_3166:BE-VLG	Plantae	2012
+152545321	Crambe hispanica subsp. abyssinica (Hochst ex R.E.Fr.) A.Prina	ISO_3166:BE-VLG	Plantae	1994
+152545335	Arabis procurrens Waldst. & Kit.	ISO_3166:BE-VLG	Plantae	2011
+152545349	Diplotaxis virgata (Cav.) DC.	ISO_3166:BE-VLG	Plantae	1997
+152545351	Hornungia alpina (L.) O.Appel	ISO_3166:BE-VLG	Plantae	2013
+152545374	Moricandia arvensis (L.) DC.	ISO_3166:BE-WAL	Plantae	2017
+152545381	Iberis odorata L.	ISO_3166:BE-WAL	Plantae	1954
+152545391	Brassica carinata A.Braun	ISO_3166:BE-VLG	Plantae	2017
+152545395	Brassica barrelieri (L.) Janka	ISO_3166:BE-VLG	Plantae	2013
+152545400	Raphanus raphanistrum subsp. landra (Moretti ex DC.) Bonnier & Layens	ISO_3166:BE-VLG	Plantae	2015
+152545404	Cordylocarpus muricatus Desf.	ISO_3166:BE-WAL	Plantae	1950
+152545408	Conringia planisiliqua Fisch. & C.A.Mey.	ISO_3166:BE-VLG	Plantae	2013
+152545415	Sisymbrium runcinatum Lag. ex DC.	ISO_3166:BE-VLG	Plantae	2004
+152545417	Sisymbrium septulatum DC.	ISO_3166:BE-WAL	Plantae	1954
+152545425	Cardamine corymbosa Hook.f.	ISO_3166:BE-VLG	Plantae	2005
+152545441	Aubrieta deltoidea (L.) DC.	ISO_3166:BE-VLG	Plantae	1966
+152545462	Erysimum marshallii Bois	ISO_3166:BE-VLG	Plantae	2000
+152545469	Caylusea abyssinica (Fresen.) Fisch. & C.A.Mey.	ISO_3166:BE-VLG	Plantae	1981
+152545487	Nemophila maculata Benth. ex Lindl.	ISO_3166:BE-VLG	Plantae	2016
+152545490	Arnebia decumbens (Vent.) Coss. & Kralik	ISO_3166:BE-WAL	Plantae	1955
+152545498	Pulmonaria longifolia (Bastard) Boreau	ISO_3166:BE-WAL	Plantae	1955
+152545499	Pulmonaria rubra Schott	ISO_3166:BE-VLG	Plantae	2015
+152545503	Myosotis alpestris F.W.Schmidt	ISO_3166:BE-VLG	Plantae	2007
+152545511	Symphytum caucasicum M.Bieb.	ISO_3166:BE-VLG	Plantae	2009
+152545512	Symphytum grandiflorum DC.	ISO_3166:BE-VLG	Plantae	1999
+152545523	Nonea lutea (Desr.) DC.	ISO_3166:BE-VLG	Plantae	2004
+152545542	Heliotropium suaveolens M.Bieb.	ISO_3166:BE-VLG	Plantae	2005
+152545552	Acanthus spinosus L.	ISO_3166:BE-VLG	Plantae	2016
+152545555	Odontites jaubertianus (Boreau) D.Dietr. ex Walp.	ISO_3166:BE-VLG	Plantae	2003
+152545556	Odontites luteus (L.) Clairv.	ISO_3166:BE-VLG	Plantae	1977
+152545558	Parentucellia latifolia (L.) Caruel	ISO_3166:BE-VLG	Plantae	2016
+152545563	Melampyrum nemorosum L.	ISO_3166:BE-VLG	Plantae	2015
+152545571	Syringa josikaea J.Jacq. ex Rchb.	ISO_3166:BE-VLG	Plantae	2008
+152545575	Forsythia viridissima Lindl.	ISO_3166:BE-VLG	Plantae	2001
+152545578	Jasminum nudiflorum Lindl.	ISO_3166:BE-VLG	Plantae	2005
+152545581	Fraxinus pennsylvanica Marshall	ISO_3166:BE-VLG	Plantae	2008
+152545583	Fraxinus latifolia Benth.	ISO_3166:BE-WAL	Plantae	2008
+152545585	Ligustrum vicaryi Rehder	ISO_3166:BE-VLG	Plantae	2011
+152545586	Ligustrum sinense Lour.	ISO_3166:BE-VLG	Plantae	2005
+152545590	Catalpa ×erubescens Carrière	ISO_3166:BE-VLG	Plantae	2007
+152545595	Sesamum indicum L.	ISO_3166:BE-VLG	Plantae	2004
+152545606	Mazus pumilus (Burm.fil.) Steenis	ISO_3166:BE-VLG	Plantae	2014
+152545616	Scrophularia scopolii Hoppe ex Pers.	ISO_3166:BE-WAL	Plantae	1976
+152545620	Verbascum ×divaricatum Kitt.	ISO_3166:BE-VLG	Plantae	1954
+152545621	Verbascum ×brockmuelleri Ruhmer	ISO_3166:BE-WAL	Plantae	2010
+152545630	Lindernia dubia (L.) Pennell	ISO_3166:BE-VLG	Plantae	1993
+152545637	Ellisiophyllum pinnatum (Wall. ex Benth.) Makino	ISO_3166:BE-WAL	Plantae	2016
+152545643	Cymbalaria pallida (Ten.) Wettst.	ISO_3166:BE-WAL	Plantae	1995
+152545645	Collinsia heterophylla Buist ex Graham	ISO_3166:BE-VLG	Plantae	2000
+152545647	Linaria hirta (L.) Moench	ISO_3166:BE-VLG	Plantae	1999
+152545648	Linaria triornithophora (L.) Willd.	ISO_3166:BE-VLG	Plantae	1972
+152545652	Linaria incarnata (Vent.) Spreng.	ISO_3166:BE-VLG	Plantae	1952
+152545658	Chelone obliqua L.	ISO_3166:BE-VLG	Plantae	2011
+152545664	Asarina procumbens Mill.	ISO_3166:BE-VLG	Plantae	2008
+152545667	Plantago lagopus L.	ISO_3166:BE-VLG	Plantae	1978
+152545670	Plantago sempervirens Crantz	ISO_3166:BE-VLG	Plantae	2016
+152545675	Veronicastrum virginicum (L.) Farw.	ISO_3166:BE-VLG	Plantae	2013
+152545677	Veronica glauca Sibth. & Sm.	ISO_3166:BE-WAL	Plantae	1954
+152545683	Veronica spicata L.	ISO_3166:BE-VLG	Plantae	2007
+152545684	Veronica cymbalaria Bodard	ISO_3166:BE-VLG	Plantae	2015
+152545685	Veronica campylopoda Boiss.	ISO_3166:BE-WAL	Plantae	1955
+152545687	Antirrhinum graniticum Rothm.	ISO_3166:BE-WAL	Plantae	1975
+152545691	Origanum vulgare subsp. hirtum (Link) A.Terracc.	ISO_3166:BE-VLG	Plantae	1998
+152545700	Callicarpa bodinieri H.Lév.	ISO_3166:BE-VLG	Plantae	2014
+152545702	Caryopteris incana (Thunb. ex Houtt.) Miq.	ISO_3166:BE-BRU	Plantae	2017
+152545706	Lallemantia iberica (M.Bieb.) Fisch. & C.A.Mey.	ISO_3166:BE-WAL	Plantae	1954
+152545723	Perilla frutescens (L.) Britton	ISO_3166:BE-VLG	Plantae	1994
+152545725	Amethystea caerulea L.	ISO_3166:BE-BRU	Plantae	1959
+152545731	Perovskia abrotanoides Kar.	ISO_3166:BE-VLG	Plantae	2010
+152545733	Phlomis russeliana (Sims) Lag. ex Benth.	ISO_3166:BE-VLG	Plantae	2008
+152545735	Teucrium resupinatum Desf.	ISO_3166:BE-WAL	Plantae	1998
+152545736	Teucrium ×lucidrys Boom	ISO_3166:BE-VLG	Plantae	2011
+152545737	Teucrium hircanicum L.	ISO_3166:BE-VLG	Plantae	2012
+152545741	Lamium orvala L.	ISO_3166:BE-VLG	Plantae	2011
+152545747	Mentha cervina L.	ISO_3166:BE-VLG	Plantae	2012
+152545748	Mentha requienii Benth.	ISO_3166:BE-VLG	Plantae	2013
+152545760	Lavandula dentata L.	ISO_3166:BE-WAL	Plantae	2006
+152545761	Lavandula stoechas L.	ISO_3166:BE-VLG	Plantae	2009
+152545783	Clerodendrum trichotomum Thunb.	ISO_3166:BE-VLG	Plantae	2005
+152545784	Clerodendrum bungei Steud.	ISO_3166:BE-VLG	Plantae	2016
+152545787	Phyla nodiflora var. minor (Gillies & Hook.) N.O'Leary & Múlgura	ISO_3166:BE-VLG	Plantae	2010
+152545789	Glandularia aristigera (S.Moore) Tronc.	ISO_3166:BE-VLG	Plantae	1950
+152545792	Verbena bracteata Cav. ex Lag. & Rodr.	ISO_3166:BE-VLG	Plantae	2016
+152545797	Verbena urticifolia L.	ISO_3166:BE-VLG	Plantae	1996
+152545799	Verbena brasiliensis Vell.	ISO_3166:BE-VLG	Plantae	1993
+152545806	Sarracenia rubra Walter	ISO_3166:BE-VLG	Plantae	2009
+152545807	Sarracenia purpurea L.	ISO_3166:BE-WAL	Plantae	2009
+152545816	Primula florindae Kingdon-Ward	ISO_3166:BE-VLG	Plantae	2010
+152545817	Primula denticulata Sm.	ISO_3166:BE-WAL	Plantae	2016
+152545819	Lysimachia monellii (L.) U.Manns & Anderb.	ISO_3166:BE-VLG	Plantae	2004
+152545820	Lysimachia fortunei Maxim.	ISO_3166:BE-VLG	Plantae	2016
+152545825	Androsace maxima L.	ISO_3166:BE-WAL	Plantae	1954
+152545836	Phlox paniculata L.	ISO_3166:BE-VLG	Plantae	2009
+152545843	Impatiens capensis Meerb.	ISO_3166:BE-VLG	Plantae	2002
+152545860	Vaccinium macrocarpum Aiton	ISO_3166:BE-VLG	Plantae	1957
+152545861	Vaccinium corymbosum L.	ISO_3166:BE-VLG	Plantae	1996
+152545872	Clethra alnifolia L.	ISO_3166:BE-VLG	Plantae	1984
+152545876	Nymphaea ×marliacea hort. ex Lat.-Marl.	ISO_3166:BE-VLG	Plantae	2020
+152545879	Cabomba caroliniana A.Gray	ISO_3166:BE-VLG	Plantae	1998
+152545883	Echinopsis silvestrii Speg.	ISO_3166:BE-VLG	Plantae	2012
+152545886	Drosera linearis Goldie	ISO_3166:BE-WAL	Plantae	2006
+152545889	Armeria arenaria (Pers.) Schult.	ISO_3166:BE-VLG	Plantae	1966
+152545918	Dysphania anthelmintica (L.) Mosyakin & Clemants	ISO_3166:BE-VLG	Plantae	2016
+152545948	Amaranthus tuberculatus (Moq.) Sauer	ISO_3166:BE-VLG	Plantae	1992
+152545949	Amaranthus scleropoides Uline & Bray	ISO_3166:BE-WAL	Plantae	1959
+152545957	Amaranthus polygonoides L.	ISO_3166:BE-WAL	Plantae	1959
+152545970	Atriplex sibirica L.	ISO_3166:BE-BRU	Plantae	1967
+152545982	Chenopodium ×reynieri Ludw. & Aellen	ISO_3166:BE-VLG	Plantae	2015
+152545987	Chenopodium suecicum Murr	ISO_3166:BE-WAL	Plantae	1971
+152546018	Delosperma cooperi (Hook.fil.) L.Bolus	ISO_3166:BE-VLG	Plantae	2009
+152546024	Mesembryanthemum crystallinum L.	ISO_3166:BE-WAL	Plantae	1955
+152546044	Silene behen L.	ISO_3166:BE-VLG	Plantae	1978
+152546047	Silene cretica L.	ISO_3166:BE-WAL	Plantae	1950
+152546050	Silene nocturna subsp. nocturna	ISO_3166:BE-VLG	Plantae	1997
+152546058	Silene schafta S.G.Gmel. ex Hohen.	ISO_3166:BE-WAL	Plantae	2002
+152546062	Paronychia argentea Lam.	ISO_3166:BE-VLG	Plantae	2016
+152546069	Lepyrodiclis holosteoides (C.A.Mey.) Fenzl ex Fisch. & C.A.Mey.	ISO_3166:BE-VLG	Plantae	2000
+152546073	Dianthus subacaulis Vill.	ISO_3166:BE-WAL	Plantae	2002
+152546075	Dianthus giganteus subsp. giganteus	ISO_3166:BE-WAL	Plantae	1993
+152546080	Sagina japonica (Sw. ex Steud.) Ohwi	ISO_3166:BE-VLG	Plantae	2018
+152546085	Petrorhagia nanteuilii (Burnat) P.W.Ball & Heywood	ISO_3166:BE-VLG	Plantae	1992
+152546087	Cerastium dichotomum L.	ISO_3166:BE-WAL	Plantae	1954
+152546097	Tamarix parviflora DC.	ISO_3166:BE-VLG	Plantae	1997
+152546104	Koenigia campanulata (Hook.fil.) T.M.Schust. & Reveal	ISO_3166:BE-VLG	Plantae	2013
+152546105	Koenigia ×fennica (Reiersen) T.M.Schust. & Reveal	ISO_3166:BE-VLG	Plantae	2014
+152546106	Koenigia divaricata (L.) T.M.Schust. & Reveal	ISO_3166:BE-WAL	Plantae	2008
+152546108	Polygonum argyrocoleum Steud. ex Kunze	ISO_3166:BE-VLG	Plantae	1995
+152546110	Polygonum aviculare subsp. rurivagum (Boreau) Berher	ISO_3166:BE-VLG	Plantae	2010
+152546119	Bistorta affinis (D.Don) Greene	ISO_3166:BE-VLG	Plantae	2012
+152546124	Persicaria nepalensis (Meisn.) H.Gross	ISO_3166:BE-VLG	Plantae	2010
+152546126	Persicaria capitata (Buch.-Ham. ex D.Don) H.Gross	ISO_3166:BE-VLG	Plantae	2001
+152546132	Muehlenbeckia complexa (A.Cunn.) Meisn.	ISO_3166:BE-VLG	Plantae	2016
+152546134	Rheum rhabarbarum L.	ISO_3166:BE-VLG	Plantae	2007
+152546136	Rumex pulcher subsp. woodsii (De Not.) Arcang.	ISO_3166:BE-VLG	Plantae	1999
+152546137	Rumex pseudonatronatus (Borbás) Borbás ex Murb.	ISO_3166:BE-VLG	Plantae	2010
+152546140	Rumex ×erubescens Simonk.	ISO_3166:BE-VLG	Plantae	2004
+152546146	Rumex ×confusus Simonk.	ISO_3166:BE-VLG	Plantae	2011
+152546152	Rumex alpinus L.	ISO_3166:BE-WAL	Plantae	1997
+152546157	Rumex kerneri Borbás	ISO_3166:BE-VLG	Plantae	2011
+152546163	Juglans nigra L.	ISO_3166:BE-VLG	Plantae	2008
+152546164	Juglans cinerea L.	ISO_3166:BE-VLG	Plantae	2012
+152546169	Quercus palustris Münchh.	ISO_3166:BE-VLG	Plantae	2006
+152546170	Quercus ilex L.	ISO_3166:BE-VLG	Plantae	2011
+152546171	Quercus frainetto Ten.	ISO_3166:BE-VLG	Plantae	1988
+152546176	Betula nana L.	ISO_3166:BE-WAL	Plantae	2003
+152546177	Betula papyrifera Marshall	ISO_3166:BE-VLG	Plantae	2006
+152546179	Corylus colurna L.	ISO_3166:BE-VLG	Plantae	2012
+152546183	Alnus spaethii Callier	ISO_3166:BE-VLG	Plantae	2012
+152546193	Thladiantha dubia Bunge	ISO_3166:BE-VLG	Plantae	2010
+152546202	Cucumis sativus L.	ISO_3166:BE-VLG	Plantae	1950
+152546209	Saururus cernuus L.	ISO_3166:BE-VLG	Plantae	1977
+152546215	Aristolochia rotunda L.	ISO_3166:BE-BRU	Plantae	1952
+152546216	Aristolochia macrophylla Lam.	ISO_3166:BE-WAL	Plantae	1999
+152546225	Alcea rugosa Alef.	ISO_3166:BE-VLG	Plantae	2010
+152546227	Sida spinosa L.	ISO_3166:BE-VLG	Plantae	1976
+152546228	Sida rhombifolia L.	ISO_3166:BE-VLG	Plantae	1993
+152546234	Corynabutilon ×suntense (C.D.Brickell) Fryxell	ISO_3166:BE-VLG	Plantae	2006
+152546236	Malope malacoides L.	ISO_3166:BE-VLG	Plantae	1995
+152546245	Malvastrum coromandelianum (L.) Garcke	ISO_3166:BE-VLG	Plantae	1996
+152546247	Malva maroccana (Batt. & Trab.) Verloove & Lambinon	ISO_3166:BE-WAL	Plantae	2005
+152546267	Sambucus canadensis L.	ISO_3166:BE-VLG	Plantae	1972
+152546269	Viburnum davidii Franch.	ISO_3166:BE-VLG	Plantae	2014
+152546270	Viburnum tinus L.	ISO_3166:BE-VLG	Plantae	2007
+152546272	Viburnum ×rhytidophylloides Suringar	ISO_3166:BE-VLG	Plantae	2013
+152546278	Lonicera maackii (Rupr.) Maxim.	ISO_3166:BE-VLG	Plantae	2015
+152546280	Lonicera chrysantha Turcz.	ISO_3166:BE-VLG	Plantae	2012
+152546281	Lonicera ×purpusii Rehder	ISO_3166:BE-VLG	Plantae	2006
+152546283	Lonicera pileata Oliv.	ISO_3166:BE-VLG	Plantae	2004
+152546284	Lonicera involucrata (Richards.) Banks ex Spreng.	ISO_3166:BE-VLG	Plantae	2014
+152546285	Lonicera morrowii Gray	ISO_3166:BE-VLG	Plantae	2010
+152546287	Lonicera sempervirens L.	ISO_3166:BE-WAL	Plantae	1952
+152546291	Knautia integrifolia (L.) Bertol.	ISO_3166:BE-VLG	Plantae	1997
+152546294	Lomelosia stellata (L.) Raf.	ISO_3166:BE-VLG	Plantae	2017
+152546297	Valeriana pyrenaica L.	ISO_3166:BE-WAL	Plantae	1957
+152546299	Symphoricarpos orbiculatus Moench	ISO_3166:BE-VLG	Plantae	2012
+152546301	Kolkwitzia amabilis Graebn.	ISO_3166:BE-VLG	Plantae	2012
+152546303	Valerianella locusta var. oleracea (Schltdl.) Breistr.	ISO_3166:BE-VLG	Plantae	2005
+152546308	Cephalaria alpina (L.) Schrad.	ISO_3166:BE-WAL	Plantae	1970
+152546310	Cephalaria gigantea (Ledeb.) Bobrov	ISO_3166:BE-VLG	Plantae	2006
+152546330	Ranunculus pensylvanicus L.fil.	ISO_3166:BE-VLG	Plantae	2012
+152546334	Ranunculus trilobus Desf.	ISO_3166:BE-VLG	Plantae	2004
+152546335	Ranunculus marginatus d'Urv.	ISO_3166:BE-VLG	Plantae	1999
+152546346	Clematis montana Buch.-Ham. ex DC.	ISO_3166:BE-VLG	Plantae	2014
+152546350	Clematis ×jackmanii T.Moore	ISO_3166:BE-VLG	Plantae	2009
+152546352	Clematis tangutica (Maxim.) Korsh.	ISO_3166:BE-VLG	Plantae	2000
+152546356	Thalictrum speciosissimum L.	ISO_3166:BE-VLG	Plantae	2011
+152546367	Epimedium pinnatum DC.	ISO_3166:BE-WAL	Plantae	2012
+152546369	Berberis gagnepainii C.K.Schneid.	ISO_3166:BE-VLG	Plantae	2005
+152546370	Berberis ×hybridogagnepainii J.V.Suringar	ISO_3166:BE-VLG	Plantae	2011
+152546371	Berberis wilsoniae Hemsl.	ISO_3166:BE-VLG	Plantae	2012
+152546373	Berberis ×interposita Ahrendt	ISO_3166:BE-VLG	Plantae	2017
+152546376	Berberis darwinii Hook.	ISO_3166:BE-VLG	Plantae	2009
+152546380	Decaisnea insignis (Griff.) Hook.fil. & Thomson	ISO_3166:BE-VLG	Plantae	2015
+152546382	Akebia quinata (Houtt.) Decne.	ISO_3166:BE-VLG	Plantae	2009
+152546394	Glaucium grandiflorum Boiss. & A.Huet	ISO_3166:BE-VLG	Plantae	2016
+152546399	Papaver nudicaule L.	ISO_3166:BE-VLG	Plantae	2014
+152546400	Papaver setiferum Goldblatt	ISO_3166:BE-VLG	Plantae	2001
+152546423	Hypericum olympicum L.	ISO_3166:BE-VLG	Plantae	2014
+152546424	Hypericum ×hidcoteense Geerinck	ISO_3166:BE-VLG	Plantae	2015
+152546431	Acalypha indica L.	ISO_3166:BE-VLG	Plantae	2003
+152546433	Manihot grahamii Hook.	ISO_3166:BE-VLG	Plantae	2017
+152546437	Euphorbia myrsinites L.	ISO_3166:BE-VLG	Plantae	2007
+152546438	Euphorbia heterophylla L.	ISO_3166:BE-VLG	Plantae	1997
+152546439	Euphorbia glyptosperma Engelm.	ISO_3166:BE-VLG	Plantae	2003
+152546440	Euphorbia amygdaloides subsp. robbiae (Turrill) Stace	ISO_3166:BE-VLG	Plantae	2000
+152546445	Euphorbia dentata Michx.	ISO_3166:BE-VLG	Plantae	1986
+152546448	Euphorbia characias L.	ISO_3166:BE-VLG	Plantae	2001
+152546449	Euphorbia chamaesyce L.	ISO_3166:BE-WAL	Plantae	2000
+152546451	Euphorbia pseudoesula Schur	ISO_3166:BE-WAL	Plantae	1960
+152546452	Euphorbia vermiculata Raf.	ISO_3166:BE-WAL	Plantae	2007
+152546453	Euphorbia oblongata Griseb.	ISO_3166:BE-VLG	Plantae	2008
+152546454	Euphorbia nutans Lag.	ISO_3166:BE-VLG	Plantae	1995
+152546457	Phyllanthus tenellus Roxb.	ISO_3166:BE-VLG	Plantae	2003
+152546462	Salix daphnoides Vill.	ISO_3166:BE-VLG	Plantae	2018
+152546463	Salix acutifolia Willd.	ISO_3166:BE-VLG	Plantae	1986
+152546464	Salix udensis Trautv. & C.A.Mey.	ISO_3166:BE-VLG	Plantae	2018
+152546465	Salix irrorata Andersson	ISO_3166:BE-VLG	Plantae	2002
+152546466	Salix nigra Marshall	ISO_3166:BE-VLG	Plantae	1958
+152546467	Salix myrsinifolia Salisb.	ISO_3166:BE-VLG	Plantae	2014
+152546468	Salix eriocephala Michx.	ISO_3166:BE-VLG	Plantae	2018
+152546474	Populus deltoides W.Bartram ex Marshall	ISO_3166:BE-VLG	Plantae	1996
+152546484	Passiflora caerulea L.	ISO_3166:BE-VLG	Plantae	2005
+152546494	Campylopus introflexus Bridel, 1819	ISO_3166:BE-VLG	Plantae	1966
+152546494	Campylopus introflexus Bridel, 1819	ISO_3166:BE-WAL	Plantae	2018
+152546498	Orthodontium lineare Schwaegrichen, 1827	ISO_3166:BE-WAL	Plantae	2018
+152546503	Picea omorika (Pancic) Purk.	ISO_3166:BE-VLG	Plantae	2013
+152546508	Pinus nigra subsp. nigra	ISO_3166:BE-VLG	Plantae	1974
+152546511	Pinus wallichiana A.B.Jacks.	ISO_3166:BE-VLG	Plantae	2012
+152546512	Pinus ponderosa Douglas ex C.Lawson	ISO_3166:BE-VLG	Plantae	2006
+152546513	Pinus strobus L.	ISO_3166:BE-VLG	Plantae	2006
+152546515	Abies nordmanniana (Steven) Spach	ISO_3166:BE-VLG	Plantae	2016
+152546516	Abies alba Mill.	ISO_3166:BE-VLG	Plantae	2008
+152546521	Larix kaempferi (Lamb.) Carrière	ISO_3166:BE-VLG	Plantae	2009
+152546524	Tsuga canadensis (L.) Carrière	ISO_3166:BE-VLG	Plantae	2008
+152546525	Tsuga heterophylla (Raf.) Sarg.	ISO_3166:BE-VLG	Plantae	2008
+152546534	Thuja plicata Donn ex D.Don	ISO_3166:BE-VLG	Plantae	2004
+152546536	Xanthocyparis nootkatensis (D.Don) Farjon & Harder	ISO_3166:BE-WAL	Plantae	2009
+152546538	Taxodium distichum (L.) Rich.	ISO_3166:BE-VLG	Plantae	2000
+152546553	Thalia dealbata Fraser	ISO_3166:BE-VLG	Plantae	2016
+152546563	Limnobium laevigatum (Humb. & Bonpl. ex Willd.) Heine	ISO_3166:BE-BRU	Plantae	2013
+152546565	Egeria densa Planch.	ISO_3166:BE-VLG	Plantae	1999
+152546570	Vallisneria americana Michx.	ISO_3166:BE-VLG	Plantae	2016
+152546578	Wolffia columbiana H.Karst.	ISO_3166:BE-VLG	Plantae	2017
+152546582	Zantedeschia aethiopica (L.) Spreng.	ISO_3166:BE-VLG	Plantae	2013
+152546583	Zantedeschia albomaculata (Hook.) Baill.	ISO_3166:BE-VLG	Plantae	2011
+152546588	Pistia stratiotes L.	ISO_3166:BE-VLG	Plantae	2000
+152546602	Smilax aspera L.	ISO_3166:BE-VLG	Plantae	2008
+152546603	Smilax rotundifolia L.	ISO_3166:BE-VLG	Plantae	1990
+152546612	Gagea pratensis (Pers.) Dumort.	ISO_3166:BE-VLG	Plantae	1998
+152546616	Lilium ×hollandicum Woodcock & Stearn	ISO_3166:BE-VLG	Plantae	2016
+152546618	Hosta	ISO_3166:BE-VLG	Plantae	2005
+152546622	Kniphofia praecox Baker	ISO_3166:BE-VLG	Plantae	2015
+152546630	Himantoglossum robertianum (Loisel.) P.Delforge	ISO_3166:BE-WAL	Plantae	2014
+152546632	Serapias lingua L.	ISO_3166:BE-VLG	Plantae	2007
+152546641	Allium lusitanicum Lam.	ISO_3166:BE-VLG	Plantae	2018
+152546642	Allium pendulinum Ten.	ISO_3166:BE-VLG	Plantae	2014
+152546645	Allium triquetrum L.	ISO_3166:BE-VLG	Plantae	2013
+152546647	Allium nigrum L.	ISO_3166:BE-VLG	Plantae	2013
+152546648	Allium roseum L.	ISO_3166:BE-VLG	Plantae	2017
+152546650	Allium macleanii Baker	ISO_3166:BE-VLG	Plantae	2014
+152546652	Allium hollandicum R.M.Fritsch	ISO_3166:BE-VLG	Plantae	2012
+152546653	Allium ramosum L.	ISO_3166:BE-VLG	Plantae	2010
+152546655	Galanthus woronowii Losinsk.	ISO_3166:BE-VLG	Plantae	2015
+152546656	Galanthus ikariae Baker	ISO_3166:BE-BRU	Plantae	1984
+152546659	Narcissus cyclazetta Chater & Stace	ISO_3166:BE-VLG	Plantae	2011
+152546663	Sisyrinchium angustifolium Mill.	ISO_3166:BE-VLG	Plantae	1996
+152546665	Sisyrinchium californicum (Ker Gawl.) Dryand.	ISO_3166:BE-VLG	Plantae	2015
+152546666	Sisyrinchium striatum Sm.	ISO_3166:BE-VLG	Plantae	2016
+152546674	Crocus tommasinianus Herb.	ISO_3166:BE-VLG	Plantae	2020
+152546675	Crocus chrysanthus (Herb.) Herb.	ISO_3166:BE-VLG	Plantae	2013
+152546676	Crocus vernus (L.) Hill	ISO_3166:BE-VLG	Plantae	1969
+152546678	Crocosmia crocosmiiflora (Lemoine) N.E.Br.	ISO_3166:BE-VLG	Plantae	1975
+152546681	Gladiolus italicus Mill.	ISO_3166:BE-BRU	Plantae	2012
+152546684	Polygonatum hybridum Brügger	ISO_3166:BE-VLG	Plantae	2009
+152546686	Danae racemosa (L.) Moench	ISO_3166:BE-VLG	Plantae	2015
+152546691	Yucca flaccida Haw.	ISO_3166:BE-VLG	Plantae	2001
+152546695	Scilla sardensis (Whittall ex Barr & Sayden) Speta	ISO_3166:BE-BRU	Plantae	1987
+152546698	Agave americana L.	ISO_3166:BE-WAL	Plantae	2007
+152546700	Maianthemum stellatum (L.) Link	ISO_3166:BE-VLG	Plantae	2016
+152546701	Maianthemum dilatatum (Alph.Wood) A.Nelson & J.F.Macbr.	ISO_3166:BE-VLG	Plantae	2013
+152546703	Camassia leichtlinii subsp. suksdorfii (Greenm.) Gould	ISO_3166:BE-VLG	Plantae	2013
+152546708	Muscari latifolium J.Kirk	ISO_3166:BE-VLG	Plantae	2014
+152546710	Ornithogalum narbonense L.	ISO_3166:BE-VLG	Plantae	2001
+152546722	Commelina coelestis Willd.	ISO_3166:BE-VLG	Plantae	1999
+152546723	Commelina diffusa Burm.f.	ISO_3166:BE-VLG	Plantae	1997
+152546724	Commelina obliqua Vahl	ISO_3166:BE-VLG	Plantae	1999
+152546730	Eichhornia crassipes (Mart.) Solms	ISO_3166:BE-VLG	Plantae	2001
+152546737	Typha provincialis A.Camus	ISO_3166:BE-VLG	Plantae	2012
+152546741	Schoenoplectiella bucharica (Roshev.) Hayas.	ISO_3166:BE-VLG	Plantae	2014
+152546748	Cyperus cyperoides (L.) Kuntze	ISO_3166:BE-VLG	Plantae	2000
+152546755	Cyperus esculentus L.	ISO_3166:BE-VLG	Plantae	1981
+152546756	Cyperus rotundus L.	ISO_3166:BE-VLG	Plantae	1951
+152546763	Carex grayi J.Carey	ISO_3166:BE-VLG	Plantae	2011
+152546764	Carex muskingumensis Schwein.	ISO_3166:BE-VLG	Plantae	2010
+152546765	Carex scoparia Schkuhr ex Willd.	ISO_3166:BE-VLG	Plantae	2013
+152546766	Carex secalina Willd. ex Wahlenb.	ISO_3166:BE-VLG	Plantae	2009
+152546767	Carex vulpinoidea Michx.	ISO_3166:BE-VLG	Plantae	1970
+152546768	Carex loliacea L.	ISO_3166:BE-VLG	Plantae	2015
+152546769	Carex melanostachya M.Bieb. ex Willd.	ISO_3166:BE-VLG	Plantae	2010
+152546771	Carex morrowii Boott	ISO_3166:BE-VLG	Plantae	1950
+152546773	Bolboschoenus glaucus (Lam.) S.G.Sm.	ISO_3166:BE-VLG	Plantae	2015
+152546774	Bolboschoenus yagara (Ohwi) Y.C.Yang & M.Zhan	ISO_3166:BE-VLG	Plantae	2020
+152546786	Diplachne fusca subsp. uninervia (J.Presl) P.M.Peterson & N.Snow	ISO_3166:BE-VLG	Plantae	1998
+152546790	Enteropogon acicularis (Lindl.) Lazarides	ISO_3166:BE-WAL	Plantae	1953
+152546794	Fargesia spathacea Franch.	ISO_3166:BE-VLG	Plantae	1988
+152546796	Schmidtia kalahariensis Stent	ISO_3166:BE-WAL	Plantae	1961
+152546804	Eustachys retusa (Lag.) Kunth	ISO_3166:BE-WAL	Plantae	1950
+152546813	Gastridium ventricosum (Gouan) Schinz & Thell.	ISO_3166:BE-VLG	Plantae	1950
+152546816	Cenchrus flaccidus (Griseb.) Morrone	ISO_3166:BE-VLG	Plantae	2000
+152546817	Cenchrus alopecuroides (L.) Thunb.	ISO_3166:BE-VLG	Plantae	2011
+152546819	Cenchrus echinatus L.	ISO_3166:BE-VLG	Plantae	1997
+152546828	Phalaris coerulescens Desf.	ISO_3166:BE-BRU	Plantae	1950
+152546829	Phalaris aquatica L.	ISO_3166:BE-VLG	Plantae	1998
+152546835	Setaria sphacelata (Schumach.) Stapf & C.E.Hubb. ex Moss	ISO_3166:BE-VLG	Plantae	2002
+152546840	Phyllostachys viridiglaucescens (Carrière) Rivière & C.Rivière	ISO_3166:BE-VLG	Plantae	2017
+152546871	Chloris pycnothrix Trin.	ISO_3166:BE-VLG	Plantae	1992
+152546892	Zingeria pisidica (Boiss.) Tutin	ISO_3166:BE-VLG	Plantae	2011
+152546900	Helictotrichon sempervirens (Vill.) Pilg.	ISO_3166:BE-VLG	Plantae	1981
+152546911	Koeleria glauca (Spreng.) DC.	ISO_3166:BE-VLG	Plantae	2016
+152546913	Pholiurus pannonicus (Host) Trin.	ISO_3166:BE-VLG	Plantae	1950
+152546917	Sasaella ramosa (Makino) Makino	ISO_3166:BE-VLG	Plantae	2005
+152546919	Agropogon lutosus (Poir.) P.Fourn.	ISO_3166:BE-VLG	Plantae	2015
+152546925	Digitaria aequiglumis (Hack. & Arechav.) Parodi	ISO_3166:BE-VLG	Plantae	1997
+152546926	Digitaria violascens Link	ISO_3166:BE-VLG	Plantae	1994
+152546929	Digitaria abyssinica (Hochst. ex A.Rich.) Stapf	ISO_3166:BE-VLG	Plantae	2012
+152546932	Semiarundinaria fastuosa (Lat.-Marl. ex Mitford) Makino	ISO_3166:BE-VLG	Plantae	2015
+152546943	Austrostipa verticillata (Nees ex Spreng.) S.W.L.Jacobs & J.Everett	ISO_3166:BE-WAL	Plantae	1953
+152546948	Bromus intermedius Guss.	ISO_3166:BE-VLG	Plantae	1952
+152546952	Bromus alopecuros Poir.	ISO_3166:BE-WAL	Plantae	1958
+152546955	Bromus danthoniae Trin.	ISO_3166:BE-WAL	Plantae	1954
+152546970	Poa infirma Kunth	ISO_3166:BE-VLG	Plantae	2016
+152546985	Brachiaria platyphylla (Munro ex C.Wright) Nash	ISO_3166:BE-VLG	Plantae	1992
+152546991	Echinochloa muricata var. muricata	ISO_3166:BE-VLG	Plantae	2000
+152546992	Echinochloa inundata Michael & Vickery	ISO_3166:BE-VLG	Plantae	1995
+152547003	Eriochloa villosa (Thunb.) Kunth	ISO_3166:BE-VLG	Plantae	2016
+152547007	Zizania latifolia (Griseb.) Turcz. ex Stapf	ISO_3166:BE-VLG	Plantae	2010
+152547009	Dinebra retroflexa (Vahl) Panz.	ISO_3166:BE-VLG	Plantae	1994
+152547012	Anthoxanthum nitens (Weber) Y.Schouten & Veldkamp	ISO_3166:BE-VLG	Plantae	2002
+152547032	Axonopus fissifolius (Raddi) Kuhlm.	ISO_3166:BE-VLG	Plantae	1980
+152547034	Paspalum paniculatum L.	ISO_3166:BE-VLG	Plantae	1999
+152547035	Paspalum dilatatum Poir.	ISO_3166:BE-VLG	Plantae	2000
+152547036	Paspalum distichum L.	ISO_3166:BE-VLG	Plantae	1950
+152547053	Eragrostis papposa (Roem. & Schult.) Steud.	ISO_3166:BE-WAL	Plantae	1955
+152547062	Eragrostis rotifer Rendle	ISO_3166:BE-WAL	Plantae	1950
+152547085	Sporobolus elongatus R.Br.	ISO_3166:BE-WAL	Plantae	1951
+152547088	Eremopyrum bonaepartis (Spreng.) Nevski	ISO_3166:BE-WAL	Plantae	1954
+152547090	Cortaderia selloana (Schult. & Schult.f.) Asch. & Graebn.	ISO_3166:BE-VLG	Plantae	2004
+152547097	Panicum hirticaule J.Presl	ISO_3166:BE-VLG	Plantae	1969
+152547099	Panicum miliaceum L.	ISO_3166:BE-VLG	Plantae	2002
+152547104	Festuca gautieri (Hack.) K.Richt.	ISO_3166:BE-VLG	Plantae	1991
+152547128	Coix lacryma-jobi L.	ISO_3166:BE-VLG	Plantae	1959
+152547130	Agrostis fouilladeana Lambinon & Verloove	ISO_3166:BE-VLG	Plantae	1973
+152547131	Agrostis exarata Trin.	ISO_3166:BE-VLG	Plantae	1990
+152547165	Juncus canadensis J.Gay ex Laharpe	ISO_3166:BE-VLG	Plantae	1965
+152547167	Juncus xiphioides E.Mey.	ISO_3166:BE-VLG	Plantae	2016
+152547168	Juncus foliosus Desf.	ISO_3166:BE-VLG	Plantae	1984
+152547184	Equisetum hyemale subsp. affine (Engelm.) Calder & Roy L.Taylor	ISO_3166:BE-VLG	Plantae	2007
+152547185	Equisetum scirpoides Michx.	ISO_3166:BE-VLG	Plantae	2007
+152547195	Anisocampium niponicum (Mett.) Yea C.Liu, W.L.Chiou & M.Kato	ISO_3166:BE-VLG	Plantae	2017
+152547198	Polypodium hesperium Maxon	ISO_3166:BE-VLG	Plantae	1980
+152547203	Pteris vittata L.	ISO_3166:BE-WAL	Plantae	2015
+152547204	Pteris multifida Poir.	ISO_3166:BE-VLG	Plantae	2001
+152547205	Pteris cretica L.	ISO_3166:BE-VLG	Plantae	2003
+152547207	Adiantum capillus-veneris L.	ISO_3166:BE-VLG	Plantae	2001
+152547208	Adiantum aleuticum (Rupr.) C.A.Paris	ISO_3166:BE-VLG	Plantae	2016
+152547214	Dryopteris erythrosora (D.C.Eaton) Kuntze	ISO_3166:BE-VLG	Plantae	2015
+152547215	Dryopteris cycadina (Franch. & Sav.) C.Chr.	ISO_3166:BE-VLG	Plantae	2006
+152547217	Polystichum polyblepharum (Roem. ex Kunze) C.Presl	ISO_3166:BE-VLG	Plantae	2013
+152547218	Polystichum luctuosum (Kunze) T.Moore	ISO_3166:BE-VLG	Plantae	2006
+152547220	Rumohra adiantiformis (G.Forst.) Ching	ISO_3166:BE-VLG	Plantae	1993
+152547228	Salvinia auriculata Aubl.	ISO_3166:BE-VLG	Plantae	1981
+154367077	Girardia tigrina (Girard, 1850)	ISO_3166:BE-VLG	Animalia	2004
+154367468	Leuciscus aspius (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	1984
+154367584	Anguillicoloides crassus (Kuwahara, Niimi & Itagaki, 1974) Moravec & Taraschewski, 1988	ISO_3166:BE-VLG	Animalia	1985
+154367717	Dreissena bugensis (Andrusov, 1897)	ISO_3166:BE-VLG	Animalia	2009
+154367787	Pontastacus leptodactylus (Eschscholtz, 1823)	ISO_3166:BE-VLG	Animalia	1986
+154368238	Callidiellum rufipennis (Motschulsky, 1861)	ISO_3166:BE-VLG	Animalia	2006
+156872873	Cipangopaludina chinensis (Gray, 1833)	ISO_3166:BE-VLG	Animalia	2016
+156872936	Massylaea vermiculata (O.F.Müller, 1774)	ISO_3166:BE-VLG	Animalia	2014
+156872991	Magallana gigas (Thunberg, 1793)	ISO_3166:BE-VLG	Animalia	1969
+156873231	Phyllonorycter robiniella (Clemens, 1859)	ISO_3166:BE-VLG	Animalia	2001
+156873354	Otiorhynchus indefinitus Reitter, 1912	ISO_3166:BE-BRU	Animalia	2013
+156873354	Otiorhynchus indefinitus Reitter, 1912	ISO_3166:BE-WAL	Animalia	2016
+159746847	Coscinodiscus wailesii Gran & Angst, 1931	ISO_3166:BE-VLG	Chromista	1977
+159746876	Saproamanita inopinata (D.A.Reid & Bas) Redhead, Vizzini, Drehmel & Contu	ISO_3166:BE-VLG	Fungi	2008
+159746876	Saproamanita inopinata (D.A.Reid & Bas) Redhead, Vizzini, Drehmel & Contu	ISO_3166:BE-WAL	Fungi	2012
+159746880	Stropholoma aurantiacum (Cooke) Ryman, 2008	ISO_3166:BE-VLG	Fungi	2018
+159746903	Mnemiopsis leidyi A.Agassiz, 1865	ISO_3166:BE-VLG	Animalia	2007
+159746940	Dromaius novaehollandiae (Latham, 1790)	ISO_3166:BE-VLG	Animalia	2018
+159746996	Malacorhynchus membranaceus (Latham, 1802)	ISO_3166:BE-WAL	Animalia	2016
+159747018	Anas laysanensis Rothschild, 1892	ISO_3166:BE-WAL	Animalia	2012
+159747024	Anas gibberifrons S.Muller, 1842	ISO_3166:BE-VLG	Animalia	2011
+159747054	Nettapus coromandelianus (Gmelin, 1789)	ISO_3166:BE-VLG	Animalia	2017
+159747060	Oxyura vittata (Philippi, 1860)	ISO_3166:BE-VLG	Animalia	2014
+159747148	Himantopus mexicanus (Statius Muller, 1776)	ISO_3166:BE-VLG	Animalia	2019
+159747181	Ipheion uniflorum (Lindl.) Raf.	ISO_3166:BE-VLG	Plantae	2012
+159747216	Pyrrhula erythaca Blyth, 1862	ISO_3166:BE-WAL	Animalia	2004
+159747252	Chlorophytum comosum (Thunb.) Jacques	ISO_3166:BE-VLG	Plantae	2011
+159747256	Lamprotornis splendidus (Vieillot, 1822)	ISO_3166:BE-VLG	Animalia	2018
+159747259	Lamprotornis nitens (Linnaeus, 1766)	ISO_3166:BE-VLG	Animalia	2018
+159747261	Acridotheres cristatellus (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2004
+159747261	Acridotheres cristatellus (Linnaeus, 1758)	ISO_3166:BE-WAL	Animalia	2009
+159747264	Acridotheres tristis (Linnaeus, 1766)	ISO_3166:BE-VLG	Animalia	2005
+159747275	Zonotrichia capensis (P.L.Statius Müller, 1776)	ISO_3166:BE-VLG	Animalia	2018
+159747289	Crocus luteus Lam.	ISO_3166:BE-VLG	Plantae	2013
+159747303	Euodice malabarica (Linnaeus, 1758)	ISO_3166:BE-WAL	Animalia	2013
+159747323	Garrulax leucolophus (Hardwicke, 1816)	ISO_3166:BE-VLG	Animalia	1973
+159747332	Eleocharis mamillata subsp. austriaca (Hayek) Strandh.	ISO_3166:BE-WAL	Plantae	2006
+159747363	Ara macao (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2002
+159747364	Ara ararauna (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2007
+159747367	Cyanoramphus novaezelandiae (Sparrman, 1787)	ISO_3166:BE-VLG	Animalia	2013
+159747368	Helictochloa bromoides (Gouan) Romero Zarco	ISO_3166:BE-VLG	Plantae	1950
+159747373	Psittacula alexandri (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2014
+159747374	Psittacula cyanocephala (Linnaeus, 1766)	ISO_3166:BE-VLG	Animalia	2008
+159747376	Psittacula derbiana (Fraser, 1852)	ISO_3166:BE-VLG	Animalia	2016
+159747377	Psittacula eupatria (Linnaeus, 1766)	ISO_3166:BE-BRU	Animalia	1998
+159747378	Psittacula krameri (Scopoli, 1769)	ISO_3166:BE-BRU	Animalia	1974
+159747378	Psittacula krameri (Scopoli, 1769)	ISO_3166:BE-VLG	Animalia	1966
+159747381	Myiopsitta monachus (Boddaert, 1783)	ISO_3166:BE-BRU	Animalia	1979
+159747384	Platycercus eximius (Shaw, 1792)	ISO_3166:BE-VLG	Animalia	2009
+159747385	Platycercus icterotis (Temminck & Kuhl, 1820)	ISO_3166:BE-VLG	Animalia	2015
+159747387	Platycercus elegans (Gmelin, 1788)	ISO_3166:BE-VLG	Animalia	2009
+159747388	Platycercus adscitus (Latham, 1790)	ISO_3166:BE-WAL	Animalia	2012
+159747391	Nymphicus hollandicus (Kerr, 1792)	ISO_3166:BE-VLG	Animalia	1975
+159747394	Eclectus roratus (Statius Muller, 1776)	ISO_3166:BE-VLG	Animalia	2010
+159747397	Poicephalus senegalus (Linnaeus, 1766)	ISO_3166:BE-BRU	Animalia	1989
+159747397	Poicephalus senegalus (Linnaeus, 1766)	ISO_3166:BE-VLG	Animalia	1989
+159747399	Poicephalus cryptoxanthus (W.Peters, 1854)	ISO_3166:BE-VLG	Animalia	2001
+159747401	Psittacus erithacus Linnaeus, 1758	ISO_3166:BE-VLG	Animalia	1993
+159747404	Psephotus haematonotus (Gould, 1838)	ISO_3166:BE-VLG	Animalia	2004
+159747407	Nandayus nenday (Vieillot, 1823)	ISO_3166:BE-VLG	Animalia	2013
+159747409	Polytelis anthopeplus (Lear, 1831)	ISO_3166:BE-WAL	Animalia	2018
+159747410	Polytelis swainsonii (Desmarest, 1826)	ISO_3166:BE-WAL	Animalia	2017
+159747412	Agapornis fischeri Reichenow, 1887	ISO_3166:BE-VLG	Animalia	2009
+159747414	Agapornis roseicollis (Stanley, 1814)	ISO_3166:BE-VLG	Animalia	1983
+159747415	Agapornis personatus Reichenow, 1887	ISO_3166:BE-VLG	Animalia	2014
+159747416	Agapornis canus (Gmelin, 1788)	ISO_3166:BE-VLG	Animalia	1985
+159747419	Melopsittacus undulatus (Shaw, 1805)	ISO_3166:BE-VLG	Animalia	1975
+159747422	Pyrrhura perlata (Spix, 1824)	ISO_3166:BE-WAL	Animalia	2017
+159747425	Amazona ochrocephala (Gmelin, 1788)	ISO_3166:BE-VLG	Animalia	2007
+159747426	Amazona amazonica (Linnaeus, 1766)	ISO_3166:BE-VLG	Animalia	2002
+159747428	Trichoglossus haematodus (Linnaeus, 1771)	ISO_3166:BE-VLG	Animalia	2015
+159747433	Bucorvus leadbeateri (Vigors, 1825)	ISO_3166:BE-VLG	Animalia	2018
+159747445	Dacelo novaeguineae (Hermann, 1783)	ISO_3166:BE-VLG	Animalia	2005
+159747473	Threskiornis aethiopicus (Latham, 1790)	ISO_3166:BE-VLG	Animalia	1989
+159747474	Threskiornis spinicollis (Jameson, 1835)	ISO_3166:BE-VLG	Animalia	2008
+159747494	Grus vipio Pallas, 1811	ISO_3166:BE-VLG	Animalia	2011
+159747595	Brachiaria mutica (Forssk.) Stapf	ISO_3166:BE-VLG	Plantae	1950
+159747653	Paspalum saurae (Parodi) Parodi	ISO_3166:BE-VLG	Plantae	2014
+159747669	Panicum clandestinum L.	ISO_3166:BE-VLG	Plantae	1999
+159747683	Echinochloa oryzoides (Ard.) Fritsch	ISO_3166:BE-VLG	Plantae	2008
+159747684	Echinochloa muricata (P.Beauv.) Fernald	ISO_3166:BE-VLG	Plantae	2020
+159747723	Styela clava Herdman, 1881	ISO_3166:BE-VLG	Animalia	1986
+159747756	Boccardiella hamata (Webster, 1879)	ISO_3166:BE-VLG	Animalia	2011
+159747758	Boccardia proboscidea Hartman, 1940	ISO_3166:BE-VLG	Animalia	2011
+159747879	Cernuella neglecta (Draparnaud, 1805)	ISO_3166:BE-VLG	Animalia	1985
+159747966	Nemopsis bachei L.Agassiz, 1849	ISO_3166:BE-VLG	Animalia	2012
+159748055	Oenothera rubricalyx R.R.Gates	ISO_3166:BE-VLG	Plantae	2014
+159748065	Oenothera elata Kunth	ISO_3166:BE-VLG	Plantae	1961
+159748158	Caucalis platycarpos L.	ISO_3166:BE-VLG	Plantae	2000
+159748235	Haplodrassus securifer Bosmans & Abrous, 2018	ISO_3166:BE-VLG	Animalia	1992
+159748278	Tachycines asynamorus Adelung, 1902	ISO_3166:BE-VLG	Animalia	2018
+159748299	Telmatogeton japonicus Tokunaga, 1933	ISO_3166:BE-VLG	Animalia	2019
+159748319	Rosa chinensis Jacq.	ISO_3166:BE-VLG	Plantae	2007
+159748397	Epuraea imperialis (Reitter, 1877)	ISO_3166:BE-VLG	Animalia	2012
+159748463	Bugula neritina (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	1999
+159748469	Phaeostachys spinifera (Johnston, 1847)	ISO_3166:BE-VLG	Animalia	1999
+159748473	Haplopoma graniferum (Johnston, 1847)	ISO_3166:BE-VLG	Animalia	1999
+159748474	Haplopoma impressum (Audouin, 1826)	ISO_3166:BE-VLG	Animalia	1999
+159748679	Papaver setigerum DC.	ISO_3166:BE-VLG	Plantae	1997
+159748747	Cucurbita maxima Duchesne	ISO_3166:BE-VLG	Plantae	2017
+159748815	Zinnia violacea Cav.	ISO_3166:BE-VLG	Plantae	2011
+159748835	Eclipta prostrata (L.) L.	ISO_3166:BE-VLG	Plantae	2000
+159748857	Dimorphotheca jucunda E.Phillips	ISO_3166:BE-VLG	Plantae	2003
+159748883	Verbesina alternifolia (L.) Britton ex Kearney	ISO_3166:BE-VLG	Plantae	1984
+159749036	Betonica macrantha K.Koch	ISO_3166:BE-WAL	Plantae	1966
+159749052	Alonsoa linearis (Jacq.) Ruiz & Pav.	ISO_3166:BE-VLG	Plantae	2017
+159749078	Calandrinia ciliata (Ruiz & Pav.) DC.	ISO_3166:BE-VLG	Plantae	1956
+159749099	Chenopodium polygonoides (Murr) Aellen	ISO_3166:BE-WAL	Plantae	1951
+159749125	Stellaria cupaniana (Jord. & Fourr.) Bég.	ISO_3166:BE-VLG	Plantae	2013
+159749139	Cerastium arvense subsp. arvense x tomentosum	ISO_3166:BE-VLG	Plantae	2020
+162644337	Carex agastachys L.f.	ISO_3166:BE-VLG	Plantae	2017
+164250535	Galanthus plicatus M.Bieb.	ISO_3166:BE-VLG	Plantae	2017
+164250635	Scirpus cyperinus (L.) Kunth	ISO_3166:BE-VLG	Plantae	2018
+164250924	Oryza sativa L.	ISO_3166:BE-VLG	Plantae	2018
+164251122	Acer pensylvanicum L.	ISO_3166:BE-VLG	Plantae	2010
+164251179	Oenothera drawertii Renner ex Rostanski	ISO_3166:BE-VLG	Plantae	2018
+164251733	Viburnum plicatum Thunb.	ISO_3166:BE-VLG	Plantae	2013
+164251831	Cucumis dipsaceus Ehrenb. ex Spach	ISO_3166:BE-VLG	Plantae	2018
+164251865	Viola sororia Willd.	ISO_3166:BE-VLG	Plantae	2018
+164251911	Ligularia przewalskii (Maxim.) Diels	ISO_3166:BE-VLG	Plantae	2016
+164252088	Monarda didyma L.	ISO_3166:BE-VLG	Plantae	2014
+164252115	Verbena incompta P.W.Michael	ISO_3166:BE-VLG	Plantae	2018
+182132844	Obama nungara Carbayo, Alvarez-Presas, Jones & Riutort, 2016	ISO_3166:BE-BRU	Animalia	2017
+182132844	Obama nungara Carbayo, Alvarez-Presas, Jones & Riutort, 2016	ISO_3166:BE-VLG	Animalia	2018
+182132848	Dolichoplana striata Moseley, 1877	ISO_3166:BE-VLG	Animalia	2018
+182132854	Caenoplana coerulea Moseley, 1877	ISO_3166:BE-VLG	Animalia	2018
+182132858	Kontikia ventrolineata (Dendy, 1892)	ISO_3166:BE-VLG	Animalia	2016
+182132859	Volvariella volvacea (Bull.) Singer	ISO_3166:BE-VLG	Fungi	2018
+182132869	Favolaschia calocera R.Heim	ISO_3166:BE-VLG	Fungi	2018
+182132928	Seifertia azaleae (Peck) Partr. & Morgan-Jones	ISO_3166:BE-VLG	Fungi	2002
+182132976	Achatina fulica (Férussac, 1821)	ISO_3166:BE-WAL	Animalia	2018
+182132993	Abies homolepis Siebold & Zucc.	ISO_3166:BE-VLG	Plantae	2019
+182132997	Larix ×marschlinsii Coaz	ISO_3166:BE-WAL	Plantae	2009
+182133040	Mulinia lateralis (Say, 1822)	ISO_3166:BE-VLG	Animalia	2019
+182133056	Potamocorbula amurensis (Schrenck, 1861)	ISO_3166:BE-VLG	Animalia	2018
+182133073	Polystichum acrostichoides (Michx.) Schott	ISO_3166:BE-VLG	Plantae	2019
+182133075	Polystichum munitum (Kaulf.) C.Presl	ISO_3166:BE-VLG	Plantae	2019
+182133113	Tinantia erecta (Jacq.) Fenzl	ISO_3166:BE-VLG	Plantae	1956
+182133135	Musa basjoo Siebold & Zucc. ex Iinuma	ISO_3166:BE-VLG	Plantae	2020
+182133173	Colchicum byzantinum Ker Gawl.	ISO_3166:BE-VLG	Plantae	2013
+182133180	Fritillaria imperialis L.	ISO_3166:BE-VLG	Plantae	2019
+182133214	Liriope muscari (Decne.) L.H.Bailey	ISO_3166:BE-VLG	Plantae	2015
+182133226	Pseudomuscari azureum (Fenzl) Garbari & Greuter	ISO_3166:BE-WAL	Plantae	2019
+182133241	Ophiopogon jaburan (Siebold) G.Lodd.	ISO_3166:BE-VLG	Plantae	2018
+182133271	Allium karataviense Regel	ISO_3166:BE-VLG	Plantae	2019
+182133276	Allium cristophii Trautv.	ISO_3166:BE-VLG	Plantae	2011
+182133353	Juncus striatus Schousb. ex E.Mey.	ISO_3166:BE-VLG	Plantae	2015
+182133493	Bufotes viridis (Laurenti, 1768)	ISO_3166:BE-BRU	Animalia	2015
+182133501	Bombina orientalis (Boulenger, 1890)	ISO_3166:BE-VLG	Animalia	2009
+182133511	Hyla meridionalis Boettger, 1874	ISO_3166:BE-VLG	Animalia	2020
+182133517	Salamandra atra Laurenti, 1768	ISO_3166:BE-VLG	Animalia	2017
+182133522	Ambystoma macrodactylum Baird, 1850	ISO_3166:BE-VLG	Animalia	2018
+182133525	Siren intermedia Barnes, 1826	ISO_3166:BE-VLG	Animalia	2014
+182133584	Mustela vison Schreber, 1777	ISO_3166:BE-VLG	Animalia	1987
+182133615	Misgurnus anguillicaudatus (Cantor, 1842)	ISO_3166:BE-VLG	Animalia	2006
+182133671	Terapon jarbua (Forsskål, 1775)	ISO_3166:BE-VLG	Animalia	2018
+182133699	Caiman crocodilus (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2017
+182133704	Basiliscus plumifrons Cope, 1875	ISO_3166:BE-VLG	Animalia	2017
+182133709	Heterodon nasicus Baird & Girard, 1852	ISO_3166:BE-VLG	Animalia	2020
+182133715	Chalcides ocellatus (Forskal, 1775)	ISO_3166:BE-VLG	Animalia	2017
+182133718	Trachylepis striata (Peters, 1844)	ISO_3166:BE-VLG	Animalia	2018
+182133721	Eublepharis macularius (Blyth, 1854)	ISO_3166:BE-VLG	Animalia	2012
+182133725	Anolis Daudin, 1802	ISO_3166:BE-VLG	Animalia	2018
+182133728	Anolis sagrei Duméril & Bibron, 1837	ISO_3166:BE-VLG	Animalia	2018
+182133732	Trioceros hoehnelii (Steindachner, 1891)	ISO_3166:BE-VLG	Animalia	2019
+182133734	Furcifer pardalis (Cuvier, 1829)	ISO_3166:BE-VLG	Animalia	2015
+182133737	Chamaeleo calyptratus Duméril & Duméril, 1851	ISO_3166:BE-VLG	Animalia	2014
+182133741	Chrysopelea ornata (Shaw, 1802)	ISO_3166:BE-VLG	Animalia	2014
+182133743	Spilotes pullatus Linnaeus, 1758	ISO_3166:BE-VLG	Animalia	2010
+182133745	Lycodon capucinus (Boie, 1827)	ISO_3166:BE-VLG	Animalia	2013
+182133747	Lampropeltis triangulum (Lacépède, 1789)	ISO_3166:BE-VLG	Animalia	2010
+182133749	Pituophis melanoleucus (Daudin, 1803)	ISO_3166:BE-VLG	Animalia	2013
+182133751	Pituophis catenifer Blainville, 1835	ISO_3166:BE-VLG	Animalia	2010
+182133753	Elaphe quatuorlineata (Bonnaterre, 1790)	ISO_3166:BE-VLG	Animalia	2012
+182133754	Elaphe sauromates (Pallas, 1811)	ISO_3166:BE-VLG	Animalia	2014
+182133755	Elaphe schrenckii Strauch, 1873	ISO_3166:BE-VLG	Animalia	2019
+182133757	Zamenis longissimus (Laurenti, 1768)	ISO_3166:BE-VLG	Animalia	2016
+182133760	Pantherophis guttatus (Linnaeus, 1766)	ISO_3166:BE-BRU	Animalia	2015
+182133760	Pantherophis guttatus (Linnaeus, 1766)	ISO_3166:BE-VLG	Animalia	2010
+182133760	Pantherophis guttatus (Linnaeus, 1766)	ISO_3166:BE-WAL	Animalia	2014
+182133761	Pantherophis obsoletus (Say, 1823)	ISO_3166:BE-VLG	Animalia	2013
+182133763	Hierophis viridiflavus (Lacépède, 1789)	ISO_3166:BE-VLG	Animalia	2010
+182133765	Rhamphiophis Peters, 1854	ISO_3166:BE-VLG	Animalia	2015
+182133766	Boaedon A.M.C.Duméril, Bibron & A.H.A.Duméril, 1854	ISO_3166:BE-VLG	Animalia	2013
+182133769	Tarentola mauritanica (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2013
+182133769	Tarentola mauritanica (Linnaeus, 1758)	ISO_3166:BE-WAL	Animalia	2015
+182133773	Natrix maura (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2015
+182133774	Natrix tessellata (Laurenti, 1768)	ISO_3166:BE-VLG	Animalia	2007
+182133776	Thamnophis Fitzinger, 1843	ISO_3166:BE-VLG	Animalia	2012
+182133781	Morelia spilota (Lacépède, 1804)	ISO_3166:BE-VLG	Animalia	2013
+182133783	Python Daudin, 1803	ISO_3166:BE-VLG	Animalia	2016
+182133785	Python regius (Shaw, 1802)	ISO_3166:BE-VLG	Animalia	2010
+182133787	Python molurus (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2010
+182133789	Antaresia childreni (Gray, 1842)	ISO_3166:BE-VLG	Animalia	2018
+182133792	Celastrus orbiculatus Thunb.	ISO_3166:BE-VLG	Plantae	2004
+182133795	Agama agama (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2015
+182133797	Pogona Storr, 1982	ISO_3166:BE-BRU	Animalia	2019
+182133797	Pogona Storr, 1982	ISO_3166:BE-VLG	Animalia	2015
+182133799	Pogona vitticeps (Ahl, 1926)	ISO_3166:BE-VLG	Animalia	2010
+182133800	Pogona henrylawsoni Wells & Wellington, 1985	ISO_3166:BE-VLG	Animalia	2020
+182133805	Physignathus cocincinus Cuvier, 1829	ISO_3166:BE-VLG	Animalia	2012
+182133806	Calotes Cuvier, 1817	ISO_3166:BE-BRU	Animalia	2018
+182133812	Iguana iguana (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2010
+182133813	Iguana Laurenti, 1768	ISO_3166:BE-VLG	Animalia	2013
+182133818	Varanus niloticus (Linnaeus, 1766)	ISO_3166:BE-VLG	Animalia	2011
+182133821	Aesculus indica (Colebr. ex Cambess.) Hook.	ISO_3166:BE-BRU	Plantae	1997
+182133823	Lacerta agilis Linnaeus, 1758	ISO_3166:BE-VLG	Animalia	2017
+182133827	Acer cissifolium (Siebold & Zucc.) C.Koch	ISO_3166:BE-VLG	Plantae	2014
+182133829	Naja melanoleuca Hallowell, 1857	ISO_3166:BE-VLG	Animalia	2020
+182133832	Boa Linnaeus, 1758	ISO_3166:BE-VLG	Animalia	2014
+182133833	Boa constrictor Linnaeus, 1758	ISO_3166:BE-VLG	Animalia	2006
+182133834	Acer palmatum Thunb.	ISO_3166:BE-VLG	Plantae	2013
+182133838	Crotalus atrox Baird & Girard, 1853	ISO_3166:BE-WAL	Animalia	2019
+182133841	Vipera aspis (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2007
+182133843	Sistrurus Garman, 1884	ISO_3166:BE-VLG	Animalia	2011
+182133846	Echis carinatus (Schneider, 1801)	ISO_3166:BE-BRU	Animalia	2017
+182133846	Echis carinatus (Schneider, 1801)	ISO_3166:BE-VLG	Animalia	2018
+182133849	Phelsuma Gray, 1825	ISO_3166:BE-VLG	Animalia	2013
+182133852	Gekko gecko (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2010
+182133854	Hemidactylus Goldfuss, 1820	ISO_3166:BE-VLG	Animalia	2013
+182133860	Sternotherus carinatus (Gray, 1856)	ISO_3166:BE-VLG	Animalia	2020
+182133865	Testudo hermanni Gmelin, 1789	ISO_3166:BE-VLG	Animalia	2013
+182133866	Testudo graeca Linnaeus, 1758	ISO_3166:BE-BRU	Animalia	2017
+182133866	Testudo graeca Linnaeus, 1758	ISO_3166:BE-VLG	Animalia	2010
+182133866	Testudo graeca Linnaeus, 1758	ISO_3166:BE-WAL	Animalia	2019
+182133869	Centrochelys sulcata (Miller, 1779)	ISO_3166:BE-VLG	Animalia	2017
+182133871	Testudo Linnaeus, 1758	ISO_3166:BE-VLG	Animalia	2010
+182133875	Mauremys reevesii (Gray, 1831)	ISO_3166:BE-VLG	Animalia	2014
+182133879	Chelydra serpentina (Linnaeus, 1758)	ISO_3166:BE-BRU	Animalia	2018
+182133879	Chelydra serpentina (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2006
+182133882	Apalone Rafinesque, 1832	ISO_3166:BE-BRU	Animalia	2017
+182133884	Apalone ferox (Schneider, 1783)	ISO_3166:BE-VLG	Animalia	2020
+182133889	Emys orbicularis (Linnaeus, 1758)	ISO_3166:BE-BRU	Animalia	2018
+182133889	Emys orbicularis (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2010
+182133892	Terrapene carolina (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	2012
+182133895	Chrysemys picta (Schneider, 1783)	ISO_3166:BE-VLG	Animalia	2009
+182133900	Trachemys scripta (Thunberg In Schoepff, 1792)	ISO_3166:BE-BRU	Animalia	2009
+182133900	Trachemys scripta (Thunberg In Schoepff, 1792)	ISO_3166:BE-VLG	Animalia	1975
+182133904	Graptemys pseudogeographica (Gray, 1831)	ISO_3166:BE-BRU	Animalia	2014
+182133904	Graptemys pseudogeographica (Gray, 1831)	ISO_3166:BE-VLG	Animalia	2010
+182133904	Graptemys pseudogeographica (Gray, 1831)	ISO_3166:BE-WAL	Animalia	2013
+182133906	Graptemys ouachitensis Cagle, 1953	ISO_3166:BE-BRU	Animalia	2018
+182133906	Graptemys ouachitensis Cagle, 1953	ISO_3166:BE-VLG	Animalia	2018
+182133907	Graptemys geographica (Le Sueur, 1817)	ISO_3166:BE-VLG	Animalia	2010
+182133911	Pseudemys rubriventris (Le Conte, 1830)	ISO_3166:BE-VLG	Animalia	2015
+182133912	Sedum palmeri S.Watson	ISO_3166:BE-WAL	Plantae	2018
+182133913	Pseudemys concinna (Le Conte, 1830)	ISO_3166:BE-VLG	Animalia	2017
+182133914	Pseudemys nelsoni Carr, 1938	ISO_3166:BE-BRU	Animalia	2018
+182133916	Sedum spathulifolium Hook.	ISO_3166:BE-VLG	Plantae	2019
+182133918	Pelusios castaneus (Schweigger, 1812)	ISO_3166:BE-VLG	Animalia	2020
+182133921	Pelomedusa subrufa (Bonnaterre, 1789)	ISO_3166:BE-VLG	Animalia	2020
+182133937	Ribes ×nidigrolaria Rud.Bauer & A.Bauer	ISO_3166:BE-VLG	Plantae	2008
+182133941	Potamothrix moldaviensis (Vejdovský & Mrázek, 1903)	ISO_3166:BE-VLG	Animalia	2008
+182133944	Limnodrilus maumeensis Brinkhurst & Cook, 1966	ISO_3166:BE-VLG	Animalia	2014
+182133971	Laonome xeprovala Bick & Bastrop, 2018	ISO_3166:BE-VLG	Animalia	2017
+182133978	Leiobunum C.L.Koch, 1839	ISO_3166:BE-VLG	Animalia	2010
+182133978	Leiobunum C.L.Koch, 1839	ISO_3166:BE-WAL	Animalia	2009
+182133994	Lampropeltis Öpik, 1967	ISO_3166:BE-VLG	Animalia	2011
+182134007	Penaeus aztecus Ives, 1891	ISO_3166:BE-VLG	Animalia	2018
+182134042	Opopanax chironium (L.) Koch	ISO_3166:BE-VLG	Plantae	2019
+182134074	Grandidierella japonica Stephensen, 1938	ISO_3166:BE-VLG	Animalia	2019
+182134080	Neomysis americana (S.I.Smith, 1873)	ISO_3166:BE-VLG	Animalia	2012
+182134097	Hydrocotyle sibthorpioides Lam.	ISO_3166:BE-VLG	Plantae	1984
+182134118	Megabalanus tintinnabulum (Linnaeus, 1758)	ISO_3166:BE-VLG	Animalia	1998
+182134170	Jaltomata procumbens (Cav.) J.L.Gentry	ISO_3166:BE-VLG	Plantae	2008
+182134182	Desmanthus illinoensis (Michx.) MacMill. ex B.L.Rob. & Fernald	ISO_3166:BE-VLG	Plantae	1995
+182134200	Lotus hirsutus L.	ISO_3166:BE-VLG	Plantae	2004
+182134203	Lotus hispidus Desf. ex DC.	ISO_3166:BE-VLG	Plantae	2019
+182134239	Halyomorpha halys (Stål, 1855)	ISO_3166:BE-VLG	Animalia	2017
+182134239	Halyomorpha halys (Stål, 1855)	ISO_3166:BE-WAL	Animalia	2018
+182134244	Tupiocoris rhododendri (Dolling, 1972)	ISO_3166:BE-VLG	Animalia	2007
+182134253	Leptoglossus occidentalis Heidemann, 1910	ISO_3166:BE-VLG	Animalia	2007
+182134253	Leptoglossus occidentalis Heidemann, 1910	ISO_3166:BE-WAL	Animalia	2008
+182134265	Choreutis nemorana (Hübner, 1799)	ISO_3166:BE-VLG	Animalia	2015
+182134265	Choreutis nemorana (Hübner, 1799)	ISO_3166:BE-WAL	Animalia	2009
+182134272	Tuta absoluta (Meyrick, 1917)	ISO_3166:BE-VLG	Animalia	2009
+182134288	Caragana halodendron (Pall.) Dum.Cours.	ISO_3166:BE-BRU	Plantae	1953
+182134304	Eupholidoptera chabrieri (Charpentier, 1825)	ISO_3166:BE-VLG	Animalia	2019
+182134318	Drosophila suzukii (Matsumura, 1931)	ISO_3166:BE-VLG	Animalia	2011
+182134322	Phytomyza jucunda Frost & Sasakawa, 1954	ISO_3166:BE-VLG	Animalia	2015
+182134330	Dohrniphora cornuta (Bigot, 1857)	ISO_3166:BE-VLG	Animalia	2005
+182134340	Styphnolobium japonicum (L.) Schott	ISO_3166:BE-VLG	Plantae	2019
+182134387	Xylocopa virginica (Linnaeus, 1771)	ISO_3166:BE-VLG	Animalia	2015
+182134433	Hornungia petraea (L.) Rchb.	ISO_3166:BE-VLG	Plantae	2020
+182134454	Otiorhynchus aurifer Boheman, 1843	ISO_3166:BE-BRU	Animalia	2015
+182134454	Otiorhynchus aurifer Boheman, 1843	ISO_3166:BE-VLG	Animalia	2017
+182134454	Otiorhynchus aurifer Boheman, 1843	ISO_3166:BE-WAL	Animalia	1999
+182134455	Otiorhynchus cribricollis Gyllenhal, 1834	ISO_3166:BE-VLG	Animalia	2002
+182134455	Otiorhynchus cribricollis Gyllenhal, 1834	ISO_3166:BE-WAL	Animalia	2016
+182134456	Otiorhynchus meridionalis Gyllenhal, 1834	ISO_3166:BE-BRU	Animalia	2016
+182134456	Otiorhynchus meridionalis Gyllenhal, 1834	ISO_3166:BE-VLG	Animalia	2016
+182134456	Otiorhynchus meridionalis Gyllenhal, 1834	ISO_3166:BE-WAL	Animalia	2003
+182134464	Cardamine graeca L.	ISO_3166:BE-VLG	Plantae	2014
+182134467	Lindorus lophanthae (Blaisdell, 1892)	ISO_3166:BE-VLG	Animalia	1976
+182134539	Geranium wallichianum D.Don ex Sweet	ISO_3166:BE-VLG	Plantae	2019
+182134562	Mimulus ringens L.	ISO_3166:BE-VLG	Plantae	2019
+182134565	Thunbergia alata Bojer ex Sims	ISO_3166:BE-VLG	Plantae	2013
+182134574	Penstemon digitalis Nutt.	ISO_3166:BE-WAL	Plantae	2019
+182134582	Veronica repens Clarion ex DC.	ISO_3166:BE-VLG	Plantae	2020
+182134597	Verbascum nigrum x speciosum	ISO_3166:BE-VLG	Plantae	2014
+182134599	Scrophularia canina L.	ISO_3166:BE-WAL	Plantae	2019
+182134600	Scrophularia peregrina L.	ISO_3166:BE-VLG	Plantae	2020
+182134656	Origanum onites L.	ISO_3166:BE-VLG	Plantae	2020
+182134658	Lamium confertum Fr.	ISO_3166:BE-VLG	Plantae	2018
+182134689	Symphytum orientale L.	ISO_3166:BE-VLG	Plantae	2020
+182134695	Cucurbita moschata (Duchesne) Duchesne ex Poir.	ISO_3166:BE-VLG	Plantae	2014
+182134719	Halimium lasianthum subsp. alyssoides (Lam.) Greuter	ISO_3166:BE-VLG	Plantae	2012
+182134726	Viola hederacea Labill.	ISO_3166:BE-VLG	Plantae	2020
+182134733	Populus ×jackii Sarg.	ISO_3166:BE-VLG	Plantae	2010
+182134756	Juglans mandshurica Maxim.	ISO_3166:BE-VLG	Plantae	2020
+182134783	Thalictrum delavayi Franch.	ISO_3166:BE-VLG	Plantae	2020
+182134791	Fumaria bastardii Bor.	ISO_3166:BE-WAL	Plantae	2017
+182134793	Corydalis linstowiana Fedde	ISO_3166:BE-VLG	Plantae	2019
+182134799	Papaver commutatum Fisch. & C.A.Mey.	ISO_3166:BE-VLG	Plantae	2015
+182134802	Lamprocapnos spectabilis (L.) Fukuhara	ISO_3166:BE-VLG	Plantae	2010
+182134828	Daboecia cantabrica (Huds.) K.Koch	ISO_3166:BE-VLG	Plantae	2012
+182134831	Erica ×darleyensis Bean	ISO_3166:BE-VLG	Plantae	2016
+182134838	Pieris japonica (Thunb.) D.Don ex G.Don	ISO_3166:BE-VLG	Plantae	2018
+182134848	Valeriana calcitrapae L.	ISO_3166:BE-VLG	Plantae	2019
+182134854	Scabiosa lucida Vill.	ISO_3166:BE-VLG	Plantae	2019
+182134890	Jacobaea ×albescens (Burb. & Colgan) Verloove & Lambinon	ISO_3166:BE-VLG	Plantae	2019
+182134906	Cichorium calvum Sch.Bip.	ISO_3166:BE-VLG	Plantae	2012
+182134916	Pulicaria arabica subsp. hispanica (Boiss.) Murb.	ISO_3166:BE-VLG	Plantae	2011
+182134921	Hieracium glaucinum subsp. recensitum (Jord. ex Boreau) Gottschl.	ISO_3166:BE-VLG	Plantae	1985
+182134934	Andryala integrifolia L.	ISO_3166:BE-WAL	Plantae	2019
+182134960	Erigeron ×huelsenii Vatke	ISO_3166:BE-WAL	Plantae	2008
+182134971	Helianthus maximiliani Schrad.	ISO_3166:BE-VLG	Plantae	2019
+182134973	Oncosiphon piluliferum (L.fil.) Källersjö	ISO_3166:BE-VLG	Plantae	2017
+182134977	Filago congesta Guss. ex DC.	ISO_3166:BE-VLG	Plantae	2019
+182135018	Aldrovanda vesiculosa L.	ISO_3166:BE-VLG	Plantae	2020
+182135021	Abronia fragrans Nutt. ex Hook.	ISO_3166:BE-VLG	Plantae	1951
+182135028	Drosanthemum floribundum (Haw.) Schwantes	ISO_3166:BE-VLG	Plantae	2018
+182135052	Amaranthus ×ralletii Contré	ISO_3166:BE-BRU	Plantae	1985
+182135058	Celosia cristata L.	ISO_3166:BE-WAL	Plantae	2019
+182135072	×Reyllopia conollyana (J.P.Bailey) Galasso	ISO_3166:BE-VLG	Plantae	2008
+182135076	Rumex ×hybridus Kindb.	ISO_3166:BE-VLG	Plantae	2013
+182135086	Spergularia bocconei (Scheele) Graebn.	ISO_3166:BE-VLG	Plantae	2016
+182135113	Elaeagnus pungens Thunb.	ISO_3166:BE-VLG	Plantae	2012
+182135133	Acaena caesiiglauca (Bitter) Bergmans	ISO_3166:BE-VLG	Plantae	2019
+182135135	Dasiphora davurica var. mandshurica (Maxim.) Verloove & Lambinon	ISO_3166:BE-VLG	Plantae	2008
+182135153	Prunus tomentosa Thunb.	ISO_3166:BE-VLG	Plantae	2014
