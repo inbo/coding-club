@@ -140,8 +140,9 @@ class: left, top
 1. Make a bar chart with the number of taxa observed for the first time in Belgium per year. Tip: check the difference between `geom_bar()` and `geom_col()`.
 2. Change x and y labels to "year of introduction" and "number of taxa" respectively.
 3. Show only data from 1980 up to the latest year of `first_observed`.
-4. **Fill** all bars with color blue and set contour to red.
-5. Sometimes is better to show aggregated data to better deal with outliers and show trends. In this case, how to group years in bins of 5 years.
+. Sometimes is better to show aggregated data to better deal with outliers and show trends. In this case, how to group years in bins of 5 years.
+4. **Fill** all bars with color blue and set contour **color** to red.
+5. Sometimes, it is better to show aggregated data to better deal with outliers and show trends. In this case, group years in bins of 5 years.
 
 ---
 class: left, top
@@ -162,7 +163,7 @@ ggplot(data = ias_be) +
   geom_bar(mapping = aes(x = first_observed))
 ```
 
-Both are good. Still, we have the feeling that the second version is used more often. The only case to really opt for the second option is when you plot two or more geometries with **different** aesthetics. Example, plot pressure and temperature vs time* :
+Both are good. Still, we have the feeling that the second version is used more often. The only case in which it is better to opt for the second option is when you plot two or more geometries with **different** aesthetics. For example, plot pressure and temperature vs time* :
 
 ```
 # dummy dataset
@@ -192,8 +193,8 @@ class: left, top
 1. Make a bar chart plot similar to the ones in challenge 1 at regional level. How are the bars displayed per region, by default?
 2. How to set them next to each other?
 3. How to split the bar chart in subplots based on kingdom? Set the y scale free.
-4. Set order of the subplots as in figure on the left
-5. Split sublots by kingdom and location as in figure on the right
+4. Set the order of the subplots as in the figure on the left
+5. Split sublots by kingdom and location as in the figure on the right
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20230330/20230330_facets.png)
 
