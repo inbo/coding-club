@@ -1,0 +1,207 @@
+---
+layout: presentation
+title: boost your graphs
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 25 APRIL 2023
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+
+01.05 - Isala Van Diest
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20230425/20230425_badge_ggplot.png)
+
+---
+class: center, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20230425/20230425_cheat_sheet_ggplot.png)
+Download [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20220830_cheat_sheet_ggplot2.pdf)
+
+---
+class: left, middle
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+# Share your code during the coding session
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/peUHuQaERrCi94LObScfdA?edit and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/peUHuQaERrCi94LObScfdA?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub folders [coding-club/data/20230425](https://github.com/inbo/coding-club/tree/master/data/20230425) and [coding-club/src/20230425](https://github.com/inbo/coding-club/tree/master/src/20230425)
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20220428")` to download the coding club material of April, 28 2022. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Load libraries
+
+```r
+library(tidyverse)
+library(patchwork)
+library(viridis)
+```
+
+---
+class: left, top
+
+# RECAP: ggplot recipe: data - mapping - geometry
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20230425/20230425_ggplot_recipe.png)
+
+---
+class: left, top
+
+## Recap: mapping
+
+Mapping can be defined in either `ggplot()` or the geometry `geom_*()`.
+
+```r
+# mapping in ggplot()
+ggplot(ToothGrowth, mapping = aes(x = dose, y = len)) +
+  geom_point()
+# mapping in geometry geom_point()
+ggplot(ToothGrowth) +
+  geom_point(mapping = aes(x = dose, y = len))
+```
+
+What to do with multiple plots (geometries)?
+
+```r
+# set all args of aes() in each geom_*()
+ggplot(ToothGrowth) +
+  geom_violin(mapping = aes(x = dose, y = len, group = dose)) +
+  geom_point(mapping = aes(x = dose, y = len))
+# put common args of aes() in ggplot()
+ggplot(ToothGrowth, mapping = aes(x = dose, y = len)) +
+  geom_violin(mapping = aes(group = dose)) +
+  geom_point()
+```
+
+---
+class: left, top
+
+## Recap: mapping - aesthetics
+
+The most important mapping argument? **aes()**thetics! Put all arguments which require variables (= columns) in `aes()`, leave all other arguments out.
+
+```r
+# you want color represents the supplement (supp)
+ggplot(ToothGrowth, mapping = aes(x = dose, y = len)) +
+  geom_point(aes(color = supp))
+
+# you want all points are blue hollow triangles
+ggplot(ToothGrowth, mapping = aes(x = dose, y = len)) +
+  geom_point(color = "blue", shape = 2)
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1: color palettes & scales
+
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2. Combine separate ggplots
+
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3. Fine tune your ggplots
+
+
+
+---
+class: left, top
+
+# Bonus challenge: have fun with color palettes
+
+There are so many color palettes available. Get inspired! Example: package [`wesanderson`](https://github.com/karthik/wesanderson) allows you to use (some of) the palettes derived from the amazing Tumblr blog ["Wes Anderson Palettes"](http://wesandersonpalettes.tumblr.com/). Give a try.
+
+
+# Resources
+
+- [Challenges solutions](https://github.com/inbo/coding-club/blob/master/src/20230425/20230425_challenges_solutions.R)
+- `ggplot2` website: https://ggplot2.tidyverse.org/
+- the official [R Graphics Cookbook](https://r-graphics.org)
+- another interesting book: [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
+- [`ggplot2` extension packages gallery](https://exts.ggplot2.tidyverse.org/gallery/)
+- arrange intuitively multiple plots with the [patchwork](https://patchwork.data-imaginist.com/) package
+- talk about [color theory and the viridis palette](https://www.youtube.com/watch?v=xAoljeRJ3lU) at SciPy 2015
+- blogpost about colorblindness and how taking care of it in your plots: https://www.datanovia.com/en/blog/how-to-stimulate-colorblindness-vision-in-r-figures
+- [ggsci](https://nanx.me/ggsci/index.html) package offers a collection of high-quality ggplot compatible color palettes
+- handy tutorial with some tricks about colors in ggplot2: https://www.datanovia.com/en/blog/ggplot-colors-best-tricks-you-will-love/
+- Rate your visualization using Stephanie Evergreen's [data visualizaion checklist](https://stephanieevergreen.com/data-visualization-checklist/)
+- Tutorial about using [plotly package](https://www.musgraveanalytics.com/blog/2018/8/24/how-to-make-ggplot2-charts-interactive-with-plotly) for making interactive plots
+- do you want to animate your plots? Check [challenge 3B](https://inbo.github.io/coding-club/sessions/20201217_outstanding_plots.html#16) of 17 Dec 2020
+- do you want to make your plots interactive? Check [challenge 3B](https://inbo.github.io/coding-club/sessions/20210930_ggplot_advanced_and_beyond.html#15) of 30 Sept 2021
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 06.C.03 & 07.C.03<br>
+Date: __6/10/2022__, van 10:00 tot 12:30<br>
+Subject: **Shiny for beginners** <br>
+(registration announced via DG_useR@inbo.be)
