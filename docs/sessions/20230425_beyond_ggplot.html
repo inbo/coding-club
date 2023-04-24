@@ -216,6 +216,29 @@ Try to apply the viridis palette mentioned in the Intermezzo and other palettes 
 ---
 class: left, top
 
+# The package of the month. Hans' choice 2
+
+Hans Vancalster inspires us again! The [ggpcp](https://yaweige.github.io/ggpcp/index.html) package to create *generalized parallel coordinate plots* in the ggplot2 framework. Interesting also to read [this](https://www.tandfonline.com/doi/full/10.1080/10618600.2023.2195462) article about it.
+
+Example:
+
+```
+mtcars %>%
+  mutate(vs = factor(vs),
+         am = factor(am),
+         gear = factor(gear),
+         carb = factor(carb)) %>%
+  ggplot(aes(vars = vars(vs:carb))) +
+  geom_pcp(aes(color = vs), boxwidth = 0.2) +
+  geom_pcp_box(boxwidth = 0.2)
+```
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20230425/20230425_ggpcp.png)
+
+
+---
+class: left, top
+
 # Resources
 
 - Challenges solutions and edite video recording will be available soon
@@ -231,6 +254,22 @@ class: left, top
 - [ggsci](https://nanx.me/ggsci/index.html) package offers a collection of high-quality ggplot compatible color palettes
 - blogpost about colorblindness and how taking care of it in your plots: https://www.datanovia.com/en/blog/how-to-stimulate-colorblindness-vision-in-r-figures
 - Rate your visualization using Stephanie Evergreen's [data visualizaion checklist](https://stephanieevergreen.com/data-visualization-checklist/)
+
+---
+class: left, top
+
+# Coding club topics 2023: you vote!
+
+Every month you can vote among **two topics**!
+
+Poll for May's coding club is still open! Let us know your favorite before May 1!
+
+https://forms.gle/dyBHYSyVWqC1tnk69
+
+You can choose between:
+
+- Spatial vector data with sf: points, lines, polygons, multipolygons, ...
+- The computer says NO: debug yourRcode
 
 ---
 class: center, middle
