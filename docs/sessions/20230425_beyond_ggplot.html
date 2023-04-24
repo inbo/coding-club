@@ -85,6 +85,20 @@ You can download the material of today:
 ---
 class: left, top
 
+# Data and scripts description
+
+Today we will work with national/regional checklist data about Invasive Alien Species (IAS) and species distribution of butterlflies amont several biotopes.
+
+- `20230425_ias_first_observed_BE.txt`: dataset about year of first observation of IAS in Belgium from 1950
+- `20230425_ias_first_observed_regions.txt`: dataset about year of first observation of IAS in Belgian regions from 1950
+- `20230425_ias_pathways_count.txt`: dataset about pathway of introduction of IAS in Belgium from 1950
+- `20230425_area_biotopes.txt`: dataset about biotopes and distribution of two butterflies
+
+- `20230425_challenges.R`: R script with code to start with
+
+---
+class: left, top
+
 # Load libraries
 
 ```r
@@ -195,8 +209,12 @@ class: left, top
 
 # Challenge 2
 
+1. Add a zooming facet to `ias_first_obs_paths` to zoom around the time interval 1980 - 2000.
+How to zoom on the y-axis values as well?
 
-
+2. In challenge 1 we used standard ggplot facetting for creating
+ `ias_first_obs_reg_facets`. How to use ggforce to set the facet labels (the
+ `locationId` values) on the bottom instead of on the top as usual?
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
