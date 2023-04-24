@@ -1,0 +1,1061 @@
+key	scientificName	kingdom	first_observed
+152543101	Gyrodactylus proterorhini Ergens, 1967	Animalia	2011
+152543102	Aphanomyces astaci Schikora	Chromista	2018
+152543115	Thecaphora oxalidis (Ellis & Tracy) M.Lutz, R.Bauer & Piątek	Fungi	2014
+152543120	Tricellaria inopinata d'Hondt & Occhipinti Ambrogi, 1985	Animalia	2000
+152543132	Graptemys pseudogeographica kohnii (Baur, 1890)	Animalia	2005
+152543136	Graptemys pseudogeographica pseudogeographica	Animalia	2005
+152543139	Trachemys scripta troostii (Holbrook, 1836)	Animalia	2003
+152543142	Lentinula edodes (Berk.) Pegler	Fungi	2018
+152543152	Melampsoridium betulinum (Pers.) Kleb.	Fungi	2000
+152543155	Orthriophis taeniurus (Cope, 1861)	Animalia	2006
+152543157	Tranzschelia discolor (Fuckel) Tranzschel & M.A.Litv.	Fungi	2000
+152543163	Lacerta viridis (Laurenti, 1768)	Animalia	2006
+152543168	Podarcis siculus (Rafinesque-schmaltz, 1810)	Animalia	2004
+152543178	Dendrocoelum romanodanubiale (Codreanu, 1949)	Animalia	2001
+152543185	Puccinia komarovii Tranzschel	Fungi	2009
+152543188	Caenoplana bicolor (Graff, 1899)	Animalia	2015
+152543207	Batrachochytrium salamandrivorans A.Martel, Blooi, Bossuyt & Pasmans	Fungi	2013
+152543209	Batrachochytrium dendrobatidis Longcore, Pessier & D.K.Nichols	Fungi	2018
+152543248	Ilex ×altaclerensis (Loud.) Dallim.	Plantae	2006
+152543250	Ilex crenata Thunb.	Plantae	2012
+152543251	Ilex ×meserveae S.Y.Hu	Plantae	2014
+152543252	Rupicapra rupicapra (Linnaeus, 1758)	Animalia	2013
+152543254	Ovis ammon (Linnaeus, 1758)	Animalia	2018
+152543258	Dama dama (Linnaeus, 1758)	Animalia	2018
+152543260	Cervus nippon Temminck, 1838	Animalia	2018
+152543264	Muntiacus reevesi (Ogilby, 1839)	Animalia	2005
+152543269	Ondatra zibethicus (Linnaeus, 1766)	Animalia	2018
+152543273	Myocastor coypus (Molina, 1782)	Animalia	2018
+152543277	Castor canadensis Kuhl, 1820	Animalia	2018
+152543282	Hydrochoerus hydrochaeris (Linnaeus, 1766)	Animalia	2003
+152543284	Dolichotis patagonum (Zimmermann, 1780)	Animalia	2014
+152543289	Meriones unguiculatus (Milne-Edwards, 1867)	Animalia	2010
+152543292	Melia azedarach L.	Plantae	2006
+152543293	Rattus norvegicus (Berkenhout, 1769)	Animalia	2018
+152543299	Sciurus carolinensis Gmelin, 1788	Animalia	2000
+152543300	Sciurus niger Linnaeus, 1758	Animalia	2014
+152543309	Cynomys ludovicianus (Ord, 1815)	Animalia	2018
+152543313	Callosciurus prevostii (Desmarest, 1822)	Animalia	2011
+152543314	Callosciurus erythraeus (Pallas, 1779)	Animalia	2004
+152543316	Tamiasciurus hudsonicus (Erxleben, 1777)	Animalia	2015
+152543320	Skimmia japonica Thunb.	Plantae	2012
+152543323	Mephitis mephitis (Schreber, 1776)	Animalia	2014
+152543327	Procyon cancrivorus G	Animalia	2006
+152543332	Nasua nasua (Linnaeus, 1766)	Animalia	2007
+152543337	Felis catus Linnaeus, 1758	Animalia	2018
+152543341	Nyctereutes procyonoides (Gray, 1834)	Animalia	2018
+152543345	Koelreuteria paniculata Laxm.	Plantae	2008
+152543348	Sarcophilus harrisii (Boitard, 1841)	Animalia	2007
+152543356	Oryctolagus cuniculus (Linnaeus, 1758)	Animalia	2018
+152543363	Acer rufinerve Siebold & Zucc.	Plantae	2006
+152543365	Pleurodeles waltl Michahelles, 1830	Animalia	2011
+152543366	Acer monspessulanum L.	Plantae	2015
+152543370	Acer tataricum subsp. ginnala (Maxim.) Wesm.	Plantae	2012
+152543372	Triturus marmoratus (Latreille, 1800)	Animalia	2018
+152543377	Rhinella marina (Linnaeus, 1758)	Animalia	2010
+152543379	Acer rubrum L.	Plantae	2008
+152543382	Acer saccharinum L.	Plantae	2020
+152543383	Xenopus laevis (Daudin, 1802)	Animalia	2006
+152543391	Aesculus parviflora Walter	Plantae	2013
+152543392	Pelophylax bedriagae (Camerano, 1882)	Animalia	2000
+152543399	Ammannia coccinea Rottb.	Plantae	2016
+152543421	Ponticola kessleri (Günther, 1861)	Animalia	2012
+152543422	Clarkia amoena (Lehm.) A.Nelson & J.F.Macbr.	Plantae	2012
+152543426	Gobiosoma bosc (Lacepède, 1800)	Animalia	2018
+152543430	Neogobius melanostomus (Pallas, 1814)	Animalia	2010
+152543432	Neogobius fluviatilis (Pallas, 1814)	Animalia	2015
+152543436	Proterorhinus semilunaris (Heckel, 1837)	Animalia	2010
+152543440	Oenothera suaveolens Desf. ex Pers.	Plantae	2015
+152543447	Oenothera cambrica Rostanski	Plantae	2001
+152543459	Oenothera paradoxa Hudziok	Plantae	2001
+152543462	Oenothera wratislaviensis Rostanski	Plantae	2004
+152543464	Oenothera royfraseri R.R.Gates	Plantae	2007
+152543465	Acipenser baerii Brandt, 1869	Animalia	2001
+152543467	Oenothera rubricauloides Rostanski	Plantae	2007
+152543468	Acipenser gueldenstaedtii Brandt & Ratzeburg, 1833	Animalia	2005
+152543469	Oenothera casimiri Rostanski	Plantae	2017
+152543470	Acipenser ruthenus Linnaeus, 1758	Animalia	2000
+152543471	Oenothera lindheimeri (Engelm. & A.Gray) W.L.Wagner & Hoch	Plantae	2007
+152543473	Oenothera moravica V.Jehlík & Rostanski	Plantae	2017
+152543477	Oenothera speciosa Nutt.	Plantae	2017
+152543502	Epilobium brachycarpum C.Presl	Plantae	2012
+152543535	Ballerus ballerus (Linnaeus, 1758)	Animalia	2016
+152543540	Vimba vimba (Linnaeus, 1758)	Animalia	2001
+152543541	Euonymus japonicus Thunb.	Plantae	2010
+152543545	Euonymus alatus (Thunb.) Siebold	Plantae	2011
+152543557	Scaevola aemula R.Br.	Plantae	2014
+152543566	Campanula poscharskyana Degen	Plantae	2001
+152543569	Campanula fenestrellata Feer	Plantae	2001
+152543575	Campanula lactiflora M.Bieb.	Plantae	2000
+152543587	Lobelia sessilifolia Lamb.	Plantae	2004
+152543589	Lobelia pedunculata R.Br.	Plantae	2003
+152543596	Trachelium caeruleum L.	Plantae	2005
+152543602	Triodanis perfoliata (L.) Nieuwl.	Plantae	2018
+152543605	Platycodon grandiflorus (Jacq.) A.DC.	Plantae	2013
+152543641	Milax gagates (Draparnaud, 1801)	Animalia	2018
+152543652	Chondrilla juncea L.	Plantae	2004
+152543663	Tasserkidrilus americanus (Brinkhurst & Cook, 1966)	Animalia	2006
+152543667	Bratislavia dadayi (Michaelsen, 1905)	Animalia	2002
+152543671	Monopylephorus limosus (Hatai, 1898)	Animalia	2002
+152543682	Psammoryctides moravicus (Hrabĕ, 1934)	Animalia	2008
+152543683	Bidens triplinervia var. macrantha (Wedd.) Sherff	Plantae	2000
+152543685	Bidens radiata Thuill.	Plantae	2005
+152543686	Branchiodrilus hortensis (Stephenson, 1910)	Animalia	2010
+152543692	Potamothrix heuscheri (Bretscher, 1900)	Animalia	2014
+152543694	Bidens vulgata Greene	Plantae	2000
+152543695	Potamothrix vejdovskyi (Hrabĕ, 1941)	Animalia	2009
+152543699	Limnodrilus cervix Brinkhurst, 1963	Animalia	2009
+152543706	Hypania invalida (Grube, 1860)	Animalia	2000
+152543710	Solidago altissima L.	Plantae	2016
+152543712	Laonome calida Capa, 2007	Animalia	2014
+152543725	Marenzelleria neglecta Sikorski & Bick, 2004	Animalia	2008
+152543736	Tragopogon ×mirabilis Rouy	Plantae	2000
+152543758	Dahlia coccinea Cav.	Plantae	2015
+152543765	Aster ageratoides Turcz.	Plantae	2014
+152543787	Rangia cuneata (G.B.Sowerby I, 1832)	Animalia	2004
+152543793	Dimorphotheca pluvialis (L.) Moench	Plantae	2007
+152543800	Eupatorium perfoliatum L.	Plantae	2007
+152543809	Ligularia dentata (A.Gray) Hara	Plantae	2010
+152543811	Heliopsis helianthoides (L.) Sweet	Plantae	2006
+152543814	Meloidogyne artiellia Franklin, 1961	Animalia	2011
+152543818	Tithonia rotundifolia (Mill.) S.F.Blake	Plantae	2015
+152543820	Mastophorus Diesing, 1853	Animalia	2004
+152543821	Vernonia fasciculata Michx.	Plantae	2013
+152543830	Leucanthemum ×superbum (Bergmans ex J.W.Ingram) D.H.Kent	Plantae	2002
+152543833	Sinelobus vanhaareni Bamber, 2014	Animalia	2007
+152543842	Limnomysis benedeni Czerniavsky, 1882	Animalia	2005
+152543856	Crepis foetida subsp. rhoeadifolia (M.Bieb.) Celak.	Plantae	2003
+152543858	Crepis bursifolia L.	Plantae	2016
+152543866	Procambarus clarkii (Girard, 1852)	Animalia	2008
+152543880	Inula racemosa Hook.fil.	Plantae	2001
+152543886	Hemigrapsus takanoi Asakura & Watanabe, 2005	Animalia	2003
+152543888	Melampodium montanum Benth.	Plantae	2003
+152543889	Hemigrapsus sanguineus (De Haan, 1835)	Animalia	2006
+152543897	Jaera istri Veuille, 1979	Animalia	2000
+152543901	Eutrochium maculatum (L.) E.E.Lamont	Plantae	2004
+152543903	Eutrochium purpureum (L.) E.E.Lamont	Plantae	2009
+152543907	Synarmadillo Dollfus, 1892	Animalia	2015
+152543911	Reductoniscus costulatus Kesselyak, 1930	Animalia	2015
+152543918	Nagurus cristatus (Dollfus, 1889)	Animalia	2015
+152543929	Synidotea laticauda Benedict, 1897	Animalia	2005
+152543950	Centaurea pectinata L.	Plantae	2004
+152543963	Centaurea calocephala Willd.	Plantae	2014
+152543968	Echinogammarus trichiatus (Martynov, 1932)	Animalia	2009
+152543986	Anaphalis triplinervis (Sims) C.B.Clarke	Plantae	2005
+152543987	Synurella ambulans (F.Müller, 1846)	Animalia	2003
+152544002	Coreopsis lanceolata L.	Plantae	2001
+152544007	Helichrysum petiolare Hilliard & B.L.Burtt	Plantae	2008
+152544009	Helichrysum italicum (Roth) G.Don	Plantae	2009
+152544030	Artemisia sieversiana Ehrh. ex Willd.	Plantae	2011
+152544031	Artemisia princeps Pamp.	Plantae	2011
+152544050	Erigeron ×flahaultianus Thell.	Plantae	2002
+152544053	Erigeron floribundus (Kunth) Sch.Bip.	Plantae	2000
+152544054	Erigeron karvinskianus DC.	Plantae	2000
+152544070	Uroctea durandi (Latreille, 1809)	Animalia	2018
+152544075	Oecobius amboseli Shear & Benoit, 1974	Animalia	2007
+152544079	Pilosella prussica (Nägeli & Peter) Soják	Plantae	2003
+152544081	Olios (Walckenaer, 1806)	Animalia	2011
+152544083	Olios argelasius (Walckenaer, 1806)	Animalia	2011
+152544084	Nolavia Kammerer, 2006	Animalia	2016
+152544085	Cerbalus Simon, 1897	Animalia	2000
+152544087	Pilosella fuscoatra (Nägeli & Peter) Soják	Plantae	2006
+152544089	Nephila Leach, 1815	Animalia	2010
+152544091	Pilosella stoloniflora (Waldst. & Kit.) F.W.Schultz & Sch.Bip.	Plantae	2016
+152544093	Neoscona nautica (L.Koch, 1875)	Animalia	2001
+152544098	Hasarius adansoni (Audouin, 1826)	Animalia	2001
+152544103	Philaeus chrysops (Poda, 1761)	Animalia	2014
+152544105	Phidippus C.L.Koch, 1846	Animalia	2009
+152544108	Saitis barbipes (Simon, 1868)	Animalia	2006
+152544112	Pellenes geniculatus (Simon, 1868)	Animalia	2001
+152544118	Plexippus paykulli (Audouin, 1826)	Animalia	2001
+152544122	Heliophanus kochii Simon, 1868	Animalia	2006
+152544126	Macaroeris nidicolens (Walckenaer, 1802)	Animalia	2006
+152544130	Sinacalia tangutica (Maxim.) B.Nord.	Plantae	2004
+152544131	Cheiracanthium furculatum Karsch, 1879	Animalia	2013
+152544135	Cryptachaea blattea (Urquhart, 1886)	Animalia	2002
+152544141	Nesticodes rufipes (Lucas, 1846)	Animalia	2004
+152544145	Euryopis episinoides (Walckenaer, 1847)	Animalia	2002
+152544148	Coleosoma floridanum Banks, 1900	Animalia	2014
+152544151	Steatoda nobilis (Thorell, 1875)	Animalia	2009
+152544156	Helianthus decapetalus L.	Plantae	2011
+152544168	Latrodectus geometricus C.L.Koch, 1841	Animalia	2006
+152544170	Latrodectus hesperus Chamberlin & Ivie, 1935	Animalia	2013
+152544172	Gutenbergia rueppellii Sch.Bip.	Plantae	2013
+152544174	Zoropsis spinimana (Dufour, 1820)	Animalia	2004
+152544182	Grammostola rosea (Walckenaer, 1837)	Animalia	2008
+152544186	Phormictopus cancerides (Latreille, 1806)	Animalia	2008
+152544188	Chaetopelma olivaceum (C.L.Koch, 1841)	Animalia	2011
+152544194	Selenops radiatus Latreille, 1819	Animalia	2004
+152544205	Micropholcus fauroti (Simon, 1887)	Animalia	2001
+152544209	Crossopriza lyoni (Blackwall, 1867)	Animalia	2001
+152544210	Pholcus Walckenaer, 1805	Animalia	2015
+152544212	Pholcus opilionoides (Schrank, 1781)	Animalia	2003
+152544214	Artema atlanta Walckenaer, 1837	Animalia	2001
+152544220	Phoneutria boliviensis (F.O.Pickard-Cambridge, 1897)	Animalia	2015
+152544229	Triaeris stenaspis Simon, 1892	Animalia	2018
+152544234	Erigone dentosa O.Pickard-Cambridge, 1894	Animalia	2012
+152544242	Cynara cardunculus L.	Plantae	2015
+152544244	Cynara scolymus L.	Plantae	2015
+152544246	Callobius nomeus (Chamberlin, 1919)	Animalia	2014
+152544249	Argyranthemum frutescens (L.) Sch.Bip.	Plantae	2017
+152544257	Macrothele calpeiana (Walckenaer, 1805)	Animalia	2008
+152544258	Liatris spicata (L.) Willd.	Plantae	2011
+152544270	Fulvius subnitens Poppius, 1909	Animalia	2008
+152544272	Fulvius anthocoroides (Reuter, 1875)	Animalia	2008
+152544277	Tropidosteptes pacificus (Van Duzee, 1921)	Animalia	2009
+152544278	Sonchus tenerrimus L.	Plantae	2004
+152544283	Nysius huttoni F.B.White, 1878	Animalia	2004
+152544288	Thaumatotibia leucotreta (Meyrick, 1913)	Animalia	2016
+152544293	Cydalima perspectalis (Walker, 1859)	Animalia	2018
+152544299	Callopistria floridensis Guenée, 1852	Animalia	2016
+152544309	Paysandisia archon (Burmeister, 1880)	Animalia	2011
+152544314	Cameraria gaultheriella (Walsingham, 1889)	Animalia	2018
+152544320	Tripleurospermum decipiens (Fisch. & C.A.Mey.) Bornm.	Plantae	2011
+152544321	Aedes albopictus Skuse, 1894	Animalia	2000
+152544324	Aedes japonicus (Theobald, 1901)	Animalia	2002
+152544327	Aedes koreicus (Edwards, 1917)	Animalia	2008
+152544328	Cosmos sulphureus Cav.	Plantae	2015
+152544332	Anopheles pharoensis Theobald, 1901	Animalia	2017
+152544333	Mauranthemum paludosum (Poir.) Vogt & Oberpr.	Plantae	2000
+152544342	Acheta domesticus (Linnaeus, 1758)	Animalia	2018
+152544350	Gryllomorpha dalmatina (Ocskay, 1832)	Animalia	2018
+152544356	Gryllus bimaculatus De Geer, 1773	Animalia	2018
+152544359	Eumodicogryllus bordigalensis (Latreille, 1804)	Animalia	2018
+152544364	Gryllodes sigillatus (F.Walker, 1869)	Animalia	2018
+152544369	Anacridium aegyptium (Linnaeus, 1764)	Animalia	2010
+152544374	Yersinella raymondii (Yersin, 1860)	Animalia	2012
+152544378	Onopordum beckianum A.John	Plantae	2018
+152544379	Onopordum tauricum Willd.	Plantae	2014
+152544386	Nicoletia phytophila Gervais, 1844	Animalia	2016
+152544387	Symphyotrichum lateriflorum (L.) Á.Löve & D.Löve	Plantae	2008
+152544392	Symphyotrichum ciliatum (Ledeb.) G.L.Nesom	Plantae	2003
+152544393	Thermobia domestica (Packard, 1837)	Animalia	2018
+152544397	Ctenolepisma lineata (Fabricius, 1775)	Animalia	2018
+152544404	Guizotia schimperi Sch.Bip.	Plantae	2015
+152544407	Ischnura senegalensis Rambur, 1842	Animalia	2013
+152544412	Pseudagrion microcephalum Rambur, 1842	Animalia	2011
+152544421	Acmella oleracea (L.) R.K.Jansen	Plantae	2008
+152544422	Aleurodothrips fasciapennis (Franklin, 1908)	Animalia	2018
+152544425	Frankliniella occidentalis (Pergande, 1895)	Animalia	2018
+152544428	Parthenothrips dracaenae (Heeger, 1854)	Animalia	2018
+152544431	Echinothrips americanus Morgan, 1913	Animalia	2018
+152544436	Aurantothrips orchidaceus (Bagnall, 1909)	Animalia	2018
+152544438	Leucothrips nigripennis Reuter, 1904	Animalia	2018
+152544441	Heliothrips haemorrhoidalis (Bouché, 1833)	Animalia	2018
+152544443	Hercinothrips bicinctus (Bagnall, 1919)	Animalia	2018
+152544445	Hercinothrips femoralis (Reuter, 1891)	Animalia	2018
+152544448	Scirtothrips longipennis (Bagnall, 1909)	Animalia	2018
+152544449	Parthenocissus quinquefolia (L.) Planch.	Plantae	2001
+152544453	Chaetanaphothrips orchidii (Moulton, 1907)	Animalia	2018
+152544459	Euborellia annulipes (H.F.Lucas, 1847)	Animalia	2016
+152544465	Aproceros leucopoda Takeuchi, 1939	Animalia	2013
+152544468	Fatsia japonica (Thunb.) Decne. & Planch.	Plantae	2005
+152544474	Sceliphron caementarium (Drury, 1773)	Animalia	2015
+152544475	Hedera maroccana McAll.	Plantae	2010
+152544481	Vespa velutina Lepeletier, 1836	Animalia	2011
+152544506	Pastinaca sativa subsp. sativa	Plantae	2015
+152544507	Pheidole anastasii Emery, 1896	Animalia	2018
+152544514	Tapinoma melanocephalum (Fabricius, 1793)	Animalia	2005
+152544515	Pimpinella peregrina L.	Plantae	2000
+152544523	Linepithema humile (Mayr, 1868)	Animalia	2003
+152544533	Anoplophora glabripennis (Motschulsky, 1854)	Animalia	2008
+152544536	Anoplophora chinensis (Forster, 1771)	Animalia	2005
+152544541	Carpophilus obsoletus Erichson, 1843	Animalia	2018
+152544545	Stelidota geminata (Say, 1825)	Animalia	2018
+152544551	Coccinella miranda Wollaston, 1864	Animalia	2013
+152544554	Hippodamia convergens Guérin-Méneville, 1842	Animalia	2018
+152544558	Harmonia axyridis (Pallas, 1773)	Animalia	2001
+152544562	Scandix stellata Banks & Sol.	Plantae	2013
+152544563	Rhyzobius forestieri (Mulsant, 1853)	Animalia	2006
+152544566	Cryptolaemus montrouzieri Mulsant, 1853	Animalia	2018
+152544571	Tordylium maximum L.	Plantae	2004
+152544576	Heracleum sphondylium subsp. sibiricum (L.) Simonk.	Plantae	2017
+152544578	Badonnelia titei J.V.Pearman, 1953	Animalia	2018
+152544582	Trichopsocus clarus (N.Banks, 1908)	Animalia	2018
+152544587	Hoplopleura erismata Ferris, 1921	Animalia	2004
+152544591	Enderleinellus kumadai Kaneko, 1954	Animalia	2004
+152544597	Dorypteryx longipennis Smithers & Courtenay, 1991	Animalia	2018
+152544599	Dorypteryx domestica (Smithers & Courtenay, 1958)	Animalia	2018
+152544600	Dorypteryx pallida Aaron, 1883	Animalia	2018
+152544601	Eryngium bourgatii Gouan	Plantae	2013
+152544603	Psyllipsocus ramburii Selys-Longchamps, 1872	Animalia	2018
+152544607	Psoquilla marginepunctata Hagen, 1865	Animalia	2018
+152544612	Lepinotus patruelis J.V.Pearman, 1931	Animalia	2018
+152544613	Lepinotus reticulatus Enderlein, 1904	Animalia	2018
+152544616	Trogium pulsatorium (Linnaeus, 1758)	Animalia	2018
+152544620	Cerobasis annulata (Hagen, 1865)	Animalia	2018
+152544627	Liposcelis brunnea Motschulsky, 1852	Animalia	2018
+152544628	Liposcelis bostrychophila Badonnel, 1931	Animalia	2018
+152544630	Liposcelis paeta J.V.Pearman, 1942	Animalia	2018
+152544634	Ectopsocus petersi Smithers & Courtenay, 1978	Animalia	2018
+152544636	Ectopsocus briggsi McLachlan, 1899	Animalia	2018
+152544642	Chaerophyllum aureum L.	Plantae	2020
+152544645	Cylindroiulus britannicus (Verhoeff, 1891)	Animalia	2015
+152544652	Hydrocotyle verticillata Thunb.	Plantae	2009
+152544653	Hanseniella caldaria (Hansen, 1903)	Animalia	2018
+152544657	Laurus nobilis L.	Plantae	2009
+152544659	Persea americana Mill.	Plantae	2017
+152544663	Cercidiphyllum japonicum Siebold & Zucc.	Plantae	2014
+152544670	Liquidambar styraciflua L.	Plantae	2007
+152544673	Paeonia lactiflora Pall.	Plantae	2014
+152544677	Bergenia schmidtii (Regel) Silva Tar.	Plantae	2007
+152544679	Bergenia crassifolia (L.) Fritsch	Plantae	2011
+152544681	Tiarella cordifolia L.	Plantae	2012
+152544683	Tolmiea menziesii (Pursh) Torr. & A.Gray	Plantae	2015
+152544685	Rodgersia aesculifolia Batalin	Plantae	2011
+152544686	Rodgersia podophylla A.Gray	Plantae	2016
+152544694	Darmera peltata (Torr. ex Benth.) Voss	Plantae	2011
+152544699	Heuchera micrantha Douglas ex Lindl.	Plantae	2005
+152544705	Umbilicus rupestris (Salisb.) Dandy	Plantae	2000
+152544712	Petrosedum sediforme (Jacq.) Grulich	Plantae	2013
+152544718	Hylotelephium spectabile (Boreau) H.Ohba	Plantae	2010
+152544720	Kalanchoe blossfeldiana Poelln.	Plantae	2012
+152544723	Sempervivum ×barbulatum Schott	Plantae	2009
+152544728	Ribes divaricatum Douglas	Plantae	2010
+152544741	Morus nigra L.	Plantae	2014
+152544746	Broussonetia papyrifera (L.) Vent.	Plantae	2011
+152544749	Hippophae rhamnoides subsp. caucasica Rousi	Plantae	2010
+152544751	Elaeagnus macrophylla Thunb.	Plantae	2013
+152544752	Elaeagnus ×submacrophylla Serv.	Plantae	2005
+152544753	Elaeagnus multiflora Thunb.	Plantae	2005
+152544761	Ziziphus lotus (L.) Lam.	Plantae	2006
+152544764	Zelkova serrata (Thunb.) Makino	Plantae	2015
+152544767	Urtica membranacea Poir. ex Savigny	Plantae	2011
+152544786	Pyrus communis subsp. communis	Plantae	2020
+152544796	Geum ternatum (Stephan) Smedmark	Plantae	2008
+152544797	Geum quellyon Sweet	Plantae	2004
+152544800	Potentilla supina subsp. costata Soják	Plantae	2017
+152544802	Potentilla recta subsp. obscura (Willd.) Arcang.	Plantae	2011
+152544804	Potentilla rivalis Nutt. ex Torr. & A.Gray	Plantae	2001
+152544805	Potentilla nepalensis Hook.	Plantae	2010
+152544809	Potentilla intermedia L.	Plantae	2020
+152544811	Photinia villosa (Thunb.) DC.	Plantae	2009
+152544820	Cotoneaster lucidus Schltdl.	Plantae	2011
+152544821	Cotoneaster ambiguus Rehder & E.H.Wilson	Plantae	2010
+152544822	Cotoneaster moupinensis Franch.	Plantae	2010
+152544823	Cotoneaster hylmoei Flinck & J.Fryer	Plantae	2011
+152544824	Cotoneaster qungbixiensis J.Fryer & B.Hylmö	Plantae	2011
+152544825	Cotoneaster fangianus T.T.Yu	Plantae	2001
+152544826	Cotoneaster conspicuus Comber ex Marquand	Plantae	2010
+152544828	Cotoneaster ganghobaensis J.Fryer & B.Hylmö	Plantae	2011
+152544829	Cotoneaster ×watereri Exell	Plantae	2000
+152544830	Cotoneaster nanshan Vilm. ex Mottet	Plantae	2010
+152544831	Cotoneaster mairei H.Lév.	Plantae	2010
+152544832	Cotoneaster dammeri C.K.Schneid.	Plantae	2007
+152544834	Cotoneaster ascendens Flinck & B.Hylmö	Plantae	2010
+152544835	Cotoneaster ×suecicus G.Klotz	Plantae	2006
+152544837	Cotoneaster zabelii C.K.Schneid.	Plantae	2010
+152544839	Cotoneaster integrifolius (Roxb.) Klotz	Plantae	2001
+152544840	Cotoneaster hjelmqvistii Flinck & B.Hylmö	Plantae	2000
+152544843	Cotoneaster franchetii Boiss.	Plantae	2004
+152544845	Cotoneaster laetevirens (Rehder & E.H.Wilson) G.Klotz	Plantae	2017
+152544846	Cotoneaster boisianus G.Klotz	Plantae	2011
+152544847	Cotoneaster divaricatus Rehder & E.H.Wilson	Plantae	2001
+152544848	Cotoneaster bullatus Bois ex Bilm. & Bois	Plantae	2001
+152544863	Spiraea ×rosalba Dippel	Plantae	2003
+152544864	Spiraea nipponica Maxim.	Plantae	2010
+152544870	Spiraea canescens D.Don	Plantae	2001
+152544878	Rosa nitida Willd.	Plantae	2015
+152544883	Stranvaesia davidiana Decne.	Plantae	2007
+152544886	Malus ×purpurea (E.Barbier) Rehder	Plantae	2010
+152544889	Chaenomeles japonica (Thunb.) Lindl. ex Spach	Plantae	2002
+152544896	Prunus armeniaca L.	Plantae	2002
+152544900	Prunus virginiana L.	Plantae	2001
+152544903	Prunus lusitanica L.	Plantae	2001
+152544904	Prunus ×fruticans Weihe	Plantae	2019
+152544906	Crataegus pedicellata Sarg.	Plantae	2010
+152544909	Sorbaria tomentosa (Lindl.) Rehder	Plantae	2000
+152544910	Sorbaria kirilowii (Regel) Maxim.	Plantae	2013
+152544915	Rubus armeniacus Focke	Plantae	2002
+152544918	Rubus tricolor Focke	Plantae	2002
+152544921	Rubus cockburnianus Hemsl.	Plantae	2011
+152544924	Neillia incisa (Thunb.) S.H.Oh	Plantae	2004
+152544925	Neillia tanakae Franch. & Sav.	Plantae	2012
+152544934	Cornus sanguinea subsp. hungarica (Kárpáti) Soó	Plantae	2010
+152544935	Cornus sanguinea subsp. australis (C.A.Mey.) Jáv.	Plantae	2008
+152544939	Hydrangea macrophylla (Thunb.) Ser.	Plantae	2013
+152544940	Hydrangea paniculata Siebold	Plantae	2006
+152544942	Philadelphus ×virginalis Rehder	Plantae	2008
+152544943	Philadelphus pubescens Loisel.	Plantae	2003
+152544962	Nicotiana glauca Graham	Plantae	2011
+152544978	Petunia integrifolia (Hook.) Schinz & Thell.	Plantae	2005
+152544989	Solanum pseudocapsicum L.	Plantae	2015
+152544992	Solanum viarum Dunal	Plantae	2000
+152545010	Ipomoea tricolor Cav.	Plantae	2005
+152545015	Dichondra argentea Humb. & Bonpl. ex Willd.	Plantae	2015
+152545016	Dichondra micrantha Urb.	Plantae	2017
+152545019	Cuscuta lupuliformis Krock.	Plantae	2013
+152545022	Cuscuta epilinum Weihe	Plantae	2011
+152545038	Lathyrus heterophyllus L.	Plantae	2011
+152545051	Trifolium sylvaticum Gérard ex Loisel.	Plantae	2016
+152545054	Trifolium nigrescens Viv.	Plantae	2016
+152545062	Trifolium suffocatum L.	Plantae	2015
+152545063	Trifolium pannonicum Jacq.	Plantae	2006
+152545103	Cercis siliquastrum L.	Plantae	2005
+152545120	Trigonella esculenta Willd.	Plantae	2003
+152545137	Astragalus hamosus L.	Plantae	2001
+152545158	Melilotus infestus Guss.	Plantae	2012
+152545171	Vicia cuspidata Boiss.	Plantae	2016
+152545176	Vicia noeana Boiss. & Reut.	Plantae	2000
+152545184	Vicia hyrcanica Fisch. & C.A.Mey.	Plantae	2000
+152545222	Medicago monspeliaca (L.) Trautv.	Plantae	2015
+152545230	Aeschynomene americana L.	Plantae	2003
+152545237	Gentiana lutea L.	Plantae	2008
+152545240	Gomphocarpus fruticosus (L.) W.T.Aiton	Plantae	2017
+152545248	Asclepias incarnata L.	Plantae	2009
+152545264	Galium verum subsp. wirtgenii (F.W.Schultz) Oborny	Plantae	2007
+152545271	Oxalis tetraphylla Cav.	Plantae	2006
+152545273	Oxalis triangularis A.St.-Hil.	Plantae	2011
+152545276	Oxalis articulata Savigny	Plantae	2005
+152545277	Oxalis dillenii Jacq.	Plantae	2012
+152545286	Pelargonium candicans Spreng.	Plantae	2017
+152545291	Erodium trifolium (Cav.) Cav.	Plantae	2017
+152545293	Erodium manescavii Coss.	Plantae	2009
+152545302	Geranium psilostemon Ledeb.	Plantae	2013
+152545319	Matthiola incana (L.) R.Br.	Plantae	2012
+152545335	Arabis procurrens Waldst. & Kit.	Plantae	2011
+152545351	Hornungia alpina (L.) O.Appel	Plantae	2013
+152545374	Moricandia arvensis (L.) DC.	Plantae	2017
+152545391	Brassica carinata A.Braun	Plantae	2017
+152545395	Brassica barrelieri (L.) Janka	Plantae	2013
+152545400	Raphanus raphanistrum subsp. landra (Moretti ex DC.) Bonnier & Layens	Plantae	2015
+152545408	Conringia planisiliqua Fisch. & C.A.Mey.	Plantae	2013
+152545415	Sisymbrium runcinatum Lag. ex DC.	Plantae	2004
+152545425	Cardamine corymbosa Hook.f.	Plantae	2005
+152545430	Alyssum montanum L.	Plantae	2002
+152545448	Arabidopsis arenosa subsp. arenosa	Plantae	2020
+152545462	Erysimum marshallii Bois	Plantae	2000
+152545483	Phacelia campanularia A.Gray	Plantae	2012
+152545487	Nemophila maculata Benth. ex Lindl.	Plantae	2016
+152545499	Pulmonaria rubra Schott	Plantae	2015
+152545503	Myosotis alpestris F.W.Schmidt	Plantae	2007
+152545511	Symphytum caucasicum M.Bieb.	Plantae	2009
+152545513	Symphytum ×hidcotense P.D.Sell	Plantae	2008
+152545523	Nonea lutea (Desr.) DC.	Plantae	2004
+152545530	Cynoglossum amabile Stapf & Drumm.	Plantae	2011
+152545542	Heliotropium suaveolens M.Bieb.	Plantae	2005
+152545552	Acanthus spinosus L.	Plantae	2016
+152545555	Odontites jaubertianus (Boreau) D.Dietr. ex Walp.	Plantae	2003
+152545558	Parentucellia latifolia (L.) Caruel	Plantae	2016
+152545563	Melampyrum nemorosum L.	Plantae	2015
+152545571	Syringa josikaea J.Jacq. ex Rchb.	Plantae	2008
+152545575	Forsythia viridissima Lindl.	Plantae	2001
+152545578	Jasminum nudiflorum Lindl.	Plantae	2005
+152545580	Fraxinus angustifolia subsp. oxycarpa (M.Bieb. ex Willd.) Franco & Rocha Afonso	Plantae	2009
+152545581	Fraxinus pennsylvanica Marshall	Plantae	2008
+152545583	Fraxinus latifolia Benth.	Plantae	2008
+152545585	Ligustrum vicaryi Rehder	Plantae	2011
+152545586	Ligustrum sinense Lour.	Plantae	2005
+152545590	Catalpa ×erubescens Carrière	Plantae	2007
+152545592	Catalpa ovata G.Don	Plantae	2008
+152545595	Sesamum indicum L.	Plantae	2004
+152545606	Mazus pumilus (Burm.fil.) Steenis	Plantae	2014
+152545621	Verbascum ×brockmuelleri Ruhmer	Plantae	2010
+152545625	Verbascum speciosum Schrad.	Plantae	2009
+152545637	Ellisiophyllum pinnatum (Wall. ex Benth.) Makino	Plantae	2016
+152545639	Chaenorhinum origanifolium (L.) Kostel.	Plantae	2001
+152545645	Collinsia heterophylla Buist ex Graham	Plantae	2000
+152545653	Linaria purpurea (L.) Mill.	Plantae	2001
+152545658	Chelone obliqua L.	Plantae	2011
+152545662	Erinus alpinus L.	Plantae	2008
+152545664	Asarina procumbens Mill.	Plantae	2008
+152545670	Plantago sempervirens Crantz	Plantae	2016
+152545675	Veronicastrum virginicum (L.) Farw.	Plantae	2013
+152545683	Veronica spicata L.	Plantae	2007
+152545684	Veronica cymbalaria Bodard	Plantae	2015
+152545698	Agastache rugosa (Fisch. & C.A.Mey.) Kuntze	Plantae	2007
+152545700	Callicarpa bodinieri H.Lév.	Plantae	2014
+152545702	Caryopteris incana (Thunb. ex Houtt.) Miq.	Plantae	2017
+152545730	Perovskia atriplicifolia Benth.	Plantae	2009
+152545731	Perovskia abrotanoides Kar.	Plantae	2010
+152545733	Phlomis russeliana (Sims) Lag. ex Benth.	Plantae	2008
+152545736	Teucrium ×lucidrys Boom	Plantae	2011
+152545737	Teucrium hircanicum L.	Plantae	2012
+152545741	Lamium orvala L.	Plantae	2011
+152545747	Mentha cervina L.	Plantae	2012
+152545748	Mentha requienii Benth.	Plantae	2013
+152545760	Lavandula dentata L.	Plantae	2006
+152545761	Lavandula stoechas L.	Plantae	2009
+152545769	Salvia hispanica L.	Plantae	2014
+152545775	Physostegia virginiana (L.) Benth.	Plantae	2007
+152545783	Clerodendrum trichotomum Thunb.	Plantae	2005
+152545784	Clerodendrum bungei Steud.	Plantae	2016
+152545787	Phyla nodiflora var. minor (Gillies & Hook.) N.O'Leary & Múlgura	Plantae	2010
+152545792	Verbena bracteata Cav. ex Lag. & Rodr.	Plantae	2016
+152545803	Actinidia deliciosa (Chev.) C.F.Liang & A.R.Ferguson	Plantae	2000
+152545806	Sarracenia rubra Walter	Plantae	2009
+152545807	Sarracenia purpurea L.	Plantae	2009
+152545810	Pterostyrax hispidus Siebold & Zucc.	Plantae	2012
+152545813	Cyclamen coum Mill.	Plantae	2011
+152545814	Cyclamen hederifolium Aiton	Plantae	2003
+152545816	Primula florindae Kingdon-Ward	Plantae	2010
+152545817	Primula denticulata Sm.	Plantae	2016
+152545819	Lysimachia monellii (L.) U.Manns & Anderb.	Plantae	2004
+152545820	Lysimachia fortunei Maxim.	Plantae	2016
+152545835	Phlox subulata L.	Plantae	2009
+152545836	Phlox paniculata L.	Plantae	2009
+152545843	Impatiens capensis Meerb.	Plantae	2002
+152545856	Leucothoe fontanesiana (Steud.) Sleumer	Plantae	2006
+152545876	Nymphaea ×marliacea hort. ex Lat.-Marl.	Plantae	2020
+152545883	Echinopsis silvestrii Speg.	Plantae	2012
+152545886	Drosera linearis Goldie	Plantae	2006
+152545918	Dysphania anthelmintica (L.) Mosyakin & Clemants	Plantae	2016
+152545954	Amaranthus cruentus L.	Plantae	2005
+152545982	Chenopodium ×reynieri Ludw. & Aellen	Plantae	2015
+152546018	Delosperma cooperi (Hook.fil.) L.Bolus	Plantae	2009
+152546043	Silene italica (L.) Pers.	Plantae	2005
+152546058	Silene schafta S.G.Gmel. ex Hohen.	Plantae	2002
+152546062	Paronychia argentea Lam.	Plantae	2016
+152546069	Lepyrodiclis holosteoides (C.A.Mey.) Fenzl ex Fisch. & C.A.Mey.	Plantae	2000
+152546073	Dianthus subacaulis Vill.	Plantae	2002
+152546080	Sagina japonica (Sw. ex Steud.) Ohwi	Plantae	2018
+152546104	Koenigia campanulata (Hook.fil.) T.M.Schust. & Reveal	Plantae	2013
+152546105	Koenigia ×fennica (Reiersen) T.M.Schust. & Reveal	Plantae	2014
+152546106	Koenigia divaricata (L.) T.M.Schust. & Reveal	Plantae	2008
+152546110	Polygonum aviculare subsp. rurivagum (Boreau) Berher	Plantae	2010
+152546119	Bistorta affinis (D.Don) Greene	Plantae	2012
+152546124	Persicaria nepalensis (Meisn.) H.Gross	Plantae	2010
+152546126	Persicaria capitata (Buch.-Ham. ex D.Don) H.Gross	Plantae	2001
+152546132	Muehlenbeckia complexa (A.Cunn.) Meisn.	Plantae	2016
+152546134	Rheum rhabarbarum L.	Plantae	2007
+152546137	Rumex pseudonatronatus (Borbás) Borbás ex Murb.	Plantae	2010
+152546140	Rumex ×erubescens Simonk.	Plantae	2004
+152546142	Rumex crispus subsp. robustus (Rech.) Pestova	Plantae	2012
+152546146	Rumex ×confusus Simonk.	Plantae	2011
+152546157	Rumex kerneri Borbás	Plantae	2011
+152546158	Rumex cristatus DC.	Plantae	2011
+152546163	Juglans nigra L.	Plantae	2008
+152546164	Juglans cinerea L.	Plantae	2012
+152546169	Quercus palustris Münchh.	Plantae	2006
+152546170	Quercus ilex L.	Plantae	2011
+152546176	Betula nana L.	Plantae	2003
+152546177	Betula papyrifera Marshall	Plantae	2006
+152546179	Corylus colurna L.	Plantae	2012
+152546180	Corylus maxima Mill.	Plantae	2018
+152546183	Alnus spaethii Callier	Plantae	2012
+152546193	Thladiantha dubia Bunge	Plantae	2010
+152546207	Houttuynia cordata Thunb.	Plantae	2010
+152546225	Alcea rugosa Alef.	Plantae	2010
+152546230	Tilia tomentosa Moench	Plantae	2006
+152546234	Corynabutilon ×suntense (C.D.Brickell) Fryxell	Plantae	2006
+152546242	Hibiscus syriacus L.	Plantae	2004
+152546247	Malva maroccana (Batt. & Trab.) Verloove & Lambinon	Plantae	2005
+152546248	Malva ×clementii (Cheek) Stace	Plantae	2006
+152546269	Viburnum davidii Franch.	Plantae	2014
+152546270	Viburnum tinus L.	Plantae	2007
+152546272	Viburnum ×rhytidophylloides Suringar	Plantae	2013
+152546278	Lonicera maackii (Rupr.) Maxim.	Plantae	2015
+152546280	Lonicera chrysantha Turcz.	Plantae	2012
+152546281	Lonicera ×purpusii Rehder	Plantae	2006
+152546282	Lonicera acuminata Wall.	Plantae	2009
+152546283	Lonicera pileata Oliv.	Plantae	2004
+152546284	Lonicera involucrata (Richards.) Banks ex Spreng.	Plantae	2014
+152546285	Lonicera morrowii Gray	Plantae	2010
+152546292	Knautia macedonica Griseb.	Plantae	2011
+152546294	Lomelosia stellata (L.) Raf.	Plantae	2017
+152546299	Symphoricarpos orbiculatus Moench	Plantae	2012
+152546301	Kolkwitzia amabilis Graebn.	Plantae	2012
+152546303	Valerianella locusta var. oleracea (Schltdl.) Breistr.	Plantae	2005
+152546310	Cephalaria gigantea (Ledeb.) Bobrov	Plantae	2006
+152546312	Scabiosa ochroleuca L.	Plantae	2015
+152546314	Dipsacus strigosus Willd.	Plantae	2012
+152546318	Leycesteria formosa Wall.	Plantae	2006
+152546330	Ranunculus pensylvanicus L.fil.	Plantae	2012
+152546334	Ranunculus trilobus Desf.	Plantae	2004
+152546342	Anemone ×hybrida Paxton	Plantae	2004
+152546344	Anemone coronaria L.	Plantae	2000
+152546346	Clematis montana Buch.-Ham. ex DC.	Plantae	2014
+152546350	Clematis ×jackmanii T.Moore	Plantae	2009
+152546352	Clematis tangutica (Maxim.) Korsh.	Plantae	2000
+152546356	Thalictrum speciosissimum L.	Plantae	2011
+152546359	Helleborus lividus Aiton	Plantae	2011
+152546367	Epimedium pinnatum DC.	Plantae	2012
+152546369	Berberis gagnepainii C.K.Schneid.	Plantae	2005
+152546370	Berberis ×hybridogagnepainii J.V.Suringar	Plantae	2011
+152546371	Berberis wilsoniae Hemsl.	Plantae	2012
+152546372	Berberis julianae C.K.Schneid.	Plantae	2003
+152546373	Berberis ×interposita Ahrendt	Plantae	2017
+152546376	Berberis darwinii Hook.	Plantae	2009
+152546380	Decaisnea insignis (Griff.) Hook.fil. & Thomson	Plantae	2015
+152546382	Akebia quinata (Houtt.) Decne.	Plantae	2009
+152546392	Macleaya cordata (Willd.) R.Br.	Plantae	2001
+152546394	Glaucium grandiflorum Boiss. & A.Huet	Plantae	2016
+152546399	Papaver nudicaule L.	Plantae	2014
+152546400	Papaver setiferum Goldblatt	Plantae	2001
+152546423	Hypericum olympicum L.	Plantae	2014
+152546424	Hypericum ×hidcoteense Geerinck	Plantae	2015
+152546431	Acalypha indica L.	Plantae	2003
+152546433	Manihot grahamii Hook.	Plantae	2017
+152546437	Euphorbia myrsinites L.	Plantae	2007
+152546439	Euphorbia glyptosperma Engelm.	Plantae	2003
+152546440	Euphorbia amygdaloides subsp. robbiae (Turrill) Stace	Plantae	2000
+152546448	Euphorbia characias L.	Plantae	2001
+152546449	Euphorbia chamaesyce L.	Plantae	2000
+152546450	Euphorbia prostrata Aiton	Plantae	2002
+152546452	Euphorbia vermiculata Raf.	Plantae	2007
+152546453	Euphorbia oblongata Griseb.	Plantae	2008
+152546457	Phyllanthus tenellus Roxb.	Plantae	2003
+152546462	Salix daphnoides Vill.	Plantae	2018
+152546464	Salix udensis Trautv. & C.A.Mey.	Plantae	2018
+152546465	Salix irrorata Andersson	Plantae	2002
+152546467	Salix myrsinifolia Salisb.	Plantae	2014
+152546468	Salix eriocephala Michx.	Plantae	2018
+152546473	Populus ×canescens (Aiton) Sm.	Plantae	2020
+152546478	Linum austriacum subsp. austriacum	Plantae	2001
+152546484	Passiflora caerulea L.	Plantae	2005
+152546503	Picea omorika (Pancic) Purk.	Plantae	2013
+152546505	Picea sitchensis (Bong.) Carrière	Plantae	2010
+152546507	Pinus nigra subsp. laricio (Poir.) Maire	Plantae	2006
+152546510	Pinus sylvestris L.	Plantae	2020
+152546511	Pinus wallichiana A.B.Jacks.	Plantae	2012
+152546512	Pinus ponderosa Douglas ex C.Lawson	Plantae	2006
+152546513	Pinus strobus L.	Plantae	2006
+152546515	Abies nordmanniana (Steven) Spach	Plantae	2016
+152546516	Abies alba Mill.	Plantae	2008
+152546517	Abies grandis (Douglas ex D.Don) Lindl.	Plantae	2009
+152546519	Pseudotsuga menziesii (Mirb.) Franco	Plantae	2002
+152546521	Larix kaempferi (Lamb.) Carrière	Plantae	2009
+152546522	Larix decidua Mill.	Plantae	2017
+152546524	Tsuga canadensis (L.) Carrière	Plantae	2008
+152546525	Tsuga heterophylla (Raf.) Sarg.	Plantae	2008
+152546528	Araucaria araucana (Molina) K.Koch	Plantae	2009
+152546531	Cryptomeria japonica (Thunb. ex L.f.) D.Don	Plantae	2008
+152546533	Thuja occidentalis L.	Plantae	2007
+152546534	Thuja plicata Donn ex D.Don	Plantae	2004
+152546536	Xanthocyparis nootkatensis (D.Don) Farjon & Harder	Plantae	2009
+152546538	Taxodium distichum (L.) Rich.	Plantae	2000
+152546553	Thalia dealbata Fraser	Plantae	2016
+152546563	Limnobium laevigatum (Humb. & Bonpl. ex Willd.) Heine	Plantae	2013
+152546570	Vallisneria americana Michx.	Plantae	2016
+152546578	Wolffia columbiana H.Karst.	Plantae	2017
+152546580	Lysichiton americanus Hultén & H.St.John	Plantae	2006
+152546582	Zantedeschia aethiopica (L.) Spreng.	Plantae	2013
+152546583	Zantedeschia albomaculata (Hook.) Baill.	Plantae	2011
+152546585	Lemna turionifera Landolt	Plantae	2005
+152546588	Pistia stratiotes L.	Plantae	2000
+152546598	Trachycarpus fortunei (Hook.) H.Wendl.	Plantae	2015
+152546602	Smilax aspera L.	Plantae	2008
+152546616	Lilium ×hollandicum Woodcock & Stearn	Plantae	2016
+152546618	Hosta	Plantae	2005
+152546622	Kniphofia praecox Baker	Plantae	2015
+152546627	Hemerocallis lilioasphodelus L.	Plantae	2018
+152546630	Himantoglossum robertianum (Loisel.) P.Delforge	Plantae	2014
+152546632	Serapias lingua L.	Plantae	2007
+152546641	Allium lusitanicum Lam.	Plantae	2018
+152546642	Allium pendulinum Ten.	Plantae	2014
+152546645	Allium triquetrum L.	Plantae	2013
+152546647	Allium nigrum L.	Plantae	2013
+152546648	Allium roseum L.	Plantae	2017
+152546650	Allium macleanii Baker	Plantae	2014
+152546651	Allium cepa L.	Plantae	2017
+152546652	Allium hollandicum R.M.Fritsch	Plantae	2012
+152546653	Allium ramosum L.	Plantae	2010
+152546655	Galanthus woronowii Losinsk.	Plantae	2015
+152546659	Narcissus cyclazetta Chater & Stace	Plantae	2011
+152546665	Sisyrinchium californicum (Ker Gawl.) Dryand.	Plantae	2015
+152546666	Sisyrinchium striatum Sm.	Plantae	2016
+152546670	Iris foetidissima L.	Plantae	2008
+152546674	Crocus tommasinianus Herb.	Plantae	2020
+152546675	Crocus chrysanthus (Herb.) Herb.	Plantae	2013
+152546680	Gladiolus ×hortulanus L.H.Bailey	Plantae	2009
+152546681	Gladiolus italicus Mill.	Plantae	2012
+152546684	Polygonatum hybridum Brügger	Plantae	2009
+152546686	Danae racemosa (L.) Moench	Plantae	2015
+152546691	Yucca flaccida Haw.	Plantae	2001
+152546692	Yucca gloriosa L.	Plantae	2001
+152546698	Agave americana L.	Plantae	2007
+152546700	Maianthemum stellatum (L.) Link	Plantae	2016
+152546701	Maianthemum dilatatum (Alph.Wood) A.Nelson & J.F.Macbr.	Plantae	2013
+152546703	Camassia leichtlinii subsp. suksdorfii (Greenm.) Gould	Plantae	2013
+152546708	Muscari latifolium J.Kirk	Plantae	2014
+152546710	Ornithogalum narbonense L.	Plantae	2001
+152546730	Eichhornia crassipes (Mart.) Solms	Plantae	2001
+152546736	Typha laxmannii Lepech.	Plantae	2010
+152546737	Typha provincialis A.Camus	Plantae	2012
+152546741	Schoenoplectiella bucharica (Roshev.) Hayas.	Plantae	2014
+152546748	Cyperus cyperoides (L.) Kuntze	Plantae	2000
+152546763	Carex grayi J.Carey	Plantae	2011
+152546764	Carex muskingumensis Schwein.	Plantae	2010
+152546765	Carex scoparia Schkuhr ex Willd.	Plantae	2013
+152546766	Carex secalina Willd. ex Wahlenb.	Plantae	2009
+152546768	Carex loliacea L.	Plantae	2015
+152546769	Carex melanostachya M.Bieb. ex Willd.	Plantae	2010
+152546773	Bolboschoenus glaucus (Lam.) S.G.Sm.	Plantae	2015
+152546774	Bolboschoenus yagara (Ohwi) Y.C.Yang & M.Zhan	Plantae	2020
+152546776	Eleocharis engelmannii Steud.	Plantae	2014
+152546777	Eleocharis obtusa (Willd.) Schult.	Plantae	2006
+152546816	Cenchrus flaccidus (Griseb.) Morrone	Plantae	2000
+152546817	Cenchrus alopecuroides (L.) Thunb.	Plantae	2011
+152546835	Setaria sphacelata (Schumach.) Stapf & C.E.Hubb. ex Moss	Plantae	2002
+152546840	Phyllostachys viridiglaucescens (Carrière) Rivière & C.Rivière	Plantae	2017
+152546892	Zingeria pisidica (Boiss.) Tutin	Plantae	2011
+152546911	Koeleria glauca (Spreng.) DC.	Plantae	2016
+152546917	Sasaella ramosa (Makino) Makino	Plantae	2005
+152546919	Agropogon lutosus (Poir.) P.Fourn.	Plantae	2015
+152546929	Digitaria abyssinica (Hochst. ex A.Rich.) Stapf	Plantae	2012
+152546932	Semiarundinaria fastuosa (Lat.-Marl. ex Mitford) Makino	Plantae	2015
+152546970	Poa infirma Kunth	Plantae	2016
+152546991	Echinochloa muricata var. muricata	Plantae	2000
+152547003	Eriochloa villosa (Thunb.) Kunth	Plantae	2016
+152547007	Zizania latifolia (Griseb.) Turcz. ex Stapf	Plantae	2010
+152547012	Anthoxanthum nitens (Weber) Y.Schouten & Veldkamp	Plantae	2002
+152547016	Arundo donax L.	Plantae	2011
+152547035	Paspalum dilatatum Poir.	Plantae	2000
+152547090	Cortaderia selloana (Schult. & Schult.f.) Asch. & Graebn.	Plantae	2004
+152547099	Panicum miliaceum L.	Plantae	2002
+152547167	Juncus xiphioides E.Mey.	Plantae	2016
+152547169	Juncus ensifolius Wikstr.	Plantae	2006
+152547174	Luzula nivea (L.) DC.	Plantae	2013
+152547179	Ginkgo biloba L.	Plantae	2011
+152547184	Equisetum hyemale subsp. affine (Engelm.) Calder & Roy L.Taylor	Plantae	2007
+152547185	Equisetum scirpoides Michx.	Plantae	2007
+152547195	Anisocampium niponicum (Mett.) Yea C.Liu, W.L.Chiou & M.Kato	Plantae	2017
+152547203	Pteris vittata L.	Plantae	2015
+152547204	Pteris multifida Poir.	Plantae	2001
+152547205	Pteris cretica L.	Plantae	2003
+152547207	Adiantum capillus-veneris L.	Plantae	2001
+152547208	Adiantum aleuticum (Rupr.) C.A.Paris	Plantae	2016
+152547214	Dryopteris erythrosora (D.C.Eaton) Kuntze	Plantae	2015
+152547215	Dryopteris cycadina (Franch. & Sav.) C.Chr.	Plantae	2006
+152547217	Polystichum polyblepharum (Roem. ex Kunze) C.Presl	Plantae	2013
+152547218	Polystichum luctuosum (Kunze) T.Moore	Plantae	2006
+152547223	Cyrtomium fortunei J.Sm.	Plantae	2002
+154367077	Girardia tigrina (Girard, 1850)	Animalia	2004
+154367717	Dreissena bugensis (Andrusov, 1897)	Animalia	2009
+154368238	Callidiellum rufipennis (Motschulsky, 1861)	Animalia	2006
+156872745	Dichotomyctere fluviatilis (Hamilton, 1822)	Animalia	2001
+156872873	Cipangopaludina chinensis (Gray, 1833)	Animalia	2016
+156872936	Massylaea vermiculata (O.F.Müller, 1774)	Animalia	2014
+156873231	Phyllonorycter robiniella (Clemens, 1859)	Animalia	2001
+156873354	Otiorhynchus indefinitus Reitter, 1912	Animalia	2013
+157092273	Paralaoma servilis (Shuttleworth, 1852)	Animalia	2014
+157092288	Striosubulina striatella (Rang, 1831)	Animalia	2013
+157092291	Allopeas clavulinum (Potiez & Michaud, 1838)	Animalia	2003
+157092306	Hawaiia minuscula (Binney, 1841)	Animalia	2003
+157092310	Zonitoides arboreus (Say, 1817)	Animalia	2003
+159746876	Saproamanita inopinata (D.A.Reid & Bas) Redhead, Vizzini, Drehmel & Contu	Fungi	2008
+159746880	Stropholoma aurantiacum (Cooke) Ryman, 2008	Fungi	2018
+159746903	Mnemiopsis leidyi A.Agassiz, 1865	Animalia	2007
+159746912	Phragmidium mexicanum (Mains) H.Y.Yun, Minnis & Aime	Fungi	2007
+159746940	Dromaius novaehollandiae (Latham, 1790)	Animalia	2018
+159746974	Bubo virginianus (J.F.Gmelin, 1788)	Animalia	2007
+159746996	Malacorhynchus membranaceus (Latham, 1802)	Animalia	2016
+159747008	Anas superciliosa Gmelin, 1789	Animalia	2013
+159747013	Anas erythrorhyncha Gmelin, 1789	Animalia	2015
+159747016	Anas luzonica Fraser, 1839	Animalia	2014
+159747018	Anas laysanensis Rothschild, 1892	Animalia	2012
+159747024	Anas gibberifrons S.Muller, 1842	Animalia	2011
+159747028	Anas undulata C.F.Dubois, 1839	Animalia	2005
+159747030	Anas puna Tschudi, 1844	Animalia	2012
+159747035	Chen canagica (Sevastianov, 1802)	Animalia	2002
+159747054	Nettapus coromandelianus (Gmelin, 1789)	Animalia	2017
+159747060	Oxyura vittata (Philippi, 1860)	Animalia	2014
+159747069	Sauromatum venosum (Dryand. ex Aiton) Kunth	Plantae	2010
+159747073	Cygnus buccinator Richardson, 1831	Animalia	2005
+159747080	Dendrocygna eytoni (Eyton, 1838)	Animalia	2000
+159747092	Amazonetta brasiliensis (Gmelin, 1789)	Animalia	2001
+159747094	Lophodytes cucullatus (Linnaeus, 1758)	Animalia	2011
+159747121	Spizaetus melanoleucus (Vieillot, 1816)	Animalia	2017
+159747133	Haliaeetus leucocephalus (Linnaeus, 1766)	Animalia	2013
+159747134	Haliaeetus pelagicus (Pallas, 1811)	Animalia	2009
+159747135	Haliaeetus vocifer (Daudin, 1800)	Animalia	2009
+159747148	Himantopus mexicanus (Statius Muller, 1776)	Animalia	2019
+159747181	Ipheion uniflorum (Lindl.) Raf.	Plantae	2012
+159747187	Euplectes macroura (Gmelin, 1789)	Animalia	2010
+159747203	Chloris spinoides (Vigors, 1831)	Animalia	2003
+159747209	Mycerobas icterioides (Vigors, 1830)	Animalia	2005
+159747216	Pyrrhula erythaca Blyth, 1862	Animalia	2004
+159747229	Pycnonotus barbatus (Desfontaines, 1789)	Animalia	2016
+159747230	Pycnonotus leucotis (Gould, 1836)	Animalia	2013
+159747252	Chlorophytum comosum (Thunb.) Jacques	Plantae	2011
+159747256	Lamprotornis splendidus (Vieillot, 1822)	Animalia	2018
+159747257	Lamprotornis chalybaeus Hemprich & Ehrenberg, 1828	Animalia	2007
+159747259	Lamprotornis nitens (Linnaeus, 1766)	Animalia	2018
+159747261	Acridotheres cristatellus (Linnaeus, 1758)	Animalia	2004
+159747264	Acridotheres tristis (Linnaeus, 1766)	Animalia	2005
+159747269	Oriolus auratus Vieillot, 1817	Animalia	2017
+159747275	Zonotrichia capensis (P.L.Statius Müller, 1776)	Animalia	2018
+159747289	Crocus luteus Lam.	Plantae	2013
+159747303	Euodice malabarica (Linnaeus, 1758)	Animalia	2013
+159747307	Neochmia ruficauda (Gould, 1837)	Animalia	2009
+159747318	Lonchura punctulata (Linnaeus, 1758)	Animalia	2016
+159747326	Cyanopica cooki Bonaparte, 1850	Animalia	2015
+159747329	Urocissa erythroryncha (Boddaert, 1783)	Animalia	2017
+159747332	Eleocharis mamillata subsp. austriaca (Hayek) Strandh.	Plantae	2006
+159747342	Quiscalus quiscula (Linnaeus, 1758)	Animalia	2012
+159747363	Ara macao (Linnaeus, 1758)	Animalia	2002
+159747364	Ara ararauna (Linnaeus, 1758)	Animalia	2007
+159747367	Cyanoramphus novaezelandiae (Sparrman, 1787)	Animalia	2013
+159747373	Psittacula alexandri (Linnaeus, 1758)	Animalia	2014
+159747374	Psittacula cyanocephala (Linnaeus, 1766)	Animalia	2008
+159747376	Psittacula derbiana (Fraser, 1852)	Animalia	2016
+159747384	Platycercus eximius (Shaw, 1792)	Animalia	2009
+159747385	Platycercus icterotis (Temminck & Kuhl, 1820)	Animalia	2015
+159747387	Platycercus elegans (Gmelin, 1788)	Animalia	2009
+159747388	Platycercus adscitus (Latham, 1790)	Animalia	2012
+159747394	Eclectus roratus (Statius Muller, 1776)	Animalia	2010
+159747399	Poicephalus cryptoxanthus (W.Peters, 1854)	Animalia	2001
+159747404	Psephotus haematonotus (Gould, 1838)	Animalia	2004
+159747407	Nandayus nenday (Vieillot, 1823)	Animalia	2013
+159747409	Polytelis anthopeplus (Lear, 1831)	Animalia	2018
+159747410	Polytelis swainsonii (Desmarest, 1826)	Animalia	2017
+159747412	Agapornis fischeri Reichenow, 1887	Animalia	2009
+159747415	Agapornis personatus Reichenow, 1887	Animalia	2014
+159747422	Pyrrhura perlata (Spix, 1824)	Animalia	2017
+159747425	Amazona ochrocephala (Gmelin, 1788)	Animalia	2007
+159747426	Amazona amazonica (Linnaeus, 1766)	Animalia	2002
+159747428	Trichoglossus haematodus (Linnaeus, 1771)	Animalia	2015
+159747433	Bucorvus leadbeateri (Vigors, 1825)	Animalia	2018
+159747438	Crinifer zonurus (Ruppell, 1835)	Animalia	2017
+159747445	Dacelo novaeguineae (Hermann, 1783)	Animalia	2005
+159747457	Eudocimus albus (Linnaeus, 1758)	Animalia	2004
+159747458	Eudocimus ruber (Linnaeus, 1758)	Animalia	2015
+159747464	Geronticus eremita (Linnaeus, 1758)	Animalia	2003
+159747474	Threskiornis spinicollis (Jameson, 1835)	Animalia	2008
+159747481	Pelecanus conspicillatus Temminck, 1824	Animalia	2017
+159747494	Grus vipio Pallas, 1811	Animalia	2011
+159747497	Anthropoides paradiseus (A.A.H.Lichtenstein, 1793)	Animalia	2016
+159747504	Colinus virginianus (Linnaeus, 1758)	Animalia	2011
+159747530	Phasianus versicolor Vieillot, 1825	Animalia	2001
+159747534	Lophura leucomelanos (Latham, 1790)	Animalia	2012
+159747542	Alectoris chukar (J.E.Gray, 1830)	Animalia	2010
+159747653	Paspalum saurae (Parodi) Parodi	Plantae	2014
+159747683	Echinochloa oryzoides (Ard.) Fritsch	Plantae	2008
+159747720	Botrylloides violaceus Oka, 1927	Animalia	2003
+159747732	Aplidium glabrum (Verrill, 1871)	Animalia	2000
+159747756	Boccardiella hamata (Webster, 1879)	Animalia	2011
+159747758	Boccardia proboscidea Hartman, 1940	Animalia	2011
+159747966	Nemopsis bachei L.Agassiz, 1849	Animalia	2012
+159748055	Oenothera rubricalyx R.R.Gates	Plantae	2014
+159748095	Balanus glandula Darwin, 1854	Animalia	2015
+159748158	Caucalis platycarpos L.	Plantae	2000
+159748278	Tachycines asynamorus Adelung, 1902	Animalia	2018
+159748299	Telmatogeton japonicus Tokunaga, 1933	Animalia	2019
+159748319	Rosa chinensis Jacq.	Plantae	2007
+159748397	Epuraea imperialis (Reitter, 1877)	Animalia	2012
+159748466	Fenestrulina delicia Winston, Hayward & Craig, 2000	Animalia	2009
+159748747	Cucurbita maxima Duchesne	Plantae	2017
+159748815	Zinnia violacea Cav.	Plantae	2011
+159748835	Eclipta prostrata (L.) L.	Plantae	2000
+159748857	Dimorphotheca jucunda E.Phillips	Plantae	2003
+159748992	Veronica austriaca L.	Plantae	2015
+159749052	Alonsoa linearis (Jacq.) Ruiz & Pav.	Plantae	2017
+159749125	Stellaria cupaniana (Jord. & Fourr.) Bég.	Plantae	2013
+159749139	Cerastium arvense subsp. arvense x tomentosum	Plantae	2020
+162644337	Carex agastachys L.f.	Plantae	2017
+164250535	Galanthus plicatus M.Bieb.	Plantae	2017
+164250541	Narcissus tazetta L.	Plantae	2013
+164250635	Scirpus cyperinus (L.) Kunth	Plantae	2018
+164250924	Oryza sativa L.	Plantae	2018
+164251122	Acer pensylvanicum L.	Plantae	2010
+164251179	Oenothera drawertii Renner ex Rostanski	Plantae	2018
+164251733	Viburnum plicatum Thunb.	Plantae	2013
+164251831	Cucumis dipsaceus Ehrenb. ex Spach	Plantae	2018
+164251865	Viola sororia Willd.	Plantae	2018
+164251911	Ligularia przewalskii (Maxim.) Diels	Plantae	2016
+164252030	Acanthus hungaricus (Borbás) Baen.	Plantae	2016
+164252088	Monarda didyma L.	Plantae	2014
+164252115	Verbena incompta P.W.Michael	Plantae	2018
+182132844	Obama nungara Carbayo, Alvarez-Presas, Jones & Riutort, 2016	Animalia	2017
+182132848	Dolichoplana striata Moseley, 1877	Animalia	2018
+182132854	Caenoplana coerulea Moseley, 1877	Animalia	2018
+182132858	Kontikia ventrolineata (Dendy, 1892)	Animalia	2016
+182132859	Volvariella volvacea (Bull.) Singer	Fungi	2018
+182132869	Favolaschia calocera R.Heim	Fungi	2018
+182132928	Seifertia azaleae (Peck) Partr. & Morgan-Jones	Fungi	2002
+182132976	Achatina fulica (Férussac, 1821)	Animalia	2018
+182132993	Abies homolepis Siebold & Zucc.	Plantae	2019
+182132997	Larix ×marschlinsii Coaz	Plantae	2009
+182133040	Mulinia lateralis (Say, 1822)	Animalia	2019
+182133056	Potamocorbula amurensis (Schrenck, 1861)	Animalia	2018
+182133060	Adiantum raddianum C.Presl	Plantae	2003
+182133073	Polystichum acrostichoides (Michx.) Schott	Plantae	2019
+182133075	Polystichum munitum (Kaulf.) C.Presl	Plantae	2019
+182133082	Eucheilota menoni Kramp, 1959	Animalia	2009
+182133085	Lovenella assimilis (Browne, 1905)	Animalia	2009
+182133135	Musa basjoo Siebold & Zucc. ex Iinuma	Plantae	2020
+182133173	Colchicum byzantinum Ker Gawl.	Plantae	2013
+182133180	Fritillaria imperialis L.	Plantae	2019
+182133214	Liriope muscari (Decne.) L.H.Bailey	Plantae	2015
+182133221	Triteleia laxa Benth.	Plantae	2014
+182133226	Pseudomuscari azureum (Fenzl) Garbari & Greuter	Plantae	2019
+182133241	Ophiopogon jaburan (Siebold) G.Lodd.	Plantae	2018
+182133250	Puschkinia scilloides Adams	Plantae	2010
+182133263	Galanthus elwesii Hook.f.	Plantae	2009
+182133271	Allium karataviense Regel	Plantae	2019
+182133273	Allium zebdanense Boiss. & Noë	Plantae	2018
+182133276	Allium cristophii Trautv.	Plantae	2011
+182133353	Juncus striatus Schousb. ex E.Mey.	Plantae	2015
+182133493	Bufotes viridis (Laurenti, 1768)	Animalia	2015
+182133501	Bombina orientalis (Boulenger, 1890)	Animalia	2009
+182133511	Hyla meridionalis Boettger, 1874	Animalia	2020
+182133517	Salamandra atra Laurenti, 1768	Animalia	2017
+182133522	Ambystoma macrodactylum Baird, 1850	Animalia	2018
+182133525	Siren intermedia Barnes, 1826	Animalia	2014
+182133615	Misgurnus anguillicaudatus (Cantor, 1842)	Animalia	2006
+182133671	Terapon jarbua (Forsskål, 1775)	Animalia	2018
+182133699	Caiman crocodilus (Linnaeus, 1758)	Animalia	2017
+182133704	Basiliscus plumifrons Cope, 1875	Animalia	2017
+182133709	Heterodon nasicus Baird & Girard, 1852	Animalia	2020
+182133715	Chalcides ocellatus (Forskal, 1775)	Animalia	2017
+182133718	Trachylepis striata (Peters, 1844)	Animalia	2018
+182133721	Eublepharis macularius (Blyth, 1854)	Animalia	2012
+182133725	Anolis Daudin, 1802	Animalia	2018
+182133728	Anolis sagrei Duméril & Bibron, 1837	Animalia	2018
+182133732	Trioceros hoehnelii (Steindachner, 1891)	Animalia	2019
+182133734	Furcifer pardalis (Cuvier, 1829)	Animalia	2015
+182133737	Chamaeleo calyptratus Duméril & Duméril, 1851	Animalia	2014
+182133741	Chrysopelea ornata (Shaw, 1802)	Animalia	2014
+182133743	Spilotes pullatus Linnaeus, 1758	Animalia	2010
+182133745	Lycodon capucinus (Boie, 1827)	Animalia	2013
+182133747	Lampropeltis triangulum (Lacépède, 1789)	Animalia	2010
+182133749	Pituophis melanoleucus (Daudin, 1803)	Animalia	2013
+182133751	Pituophis catenifer Blainville, 1835	Animalia	2010
+182133753	Elaphe quatuorlineata (Bonnaterre, 1790)	Animalia	2012
+182133754	Elaphe sauromates (Pallas, 1811)	Animalia	2014
+182133755	Elaphe schrenckii Strauch, 1873	Animalia	2019
+182133757	Zamenis longissimus (Laurenti, 1768)	Animalia	2016
+182133760	Pantherophis guttatus (Linnaeus, 1766)	Animalia	2010
+182133761	Pantherophis obsoletus (Say, 1823)	Animalia	2013
+182133763	Hierophis viridiflavus (Lacépède, 1789)	Animalia	2010
+182133765	Rhamphiophis Peters, 1854	Animalia	2015
+182133766	Boaedon A.M.C.Duméril, Bibron & A.H.A.Duméril, 1854	Animalia	2013
+182133769	Tarentola mauritanica (Linnaeus, 1758)	Animalia	2013
+182133773	Natrix maura (Linnaeus, 1758)	Animalia	2015
+182133774	Natrix tessellata (Laurenti, 1768)	Animalia	2007
+182133776	Thamnophis Fitzinger, 1843	Animalia	2012
+182133781	Morelia spilota (Lacépède, 1804)	Animalia	2013
+182133783	Python Daudin, 1803	Animalia	2016
+182133785	Python regius (Shaw, 1802)	Animalia	2010
+182133787	Python molurus (Linnaeus, 1758)	Animalia	2010
+182133789	Antaresia childreni (Gray, 1842)	Animalia	2018
+182133792	Celastrus orbiculatus Thunb.	Plantae	2004
+182133795	Agama agama (Linnaeus, 1758)	Animalia	2015
+182133797	Pogona Storr, 1982	Animalia	2015
+182133799	Pogona vitticeps (Ahl, 1926)	Animalia	2010
+182133800	Pogona henrylawsoni Wells & Wellington, 1985	Animalia	2020
+182133805	Physignathus cocincinus Cuvier, 1829	Animalia	2012
+182133806	Calotes Cuvier, 1817	Animalia	2018
+182133812	Iguana iguana (Linnaeus, 1758)	Animalia	2010
+182133813	Iguana Laurenti, 1768	Animalia	2013
+182133818	Varanus niloticus (Linnaeus, 1766)	Animalia	2011
+182133823	Lacerta agilis Linnaeus, 1758	Animalia	2017
+182133827	Acer cissifolium (Siebold & Zucc.) C.Koch	Plantae	2014
+182133829	Naja melanoleuca Hallowell, 1857	Animalia	2020
+182133830	Acer japonicum Thunb.	Plantae	2010
+182133832	Boa Linnaeus, 1758	Animalia	2014
+182133833	Boa constrictor Linnaeus, 1758	Animalia	2006
+182133834	Acer palmatum Thunb.	Plantae	2013
+182133838	Crotalus atrox Baird & Girard, 1853	Animalia	2019
+182133841	Vipera aspis (Linnaeus, 1758)	Animalia	2007
+182133843	Sistrurus Garman, 1884	Animalia	2011
+182133846	Echis carinatus (Schneider, 1801)	Animalia	2017
+182133849	Phelsuma Gray, 1825	Animalia	2013
+182133852	Gekko gecko (Linnaeus, 1758)	Animalia	2010
+182133854	Hemidactylus Goldfuss, 1820	Animalia	2013
+182133860	Sternotherus carinatus (Gray, 1856)	Animalia	2020
+182133865	Testudo hermanni Gmelin, 1789	Animalia	2013
+182133866	Testudo graeca Linnaeus, 1758	Animalia	2010
+182133869	Centrochelys sulcata (Miller, 1779)	Animalia	2017
+182133871	Testudo Linnaeus, 1758	Animalia	2010
+182133875	Mauremys reevesii (Gray, 1831)	Animalia	2014
+182133879	Chelydra serpentina (Linnaeus, 1758)	Animalia	2006
+182133882	Apalone Rafinesque, 1832	Animalia	2017
+182133884	Apalone ferox (Schneider, 1783)	Animalia	2020
+182133889	Emys orbicularis (Linnaeus, 1758)	Animalia	2010
+182133892	Terrapene carolina (Linnaeus, 1758)	Animalia	2012
+182133895	Chrysemys picta (Schneider, 1783)	Animalia	2009
+182133904	Graptemys pseudogeographica (Gray, 1831)	Animalia	2010
+182133906	Graptemys ouachitensis Cagle, 1953	Animalia	2018
+182133907	Graptemys geographica (Le Sueur, 1817)	Animalia	2010
+182133911	Pseudemys rubriventris (Le Conte, 1830)	Animalia	2015
+182133912	Sedum palmeri S.Watson	Plantae	2018
+182133913	Pseudemys concinna (Le Conte, 1830)	Animalia	2017
+182133914	Pseudemys nelsoni Carr, 1938	Animalia	2018
+182133916	Sedum spathulifolium Hook.	Plantae	2019
+182133918	Pelusios castaneus (Schweigger, 1812)	Animalia	2020
+182133921	Pelomedusa subrufa (Bonnaterre, 1789)	Animalia	2020
+182133937	Ribes ×nidigrolaria Rud.Bauer & A.Bauer	Plantae	2008
+182133941	Potamothrix moldaviensis (Vejdovský & Mrázek, 1903)	Animalia	2008
+182133944	Limnodrilus maumeensis Brinkhurst & Cook, 1966	Animalia	2014
+182133971	Laonome xeprovala Bick & Bastrop, 2018	Animalia	2017
+182133978	Leiobunum C.L.Koch, 1839	Animalia	2009
+182133994	Lampropeltis Öpik, 1967	Animalia	2011
+182134007	Penaeus aztecus Ives, 1891	Animalia	2018
+182134023	Hedera hibernica (G.Kirchn.) Carrière	Plantae	2020
+182134042	Opopanax chironium (L.) Koch	Plantae	2019
+182134074	Grandidierella japonica Stephensen, 1938	Animalia	2019
+182134080	Neomysis americana (S.I.Smith, 1873)	Animalia	2012
+182134126	Pseudodiaptomus marinus Sato, 1913	Animalia	2015
+182134170	Jaltomata procumbens (Cav.) J.L.Gentry	Plantae	2008
+182134200	Lotus hirsutus L.	Plantae	2004
+182134203	Lotus hispidus Desf. ex DC.	Plantae	2019
+182134239	Halyomorpha halys (Stål, 1855)	Animalia	2017
+182134244	Tupiocoris rhododendri (Dolling, 1972)	Animalia	2007
+182134253	Leptoglossus occidentalis Heidemann, 1910	Animalia	2007
+182134256	Stephanitis rhododendri Horváth, 1905	Animalia	2018
+182134261	Graphocephala fennahi Young, 1977	Animalia	2018
+182134265	Choreutis nemorana (Hübner, 1799)	Animalia	2009
+182134272	Tuta absoluta (Meyrick, 1917)	Animalia	2009
+182134304	Eupholidoptera chabrieri (Charpentier, 1825)	Animalia	2019
+182134318	Drosophila suzukii (Matsumura, 1931)	Animalia	2011
+182134322	Phytomyza jucunda Frost & Sasakawa, 1954	Animalia	2015
+182134330	Dohrniphora cornuta (Bigot, 1857)	Animalia	2005
+182134340	Styphnolobium japonicum (L.) Schott	Plantae	2019
+182134341	Ctenolepisma longicaudata Escherich, 1905	Animalia	2018
+182134345	Lepisma saccharina Linnaeus, 1758	Animalia	2018
+182134387	Xylocopa virginica (Linnaeus, 1771)	Animalia	2015
+182134433	Hornungia petraea (L.) Rchb.	Plantae	2020
+182134455	Otiorhynchus cribricollis Gyllenhal, 1834	Animalia	2002
+182134456	Otiorhynchus meridionalis Gyllenhal, 1834	Animalia	2003
+182134464	Cardamine graeca L.	Plantae	2014
+182134475	Chrysolina americana (Linnaeus, 1758)	Animalia	2018
+182134477	Leptinotarsa decemlineata (Say, 1824)	Animalia	2018
+182134538	Geranium ×cantabrigiense P.F.Yeo	Plantae	2009
+182134539	Geranium wallichianum D.Don ex Sweet	Plantae	2019
+182134562	Mimulus ringens L.	Plantae	2019
+182134565	Thunbergia alata Bojer ex Sims	Plantae	2013
+182134574	Penstemon digitalis Nutt.	Plantae	2019
+182134582	Veronica repens Clarion ex DC.	Plantae	2020
+182134597	Verbascum nigrum x speciosum	Plantae	2014
+182134599	Scrophularia canina L.	Plantae	2019
+182134600	Scrophularia peregrina L.	Plantae	2020
+182134656	Origanum onites L.	Plantae	2020
+182134658	Lamium confertum Fr.	Plantae	2018
+182134689	Symphytum orientale L.	Plantae	2020
+182134695	Cucurbita moschata (Duchesne) Duchesne ex Poir.	Plantae	2014
+182134719	Halimium lasianthum subsp. alyssoides (Lam.) Greuter	Plantae	2012
+182134726	Viola hederacea Labill.	Plantae	2020
+182134731	Salix ×sepulcralis var. chrysocoma (Dode) Meikle	Plantae	2018
+182134733	Populus ×jackii Sarg.	Plantae	2010
+182134756	Juglans mandshurica Maxim.	Plantae	2020
+182134783	Thalictrum delavayi Franch.	Plantae	2020
+182134791	Fumaria bastardii Bor.	Plantae	2017
+182134793	Corydalis linstowiana Fedde	Plantae	2019
+182134799	Papaver commutatum Fisch. & C.A.Mey.	Plantae	2015
+182134802	Lamprocapnos spectabilis (L.) Fukuhara	Plantae	2010
+182134828	Daboecia cantabrica (Huds.) K.Koch	Plantae	2012
+182134831	Erica ×darleyensis Bean	Plantae	2016
+182134838	Pieris japonica (Thunb.) D.Don ex G.Don	Plantae	2018
+182134848	Valeriana calcitrapae L.	Plantae	2019
+182134854	Scabiosa lucida Vill.	Plantae	2019
+182134890	Jacobaea ×albescens (Burb. & Colgan) Verloove & Lambinon	Plantae	2019
+182134906	Cichorium calvum Sch.Bip.	Plantae	2012
+182134916	Pulicaria arabica subsp. hispanica (Boiss.) Murb.	Plantae	2011
+182134934	Andryala integrifolia L.	Plantae	2019
+182134960	Erigeron ×huelsenii Vatke	Plantae	2008
+182134971	Helianthus maximiliani Schrad.	Plantae	2019
+182134973	Oncosiphon piluliferum (L.fil.) Källersjö	Plantae	2017
+182134977	Filago congesta Guss. ex DC.	Plantae	2019
+182135018	Aldrovanda vesiculosa L.	Plantae	2020
+182135028	Drosanthemum floribundum (Haw.) Schwantes	Plantae	2018
+182135058	Celosia cristata L.	Plantae	2019
+182135072	×Reyllopia conollyana (J.P.Bailey) Galasso	Plantae	2008
+182135076	Rumex ×hybridus Kindb.	Plantae	2013
+182135086	Spergularia bocconei (Scheele) Graebn.	Plantae	2016
+182135113	Elaeagnus pungens Thunb.	Plantae	2012
+182135133	Acaena caesiiglauca (Bitter) Bergmans	Plantae	2019
+182135135	Dasiphora davurica var. mandshurica (Maxim.) Verloove & Lambinon	Plantae	2008
+182135146	Rosa virginiana Herrm.	Plantae	2002
+182135153	Prunus tomentosa Thunb.	Plantae	2014
