@@ -60,6 +60,7 @@ ias_first_obs
 ias_first_obs_hist <- ggplot(data = ias_be,
                              mapping = aes(x = first_observed)) +
   geom_histogram(binwidth = 5)
+ias_first_obs_hist
 
 # You can still work with geom_bar using `scale_x_binned()`: x is still seen as
 # a discrete variable, i.e. the bars are spaced by default.
