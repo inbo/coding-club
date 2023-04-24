@@ -91,6 +91,8 @@ class: left, top
 library(tidyverse)
 library(patchwork)
 library(viridis)
+library(ggforce)
+library(gganimate)
 ```
 
 ---
@@ -150,15 +152,32 @@ ggplot(ToothGrowth, mapping = aes(x = dose, y = len)) +
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
 class: left, top
 
-# Challenge 1: color palettes & scales
+# Challenge 1. Combine separate ggplots
+
+Let's *play* with [patchwork](https://patchwork.data-imaginist.com/), one of the highest rated registered extension of ggplot.
 
 
+---
+class: left, top
+
+# Intermezzo. How to choose a color palette: the viridis palette
+
+Today we don't speak a lot about colors. Still, take in mind this criteria when choosing a color palette:
+
+1. printer-friendly (gray scale)
+2. perceptually uniform
+3. easy to read by those with colorblindness.
+
+All of this can be found in the [viridis palette](https://www.r-bloggers.com/2018/07/ggplot2-welcome-viridis/) which avoids the red and to go from blue to yellow passing through green (_viridis_: green in Latin).
+
+More about colors in Bonus Challenge and Resources slides.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
-# Challenge 2. Combine separate ggplots
+# Challenge 1
+
 
 
 
@@ -166,7 +185,19 @@ class: left, top
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
-# Challenge 3. Fine tune your ggplots
+# Challenge 3A. Animate your plot
+
+Create a GIF as the one shown below using `area_biotopes` data and the packages ggplot2 and gganimate.
+
+![:scale 30%]({{ site.baseurl}}/assets/images/20230425/20230425_area_biotopes.gif)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3B. Create interactive plots
+
+The R package [plotly](https://plotly-r.com/) is an R package for creating interactive web-based graphs via plotly's JavaScript graphing library, plotly.js. In particular, you can make your ggplot based plots interactive!
 
 
 
@@ -175,25 +206,31 @@ class: left, top
 
 # Bonus challenge: have fun with color palettes
 
-There are so many color palettes available. Get inspired! Example: package [`wesanderson`](https://github.com/karthik/wesanderson) allows you to use (some of) the palettes derived from the amazing Tumblr blog ["Wes Anderson Palettes"](http://wesandersonpalettes.tumblr.com/). Give a try.
+There are so many color palettes available. Get inspired! Examples:
+- [wesanderson](https://github.com/karthik/wesanderson): it allows you to use (some of) the palettes derived from the amazing Tumblr blog ["Wes Anderson Palettes"](http://wesandersonpalettes.tumblr.com/)
+- [ggsci](https://nanx.me/ggsci/index.html): it offers a collection of high-quality ggplot compatible color palettes.
 
+Try to apply the viridis palette mentioned in the Intermezzo and other palettes from the packages mentioned above to some of the plots we created today.
+
+---
+class: left, top
 
 # Resources
 
-- [Challenges solutions](https://github.com/inbo/coding-club/blob/master/src/20230425/20230425_challenges_solutions.R)
+- Challenges solutions and edite video recording will be available soon
 - `ggplot2` website: https://ggplot2.tidyverse.org/
-- the official [R Graphics Cookbook](https://r-graphics.org)
-- another interesting book: [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
 - [`ggplot2` extension packages gallery](https://exts.ggplot2.tidyverse.org/gallery/)
-- arrange intuitively multiple plots with the [patchwork](https://patchwork.data-imaginist.com/) package
-- talk about [color theory and the viridis palette](https://www.youtube.com/watch?v=xAoljeRJ3lU) at SciPy 2015
-- blogpost about colorblindness and how taking care of it in your plots: https://www.datanovia.com/en/blog/how-to-stimulate-colorblindness-vision-in-r-figures
-- [ggsci](https://nanx.me/ggsci/index.html) package offers a collection of high-quality ggplot compatible color palettes
-- handy tutorial with some tricks about colors in ggplot2: https://www.datanovia.com/en/blog/ggplot-colors-best-tricks-you-will-love/
-- Rate your visualization using Stephanie Evergreen's [data visualizaion checklist](https://stephanieevergreen.com/data-visualization-checklist/)
+- arrange intuitively multiple plots with [patchwork](https://patchwork.data-imaginist.com/)
+- Explore [ggforce](https://ggforce.data-imaginist.com/): a kind of repository of geoms, stats, etc. that are as well documented and implemented as the official ones found in ggplot2
+- animate your plots with [gganimate](https://gganimate.com/)
+- make interactive plots using [plotly](https://plotly-r.com/)
 - Tutorial about using [plotly package](https://www.musgraveanalytics.com/blog/2018/8/24/how-to-make-ggplot2-charts-interactive-with-plotly) for making interactive plots
-- do you want to animate your plots? Check [challenge 3B](https://inbo.github.io/coding-club/sessions/20201217_outstanding_plots.html#16) of 17 Dec 2020
-- do you want to make your plots interactive? Check [challenge 3B](https://inbo.github.io/coding-club/sessions/20210930_ggplot_advanced_and_beyond.html#15) of 30 Sept 2021
+- More about animations? Check [challenge 3B](https://inbo.github.io/coding-club/sessions/20201217_outstanding_plots.html#16) of 17 Dec 2020
+- More about interactivity? Check [challenge 3B](https://inbo.github.io/coding-club/sessions/20210930_ggplot_advanced_and_beyond.html#15) of 30 Sept 2021
+- [wesanderson](https://github.com/karthik/wesanderson) packge offers (some of) the palettes shown in the Tumblr blog ["Wes Anderson Palettes"](http://wesandersonpalettes.tumblr.com/)
+- [ggsci](https://nanx.me/ggsci/index.html) package offers a collection of high-quality ggplot compatible color palettes
+- blogpost about colorblindness and how taking care of it in your plots: https://www.datanovia.com/en/blog/how-to-stimulate-colorblindness-vision-in-r-figures
+- Rate your visualization using Stephanie Evergreen's [data visualizaion checklist](https://stephanieevergreen.com/data-visualization-checklist/)
 
 ---
 class: center, middle
@@ -201,7 +238,7 @@ class: center, middle
 ![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
 
 <!--  Adjust the room and date  -->
-Room: 06.C.03 & 07.C.03<br>
-Date: __6/10/2022__, van 10:00 tot 12:30<br>
-Subject: **Shiny for beginners** <br>
+Room: 01.20 - Willy Van Der Meeren<br>
+Date: __25/05/2023__, van 10:00 tot 12:30<br>
+Subject: "spatial data with sf" or "computer says no: debugging in R"<br>
 (registration announced via DG_useR@inbo.be)
