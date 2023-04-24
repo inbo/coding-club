@@ -163,7 +163,8 @@ Let's play with [patchwork](https://patchwork.data-imaginist.com/), one of the h
 3. Similar to 2, but this time instead of showing dodge histograms altogether,
 display different regions as different facets and call it
  `ias_first_obs_reg_facets`. You should end up with one big histogram on top
-and 3 histograms (= 3 locations) on the bottom. Tip: adding a facet to `ias_first_obs_reg` is standard ggplot.
+ and 3 histograms (= 3 locations) at the bottom of the plot. Tip: adding a facet
+ to `ias_first_obs_reg` is standard ggplot.
 
 4. Starting from the histogram ias_first_obs_be, display different kingdoms as
  facets. Then, put this plot on the right, the plots in 3 on the left.
@@ -178,7 +179,7 @@ class: left, top
 
 # Intermezzo. How to choose a color palette: the viridis palette
 
-Today we don't speak a lot about colors. Still, take in mind this criteria when choosing a color palette:
+Today we won't speak about colors. Still, take in mind this criteria when choosing a color palette:
 
 1. printer-friendly (gray scale)
 2. perceptually uniform
@@ -192,7 +193,7 @@ More about colors in Bonus Challenge and Resources slides.
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
-# Challenge 1
+# Challenge 2
 
 
 
@@ -203,7 +204,10 @@ class: left, top
 
 # Challenge 3A. Animate your plot
 
-Create a GIF as the one shown below using `area_biotopes` data and the packages ggplot2 and gganimate.
+Create a GIF as the one below by using ggplot2 and
+[gganimate](https://gganimate.com/) packages. Use `"cubic-in-out"`
+_easing_ to smooth the transition between states. Save the GIF on disk as well
+(width = 1000, height = 300). Kind of a bonus: save it as a video instead.
 
 ![:scale 110%]({{ site.baseurl}}/assets/images/20230425/20230425_area_biotopes.gif)
 
@@ -213,8 +217,17 @@ class: left, top
 
 # Challenge 3B. Create interactive plots
 
-The R package [plotly](https://plotly-r.com/) is an R package for creating interactive web-based graphs via plotly's JavaScript graphing library, plotly.js. In particular, you can make your ggplot based plots interactive!
+The R package [plotly](https://plotly-r.com/) is an R package for creating interactive web-based graphs via plotly's JavaScript graphing library. In particular, you can make your ggplot plots interactive!
 
+1. Make the plot `ias_first_obs_paths` interactive. Explore the interactivity
+ tools. In particular check the legend filtering capabilities on pathway!
+ Tip: documentation in the ["intro to ggplotly"](https://plotly-r.com/overview.html#intro-ggplotly)
+ section.
+
+2. How to add _dynamic ticks_ functionality to the interactive plot in 1?
+ Dynamic ticks means generating new axis ticks while zooming in/out
+
+3. Improve the text shown while hovering so that it looks something like in screenshot below
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20230425/20230425_text_hovering.png)
 
@@ -234,11 +247,9 @@ class: left, top
 
 # The package of the month. Hans' choice 2
 
-Hans Vancalster inspires us again! The [ggpcp](https://yaweige.github.io/ggpcp/index.html) package to create *generalized parallel coordinate plots* in the ggplot2 framework. Interesting also to read [this](https://www.tandfonline.com/doi/full/10.1080/10618600.2023.2195462) article about it.
+Hans Vancalster inspires us again! The [ggpcp](https://yaweige.github.io/ggpcp/index.html) package to create *generalized parallel coordinate plots* in the ggplot2 framework. Interesting also to read [this](https://www.tandfonline.com/doi/full/10.1080/10618600.2023.2195462) article about it. Example:
 
-Example:
-
-![:scale 100%]({{ site.baseurl}}/assets/images/20230425/20230425_ggpcp.png)
+![:scale 90%]({{ site.baseurl}}/assets/images/20230425/20230425_ggpcp.png)
 
 
 ---
