@@ -154,8 +154,24 @@ class: left, top
 
 # Challenge 1. Combine separate ggplots
 
-Let's *play* with [patchwork](https://patchwork.data-imaginist.com/), one of the highest rated registered extension of ggplot.
+Let's play with [patchwork](https://patchwork.data-imaginist.com/), one of the highest rated registered extension of ggplot.
 
+1. Display `ias_first_obs_be` and `ias_first_obs_reg` next to each other
+
+2. Display `ias_first_obs_reg` below `ias_first_obs_be`
+
+3. Similar to 2, but this time instead of showing dodge histograms altogether,
+display different regions as different facets and call it
+ `ias_first_obs_reg_facets`. You should end up with one big histogram on top
+and 3 histograms (= 3 locations) on the bottom. Tip: adding a facet to `ias_first_obs_reg` is standard ggplot.
+
+4. Starting from the histogram ias_first_obs_be, display different kingdoms as
+ facets. Then, put this plot on the right, the plots in 3 on the left.
+
+5. Display `ias_first_obs_reg_facets` on the left and a table with three rows
+ showing the total number of introductions at regional level on the right.
+ Hint: check this
+ [vignette](https://patchwork.data-imaginist.com/articles/guides/assembly.html#adding-non-ggplot-content).
 
 ---
 class: left, top
@@ -222,17 +238,6 @@ Hans Vancalster inspires us again! The [ggpcp](https://yaweige.github.io/ggpcp/i
 
 Example:
 
-```
-mtcars %>%
-  mutate(vs = factor(vs),
-         am = factor(am),
-         gear = factor(gear),
-         carb = factor(carb)) %>%
-  ggplot(aes(vars = vars(vs:carb))) +
-  geom_pcp(aes(color = vs), boxwidth = 0.2) +
-  geom_pcp_box(boxwidth = 0.2)
-```
-
 ![:scale 100%]({{ site.baseurl}}/assets/images/20230425/20230425_ggpcp.png)
 
 
@@ -248,7 +253,7 @@ class: left, top
 - Explore [ggforce](https://ggforce.data-imaginist.com/): a kind of repository of geoms, stats, etc. that are as well documented and implemented as the official ones found in ggplot2
 - animate your plots with [gganimate](https://gganimate.com/)
 - make interactive plots using [plotly](https://plotly-r.com/)
-- Tutorial about using [plotly package](https://www.musgraveanalytics.com/blog/2018/8/24/how-to-make-ggplot2-charts-interactive-with-plotly) for making interactive plots
+- Tutorial about [plotly package](https://www.musgraveanalytics.com/blog/2018/8/24/how-to-make-ggplot2-charts-interactive-with-plotly) for making interactive plots
 - More about animations? Check [challenge 3B](https://inbo.github.io/coding-club/sessions/20201217_outstanding_plots.html#16) of 17 Dec 2020
 - [wesanderson](https://github.com/karthik/wesanderson) packge offers (some of) the palettes shown in the Tumblr blog ["Wes Anderson Palettes"](http://wesandersonpalettes.tumblr.com/)
 - [ggsci](https://nanx.me/ggsci/index.html) package offers a collection of high-quality ggplot compatible color palettes
@@ -262,14 +267,15 @@ class: left, top
 
 Every month you can vote among **two topics**!
 
-Poll for May's coding club is still open! Let us know your favorite before May 1!
+Poll for May's coding club is still open!
+Let us know your favorite before May 1st!
 
 https://forms.gle/dyBHYSyVWqC1tnk69
 
 You can choose between:
 
 - Spatial vector data with sf: points, lines, polygons, multipolygons, ...
-- The computer says NO: debug yourRcode
+- The computer says NO: debug yourR code
 
 ---
 class: center, middle
