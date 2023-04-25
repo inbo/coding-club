@@ -198,6 +198,21 @@ All of this can be found in the [viridis palette](https://www.r-bloggers.com/201
 More about colors in the Bonus Challenge and Resources slides.
 
 ---
+class: left, top
+
+# Intermezzo. The INBO official colors
+
+Do you know that INBO has its own (color) theme? It's called [INBOtheme](https://inbo.github.io/INBOtheme/) and it's a package. Install it, load it and all figures will have authomatically an INBO touch. Read the nice [tutorials](https://inbo.github.io/INBOtheme/articles/index.html) for more.
+
+```r
+library(INBOtheme)
+
+ggplot(data = ias_be, mapping = aes(x = first_observed)) +
+  geom_bar() +
+  ggtitle(label = "Temporal distribution of alien species introductions")
+```
+
+---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
