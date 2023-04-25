@@ -81,7 +81,7 @@ class: left, top
 
 # Data and scripts description
 
-Today we will work with national/regional checklist data about Invasive Alien Species (IAS) and species distribution of butterlflies amont several biotopes.
+Today we will work with national/regional checklist data about Invasive Alien Species (IAS) and species distribution of butterflies among several biotopes.
 
 - `20230425_ias_first_observed_BE.txt`: dataset about year of first observation of IAS in Belgium from 1950
 - `20230425_ias_first_observed_regions.txt`: dataset about year of first observation of IAS in Belgian regions from 1950
@@ -168,7 +168,7 @@ Let's play with [patchwork](https://patchwork.data-imaginist.com/), one of the h
 
 2. Display `ias_first_obs_reg` below `ias_first_obs_be`
 
-3. Similar to 2, but this time instead of showing dodge histograms altogether,
+3. Similar to 2, but this time instead of showing dodge histograms all together,
 display different regions as different facets and call it
  `ias_first_obs_reg_facets`. You should end up with one big histogram on top
  and 3 histograms (= 3 locations) at the bottom of the plot. Tip: adding a facet
@@ -193,9 +193,9 @@ Today we won't speak about colors. Still, take in mind this criteria when choosi
 2. perceptually uniform
 3. easy to read by those with colorblindness.
 
-All of this can be found in the [viridis palette](https://www.r-bloggers.com/2018/07/ggplot2-welcome-viridis/) which avoids the red and to go from blue to yellow passing through green (_viridis_: green in Latin).
+All of this can be found in the [viridis palette](https://www.r-bloggers.com/2018/07/ggplot2-welcome-viridis/) which avoids the red and goes from blue to yellow, passing through green (_viridis_: green in Latin).
 
-More about colors in Bonus Challenge and Resources slides.
+More about colors in the Bonus Challenge and Resources slides.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -206,7 +206,7 @@ class: left, top
 1. Add a zooming facet to `ias_first_obs_paths` to zoom around the time interval 1980 - 2000.
 How to zoom on the y-axis values as well?
 
-2. In challenge 1 we used standard ggplot facetting for creating
+2. In challenge 1 we used standard ggplot facetting to create
  `ias_first_obs_reg_facets`. How to use ggforce to set the facet labels (the
  `locationId` values) on the bottom instead of on the top as usual?
 
