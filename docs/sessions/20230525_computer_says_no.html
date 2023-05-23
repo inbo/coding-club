@@ -68,120 +68,14 @@ _Finding your bug is a process of confirming the many things that you believe ar
 ![:scale 100%]({{ site.baseurl}}/assets/images/20230525/20230525_intro_debugging.png)
 </p>
 
-
 ---
 class: left, top
 
-Debugging first rule
-
-Read carefully the error message and search on the web: Google! Nowaday, you would maybe give a try to Artificial Intelligence tools as ChatGPT...
-
-Example 1:
-
-```
-Error in `mutate()`:
-ℹ In argument: `delta_t = as.numeric(as.duration(time_first_dist_to_use -
-  departure))`.
-Caused by error in `as.duration()`:
-! could not find function "as.duration"
-Run `rlang::last_trace()` to see where the error occurred.
-```
-
-https://www.awesomescreenshot.com/image/40093399?key=8b0ede621e12a0f58eaf7c84fcb83d45
-
-
----
-class: left, top
-
-# Debugging first rule
-
-Read carefully the error message and search on the web: Google! Nowaday, you would maybe give a try to Artificial Intelligence tools as ChatGPT...
-
-Example 2
-
-```
-my_function <- function() {
-  txt <- "fantastic"
-  paste("R is" txt)
-}
-Error: unexpected symbol in:
-"    txt <- "fantastic"
-    paste("R is" txt"
-```
-https://www.awesomescreenshot.com/image/40096422?key=151ba2b88885ab651c003414c0907886
-
----
-class: left, top
-
-# Debugging first rule
-
-Read carefully the error message and search on the web: Google! Nowaday, you would maybe give a try to Artificial Intelligence tools as ChatGPT...
-
-Example 3: error is far from being informative for "normal" people
-
-```
-my_gamma_est <- function(data) {
-  # fit a gamma distribution to a vector of numbers
-  m < mean(data)
-  v <- var(data)
-  s <- v/m
-  a <- m/s
-  return(list(a=a,s=s))
-}
-```
-
-```
-my_gamma_est(cats$Hwt)
-Error in my_gamma_est(cats$Hwt) :
-  'list' object cannot be coerced to type 'double'
-```
-
-As you can see in the screenshot, it seems ChatGPT not help us so much:
-
-https://www.awesomescreenshot.com/image/40098063?key=2fcb63ab83df27bbb5b9997c0c418581
-
----
-class: left, top
-
-You have some code, it doesn't work as expected...
-<center>![:scale 100%]({{ site.baseurl}}/assets/images/20230525/20230525_print_in_action1.png)</center>
-
-You start to search by inserting `print()` instructions here and there..
-
----
-class: left, top
-
-Welcome to the `print()` FESTIVAL!
-
-<center>![:scale 100%]({{ site.baseurl}}/assets/images/20230525/20230525_print_in_action2.png)</center>
-
-
-And what if the error is not in your code but in a function embedded in it?
-
----
-class: center, middle
-
-![:scale 90%]({{ site.baseurl}}/assets/images/20230525/20230525_RStudio_IDE_cheatsheet.png)
-[Download cheatsheet here](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20230525_cheat_sheet_rstudio-ide.pdf)
-
----
-class: center, middle
-
-![:scale 90%]({{ site.baseurl}}/assets/images/20230525/20230525_debug_mode_zoom_cheatsheet.png)
-
----
-class: center, middle
-
-![:scale 90%]({{ site.baseurl}}/assets/images/20230525/20230525_debug_mode_zoom_cheatsheet2.png)
-
----
-class: left, top
-
-### How to get started?
+## How to get started?
 
 Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
 
-### First time coding club?
+## First time coding club?
 
 Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
 
@@ -226,7 +120,6 @@ class: left, top
 
 - `20230525_challenges.R`: R script with code to start with
 
-
 ---
 class: left, top
 
@@ -235,6 +128,248 @@ class: left, top
 ```r
 library(tidyverse)
 ```
+
+---
+class: left, top
+
+# Debugging first rule
+
+Read carefully the error message and search on the web: Google! Nowaday, you would maybe give a try to Artificial Intelligence tools as ChatGPT...
+
+And let's train our eyes!
+
+Example 1
+
+```
+Error in `mutate()`:
+ℹ In argument: `delta_t = as.numeric(as.duration(time_first_dist_to_use -
+  departure))`.
+Caused by error in `as.duration()`:
+! could not find function "as.duration"
+Run `rlang::last_trace()` to see where the error occurred.
+```
+
+https://www.awesomescreenshot.com/image/40093399?key=8b0ede621e12a0f58eaf7c84fcb83d45
+
+
+---
+class: left, top
+
+# Debugging first rule
+
+Read carefully the error message and search on the web: Google! Nowaday, you would maybe give a try to Artificial Intelligence tools as ChatGPT...
+
+And let's train our eyes!
+
+Example 2
+
+```
+my_function <- function() {
+  txt <- "fantastic"
+  paste("R is" txt)
+}
+Error: unexpected symbol in:
+"    txt <- "fantastic"
+    paste("R is" txt"
+```
+https://www.awesomescreenshot.com/image/40096422?key=151ba2b88885ab651c003414c0907886
+
+---
+class: left, top
+
+# Debugging first rule
+
+Read carefully the error message and search on the web: Google! Nowaday, you would maybe give a try to Artificial Intelligence tools as ChatGPT...
+
+And let's train our eyes!
+
+Example 3: error is far from being informative for "normal" people
+
+```
+my_gamma_est <- function(data) {
+  # fit a gamma distribution to a vector of numbers
+  m < mean(data)
+  v <- var(data)
+  s <- v/m
+  a <- m/s
+  return(list(a=a,s=s))
+}
+```
+
+```
+my_gamma_est(cats$Hwt)
+Error in my_gamma_est(cats$Hwt) :
+  'list' object cannot be coerced to type 'double'
+```
+
+As you can see in the screenshot linked here below, it seems ChatGPT cannot help us so much:
+
+https://www.awesomescreenshot.com/image/40098063?key=2fcb63ab83df27bbb5b9997c0c418581
+
+---
+class: left, top
+
+You have some code, it doesn't work as expected...
+<center>![:scale 100%]({{ site.baseurl}}/assets/images/20230525/20230525_print_in_action1.png)</center>
+
+You start to search by inserting `print()` instructions here and there..
+
+---
+class: left, top
+
+Welcome to the `print()` FESTIVAL!
+
+<center>![:scale 100%]({{ site.baseurl}}/assets/images/20230525/20230525_print_in_action2.png)</center>
+
+
+And what if the error is not in your code but in a function embedded in it?
+
+---
+class: left, middle
+
+## Why debugging?
+
+- save time: "debugging" using `print()` is time consumming  + you have to clean up your code after
+- jump in **loops**, in **if-else** statements, in **functions**
+
+---
+class: center, middle
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20230525/20230525_RStudio_IDE_cheatsheet.png)
+[Download cheatsheet here](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20230525_cheat_sheet_rstudio-ide.pdf)
+
+---
+class: center, middle
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20230525/20230525_debug_mode_zoom_cheatsheet.png)
+
+---
+class: center, middle
+
+![:scale 50%]({{ site.baseurl}}/assets/images/20230525/20230525_debug_mode_zoom_cheatsheet2.png)
+
+---
+class: left, top
+
+# A live code intro
+
+![:scale 83%]({{ site.baseurl}}/assets/images/20200825/20200825_livecoding_snippet.png)<br>
+```r
+Error in FUN(newX[, i], ...) : is.atomic(x) is not TRUE
+```
+
+---
+class: left, top
+
+# A memory aid
+
+## Traceback your code
+
+`traceback` your code to find where it stops to work.
+
+In RStudio: in **Debug pane** -> **On Error** -> **Error Inspector** and then click on **Show Traceback** in the error message <p>
+![:scale 100%]({{ site.baseurl}}/assets/images/20200825/20200825_livecoding_show_traceback.png)</p>
+In basic R:
+```r
+option(error = traceback) # trace the error back, better than option(error = message)
+```
+
+---
+class: left, top
+
+# A memory aid
+
+## Debug your code: activate debugging mode
+
+
+### 1st alternative
+
+Source the file and set breakpoints (red circles) where you think something wrong happens
+<p>
+![:scale 50%]({{ site.baseurl}}/assets/images/20200825/20200825_livecoding_show_breakpoint.png)</p>
+
+---
+class: left, top
+
+# A memory aid
+
+## Debug your code: activate debugging mode
+
+### 2nd alternative
+
+Set `options(error = recover)` and select the function:
+<p>
+![:scale 100%]({{ site.baseurl}}/assets/images/20200825/20200825_livecoding_show_error_recovery.png)</p>
+
+---
+class: left, top
+
+# A memory aid
+
+## Debug your code: activate debugging mode
+
+### 3rd alternative
+
+Activate debugging mode on a specific function by using `debug(function_name)` or `debugonce(function_name)`.
+
+```r
+debug(calc_var) # or debugonce(calc_var)
+```
+
+Once this function is debugged, run `undebug(function_name)`.
+
+---
+class: left, top
+
+# A memory aid
+
+## Debug your code: work in debugging mode
+
+Once you are in debugging mode, use **Next** (n) to move to next line, **Continue** (c) to go to next breakpoint (red circles)
+<p>
+![:scale 70%]({{ site.baseurl}}/assets/images/20200825/20200825_livecoding_show_debugging_mode_actions.png)</p>
+
+---
+class: left, top
+
+# 123 magic
+
+Write down a positive integer on a piece of paper:
+
+```
+886328712442992
+```
+
+Count up the number of even and odd digits, and the total number of digits:
+
+```
+10 5 15
+```
+
+String the digits of those three numbers together to make a new number:
+
+```
+10515
+```
+
+Perform the same operation on the obtained number:
+
+```
+1 4 5 ⟶ 145
+```
+
+And keep iterating:
+
+```
+1 2 3 ⟶ 123
+```
+
+You'll always arrive at the number 123!
+
+<small>Credits:<br>
+(EN) https://dodona.ugent.be/en/courses/239/series/2168/activities/192047393/<br>
+(NL) https://dodona.ugent.be/nl/courses/239/series/2168/activities/192047393/
+</small>
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -251,7 +386,7 @@ class: left, top
 
 # Challenge 2
 
-Use debug techniques to find (and possibly solve) tje bugs in functions `step()` and `steps()`.
+Use debug techniques to find (and possibly solve) the bugs in functions `step()` and `steps()`.
 
 ---
 class: left, top
@@ -277,8 +412,8 @@ class: left, top
 Apply defensive programming to the `custom_min()` function here below to avoid unexpected  behaviors:
 
 ```
-# customized `min()` function for NUMERIC(!) vectors to avoid warning while calculating min() of empty
-# vectors
+# customized `min()` function for NUMERIC(!) vectors
+# to avoid warning while calculating min() of empty vectors
 custom_min <- function(x) {
   if (length(x)>0) min(x) else NA
 }
@@ -295,8 +430,8 @@ The package [assertthat](https://rdocumentation.org/packages/assertthat/versions
 
 ```
 library(assertthat)
-# customized `min()` function for NUMERIC(!) vectors to avoid warning while calculating min() of empty
-# vectors
+# customized `min()` function for NUMERIC(!) vectors
+# to avoid warning while calculating min() of empty vectors
 custom_min <- function(x) {
   # check x argument (assertion)
   assertthat::assert_that(
@@ -320,15 +455,14 @@ class: left, top
 
 Let's move to something more familiar: eels tagging data.
 
-The function `get_migrations()` works nicely in example 1, but it fails in other examples. By giving a look to the function, the arguments passed to, the error messages, add a series of checks (assertions) to fail fast and "nicely".
-
+The function `get_migrations()` works nicely in example 1, but it fails in other examples. By giving a look to the function, the values passed to the arguments and the error messages, try to understand what is going wrong and add a series of checks (assertions) to fail "fast" and "nicely".
 
 ---
 class: left, top
 
 # Bonus challenge
 
-Apply defensive programming to avoid unexpected behavior or cryptic error messages ("fail fast" principle) to functions described in challenge 1 and 2.
+Apply defensive programming to avoid unexpected behavior or cryptic error messages to functions described in challenge 1 and 2.
 
 Function crashes with:
 
@@ -352,7 +486,7 @@ class: left, top
 ---
 class: left, top
 
-# Miscellaneous tips: do not code _hard_
+# Miscellaneous tips: do not code so _hard_
 
 1. Do not __hard__code numbers: use variables instead (number of iterations, parameter values in simulations, ...). Easier to read and reduce bugs when you use the same number multiple times
 1. Avoid using **global variables** in your function
@@ -368,7 +502,7 @@ my_function <- function() {
 ```r
 txt <- "INBO"
 my_function <- function() {
-  txt = "fantastic"
+  txt <- "fantastic"
   paste("coding together is", txt)
 }
 > my_function()
@@ -384,15 +518,15 @@ class: left, top
 
 We are typically lazy, aren't we?
 
-"Does my code run?"
+A: "Does my code run?"
 
-"Yes!"
+B: "Yes!"
 
-"But it takes hours and GB of memory!"
+A: "But it takes hours and GB of memory!"
 
-"I don't mind, it's fine..."
+B: "I don't mind, it runs after all ..."
 
-However, this kind of code can easily crash when running on slighly bigger datasets.
+However, this kind of code could easily crash when running on bigger datasets.
 
 Let's try the [profiler](https://support.posit.co/hc/en-us/articles/218221837-Profiling-with-RStudio#using-the-profiler) built in RStudio!
 
@@ -400,8 +534,20 @@ Let's try the [profiler](https://support.posit.co/hc/en-us/articles/218221837-Pr
 ---
 class: left, top
 
-# The package of the month. x' choice
+# The package of the month. Hans' choice
 
+Again Hans suggested me a package I have never heard: [waldo](https://waldo.r-lib.org/). It's a package from the tidyverse collection, which can help you return differences between two objects in a very readable way.
+
+Try this:
+
+```
+library(waldo) # install first if needed
+waldo::compare(c("a", "b", "c"), c("a", "b"))
+```
+
+Another important case is strings vs factors:
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20230525/20230525_waldo_example.png)
 
 ---
 class: left, top
@@ -410,10 +556,11 @@ class: left, top
 
 - Commented challenges solutions soon available
 - Edited video recording soon available
-- [webinar](https://www.youtube.com/watch?v=-yy_3htRHdU&t=444s) and related [tutorial](https://htmlpreview.github.io/?https://github.com/berkeley-scf/tutorial-R-debugging/blob/master/R-debugging.html) from Chris Paciorek, Department of Statistics, UC Berkley
+- [webinar](https://youtu.be/-yy_3htRHdU) and related [tutorial](https://htmlpreview.github.io/?https://github.com/berkeley-scf/tutorial-R-debugging/blob/master/R-debugging.html) from Chris Paciorek, Department of Statistics, UC Berkley
 - [Debugging in RStudio tutorial](https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio) written by RStudio itself
 - [Debugging chapter](https://adv-r.hadley.nz/debugging.html) from Hadley Wickham's book Advanced R, 2nd edition
 - [profiler](https://support.posit.co/hc/en-us/articles/218221837-Profiling-with-RStudio#using-the-profiler) tutorial
+- [waldo](https://waldo.r-lib.org/) package homepage
 
 ---
 class: left, top
