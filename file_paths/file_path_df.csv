@@ -152,6 +152,9 @@ data/20230425/20230425_ias_first_observed_BE.txt,20230425_ias_first_observed_BE.
 data/20230425/20230425_ias_first_observed_regions.txt,20230425_ias_first_observed_regions.txt,data,20230425
 data/20230425/20230425_area_biotopes.txt,20230425_area_biotopes.txt,data,20230425
 data/20230425/20230425_ias_pathways_count.txt,20230425_ias_pathways_count.txt,data,20230425
+data/20230525/20230525_eel_Amber.txt/20230525_eel_Amber.txt,data,20230525
+data/20230525/20230525_eel_Anna.txt/20230525_eel_Anna.txt,data,20230525
+data/20230525/20230525_eel_Lisa.txt/20230525_eel_Lisa.txt,data,20230525
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
@@ -276,4 +279,4 @@ src/20230330/20230330_challenges.R,20230330_challenges.R,src,20230330
 src/20230330/20230330_challenges_solutions.R,20230330_challenges_solutions.R,src,20230330
 src/20230425/20230425_challenges.R,20230425_challenges.R,src,20230425
 src/20230425/20230425_challenges_solutions.R,20230425_challenges_solutions.R,src,20230425
-
+src/20230525/20230525_challenges.R,20230525_challenges.R,src,20230525
