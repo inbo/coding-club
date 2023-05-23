@@ -116,7 +116,7 @@ class: left, top
 # Data and scripts description
 
 
-- `20230525_eel_Anna.txt`, `20230525_eel_Amber.txt` and `20230525_eel_Lisa.txt`: eels tagging data. Thanks Thanks Pieterjan Verhelst and LifeWatch Flanders for the data samples!
+- `20230525_eel_Anna.txt`, `20230525_eel_Amber.txt` and `20230525_eel_Lisa.txt`: eels tagging data. Thanks, Pieterjan Verhelst and LifeWatch Flanders for providing us these data!
 
 - `20230525_challenges.R`: R script with code to start with
 
@@ -134,7 +134,7 @@ class: left, top
 
 # Debugging first rule
 
-Read carefully the error message and search on the web: Google! Nowaday, you would maybe give a try to Artificial Intelligence tools as ChatGPT...
+Read carefully the error message and search on the web: Google! Nowaday, you would maybe give a try to Artificial Intelligence tools as [ChatGPT](https://chat.openai.com/).
 
 And let's train our eyes!
 
@@ -157,7 +157,7 @@ class: left, top
 
 # Debugging first rule
 
-Read carefully the error message and search on the web: Google! Nowaday, you would maybe give a try to Artificial Intelligence tools as ChatGPT...
+Read carefully the error message and search on the web: Google! Nowaday, you would maybe give a try to Artificial Intelligence tools as [ChatGPT](https://chat.openai.com/).
 
 And let's train our eyes!
 
@@ -179,7 +179,7 @@ class: left, top
 
 # Debugging first rule
 
-Read carefully the error message and search on the web: Google! Nowaday, you would maybe give a try to Artificial Intelligence tools as ChatGPT...
+Read carefully the error message and search on the web: Google! Nowaday, you would maybe give a try to Artificial Intelligence tools as [ChatGPT](https://chat.openai.com/).
 
 And let's train our eyes!
 
@@ -225,7 +225,7 @@ Welcome to the `print()` FESTIVAL!
 And what if the error is not in your code but in a function embedded in it?
 
 ---
-class: left, middle
+class: left, top
 
 ## Why debugging?
 
@@ -246,17 +246,45 @@ class: center, middle
 ---
 class: center, middle
 
-![:scale 50%]({{ site.baseurl}}/assets/images/20230525/20230525_debug_mode_zoom_cheatsheet2.png)
+![:scale 45%]({{ site.baseurl}}/assets/images/20230525/20230525_debug_mode_zoom_cheatsheet2.png)
 
 ---
 class: left, top
 
-# A live code intro
+## A live code intro
 
-![:scale 83%]({{ site.baseurl}}/assets/images/20200825/20200825_livecoding_snippet.png)<br>
-```r
+```
+library(MASS) # provides `cats` data
+
+gamma_est <- function(data) {
+  # this fits a gamma distribution to a collection of numbers
+  m <- mean(data)
+  v <- var(data)
+  s <- v/m
+  a <- m/s
+  return(list(a=a,s=s))
+}
+calc_var <- function(estimates){
+  var_of_ests <- apply(estimates, 2, var)
+  return(((n-1)^2/n)*var_of_ests)
+}
+gamma_jackknife <- function(data) {
+  ## jackknife the estimation
+  n <- length(data)
+  jack_estimates = gamma_est(data[-1])
+  for (omitted_point in 2:n) {
+    jack_estimates = rbind(jack_estimates, gamma_est(data[-omitted_point]))
+  }
+  jack_var = calc_var(jack_estimates)
+  return(sqrt(jack_var))
+}
+
+# jackknife gamma dist. estimates of cat heart weights
+gamma_jackknife(cats$Hwt)
 Error in FUN(newX[, i], ...) : is.atomic(x) is not TRUE
 ```
+
+Credits: Chris Paciorek. Session 2.5 of his very interesting [tutorial](https://htmlpreview.github.io/?https://github.com/berkeley-scf/tutorial-R-debugging/blob/master/R-debugging.html)
 
 ---
 class: left, top
@@ -268,7 +296,7 @@ class: left, top
 `traceback` your code to find where it stops to work.
 
 In RStudio: in **Debug pane** -> **On Error** -> **Error Inspector** and then click on **Show Traceback** in the error message <p>
-![:scale 100%]({{ site.baseurl}}/assets/images/20200825/20200825_livecoding_show_traceback.png)</p>
+![:scale 100%]({{ site.baseurl}}/assets/images/20230525/20230525_livecoding_show_traceback.png)</p>
 In basic R:
 ```r
 option(error = traceback) # trace the error back, better than option(error = message)
@@ -286,7 +314,7 @@ class: left, top
 
 Source the file and set breakpoints (red circles) where you think something wrong happens
 <p>
-![:scale 50%]({{ site.baseurl}}/assets/images/20200825/20200825_livecoding_show_breakpoint.png)</p>
+![:scale 50%]({{ site.baseurl}}/assets/images/20230525/20230525_livecoding_show_breakpoint.png)</p>
 
 ---
 class: left, top
@@ -299,7 +327,7 @@ class: left, top
 
 Set `options(error = recover)` and select the function:
 <p>
-![:scale 100%]({{ site.baseurl}}/assets/images/20200825/20200825_livecoding_show_error_recovery.png)</p>
+![:scale 100%]({{ site.baseurl}}/assets/images/20230525/20230525_livecoding_show_error_recovery.png)</p>
 
 ---
 class: left, top
@@ -327,7 +355,7 @@ class: left, top
 
 Once you are in debugging mode, use **Next** (n) to move to next line, **Continue** (c) to go to next breakpoint (red circles)
 <p>
-![:scale 70%]({{ site.baseurl}}/assets/images/20200825/20200825_livecoding_show_debugging_mode_actions.png)</p>
+![:scale 70%]({{ site.baseurl}}/assets/images/20230525/20230525_livecoding_show_debugging_mode_actions.png)</p>
 
 ---
 class: left, top
@@ -391,7 +419,7 @@ Use debug techniques to find (and possibly solve) the bugs in functions `step()`
 ---
 class: left, top
 
-# Intermezzo: defensive programming - what is it?
+# Intermezzo: defensive programming
 
 Debugging starts already while writing code! Defensive programming is the best way to solve bunch of (future) bugs: the future-you will praise you.
 
@@ -467,11 +495,11 @@ Apply defensive programming to avoid unexpected behavior or cryptic error messag
 Function crashes with:
 
 1.  "very large" numbers
-![]({{ site.baseurl}}/assets/images/20230525/20200825_challenge3_unexpected_error_big_numbers.png)
+![]({{ site.baseurl}}/assets/images/20230525/20230525_challenge3_unexpected_error_big_numbers.png)
 2. decimal numbers
-![]({{ site.baseurl}}/assets/images/20230525/20200825_challenge3_unexpected_error_decimal_number.png)
+![]({{ site.baseurl}}/assets/images/20230525/20230525_challenge3_unexpected_error_decimal_number.png)
 3. vectors or list of numbers
-![]({{ site.baseurl}}/assets/images/20230525/20200825_challenge3_unexpected_error_multiple_numbers.png)
+![]({{ site.baseurl}}/assets/images/20230525/20230525_challenge3_unexpected_error_multiple_numbers.png)
 
 
 ---
@@ -536,7 +564,7 @@ class: left, top
 
 # The package of the month. Hans' choice
 
-Again Hans suggested me a package I have never heard: [waldo](https://waldo.r-lib.org/). It's a package from the tidyverse collection, which can help you return differences between two objects in a very readable way.
+Hans came out again with a package I have never heard: [waldo](https://waldo.r-lib.org/). It's a package from the tidyverse collection, which shows you the differences between two objects in a very readable way.
 
 Try this:
 
@@ -547,7 +575,7 @@ waldo::compare(c("a", "b", "c"), c("a", "b"))
 
 Another important case is strings vs factors:
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20230525/20230525_waldo_example.png)
+![:scale 100%]({{ site.baseurl}}/assets/images/20230525/20230525_waldo_example.png)
 
 ---
 class: left, top
@@ -557,7 +585,7 @@ class: left, top
 - Commented challenges solutions soon available
 - Edited video recording soon available
 - [webinar](https://youtu.be/-yy_3htRHdU) and related [tutorial](https://htmlpreview.github.io/?https://github.com/berkeley-scf/tutorial-R-debugging/blob/master/R-debugging.html) from Chris Paciorek, Department of Statistics, UC Berkley
-- [Debugging in RStudio tutorial](https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio) written by RStudio itself
+- [Debugging in RStudio tutorial](https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio) written by posit (company behind RStudio) itself
 - [Debugging chapter](https://adv-r.hadley.nz/debugging.html) from Hadley Wickham's book Advanced R, 2nd edition
 - [profiler](https://support.posit.co/hc/en-us/articles/218221837-Profiling-with-RStudio#using-the-profiler) tutorial
 - [waldo](https://waldo.r-lib.org/) package homepage
@@ -567,12 +595,12 @@ class: left, top
 
 # Coding club topics 2023: you vote!
 
-No, no poll this time. You showed a lot of interest for the subject __spatial vector data with sf__, even if it lost twice.
+No, you do not need to vote this time. You showed a lot of interest for the subject __spatial vector data with sf__, even if it lost twice.
 
 ![:scale 70%]({{ site.baseurl}}/assets/images/20230525/20230525_sf.jpg)
 
 
-<small>(Illustration (c) 2018 by Allison Horst)</small>
+<small>Illustration (c) 2018 by Allison Horst</small>
 
 ---
 class: center, middle
