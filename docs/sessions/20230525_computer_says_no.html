@@ -251,11 +251,10 @@ class: center, middle
 ---
 class: left, top
 
-### A live code intro
+#### A live code intro
 
 ```
 library(MASS) # provides `cats` data
-
 gamma_est <- function(data) {
   # this fits a gamma distribution to a collection of numbers
   m <- mean(data)
@@ -278,7 +277,6 @@ gamma_jackknife <- function(data) {
   jack_var = calc_var(jack_estimates)
   return(sqrt(jack_var))
 }
-
 # jackknife gamma dist. estimates of cat heart weights
 gamma_jackknife(cats$Hwt)
 Error in FUN(newX[, i], ...) : is.atomic(x) is not TRUE
