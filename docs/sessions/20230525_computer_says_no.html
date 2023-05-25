@@ -270,9 +270,9 @@ calc_var <- function(estimates){
 gamma_jackknife <- function(data) {
   ## jackknife the estimation
   n <- length(data)
-  jack_estimates = gamma_est(data[-1])
+  jack_estimates <- gamma_est(data[-1])
   for (omitted_point in 2:n) {
-    jack_estimates = rbind(jack_estimates, gamma_est(data[-omitted_point]))
+    jack_estimates <- rbind(jack_estimates, gamma_est(data[-omitted_point]))
   }
   jack_var = calc_var(jack_estimates)
   return(sqrt(jack_var))
