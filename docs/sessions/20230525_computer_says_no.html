@@ -297,7 +297,7 @@ In RStudio: in **Debug pane** -> **On Error** -> **Error Inspector** and then cl
 ![:scale 100%]({{ site.baseurl}}/assets/images/20230525/20230525_livecoding_show_traceback.png)</p>
 In basic R:
 ```r
-option(error = traceback) # trace the error back, better than option(error = message)
+options(error = "traceback") # trace the error back, better than option(error = message)
 ```
 
 ---
