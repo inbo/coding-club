@@ -1,0 +1,250 @@
+---
+layout: presentation
+title: spatial data in R
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 27 JUNE 2023
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+
+01.17 - Clara Peters
+
+---
+class: left, top
+
+# Reminders
+
+1. Did we confirm the room reservation on the _roomie_?
+2. Did we start the recording?
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20230627/20230627_badge_spatial.png)
+
+---
+class: left, top
+
+# The sf package
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20230627/20230627_sf_principle.jpg)
+
+The [sf homepage](https://r-spatial.github.io/sf/) is the best place to start your "spatial" voyage.
+
+sf stays for: _[simple features](https://en.wikipedia.org/wiki/Simple_Features)_, a scary way to express "geographic features", where feature is a scary term to refer to the very less concepts of lat/lon (or x-y) representations of points, lines, polygons etc.
+
+
+---
+class: left, top
+
+# I use sp. Why sf?
+
+Because Thierry says so :-)
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20230627/20230627_mail_Thierry.png)
+
+---
+class: left, top
+
+# I use sp. Why sf?
+
+[sp](https://edzer.github.io/sp) is getting archived as some of the underlying packages.
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20230627/20230627_sp_retirement.png)
+
+sf is the present and the future, bro!
+
+This [sp-sf migration table](https://github.com/r-spatial/sf/wiki/Migrating) will help you refactoring your code.
+
+---
+class: left, top
+
+Install the package:
+
+```r
+install.packages("sf")
+```
+
+Load the package:
+
+```r
+library(sf)
+```
+
+---
+class: left, top
+
+# Introduction: sf package
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20230627/20230627_sf_object.png)
+
+
+---
+class: left, top
+
+# Spatial coordinates
+
+Two types of spatial coordinates:
+
+- **projected** (or Cartesian) coordinates: refer to points on a flat space. The coordinates are the distance along the x and y axis
+- **unprojected** or **geographic** coordinates: refer to angles (latitude, longitude) pointing to locations on a sphere (or ellipsoid).
+
+For the math lovers: the flat space is also referred to as R<sup>2</sup>, the sphere as S<sup>2</sup>.
+
+No geospatial data without specifying the **Coordinate Reference System** (CRS) you work with!
+
+And what is a projection? A way to visualize a surface of a sphere on a flat space.
+
+
+---
+class: center, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20230627/20230627_sf_cheatsheet.png)<br>
+
+sf [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20211026_cheat_sheet_sf.pdf)
+
+See also this very nice [article with some examples](https://r-spatial.github.io/sf/articles/sf2.html) and the excellent book [geocomputation with R](https://geocompr.robinlovelace.net/).
+
+---
+class: left, top
+
+## How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+## First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+# Share your code during the coding session
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/WgovTpD4SxuyoFGMvDMeag?edit and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/WgovTpD4SxuyoFGMvDMeag?edit" height="450px" width="800px"></iframe>
+
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub folders [coding-club/data/20230627](https://github.com/inbo/coding-club/tree/master/data/20230627) and [coding-club/src/20230627](https://github.com/inbo/coding-club/tree/master/src/20230627)
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20220428")` to download the coding club material of April, 28 2022. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data and scripts description
+
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+
+---
+class: left, top
+
+# Intermezzo
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3
+
+---
+class: left, top
+
+# The package of the month. Damiano's choice
+
+I discovered Floris is the maintainer of [qgisprocess](https://r-spatial.github.io/qgisprocess/), a package to provide an R interface to the popular and open source desktop geographic information system (GIS) program [QGIS](https://qgis.org/en/site/). Something I think most of you will find very helpful.
+
+And it has a cheat sheet too!
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20230627/20230627_qgisprocess_cheatsheet.png)
+
+Some [slides](https://florisvdh.github.io/foss4g-2023-qgisprocess) presenting the package are available.
+
+---
+class: left, top
+
+# Bonus challenge
+
+
+---
+class: left, top
+
+# Resources
+
+- Challenges solutions and video recording will be added soon
+- [Geocomputation with R](https://geocompr.robinlovelace.net/)
+- [Spatial Data Science](https://keen-swartz-3146c4.netlify.com/)
+- INBO tutorial on [how to use open vector file formats](https://inbo.github.io/tutorials/tutorials/spatial_standards_vector/) such as geopackage in R
+- [`sf` cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20230627_cheat_sheet_sf.pdf) even if it is far from being the best cheatsheet ever
+- All [articles](https://r-spatial.github.io/sf/articles/sf1.html) on sf package documentation webpage are great material and very well written
+- Floris' [slides](https://florisvdh.github.io/foss4g-2023-qgisprocess/#1) presenting qgisprocess R package
+- What does your favorite [map projection](https://xkcd.com/977/) say about you? Extremely funny!
+- Keynote "Spherical geometry" of Edzer Pebesma at the OpenGeoHub summer school 2021: [slides](https://edzer.github.io/spherical_geometry/#1)
+- Keynote "R spatial" of Edzer Pebesma at the useR! 2021 conference: [video](https://www.youtube.com/watch?v=cK08bxUJn5A) and [slides](https://edzer.github.io/UseR2021/#1)
+- everything what Edzer Pebesma says or write, actually
+
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: <br>
+Date: __31/08/2023__, van 10:00 tot 12:30<br>
+Subject: still to be voted<br>
+(registration announced via DG_useR@inbo.be)
