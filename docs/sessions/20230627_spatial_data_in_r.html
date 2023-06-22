@@ -51,17 +51,19 @@ class: left, top
 
 The [sf homepage](https://r-spatial.github.io/sf/) is the best place to start your "spatial" voyage.
 
-sf stays for: _[simple features](https://en.wikipedia.org/wiki/Simple_Features)_, a scary way to express "geographic features", where feature is a scary term to refer to the very less concepts of lat/lon (or x-y) representations of points, lines, polygons etc.
-
-
 ---
 class: left, top
+
+# The sf package
+
+sf stays for: _[simple features](https://en.wikipedia.org/wiki/Simple_Features)_, a scary way to express "geographic features", where feature is a scary term to refer to the very less concepts of lat/lon (or x-y) representations of points, lines, polygons etc.
+
 
 # I use sp. Why sf?
 
 Because Thierry says so :-)
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20230627/20230627_mail_Thierry.png)
+![:scale 120%]({{ site.baseurl}}/assets/images/20230627/20230627_mail_Thierry.png)
 
 ---
 class: left, top
@@ -115,13 +117,25 @@ No geospatial data without specifying the **Coordinate Reference System** (CRS) 
 
 And what is a projection? A way to visualize a surface of a sphere on a flat space.
 
+---
+class: center, top
+
+# Projection: it can get crazy!
+
+What your favorite [map projection](https://xkcd.com/977/) say about you
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20230627/20230627_peirce_quincuncial.png)
+
+The Peirce quincuncial projection is the conformal map projection from the sphere to an unfolded square dihedron, developed by Charles Sanders Peirce in 1879. Each octant projects onto an isosceles right triangle, and these are arranged into a square. The name quincuncial refers to this arrangement: the north pole at the center and quarters of the south pole in the corners form a quincunx pattern. [..] Rarely used for geographic purposes. The projection has seen use in digital photography for portraying [spherical panoramas](https://en.wikipedia.org/wiki/Peirce_quincuncial_projection#/media/File:PeircePanorama2007.jpg).
+
+<small> __\* Source__: Wikipedia contributors, "Peirce quincuncial projection," Wikipedia, The Free Encyclopedia, https://en.wikipedia.org/w/index.php?title=Peirce_quincuncial_projection&oldid=1132803635 (accessed June 22, 2023).</small>
 
 ---
 class: center, top
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20230627/20230627_sf_cheatsheet.png)<br>
+![:scale 100%]({{ site.baseurl}}/assets/images/20230627/20230627_sf_cheat_sheet.png)<br>
 
-sf [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20211026_cheat_sheet_sf.pdf)
+sf [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20221025_cheat_sheet_sf.pdf)
 
 See also this very nice [article with some examples](https://r-spatial.github.io/sf/articles/sf2.html) and the excellent book [geocomputation with R](https://geocompr.robinlovelace.net/).
 
@@ -208,11 +222,11 @@ class: left, top
 
 I discovered Floris is the maintainer of [qgisprocess](https://r-spatial.github.io/qgisprocess/), a package to provide an R interface to the popular and open source desktop geographic information system (GIS) program [QGIS](https://qgis.org/en/site/). Something I think most of you will find very helpful.
 
-And it has a cheat sheet too!
+And it has a [cheat sheet](https://r-spatial.github.io/qgisprocess/articles/cheatsheet_en.html) too!
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20230627/20230627_qgisprocess_cheatsheet.png)
 
-Some [slides](https://florisvdh.github.io/foss4g-2023-qgisprocess) presenting the package are available.
+Floris wrote also some [slides](https://florisvdh.github.io/foss4g-2023-qgisprocess) presenting the package.
 
 ---
 class: left, top
@@ -231,7 +245,8 @@ class: left, top
 - INBO tutorial on [how to use open vector file formats](https://inbo.github.io/tutorials/tutorials/spatial_standards_vector/) such as geopackage in R
 - [`sf` cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20230627_cheat_sheet_sf.pdf) even if it is far from being the best cheatsheet ever
 - All [articles](https://r-spatial.github.io/sf/articles/sf1.html) on sf package documentation webpage are great material and very well written
-- Floris' [slides](https://florisvdh.github.io/foss4g-2023-qgisprocess/#1) presenting qgisprocess R package
+- [qgisprocess](https://r-spatial.github.io/qgisprocess/) package homepage
+- Floris' [slides](https://florisvdh.github.io/foss4g-2023-qgisprocess/#1) presenting qgisprocess package
 - What does your favorite [map projection](https://xkcd.com/977/) say about you? Extremely funny!
 - Keynote "Spherical geometry" of Edzer Pebesma at the OpenGeoHub summer school 2021: [slides](https://edzer.github.io/spherical_geometry/#1)
 - Keynote "R spatial" of Edzer Pebesma at the useR! 2021 conference: [video](https://www.youtube.com/watch?v=cK08bxUJn5A) and [slides](https://edzer.github.io/UseR2021/#1)
