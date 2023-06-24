@@ -47,7 +47,7 @@ class: left, top
 
 # The sf package
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20230627/20230627_sf_principle.jpg)
+![:scale 80%]({{ site.baseurl}}/assets/images/20230627/20230627_sf_principle.jpg)
 
 The [sf homepage](https://r-spatial.github.io/sf/) is the best place to start your "spatial" voyage.
 
@@ -147,7 +147,7 @@ class: center, top
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20230627/20230627_sf_cheat_sheet.png)<br>
 
-sf [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20221025_cheat_sheet_sf.pdf)
+sf [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20230627_cheat_sheet_sf.pdf)
 
 See also this very nice [article with some examples](https://r-spatial.github.io/sf/articles/sf2.html) and the excellent book [geocomputation with R](https://geocompr.robinlovelace.net/).
 
@@ -207,12 +207,37 @@ class: left, top
 
 # Challenge 1
 
+Using the cheatsheet and starting from the code provided in `20230627_challenges.R`:
+
+1. Create a geospatial data.frame called `lepidoptera` starting from `lepidoptera_df`. Use the columns `decimalLongitude` and `decimalLatitude`. Note that GBIF data are stored using [WGS 84](https://epsg.io/4326) (CRS = 4326).
+2. How many layers does the  geospatial file `20230627_protected_areas.gpkg` contain?
+3. Import the layer `ps_hbtrl`: call it `prot_areas`
+4. What is the CRS declared by user? Does it coincide with the real Geographic Coordinate Reference System (GEOCRS)?
+5. Do `prot_areas` and `spatial_ludwigia_df` have the same CRS?
+6. Read the Belgian provinces rds file as `provinces_be` (the code is given!). What is the class of this variable? From which package? How to transform it to a sf object?
+7. Extract the Flemish provinces as `provinces_fl`. Hint: do it as you would do it in a standard data.frame. The motto of the sf package is "Spatial data, simplified" for a reason!
+
+---
+class: left, top
+
+# Intermezzo: CRS & EPSG codes
+
+A common way to specify the CRS is by providing the EPSG (numeric) code. EPSG stands for European Petroleum Survey Group and is an organization that maintains a geodetic parameter database with standard codes, the EPSG codes, for coordinate systems, datums, spheroids, units and such alike.  There are a lot of EPSG codes! Full list: https://spatialreference.org/
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20230627/20230627_epsg_codes.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
 # Challenge 2
+
+1. Transform both `prot_areas` and `lepidoptera` to the [European Terrestrial Reference System 1989](https://epsg.io/3035) (EPSG: 3035), the coordinate reference system used at EU level. Call the transformed sf objects `prot_areas_3035` and `lepidoptera_3035` respectively
+2. Write the transformed data as a geopackage file called `prot_areas_and_lepidoptera_3035.gpkg` with two layers: the first called `prot_areas`, containing the protected areas, the second layer, `lepidoptera_obs`, containing the observations of lepidoptera
+3. Due to spatial uncertainty (gridded data, GPS uncertainty, etc.) observations
+ should not be idealized as points in space, but as circles. Create such circles
+ using the values stored in column `coordinateUncertaintyInMeters` of
+ `lepidoptera_3035`. Call this sf object `lepidoptera_3035_circles`.
 
 
 ---
@@ -221,11 +246,20 @@ class: left, top
 # Intermezzo
 
 
+
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
 # Challenge 3
+
+Using data saved in CRS 3035:
+
+1. Which observations in `lepidoptera_3035` (points), are _contained_ in which protected area?
+2. But we should better check which observations, as circles (!), _intersect_ each protected area. How to do it?
+3. So, how many observations in the "Demervallei"?
+4. Sometimes it's interesting to calculate the centroid of a polygon, e.g. for visualizations. Easy by using sf function `st_centroids()`. However, you get an error while calculating the centroids of `prot_areas`. What does it mean? How to solve the problem?
+
 
 ---
 class: left, top
@@ -249,7 +283,9 @@ class: left, top
 ---
 class: left, top
 
-# Announcement: A Journey through Arrow in R
+# Announcement
+
+## A Journey through Arrow in R
 
 [ROpenSci](https://ropensci.org/) organizes a community call at 28 June (= tomorrow) at 6pm about the [arrow](https://arrow.apache.org/docs/r/) R package. arrow exposes an interface to the Arrow C++ library, which is one of the libraries implementing the [Apache Arrow](https://arrow.apache.org/) cross-language development platform, extremely useful for in-memory and larger-than-memory data.
 
