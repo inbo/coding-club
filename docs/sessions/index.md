@@ -3,6 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
+| 2023-06-27 | spatial data in R (in progress) | [slides]({{ site.baseurl }}{% link sessions/20230627_spatial_data_in_r.html  %}) | [hackmd](https://hackmd.io/WgovTpD4SxuyoFGMvDMeag?view) | 01.17 - Clara Peters |  |
 | 2023-05-25 | computer says no: debug youR code | [slides]({{ site.baseurl }}{% link sessions/20230525_computer_says_no.html  %}) | [hackmd](https://hackmd.io/zkAmzjw1RnOuLvVRdtCH2g?view) | 01.23 - Léon Stynen | [vimeo](https://vimeo.com/831857629) |
 | 2023-04-25 | beyond ggplot | [slides]({{ site.baseurl }}{% link sessions/20230425_beyond_ggplot.html  %}) | [hackmd](https://hackmd.io/peUHuQaERrCi94LObScfdA?view) | 01.05 - Isala Van Diest | [vimeo](https://vimeo.com/823315912) |
 | 2023-03-30 | great plots with ggplot | [slides]({{ site.baseurl }}{% link sessions/20230330_ggplot.html  %}) | [hackmd](https://hackmd.io/Tgu8AXQTRP2OgZZHnInVRw?view) | 01.05 - Isala Van Diest | [vimeo](https://vimeo.com/813480198) |

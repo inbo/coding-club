@@ -155,6 +155,9 @@ data/20230425/20230425_ias_pathways_count.txt,20230425_ias_pathways_count.txt,da
 data/20230525/20230525_eel_Amber.txt,20230525_eel_Amber.txt,data,20230525
 data/20230525/20230525_eel_Anna.txt,20230525_eel_Anna.txt,data,20230525
 data/20230525/20230525_eel_Lisa.txt,20230525_eel_Lisa.txt,data,20230525
+data/20230627/20230627_protected_areas.gpkg,20230627_protected_areas.gpkg,data,20230627
+data/20230627/20230627_lepidoptera_iNaturalist_2023.csv,20230627_lepidoptera_iNaturalist_2023.csv,data,20230627
+data/20230627/20230627_provinces_be.rds,20230627_provinces_be.rds,data,20230627
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
