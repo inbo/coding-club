@@ -56,10 +56,13 @@ class: left, top
 
 # The sf package
 
-sf stays for: _[simple features](https://en.wikipedia.org/wiki/Simple_Features)_, a scary way to express "geographic features", where feature is a scary term to refer to an abstraction of real world phenomena, with geometrical properties as lat/lon (or x-y).
+sf stays for: _[simple features](https://en.wikipedia.org/wiki/Simple_Features)_, a scary way to express "geographic features", where feature is a scary term to refer to an abstraction of real world phenomena with geometrical properties such as lat/lon (or x-y).
 
 
-# I use sp. Why sf?
+---
+class: left, top
+
+## I use sp. Why do you bother me with sf?
 
 Because Thierry says so :-)
 
@@ -68,9 +71,9 @@ Because Thierry says so :-)
 ---
 class: left, top
 
-# I use sp. Why sf?
+## I use sp. Why do you bother me with sf?
 
-[sp](https://edzer.github.io/sp) is getting archived as some of the underlying packages.
+[sp](https://edzer.github.io/sp) is getting old: some of its core dependencies are getting archived as obsolete.
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20230627/20230627_sp_retirement.png)
 
@@ -109,7 +112,7 @@ class: left, top
 Two types of spatial coordinates:
 
 - **projected** (or Cartesian) coordinates: refer to points on a flat space. The coordinates are the distance along the x and y axis
-- **unprojected** or **geographic** coordinates: refer to angles (latitude, longitude) pointing to locations on a sphere (or ellipsoid).
+- **unprojected** or **geographic** coordinates: refer to angles (latitude, longitude) pointing to locations on a sphere (or ellipsoid)
 
 For the math lovers: the flat space is also referred to as R<sup>2</sup>, the sphere as S<sup>2</sup>.
 
@@ -249,11 +252,10 @@ Using data saved in CRS 3035:
 
 1. Which observations in `lepidoptera_3035` (points), are _contained_ in which protected area?
 2. But we should maybe better check which observations, as circles (!), _intersect_ each protected area. How to do it?
-3. So, how many observations in the "Demervallei"?
+3. So, how many observations as circles intersect the Sonian Forest ("Zoniënwoud")?
 4. Sometimes it's interesting to calculate the centroid of a polygon, e.g. for visualizations. Easy by using sf function `st_centroids()`. However, you get an error while calculating the centroids of `prot_areas`. What does it mean? How to solve the problem?
 5. How to get the portion of protected areas located in province Antwerp?
 6. How to get the _union_ of all the protected areas? How such union is expressed in sf?
-
 
 ---
 class: left, top
@@ -273,8 +275,10 @@ class: left, top
 
 # Bonus challenge
 
-1. How to get only the observations, as circles, **totally** contained in protected areas? Hint: check the cheat sheet
-2. Not a sf question, but still nice to solve: how to add to `prot_areas_3035` a column called `n_lepidoptera` with the number of observations for each protected area?
+1. How to get the observations, as circles, totally **cover**ed in protected areas? Hint: it could be not present on the cheat sheet
+2. Not a sf question, but still nice to solve: how to add to `prot_areas_3035` a column called `n_lepidoptera_pts` with the number of observations as points in each protected area? To have an idea about the effects of coordinate uncertainty on number of observations, add also the number of observations as circles intersecting protected areas and the ones totally contained as `n_lepidoptera_intersect` and `n_lepidoptera_all_in`
+3. Let's use qgisprocess! To run some models, you would like to create 50 random points in each protected area to simulate some set of observations. How to do it using qgisprocess?
+
 ---
 class: left, top
 
