@@ -210,11 +210,11 @@ class: left, top
 Using the cheatsheet and starting from the code provided in `20230627_challenges.R`:
 
 1. Create a geospatial data.frame called `lepidoptera` starting from `lepidoptera_df`. Use the columns `decimalLongitude` and `decimalLatitude`. Note that GBIF data are stored using [WGS 84](https://epsg.io/4326) (CRS = 4326).
-2. How many layers does the  geospatial file `20230627_protected_areas.gpkg` contain?
-3. Import the layer `ps_hbtrl`: call it `prot_areas`
-4. What is the CRS declared by user? Does it coincide with the real Geographic Coordinate Reference System (GEOCRS)?
+2. Which layers does the  geospatial file `20230627_protected_areas.gpkg` contain?
+3. Import the layer `ps_hbtrl` from `20230627_protected_areas.gpkg`: call it `prot_areas`
+4. How to retrieve information about the Coordinate Reference System (CRS) of `prot_areas`?
 5. Do `prot_areas` and `lepidoptera` have the same CRS?
-6. Read the Belgian provinces rds file as `provinces_be` (the code is given!). What is the class of this variable? From which package? How to transform it to a sf object?
+6. Read the Belgian provinces rds file as `provinces_be` (the code is given!). What is the class of this variable? From which package does this class come from? How to transform it to a sf object?
 7. Extract the Flemish provinces as `provinces_fl`. Hint: do it as you would do it in a standard data.frame. The motto of the sf package is "Spatial data, simplified" for a reason!
 
 ---
@@ -305,7 +305,7 @@ class: left, top
 - [arrow](https://arrow.apache.org/docs/r/) R package
 - ROpenSci [event](https://ropensci.org/commcalls/jun2023-arrow/) about arrow on Jun 28
 - Keynote "Spherical geometry" of Edzer Pebesma at the OpenGeoHub summer school 2021: [slides](https://edzer.github.io/spherical_geometry/#1)
-- Keynote "R spatial" of Edzer Pebesma at the useR! 2021 conference: [video](https://www.youtube.com/watch?v=cK08bxUJn5A) and [slides](https://edzer.github.io/UseR2021/#1)
+- Keynote "R spatial" of Edzer Pebesma at the useR! 2021 conference: [video](https://www.youtube.com/watch?v=cK08bxUJn5A) and [slides](https://edzer.github.io/UseR2021/#1). Very interesting to learn the principles and basics of spatial data in R
 - everything what Edzer Pebesma says or write, actually
 
 ---
