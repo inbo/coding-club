@@ -202,7 +202,7 @@ prot_areas_3035_valid <- st_make_valid(prot_areas_3035)
 
 # calculate centroids of the valid polygons
 cts_prot_areas <- st_centroid(prot_areas_valid)
-cts_prot_areas_3035 <- st_centroid(prot_areas_valid_3035)
+cts_prot_areas_3035 <- st_centroid(prot_areas_3035_valid)
 
 # notice how not all reasons for invalidity affect the computation of centroids
 # https://github.com/r-spatial/sf/issues/1829#issuecomment-953763358
