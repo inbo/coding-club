@@ -215,7 +215,7 @@ cts_prot_areas_3035 <- st_centroid(prot_areas_3035)
 
 # 1. How to get only the observations, as circles, **totally** contained in
 # protected areas?
-ludwigia_circles_totally_in_prot_areas <- st_covered_by(
+ludwigia_circles_totally_in_prot_areas <- st_contains(
   x = prot_areas_3035,
   y = circles_spatial_ludwigia_3035
 )
