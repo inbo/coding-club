@@ -38,15 +38,7 @@ utm1_pajottenland <- sf::st_read(
   "./data/20230831/20230831_utm1km_Pajottenland.gpkg"
 )
 
-# transform to sf spatial data.frame
-occs_hogweed <- st_as_sf(occs_hogweed,
-                         coords = c("decimalLongitude", "decimalLatitude"),
-                         crs = 4326)
 
-# count number of "points" in Natura2000 areas
-occs_in_areas <- st_contains(natura2000, occs_hogweed)
-# get number of points in each polygon as a vector
-natura2000$n_occs <- purrr::map_dbl(occs_in_areas, function(x) length(x))
 ```
 
 ## Exercise 1

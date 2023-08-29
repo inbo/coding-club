@@ -71,8 +71,8 @@ plot(lu_nara_2016,
 
 ## CHALLENGE 2 - static maps
 
-# Let's make a static map of the borders of the natura2000 areas in Flanders using
-# OpenStreetMaps using the R package maptiles.
+# Let's make a static map of the borders of the natura2000 areas in Flanders
+# using OpenStreetMaps using the R package maptiles.
 
 # Dowload tiles and compose raster (SpatRaster)
 natura2000_osm <- get_tiles(natura2000, zoom = 9)
@@ -85,7 +85,8 @@ mtext(text = get_credit("OpenStreetMap"),
       side = 1, line = -1, adj = 1, cex = .9,
       font = 3)
 
-# 2. Use another tile provider and assign colors to the Natura2000 areas based on their area (column `Shape_area`).
+# 2. Use another tile provider and assign colors to the Natura2000 areas based
+# on their area (column `Shape_area`).
 
 # Dowload tiles and compose raster (SpatRaster)
 natura2000_natgeo <- get_tiles(
