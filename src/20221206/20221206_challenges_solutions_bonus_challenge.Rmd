@@ -1,7 +1,7 @@
 ---
-title: "Geospatial data visualisation in R: bonus challenge 2 - leaflet + crosstalk"
+title: "Geospatial data visualisation in R: bonus challenge"
 output: html_document
-date: "2023-08-31"
+date: "2022-12-06"
 ---
 
 ```{r setup, include=FALSE}
@@ -30,14 +30,15 @@ library(here)
 Read and prepare data (same code as provided in `20221206_challenges.R`):
 
 ```{r read_data}
-# n_moths
-n_moths <- readr::read_csv("./data/20230831/20230831_n_moths.txt")
-
-# UTM1km cells of Pajottenland
-utm1_pajottenland <- sf::st_read(
-  "./data/20230831/20230831_utm1km_Pajottenland.gpkg"
-)
-
+# natura2000
+natura2000 <- st_read(here::here("data",
+                                 "20221206",
+                                 "20221206_protected_areas.gpkg"))
+# occurrences giant hogweed
+occs_hogweed <- readr::read_tsv(here::here("data",
+                                 "20221206",
+                                 "20221206_gbif_occs_hogweed.txt"),
+                                na = "")
 # transform to sf spatial data.frame
 occs_hogweed <- st_as_sf(occs_hogweed,
                          coords = c("decimalLongitude", "decimalLatitude"),
