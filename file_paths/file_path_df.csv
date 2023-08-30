@@ -158,6 +158,12 @@ data/20230525/20230525_eel_Lisa.txt,20230525_eel_Lisa.txt,data,20230525
 data/20230627/20230627_protected_areas.gpkg,20230627_protected_areas.gpkg,data,20230627
 data/20230627/20230627_lepidoptera_iNaturalist_2023.csv,20230627_lepidoptera_iNaturalist_2023.csv,data,20230627
 data/20230627/20230627_provinces_be.rds,20230627_provinces_be.rds,data,20230627
+data/20230831/20230831_lu_nara_2016_100m.tif,20230831_lu_nara_2016_100m.tif,data,20230831
+data/20230831/20230831_nitrogen.tif,20230831_nitrogen.tif,data,20230831
+data/20230831/20230831_protected_areas.gpkg,20230831_protected_areas.gpkg,data,20230831
+data/20230831/20230831_n_moths.txt,20230831_n_moths.txt,data,20230831
+data/20230831/20230831_utm1km_Pajottenland.gpkg,20230831_utm1km_Pajottenland.gpkg,data,20230831
+data/20230831/20230831_Pajottenland_municipalities.gpkg,20230831_Pajottenland_municipalities.gpkg,data,20230831
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
@@ -286,3 +292,4 @@ src/20230525/20230525_challenges.R,20230525_challenges.R,src,20230525
 src/20230525/20230525_challenges_solutions.R,20230525_challenges_solutions.R,src,20230525
 src/20230627/20230627_challenges.R,20230627_challenges.R,src,20230627
 src/20230627/20230627_challenges_solutions.R,20230627_challenges_solutions.R,src,20230627
+src/20230831/20230831_challenges.R,20230831_challenges.R,src,20230831
