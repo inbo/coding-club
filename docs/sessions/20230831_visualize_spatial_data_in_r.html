@@ -1,0 +1,388 @@
+---
+layout: presentation
+title: visualize spatial data in R
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+  <!-- Adjust the presentation to the session. Focus on the challenges,
+this is not a coding tutorial.
+
+Note, to include figures, store the image in the `/docs/assets/images`
+folder and use the jekyll base.url reference as done in this template
+or see https://jekyllrb.com/docs/liquid/tags/#links.
+  using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 31 AUGUST 2023
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck<br>
+01.05 - Isala Van Diest
+
+---
+class: left, top
+
+## ROOMIE: room reservation
+
+```
+> if (isFALSE(roomie)) {
++   warning("Please confirm asap the room reservation on the roomie")
++ }
+Warning message:
+Please confirm asap the room reservation on the roomie
+```
+
+---
+class: left, top
+
+## Introduction: INBO goes spatial
+
+Geospatial visualization in R is evolving fast. Do you know INBO is very active in this domain? See the R package [inbospatial](https://github.com/inbo/inbospatial): a collection of useful R functions for spatial data.
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20230831/20230831_example_inbospatial.png)
+
+<small>Credits picture: Floris Vanderhaege
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20230831/20230831_badge.png)
+
+---
+class: left, top
+
+What do we mean with geospatial data?
+
+### Spatial vector data
+
+Points, lines, polygons, etc. Topic of the coding club of [27 June](https://inbo.github.io/coding-club/sessions/20230627_spatial_data_in_r.html#1)
+
+- **sf** : newest and recommended package
+- **sp** : its predecessor (retirement soon)
+
+### Spatial raster data
+
+Topic of the coding club of [24 November 2022](https://inbo.github.io/coding-club/sessions/20221124_coding_club_rasters.html)
+
+- [**terra**](https://rspatial.github.io/terra/reference/terra-package.html) : newest and recommended package
+- [**raster**](https://rspatial.org/raster/pkg/index.html) : its predecessor (no support for sf), match with sp
+- [**stars**](https://r-spatial.github.io/stars/): for **s**patio**t**emporal **ar**ray**s**. Not covered here, but important for people involved in remote sensing where data often comes in the form of dense arrays, with space and time being array dimensions.
+
+For more info, read this great [article](https://geocompx.github.io/post/2021/spatial-classes-conversion/) about conversions among different spatial classes in R.
+
+---
+class: left, top
+
+# Plot vs maps
+
+You can **plot** geospatial data.
+
+But a plot is not a map, as chocolate is not (yet) a chocolate pie.
+You need one "ingredient" more. What?
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20230831/20230831_plot.png)
+
+---
+class: left, top
+
+# From plots to maps
+
+You need tiles.
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20230831/20230831_map.png)
+
+Example above uses [OpenStreetMap](https://www.openstreetmap.org/) tiles.
+
+---
+class: left, top
+
+# Tiles
+
+You have a lot of tiles. Some are available for being used with an open license, others not.
+
+There are tiles covering the entire world, or just a specific region (= Flanders, see the [Web Map (Tile) Service](https://www.vlaanderen.be/digitaal-vlaanderen/onze-oplossingen/geografische-webdiensten/ons-gis-aanbod/raadpleegdiensten#wat-is-een-wmts) of the Flemish Authority)
+
+* Image from [README](https://github.com/riatelab/maptiles#readme) of maptiles package
+![:scale 80%]({{ site.baseurl}}/assets/images/20230831/20230831_tiles.png)
+
+---
+class: left, top
+
+# Static vs dynamic maps
+
+**Static maps**: data on the map and the tiles of the background are fixed: no zooming in/out. Easy for pdfs or other static content.
+
+**dynamic maps**: zooming in/out is possible. Perfect for web pages.
+
+---
+class: left, top
+
+# Packages used today
+
+There are a lot of packages. Really a lot! What should we use? Choose preferably the actively maintained packages.
+
+Today we will mainly use:
+
+- ggplot: allows to plot geospatial vector data. No maps!
+- [maptiles](https://github.com/riatelab/maptiles): the best way to add tiles to your plots. A lot of tiles are freely available for the entire world. Option to use also specific endpoints (tile repositories on the web)
+- [mapview](https://r-spatial.github.io/mapview/): the package for creating interactive maps very quickly and conveniently. Fill the gap of quick (not presentation grade) interactive plotting to examine and visually investigate both aspects of spatial data. It uses [Leaflet](http://leafletjs.com/) or [Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/api/)+ [Deck.gl](https://deck.gl/) javascript libraries in the background via [mapdeck](https://symbolixau.github.io/mapdeck/articles/mapdeck.html). Your first choice before moving to leaflet.
+- leaflet: a R wrapper for the very popular [Leaflet JavaScript library](http://leafletjs.com/) by [Vladamir Agafonkin](http://agafonkin.com/en/). A very good package for fine tuning dynamic maps. A little knowledge of html is needed for labels and pop ups.
+
+---
+class: left, top
+
+Install the packages:
+
+```r
+install.packages(
+  c("sf", "terra", "maptiles", "leaflet", "leafem", "mapview",
+    "htmltools", "crosstalk", "DT"
+  )
+)
+```
+
+Load the packages:
+
+```r
+library(tidyverse)
+library(sf)
+library(terra)
+library(maptiles)
+library(mapview)
+library(leaflet)
+library(htmltools)
+library(leafem)
+library(crosstalk)
+library(DT)
+```
+
+---
+class: center, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+<br> No yellow sticky notes online. We use hackmd (see next slide) but basic principle doesn't change.
+
+---
+class: center, top
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/qWAs40BeR_GwtCtnvLdJ3w?both
+
+<iframe src="https://hackmd.io/qWAs40BeR_GwtCtnvLdJ3w?edit" height="450px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+- Download everything automatically via `inborutils::setup_codingclub_session()`
+- manually*, from [data/20230831](https://github.com/inbo/coding-club/blob/master/data/20230831/) and [src/20230831](https://github.com/inbo/coding-club/blob/master/src/20230831). Place the R script in your folder `src/20230831/` and data in `data/20230831/`.
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data and code files description
+
+1. [20230831_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20230831/20230831_challenges.R): R script to start from.
+2. [20230831_lu_nara_2016_100m.tif](https://github.com/inbo/coding-club/blob/master/data/20230831/20230831_lu_nara_2016_100m.tif): a categorical raster of land use of Flanders with 9 land use categories. Thanks, NARA team!
+3. [20230831_protected_areas.gpkg](https://github.com/inbo/coding-club/blob/master/data/20230831/20230831_protected_areas.gpkg): geopackage with NATURA2000 protected areas
+4. [20230831_nitrogen.tif](https://github.com/inbo/coding-club/blob/master/data/20230831/20230831_nitrogen.tif): nitrogen deposit in Flanders in 2016.
+5. [20230831_n_moths.txt](https://github.com/inbo/coding-club/blob/master/data/20230831/20230831_n_moths.txt): number of moth species at UTM 1x1km cell level in Pajottenland.
+6. [20230831_utm1km_Pajottenland.gpkg](https://github.com/inbo/coding-club/blob/master/data/20230831/20230831_utm1km_Pajottenland.gpkg): geopackage with UTM 1x1km cells covering the [Pajottenland](https://en.wikipedia.org/wiki/Pajottenland) region.
+7. [20230831_Pajottenland_municipalities.gpkg](https://github.com/inbo/coding-club/blob/master/data/20230831/20230831_Pajottenland_municipalities.gpkg): geopcakge with the municipalities located in the Pajottenland region.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1 - plots
+
+1. Vector data (continuous variable): how to plot the Natura2000 areas with ggplot? **Fill** the areas based on their `Shape_area` using viridis palette. Try to do the same for the Pajottenland municipalities using column `Shape_Area` or try to plot other columns as well. The code to read the spatial files is provided.
+
+2. Raster data (continuous variable): plot the nitrogen deposition in Flanders setting a **legend** with **range** from 10 to 47 and color scale `hcl.colors(n = 100, palette = "Blue-Red 3")`. See more about color scales via help `?grDevices::hcl.colors()`. Check all
+possible color palettes via `hcl.pals()` and try out some other palettes. The
+code to read the nitrogen deposition raster is provided.
+
+3. Raster data (categorical values): plot the land use with the legend
+provided as data.frame. Add a title to the plot as well. The code to read the land use raster and build the legend values (data.frame) is provided.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2 - static maps
+
+1. Let's make a static map of the borders of the natura2000 areas in Flanders via R package [maptiles](https://github.com/riatelab/maptiles#readme). Use OpenStreetMaps tiles as background. Do not forget to add text with credits for the tiles. Hint: see demo in maptiles's [README](https://github.com/riatelab/maptiles#demo).
+2. Use another tile provider and assign colors to the Natura2000 areas based on their area (column `Shape_area`)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3 - dynamic maps: vector data
+
+Using [mapview](https://r-spatial.github.io/mapview/):
+
+1. Show number of moth species per UTM 1x1km grid cell on a map. The color of the cells should represent the number of moth species. Use the provided code to read and manipulate the source datasets. Display the legend. Set the contour of the polygons in red. What happens when clicking on an area? Beautiful, isn't?
+
+2. Let's fine tune the previous  map. Use "OpenStreetMap" map tiles only, set
+the opacity of the areas to 0.9 and the contour lines to 0.2. Set `"number of
+moth species"` as legend title and layer name. Hint:
+mapview [advance vignette](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html)
+
+3. Create a separate map with the municipalities of Pajottenland. Use black as line color. Set
+ layer name as `"municipality"`. Again, allow Open Street Map tiles only.
+ No legend. Set line width of the polygons to 1 and set opacity of the polygons to 0.
+
+4. Combine the two maps. Make sure the hover text still shows the number of
+ moth species.
+
+5. You have already installed leafem, so you should see by default the mouse coordinates (lat, lon) and zoom level on top left. If not, check how to add them in the [extra leaflet functionalities](https://r-spatial.github.io/mapview/articles/mapview_06-add.html) vignette. Add also the INBO coding club logo to the map with a link to the INBO coding club homepage: https://inbo.github.io/coding-club/. Link to the image is provided in the R code.
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3 - dynamic maps: rasters
+
+Based on [mapview
+documentation](https://r-spatial.github.io/mapview/articles/mapview_01-basics.html#raster-data),
+we can also make dynamic maps with rasters! Notice that mapview
+doesn't support terra's rasters (class `SpatRaster`):
+
+```
+> mapview(lu_nara_2016, maxpixels = 3434753)
+Error in (function (classes, fdef, mtable)  :
+             unable to find an inherited method for function ‘mapView’ for signature ‘"SpatRaster"’
+```
+
+Conversion to a `RasterLayer` (raster package) is needed and code is provided based on the [conversion article](https://geocompx.github.io/post/2021/spatial-classes-conversion/).
+See on [advanced
+vignette](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html)
+how to define a range for the nitrogen raster values.
+
+---
+class: left, top
+
+## BONUS CHALLENGE 1 - leaflet
+
+leaflet or not to leaflet? It's up to you! You can stick to work with mapview or you can go full throttle with leaflet. One thing is sure: the [leaflet for R](https://rstudio.github.io/leaflet/) documentation is one of the best package documentations ever written!
+
+1. To challenge yourself with leaflet, create a map with a leaflet map similar to the one you created with
+mapview in challenge 3. Some differences: make sure that the label shows the
+number of occurrences while the pop up diplays only the `TAG` of the UTM cell.
+The color of the areas should linked via viridis palette to the number of moth
+species. Show the legend as well on the bottomright. Use `"number of moth
+species"` as legent title. Hint:
+[choropleths](https://rstudio.github.io/leaflet/choropleths.html) chapter
+
+2. Another kind of map now. Instead of polygons, let's use **circle markers**.
+Place the circles at the center of the UTM cells by using sf centroid
+function: `st_centroid(n_moths)` (code provided). Use same color palette as in 1. Set radius
+of the circles as `n/10`. Same popup and label text. Remove the stroke, i.e.
+the border of the circles. Set opacity of the circles to 0.5. You should end up with something like the picture below.
+
+3. Add municipalities as a second layer to the map in 1. Set color of polygon lines to red and do not fill the polygons.
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20230831/20230831_circle_markers.png)
+
+---
+class: left, top
+
+## BONUS CHALLENGE: leaflet + crosstalk
+
+1. Now we combine a leaflet map with a data table via [crosstalk](https://rstudio.github.io/crosstalk/index.html). Unfortunately, crosstalk doesn't support polygons at the moment (see https://github.com/rstudio/crosstalk/issues/55).
+So, use the leaflet map with circle markers you created in the second exercise of
+BONUS CHALLENGE 1. Hint: use the R package [DT](https://rstudio.github.io/DT/)
+to display the data.frame as a "HTML table"
+
+2. How to add a **filter slider** based on the number of moth species? The slider shoud start from 0 and have steps of 5. Name the slider as `"Number of moth species"`. Hint: you need to put the code in a RMarkdown file and knit it to  combine the slider and the leaflet + table together.
+
+You should end up with something like this:
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20230831/20230831_crosstalk_slider.png)
+
+---
+class: left, top
+
+# The package of the month - Amber's choice
+
+Do you dream of switching from static to dynamic maps with one line of code? Well, give [tmap](https://r-tmap.github.io/tmap/) a try! Give a look to the [Get Started](https://r-tmap.github.io/tmap/articles/tmap-getstarted.html) page:
+
+```
+tmap_mode("view") # to dynamic maps
+tmap_mode("plot") # to static maps
+```
+
+As for mapview, the dynamic maps are leaflet based maps. Less flexible than mapview but the possibility to switch from static to dynamic visualization is really a nice-to-have.
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20230831/20230831_tmap.png)
+
+---
+class: left, top
+
+# Resources
+
+- solutions and video recording will be available soon
+- [maptiles](https://github.com/riatelab/maptiles#readme) documentation
+- [mapview](https://r-spatial.github.io/mapview/) documentation
+- [leaflet](https://rstudio.github.io/leaflet/) for R documentation
+- [crosstalk](https://rstudio.github.io/crosstalk/index.html) documentation
+- Are you a ggplot fan? The package [**ggmap**](https://github.com/dkahle/ggmap#readme) is something for you!
+- INBO's R package: [inbospatial](https://github.com/inbo/inbospatial): a collection of useful R functions for spatial data.
+- we didn't have time to cover [mapdeck](https://symbolixau.github.io/mapdeck/index.html). However, it's really worth to test it. You can use it via mapview as well!
+- Some more challenges with leaflet? Check the INBO coding club session of [Dec 9, 2022](https://inbo.github.io/coding-club/sessions/20211209_geospatial_data_visualization_in_r.html#1)
+
+---
+class: left, top
+
+# Coding club topics 2023: you vote!
+
+Every month you can vote among **two topics**!
+
+Poll for September's coding club is now officially open!
+Let us know your favorite asap.
+
+https://forms.gle/vDDUk1acXntQ29ZP6
+
+You can choose between:
+
+- How to write R functions: from stand alone functions up to contributing to an R package
+- From code to reports: unravelling RMarkdown and bookdown
+
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room number and name  -->
+Topic: to be decided. See [form](https://forms.gle/vDDUk1acXntQ29ZP6) <br>
+Room:  HT - 01.71 - Frans Breziers <br>
+Date: **26/09/2023**, van **10:00** tot **12:30** <br>
+Help needed with packages or setup? You are welcom from **9:45**
