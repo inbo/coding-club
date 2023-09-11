@@ -1,0 +1,118 @@
+---
+title: "Geospatial data visualisation in R: bonus challenge 2 - leaflet + crosstalk"
+output: html_document
+date: "2023-08-31"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Note**: only the knitted document (html file) can correctly show the solution of the third exercise.
+
+Libraries:
+
+```{r message=FALSE, warning=FALSE}
+library(crosstalk)
+library(leaflet)
+library(htmltools)
+library(DT)
+library(sf)
+```
+
+# Bonus challenge 1
+
+## Prepare data
+
+Read and prepare data (same code as provided in `20230831_challenges.R`):
+
+```{r read_data}
+# n_moths
+n_moths <- readr::read_csv("./data/20230831/20230831_n_moths.txt")
+
+# UTM1km cells of Pajottenland
+utm1_pajottenland <- sf::st_read(
+  "./data/20230831/20230831_utm1km_Pajottenland.gpkg"
+)
+
+# join data
+n_moths <- utm1_pajottenland %>%
+  dplyr::left_join(n_moths, by = "TAG")
+```
+
+### From polygons to points
+
+Generate centroids of the UTM 1x1km cells:
+
+```{r centroids}
+n_moths_centroids <- sf::st_centroid(n_moths)
+```
+
+### Color palette
+
+Crete the color palette from column `n` with number of moth species:
+
+```{r palette}
+pal <- leaflet::colorNumeric(
+  palette = "viridis",
+  domain = n_moths$n)
+```
+
+
+## Exercise 1
+
+1. Combine leaflet with data table via
+[crosstalk](https://rstudio.github.io/crosstalk/index.html). Unfortunately,
+crosstalk doesn't support polygons at the moment (see
+https://github.com/rstudio/crosstalk/issues/55). So, use the leaflet map with
+circle markers you created in the last exercise of BONUS CHALLENGE 1. Hint:
+everything you are doing is html. So, use the R package
+[DT](https://rstudio.github.io/DT/) to display the data.frame as HTML
+"tables".
+
+```{r bonus_challenge_2_1}
+shared_n_moths_centroids <- crosstalk::SharedData$new(n_moths_centroids)
+
+# create same leaflet as before but starting from new object wich allows us to
+# link data to circles
+map_shared_n_moths <- leaflet(shared_n_moths_centroids) %>%
+  addTiles() %>%
+  addCircleMarkers(popup = ~htmlEscape(TAG),
+                   label = ~htmlEscape(n),
+                   radius = ~n/10,
+                   color = ~pal(n),
+                   stroke = FALSE,
+                   fillOpacity = 0.5)
+
+# create table with the data
+data_table <- datatable(
+  shared_n_moths_centroids,
+  extensions="Scroller",
+  style="bootstrap",
+  class="compact",
+  width="100%",
+  options=list(deferRender=TRUE, scrollY=300, scroller=TRUE)
+)
+
+# combine map with table
+bscols(map_shared_n_moths, data_table)
+```
+
+## Exercise 2
+
+Add filter slider:
+
+```{r bonus_challenge_3}
+filter_slider(id = "n",
+              label = "Number of moth species",
+              sharedData = shared_n_moths_centroids,
+              column = ~n,
+              step = 5,
+              # start from zero to have 0 - 10 - 20 ...ticks
+              min = 0,
+              width = max(n_moths$n)
+)
+bscols(map_shared_n_moths, data_table)
+```
+
+That's all. I hope you enjoyed it! 
