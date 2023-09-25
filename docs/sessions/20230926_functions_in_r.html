@@ -385,20 +385,29 @@ Let's add our first function! And let's do it **together**!
 2. Put the function `get_obs()` in `get_obs.R`
 3. Do not load packages in R file. Add section `Imports:` in `DESCRIPTION` and add the package names one per line comma separated. Use Tab indentation.
 4. Use packagename::function_name() syntax everywhere in your funtion. This helps to avoid conflicts among packages if any and some notes while installing the package (step xx). Future-you will also be happy to understand which function you use and from which package.
-4. Put function documentation above the function. Click Code -> Insert Roxygen Skeleton and fill in the fields provided. About `@examples`, in our case, the text file to read is not part of the package. So, our example is just to be read, not to be run. We will then put the code within a `\dontrun{}` section. That part of code will be copy pasted in documentation.
-5. Compile documentation with `devtools::document()`. Notice that this creates a new subdirectory in your folder: `./man`, which stays for **manual**. It contains all documentation you wrote.
-6. Install package clicking on `Install` in `Build` pane.
-7. Click on `Checks` to make a basic check of your package.
-8. Once in a while is worth to make an "INBO style check" using `checklist::check_package()`. A website is genereated for you, isn't cool? It's all contained in folder `./doc`. Some failures at this stage are normal. Your package is not on GitHub for example, but local on your laptop.
-9. You could alternatively use specific checks, e.g. `checklist::check_spelling()`, `checklist::check_filename()`, `checklist::check_lintr()`.
+5. Put function documentation above the function. Click Code -> Insert Roxygen Skeleton and fill in the fields provided. About `@examples`, in our case, the text file to read is not part of the package. So, our example is just to be read, not to be run. We will then put the code within a `\dontrun{}` section. That part of code will be copy pasted in documentation.
 
 ---
 class: left, top
 
 # Challenge 3A: from stand alone functions to R Packages
 
+We are almost there. Time to let your machine work and enjoy the magic.
+
+6. Compile documentation with `devtools::document()`. Notice that this creates a new subdirectory in your folder: `./man`, which stays for **manual**. It contains all documentation you wrote.
+7. Install package clicking on `Install` in `Build` pane.
+8. Click on `Checks` to make a basic check of your package.
+9. Once in a while is worth to make an "INBO style check" using `checklist::check_package()`. A website is genereated for you, isn't cool? It's all contained in folder `./doc`. Some failures at this stage are normal. Your package is not on GitHub for example, but local on your laptop.
+9. You could alternatively use specific checks, e.g. `checklist::check_spelling()`, `checklist::check_filename()`, `checklist::check_lintr()`.
+
+---
+class: left, top
+
+# Challenge 3B: from stand alone functions to R Packages
+
 I know, it can feel overwhelming. Still, let's try to follow the previous steps to add the other functions to your package! Hint: do not add all functions as a bulk, but repeat all steps function by function. That's how even the most advanced programmers proceed.
 
+Congrats, dr Z: your package is worth an award! And you are worth an Oscar :-)
 
 ---
 class: left, top
