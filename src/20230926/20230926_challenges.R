@@ -18,6 +18,7 @@ library(docstring) #to create help from documentation of stand-alone functions
 ## CODE TO BE CONVERTED TO FUNCTIONS ##
 #######################################
 
+
 # STEP 1: read observations
 
 ## define species
@@ -37,6 +38,7 @@ file_name <- paste0("20230926_", species, "_2010", ".txt")
 ## read file
 ha_2010 <- read_tsv(paste0("./data/20230926/",
                            file_name))
+
 
 # STEP 2: data cleaning, remove imprecise or unverified observations, absences
 # Remove data with coordinate uncertainty higher than 1000 meters
@@ -63,6 +65,7 @@ ha_2010 <-
     "excluded"
   ))
 
+
 ## Step 3: get the grid cell code each observation belongs to and add it to
 ## the data.frame. We use grid cells of 0.1 lon degrees x 0.05 lat degrees
 ha_2010 <-
@@ -71,6 +74,7 @@ ha_2010 <-
       "01x005",
       "E", floor(decimalLongitude/0.1),
       "N", floor(decimalLatitude/0.05)))
+
 
 ## Step 4: calculate number of observations and the number of individuals in
 ## each grid cell

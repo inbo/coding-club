@@ -169,7 +169,7 @@ class: left, top
 
 Today you play the role of a researcher, dr Z. She received in January 2011 observations of the asian ladybeetle (_Harmonia axyridis_) collected in the surroundings of Antwerp by a contractor. These observations are stored in [20230926_harmonia_axyridis_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20230926/20230926_harmonia_axyridis_2010.txt). She wrote some code to read the observations, do some data wrangling and plot the results. You can find the code in [20230926_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20230926/20230926_challenges.R).
 
-What seemed to be a one-shot anlysis, becomes very soon something more: she receives a similar file from another contractor containing observations of the bow-winged grasshopper (_Chorthippus biguttulus_) collected in the same area: [20230926_chorthippus_biguttulus_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20230926/20230926_chorthippus_biguttulus_2010.txt). Important: the columns containing the coordinates are called differently.
+What seemed to be a one-shot anlysis, becomes very soon something more: she receives a similar file from another contractor containing observations of the bow-winged grasshopper (_Chorthippus biguttulus_) collected in the same area: [20230926_chorthippus_biguttulus_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20230926/20230926_chorthippus_biguttulus_2010.txt).
 
 ---
 class: left, top
@@ -298,10 +298,7 @@ How does Dr Z proceed to write the following functions?
     -  `max_coord_uncertain`: maximum of `coordinateUncertaintyInMeters` (numeric), default value as in script.
     - `issues_to_discard`: issues whose obs have to be filtered out (character vector), default value as in script.
     - `occurrenceStatus_to_discard`: the `occurrenceStatus` values whose obs have to be filtered out (character vector), default value as in script.
-2. `calc_grid_cell()`*:  function to return the input data.frame with an extra column containing the cell code (step 3). Allow users to specify different cell sizes (lat/lon). Default values as in script.
-
-<br>
-<small> __\* Note__: `!!sym()` commando can help you to pass the longitude/latitude column names as variables in the `mutate()`</small>
+2. `calc_grid_cell()`:  function to return the input data.frame with an extra column containing the cell code (step 3). Allow users to specify different cell sizes (lat/lon). Default values as in script.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -383,7 +380,7 @@ Let's add our first function! And let's do it **together**!
 1. Create R file `get_obs.R` in `./R` subdirectory
 2. Put the function `get_obs()` in `get_obs.R`
 3. Do not load packages in R file. Add a section `Imports:` in `DESCRIPTION` and add the package names one per line, comma separated. Use Tab indentation.
-4. Use packagename::function_name() syntax everywhere in your funtion. This helps to avoid conflicts among packages if any add some notes while installing the package (step xx). Future-you will also be happy to understand which function you use and from which package.
+4. Use `packagename::function_name()` syntax everywhere in your funtion. This helps to avoid conflicts among packages, if any. Future-you will also be happy to understand exactly what your code is doing. Last but not least, by doing so you avoid that a basic package (see step 3 in next slide) will return some notes.
 5. Put function documentation above the function. Click Code -> Insert Roxygen Skeleton and fill in the fields provided. About `@examples`, in our case, the text file to read is not part of the package. So, our example is just to be read, not to be run. We will then put the code within a `\dontrun{}` section. That part of code will be copy-pasted in the documentation.
 
 ---
