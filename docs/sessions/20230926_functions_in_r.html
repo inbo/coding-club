@@ -399,8 +399,8 @@ Let's add our first function! And let's do it **together**!
 1. Create R file `get_obs.R` in `./R` subdirectory
 2. Put the function `get_obs()` in `get_obs.R`
 3. Do not load packages in R file. Add a section `Imports:` in `DESCRIPTION` and add the package names one per line, comma separated. Use Tab indentation.
-4. Use `packagename::function_name()` syntax everywhere in your funtion. This helps to avoid conflicts among packages, if any. Future-you will also be happy to understand exactly what your code is doing. Last but not least, by doing so you avoid that a basic package (see step 3 in next slide) will return some notes.
-5. Put function documentation above the function. Click Code -> Insert Roxygen Skeleton and fill in the fields provided. About `@examples`, in our case, the text file to read is not part of the package. So, our example is just to be read, not to be run. We will then put the code within a `\dontrun{}` section. That part of code will be copy-pasted in the documentation.
+4. Put function documentation above the function. Click Code -> Insert Roxygen Skeleton and fill in the fields provided. About `@examples`, in our case, the text file to read is not part of the package. So, our example is just to be read, not to be run. We will then put the code within a `\dontrun{}` section. That part of code will be copy-pasted in the documentation.
+5. Use `packagename::function_name()` syntax everywhere in your funtion. This helps to avoid conflicts among packages, if any. Future-you will also be happy to understand exactly what your code is doing. Last but not least, by doing so you simplify your life at documentation level, as the  `@importFrom package function` Roxygen syntax is not needed anymore (still needed only for symbols like `%>%`).
 
 ---
 class: left, top
