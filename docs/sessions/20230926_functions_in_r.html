@@ -291,17 +291,19 @@ class: left, top
 
 # Challenge 2
 
-1. Write a function called `clean_data()` to return the cleaned data.frame without suspected or not enough precise observations (step 2). Input arguments:
+How does Dr Z proceed to write the following functions?
+
+1. `clean_data()`: function to return the cleaned data.frame without suspected or not enough precise observations (step 2). Input arguments:
     - `df`: data.frame with observations
     -  `max_coord_uncertain`: maximum of `coordinateUncertaintyInMeters` (numeric), deafult value as in script.
     - `issues_to_discard`: issues whose obs have to be filtered out (character vector), default value as in script.
     - `occurrenceStatus_to_discard`: the `occurrenceStatus` values whose obs have to be filtered out (character vector), default value as in script.
-2. Write a function called (`calc_grid_cell()`) to return the input data.frame with an extra column containing the cell code (step 3). Allow users to specify different cell sizes (lat/lon). Default values as in script
-3. Write a function called (`calc_n_obs_ind`) to calculate number of observations and individuals in each grid cell (step 4)
-4. Write a function called (`plot_distr_cells()`) to create a histogram showing the cells distribution for both number of observations and number of individuals (step 5). Allow the user to choose the histogram binwidth. Default value as in script. Notice also that there are other hardcoded values in title which should be transformed to variables.
+2. `calc_grid_cell()`:  function to return the input data.frame with an extra column containing the cell code (step 3). Allow users to specify different cell sizes (lat/lon). Default values as in script
+3. `calc_n_obs_ind`: function to calculate the number of observations and individuals in each grid cell (step 4)
+4. `plot_distr_cells()`: function to create a histogram showing the cells distribution for both number of observations and number of individuals (step 5). Allow the user to choose the histogram binwidth. Default value as in script. Notice also that there are other hardcoded values in title which should be transformed to variables.
 
 <br>
-<small> __\* Note__: `!!sym()` commando can help you to use the longitude/latitude colnames in the `mutate()` step</small>
+<small> __\* Note__: `!!sym()` commando can help you to use the longitude/latitude colnames in the `mutate()`</small>
 
 ---
 class: left, top
