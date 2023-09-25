@@ -247,7 +247,7 @@ class: left, top
 
 # Intermezzo 2: document your functions with style
 
-You can create a roxygen documentation Skeleton via `Code` -> `Insert Roxygen Skeleton`. Move that part in your stand-alone function and
+You can create a roxygen documentation Skeleton via `Code` -> `Insert Roxygen Skeleton`. Move that part in your stand-alone function and write your documentation.
 
 ```r
 install.packages("docstring")
@@ -295,7 +295,7 @@ How does Dr Z proceed to write the following functions?
 
 1. `clean_data()`: function to return the cleaned data.frame without suspected or not enough precise observations (step 2). Input arguments:
     - `df`: data.frame with observations
-    -  `max_coord_uncertain`: maximum of `coordinateUncertaintyInMeters` (numeric), deafult value as in script.
+    -  `max_coord_uncertain`: maximum of `coordinateUncertaintyInMeters` (numeric), default value as in script.
     - `issues_to_discard`: issues whose obs have to be filtered out (character vector), default value as in script.
     - `occurrenceStatus_to_discard`: the `occurrenceStatus` values whose obs have to be filtered out (character vector), default value as in script.
 2. `calc_grid_cell()`*:  function to return the input data.frame with an extra column containing the cell code (step 3). Allow users to specify different cell sizes (lat/lon). Default values as in script.
@@ -319,7 +319,7 @@ class: left, top
 
 # Intermezzo 3: from stand alone functions to R Packages
 
-You use a box to put your stuff, right? Well, programmeRs use a package to put their functions. Different boxes for different objects = different packages for different scopes. So, **what is a package**? A package is a collection of functions.
+You use a box to put your stuff in, right? Well, programmeRs use a package to put their functions in. Different boxes for different objects = different packages for different scopes. So, **what is a package**? A package is a collection of functions.
 
 ![:scale 70%]({{ site.baseurl}}/assets/images/20230926/20230926_boxes.jpg)
 
@@ -382,9 +382,9 @@ Let's add our first function! And let's do it **together**!
 
 1. Create R file `get_obs.R` in `./R` subdirectory
 2. Put the function `get_obs()` in `get_obs.R`
-3. Do not load packages in R file. Add section `Imports:` in `DESCRIPTION` and add the package names one per line comma separated. Use Tab indentation.
-4. Use packagename::function_name() syntax everywhere in your funtion. This helps to avoid conflicts among packages if any and some notes while installing the package (step xx). Future-you will also be happy to understand which function you use and from which package.
-5. Put function documentation above the function. Click Code -> Insert Roxygen Skeleton and fill in the fields provided. About `@examples`, in our case, the text file to read is not part of the package. So, our example is just to be read, not to be run. We will then put the code within a `\dontrun{}` section. That part of code will be copy pasted in documentation.
+3. Do not load packages in R file. Add a section `Imports:` in `DESCRIPTION` and add the package names one per line, comma separated. Use Tab indentation.
+4. Use packagename::function_name() syntax everywhere in your funtion. This helps to avoid conflicts among packages if any add some notes while installing the package (step xx). Future-you will also be happy to understand which function you use and from which package.
+5. Put function documentation above the function. Click Code -> Insert Roxygen Skeleton and fill in the fields provided. About `@examples`, in our case, the text file to read is not part of the package. So, our example is just to be read, not to be run. We will then put the code within a `\dontrun{}` section. That part of code will be copy-pasted in the documentation.
 
 ---
 class: left, top
@@ -394,9 +394,9 @@ class: left, top
 We are almost there. Time to let your machine work and enjoy the magic.
 
 6. Compile documentation with `devtools::document()`. Notice that this creates a new subdirectory in your folder: `./man`, which stays for **manual**. It contains all documentation you wrote.
-7. Install package clicking on `Install` in `Build` pane.
+7. Install the package clicking on `Install` in the `Build` pane.
 8. Click on `Checks` to make a basic check of your package.
-9. Once in a while is worth to make an "INBO style check" using `checklist::check_package()`. A website is genereated for you, isn't cool? It's all contained in folder `./doc`. Some failures at this stage are normal. Your package is not on GitHub for example, but local on your laptop.
+9. Once in a while, it is worth to make an "INBO style check" using `checklist::check_package()`. A website is genereated for you, isn't it cool? It's all contained in the folder `./doc`. Some failures at this stage are normal. Your package is not on GitHub for example, but local on your laptop.
 9. You could alternatively use specific checks, e.g. `checklist::check_spelling()`, `checklist::check_filename()`, `checklist::check_lintr()`.
 
 ---
@@ -432,7 +432,7 @@ class:left, top
 
 - Challenges solutions will be available soon
 - Video recording will be available on vimeo soon
-- Do you want to learn more about functions?  Get a more [formal framework](https://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/functions.pdf), go [in depth](http://adv-r.had.co.nz/Functions.html#function-arguments), do a check [under the hood](https://swcarpentry.github.io/r-novice-inflammation/14-supp-call-stack/) or learn more about [programming with `dplyr`](https://dplyr.tidyverse.org/articles/programming.html).
+- Do you want to learn more about functions?  Get a more [formal framework](https://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/functions.pdf), go [in depth](http://adv-r.had.co.nz/Functions.html#function-arguments), do a check [under the hood](http://swcarpentry.github.io/swc-releases/2017.08/r-novice-inflammation/14-supp-call-stack/) or learn more about [programming with `dplyr`](https://dplyr.tidyverse.org/articles/programming.html).
 - The [INBO styleguide for R code](https://inbo.github.io/tutorials/tutorials/styleguide_r_code/).
 - The [checklist](https://packages.inbo.be/checklist/index.html) package: a set of checks for R packages and R projects.
 - Some advices from [tidyverse style guide](https://style.tidyverse.org/documentation.html) can also be useful.
