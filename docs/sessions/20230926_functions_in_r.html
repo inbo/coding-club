@@ -75,8 +75,8 @@ class: left, top
 
 # Introduction: When SHOULD we use functions?
 
-- the "do something" is actually a workflow: split it in (small) functions
-- the "do something" is very short (e.g. a one-line formula) but often used: putting it in a function will give it an understandable name and will avoid typos
+- the `"do something"` is actually a workflow: split it in (small) functions
+- the `"do something"` is very short (e.g. a one-line formula) but often used: putting it in a function will give it an understandable name and will avoid typos
 
 .center[![:scale 60%]({{ site.baseurl}}/assets/images/20230926/20230926_logical_process_from_just_code_to_functions.png)
 ]
@@ -361,14 +361,14 @@ class: left, top
 
 # Intermezzo 3: from stand alone functions to R Packages
 
-Your R package is a new directory with the name of the package. What's inside it?
-A lot of things, but not all of those things are mandatory or need to be edited.
+Your R package is a new directory named as the package. What's inside it?
+A lot of things, but not all of those things are mandatory or need to be edited. The most important files/directories:
 
 - `entomologist.Rproj` : the R Studio project to launch. Yes, when working on a package it's better to do it by opening its related project
 - `DESCRIPTION`: a text file with all detailed informations you provided such as authorship, title, description, ...
 - ./R: subdirectory where you MUST put your R files containing your functions. Rule of thumb: one function per R file, filename = function name, e.g. `get_obs.R` containing function `get_obs()`.
 
-.center[![:scale 70%]({{ site.baseurl}}/assets/images/20230926/20230926_package_structure.png)]
+.center[![:scale 60%]({{ site.baseurl}}/assets/images/20230926/20230926_package_structure.png)]
 
 ---
 class: left, top
