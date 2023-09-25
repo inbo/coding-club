@@ -101,7 +101,7 @@ Can a R function return multiple outputs?
 
 NO. R functions return only **one output**: `return(my_output)`
 
-But you can put your outputs (e.g. a data.frame and a plot) in a list. A named list will make the future-you and any other using the function very happy: documentation begins by naming things :-)
+But you can put your outputs (e.g. a data.frame and a plot) in a list. A named list will make everybody (future-you included) very happy: documentation begins by naming things :-)
 
 ```r
 library(tidyverse)
@@ -163,15 +163,6 @@ You can download the material of today:
 ---
 class: left, top
 
-# Load libraries and data
-
-```r
-library(tidyverse)
-```
-
----
-class: left, top
-
 .center[![:scale 10%]({{ site.baseurl}}/assets/images/20230926/20230926_film.png)]
 
 # The data world of doctor Z
@@ -193,9 +184,9 @@ She also learns that she will have to redo the same analysis in the future, for 
 
 And, she is afraid, new data of bow-winged grasshopper will find her sooner or later.
 
-I think you can find yourself in the role of dr Z in this Oscar awarded movie.
+I think you can find yourself in the role of dr Z.
 
-Before starting, a best practice reminder: write the functions in a *separate file*.
+Before starting, a **best practice reminder**: write the functions in a *separate file*.
 You can call it `20230926_functions.R`. You can use your functions in the challenge file by first *sourcing* this file, e.g. `source("./src/20230926/20230926_functions.R")`.
 
 ---
