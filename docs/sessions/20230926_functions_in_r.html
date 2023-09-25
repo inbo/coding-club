@@ -1,0 +1,438 @@
+---
+layout: presentation
+title: Functions in R
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 26 SEPTEMBER 2023
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+
+01.71 - Frans Breziers
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20230926/20230926_badge.png)
+
+---
+class: left, middle
+
+# Introduction: a function (in R)
+
+.center[![:scale 60%]({{ site.baseurl}}/assets/images/20230926/20230926_function_flow.png)]
+
+```r
+my_function <- function(var1) {
+    # "do something" with var1 to generate an `output`
+    # example: var1 is a vector of numbers.
+    # Return the even numbers out of var1
+    output <- var1[var1 %%2 == 0]
+    return(output)
+}
+
+# use your function as many times as you want
+input1 <- c(2, 5, 15)
+my_value1 <- my_function(input1)
+my_value1
+
+input2 <- c(1, 6, 9, 10, 12, 21)
+my_value2 <- my_function(input2)
+my_value2
+```
+
+---
+class: left, middle
+
+# Introduction: When do we ABSOLUTELY need functions?
+
+If both these conditions are true:
+
+- you have to `"do something"` longer than one line of code
+- you need to `"do something"` at least for two different inputs
+
+---
+class: left, top
+
+# Introduction: When SHOULD we use functions?
+
+- the "do something" is actually a workflow: split it in (small) functions
+- the "do something" is very short (e.g. a one-line formula) but often used: putting it in a function will give it an understandable name and will avoid typos
+
+.center[![:scale 60%]({{ site.baseurl}}/assets/images/20230926/20230926_logical_process_from_just_code_to_functions.png)
+]
+
+---
+class: left, top
+
+# Introduction: good names
+
+Functions are the building blocks of your data analysis: give your functions understandable and short enough names. It's better for future-you, it's better for everybody.
+
+
+.center[![:scale 70%]({{ site.baseurl}}/assets/images/20230926/20230926_functions_as_building_blocks.jpg)
+]
+
+---
+class: left, top
+
+# Introduction: output of R functions
+
+Can a R function return multiple outputs?
+
+NO. R functions return only **one output**: `return(my_output)`
+
+But you can put your outputs (e.g. a data.frame and a plot) in a list. A named list will make the future-you and any other using the function very happy: documentation begins by naming things :-)
+
+```r
+library(tidyverse)
+my_summary_function <- function(df, x_colname, y_colname) {
+  df_prev <- head(df)
+  point_overview <- ggplot(df) + geom_point(aes(!!sym(x_colname), !!sym(y_colname)))
+  return(list(df_preview = df_prev, plot_overview = point_overview))
+}
+
+overview_mtcars_mpg_disp <- my_summary_function(df = mtcars,
+                                                x_colname = "mpg",
+                                                y_colname = "disp")
+overview_mtcars_mpg_disp$df_preview
+overview_mtcars_mpg_disp$plot_overview
+```
+---
+class: center, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+
+---
+class: center, middle
+
+# Share your code during the coding session
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/yL5HdXWiS6eoDdKyTZ2Gcw?both and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/yL5HdXWiS6eoDdKyTZ2Gcw?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub folders [coding-club/data/20230926](https://github.com/inbo/coding-club/tree/master/data/20230926) and [coding-club/src/20230926](https://github.com/inbo/coding-club/tree/master/src/20230926)
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20201027")` to download the coding club material of October, 27 2020. If date is omitted, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Load libraries and data
+
+```r
+library(tidyverse)
+```
+
+---
+class: left, top
+
+.center[![:scale 10%]({{ site.baseurl}}/assets/images/20230926/20230926_film.png)]
+
+# The data world of doctor Z
+
+Today you play the role of a researcher, dr Z. She received in January 2011 observations of the asian ladybeetle (_Harmonia axyridis_) collected in the surroundings of Antwerp by a contractor. These observations are stored in [20230926_harmonia_axyridis_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20230926/20230926_harmonia_axyridis_2010.txt). She wrote some code to read the observations, do some data wrangling and plot the results. You can find the code in [20230926_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20230926/20230926_challenges.R).
+
+What seemed to be a one-shot anlysis, becomes very soon something more: she receives a similar file from another contractor containing observations of the bow-winged grasshopper (_Chorthippus biguttulus_) collected in the same area: [20230926_chorthippus_biguttulus_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20230926/20230926_chorthippus_biguttulus_2010.txt). Important: the columns containing the coordinates are called differently.
+
+---
+class: left, top
+
+.center[![:scale 10%]({{ site.baseurl}}/assets/images/20230926/20230926_film.png)]
+
+# The data world of doctor Z
+
+She also learns that she will have to redo the same analysis in the future, for sure on observations of the Asian ladybeetle:
+- [20230926_harmonia_axyridis_2011.txt](https://github.com/inbo/coding-club/blob/master/data/20230926/20230926_harmonia_axyridis_2011.txt)
+- [20230926_harmonia_axyridis_2012.txt](https://github.com/inbo/coding-club/blob/master/data/20230926/20230926_harmonia_axyridis_2012.txt)
+
+And, she is afraid, new data of bow-winged grasshopper will find her sooner or later.
+
+I think you can find yourself in the role of dr Z in this Oscar awarded movie.
+
+Before starting, a best practice reminder: write the functions in a *separate file*.
+You can call it `20230926_functions.R`. You can use your functions in the challenge file by first *sourcing* this file, e.g. `source("./src/20230926/20230926_functions.R")`.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+1. It's January 2011. After getting the observations of Harmonia axyridis, you
+get now the observations of _Chorthippus biguttulus_. Write a function called
+`get_obs_2010()` which takes
+as argument a species (e.g. `"Harmonia axyridis"`) and returns the observations
+of 2010 as a data.frame
+
+2. It's January 2012. dr Z got observations of Harmonia axyridis collected in 2011. She is wise so she is going to change the function she wrote the year before by renaming it `get_obs()` and adding `year` as extra argument. How does she proceed?
+
+---
+class: left, top
+
+# Intermezzo 1: what happens in the function stays in the function!
+
+Unfortunately not in R :-/
+
+```r
+c <- 3
+tricky_function <- function(a, b) {
+  # `c` is not defined as argument! Sitll, the function works...
+  sum <- a + b + c
+  return(sum)
+}
+
+tricky_function(1, 2)
+#> [1] 6
+tricky_function(5, 6)
+#> [1] 14
+tricky_function(10, 20)
+#> [1] 33
+```
+
+Even if it works what you see above is **bad** practice as it can end up in wrong results.
+Better an error than a wrong result, right? So, please be careful!
+
+---
+class: left, top
+
+# Intermezzo 2: document your functions with style
+
+C. Bukowski once wrote that [_"Style is the answer to everything"_](https://www.elyrics.net/read/c/charles-bukowski-lyrics/style-lyrics.html). If not really everything, it's more than just a nice-to-have feature.
+
+Function documentation is essential while using R. How many times did you use the help (`?function_name`) in your daily woRk?
+
+Documenting your functions can be done with style by following the [Roxygen](https://roxygen2.r-lib.org/index.html) conventions as programmers writing functions for R packages do. Again, future-you and your colleagues will praise you. Do you know you can use the [`docstring`](https://github.com/dasonk/docstring) package to create help pages of your functions even if they are not in a package?
+
+Speaking about style, we, at INBO, follow the official and very stylish [INBO Styleguide for R code](https://inbo.github.io/tutorials/tutorials/styleguide_r_code/).
+
+---
+class: left, top
+
+# Intermezzo 2: document your functions with style
+
+```r
+install.packages("docstring")
+library(docstring)
+
+remove_uneven <- function(numvec) {
+  #' Filter uneven values out
+  #'
+  #' Function to remove uneven values from a numeric vector.
+  #'
+  #' @param numvec Numeric vector. Length can be variable.
+  #'
+  #' @return Numeric vector containing only the even numbers in `numvec`.
+  #'
+  #' @examples
+  #' numbers <- 1:10
+  #' remove_uneven(numbers)
+  #'
+  #' # if an empty vector is given, an empty vector is returned
+  #' remove_uneven(numeric(0))
+  output <- numvec[numvec %%2 == 0]
+  return(output)
+}
+```
+
+---
+class: left, top
+
+# Intermezzo 2: document your functions with style
+
+```r
+docstring(remove_uneven) # or just
+?remove_uneven
+```
+
+![:scale 50%]({{ site.baseurl}}/assets/images/20230926/20230926_docstring.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+1. Write a function called `clean_data()` to return the cleaned data.frame without suspected or not enough precise observations (step 2). Input arguments:
+    - `df`: data.frame with observations
+    -  `max_coord_uncertain`: maximum of `coordinateUncertaintyInMeters` (numeric), deafult value as in script.
+    - `issues_to_discard`: issues whose obs have to be filtered out (character vector), default value as in script.
+    - `occurrenceStatus_to_discard`: the `occurrenceStatus` values whose obs have to be filtered out (character vector), default value as in script.
+2. Write a function called (`calc_grid_cell()`) to return the input data.frame with an extra column containing the cell code (step 3). Allow users to specify different cell sizes (lat/lon). Default values as in script
+3. Write a function called (`calc_n_obs_ind`) to calculate number of observations and individuals in each grid cell (step 4)
+4. Write a function called (`plot_distr_cells()`) to create a histogram showing the cells distribution for both number of observations and number of individuals (step 5). Allow the user to choose the histogram binwidth. Default value as in script. Notice also that there are other hardcoded values in title which should be transformed to variables.
+
+<br>
+<small> __\* Note__: `!!sym()` commando can help you to use the longitude/latitude colnames in the `mutate()` step</small>
+
+---
+class: left, top
+
+# Intermezzo 3: from stand alone functions to R Packages
+
+You use a box to put your pencils, right? Well, programmeRs use a package to put their functions. Different boxes for different objects = different packages for different scopes. So, **what is a package**? A package is a collection of functions.
+
+But let's first create an (empty) R package according to INBO requirements using the [checklist](https://packages.inbo.be/checklist/index.html) package*:
+
+```
+library(checklist)
+
+# Create first author details (use your details instead of mine)
+maintainer <- person(
+  given = "Damiano",
+  family = "Oldoni",
+  role = c("aut", "cre"),
+  email = "damiano.oldoni@inbo.be",
+  comment = c(ORCID = "0000-0003-3445-7562")
+)
+
+# Create the package
+create_package(
+  package = "entomologist",
+  path = "../",
+  title = "Analyze insect related GBIF occurrences",
+  keywords = c("GBIF", "INBO", "data science", "tidyverse"),
+  language = "en-GB",
+  description = paste("A collection of functions used to analyze",
+                      "insects data for the project of my life."
+  ),
+  license = "MIT"
+)
+```
+
+<br>
+<small> __\* Note__: if you don't want follow the INBO styleguide, then the package `usethis` can help you: use e.g. `usethis::create_package(path = "../entomologist", rstudio = TRUE, roxygen = TRUE, open = TRUE)
+`.</small>
+
+---
+class: left, top
+
+# Intermezzo 3: from stand alone functions to R Packages
+
+Your R package is a new directory with the name of the package. What's inside it?
+A lot of things, but not all of those things are mandatory or need to be edited.
+
+- `entomologist.Rproj` : the R Studio project to launch. Yes, when working on a package it's better to do it by opening its related project
+- `DESCRIPTION`: a text file with all detailed informations you provided such as authorship, title, description, ...
+- ./R: subdirectory where you MUST put your R files containing your functions. Rule of thumb: one function per R file, filename = function name, e.g. `get_obs.R` containing function `get_obs()`.
+
+.center[![:scale 10%]({{ site.baseurl}}/assets/images/20230926/20230926_package_structure.png)]
+
+---
+class: left, top
+
+# Challenge 3A: from stand alone functions to R Packages
+
+Let's add our first function! And let's do it **together**!
+
+1. Create R file `get_obs.R` in `./R` subdirectory
+2. Put the function `get_obs()` in `get_obs.R`
+3. Do not load packages in R file. Add section `Imports:` in `DESCRIPTION` and add the package names one per line comma separated. Use Tab indentation.
+4. Use packagename::function_name() syntax everywhere in your funtion. This helps to avoid conflicts among packages if any and some notes while installing the package (step xx). Future-you will also be happy to understand which function you use and from which package.
+4. Put function documentation above the function. Click Code -> Insert Roxygen Skeleton and fill in the fields provided. About `@examples`, in our case, the text file to read is not part of the package. So, our example is just to be read, not to be run. We will then put the code within a `\dontrun{}` section. That part of code will be copy pasted in documentation.
+5. Compile documentation with `devtools::document()`. Notice that this creates a new subdirectory in your folder: `./man`, which stays for **manual**. It contains all documentation you wrote.
+6. Install package clicking on `Install` in `Build` pane.
+7. Click on `Checks` to make a basic check of your package.
+8. Once in a while is worth to make an "INBO style check" using `checklist::check_package()`. A website is genereated for you, isn't cool? It's all contained in folder `./doc`. Some failures at this stage are normal. Your package is not on GitHub for example, but local on your laptop.
+9. You could alternatively use specific checks, e.g. `checklist::check_spelling()`, `checklist::check_filename()`, `checklist::check_lintr()`.
+
+---
+class: left, top
+
+# Challenge 3A: from stand alone functions to R Packages
+
+I know, it can feel overwhelming. Still, let's try to follow the previous steps to add the other functions to your package! Hint: do not add all functions as a bulk, but repeat all steps function by function. That's how even the most advanced programmers proceed.
+
+
+---
+class: left, top
+
+# Bonus challenge
+
+Enough work to do, isn't? No bonus challenge this time.
+
+---
+class: center, middle
+
+# Did you write a function useful for yourself and your colleagues?
+
+Share it by adding it to [`inborutils`](https://github.com/inbo/inborutils) package.
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20230926/20230926_inborutils.png)
+
+
+---
+class:left, top
+
+# Resources
+
+- Challenges solutions will be available soon
+- Video recording will be available on vimeo soon
+- Do you want to learn more about functions?  Get a more [formal framework](https://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/functions.pdf), go [in depth](http://adv-r.had.co.nz/Functions.html#function-arguments), do a check [under the hood](https://swcarpentry.github.io/r-novice-inflammation/14-supp-call-stack/) or learn more about [programming with `dplyr`](https://dplyr.tidyverse.org/articles/programming.html).
+- The [INBO styleguide for R code](https://inbo.github.io/tutorials/tutorials/styleguide_r_code/).
+- The [checklist](https://packages.inbo.be/checklist/index.html) package: a set of checks for R packages and R projects.
+- Some advices from [tidyverse style guide](https://style.tidyverse.org/documentation.html) can also be useful.
+- Packages [ROxygen2](https://roxygen2.r-lib.org/index.html) and [docstring](https://github.com/dasonk/docstring).
+- [](): The Book when it comes to writing package. It can help you at any stage of the learning curve.
+
+
+---
+class: left, top
+
+
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.05 - Isala Van Diest<br>
+Date: __26/10/2023__, van 10:00 tot 12:30<br>
+Subject: to be chosen <br>
+(registration announced via DG_useR@inbo.be)

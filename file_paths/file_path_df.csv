@@ -164,6 +164,10 @@ data/20230831/20230831_protected_areas.gpkg,20230831_protected_areas.gpkg,data,2
 data/20230831/20230831_n_moths.txt,20230831_n_moths.txt,data,20230831
 data/20230831/20230831_utm1km_Pajottenland.gpkg,20230831_utm1km_Pajottenland.gpkg,data,20230831
 data/20230831/20230831_Pajottenland_municipalities.gpkg,20230831_Pajottenland_municipalities.gpkg,data,20230831
+data/20230926/20230926_chorthippus_biguttulus_2010.txt,20230926_chorthippus_biguttulus_2010.txt,data,20230926
+data/20230926/20230926_harmonia_axyridis_2010.txt,20230926_harmonia_axyridis_2010.txt,data,20230926
+data/20230926/20230926_harmonia_axyridis_2011.txt,20230926_harmonia_axyridis_2011.txt,data,20230926
+data/20230926/20230926_harmonia_axyridis_2012.txt,20230926_harmonia_axyridis_2012.txt,data,20230926
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
@@ -296,3 +300,4 @@ src/20230831/20230831_challenges.R,20230831_challenges.R,src,20230831
 src/20230831/20230831_challenges_solutions.R,20230831_challenges_solutions.R,src,20230831
 src/20230831/20230831_challenges_solutions_bonus_challenge_2.html,20230831_challenges_solutions_bonus_challenge_2.html,src,20230831
 src/20230831/20230831_challenges_solutions_bonus_challenge_2.Rmd,20230831_challenges_solutions_bonus_challenge_2.Rmd,src,20230831
+src/20230926/20230926_challenges.R,20230926_challenges.R,src,20230926
