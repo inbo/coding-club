@@ -327,6 +327,9 @@ class: left, top
 
 Let's first create an (empty) R package according to INBO requirements using the [checklist](https://packages.inbo.be/checklist/index.html) package*:
 
+
+## Step 1: create author details
+
 ```
 library(checklist)
 
@@ -338,12 +341,28 @@ maintainer <- person(
   email = "damiano.oldoni@inbo.be",
   comment = c(ORCID = "0000-0003-3445-7562")
 )
+```
+
+<br>
+<small> __\* Note__: if you don't want to follow the INBO styleguide, then the package `usethis` can help you: use e.g. `usethis::create_package(path = "../entomologist", rstudio = TRUE, roxygen = TRUE, open = TRUE)
+`.</small>
+
+---
+class: left, top
+
+# Intermezzo 3: from stand alone functions to R Packages
+
+Let's first create an (empty) R package according to INBO requirements using the [checklist](https://packages.inbo.be/checklist/index.html) package*:
+
+## Step 2: create the package
+
+```
 # Create the package
 create_package(
   package = "entomologist",
-  path = "../",
+  path = "../", # change it if needed
   title = "Analyze insect related GBIF occurrences",
-  keywords = c("GBIF", "INBO", "data science", "tidyverse"),
+  keywords = c("GBIF", "data science", "entomology", "rstats"),
   language = "en-GB",
   description = paste("A collection of functions used to analyze",
                       "insects data for the project of my life."
