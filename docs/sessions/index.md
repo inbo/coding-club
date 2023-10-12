@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2023_09-26 | functions in R | [slides]({{ site.baseurl }}{% link sessions/20230926_functions_in_r.html  %}) | [hackmd](https://hackmd.io/yL5HdXWiS6eoDdKyTZ2Gcw?view) | 01.71 - Frans Breziers |  |
+| 2023_09-26 | functions in R | [slides]({{ site.baseurl }}{% link sessions/20230926_functions_in_r.html  %}) | [hackmd](https://hackmd.io/yL5HdXWiS6eoDdKyTZ2Gcw?view) | 01.71 - Frans Breziers | [vimeo](https://vimeo.com/873709318?share=copy) |
 | 2023-08-31 | spatial data in R | [slides]({{ site.baseurl }}{% link sessions/20230831_visualize_spatial_data_in_r.html  %}) | [hackmd](https://hackmd.io/qWAs40BeR_GwtCtnvLdJ3w?view) | 01.05 - Isala Van Diest | [vimeo](https://vimeo.com/863159918) |
 | 2023-06-27 | spatial data in R | [slides]({{ site.baseurl }}{% link sessions/20230627_spatial_data_in_r.html  %}) | [hackmd](https://hackmd.io/WgovTpD4SxuyoFGMvDMeag?view) | 01.17 - Clara Peters | [vimeo](https://vimeo.com/840403950) |
 | 2023-05-25 | computer says no: debug youR code | [slides]({{ site.baseurl }}{% link sessions/20230525_computer_says_no.html  %}) | [hackmd](https://hackmd.io/zkAmzjw1RnOuLvVRdtCH2g?view) | 01.23 - Léon Stynen | [vimeo](https://vimeo.com/831857629) |
