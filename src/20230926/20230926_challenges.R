@@ -7,11 +7,12 @@ library(docstring) #to create help from documentation of stand-alone functions
 
 ## INSTRUCTIONS
 
-# 1. Do not forget to save the functions in a separate file in the same folder
+# 1. Do not forget to save the functions in a SEPARATE FILE in the same folder
 # as the challenge. You can call the file as `20230926_functions.R`.
 
-# 2. Source it every time you update the file with new functions, e.g.
-# source("./src/20230926/20230926_functions.R")
+# 2. SOURCE it every time you update the file with new functions, e.g.
+# source("./src/20230926/20230926_functions.R") or use the SOurce button in the
+# upright corner of this window.
 
 
 #######################################
