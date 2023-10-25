@@ -267,11 +267,23 @@ class: left, top
 ---
 class: left, top
 
-## quarto documents (.qmd): are they the future?
+## Quarto documents (.qmd): are they the future?
 
-Do you know about quarto documents? Well, probably we all will write them within a year or two... who knows. Thierry is testing it. Read this easy and short [getting started](https://quarto.org/docs/get-started/hello/rstudio.html) tutorial in the meantime.
+Do you know about [Quarto](https://quarto.org/) documents? Well, probably we all will write them within a year or two...
 
-One thing is for sure: all effort you did up to now is not for nothing! quarto is very similar to Rmd.
+Quarto is*:
+
+- A way to combine the (benefits of) the R (R Markwodn, bookdown, tidyverse packages) and the Python (Jupyter Book, Jupyter notebooks, pandas, matplotlib) data science ecocystems
+- A rewrite of RMarkdown with multilanguage as a first-class concern
+- A way to get an accessible webpage AND a publication-ready PDF from the same source
+- A really big wrapper around Pandoc (the document converter used to "knit" Rmd documents)
+- Not a prototype anymore: tens of thousands of users already
+
+Do you know that the [Communicate section](https://r4ds.hadley.nz/communicate) of the R for Data Science book speak about Quarto and are written using Quarto?**
+
+One thing is for sure: all effort you did up to now is not for nothing! Quarto is very similar to Rmd.
+
+The [getting started](https://quarto.org/docs/get-started/hello/rstudio.html) tutorial is the best start to learn Quarto.
 
 Give it a try:
 
@@ -279,56 +291,25 @@ Give it a try:
 - Visual Markdown Editor (VME) is used by default, but you can switch to `Source`
 - **Render** it to create html (opened automatically in your browser as a Background job)
 
-![:scale 70%]({{ site.baseurl}}/assets/images/20231026/20231026_quarto.png)
+
+<small>* __Credits__: Carlos Scheidegger, see his [slides](https://cscheid.net/static/2023-esip-quarto-talk/#/title-slide) and [live presentation](https://youtu.be/uQ3yZjM1bj8)<br>
+\** Thanks Floris Vanderhaeghe for all your enlightening info about Quarto! This slide is actually yours :-)
+</small>
 
 ---
 class: left, top
 
 # Resources
 
-### Solutions
-
-You can download the solutions by running: `inborutils::setup_codingclub_session("20231026")`. Here below the links on GitHub if you prefer to download them manually:
-
-1. Solution challenge 1: [Rmd](https://github.com/inbo/coding-club/blob/master/src/20231026/1_geese_read_data.Rmd) and related [html](https://github.com/inbo/coding-club/blob/master/src/20231026/1_geese_read_data.html) document
-2. Solution challenge 2: [Rmd](https://github.com/inbo/coding-club/blob/master/src/20231026/2_visualize_data.Rmd) and related [html](https://github.com/inbo/coding-club/blob/master/src/20231026/2_visualize_data.html) document.
-3. The solution of challenge 3 and (part of) the bonus challenge is an entire _book_ project placed in a zip file: [`/src/20231026/my_project_20231026.zip`](https://github.com/inbo/coding-club/blob/main/src/20231026/my_report_20231026.zip).
-
-**Note** about challenge 3 and bonus: please unzip `my_project_20231026.zip` in a folder, for example `my_project_20231026`. To see the html book, go to `docs` and open the file `index.html`. Do you want to (re)build the book yourself or just see the R Markdown files (chapters) of the book? Open the RStudio project `my_report_20231026.Rproj`. The three Rmd files are in the root directory.
-
-### Webinar
-
-We forgot to record the session! Sorry. 😞
-
----
-class: left, top
-
-# Resources
-
-## Useful links
-
-1. Check out the range of outputs and formats you can create using R Markdown: https://rmarkdown.rstudio.com/gallery
-1. Article to learn more about [Visual Markdown Editor](https://rstudio.github.io/visual-markdown-editing/) in RStudio
-2. [R Markdown cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
-3. Online book about [bookdown](https://bookdown.org/yihui/bookdown/)
-4. [Thierry's slides](https://inbo.github.io/inbomd_examples/inbomd_workshop/inbomd_workshop.pdf) about writing a report with INBOmd
-5. [Examples](https://inbo.github.io/inbomd_examples/) of reports, slides, posters, etc. created with INBO templates from `INBOmd` (with links to source code!)
-6. [Article](https://www.educative.io/blog/yaml-tutorial) about YAML
-7. quarto (.qmd) format: a [getting started](https://quarto.org/docs/get-started/hello/rstudio.html)
-
----
-class: left, top
-
-# Coding club topics 2023: you vote!
-
-![ ]({{ site.baseurl}}/assets/images/20231026/20231026_ballot.gif)
-
-Every month you can vote among **two topics**!
-
-Poll for January's coding club is open! Let us know your favorite before **1 jan 2023**
-
-https://forms.gle/RUqcjW4CmXBp51L27
-
+1. Solutions and edited video recording soon available
+2. Check out the range of outputs and formats you can create using R Markdown: https://rmarkdown.rstudio.com/gallery
+3. Article to learn more about [Visual Markdown Editor](https://rstudio.github.io/visual-markdown-editing/) in RStudio
+4. [R Markdown cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+5. Online book about [bookdown](https://bookdown.org/yihui/bookdown/)
+6. [Thierry's slides](https://inbo.github.io/inbomd_examples/inbomd_workshop/inbomd_workshop.pdf) about writing a report with INBOmd
+7. [Examples](https://inbo.github.io/inbomd_examples/) of reports, slides, posters, etc. created with INBO templates from `INBOmd` (with links to source code!)
+8. [Article](https://www.educative.io/blog/yaml-tutorial) about YAML
+9. quarto (.qmd) format: a [getting started](https://quarto.org/docs/get-started/hello/rstudio.html)
 
 ---
 class: center, top
@@ -337,6 +318,6 @@ class: center, top
 
 <!--  Adjust the room number and name  -->
 Topic: poll is still open <br>
-Room:  HT - 01.04 - Transitielab <br>
-Date: **26/01/2022**, from **10:00** to **12:30** <br>
-Help needed with technical setup? You are welcom from **9:45am**
+Room:  HT - 01.05 - Isala Van Diest <br>
+Date: **28/11/2023**, from **10:00** to **12:30** <br>
+**Help** needed with technical setup? You are welcom from **9:45am**
