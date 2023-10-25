@@ -168,6 +168,8 @@ data/20230926/20230926_chorthippus_biguttulus_2010.txt,20230926_chorthippus_bigu
 data/20230926/20230926_harmonia_axyridis_2010.txt,20230926_harmonia_axyridis_2010.txt,data,20230926
 data/20230926/20230926_harmonia_axyridis_2011.txt,20230926_harmonia_axyridis_2011.txt,data,20230926
 data/20230926/20230926_harmonia_axyridis_2012.txt,20230926_harmonia_axyridis_2012.txt,data,20230926
+data/20231026/20231026_geese_counts.txt,20231026_geese_counts.txt,data,20231026
+data/20231026/20231026_flemish_provinces.gpkg,20231026_flemish_provinces.gpkg,data,20231026
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
@@ -304,3 +306,4 @@ src/20230926/20230926_challenges.R,20230926_challenges.R,src,20230926
 src/20230926/20230926_challenges_solutions.R,20230926_challenges_solutions.R,src,20230926
 src/20230926/20230926_challenges_functions.R,20230926_challenges_functions.R,src,20230926
 src/20230926/entomologist.zip,entomologist.zip,src,20230926
+src/20231026/20231026_challenges.R,20231026_challenges.R,src,20231026
