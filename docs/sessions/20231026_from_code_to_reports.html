@@ -47,7 +47,7 @@ class: left, top
 Ex-colleague Nicolas Noé, oscibio and FIS teams won the the 2023 edition of the Ebbe Nielsen challenge!
 More info on [GBIF news](https://www.gbif.org/news/EQgUzZ4YA75BSeLs1naI9/belgian-built-gbif-alert-system-wins-the-2023-ebbe-nielsen-challenge).
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20231026/20231026_Ebbe_Nielsen_Challenge.png)
+![:scale 100%]({{ site.baseurl}}/assets/images/20231026/20231026_Ebbe_Nielsen_Challenge.png)
 
 ---
 class: center, middle
@@ -61,7 +61,7 @@ class: left, top
 ## Markdown, R Markdown, bookdown, INBOmd: help!
 
 - Markdown: a markup language \* for creating formatted text using a plain-text editor (= you don't get what you see).
-E.g. make text italic by surrounding it with underscores or asterisks, e.g. `__text__` or  `**text**`
+E.g. make text italic by surrounding it with underscores or asterisks, e.g. `__text__`
 - R Markdown: a file type with extension `Rmd` to _knit_ text (in Markdown) and code (in R) together. Goal: generate high quality shareable reports.
 - [`rmarkdown`](https://rmarkdown.rstudio.com/lesson-1.html): the R package to write R Markdown documents**.
 - [bookdown](https://bookdown.org/yihui/bookdown/): R package to make authoring _books_ or technical documents out of a series of R Markdown documents
@@ -70,8 +70,8 @@ E.g. make text italic by surrounding it with underscores or asterisks, e.g. `__t
 
 ![:scale 40%]({{ site.baseurl}}/assets/images/20231026/20231026_hexlogos.png)
 
-<small>* __Note__: a markup language is a language that annotates text so that the computer can manipulate that text. Most markup languages are human-readable. More on [Wikipedia](https://en.wikipedia.org/wiki/Markup_language#Descriptive_markup).<br>
-\** R Markdown is by default installed within RStudio!
+<small>* A markup language is a language that annotates text so that the computer can manipulate that text. Most markup languages are human-readable. More on [Wikipedia](https://en.wikipedia.org/wiki/Markup_language#Descriptive_markup).<br>
+** R Markdown is by default installed within RStudio!
 </small>
 
 ---
@@ -101,6 +101,8 @@ library(INBOtheme)    # to apply INBO style to graphs
 library(sf)           # to work with geospatial vector data
 library(leaflet)      # to make dynamic maps
 library(htmltools)    # to make nice html labels for dynamic maps
+library(DT)           # to create highly customizable data tables
+library(crosstalk)    # to create cross-widget interactions
 ```
 
 ---
@@ -191,8 +193,8 @@ Convert the code below to a Rmd document called `1_geese_read_data.Rmd` and _kni
 
 1. Converting the comments to text
 2. Show the library you need to load but avoid to show any **message** (errors or warnings are allowed). Tip: see [list](https://yihui.org/knitr/options/#text-output) with all test-output chunk options. How to avoid showing **warnings** as well?
-3. Do not show the code in lines 83-85 and 89-90. Tip: this is shown in `test.Rmd` (challenge 0) and in the list mentioned in previous tip.
-4. Set date authomatically in YAML header. Tip: https://bookdown.org/yihui/rmarkdown-cookbook/update-date.html
+3. Do not show the code in lines 82-84 and 88-89 (about removing some rows). Tip: this is shown in `test.Rmd` (challenge 0) and in the list mentioned in previous tip.
+4. Set date automatically in YAML header. Tip: https://bookdown.org/yihui/rmarkdown-cookbook/update-date.html
 5. Do you want always good looking data.frames (tables) with the smallest effort possible? Page them! Tip: https://bookdown.org/yihui/rmarkdown/html-document.html#data-frame-printing
 6. Add a table of content. Allow the table of contents being always visible even when the document is scrolled. Tip: https://bookdown.org/yihui/rmarkdown/html-document.html#table-of-contents
 7. Add section numbers to the table of content. Tip: https://bookdown.org/yihui/rmarkdown/html-document.html#section-numbering
@@ -257,12 +259,13 @@ Now you can become a pro!
 ---
 class: left, top
 
-## Did you know that...
+## Do you know that...
 
 1. Many INBO tutorials are written in R markdown and then _knitted_ as markdown documents? See [example](https://inbo.github.io/tutorials/tutorials/spatial_wfs_services/).
-2. [Data processing pipelines](https://trias-project.github.io/alien-plants-belgium/dwc_mapping.html) published as GitHub pages are R markdown documents?
-3. The Hackmd pages we use at the INBO coding club follow markdown syntax? Yes, probably you know it!
-4. The process of creating an unified checklist of alien species in Belgium (published on GBIF as the [GRIIS checklist of Belgium](https://www.gbif.org/dataset/6d9e952f-948c-4483-9807-575348147c7e)) is a bookdown [document](https://trias-project.github.io/unified-checklist/)?
+2. Markdown is very popular to create websites easily as a piece of cake. Check the team [oscibio website](https://oscibio.inbo.be/), the template website behind it: [Petridish](https://peterdesmet.com/petridish/)
+3. [Data processing pipelines](https://trias-project.github.io/alien-plants-belgium/dwc_mapping.html) published as GitHub pages are R markdown documents?
+4. The Hackmd pages we use at the INBO coding club follow markdown syntax? Yes, probably you know it!
+5. The process of creating an unified checklist of alien species in Belgium (published on GBIF as the [GRIIS checklist of Belgium](https://www.gbif.org/dataset/6d9e952f-948c-4483-9807-575348147c7e)) is a bookdown [document](https://trias-project.github.io/unified-checklist/)?
 
 ---
 class: left, top
@@ -283,6 +286,15 @@ Do you know that the [Communicate section](https://r4ds.hadley.nz/communicate) o
 
 One thing is for sure: all effort you did up to now is not for nothing! Quarto is very similar to Rmd.
 
+
+<small>* __Credits__: Carlos Scheidegger, see his [slides](https://cscheid.net/static/2023-esip-quarto-talk/#/title-slide) and [live presentation](https://youtu.be/uQ3yZjM1bj8)<br>
+\** Thanks Floris Vanderhaeghe for all your enlightening info about Quarto! This slide is actually yours :-)
+</small>
+---
+class: left, top
+
+## Quarto documents (.qmd): are they the future?
+
 The [getting started](https://quarto.org/docs/get-started/hello/rstudio.html) tutorial is the best start to learn Quarto.
 
 Give it a try:
@@ -291,12 +303,7 @@ Give it a try:
 - Visual Markdown Editor (VME) is used by default, but you can switch to `Source`
 - **Render** it to create html (opened automatically in your browser as a Background job)
 
-
-<small>* __Credits__: Carlos Scheidegger, see his [slides](https://cscheid.net/static/2023-esip-quarto-talk/#/title-slide) and [live presentation](https://youtu.be/uQ3yZjM1bj8)<br>
-\** Thanks Floris Vanderhaeghe for all your enlightening info about Quarto! This slide is actually yours :-)
-</small>
-
----
+ ---
 class: left, top
 
 # Resources
