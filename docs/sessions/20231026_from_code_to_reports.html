@@ -70,8 +70,8 @@ E.g. make text italic by surrounding it with underscores or asterisks, e.g. `__t
 
 ![:scale 40%]({{ site.baseurl}}/assets/images/20231026/20231026_hexlogos.png)
 
-<small>* A markup language is a language that annotates text so that the computer can manipulate that text. Most markup languages are human-readable. More on [Wikipedia](https://en.wikipedia.org/wiki/Markup_language#Descriptive_markup).<br>
-** R Markdown is by default installed within RStudio!
+<small>** A markup language is a language that annotates text so that the computer can manipulate that text. Most markup languages are human-readable. More on [Wikipedia](https://en.wikipedia.org/wiki/Markup_language#Descriptive_markup).<br>
+*** R Markdown is by default installed within RStudio!
 </small>
 
 ---
@@ -194,10 +194,10 @@ Convert the code below to a Rmd document called `1_geese_read_data.Rmd` and _kni
 1. Converting the comments to text
 2. Show the library you need to load but avoid to show any **message** (errors or warnings are allowed). Tip: see [list](https://yihui.org/knitr/options/#text-output) with all test-output chunk options. How to avoid showing **warnings** as well?
 3. Do not show the code in lines 82-84 and 88-89 (about removing some rows). Tip: this is shown in `test.Rmd` (challenge 0) and in the list mentioned in previous tip.
-4. Set date automatically in YAML header. Tip: https://bookdown.org/yihui/rmarkdown-cookbook/update-date.html
-5. Do you want always good looking data.frames (tables) with the smallest effort possible? Page them! Tip: https://bookdown.org/yihui/rmarkdown/html-document.html#data-frame-printing
-6. Add a table of content. Allow the table of contents being always visible even when the document is scrolled. Tip: https://bookdown.org/yihui/rmarkdown/html-document.html#table-of-contents
-7. Add section numbers to the table of content. Tip: https://bookdown.org/yihui/rmarkdown/html-document.html#section-numbering
+4. Set date automatically in YAML header. [Tip](https://bookdown.org/yihui/rmarkdown-cookbook/update-date.html)
+5. Do you want always good looking data.frames (tables) with the smallest effort possible? Page them! [Tip](https://bookdown.org/yihui/rmarkdown/html-document.html#data-frame-printing)
+6. Add a table of content. Allow the table of contents being always visible, even when the document is scrolled. [Tip](https://bookdown.org/yihui/rmarkdown/html-document.html#table-of-contents)
+7. Add section numbers to the table of content. [Tip](https://bookdown.org/yihui/rmarkdown/html-document.html#section-numbering)
 
 ---
 class: left, top
@@ -217,7 +217,7 @@ Put the code in challenge 2 in a second R Markdown document called `2_visualize_
 
 1. If you do it "blindly", you will get errors, probably at the very beginning: why? How to solve it?
 2. Use tabbed sections where mentioned (static plots). Tip: https://bookdown.org/yihui/rmarkdown/html-document.html#tabbed-sections
-3. When it goes about plotting and modelling, the chunk codes can be quite long and so potentially distracting the readers. Please, fold them. Readers can then choose to display them by clicking the fold buttons: Tip: check this [fold-show](https://bookdown.org/yihui/rmarkdown-cookbook/fold-show.html) section.
+3. With respect to plotting and modelling, the chunk codes can be quite long and so potentially distracting for the readers. Please, fold them. Readers can then choose to display them by clicking the fold buttons: Tip: check this [fold-show](https://bookdown.org/yihui/rmarkdown-cookbook/fold-show.html) section.
 
 ---
 class: left, top
@@ -279,19 +279,19 @@ Do you know about [Quarto](https://quarto.org/) documents? Well, probably we all
 
 Quarto is*:
 
-- A way to combine the (benefits of) the R (R Markwodn, bookdown, tidyverse packages) and the Python (Jupyter Book, Jupyter notebooks, pandas, matplotlib) data science ecocystems
+- A way to combine the (benefits of) R (R Markdown, bookdown, tidyverse packages) and Python (Jupyter Book, Jupyter notebooks, pandas, matplotlib) data science ecocystems
 - A rewrite of RMarkdown with multilanguage as a first-class concern
 - A way to get an accessible webpage AND a publication-ready PDF from the same source
 - A really big wrapper around Pandoc (the document converter used to "knit" Rmd documents)
 - Not a prototype anymore: tens of thousands of users already
 
-Do you know that the [Communicate section](https://r4ds.hadley.nz/communicate) of the R for Data Science book speak about Quarto and are written using Quarto?**
+Did you know that the [Communicate section](https://r4ds.hadley.nz/communicate) of the R for Data Science book focusses on Quarto and is written using Quarto?**
 
 One thing is for sure: all effort you did up to now is not for nothing! Quarto is very similar to Rmd.
 
 
 <small>\** Credits: Carlos Scheidegger, see his [slides](https://cscheid.net/static/2023-esip-quarto-talk/#/title-slide) and [live presentation](https://youtu.be/uQ3yZjM1bj8)<br>
-\*\* Thanks Floris Vanderhaeghe for all your enlightening info about Quarto!
+\**\** Thanks Floris Vanderhaeghe for all your enlightening info about Quarto!
 </small>
 
 ---
