@@ -13,7 +13,7 @@
 <meta name="author" content="Coauthor 1" />
 <meta name="author" content="Coauthor 2" />
 
-<meta name="date" content="2023-10-26" />
+<meta name="date" content="2023-10-30" />
 
 <title>Read and preprocess geese data</title>
 
@@ -2756,7 +2756,7 @@ border-radius: 0px;
 <h4 class="author">Damiano Oldoni</h4>
 <h4 class="author">Coauthor 1</h4>
 <h4 class="author">Coauthor 2</h4>
-<h4 class="date">2023-10-26</h4>
+<h4 class="date">2023-10-30</h4>
 
 </div>
 
@@ -2764,7 +2764,6 @@ border-radius: 0px;
 <div id="setup" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Setup</h1>
 <p>Load packages:</p>
-<pre class="r"><code>print(&quot;hi!&quot;)</code></pre>
 <pre class="r"><code>library(tidyverse)    # to do datascience</code></pre>
 <p>Notice that all the other packages are for challenge 2, you don’t
 need to load them in this document.</p>
@@ -2794,7 +2793,9 @@ folder, i.e. the folder containing <code>coding-club.Rproj</code>.</p>
                        latinName = col_character(),
                        commonName = col_character(),
                        counts = col_double(),
-                       catched = col_double()
+                       catched = col_double(),
+                       x = col_double(),
+                       y = col_double()
                      ))</code></pre>
 <p>If you don’t want to change this global option, fine! Then, you can
 find interesting to work with package <a href="https://www.rdocumentation.org/packages/here/versions/1.0.1"><code>here</code></a>
@@ -2885,11 +2886,10 @@ at the beginning of the second R Markdown document as input for
 modelling and plotting.</p>
 <pre class="r"><code>write_csv(
   x = catch_fl,
-  file = here(
-    &quot;data&quot;,
-    &quot;20231026&quot;,
-    &quot;20231026_geese_counts_cleaned.txt&quot;
-  ), na = &quot;&quot;
+  file = here(&quot;data&quot;,
+              &quot;20231026&quot;,
+              &quot;20231026_geese_counts_cleaned.txt&quot;),
+  na = &quot;&quot;
 )</code></pre>
 </div>
 </div>

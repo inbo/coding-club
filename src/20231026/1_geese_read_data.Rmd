@@ -51,7 +51,9 @@ catch_fl <- read_csv("./data/20231026/20231026_geese_counts.txt",
                        latinName = col_character(),
                        commonName = col_character(),
                        counts = col_double(),
-                       catched = col_double()
+                       catched = col_double(),
+                       x = col_double(),
+                       y = col_double()
                      ))
 ```
 
