@@ -14,7 +14,7 @@ output:
     code_folding: hide
 ---
 
-# Setup 
+# Setup
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,
@@ -37,25 +37,24 @@ library(DT)           # to create highly customizable data tables
 library(crosstalk)    # to create cross-widget interactions
 ```
 
-Notice we have to "reload" tidyverse: the knitting process of a RMarkdown is an universe (_environment_) apart!
+Notice we have to "reload" tidyverse: the knitting process of a RMarkdown is an universe (*environment*) apart!
 
-Same holds true for `catch_fl`, the cleaned data as output of challenge 1. Again, notice that it is present in your _local_ environment, but won't be  during the knitting process.
+Same holds true for `catch_fl`, the cleaned data as output of challenge 1. Again, notice that it is present in your *local* environment, but won't be during the knitting process.
 
-Read `catch_fl` containing the cleaned geese catch data:
+Read `catch_fl` containing the cleaned geese catch data. Notice that this file is not provided, but it's written on disk in the last section of `1_geese_read_data.Rmd`:
 
 ```{r read-cleaned-data}
-path_catch_file <- here("data", "20231026", "20231026_geese_counts_cleaned.txt")
+path_catch_file <- here::here("data", "20231026", "20231026_geese_counts_cleaned.txt")
 catch_fl <- read_csv(path_catch_file, na = "") 
 ```
 
 # Introduction
 
-In this section we will show how number of catches varies by year, province and species. 
-Both static plots and dynamic maps are generated.
+In this section we will show how number of catches varies by year, province and species. Both static plots and dynamic maps are generated.
 
 # Static plots
 
-## Show catches  {.tabset .tabset-fade .tabset-pills}
+## Show catches {.tabset .tabset-fade .tabset-pills}
 
 ### per province
 
@@ -116,7 +115,7 @@ species <- c(
 )
 ```
 
-### Catches per per year and species
+### Catches per year and species
 
 ```{r catch-species}
 catch_species <-
@@ -185,14 +184,13 @@ ggplot(overview_gee,
 
 # Dynamic maps
 
-We make dynamic _leaflet_ maps of total number of catches per province.
+We make dynamic *leaflet* maps of total number of catches per province.
 
 We read the polygons without showing the code (chunk option: `include=FALSE`).
 
 ```{r read_plygons, include=FALSE}
 pr_fl <- st_read("./data/20231026/20231026_flemish_provinces.gpkg")
 ```
-
 
 ```{r leaflet-maps}
 pr_fl <- pr_fl %>%
@@ -262,8 +260,11 @@ crosstalk::bscols(map_shared_catch_fl_spatial, data_table)
 ```
 
 Some limitations:
-1. No polygons, only points at the moment
-2. the interaction doesn't work with adding the clustering option in the leaflet markers, e.g. using `addCircleMarkers(radius = 1, clusterOptions = markerClusterOptions())`
-3. Because all data must be loaded into the browser, Crosstalk is not appropriate for large data sets.
+
+1.  No polygons, only points at the moment
+
+2.  The interaction doesn't work with adding the clustering option in the leaflet markers, e.g. using `addCircleMarkers(radius = 1, clusterOptions = markerClusterOptions())`
+
+3.  Because all data must be loaded into the browser, crosstalk is not appropriate for large data sets.
 
 Do you want more? Go to crosstalk [homepage](https://rstudio.github.io/crosstalk/index.html).
