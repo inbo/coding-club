@@ -1,0 +1,234 @@
+---
+layout: presentation
+title: dashboards and shiny
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+  <!-- Adjust the presentation to the session. Focus on the challenges,
+this is not a coding tutorial.
+
+Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+folder and use the jekyll base.url reference as done in this template
+or see https://jekyllrb.com/docs/liquid/tags/#links.
+  using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 28 NOVEMBER 2023
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+
+01.05 - Isala Van Diest
+
+---
+class: left, top
+
+## ROOMIE: room reservation
+
+```
+> if (isFALSE(roomie)) {
++   warning("Please confirm asap the room reservation on the roomie")
++ }
+Warning message:
+Please confirm asap the room reservation on the roomie
+```
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20231128/20231128_badge_dashboards_shiny.png)
+
+---
+class: center, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20231128/20231128_cheat_sheet_ggplot.png)
+Download [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20231128_cheat_sheet_shiny.pdf)
+
+---
+class: left, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+# Share your code during the coding session
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/mo4U_EMFTJW_B1mtEnD7eA?edit and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/mo4U_EMFTJW_B1mtEnD7eA?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub folders [coding-club/data/20231128](https://github.com/inbo/coding-club/tree/master/data/20231128) and [coding-club/src/20231128](https://github.com/inbo/coding-club/tree/master/src/20231128)
+
+<br>
+
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20220428")` to download the coding club material of April, 28 2022. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data and scripts description
+
+1. [20231128_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20231128/20231128_challenges.R): R script about geese counts.
+2. [20231128_geese_counts_cleaned.txt](https://github.com/inbo/coding-club/blob/master/data/20231128/20231128_geese_counts_cleaned.txt): comma separated text file with geese catch data
+3. [20231128_flemish_provinces.gpkg](https://github.com/inbo/coding-club/blob/master/data/20231128/20231128_flemish_provinces.gpkg): geopackage with the Flemish provinces to use in `20231128_challenges.R`
+
+---
+class: left, top
+
+# Install and load libraries
+
+```r
+install.packages("shiny")
+install.packages("flexdashboard")
+library(tidyverse)
+library(shiny)
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1: static dashboards
+
+Let's creae a (static) dashboard called "Geese catches in Flanders" using [flexdashboard](https://pkgs.rstudio.com/flexdashboard/index.html).
+
+1. Use code under "# Static plots (page 1)" to generate a [Tabset Column](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#tabset-column) dashboard. Set first histogram (catches per year and province) on the left. Catches per province and catches per year on the right, displayed as a set of 2 tabs.
+2. Replace "Chart1", "Chart2" and "Chart3" labels with better titles.
+3. Add a second page with catch analysis at species level. Check the [Multiple pages](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#multiple-pages) section in the documentation. Divide the dashboard in two columns: on the left the catches per year and species, on the right the data with the fitted model.
+4. Replace "Page1", "Page2" labels with better titles.
+5. A dashboard is not a dashboard without some interactive maps :-) Use the code under "# Maps" to add a third page with the heatmap and the leaflet map. Still, two columns can be used.
+
+Pelase, feel free to experiment other layouts. flexdashboard is very nice, isn't?
+
+---
+class: left, top
+
+# INTERMEZZO
+
+Let's code together!
+
+1. RStudio helps us by providing you a template for our first Shiny web application. Click on File -> New File -> Shiny Web App -> Select "Single File" as Application type and create the app within the `src` directory.
+
+2. Which file is created? Run it by clicking the green play button "Run App". How to run the app in viewer pane or externally on a browser? How to run the app as a background job instead of "stealing" your console? Hint: click on the downwards black triangle to explore all options.
+
+3. Every Shiny web application has 3 components (functions). Find them in the web application you are running. What are they responsible for?
+
+4. What does the template show? Where are the data loaded? Where is the histogram generated?
+
+5. What is the `input` and where is generated? What is the `output` and where is generated?
+
+6. Show the eruption time in minutes instead of the waiting time to next eruption. Hint: check ?faithful (the name of the dataset). Use "Distribution of eruption times" as histogram title, "minutes" as x label, "number of eruptions" as y label. Hint: check `?hist`
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2. Basics
+
+We will start to make our own shiny app for visualizing the catches of the geese (Nijlgans, Grauwe gans, Soepgans, Canadese gans, Brandgans) depending on the province ().
+
+1. We first focus on the user interface, the so called UI (`ui <- fluidPage()`). Remove ALL code within the `server()` function and add in the **sidebarPanel** some radio buttons to switch among provinces and a box with the species to select from. Specify also a general title for your app, a specific title for the biotope radio buttons and a title for the species selection box. Hint: check [lesson 2](https://shiny.rstudio.com/tutorial/written-tutorial/lesson2/) and [lesson 3](https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/)
+2. On the **mainPanel**, please, **render** the choices as basic **text**. Hint: check [lesson 4](https://shiny.rstudio.com/tutorial/written-tutorial/lesson4/)
+3. Select your province of origin and "Canadese gans" as default options
+
+At the end you should end up with something like this:
+
+![:scale 75%]({{ site.baseurl}}/assets/images/20231128/20231128_render_text.png)
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3. Plot
+
+Are you ready for your fist interactive plot? Based on what you have just learned and [lesson 5](https://shiny.rstudio.com/tutorial/written-tutorial/lesson5/) we are going to create an interactive ggplot based on the code provided in 20231128_challenges.R.
+
+1. We need to read the `20231128_geese_counts_cleaned.txt` file. What is the best folder to store the data our app needs? Hint: see [lesson 5](https://shiny.rstudio.com/tutorial/written-tutorial/lesson5/)
+2. Read the data and substitute the hard coded choices in challenge 2 using the provided variables `biotopes` and `sp` in 20231128_challenges.R.
+3. **Render** the **plot**. You should get something like this:
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20231128/20231128_shiny_plot.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3. Publish your shiny app
+
+A web application should be accessible as a web page, shouldn`t it? Let`s publish our app on [shinyapps.io](https://www.shinyapps.io/)! If you do not have an account, you have to create one, first. Follow the instructions in the pop up window. Some packages will be installed for you. Also, the deployment of the application could take some time.
+
+![:scale 65%]({{ site.baseurl}}/assets/images/20231128/20231128_publish_shiny_app.png)
+
+Once done, you can share it with your colleagues. Mine is deployed on
+https://damianooldoni.shinyapps.io/challenge3_20231128/
+
+---
+class: left, top
+
+# Bonus challenge 1. Multiple REACTIVE outputs
+
+Add a *data table* with the shown data below the plot. Try to avoid filtering twice by making your code *reactive*. Hint: see [lesson 6](https://shiny.rstudio.com/tutorial/written-tutorial/lesson6/)
+
+
+---
+class: left, top
+
+# Bonus challenge 2. Mastering shiny
+
+This final challenge is to show you up how things can get interesting when you have to take care changes in a reactive way. Up to now, the input catches data were immutable. But what if you think such data can change over time and so new species or provinces could be added/removed? Your app should get noticed about that and adapt the options in the side panel!
+
+---
+class: left, top
+
+# Resources
+
+- The solutions and the edited video recording will be soon available on vimeo
+- [flexdashboard](https://pkgs.rstudio.com/flexdashboard/index.html) package documentation
+- `shiny` [tutorials](https://shiny.rstudio.com/tutorial/) for any level (getting started -> pro users). In particular, this coding club is partly inspired by the shiny [basics tutorial](https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/)
+- Dive in shiny [reactivity](https://shiny.rstudio.com/articles/reactivity-overview.html)
+- Learn from many well written [articles](https://shiny.rstudio.com/articles/) on shiny website
+- a 16 min read about the [User Experience design principles](https://www.ramotion.com/blog/ux-design-principles/#section-2-visual-aspects)
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.05 - Isala Van Diest<br>
+Date: __14/12/2023__, van 10:00 tot 12:30<br>
+Subject: **to be decided** <br>
+(registration announced via DG_useR@inbo.be)
