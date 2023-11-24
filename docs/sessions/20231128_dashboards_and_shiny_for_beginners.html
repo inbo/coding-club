@@ -100,9 +100,8 @@ class: left, top
 
 # Data and scripts description
 
-1. [20231128_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20231128/20231128_challenges.R): R script about geese counts.
-2. [20231128_geese_counts_cleaned.txt](https://github.com/inbo/coding-club/blob/master/data/20231128/20231128_geese_counts_cleaned.txt): comma separated text file with geese catch data
-3. [20231128_flemish_provinces.gpkg](https://github.com/inbo/coding-club/blob/master/data/20231128/20231128_flemish_provinces.gpkg): geopackage with the Flemish provinces to use in `20231128_challenges.R`
+1. [20231128_geese_counts_cleaned.txt](https://github.com/inbo/coding-club/blob/master/data/20231128/20231128_geese_counts_cleaned.txt): comma separated text file with geese catch data.
+2. [20231128_flemish_provinces.gpkg](https://github.com/inbo/coding-club/blob/master/data/20231128/20231128_flemish_provinces.gpkg): geopackage with the Flemish provinces.
 
 ---
 class: left, top
@@ -112,9 +111,14 @@ class: left, top
 ```r
 install.packages("shiny")
 install.packages("flexdashboard")
-library(tidyverse)
-library(shiny)
-```
+library(flexdashboard)  # to create dashboards using RMarkdown
+library(tidyverse)      # to do datascience
+library(geepack)        # to do modelling
+library(heatmaply)      # to create interactive heatmaps
+library(sf)             # to work with geospatial vector data
+library(leaflet)        # to make dynamic maps
+library(htmltools)      # to make nice html labels for dynamic maps```
+library(shiny)          # to create web applications in R
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -124,13 +128,13 @@ class: left, top
 
 Let's creae a (static) dashboard called "Geese catches in Flanders" using [flexdashboard](https://pkgs.rstudio.com/flexdashboard/index.html).
 
-1. Use code under "# Static plots (page 1)" to generate a [Tabset Column](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#tabset-column) dashboard. Set first histogram (catches per year and province) on the left. Catches per province and catches per year on the right, displayed as a set of 2 tabs.
-2. Replace "Chart1", "Chart2" and "Chart3" labels with better titles.
+1. Use the code in 20231128_challenges.R under "# Static plots (page 1)" to generate a  dashboard. Use the [Tabset Column](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#tabset-column) layout. Set first histogram (catches per year and province) on the left. Catches per province and catches per year on the right, displayed as a set of 2 tabs.
+2. Replace "Chart1", "Chart2" and "Chart3" with better titles.
 3. Add a second page with catch analysis at species level. Check the [Multiple pages](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#multiple-pages) section in the documentation. Divide the dashboard in two columns: on the left the catches per year and species, on the right the data with the fitted model.
-4. Replace "Page1", "Page2" labels with better titles.
+4. Replace "Page1", "Page2" with better titles.
 5. A dashboard is not a dashboard without some interactive maps :-) Use the code under "# Maps" to add a third page with the heatmap and the leaflet map. Still, two columns can be used.
 
-Pelase, feel free to experiment other layouts. flexdashboard is very nice, isn't?
+Pelase, feel free to experiment other layouts. Enjoy flexdashboard!
 
 ---
 class: left, top
@@ -144,6 +148,13 @@ Let's code together!
 2. Which file is created? Run it by clicking the green play button "Run App". How to run the app in viewer pane or externally on a browser? How to run the app as a background job instead of "stealing" your console? Hint: click on the downwards black triangle to explore all options.
 
 3. Every Shiny web application has 3 components (functions). Find them in the web application you are running. What are they responsible for?
+
+---
+class: left, top
+
+# INTERMEZZO
+
+Let's code together!
 
 4. What does the template show? Where are the data loaded? Where is the histogram generated?
 
@@ -165,7 +176,7 @@ We will start to make our own shiny app for visualizing the catches of the geese
 
 At the end you should end up with something like this:
 
-![:scale 75%]({{ site.baseurl}}/assets/images/20231128/20231128_render_text.png)
+![:scale 90%]({{ site.baseurl}}/assets/images/20231128/20231128_render_text.png)
 
 
 ---
@@ -177,10 +188,10 @@ class: left, top
 Are you ready for your fist interactive plot? Based on what you have just learned and [lesson 5](https://shiny.rstudio.com/tutorial/written-tutorial/lesson5/) we are going to create an interactive ggplot based on the code provided in 20231128_challenges.R.
 
 1. We need to read the `20231128_geese_counts_cleaned.txt` file. What is the best folder to store the data our app needs? Hint: see [lesson 5](https://shiny.rstudio.com/tutorial/written-tutorial/lesson5/)
-2. Read the data and substitute the hard coded choices in challenge 2 using the provided variables `biotopes` and `sp` in 20231128_challenges.R.
+2. Read the data and substitute the hard coded choices in challenge 2 using the variables `provinces` and `species` as in 20231128_challenges.R.
 3. **Render** the **plot**. You should get something like this:
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20231128/20231128_shiny_plot.png)
+![:scale 110%]({{ site.baseurl}}/assets/images/20231128/20231128_shiny_plot.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -192,7 +203,7 @@ A web application should be accessible as a web page, shouldn`t it? Let`s publis
 
 ![:scale 65%]({{ site.baseurl}}/assets/images/20231128/20231128_publish_shiny_app.png)
 
-Once done, you can share it with your colleagues. Mine is deployed on
+You have now your first shiny app publicly available! Well done! My web app is deployed on
 https://damianooldoni.shinyapps.io/challenge3_20231128/
 
 ---
@@ -200,7 +211,7 @@ class: left, top
 
 # Bonus challenge 1. Multiple REACTIVE outputs
 
-Add a *data table* with the shown data below the plot. Try to avoid filtering twice by making your code *reactive*. Hint: see [lesson 6](https://shiny.rstudio.com/tutorial/written-tutorial/lesson6/)
+Add a *data table* with the data used in the histogram below the plot. Try to avoid filtering twice by making your code *reactive*. Hint: see [lesson 6](https://shiny.rstudio.com/tutorial/written-tutorial/lesson6/)
 
 
 ---
@@ -208,7 +219,7 @@ class: left, top
 
 # Bonus challenge 2. Mastering shiny
 
-This final challenge is to show you up how things can get interesting when you have to take care changes in a reactive way. Up to now, the input catches data were immutable. But what if you think such data can change over time and so new species or provinces could be added, removed or modified? Your app should get noticed about that and adapt the options in the side panel! E.g. replace "Antwerpen" with "A" (do a "Replace All" in a text editor) in the text file in `/data` folder and refresh the App. You should see the change immediately as shown here below.
+This final challenge is to show you up how things can get interesting when you have to take care changes in a reactive way. Up to now, the input catches data were immutable. But what if you think such data can change over time and so new species or provinces could be added, removed or modified? Your app should get noticed about that and adapt the options in the side panel! E.g. replace "Antwerpen" with "A" in the text file in `/data` folder (do a "Replace All" in a text editor) and **refresh** the app. You should see the change immediately as shown here below.
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20231128/20231128_reactivity.png)
 
