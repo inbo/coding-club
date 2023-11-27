@@ -6,6 +6,7 @@
 
 # Load libraries:
 library(tidyverse)    # to do datascience
+library(here)         # to work easily with paths
 library(geepack)      # to do modelling
 library(heatmaply)    # to create interactive heatmaps
 library(sf)           # to work with geospatial vector data
@@ -15,7 +16,10 @@ library(htmltools)    # to make nice html labels for dynamic maps
 
 # Read data
 
-catch_fl <- read_csv("data/20231128/20231128_geese_counts_cleaned.txt", na = "")
+catch_fl <- readr::read_csv(
+  here::here("data", "20231128", "20231128_geese_counts_cleaned.txt"),
+  na = ""
+)
 
 # # Static plots (page 1)
 #
@@ -138,7 +142,9 @@ heatmaply(n_catches_per_location, dendrogram = "none")
 # ## Leaflet map
 # Total number of catches per province (Chart 1, on top)
 
-pr_fl <- st_read("./data/20231128/20231128_flemish_provinces.gpkg")
+pr_fl <- sf::st_read(
+  here::here("data", "20231128" ,"20231128_flemish_provinces.gpkg")
+)
 pr_fl <- pr_fl %>%
   dplyr::left_join(catch_per_province,
                    by = c("TX_PROV_DESCR_NL" = "province"))
@@ -182,9 +188,14 @@ map_catch_pr
 
 ## CHALLENGE 3
 
-# code to be on top of app.R
+# code to be on top in app.R
 
-catch_fl <- read_csv("./data/20231128/20231128_geese_counts_cleaned.txt", na = "") # CHECK THE PATH ;-)
+# CHECK THE PATH ;-)
+catch_fl <- read_csv(
+  here::here("data", "20231128", "20231128_geese_counts_cleaned.txt"),
+  na = ""
+)
+
 # provinces
 provinces <- unique(catch_fl$province)
 # species
