@@ -108,10 +108,17 @@ class: left, top
 
 # Install and load libraries
 
+Install new packages:
+
 ```r
 install.packages("shiny")
 install.packages("flexdashboard")
 install.packages("heatmaply")
+```
+
+Load packages (if needed, install other missing packages as well):
+
+```r
 library(flexdashboard)  # to create dashboards using RMarkdown
 library(tidyverse)      # to do datascience
 library(here)           # to work easily with paths
@@ -121,6 +128,7 @@ library(sf)             # to work with geospatial vector data
 library(leaflet)        # to make dynamic maps
 library(htmltools)      # to make nice html labels for dynamic maps```
 library(shiny)          # to create web applications in R
+```
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
