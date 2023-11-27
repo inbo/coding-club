@@ -111,6 +111,7 @@ class: left, top
 ```r
 install.packages("shiny")
 install.packages("flexdashboard")
+install.packages("heatmaply")
 library(flexdashboard)  # to create dashboards using RMarkdown
 library(tidyverse)      # to do datascience
 library(geepack)        # to do modelling
@@ -126,15 +127,15 @@ class: left, top
 
 # Challenge 1: static dashboards
 
-Let's creae a (static) dashboard called "Geese catches in Flanders" using [flexdashboard](https://pkgs.rstudio.com/flexdashboard/index.html).
+Let's create a (static) dashboard called "Geese catches in Flanders" using [flexdashboard](https://pkgs.rstudio.com/flexdashboard/index.html).
 
-1. Use the code in 20231128_challenges.R under "# Static plots (page 1)" to generate a  dashboard. Use the [Tabset Column](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#tabset-column) layout. Set first histogram (catches per year and province) on the left. Catches per province and catches per year on the right, displayed as a set of 2 tabs.
+1. Use the code in 20231128_challenges.R under "# Static plots (page 1)" to generate a  dashboard. Use the [Tabset Column](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#tabset-column) layout. Set the first histogram (catches per year and province) on the left. On the right, display two bar charts (catches per province and catches per year on the right) as a set of 2 tabs.
 2. Replace "Chart1", "Chart2" and "Chart3" with better titles.
 3. Add a second page with catch analysis at species level. Check the [Multiple pages](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#multiple-pages) section in the documentation. Divide the dashboard in two columns: on the left the catches per year and species, on the right the data with the fitted model.
-4. Replace "Page1", "Page2" with better titles.
-5. A dashboard is not a dashboard without some interactive maps :-) Use the code under "# Maps" to add a third page with the heatmap and the leaflet map. Still, two columns can be used.
+4. Replace "Page1" and "Page2" with better titles.
+5. A dashboard is not a dashboard without some interactive maps :-) Use the code under "# Maps" to add a third page with the heatmap and the leaflet map. Put each of them in a separate column.
 
-Pelase, feel free to experiment other layouts. Enjoy flexdashboard!
+Please, feel free to experiment with other layouts. Enjoy flexdashboard!
 
 ---
 class: left, top
@@ -143,9 +144,9 @@ class: left, top
 
 Let's code together!
 
-1. RStudio helps us by providing you a template for our first Shiny web application. Click on File -> New File -> Shiny Web App -> Select "Single File" as Application type and create the app within the `src` directory.
+1. RStudio helps us by providing a template for our first Shiny web application. Click on File -> New File -> Shiny Web App -> Select "Single File" as Application type and create the app within the `src` directory.
 
-2. Which file is created? Run it by clicking the green play button "Run App". How to run the app in viewer pane or externally on a browser? How to run the app as a background job instead of "stealing" your console? Hint: click on the downwards black triangle to explore all options.
+2. Which file is created? Run it by clicking the green play button "Run App". How to run the app in the viewer pane or externally on a browser? How to run the app as a background job instead of "stealing" your console? Hint: click on the downwards black triangle to explore all options.
 
 3. Every Shiny web application has 3 components (functions). Find them in the web application you are running. What are they responsible for?
 
@@ -158,9 +159,9 @@ Let's code together!
 
 4. What does the template show? Where are the data loaded? Where is the histogram generated?
 
-5. What is the `input` and where is generated? What is the `output` and where is generated?
+5. What is the `input` and where is it generated? What is the `output` and where is it generated?
 
-6. Show the eruption time in minutes instead of the waiting time to next eruption. Hint: check ?faithful (the name of the dataset). Use "Distribution of eruption times" as histogram title, "minutes" as x label, "number of eruptions" as y label. Hint: check `?hist`
+6. Show the eruption time in minutes instead of the waiting time to next eruption. Hint: check ?faithful (the name of the dataset). Use "Distribution of eruption times" as histogram title, "minutes" as x-axis label, "number of eruptions" as y-axis label. Hint: check `?hist`
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
