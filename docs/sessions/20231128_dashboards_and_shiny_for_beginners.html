@@ -172,12 +172,12 @@ class: left, top
 We will start to make our own shiny app for visualizing the catches of the geese (Nijlgans, Grauwe gans, Soepgans, Canadese gans, Brandgans) depending on the province ().
 
 1. We first focus on the user interface, the so called UI (`ui <- fluidPage()`). Remove ALL code within the `server()` function and add in the **sidebarPanel** some radio buttons to switch among provinces and a box with the species to select from. Specify also a general title for your app, a specific title for the biotope radio buttons and a title for the species selection box. Hint: check [lesson 2](https://shiny.rstudio.com/tutorial/written-tutorial/lesson2/) and [lesson 3](https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/)
-2. On the **mainPanel**, please, **render** the choices as basic **text**. Hint: check [lesson 4](https://shiny.rstudio.com/tutorial/written-tutorial/lesson4/)
+2. On the **mainPanel**, **render** the choices as basic **text**. Hint: [lesson 4](https://shiny.rstudio.com/tutorial/written-tutorial/lesson4/)
 3. Select "Oost-Vlaanderen" and "Canadese gans" as default options
 
 At the end you should end up with something like this:
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20231128/20231128_render_text.png)
+![:scale 80%]({{ site.baseurl}}/assets/images/20231128/20231128_render_text.png)
 
 
 ---
@@ -186,7 +186,7 @@ class: left, top
 
 # Challenge 3. Plot
 
-Are you ready for your fist interactive plot? Based on what you have just learned and [lesson 5](https://shiny.rstudio.com/tutorial/written-tutorial/lesson5/) we are going to create an interactive ggplot based on the code provided in 20231128_challenges.R.
+Are you ready for your fist interactive plot? Based on what you have just learned and [lesson 5](https://shiny.rstudio.com/tutorial/written-tutorial/lesson5/), we are going to create an interactive ggplot based on the code provided in 20231128_challenges.R.
 
 1. We need to read the `20231128_geese_counts_cleaned.txt` file. What is the best folder to store the data our app needs? Hint: see [lesson 5](https://shiny.rstudio.com/tutorial/written-tutorial/lesson5/)
 2. Read the data and substitute the hard coded choices in challenge 2 using the variables `provinces` and `species` as in 20231128_challenges.R.
@@ -200,11 +200,11 @@ class: left, top
 
 # Challenge 3. Publish your shiny app
 
-A web application should be accessible as a web page, shouldn`t it? Let`s publish our app on [shinyapps.io](https://www.shinyapps.io/)! If you do not have an account, you have to create one, first. Follow the instructions in the pop up window. Some packages will be installed for you. Also, the deployment of the application could take some time.
+A web application should be accessible as a web page, shouldn`t it? Let`s publish our app on [shinyapps.io](https://www.shinyapps.io/)! If you do not have an account, you have to create one first. Follow the instructions in the pop up window. Some packages will be installed for you. Also, the deployment of the application could take some time.
 
 ![:scale 65%]({{ site.baseurl}}/assets/images/20231128/20231128_publish_shiny_app.png)
 
-You have now your first shiny app publicly available! Well done! My web app is deployed on
+You have now made your first shiny app publicly available! Well done! My web app is deployed on
 https://damianooldoni.shinyapps.io/challenge3_20231128/
 
 ---
@@ -220,7 +220,7 @@ class: left, top
 
 # Bonus challenge 2. Mastering shiny
 
-This final challenge is to show you up how things can get interesting when you have to take care changes in a reactive way. Up to now, the input catches data were immutable. But what if you think such data can change over time and so new species or provinces could be added, removed or modified? Your app should get noticed about that and adapt the options in the side panel! E.g. replace "Antwerpen" with "A" in the text file in `/data` folder (do a "Replace All" in a text editor) and **refresh** the app. You should see the change immediately as shown here below.
+This challenge is to show you how interesting things can get when you work with changes in a reactive way. Up to now, the input catches data was immutable. But what if your data can change over time and so new species or provinces could be added, removed or modified? Your app should notice these changes and adapt the options in the side panel! E.g. replace "Antwerpen" with "Ant" in the text file in `/data` folder (do a "Replace All" in a text editor) and **refresh** the app. You should see the change immediately as shown here below.
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20231128/20231128_reactivity.png)
 
@@ -229,7 +229,7 @@ class: left, top
 
 # Bonus challenge 3. Use shiny with flexdashboard
 
-Yes you can make your flexdashboard a reactive shiny appllication. Follow the instructions and the example in the [shiny](https://pkgs.rstudio.com/flexdashboard/articles/shiny.html) vignette of the flexdashboard documentation to transform the first page of the dashboard in challenge 1 in a reactive flexdashboard application. Test the reactivity by replacing "Antwerpen" with "Ant" again and refresh the application.
+Yes! You can transform your flexdashboard into a reactive shiny appllication. Follow the instructions and the example in the [shiny](https://pkgs.rstudio.com/flexdashboard/articles/shiny.html) vignette of the flexdashboard documentation to transform the first page of the dashboard in challenge 1 in a reactive flexdashboard application. Test the reactivity by replacing "Antwerpen" with "Ant" again and refresh the application.
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20231128/20231128_reactivity_flexdashboards.png)
 
@@ -256,7 +256,7 @@ class: left, top
 - [flexdashboard](https://pkgs.rstudio.com/flexdashboard/index.html) package documentation
 - `shiny` [tutorials](https://shiny.rstudio.com/tutorial/) for any level (getting started -> pro users). In particular, this coding club is partly inspired by the shiny [basics tutorial](https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/)
 - Dive in shiny [reactivity](https://shiny.rstudio.com/articles/reactivity-overview.html)
-- Learn from many well written [articles](https://shiny.rstudio.com/articles/) on shiny website
+- Learn from many well written [articles](https://shiny.rstudio.com/articles/) on the shiny website
 - a 16 min read about the [User Experience design principles](https://www.ramotion.com/blog/ux-design-principles/#section-2-visual-aspects)
 
 ---
