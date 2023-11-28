@@ -138,7 +138,7 @@ class: left, top
 
 Let's create a (static) dashboard called "Geese catches in Flanders" using [flexdashboard](https://pkgs.rstudio.com/flexdashboard/index.html).
 
-1. Use the code in 20231128_challenges.R under "# Static plots (page 1)" to generate a  dashboard. Use the [Tabset Column](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#tabset-column) layout. Set the first histogram (catches per year and province) on the left. On the right, display two bar charts (catches per province and catches per year on the right) as a set of 2 tabs.
+1. Use the code in 20231128_challenges.R under "# Static plots (page 1)" to generate a  dashboard. Use the [Tabset Column](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#tabset-column) layout. Set the first histogram (catches per year and province) on the left. On the right, display two bar charts (catches per province and catches per year) as a set of 2 tabs.
 2. Replace "Chart1", "Chart2" and "Chart3" with better titles.
 3. Add a second page with catch analysis at species level. Check the [Multiple pages](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#multiple-pages) section in the documentation. Divide the dashboard in two columns: on the left the catches per year and species, on the right the data with the fitted model.
 4. Replace "Page1" and "Page2" with better titles.
@@ -170,7 +170,7 @@ Let's code together!
 
 5. What is the `input` and where is it generated? What is the `output` and where is it generated?
 
-6. Show the eruption time in minutes instead of the waiting time to next eruption. Hint: check ?faithful (the name of the dataset). Use "Distribution of eruption times" as histogram title, "minutes" as x-axis label, "number of eruptions" as y-axis label. Hint: check `?hist`
+6. Show the eruption time in minutes instead of the waiting time to next eruption. Hint: check ?faithful (the name of the dataset).
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -178,7 +178,7 @@ class: left, top
 
 # Challenge 2. Basics
 
-We will start to make our own shiny app for visualizing the catches of the geese (Nijlgans, Grauwe gans, Soepgans, Canadese gans, Brandgans) depending on the province ().
+We will start to make our own shiny app for visualizing the catches of the geese (Nijlgans, Grauwe gans, Soepgans, Canadese gans, Brandgans) depending on the province (Antwerpen, Limburg, Oost-Vlaanderen, Vlaams-Brabant, West-Vlaanderen). Do not read any file, just hard code these values.
 
 1. We first focus on the user interface, the so called UI (`ui <- fluidPage()`). Remove ALL code within the `server()` function and add in the **sidebarPanel** some radio buttons to switch among provinces and a box with the species to select from. Specify also a general title for your app, a specific title for the biotope radio buttons and a title for the species selection box. Hint: check [lesson 2](https://shiny.rstudio.com/tutorial/written-tutorial/lesson2/) and [lesson 3](https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/)
 2. On the **mainPanel**, **render** the choices as basic **text**. Hint: [lesson 4](https://shiny.rstudio.com/tutorial/written-tutorial/lesson4/)
