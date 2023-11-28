@@ -1,0 +1,219 @@
+---
+title: "Geese catches in Flanders"
+output: flexdashboard::flex_dashboard
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)  # to create dashboards using RMarkdown
+library(tidyverse)      # to do datascience
+library(geepack)        # to do modelling
+library(here)           # to work easily with paths
+library(heatmaply)      # to create interactive heatmaps
+library(sf)             # to work with geospatial vector data
+library(leaflet)        # to make dynamic maps
+library(htmltools)      # to make nice html labels for dynamic maps
+```
+
+
+```{r read-data, include=FALSE}
+catch_fl <- read_csv(
+  here::here("data", "20231128", "20231128_geese_counts_cleaned.txt"), na = ""
+)
+```
+
+Catches
+=====================================  
+
+Column
+-------------------------------------
+    
+### Catches per province and year
+    
+```{r catches-per-year-and-province}
+catch_per_year_province <-
+  catch_fl %>%
+  group_by(year, province) %>%
+  summarize(catched = sum(catched, na.rm = TRUE)) %>%
+  ungroup() %>%
+  arrange(desc(catched))
+ggplot(catch_per_year_province,
+       aes(x = year, y = catched, fill = province)) +
+  geom_bar(stat = 'identity') +
+  scale_x_continuous(breaks = 2012:2018)
+```
+   
+Column {.tabset}
+-------------------------------------
+   
+### Catches per province
+
+```{r catches-per-province}
+catch_per_province <- catch_fl %>%
+  group_by(province) %>%
+  summarize(catched_total = sum(catched, na.rm = TRUE)) %>%
+  ungroup() %>%
+  arrange(desc(catched_total))
+ggplot(catch_per_province,
+       aes(x = province, y = catched_total)) +
+  geom_bar(stat = 'identity') +
+  scale_x_discrete(breaks = 2012:2018)
+
+```   
+ 
+### Catches per year
+    
+```{r catches-per-year}
+catch_per_year <- catch_fl %>%
+  group_by(year) %>%
+  summarize(catched_total = sum(catched, na.rm = TRUE)) %>%
+  ungroup() %>%
+  arrange(desc(catched_total))
+ggplot(catch_per_year,
+       aes(x = year, y = catched_total)) +
+  geom_bar(stat = 'identity') +
+  scale_x_continuous(breaks = 2012:2018)
+```
+
+# Modelling catches data at species level
+
+## Column
+
+### Catches per species
+
+```{r catch-per-species}
+catch_species <-
+  catch_fl %>%
+  group_by(year, commonName) %>%
+  summarize(catched_total = sum(catched, na.rm = TRUE)) %>%
+  arrange(commonName)
+ggplot(catch_species,
+       aes(x = year, y = catched_total, fill = commonName)) +
+  geom_bar(stat = 'identity') +
+  scale_x_continuous(breaks = 2012:2018)
+
+```
+
+Column
+-------------------------------------
+
+```{r apply-model}
+species <- unique(catch_fl$commonName)
+model_per_species <-
+  purrr::map(
+    species,
+    function(s) {
+      dfs <- catch_fl %>%
+        dplyr::filter(commonName == s) %>%
+        arrange(location, year) %>%
+        mutate(year = as_factor(as.character(year)),
+               location = as_factor(location))
+      geeglm(counts ~ 0 + year,
+             family = poisson,
+             data = dfs,
+             waves = year,
+             id = location)
+    })
+names(model_per_species) <- species
+overview_model <- map(model_per_species, ~summary(.))
+overview_gee <- purrr::map2_dfr(
+  overview_model,
+  names(overview_model), function(model, name) {
+    coefficients(model)[,1:2] %>%
+      rownames_to_column(var = "year") %>%
+      as_tibble() %>%
+      mutate(species = name,
+             year = str_sub(year, start = 5)) %>%
+      dplyr::select(species, everything())
+  })
+overview_gee <-
+  overview_gee %>%
+  mutate(
+    lwr = exp(Estimate - Std.err),
+    upr = exp(Estimate + Std.err),
+    Estimate = exp(Estimate)
+)
+```
+
+
+### Modelled data
+
+```{r plot-modelled-data}
+ggplot(overview_gee, aes(x = year, y = Estimate, ymin = lwr, ymax = upr)) +
+  geom_errorbar(colour = "cyan3") + geom_point(colour = "cyan4") +
+  facet_grid(.~species) +
+  xlab("year") + ylab("Estimated number of geese per location") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, size = 9))
+```
+
+
+
+Visualize catches at location and province level
+=====================================   
+
+
+Column
+-------------------------------------
+   
+### Number of catches and counts per location
+
+```{r catches-counts, include=FALSE}
+n_catches_per_location <- catch_fl %>%
+  group_by(location) %>%
+  summarise(counts = sum(.data$counts, na.rm = TRUE),
+            catches = sum(.data$catched, na.rm = TRUE)) %>%
+  as.data.frame()
+row.names(n_catches_per_location) <- n_catches_per_location$location
+n_catches_per_location$location <- NULL
+```
+
+```{r heatmap}
+heatmaply(n_catches_per_location, dendrogram = "none")
+```   
+
+
+Column
+-------------------------------------
+
+### Number of catches at province level
+
+```{r include=FALSE}
+pr_fl <- st_read("./data/20231026/20231026_flemish_provinces.gpkg")
+pr_fl <- pr_fl %>%
+  dplyr::left_join(catch_per_province,
+                   by = c("TX_PROV_DESCR_NL" = "province"))
+```
+
+```{r leaflet-map}
+bins <- seq(0, 6000, by = 1000)
+pal <- colorBin("YlOrRd", domain = pr_fl$catched_total, bins = bins)
+
+labels <- sprintf(
+  "<strong>%s</strong><br/>%g catches",
+  pr_fl$TX_PROV_DESCR_NL, pr_fl$catched_total
+) %>% lapply(HTML)
+
+map_catch_pr <- leaflet(pr_fl) %>%
+  addTiles() %>%
+  addPolygons(
+    fillColor = ~pal(catched_total),
+    weight = 2,
+    opacity = 1,
+    color = "white",
+    dashArray = "3",
+    fillOpacity = 0.7,
+    highlightOptions = highlightOptions(
+      weight = 5,
+      color = "#666",
+      dashArray = "",
+      fillOpacity = 0.7,
+      bringToFront = TRUE),
+    label = labels,
+    labelOptions = labelOptions(
+      style = list("font-weight" = "normal", padding = "3px 8px"),
+      textsize = "15px",
+      direction = "auto")) %>%
+  addLegend(position = "bottomright",
+            pal = pal,
+            values = ~catched_total)
+map_catch_pr
+```

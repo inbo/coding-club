@@ -1,0 +1,57 @@
+---
+title: "Geese catches in Flanders"
+output: flexdashboard::flex_dashboard
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)      # to do datascience
+```
+
+
+```{r read-data, include=FALSE}
+catch_fl <- read_csv("./data/20231128_geese_counts_cleaned.txt", na = "")
+```
+
+Catches
+=====================================  
+
+Column {.sidebar}
+-------------------------------------
+    
+Province and species selection:
+    
+```{r inputs}
+# provinces
+provinces <- unique(catch_fl$province)
+# species
+species <- unique(catch_fl$commonName)
+radioButtons(
+        inputId = "prov",
+        label = "province",
+        choices = provinces,
+        selected = provinces[3]) # Oost-Vlaanderen
+selectInput(
+        inputId = "sp",
+        label = "species",
+        choices = species,
+        selected = species[4]) # Canadese gans
+```
+   
+Column
+-------------------------------------
+   
+```{r plot}
+renderPlot({
+    catch_fl %>%
+      filter(commonName == input$sp,
+             province == input$prov) %>%
+      group_by(year) %>%
+      summarize(catched_total = sum(catched, na.rm = TRUE)) %>%
+      ungroup() %>%
+      ggplot(aes(x = year, y = catched_total)) +
+      geom_bar(stat = 'identity') +
+      scale_x_continuous(breaks = 2012:2018) +
+      labs(title = paste("Catches of", input$sp, "in", input$prov))
+})
+```   
