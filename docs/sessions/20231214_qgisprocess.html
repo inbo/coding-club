@@ -1,0 +1,378 @@
+---
+layout: presentation
+title: qgisprocess - where QGIS meets R
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+  <!-- Adjust the presentation to the session. Focus on the challenges,
+this is not a coding tutorial.
+
+Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+folder and use the jekyll base.url reference as done in this template
+or see https://jekyllrb.com/docs/liquid/tags/#links.
+  using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 14 DECEMBER 2023
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+
+01.05 - Isala Van Diest
+
+---
+class: left, top
+
+## ROOMIE: room reservation
+
+```
+> if (isFALSE(roomie)) {
++   warning("Please confirm asap the room reservation on the roomie")
++ }
+Warning message:
+Please confirm asap the room reservation on the roomie
+```
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20231214/qgisprocess_badge.png)
+
+
+---
+class: left, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+# Share your code during the coding session
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/nDpNbgX7T8m0ozuvKOJClA?edit and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/nDpNbgX7T8m0ozuvKOJClA?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# QGIS
+
+- [QGIS](https://qgis.org/en/site/) is a free and open source geographic information system.
+
+- Typically described as the open source version of [ArcGIS]().
+
+- QGIS allows to create, edit, visualise, analyse and publish geospatial information.
+
+- The most recent version at the moment of writing (2023-12-7) is 3.34
+
+---
+class: left, top
+
+# What is qgisprocess?
+
+- [qgisprocess](https://r-spatial.github.io/qgisprocess/index.html) is an R package
+- it wraps the standalone [qgis_process command-line utility](https://docs.qgis.org/3.28/en/docs/user_manual/processing/standalone.html)
+- it allows you to run processing algorithms and models (built-in or provided by plugins) directly from R without starting the qgis_process command-line utility or the QGIS Desktop itself
+
+---
+class: left, top
+
+# Why should I use it?*
+
+- Expand geospatial processing abilities in R
+
+- Still have all other processing capabilities of R
+
+- Reproducibility
+
+- No QGIS project needed
+
+- Unified interface to QGIS natice algorithms and external processing providers/plugins, e.g. GRASS GIS, SAGA, GDAL
+
+<small> Source: [Floris presentation](https://florisvdh.github.io/foss4g-2023-qgisprocess/#17) at FOSS4G 2023</small>
+---
+class: center, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20231214/20231214_cheat_sheet_qgisprocess.png)
+Download cheatsheet in [English](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20231214_cheat_sheet_qgisprocess_en.pdf) or in [Spanish](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20231214_qgisprocess_es.pdf)
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub folders [coding-club/data/20231214](https://github.com/inbo/coding-club/tree/master/data/20231214) and [coding-club/src/20231214](https://github.com/inbo/coding-club/tree/master/src/20231214)
+
+
+<br>
+
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20220428")` to download the coding club material of April, 28 2022. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data and scripts description
+
+1. `water`: [20231214_watersurfaces_hab.gpkg](https://github.com/inbo/coding-club/tree/master/data/20231214/20231214_watersurfaces_hab.gpkg): Standing water Natura 2000 habitat types (2190_a and 31xx) and regionally important biotopes (rbbah) in Flanders.
+2. `hab_springs`: [20231214_habitatsprings_flanders.geojson](https://github.com/inbo/coding-club/tree/master/data/20231214/20231214_habitatsprings_flanders.geojson): geospatial collection of points that correspond with the presence of the Natura 2000 habitat type 7220 (Petrifying springs with tufa formation (Cratoneurion)) in springs and streaming water segments in the Flanders**
+3. [20231214_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20231214/20231214_challenges.R): R script to start with.
+
+<small> \* Westra, T., Vanderhaeghe, F., & Herr, C. (2021). Map of standing water habitat types and regionally important biotopes in Flanders (watersurfaces_hab_v4) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.4915849.</small>
+<br>
+<small> \*\* Derived from "Oosterlynck, P. (2020). Distribution of the Natura 2000 habitat type 7220 (Cratoneurion) in Flanders and Brussels Capital Region, Belgium (version 2020) (habitatsprings_2020v2) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.3784149".</small>
+---
+class: left, top
+
+Install new packages:
+
+```r
+install.packages("qgisprocess")
+```
+
+Load packages (if needed, install other missing packages as well):
+
+```r
+library(sf)             # to work with geospatial vector data
+library(qgisprocess)      # to use QGIS command line utility in R
+```
+
+For visualization purposes, you could use `mapview()` function in mapview package. Install it, if needed.
+
+```r
+library(mapview)
+```
+
+---
+class: left, top
+
+# Challenge 0
+
+- Install the package: install.packages("qgisprocess")
+- Load the package:
+
+```r
+> library(qgisprocess)
+Attempting to load the package cache ... Success!
+QGIS version: 3.30.3-'s-Hertogenbosch
+Having access to 349 algorithms from 4 QGIS processing providers.
+Run `qgis_configure(use_cached_data = TRUE)` to reload cache and get more details.
+Warning message:
+package ‘qgisprocess’ was built under R version 4.3.1
+```
+
+- Algorithms come from processing providers. What are they?
+
+```r
+> qgis_providers()
+# A tibble: 4 × 3
+  provider provider_title    algorithm_count
+  <chr>    <chr>                       <int>
+1 gdal     GDAL                           56
+2 qgis     QGIS                           50
+3 3d       QGIS (3D)                       1
+4 native   QGIS (native c++)             242
+```
+
+Load other used packages:
+
+```r
+library(sf)   # to work with geospatial vector data
+library(terra)     # to work with rasters
+```
+
+---
+class: left, top
+
+# Challenge 0
+
+Run the buffer algorithm on the New York City shapefile. Example from qgisprocess homepage.
+
+```r
+input <- sf::read_sf(system.file("shape/nc.shp", package = "sf"))
+
+result <- qgis_run_algorithm(
+  "native:buffer",
+  INPUT = input,
+  DISTANCE = 1,
+  DISSOLVE = TRUE
+)
+
+result
+#> <Result of `qgis_run_algorithm("native:buffer", ...)`>
+#> List of 1
+#>  $ OUTPUT: 'qgis_outputVector' chr "/tmp/RtmpX60EOv/file2d652e33f3c4/file2d6572d31d21.gpkg"
+
+output_sf <- sf::st_as_sf(result)
+plot(sf::st_geometry(output_sf))
+```
+---
+class: left, top
+
+# Challenge 0
+
+A pipe (`%>%`)* lover? Use
+
+<small> \*: maybe you have already seen the new R pipe: `|>`. This pipe is available from R 4.x versions. </small>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+1. In challenge 0 we specified (a little blindly) some arguments, e.g. `DISSOLVE = TRUE`. What does this argument do? What happens if you set `DISSOLVE = FALSE`? How to get a description of the chosen algorithm? How to retrieve information about all the arguments allowed by the algorithm? Or about the genereated output? Hint: use the cheat sheet!
+2. Calculate the ‘shortest’ path (lines) between the `hab_springs` points and the nearest watersurface `water`.
+3. Calculate the ‘shortest’ paths (lines) between the polygons `water` and the `hab_springs` points.
+4. We are all pipe (`%>%`)* lovers, aren't we? Can you use `qgis_run_algorithm()` in a pipe? No. How to combine qgisprocess and pipes? Hint: check the cheat sheet.
+
+<small> \*: maybe you have already seen the new R pipe: `|>`. This pipe is available from R 4.x versions. </small>
+
+---
+class: left, top
+
+# INTERMEZZO 1 - qgisprocess vs sf
+
+The sf package is widely used in geospatial R community. We use it often, see INBO coding club ["Spatial data in R"](https://inbo.github.io/coding-club/sessions/20230627_spatial_data_in_r.html#1), 2023-06-27.
+
+When should I use qgisprocess instead of native sf functions?
+
+- Not all QGIS algorithms have a sf counterpart
+- Work with big spatial files
+- QGIS algorithms are typically faster
+
+
+---
+class: left, top
+
+# INTERMEZZO 1 - qgisprocess vs sf
+
+Example: calculate buffers at high resolution
+
+```
+> tic("buffer via sf")
+> buffer_via_sf <- sf::st_buffer(water, nQuadSegs = 5000, dist = 100)
+> toc()
+buffer via sf: 49.92 sec elapsed
+> tic("buffer via qgisprocess")
+> buffer_via_qgisprocess <- qgis_run_algorithm(
++   INPUT = water,
++   algorithm = "native:buffer",
++   SEGMENTS = 5000,
++   DISTANCE = 100
++ )
+> toc()
+buffer via qgisprocess: 28.31 sec elapsed
+```
+
+On the other hand, sf is faster for buffers at low resolution.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+
+
+---
+class: left, top
+
+# qgis package
+
+Using functions with explicit arguments is really user friendly. You can then probably love [qgis](https://jancaha.github.io/r_package_qgis/index.html). It aims to provide calls and simple documentation for each QGIS functions available in core and the most important algorithm providers like GRASS GIS and SAGA.
+
+An example. Instead of:
+
+```r
+sf::read_sf(system.file("shape/nc.shp", package = "sf")) %>%
+  qgisprocess::qgis_run_algorithm_p(
+    algorithm = "native:buffer",
+    DISTANCE = 0.2,
+    DISSOLVE = TRUE,
+    END_CAP_STYLE = "Flat") %>%
+  sf::st_as_sf() %>%
+  plot()
+```
+
+```r
+sf::read_sf(system.file("shape/nc.shp", package = "sf")) %>%
+  qgis::qgis_buffer(
+    DISTANCE = 0.2,
+    DISSOLVE = TRUE,
+    END_CAP_STYLE = "Flat") %>%
+  st_as_sf() %>%
+  plot()
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3
+
+
+
+
+---
+class: left, top
+
+# Packge of the month
+
+
+---
+class: left, top
+
+# Resources
+
+- Solutions and eidted webinar soon available
+- [qgisprocess](https://r-spatial.github.io/qgisprocess/index.html) package documentation
+- [Interfacing QGIS processing from R](https://florisvdh.github.io/foss4g-2023-qgisprocess/#1): Floris' presentation at FOSS4G 2023. Floris rocks: watch his talk, here the [video](https://www.youtube.com/watch?v=Qt5DzWThWqI) :-)
+- [QGIS](https://qgis.org/en/site/) website
+- How to get help: use our internal INBO R mailing list (DG_useR) and also check the [FAQs](https://github.com/r-spatial/qgisprocess/issues/new/choose) oin the "Issues" page of the qgisprocess GitHub repository
+
+---
+class: left, top
+
+Enjoy the Christmas holidays and see you in 2024!
+
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20231214/20231214_happy_new_year.png)
+
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.70 - Ferdinand Peeters<br>
+Date: __30/01/2024__, van 10:00 tot 12:30<br>
+Subject: **to be decided** <br>
+(registration announced via DG_useR@inbo.be)
