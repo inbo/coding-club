@@ -244,21 +244,21 @@ class: left, top
 ---
 class: left, top
 
-# INTERMEZZO 1 - qgisprocess vs sf
+# INTERMEZZO 1 - qgisprocess vs sf/terra
 
-The sf package is widely used in geospatial R community. We use it often, see INBO coding club ["Spatial data in R"](https://inbo.github.io/coding-club/sessions/20230627_spatial_data_in_r.html#1), 2023-06-27.
+The sf package is widely used in geospatial R community. We use it often, see INBO coding club ["Spatial data in R"](https://inbo.github.io/coding-club/sessions/20230627_spatial_data_in_r.html#1), 2023-06-27. Same for terra package, the mainstream package to work with rasters.
 
-When should I use qgisprocess instead of native sf functions?
+When should I use qgisprocess instead of native sf/terra functions?
 
-- Not all QGIS algorithms have a sf counterpart
+- Not all QGIS algorithms have a sf/terra counterpart
 - Work with big spatial files
 - QGIS algorithms are typically faster
-
+- I am a QGIS pro, I don't want/have time to learn sf/terra or other packages
 
 ---
 class: left, top
 
-# INTERMEZZO 1 - qgisprocess vs sf
+# INTERMEZZO 1 - qgisprocess vs sf/terra
 
 Example: calculate buffers at high resolution
 
