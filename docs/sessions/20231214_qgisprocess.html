@@ -80,7 +80,7 @@ class: left, top
 
 - [QGIS](https://qgis.org/en/site/) is a free and open source geographic information system.
 
-- Typically described as the open source version of [ArcGIS]().
+- Typically described as the open source version of [ArcGIS](https://www.arcgis.com/index.html).
 
 - QGIS allows to create, edit, visualise, analyse and publish geospatial information.
 
@@ -110,7 +110,7 @@ class: left, top
 
 - Unified interface to QGIS natice algorithms and external processing providers/plugins, e.g. GRASS GIS, SAGA, GDAL
 
-<small> Source: [Floris presentation](https://florisvdh.github.io/foss4g-2023-qgisprocess/#17) at FOSS4G 2023</small>
+<small> *Source: [Floris' presentation](https://florisvdh.github.io/foss4g-2023-qgisprocess/#17) at FOSS4G 2023</small>
 ---
 class: center, top
 
@@ -143,9 +143,9 @@ class: left, top
 1. `water`: [20231214_watersurfaces_hab.gpkg](https://github.com/inbo/coding-club/tree/master/data/20231214/20231214_watersurfaces_hab.gpkg): standing water Natura 2000 habitat types (2190_a and 31xx) and regionally important biotopes (rbbah) in Flanders*
 2. `hab_springs`: [20231214_habitatsprings_flanders.geojson](https://github.com/inbo/coding-club/tree/master/data/20231214/20231214_habitatsprings_flanders.geojson): geospatial collection of points that correspond with the presence of the Natura 2000 habitat type 7220 (Petrifying springs with tufa formation (Cratoneurion)) in springs and streaming water segments in the Flanders**
 3. [20231214_ludwigia_grandiflora.txt](https://github.com/inbo/coding-club/blob/master/data/20231214/20231214_Ludwigia_grandiflora.txt): dataset with GBIF observations of water primrose (EN) - waterteunisbloem (NL) (_Ludwigia grandiflora_) in Flanders from 2021 to October 2022***
-4. 20231214_land_use_nara_2016_100m.tif: a categorical raster of land use of Flanders with 9 land use categories. Thanks, NARA team!
-5. 20231214_natura2000_protected_areas.gpkg: geopackage with NATURA2000 protected areas
-6. 20231214_tdiff_tmax_tmin_january.tif: raster with January average maximum and minimum temperature at 10 minutes precision***
+4. [20231214_land_use_nara_2016_100m.tif](https://github.com/inbo/coding-club/blob/main/data/20231214/20231214_land_use_nara_2016_100m.tif): a categorical raster of land use of Flanders with 9 land use categories. Thanks, NARA team!
+5. [20231214_natura2000_protected_areas.gpkg](https://github.com/inbo/coding-club/blob/main/data/20231214/20231214_natura2000_protected_areas.gpkg): geopackage with NATURA2000 protected areas
+6. [20231214_tdiff_tmax_tmin_january.tif](https://github.com/inbo/coding-club/blob/main/data/20231214/20231214_tdiff_tmax_tmin_january.tif): raster with January average maximum and minimum temperature at 10 minutes precision***
 4. [20231214_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20231214/20231214_challenges.R): R script to start with.
 
 <small> \* Westra, T., Vanderhaeghe, F., & Herr, C. (2021). Map of standing water habitat types and regionally important biotopes in Flanders (watersurfaces_hab_v4) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.4915849.</small>
@@ -234,7 +234,7 @@ class: left, top
 
 # Challenge 1
 
-1. In challenge 0 we specified (a little blindly) some arguments, e.g. `DISSOLVE = TRUE`. What does this argument do? What happens if you set `DISSOLVE = FALSE`? How to get a description of the chosen algorithm? How to retrieve information about all the arguments allowed by the algorithm? Or about the genereated output? Hint: use the cheat sheet!
+1. In challenge 0 we specified (a little blindly) some arguments, e.g. `DISSOLVE = TRUE`. What does this argument do? What happens if you set `DISSOLVE = FALSE`? How can you get a description of the chosen algorithm? How can you retrieve information about all the arguments allowed by the algorithm? Or about the genereated output? Hint: use the cheat sheet!
 2. Calculate the ‘shortest’ path (lines) between the `hab_springs` points and the nearest watersurface `water`.
 3. Calculate the ‘shortest’ paths (lines) between the polygons `water` and the `hab_springs` points.
 4. We are all pipe (`%>%`)* lovers, aren't we? Can you use `qgis_run_algorithm()` in a pipe? No. How to combine qgisprocess and pipes? Hint: check the cheat sheet.
@@ -246,14 +246,14 @@ class: left, top
 
 # INTERMEZZO 1 - qgisprocess vs sf/terra
 
-The sf package is widely used in geospatial R community. We use it often, see INBO coding club ["Spatial data in R"](https://inbo.github.io/coding-club/sessions/20230627_spatial_data_in_r.html#1), 2023-06-27. Same for terra package, the mainstream package to work with rasters.
+The sf package is widely used in geospatial R community. We use it often, see INBO coding club ["Spatial data in R"](https://inbo.github.io/coding-club/sessions/20230627_spatial_data_in_r.html#1), 2023-06-27. The same goes for the terra package; the mainstream package to work with rasters.
 
 When should I use qgisprocess instead of native sf/terra functions?
 
 - Not all QGIS algorithms have a sf/terra counterpart
 - Work with big spatial files
 - QGIS algorithms are typically faster
-- I am a QGIS pro, I don't want/have time to learn sf/terra or other packages
+- You are a QGIS pro and don't want to/have time to learn sf/terra or other packages
 
 ---
 class: left, top
@@ -286,7 +286,7 @@ class: left, top
 
 # Challenge 2
 
-1. **Count** the number of occurrences of Ludwigia grandiflora in each of the water polygons. Hint: use `qgis_search_algorithms` function to find the righ algorithm to use.
+1. **Count** the number of occurrences of Ludwigia grandiflora in each of the water polygons. Hint: use `qgis_search_algorithms` to find the righ algorithm to use.
 
 2. **Count** the number of individuals (column `individualCount`) of Ludwigia grandiflora in each of the water polygons. Hint: use the same algorithm used for previous exercise.
 
@@ -296,7 +296,7 @@ class: left, top
 
 # INTERMEZZO 2: the qgis package
 
-Using functions with explicit arguments is really user friendly. You can then probably love the [qgis](https://jancaha.github.io/r_package_qgis/index.html) package. It aims to provide calls and simple documentation for each QGIS functions available in core and the most important algorithm providers like GRASS GIS and SAGA. It requires the qgisprocess package.
+Using functions with explicit arguments is really user friendly. You will then probably love the [qgis](https://jancaha.github.io/r_package_qgis/index.html) package. It aims to provide calls and simple documentation for each QGIS function available in the QGIS core and the most important algorithm providers like GRASS GIS and SAGA. It requires the qgisprocess package.
 
 An example. Instead of:
 
@@ -329,9 +329,9 @@ class: left, top
 
 Let's work with rasters! What is a raster? "A raster is a spatial (geographic) data structure that divides a region into rectangles called "cells" (or "pixels") that can store one or more values for each of these cells."*
 
-1. How to get general *statistics* about the temperature difference in January (first layer of 20231214_tdiff_tmax_tmin_january.tif)
+1. How can you get general *statistics* about the temperature difference in January (first layer of 20231214_tdiff_tmax_tmin_january.tif)
 
-2. How to do the same for the other two layers (minimum/maximum temperature)?
+2. How can you do the same for the other two layers (minimum/maximum temperature)?
 
 3. Let's do some [zonal statistics](https://up42.com/blog/an-introduction-to-zonal-statistics#what-are-zonal-statistics): calculate the most and the least occurring land use category in each of the Natura2000 protected areas.
 
@@ -346,7 +346,7 @@ class: left, top
 
 # Intermezzo 3: last but not least
 
-You are maybe a pro using QGIS. Probably you will be happy to know that you can take parameters from the QGIS GUI and using them in qgisprocess! Check Floris' slides [48-50](https://florisvdh.github.io/foss4g-2023-qgisprocess/#48).
+You may be a pro using QGIS. In that case, you will be happy to know that you can take parameters from the QGIS GUI and use them in qgisprocess! Check Floris' slides [48-50](https://florisvdh.github.io/foss4g-2023-qgisprocess/#48).
 
 
 ---
@@ -354,11 +354,11 @@ class: left, top
 
 # Resources
 
-- Solutions and eidted webinar soon available
+- Solutions and edited webinar soon available
 - [qgisprocess](https://r-spatial.github.io/qgisprocess/index.html) package documentation
-- [Interfacing QGIS processing from R](https://florisvdh.github.io/foss4g-2023-qgisprocess/#1): Floris' presentation at FOSS4G 2023. Floris rocks: watch his talk, here the [video](https://www.youtube.com/watch?v=Qt5DzWThWqI) :-)
+- [Interfacing QGIS processing from R](https://florisvdh.github.io/foss4g-2023-qgisprocess/#1): Floris' presentation at FOSS4G 2023. Floris rocks: watch his talk, here is the [video](https://www.youtube.com/watch?v=Qt5DzWThWqI) :-)
 - [QGIS](https://qgis.org/en/site/) website
-- How to get help: use our internal INBO R mailing list (DG_useR) and also check the [FAQs](https://github.com/r-spatial/qgisprocess/issues/new/choose) oin the "Issues" page of the qgisprocess GitHub repository
+- How to get help: use our internal INBO R mailing list (DG_useR) and also check the [FAQs](https://github.com/r-spatial/qgisprocess/issues/new/choose) on the "Issues" page of the qgisprocess GitHub repository
 
 ---
 class: left, top
