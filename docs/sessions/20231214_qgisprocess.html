@@ -151,7 +151,7 @@ class: left, top
 
 - `water`: [20231214_watersurfaces_hab.gpkg](https://github.com/inbo/coding-club/tree/master/data/20231214/20231214_watersurfaces_hab.gpkg). Standing water Natura 2000 habitat types (2190_a and 31xx) and regionally important biotopes (rbbah) in Flanders<small> \*</small>
 
-- `hab_springs`: [20231214_habitatsprings_flanders.geojson](https://github.com/inbo/coding-club/tree/master/data/20231214/20231214_habitatsprings_flanders.geojson). A geospatial collection of points that correspond with the presence of the Natura 2000 habitat type 7220 (Petrifying springs with tufa formation (Cratoneurion)) in springs and streaming water segments in the Flanders<small> \*\*</small>
+- `hab_springs`: [20231214_habitatsprings_flanders.geojson](https://github.com/inbo/coding-club/tree/master/data/20231214/20231214_habitatsprings_flanders.geojson). A geospatial collection of points that corresponds with the presence of the Natura 2000 habitat type 7220 (Petrifying springs with tufa formation (Cratoneurion)) in springs and streaming water segments in the Flanders<small> \*\*</small>
 
 - `ludwigia_grandiflora`: [20231214_ludwigia_grandiflora.geojson](https://github.com/inbo/coding-club/blob/master/data/20231214/20231214_Ludwigia_grandiflora.geojson). Dataset with GBIF observations of water primrose (EN) - waterteunisbloem (NL) (_Ludwigia grandiflora_) in Flanders from 2021 to October 2022<small> \*\*\*</small>
 
@@ -260,7 +260,7 @@ class: left, top
 
 # Challenge 1
 
-1. In challenge 0 we specified (a little blindly) some arguments, e.g. `DISSOLVE = TRUE`. What does this argument do? What happens if you set `DISSOLVE = FALSE`? How can you get a description of the chosen algorithm? How can you retrieve information about all the arguments allowed by the algorithm? Or about the genereated output? Hint: use the cheat sheet!
+1. In challenge 0 we specified (a little blindly) some arguments, e.g. `DISSOLVE = TRUE`. What does this argument do? What happens if you set `DISSOLVE = FALSE`? How can you get a description of the chosen algorithm? How can you retrieve information about all the arguments allowed by the algorithm? Or about the generated output? Hint: use the cheat sheet!
 2. Calculate the ‘shortest’ path (lines) between the `hab_springs` points and the nearest watersurface `water`.
 3. Calculate the ‘shortest’ paths (lines) between the polygons `water` and the `hab_springs` points.
 4. We are all pipe (`%>%`)* lovers, aren't we? Can you use `qgis_run_algorithm()` in a pipe? No. How to combine qgisprocess and pipes? Hint: check the cheat sheet.
@@ -312,7 +312,7 @@ class: left, top
 
 # Challenge 2
 
-1. **Count** the number of occurrences of Ludwigia grandiflora in each of the water polygons. Hint: use `qgis_search_algorithms` to find the righ algorithm to use.
+1. **Count** the number of occurrences of Ludwigia grandiflora in each of the water polygons. Hint: use `qgis_search_algorithms` to find the right algorithm to use.
 
 2. **Count** the number of individuals (column `individualCount`) of Ludwigia grandiflora in each of the water polygons. Hint: use the same algorithm used for previous exercise.
 
