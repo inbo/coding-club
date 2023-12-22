@@ -113,7 +113,7 @@ n_individuals_water %>%
 hab_springs_buffer <- hab_springs %>%
   qgis_run_algorithm_p(
     "native:buffer",
-    DISTANCE = 'expression: sqrt("area_m2"/pi)') %>%
+    DISTANCE = 'expression: sqrt("area_m2"/3.14)') %>% # pi is not supported by QGIS
   st_as_sf()
 
 mapview::mapview(hab_springs_buffer)
