@@ -149,16 +149,26 @@ tmax_statistics
 
 # 3
 
-qgis_get_argument_specs("native:zonalstatistics") %>% View()
+qgis_search_algorithms("zonal")
 
-qgis_get_output_specs("native:zonalstatistics")
+qgis_get_argument_specs("native:zonalstatisticsfb") %>% View()
 
-zonal_st <- qgis_run_algorithm("native:zonalstatistics",
-                        INPUT_RASTER = land_use,
-                        RASTER_BAND = 1,
-                        INPUT_VECTOR = prot_areas,
-                        STATISTICS = c(8,9)) # Majority, Minority
+# Notice that the other algorithm, native:zonalstatistics, is DEPRECATED and
+# works in place: the temporary file contains the solution, but
+# is destroyed subsequently. More info in https://github.com/r-spatial/qgisprocess/issues/193
 
-zonal_sf_output <- qgis_extract_output(zonal_st, "INPUT_VECTOR")
-zonal_st <- sf::st_as_sf(zonal_st)
+qgis_get_output_specs("native:zonalstatisticsfb")
 
+zonalstatisticsfb <- qgis_function("native:zonalstatisticsfb")
+
+prot_areas_zonal <- zonalstatisticsfb(INPUT = prot_areas,
+                                      INPUT_RASTER = land_use,
+                                      RASTER_BAND = 1,
+                                      COLUMN_PREFIX = "zonal_", # optional, default: "_"
+                                      STATISTICS = c("Majority", "Minority")) %>%
+  qgis_extract_output("OUTPUT") %>%
+  sf::st_as_sf()
+
+View(prot_areas_zonal) # notice the two new columns: zonal_majority and zonal_minority
+
+mapview::mapview(prot_areas_zonal, zcol = "zonal_majority")
