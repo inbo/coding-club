@@ -1,0 +1,225 @@
+---
+layout: presentation
+title: qgisprocess - where QGIS meets R
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+  <!-- Adjust the presentation to the session. Focus on the challenges,
+this is not a coding tutorial.
+
+Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+folder and use the jekyll base.url reference as done in this template
+or see https://jekyllrb.com/docs/liquid/tags/#links.
+  using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 30 JANUARY 2024
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+01.70 - Ferdinand Peeters
+
+---
+class: left, top
+
+## ROOMIE: room reservation
+
+```
+> if (isFALSE(roomie)) {
++   warning("Please confirm asap the room reservation on the roomie")
++ }
+Warning message:
+Please confirm asap the room reservation on the roomie
+```
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20240130/20240130_badge.png)
+
+---
+class: center, middle
+
+## Strings + tidyverse = stringr
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20240130/20240130_stringr_artwork.png)
+
+[Artwork by @allison_horst](https://twitter.com/allison_horst) (CC-BY license). Great artworks, by the way. Worth a look.
+
+---
+class: left, top
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20240130/20240130_stringr_cheatsheet.png)
+CC BY RStudio. Download the [cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240130_cheat_sheet_stringr.pdf). Do you know that this cheat sheet is available as [html](https://rstudio.github.io/cheatsheets/html/strings.html) format and in [Spanish](https://rstudio.github.io/cheatsheets/translations/spanish/strings_es.pdf) and [Vietnamese](https://rstudio.github.io/cheatsheets/translations/vietnamese/strings_vi.pdf)?
+
+---
+class: left, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+# Share your code during the coding session
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/hk0kqt6nT6qWp9nyLj3RaQ?edit and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/hk0kqt6nT6qWp9nyLj3RaQ?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`<small>\*</small>
+
+- manually<small> \*\*</small> from GitHub folders [coding-club/data/20240130](https://github.com/inbo/coding-club/tree/master/data/20240130) and [coding-club/src/20240130](https://github.com/inbo/coding-club/tree/master/src/20240130)
+
+
+<br>
+
+<small> \* You can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20220428")` to download the coding club material of April, 28 2022. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> \*\* Check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data and scripts description
+
+- `20240130_bird_rings.txt`: tab separated text file with color and metal rings information. Source: INBO.
+- `20240130_scientificnames.txt`: text file with a list of scientific names
+
+---
+class: left, top
+
+# Load packages
+
+Loading tidyverse, we load stringr as well:
+
+```r
+library(tidyverse)
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+For this challenge we will work with two columns of `20240130_bird_rings.txt`:
+- `color_ring`: column containing the color rings
+- `metal_ring`: column containing the metal rings
+
+1. Get the length of the metal rings.
+
+2. Do the color rings start with a "C"?
+
+3. Do the color rings end with a "R"?
+
+4. Are the color rings uppercase?
+
+5. Solve all the anomalies found in (4) by setting all color rings uppercase.
+
+Extra: tidyverse packages are made to work nicely together. Use stringr and dplyr to get the birds with a 6 characters long metal ring and a color ring starting with a C and ending with a R.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+1. Create a new column called `color_ring_complete` containing color ring information in this format:
+`background_color`+`inscription_color`+`"("`+`color_ring`+`")"`, e.g. RW(FJAC)
+
+2. Are the color rings **4-letter only** long where the third letter is an A?
+
+3. Do the color rings contain at least a digit?
+
+4. Create a new column called `digit` containing the first digit, if any, as a number.
+
+Extra: again, by combining dplyr and stringr, select the birds whose color rings satisfy the condition in (2).
+
+---
+class: center, middle
+
+## Intermezzo: the power of regex
+
+*regex* what?? REGular EXpresssions
+
+```
+example_string <- "I. love. the. 2019(!!) INBO. Coding. Club! Session. of. 24/09/2020...."
+```
+
+Go to page 2 of the cheat sheet
+
+
+![:scale 70%]({{ site.baseurl}}/assets/images/20200924/20200924_stringr_cheatsheet_regex.png)
+
+---
+class: left, top
+
+## Intermezzo: the power of regex
+
+On internet you can find a lot of tutorials about regex. Check for example the ["Learn RegEx with Real Life Examples"](https://www.freecodecamp.org/news/practical-regex-guide-with-real-life-examples/) provided by freecodecamp. Do you already have used one regex resource you found useful? Let us know and add the link in the hackmd :-)
+
+Some websites you can use to test regex on the flow:
+
+- https://regex101.com/
+
+- https://regexr.com/
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3
+
+1. Matching scientific names against the GBIF Taxonomy Backbone fails sometimes just because the provided scientific name contains abbreviations like "sp.", "spec.", "indet.", "cf", "nov.", "ined". Try to clean the names provided in 20240130_scientificnames.txt by removing such abbreviations. Ensure that the resulting scientific names have no whitespaces at the start or at the end and also that they have single spaces between words.
+
+
+---
+class: left, top
+
+# Resources
+
+- The solutions and the edited webinar will be available soon
+- The official [stringr](https://stringr.tidyverse.org/) website
+- The beautiful [artwork collections](https://allisonhorst.com/) of Allison Horst
+- ["Learn RegEx with Real Life Examples"](https://www.freecodecamp.org/news/practical-regex-guide-with-real-life-examples/): freecodecamp's tutorial about regex.
+- https://regex101.com/ and https://regexr.com/: two common regex testers
+
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.19 - Paul Van Ostaijen<br>
+Date: __29/02/2024__, van 10:00 tot 12:30<br>
+Subject: **to be decided** <br>
+(registration announced via DG_useR@inbo.be)
