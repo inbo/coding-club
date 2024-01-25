@@ -1,0 +1,29 @@
+scientific_name
+Nyctalus sp.
+Myotis sp.
+Pipistrellus sp.
+Arctum sp.
+Eudontomyzon spp.
+Thecophora spec.
+Phoxinellus spp.
+Salix cf alba
+Chiroptera sp.
+Eptesicus sp.
+Ombrophila Baral sp. nov. ined.
+Alosa spp.
+Lissotriton spec.
+Symphyotrichum spec.
+Tetanocera spec.
+Azelia spec.
+Heterocera indet.
+Coccinellidae indet.
+Sonchus sp.
+Ligustrum sp.
+Cornus sp.
+Oxalis sp.
+Salix spec.
+Zingel spp.
+Verbascum spec.
+Lemna sp.
+Aves indet.
+Betula spec.
