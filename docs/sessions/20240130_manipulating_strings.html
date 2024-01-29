@@ -167,12 +167,9 @@ class: left, top
 
 ## Intermezzo: the power of regex
 
-*regex* what?? REGular EXpresssions
-
-Go to page 2 of the cheat sheet
+*regex* what?? REGular EXpresssions! Go to page 2 of the cheatsheet.
 
 ![:scale 70%]({{ site.baseurl}}/assets/images/20200924/20200924_stringr_cheatsheet_regex.png)
-
 
 ```
 example_string <- "I. love. the. 2024(!!) INBO. Coding. Club! Session. of. 30/01/2024...."
@@ -224,7 +221,7 @@ class: left, top
 
 2. Some metal rings (column `metal_ring`) start with one or more asterisks. Remove them.
 
-3. Find color rings (column `color_ring`) containing two consecutive vowels
+3. Find color rings (column `color_ring`) containing two consecutive vowels.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -234,8 +231,9 @@ class: left, top
 
 Are you bored of working with bird rings? Maybe you find cleaning scientific names something more similar to your daily tasks.This alternative challenge is for you!
 
-Matching scientific names against the GBIF Taxonomy Backbone fails sometimes just because the provided scientific name contains abbreviations like "sp.", "spec.", "indet.", "cf", "nov.", "ined". Try to clean the names provided in 20240130_scientificnames.txt by removing such abbreviations. Ensure that the resulting scientific names have no whitespaces at the start or at the end and also that they have single spaces between words. Hint: there is a stringr function to remove all these spacaes in one step. Check the cheatsheet.
+Matching scientific names against the GBIF Taxonomy Backbone fails sometimes just because the provided scientific name contains abbreviations like "sp.", "spec.", "indet.", "cf", "nov.", "ined". Try to clean the names provided in 20240130_scientificnames.txt by removing such abbreviations.
 
+Ensure also that the resulting scientific names have no whitespaces at the start or at the end and also that they have single spaces between words. Hint: Check the cheatsheet to find the stringr function to remove all these whitespaces.
 
 ---
 class: left, top
