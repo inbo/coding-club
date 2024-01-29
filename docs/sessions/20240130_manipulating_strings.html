@@ -51,7 +51,7 @@ class: center, middle
 
 ## Strings + tidyverse = stringr
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20240130/20240130_stringr_artwork.png)
+![:scale 80%]({{ site.baseurl}}/assets/images/20240130/20240130_stringr_artwork.png)
 
 [Artwork by @allison_horst](https://twitter.com/allison_horst) (CC-BY license). Great artworks, by the way. Worth a look.
 
@@ -59,7 +59,8 @@ class: center, middle
 class: left, top
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20240130/20240130_stringr_cheatsheet.png)
-CC BY RStudio. Download the [cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240130_cheat_sheet_stringr.pdf). Do you know that this cheat sheet is available as [html](https://rstudio.github.io/cheatsheets/html/strings.html) format and in [Spanish](https://rstudio.github.io/cheatsheets/translations/spanish/strings_es.pdf) and [Vietnamese](https://rstudio.github.io/cheatsheets/translations/vietnamese/strings_vi.pdf)?
+
+CC-BY RStudio. Download the [cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240130_cheat_sheet_stringr.pdf). Do you know that this cheat sheet is available as [html](https://rstudio.github.io/cheatsheets/html/strings.html) format and in [Spanish](https://rstudio.github.io/cheatsheets/translations/spanish/strings_es.pdf) and [Vietnamese](https://rstudio.github.io/cheatsheets/translations/vietnamese/strings_vi.pdf)?
 
 ---
 class: left, top
@@ -95,8 +96,7 @@ You can download the material of today:
 
 - automatically via `inborutils::setup_codingclub_session()`<small>\*</small>
 
-- manually<small> \*\*</small> from GitHub folders [coding-club/data/20240130](https://github.com/inbo/coding-club/tree/master/data/20240130) and [coding-club/src/20240130](https://github.com/inbo/coding-club/tree/master/src/20240130)
-
+- manually<small> \*\*</small> from GitHub folder [coding-club/data/20240130](https://github.com/inbo/coding-club/tree/master/data/20240130). No R script to download today. Just data.
 
 <br>
 
@@ -109,7 +109,7 @@ class: left, top
 
 # Data and scripts description
 
-- `20240130_bird_rings.txt`: tab separated text file with color and metal rings information. Source: INBO.
+- `20240130_bird_rings.txt`: tab separated text file with color and metal rings information. Source: INBO. Attention: the data have been manipulated here and there.
 - `20240130_scientificnames.txt`: text file with a list of scientific names
 
 ---
@@ -154,7 +154,7 @@ class: left, top
 1. Create a new column called `color_ring_complete` containing color ring information in this format:
 `background_color`+`inscription_color`+`"("`+`color_ring`+`")"`, e.g. RW(FJAC)
 
-2. Are the color rings **4-letter only** long where the third letter is an A?
+2. Are the color rings **4-letter only** long and is the third letter an "A"?
 
 3. Do the color rings contain at least a digit?
 
@@ -163,33 +163,36 @@ class: left, top
 Extra: again, by combining dplyr and stringr, select the birds whose color rings satisfy the condition in (2).
 
 ---
-class: center, middle
+class: left, top
 
 ## Intermezzo: the power of regex
 
 *regex* what?? REGular EXpresssions
 
+Go to page 2 of the cheat sheet
+
+![:scale 70%]({{ site.baseurl}}/assets/images/20200924/20200924_stringr_cheatsheet_regex.png)
+
+
 ```
 example_string <- "I. love. the. 2024(!!) INBO. Coding. Club! Session. of. 30/01/2024...."
 ```
-
-Go to page 2 of the cheat sheet
-
-
-![:scale 70%]({{ site.baseurl}}/assets/images/20200924/20200924_stringr_cheatsheet_regex.png)
 
 ---
 class: left, top
 
 ## Intermezzo: the power of regex
 
-On internet you can find a lot of tutorials about regex. Check for example the ["Learn RegEx with Real Life Examples"](https://www.freecodecamp.org/news/practical-regex-guide-with-real-life-examples/) provided by freecodecamp. Do you already have used one regex resource you found useful? Let us know and add the link in the hackmd :-)
+On internet you can find a lot of tutorials about regex. Check for example the ["Learn RegEx with Real Life Examples"](https://www.freecodecamp.org/news/practical-regex-guide-with-real-life-examples/) provided by freecodecamp.
 
 Some websites you can use to test regex on the flow:
 
 - https://regex101.com/
 
 - https://regexr.com/
+
+
+Do you use other regex resources? Shoot it and add the links in the hackmd. I will be happy to improve this slide and the "Resources" slide at the end.
 
 
 ---
@@ -215,12 +218,6 @@ For more info, go to the related [GitHub issue](https://github.com/inbo/camtrapt
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
-# Challenge 3
-
----
-background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
-class: left, middle
-
 # Challenge 3A
 
 1. The dots in color rings (column `color_ring_dots`), e.g. `KRO.C`, `KZ.AC`, are used for improving readibility. Apart from that, the values in column `color_ring_dots` should be exactly the same as the ones in column `color_ring`. Find anomalies.
@@ -231,7 +228,7 @@ class: left, middle
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
-class: left, middle
+class: left, top
 
 # Challenge 3B
 
@@ -260,7 +257,7 @@ class: left, top
 
 We were used to call this chapter "R pscakge of the month". But, not only R packages are worth of attention. This is the case of the [R-Graph-Gallery](https://r-graph-gallery.com/) of [Holtz Yan](https://github.com/holtzy)!
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20240130/20240130_The-R-Graph-Gallery.png)
+![:scale 100%]({{ site.baseurl}}/assets/images/20240130/20240130_The-R-Graph-Gallery.png)
 
 Are you a Python user? Maybe you could have a look to the [Python Graph Gallery](https://python-graph-gallery.com/) as well.
 
@@ -270,9 +267,9 @@ class: left, top
 
 # The R tip of the month. Part 2
 
-But that is just half of the story. First, we need to choose the most appropriate graph for our data! Not always easy, right? [From Data to Viz](https://www.data-to-viz.com/) can really help us in the decision process!
+But that is just half of the story. First, we need to choose the most appropriate graph for our data, not always an easy step. [From Data to Viz](https://www.data-to-viz.com/) can really help us in the decision process.
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20240130/20240130_From-data-to-Viz.png)
+![:scale 110%]({{ site.baseurl}}/assets/images/20240130/20240130_From-data-to-Viz.png)
 
 
 ---
