@@ -170,7 +170,7 @@ class: center, middle
 *regex* what?? REGular EXpresssions
 
 ```
-example_string <- "I. love. the. 2019(!!) INBO. Coding. Club! Session. of. 24/09/2020...."
+example_string <- "I. love. the. 2024(!!) INBO. Coding. Club! Session. of. 30/01/2024...."
 ```
 
 Go to page 2 of the cheat sheet
@@ -193,12 +193,51 @@ Some websites you can use to test regex on the flow:
 
 
 ---
+class: left, top
+
+## Intermezzo: regex in real life
+
+Real life example: how to extract the version number from the URL of the used [Camtrap Data Package](https://camtrap-dp.tdwg.org/) profile version? Example, how to extract the expected outputs from these URLs?
+
+- URL1: "https://rs.gbif.org/sandbox/data-packages/camtrap-dp/1.0/profile/camtrap-dp-profile.json". Output: 1.0
+
+- URL2: "a/b/c/d1d/cam/3.0.5/camtrap-dp-profile.json". Output: 3.0.5
+
+- URL3: "a/b/c/d1d/cam/v2/camtrap-dp-profile.json". Output: NA
+
+- URL 4: "a/b/c/d1.d/cam/3.0.5/camtrap-dp-profile.json". Output: 3.0.5
+
+Rules: a version number is composed of two or three numbers separatd by one or two dots.
+
+For more info, go to the related [GitHub issue](https://github.com/inbo/camtraptor/issues/295).
+
+---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
 # Challenge 3
 
-1. Matching scientific names against the GBIF Taxonomy Backbone fails sometimes just because the provided scientific name contains abbreviations like "sp.", "spec.", "indet.", "cf", "nov.", "ined". Try to clean the names provided in 20240130_scientificnames.txt by removing such abbreviations. Ensure that the resulting scientific names have no whitespaces at the start or at the end and also that they have single spaces between words.
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3A
+
+1. The dots in color rings (column `color_ring_dots`), e.g. `KRO.C`, `KZ.AC`, are used for improving readibility. Apart from that, the values in column `color_ring_dots` should be exactly the same as the ones in column `color_ring`. Find anomalies.
+
+2. Some metal rings (column `metal_ring`) start with one or more asterisks. Remove them.
+
+3. Find color rings (column `color_ring`) containing two consecutive vowels
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, middle
+
+# Challenge 3B
+
+Are you bored of working with bird rings? Maybe you find cleaning scientific names something more similar to your daily tasks.This alternative challenge is for you!
+
+Matching scientific names against the GBIF Taxonomy Backbone fails sometimes just because the provided scientific name contains abbreviations like "sp.", "spec.", "indet.", "cf", "nov.", "ined". Try to clean the names provided in 20240130_scientificnames.txt by removing such abbreviations. Ensure that the resulting scientific names have no whitespaces at the start or at the end and also that they have single spaces between words. Hint: there is a stringr function to remove all these spacaes in one step. Check the cheatsheet.
 
 
 ---
@@ -209,8 +248,31 @@ class: left, top
 - The solutions and the edited webinar will be available soon
 - The official [stringr](https://stringr.tidyverse.org/) website
 - The beautiful [artwork collections](https://allisonhorst.com/) of Allison Horst
-- ["Learn RegEx with Real Life Examples"](https://www.freecodecamp.org/news/practical-regex-guide-with-real-life-examples/): freecodecamp's tutorial about regex.
+- ["Learn RegEx with Real Life Examples"](https://www.freecodecamp.org/news/practical-regex-guide-with-real-life-examples/): freecodecamp tutorial about regex.
 - https://regex101.com/ and https://regexr.com/: two common regex testers
+- Two widely used online regex testers: https://regex101.com/ and https://regexr.com/
+
+
+---
+class: left, top
+
+# The R tip of the month. Part 1
+
+We were used to call this chapter "R pscakge of the month". But, not only R packages are worth of attention. This is the case of the [R-Graph-Gallery](https://r-graph-gallery.com/) of [Holtz Yan](https://github.com/holtzy)!
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20240130/20240130_The-R-Graph-Gallery.png)
+
+Are you a Python user? Maybe you could have a look to the [Python Graph Gallery](https://python-graph-gallery.com/) as well.
+
+
+---
+class: left, top
+
+# The R tip of the month. Part 2
+
+But that is just half of the story. First, we need to choose the most appropriate graph for our data! Not always easy, right? [From Data to Viz](https://www.data-to-viz.com/) can really help us in the decision process!
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20240130/20240130_From-data-to-Viz.png)
 
 
 ---
