@@ -123,6 +123,18 @@ Loading tidyverse, we load stringr as well:
 library(tidyverse)
 ```
 
+# Code to run
+
+No R script to start with today. Just read files:
+
+```r
+library(tidyverse)
+
+birds <- read_tsv("./data/20240130/20240130_bird_rings.txt")
+sc_names <- read_csv("./data/20240130/20240130_scientificnames.txt")
+sc_names <- sc_names$scientific_name
+```
+
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
 class: left, top
