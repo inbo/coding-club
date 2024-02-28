@@ -58,7 +58,7 @@ class: center, middle
 class: center, top
 
 ![:scale 80%]({{ site.baseurl}}/assets/images/20240229/20240229_cheat_sheet_ggplot.png)
-Download [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240229_cheat_sheet_ggplot2.pdf)
+<br> Download [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240229_cheat_sheet_ggplot2.pdf)
 
 CC-BY RStudio. Download the cheat sheet in [English](https://rstudio.github.io/cheatsheets/data-visualization.pdf) or in [Dutch](https://rstudio.github.io/cheatsheets/translations/dutch/data-visualization_nl.pdf). Do you know that this cheat sheet is available as [html](https://rstudio.github.io/cheatsheets/html/data-visualization.html) format? The pdf is, aside Dutch and English, available in other 7 languages. See e.g. the [French](https://rstudio.github.io/cheatsheets/translations/french/data-visualization_fr.pdf) and the [Spanish](https://rstudio.github.io/cheatsheets/translations/spanish/data-visualization_es.pdf) versions.
 
@@ -147,7 +147,7 @@ class: left, top
 3. Add the title "Evolution of rodents in Belgium" to the plot.
 4. Show only data from 2000.
 5. **Fill** all bars with color blue and set contour **color** to red.
-6. Sometimes, it is better to show aggregated data to better deal with outliers and show trends. In this case, group years in bins of 5 years.
+6. Sometimes, it is adviced to bin data to deal better with outliers and show trends. In this case, group years in bins of 5 years.
 
 ---
 class: left, top
@@ -155,7 +155,7 @@ class: left, top
 ## Intermezzo: aesthetics
 
 
-```
+```r
 ggplot(data = rodentia, mapping = aes(x = year)) +
   geom_bar()
 
@@ -163,14 +163,23 @@ ggplot(data = rodentia, mapping = aes(x = year)) +
 
 This works too:
 
-```
+```r
 ggplot(data = rodentia) +
   geom_bar(mapping = aes(x = year))
 ```
 
-Both are good. Still, we have the feeling that the second version is used more often. The only case in which it is better to opt for the second option is when you plot two or more geometries with **different** aesthetics. For example, plot pressure and temperature vs time* :
+Both are good. Still, we have the feeling that the second version is used more often.
 
-```
+
+---
+class: left, top
+
+## Intermezzo: aesthetics
+
+The only case where it is better to opt for the second option is when you plot two or more geometries with **different** aesthetics.
+For example, plot pressure and temperature vs time* :
+
+```r
 # dummy dataset
 press_temp <- tibble::tibble(
   year = c(2000:2004),
@@ -187,7 +196,7 @@ ggplot(press_temp) +
 ```
 
 <br>
-<small> __\* Note__: such kind of plot is bad practice, by the way.
+<small> __\* Note__: such kind of plot is an example of BAD PRACTICES, by the way!
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -263,7 +272,7 @@ ggplot(data = rodentia, mapping = aes(x = year, fill = family)) +
 > using more than 4 colours might make the plot hard to read
 ```
 
-About finding the most appropriate graph for our data: from [Data to Viz](https://www.data-to-viz.com/) can definitely help us.
+About finding the most appropriate graph for our data: [from Data to Viz](https://www.data-to-viz.com/) can definitely help us.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -273,7 +282,7 @@ class: left, top
 
 Let's use [R graph gallery](https://r-graph-gallery.com/) as source of inspiration to visualize data about rodents in Belgium from 1800 and 2000.
 
-- Let's start showing the distribution of the observed `species` per `year`. Try to use INBO colors or viridis palette. Try for example [boxplots](https://r-graph-gallery.com/boxplot.html), violin plots, ridgeplots (you need to install [ggridges](https://wilkelab.org/ggridges/index.html) R package first).
+- Let's start showing the distribution of the observed `species` per `year`. Try to use INBO colors or viridis palette. Try for example boxplots, violin plots, ridgeplots.
 - Are all these plots meaningful while showing the distribution per `month` instead of `year`?
 - Piecharts are not done in scientific papers, BUT they are perfectly accetable in presentations. They can be the best choice even! In our case, a piechart is a good idea for showing that two genera have the absolute majority of observations of rodents collected in Belgium up to 2020. All the other genera should be put together as "Other". Try to make your best piechart ever :-)
 
@@ -297,15 +306,16 @@ class: left, top
 
 - Challenges solutions and video recording of the session will be available soon.
 - `ggplot2` R package: https://ggplot2.tidyverse.org/
-- The [R Graphics Cookbook, 2nd edition](https://r-graphics.org/): the reference book about graphics in R.
-- R for Data Science: [Chapter 3: Data visualization](https://r4ds.had.co.nz/data-visualisation.html)
 - Article of H. Wickham about the layered [grammar of graphics](http://vita.had.co.nz/papers/layered-grammar.pdf)
+- The [R Graphics Cookbook, 2nd edition](https://r-graphics.org/): the reference book about graphics in R. A must to have :-)
+- R for Data Science: [Chapter 3: Data visualization](https://r4ds.had.co.nz/data-visualisation.html)
+- R for Data Science: [Chapter 28: Graphics for communication](https://r4ds.had.co.nz/graphics-for-communication.html)
 - [Datacarpentry's data visualiation tutorial](https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html)
 - [Stanford University tutorial](https://cengel.github.io/R-data-viz/data-visualization-with-ggplot2.html): chapter 1
-- R for Data Science: [Chapter 28: Graphics for communication](https://r4ds.had.co.nz/graphics-for-communication.html)
 - [INBOtheme](https://inbo.github.io/INBOtheme/) homepage
 - [R Graph Gallery](https://r-graph-gallery.com/index.html): a collection of charts made with R
-- Links to the ggplot extensions we mentioned today: [ggridges](https://wilkelab.org/ggridges/index.html), [ggstatsplot](https://indrajeetpatil.github.io/ggstatsplot/).
+- [from Data to Viz](https://www.data-to-viz.com/): a good help to find the most appropriate graph for your data.
+- Links to the ggplot extensions we could have used today: [ggridges](https://wilkelab.org/ggridges/index.html) for ridgeplots, [ggstatsplot](https://indrajeetpatil.github.io/ggstatsplot/) for statistics.
 
 ---
 class: left, top
