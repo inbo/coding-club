@@ -60,7 +60,7 @@ class: center, top
 ![:scale 80%]({{ site.baseurl}}/assets/images/20240229/20240229_cheat_sheet_ggplot.png)
 <br> Download [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240229_cheat_sheet_ggplot2.pdf)
 
-CC-BY RStudio. Download the cheat sheet in [English](https://rstudio.github.io/cheatsheets/data-visualization.pdf) or in [Dutch](https://rstudio.github.io/cheatsheets/translations/dutch/data-visualization_nl.pdf). Do you know that this cheat sheet is available as [html](https://rstudio.github.io/cheatsheets/html/data-visualization.html) format? The pdf is, aside Dutch and English, available in other 7 languages. See e.g. the [French](https://rstudio.github.io/cheatsheets/translations/french/data-visualization_fr.pdf) and the [Spanish](https://rstudio.github.io/cheatsheets/translations/spanish/data-visualization_es.pdf) versions.
+CC-BY RStudio. Download the cheat sheet in [English](https://rstudio.github.io/cheatsheets/data-visualization.pdf) or in [Dutch](https://rstudio.github.io/cheatsheets/translations/dutch/data-visualization_nl.pdf). Do you know that this cheat sheet is available as [html](https://rstudio.github.io/cheatsheets/html/data-visualization.html) format? The pdf is, besides Dutch and English, available in other 7 languages. See e.g. the [French](https://rstudio.github.io/cheatsheets/translations/french/data-visualization_fr.pdf) and the [Spanish](https://rstudio.github.io/cheatsheets/translations/spanish/data-visualization_es.pdf) versions.
 
 ---
 class: left, middle
@@ -206,7 +206,7 @@ class: left, top
 
 1. Make a bar chart plot similar to the ones in challenge 1.1 at genus level. How are the bars displayed per genus, by default?
 2. Try other ways to "adjust" the bars. Tip: check the [positon adjustment section](https://ggplot2.tidyverse.org/reference/#position-adjustment) section in ggplot2 reference website.
-3. How to split the bar chart in 1 in subplots based on family? Set x scale "free".
+3. How to split the bar chart in subplots based on family? Set x scale "free".
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -219,7 +219,7 @@ Bar charts or histograms are a good solution for displaying data where x is a di
 After running the provided code:
 
 1. Create a plot showing the number of observations of Ondatra zibeticus and Rattus norvegicus. Use both points and lines and distinguish the two species via color.
-2. Typically, points are combined with a line showing the trend, calculated via a smoother function. ggplot helps us enormously to model and smooth our data. Try different smooth methods.
+2. Typically, points are combined with a line showing the trend, calculated via a smoother function. ggplot helps us enormously to model and smooth our data. Try different smoother methods.
 
 
 Question for the staticians in the room and at home: what is the best smoother function and parameters to use in this case?
@@ -230,7 +230,7 @@ class: left, top
 ## Intermezzo: customize non-data components - themes
 
 
-You can personalize almost everything within your plots. ggplot2 provides some predefined themes via functions named `theme_*()`, e.g. `theme_bw()` for a white background with black lines. See more on cheat sheet.
+You can personalize almost everything within your plots. ggplot2 provides some predefined themes via functions named `theme_*()`, e.g. `theme_bw()` for a white background with black lines. See more on the cheat sheet.
 
 
 ```r
@@ -238,7 +238,7 @@ ggplot(data = rodentia, mapping = aes(x = year)) +
     geom_bar() + theme_bw()
 ```
 
-But you can also customize any non-data component via function `theme()`! Give a look to help `?theme`. Notice the help functions `element_*()`, e.g. `element_line()`, `element_text()` and  `element_rect()` (rect stays for rectangle).
+But you can also customize any non-data component via function `theme()`! Look at the help `?theme`. Notice the help functions `element_*()`, e.g. `element_line()`, `element_text()` and  `element_rect()` (rect stands for rectangle).
 
 ```r
 ggplot(data = rodentia, mapping = aes(x = year)) +
@@ -253,7 +253,7 @@ class: left, top
 
 ## Intermezzo: customize non-data components - themes
 
-Do you know that INBO has its own theme? It's called [INBOtheme](https://inbo.github.io/INBOtheme/): it's a package. Install it, load it and all figures will have authomatically an INBO touch. Read the nice [tutorials](https://inbo.github.io/INBOtheme/articles/index.html) for more.
+Do you know that INBO has its own theme? It's called [INBOtheme](https://inbo.github.io/INBOtheme/): it's a package. Install it, load it and all figures will authomatically have an INBO touch. Read the nice [tutorials](https://inbo.github.io/INBOtheme/articles/index.html) for more.
 
 ```r
 library(INBOtheme)
@@ -262,7 +262,7 @@ ggplot(data = rodentia, mapping = aes(x = year)) +
   ggtitle(label = "Temporal distribution of rodents observations in Belgium")
 ```
 
-INBOtheme takes care about the quality of your plots: a warning is returned if more than 4 colors are used.
+INBOtheme takes care of the quality of your plots: a warning is returned if more than 4 colors are used.
 
 ```
 library(INBOtheme)
@@ -272,7 +272,7 @@ ggplot(data = rodentia, mapping = aes(x = year, fill = family)) +
 > using more than 4 colours might make the plot hard to read
 ```
 
-About finding the most appropriate graph for our data: [from Data to Viz](https://www.data-to-viz.com/) can definitely help us.
+To find the most appropriate graph for our data: [from Data to Viz](https://www.data-to-viz.com/) can definitely help us.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -280,13 +280,13 @@ class: left, top
 
 # Challenge 3
 
-Let's use [R graph gallery](https://r-graph-gallery.com/) as source of inspiration to visualize data about rodents in Belgium from 1800 and 2000.
+Let's use the [R graph gallery](https://r-graph-gallery.com/) as a source of inspiration to visualize data about rodents in Belgium from 1800 and 2000.
 
-- Let's start showing the distribution of the observed `species` per `year`. Try to use INBO colors or viridis palette. Try for example boxplots, violin plots, ridgeplots.
+- Let's start showing the distribution of the observed `species` per `year`. Try to use INBO colors or the viridis palette. Try for example boxplots, violin plots, ridgeplots.
 - Are all these plots meaningful while showing the distribution per `month` instead of `year`?
 - Piecharts are not done in scientific papers, BUT they are perfectly accetable in presentations. They can be the best choice even! In our case, a piechart is a good idea for showing that two genera have the absolute majority of observations of rodents collected in Belgium up to 2020. All the other genera should be put together as "Other". Try to make your best piechart ever :-)
 
-For the staticians who love astonishing plots, check what you can do using [violin plots with ggstatsplot](https://r-graph-gallery.com/web-violinplot-with-ggstatsplot.html)*.
+For the staticians who love astonishing plots, check what you can do using [violin plots with ggstatsplot](https://r-graph-gallery.com/web-violinplot-with-ggstatsplot.html)* or how to show uncertainty with [ggdist](https://mjskay.github.io/ggdist/).
 
 <br>
 <small> __\* Note__: [ggstatsplot](https://indrajeetpatil.github.io/ggstatsplot/) R package is an extension of ggplot2 package for creating graphics with details from statistical test.</small>
@@ -298,7 +298,7 @@ class: left, top
 
 [ggpattern](https://coolbutuseless.github.io/package/ggpattern/index.html) can be definitely funny, but it can be also the cherry on top :-) Just think to add rodents pictures for each species on each bar.
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20240229/20240229_ggpattern.png)
+![:scale 80%]({{ site.baseurl}}/assets/images/20240229/20240229_ggpattern.png)
 
 ---
 class: left, top
@@ -307,7 +307,7 @@ class: left, top
 
 If you forget how to create plots with ggplot (it happens frequently, no worries!), the RStudio's addin esquisse can help you to generate plots with few clicks. The [getting started](https://cran.r-project.org/web/packages/esquisse/vignettes/get-started.html) vignette is a very handy tutorial on how to use esquisse. And by exporting the code behind the plot we have just created, we will learn a lot, for sure!
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20240229/20240229_esquisse.png)
+![:scale 80%]({{ site.baseurl}}/assets/images/20240229/20240229_esquisse.png)
 
 ---
 class: left, top
