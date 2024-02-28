@@ -180,6 +180,7 @@ data/20231214/20231214_tdiff_tmax_tmin_january.tif,20231214_tdiff_tmax_tmin_janu
 data/20231214/20231214_watersurfaces_hab.gpkg,20231214_watersurfaces_hab.gpkg,data,20231214
 data/20240130/20240130_bird_rings.txt,20240130_bird_rings.txt,data,20240130
 data/20240130/20240130_scientificnames.txt,20240130_scientificnames.txt,data,20240130
+data/20240229/20240229_rodentia.txt,20240229_rodentia.txt,data,20240229
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
@@ -326,3 +327,4 @@ src/20231128/20231128_challenges.R,20231128_challenges.R,src,20231128
 src/20231214/20231214_challenges.R,20231214_challenges.R,src,20231214
 src/20231214/20231214_challenges_solutions.R,20231214_challenges_solutions.R,src,20231214
 src/20240130/20240130_challenges_solutions.R,20240130_challenges_solutions.R,src,20240130
+src/20240229/20240229_challenges.R,20240229_challenges.R,src,20240229
