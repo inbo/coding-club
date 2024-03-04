@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2024-02-29 | become a ggplot hero | [slides]({{ site.baseurl }}{% link sessions/20240229_become_a_ggplot_hero.html  %}) | [hackmd](https://hackmd.io/OKAoEJMTQZWT_2Lvl5cEmQ?view) | 01.19 - Paul Van Ostaijen |  |
+| 2024-02-29 | become a ggplot hero | [slides]({{ site.baseurl }}{% link sessions/20240229_become_a_ggplot_hero.html  %}) | [hackmd](https://hackmd.io/OKAoEJMTQZWT_2Lvl5cEmQ?view) | 01.19 - Paul Van Ostaijen | [vimeo](https://vimeo.com/919340067?share=copy) |
 | 2024-01-30 | the art of manipulating strings | [slides]({{ site.baseurl }}{% link sessions/20240130_manipulating_strings.html  %}) | [hackmd](https://hackmd.io/hk0kqt6nT6qWp9nyLj3RaQ?view) | 01.70 - Ferdinand Peeters | [vimeo](https://vimeo.com/910769329?share=copy) |
 | 2023-12-14 | qgisprocess - QGIS in R | [slides]({{ site.baseurl }}{% link sessions/20231214_qgisprocess.html  %}) | [hackmd](https://hackmd.io/nDpNbgX7T8m0ozuvKOJClA?view) | 01.05 - Isala Van Diest | [vimeo](https://vimeo.com/900825991?share=copy) |
 | 2023-11-28 | dashboards and rshiny for beginners | [slides]({{ site.baseurl }}{% link sessions/20231128_dashboards_and_shiny_for_beginners.html  %}) | [hackmd](https://hackmd.io/mo4U_EMFTJW_B1mtEnD7eA?view) | 01.05 - Isala Van Diest | [vimeo](https://vimeo.com/891037994?share=copy)  |
