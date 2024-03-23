@@ -1,0 +1,330 @@
+---
+layout: presentation
+title: beyond ggplot
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 26 MARCH 2024
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+
+01.69 - Paul Janssen
+
+---
+class: left, top
+
+## ROOMIE: room reservation
+
+```
+> if (isFALSE(roomie)) {
++   warning("Please confirm asap the room reservation on the roomie")
++ }
+Warning message:
+Please confirm asap the room reservation on the roomie
+```
+
+---
+class: left, top
+
+## Record the session
+
+Kind reminder to... myself.
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20240326/20240326_badge_ggplot.png)
+
+---
+class: left, middle
+
+## How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+## First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+# Share your code during the coding session
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/t6cbOs9iSCqBiUbYLyfkBQ?both and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/t6cbOs9iSCqBiUbYLyfkBQ?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub foders [coding-club/data/20240229](https://github.com/inbo/coding-club/tree/master/data/20240229) and [coding-club/src/20240229](https://github.com/inbo/coding-club/tree/master/src/20240229)
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20230228")` to download the coding club material of February, 28 2023. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data and scripts description
+
+Today we will work with national/regional checklist data about Invasive Alien Species (IAS) and species distribution of butterflies among several biotopes.
+
+- `20240326_ias_first_observed_BE.txt`: dataset about year of first observation of IAS in Belgium from 1950
+- `20240326_ias_first_observed_regions.txt`: dataset about year of first observation of IAS in Belgian regions from 1950
+- `20240326_ias_pathways_count.txt`: dataset about pathway of introduction of IAS in Belgium from 1950
+- `20240326_area_biotopes.txt`: dataset about biotopes and distribution of two butterflies
+
+- `20240326_challenges.R`: R script with code to start with
+
+---
+class: left, top
+
+# Load libraries
+
+```r
+library(tidyverse)
+library(plotly)
+library(scales)
+library(patchwork)
+library(ggforce)
+library(gganimate)
+library(magick)
+```
+
+---
+class: left, top
+
+# RECAP: ggplot recipe: data - mapping - geometry
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20240326/20240326_ggplot_recipe.png)
+
+---
+class: left, top
+
+## Recap: mapping
+
+Mapping can be defined in either `ggplot()` or the geometry `geom_*()`.
+
+```r
+# mapping in ggplot()
+ggplot(ToothGrowth, mapping = aes(x = dose, y = len)) +
+  geom_point()
+# mapping in geometry geom_point()
+ggplot(ToothGrowth) +
+  geom_point(mapping = aes(x = dose, y = len))
+```
+
+What to do with multiple plots (geometries)?
+
+```r
+# set all args of aes() in each geom_*()
+ggplot(ToothGrowth) +
+  geom_violin(mapping = aes(x = dose, y = len, group = dose)) +
+  geom_point(mapping = aes(x = dose, y = len))
+# put common args of aes() in ggplot()
+ggplot(ToothGrowth, mapping = aes(x = dose, y = len)) +
+  geom_violin(mapping = aes(group = dose)) +
+  geom_point()
+```
+
+---
+class: left, top
+
+## Recap: mapping - aesthetics
+
+The most important mapping argument? **aes()**thetics! Put all arguments which require variables (= columns) in `aes()`, leave all other arguments out.
+
+```r
+# you want color represents the supplement (supp)
+ggplot(ToothGrowth, mapping = aes(x = dose, y = len)) +
+  geom_point(aes(color = supp))
+
+# you want all points are blue hollow triangles
+ggplot(ToothGrowth, mapping = aes(x = dose, y = len)) +
+  geom_point(color = "blue", shape = 2)
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1. Interactivity and scales
+
+1. Make `plot1` interactive with plotly. Hint: check the plotly [Getting Started](https://plotly.com/ggplot2/getting-started/).
+
+2. Months are integers. How to improve the x breaks to avoid decimal values?
+ Hint: use `pretty_breaks()` from scales package within a ggplot `scale_*` function.
+
+3. Starting from plot3, use 'yy notation for x-labels (e.g. '12 instead of
+ 2012). For y-labels, use "K" suffix for thousands (e.g. 2K for 2000). Hint:
+ example code in ["Break and
+ labels"](https://scales.r-lib.org/#breaks-and-labels) section of scales
+ homepage.
+
+---
+class: left, top
+
+# Intermezzo. How to choose a color palette: the viridis palette
+
+Today we won't speak about colors. Still, take in mind this criteria when choosing a color palette:
+
+1. printer-friendly (gray scale)
+2. perceptually uniform
+3. easy to read by those with colorblindness.
+
+All of this can be found in the [viridis palette](https://www.r-bloggers.com/2018/07/ggplot2-welcome-viridis/) which avoids the red and goes from blue to yellow, passing through green (_viridis_: green in Latin).
+
+More about colors in the Bonus Challenge and Resources slides.
+
+---
+class: left, top
+
+# Intermezzo. The INBO official colors
+
+Do you know that INBO has its own (color) theme? It's called [INBOtheme](https://inbo.github.io/INBOtheme/) and it's a package. Install it, load it and all figures will have authomatically an INBO touch. Read the nice [tutorials](https://inbo.github.io/INBOtheme/articles/index.html) for more.
+
+```r
+library(INBOtheme)
+
+ggplot(data = ias_be, mapping = aes(x = first_observed)) +
+  geom_bar() +
+  ggtitle(label = "Temporal distribution of alien species introductions")
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2. Compositions
+
+1. Try to make a nice composition of the 4 plots. You can use the improved
+ versions of plot2 and plot3 created in challenge 1 of course. Tip: check the
+ very well written [patchwork documentation](https://patchwork.data-imaginist.com/articles/patchwork.html).
+
+2. Using ggforce, add a "facet zoom"  to `plot1` focussing on the last 5 years.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3. Animations
+
+Let's animate plot4 with [gganimate.](https://gganimate.com/articles/gganimate.html).
+Check also the [Getting Started](https://gganimate.com/articles/gganimate.html) page.
+In particular, add a title as to what each time point relates to. Test some
+`enter_*` and `exit_*` functions to animate the appearance and disappearance
+of data. Save the animations.
+
+1. Create an animation showing the observations species by species.
+
+2. Create an animation showing the observations year by year. By default the animation has 100
+frames and 10 frame per seconds (fps), i.e. a duration of 10s. How to change these values?
+
+---
+class: left, top
+
+# Bonus challenge. Add image to plot
+
+There are so many color palettes available. Get inspired! Examples:
+- [wesanderson](https://github.com/karthik/wesanderson): it allows you to use (some of) the palettes derived from the amazing Tumblr blog ["Wes Anderson Palettes"](http://wesandersonpalettes.tumblr.com/)
+- [ggsci](https://nanx.me/ggsci/index.html): it offers a collection of high-quality ggplot compatible color palettes.
+- [cols4all](https://github.com/mtennekes/cols4all): it is a package to help you selecting color palettes via a GUI (see screenshot in next slide)
+
+Try to apply the viridis palette mentioned in the Intermezzo and other palettes from the packages mentioned above to some of the plots we created today.
+
+
+---
+class: left, top
+
+# Bonus challenge: have fun with color palettes
+
+```
+library(cols4all)
+c4a_gui() # launch the GUI (graphic user interface)
+```
+
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20240326/20240326_colors4all_gui.png)
+
+---
+class: left, top
+
+# Resources
+
+- Commented challenges solutions and edited video recording will be available soon.
+- `ggplot2` website: https://ggplot2.tidyverse.org/
+- [`ggplot2` extension packages gallery](https://exts.ggplot2.tidyverse.org/gallery/)
+- Make interactive plots using [plotly](https://plotly-r.com/). In particular, [apply plotly to ggplot](https://plotly.com/ggplot2/getting-started/)
+- Adapt breaks and labels of your plots with [scales](https://scales.r-lib.org/) package
+- Arrange intuitively multiple plots with [patchwork](https://patchwork.data-imaginist.com/)
+- Explore [ggforce](https://ggforce.data-imaginist.com/): a kind of repository of geoms, stats, etc. that are as well documented and implemented as the official ones found in ggplot2
+- Animate your plots with [gganimate](https://gganimate.com/)
+- More about animations? Check [challenge 3B](https://inbo.github.io/coding-club/sessions/20201217_outstanding_plots.html#16) of 17 Dec 2020
+- [wesanderson](https://github.com/karthik/wesanderson) packge offers (some of) the palettes shown in the Tumblr blog ["Wes Anderson Palettes"](http://wesandersonpalettes.tumblr.com/)
+- [ggsci](https://nanx.me/ggsci/index.html) package offers a collection of high-quality ggplot compatible color palettes
+- [INBOtheme](https://inbo.github.io/INBOtheme/) homepage
+- Blogpost about colorblindness and how taking care of it in your plots: https://www.datanovia.com/en/blog/how-to-stimulate-colorblindness-vision-in-r-figures
+- Chapter dedicated to [plotting colors](https://bookdown.org/ndphillips/YaRrr/more-colors.html) from the "YaRrr! The Pirate’s Guide to R"
+- Rate your visualization using Stephanie Evergreen's [data visualizaion checklist](https://stephanieevergreen.com/data-visualization-checklist/)
+
+---
+class: left, top
+
+# Coding club topics 2023: you vote!
+
+Every month you can vote among **two topics**!
+
+Poll for May's coding club is still open!
+Let us know your favorite before May 1st!
+
+https://forms.gle/dyBHYSyVWqC1tnk69
+
+You can choose between:
+
+- Spatial vector data with sf: points, lines, polygons, multipolygons, ...
+- The computer says NO: debug yourR code
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.20 - Willy Van Der Meeren<br>
+Date: __25/05/2023__, van 10:00 tot 12:30<br>
+Subject: "spatial data with sf" or "computer says no: debugging in R"<br>
+(registration announced via DG_useR@inbo.be)
