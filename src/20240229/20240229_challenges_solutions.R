@@ -29,7 +29,7 @@ ggplot(data = rodentia) +
 # Set x axis limits.
 
 # Use `coord_cartesian`, which acts as a zoom lens on the plot
-ggplot(data = rodentia %>% filter(year >= 2000)) +
+ggplot(data = rodentia) +
   geom_bar(mapping = aes(x = year)) +
   labs(x = "Year",
        y = "Number of observations",
