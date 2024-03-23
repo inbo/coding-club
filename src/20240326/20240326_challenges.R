@@ -57,7 +57,7 @@ plot4
 
 
 
-## CHALLENGE 3: animate
+## CHALLENGE 3: animations
 
 
 
