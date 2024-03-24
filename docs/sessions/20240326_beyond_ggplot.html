@@ -55,7 +55,7 @@ class: center, middle
 ![:scale 90%]({{ site.baseurl}}/assets/images/20240326/20240326_badge_ggplot.png)
 
 ---
-class: left, middle
+class: left, top
 
 ## How to get started?
 
@@ -101,12 +101,9 @@ class: left, top
 
 # Data and scripts description
 
-Today we will work with national/regional checklist data about Invasive Alien Species (IAS) and species distribution of butterflies among several biotopes.
+Today we will work with:
 
-- `20240326_ias_first_observed_BE.txt`: dataset about year of first observation of IAS in Belgium from 1950
-- `20240326_ias_first_observed_regions.txt`: dataset about year of first observation of IAS in Belgian regions from 1950
-- `20240326_ias_pathways_count.txt`: dataset about pathway of introduction of IAS in Belgium from 1950
-- `20240326_area_biotopes.txt`: dataset about biotopes and distribution of two butterflies
+- `20240326_rodents.txt`, a tab separated file with observations of 5 rodents species in Belgium up to 2020.
 
 - `20240326_challenges.R`: R script with code to start with
 
@@ -187,7 +184,7 @@ class: left, top
 1. Make `plot1` interactive with plotly. Hint: check the plotly [Getting Started](https://plotly.com/ggplot2/getting-started/).
 
 2. Months are integers. How to improve the x breaks to avoid decimal values?
- Hint: use `pretty_breaks()` from scales package within a ggplot `scale_*` function.
+ Hint: use `pretty_breaks()` from scales package within the right ggplot `scale_*` function.
 
 3. Starting from plot3, use 'yy notation for x-labels (e.g. '12 instead of
  2012). For y-labels, use "K" suffix for thousands (e.g. 2K for 2000). Hint:
@@ -245,14 +242,20 @@ Let's animate plot4 with [gganimate.](https://gganimate.com/articles/gganimate.h
 Check also the [Getting Started](https://gganimate.com/articles/gganimate.html) page.
 In particular, add a title as to what each time point relates to. Test some
 `enter_*` and `exit_*` functions to animate the appearance and disappearance
-of data. Save the animations.
+of data. Save the animations. See the specific exercises in the next slide.
 
-1. Create an animation showing the observations species by species.
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3. Animations
+
+1. Create an animation showing the observations species by species. See example below.
 
 2. Create an animation showing the observations year by year. By default the animation has 100
 frames and 10 frame per seconds (fps), i.e. a duration of 10s. How to change these values?
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20240326/20240326_animation_plot4_by_species.png)
+![:scale 70%]({{ site.baseurl}}/assets/images/20240326/20240326_animation_plot4_by_species.png)
 
 ---
 class: left, top
@@ -264,7 +267,7 @@ interface for ImageMagick, the most comprehensive open-source image processing
 library available.
 Using magick, add the INBO coding club logo to one of our plots.
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20240326/20240326_logo.png)
+![:scale 70%]({{ site.baseurl}}/assets/images/20240326/20240326_logo.png)
 
 ---
 class: left, top
@@ -281,6 +284,7 @@ class: left, top
 - Animate your plots with [gganimate](https://gganimate.com/)
 - Process images as a pro in R via [magick](https://docs.ropensci.org/magick/index.html)
 - [INBOtheme](https://inbo.github.io/INBOtheme/) homepage
+- [viridis palette](https://www.r-bloggers.com/2018/07/ggplot2-welcome-viridis/): what is it?
 
 ---
 class: left, top
