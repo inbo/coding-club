@@ -49,6 +49,16 @@ class: left, top
 Kind reminder to... myself.
 
 ---
+class: left, top
+
+## New Hexagon Stickers
+
+New INBO coding club stickers have been ordered (thanks to Tessa and her team).
+
+Be sure to join us for any of the next sessions to get one!
+
+
+---
 class: center, middle
 
 <!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
@@ -191,7 +201,7 @@ class: left, top
 
 1. Make `plot1` interactive with plotly. Hint: check the plotly [Getting Started](https://plotly.com/ggplot2/getting-started/).
 
-2. Months are integers. How to improve the x breaks to avoid decimal values?
+2. Months are integers. How to improve the x breaks in plot2 to avoid decimal values?
  Hint: use `pretty_breaks()` from scales package within the right ggplot `scale_*` function.
 
 3. Starting from plot3, use 'yy notation for x-labels (e.g. '12 instead of
@@ -238,7 +248,7 @@ class: left, top
  versions of plot2 and plot3 created in challenge 1 of course. Tip: check the
  very well written [patchwork documentation](https://patchwork.data-imaginist.com/articles/patchwork.html).
 
-2. Using ggforce, add a "facet zoom"  to `plot1` focussing on the last 5 years.
+2. Using [ggforce](https://ggforce.data-imaginist.com/index.html), add a "facet zoom"  to `plot1` focussing on the last 5 years.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -248,7 +258,7 @@ class: left, top
 
 Let's animate plot4 with [gganimate](https://gganimate.com/articles/gganimate.html).
 Check also the [Getting Started](https://gganimate.com/articles/gganimate.html) page.
-In particular, pay attention to the [Object Permanence](https://gganimate.com/articles/gganimate.html#object-permanence) concept. Add also title as to what each time point relates to. Test some
+In particular, pay attention to the [Object Permanence](https://gganimate.com/articles/gganimate.html#object-permanence) concept. Also add a title that dynamically shows the species and time as it passes. Test some
 `enter_*` and `exit_*` functions to animate the appearance and disappearance
 of data. Save the animations. See the two exercises in the next slide.
 
@@ -261,9 +271,9 @@ class: left, top
 1. Create an animation showing the observations species by species. See example below.
 
 2. Create an animation showing the observations year by year. Hint: improve the aesthetics of `geom_point` of plot4. By default the animation has 100
-frames and 10 frame per seconds (fps), i.e. a duration of 10s. How to change these values?
+frames and 10 frame per seconds (fps), i.e. a duration of 10s. How can you change these values?
 
-![:scale 70%]({{ site.baseurl}}/assets/images/20240326/20240326_animation_plot4_by_species.png)
+![:scale 60%]({{ site.baseurl}}/assets/images/20240326/20240326_animation_plot4_by_species.png)
 
 ---
 class: left, top
