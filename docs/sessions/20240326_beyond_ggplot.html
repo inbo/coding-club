@@ -233,9 +233,9 @@ Do you know that INBO has its own (color) theme? It's called [INBOtheme](https:/
 ```r
 library(INBOtheme)
 
-ggplot(data = ias_be, mapping = aes(x = first_observed)) +
+ggplot(data = rodentia, mapping = aes(x = year, fill = institutionCode)) +
   geom_bar() +
-  ggtitle(label = "Temporal distribution of alien species introductions")
+  labs(y = "observations")
 ```
 
 ---
