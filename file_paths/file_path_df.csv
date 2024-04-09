@@ -184,7 +184,7 @@ data/20240130/20240130_bird_rings.txt,20240130_bird_rings.txt,data,20240130
 data/20240130/20240130_scientificnames.txt,20240130_scientificnames.txt,data,20240130
 data/20240229/20240229_rodentia.txt,20240229_rodentia.txt,data,20240229
 data/20240326/20240326_rodents.txt,20240326_rodents.txt,data,20240326
-data/20240326/coding_club_logo_1.png,coding_club_logo_1.png,data,20240326
+data/20240326/20240326_coding_club_logo_1.png,20240326_coding_club_logo_1.png,data,20240326
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
@@ -355,3 +355,7 @@ src/20240130/20240130_challenges_solutions.R,20240130_challenges_solutions.R,src
 src/20240229/20240229_challenges.R,20240229_challenges.R,src,20240229
 src/20240229/20240229_challenges_solutions.R,20240229_challenges_solutions.R,src,20240229
 src/20240326/20240326_challenges.R,20240326_challenges.R,src,20240326
+src/20240326/20240326_challenges_solutions.R,20240326_challenges_solutions.R,src,20240326
+src/20240326/20240326_animation_plot4_by_species.gif,20240326_animation_plot4_by_species.gif,src,20240326
+src/20240326/20240326_animation_plot4_by_year.gif,20240326_animation_plot4_by_year.gif,src,20240326
+src/20240326/20240326_plot1.png,20240326_plot1.png,src,20240326
