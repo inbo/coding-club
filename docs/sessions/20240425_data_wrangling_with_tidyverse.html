@@ -1,0 +1,367 @@
+---
+layout: presentation
+title: data wrangling with tidyverse
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+  <!-- Adjust the presentation to the session. Focus on the challenges,
+this is not a coding tutorial.
+
+Note, to include figures, store the image in the `/docs/assets/images`
+folder and use the jekyll base.url reference as done in this template
+or see https://jekyllrb.com/docs/liquid/tags/#links.
+  using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 25 APRIL 2024
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck
+
+01.71 - Frans Breziers
+
+---
+class: left, top
+
+## ROOMIE: room reservation
+
+```
+> if (isFALSE(roomie)) {
++   warning("Please confirm asap the room reservation on the roomie")
++ }
+Warning message:
+Please confirm asap the room reservation on the roomie
+```
+
+---
+class: left, top
+
+## Record the session
+
+Kind reminder to... myself.
+
+---
+class: left, top
+
+## New Hexagon Stickers
+
+New INBO coding club stickers arrived! Party! You can be the first one having one.
+
+![:scale 40%]({{ site.baseurl}}/assets/images/20240326/20240326_coding_club_logo.png)
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20240425/20240425_badge.png)
+
+---
+class: left, top
+
+The dplyr cheat sheet as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240425_cheat_sheet_data_transformation.pdf) or as [html](https://rstudio.github.io/cheatsheets/html/data-transformation.html).
+
+![:scale 85%]({{ site.baseurl}}/assets/images/20240425/20240425_data-transformation.png)
+
+New to dplyr? The best resource for self study is the [data transformation chapter](https://r4ds.had.co.nz/transform.html) in R for data science.
+
+---
+class: left, top
+
+## How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+## First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+# Share your code during the coding session
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/bQqDeUHUQSqJ9reMykkM2A?both and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/bQqDeUHUQSqJ9reMykkM2A?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub folders [data/20240425](https://github.com/inbo/coding-club/tree/master/data/20240425) and [src/20240425](https://github.com/inbo/coding-club/tree/master/src/20240425)
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20230228")` to download the coding club material of February, 28 2023. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data and scripts description
+
+Today we will work with:
+
+- `20240326_rodents.txt`, a tab separated file with observations of 5 rodents species in Belgium up to 2020.
+
+- `20240425_challenges.R`: R script with code to start with
+
+---
+class: left, top
+
+# Data and scripts description
+
+- Partridge data is inspired by the [yearly partridge counting](https://www.natuurenbos.be/patrijs) that is done from January 15th untill March 31st. Each game management unit (wildbeheerseenheid, **WBE**) is required to count partridges in their territory if they want to hunt them. There are two dataframes:
+
+1. [20240425_partridge.txt](https://github.com/inbo/coding-club/blob/main/data/20240425/20240425_partridge.txt): a dataset with observations of partridges. This includes the date of the observation, the fieldworker who submitted the observation, the type of observation (`couple`, `single`, `group`, or only `sound`), and location (WBE number and coordinates `x`, `y`).
+2. [20240425_wbe_info.txt](https://github.com/inbo/coding-club/blob/main/data/20240425/20240425_wbe_info.txt): for each WBE, this dataframe contains the unique identification number (`wbe`), name, province, and surface area.
+
+- [20240425_ias_plants.txt](https://github.com/inbo/coding-club/blob/main/data/20240425/20240425_ias_plants.txt): a list of invasive alien plants. One column contain the scientific names, while the others contain vernacular names in English, Dutch and French.
+
+- [20240425_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20240425/20240425_challenges.R): R script to start from (some code is already provided)
+
+---
+class: left, top
+
+# Why dplyr?
+
+A lot of reasons. But the main one is that it makes data manipulation code easy to read (in comparison with basic R). Other important reasons?
+
+- actively maintained (people from posit, the company behind RStudio).
+- works nicely with all other tidyverse packages.
+- open development on [GitHub](https://github.com/tidyverse/dplyr/): issues, questions, dev ideas etc. are welcome.
+- functions have very good names. Some of them are exactly the same as in SQL, e.g. `filter()`, `select()`.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1 - Single table verbs
+
+[Single table verbs](https://dplyr.tidyverse.org/articles/dplyr.html#single-table-verbs) = functions working on one data.frame.
+
+After reading `partridge` dataset (code provided):
+
+1. Display first 8 rows; display the last 8 rows.
+
+2. Select columns `wbe` and `date`.
+
+3. Display the **distinct** values of `type` as a data.frame with one column, `type`.
+
+4. How to remove observations with type `Sound`? How to remove observations with type = `Sound` and `wbe` = NA?
+
+5. Add a new column called `seen` which is TRUE if `type` is not `"Sound"`. Add a column `month` with the month of the observation. Tip: use `lubridate::month()` function. Install lubridate package if not yet done.
+
+6. **Relocate** the column `seen` after `type` and `month` after `date`.
+
+---
+class: left, top
+
+## Intermezzo - The pipe %>%
+
+From [dplyr](https://dplyr.tidyverse.org/articles/dplyr.html#the-pipe) documentation:
+
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20240425/20240425_pipe.png)
+
+Can you apply the pipe to concatenate some steps of challenge 1?
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2 - Summaries
+
+1. How many observations per WBE? Save it as `overview_partridge` as we will use it in challenge 3.
+
+2. How many observations per WBE and type?
+
+3. Order the previous output per n_obs (descending order), wbe (ascending order) and type (alphabetically).
+
+4. For each month, return the wbe with the highest number of observations and report the number of observations for those wbe that month.
+
+
+---
+class: left, top
+
+## Intermezzo: dplyr is a living thing
+
+We said at the beginning that dplyr is actively maintained. There is more! dplyr had moved and is actually moving forward to get better and better.
+
+dplyr released in early 2023 an important new version, dplyr 1.1.0. At the moment we are at version 1.1.4. It means new very nice functions have been added, other older functions got superseded or some arguments are deprecated etc. Read more in this 4 blogposts:
+
+- [dplyr 1.1.0: joins](https://www.tidyverse.org/blog/2023/01/dplyr-1-1-0-joins/)
+- [dplyr 1.1.0: Per-operation grouping](https://www.tidyverse.org/blog/2023/02/dplyr-1-1-0-per-operation-grouping/)
+- [dplyr 1.1.0: The power of vctrs](https://www.tidyverse.org/blog/2023/02/dplyr-1-1-0-vctrs/)
+- [dplyr 1.1.0: pick(), reframe(), and arrange()](https://www.tidyverse.org/blog/2023/02/dplyr-1-1-0-pick-reframe-arrange/)
+
+---
+class: left, top
+
+## Intermezzo - Two-table verbs
+
+Two-table verbs = functions which take two data.frames as input to typically return one data.frame as output. A nice [article](https://dplyr.tidyverse.org/articles/two-table.html) on dplyr website. The most famous two-table function family is the "join" family. Give a look to the [news around joins](https://www.tidyverse.org/blog/2023/01/dplyr-1-1-0-joins/)* also mentioned in previous slide.
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20240425/20240425_joins_cheat_sheet.png)
+
+<br>
+<small> __\* Note__: the cheatsheet doesn't reflect the new features shown in the article.</small>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3 - Two-table verbs
+
+After reading the game management units details as `WBE` (code provided):
+
+1. Add WBE details in `WBE` to `overview_partridge` (where available)
+
+2. How are the columns ordered? Are the columns of `overview_partridge` on the left? Try to put them on the right.
+
+3. Which WBEs are not in `partridge`, i.e. are not linked to any observation?
+
+4. Some observations have a missing value for column `wbe` and some WBEs have no observations at all. Get rid of them while joining.
+
+5. Now, join both again but retain ALL EXISTING WBEs. Set the number of observations equal to 0 for all WBEs where no partridges were observed.
+
+---
+class: left, top
+
+# dplyr is a living thing
+
+An example:
+
+```
+people <- tibble(
+  first_name = c("Amber", "Damiano", "Dirk", "Emma", "Raïsa", "Hans"),
+  second_name = c("Mertens", "Oldoni", "Maes",
+                  "Cartuyvels", "Carmen", "Vancalster")
+)
+
+hobbys <- tibble( # purely invented!
+  people = c("Hans", "Damiano", "Dirk", "Amber", "Emma", "Raïsa"),
+  sport = c("rugby", "football", "hockey", "ski", "tennis", "bowling")
+)
+
+# old dplyr, still works! You need "" = "".
+people %>%
+  left_join(hobbys, by = c("first_name" = "people")
+)
+
+# now you can use join_by() and colnames without " "
+people %>%
+  left_join(hobbys, join_by(first_name == people))
+```
+
+---
+class: left, top
+
+# Bonus challenge - Create tidy data with tidyr
+
+Sometimes, the first data manipulation you have to perform is to create tidy data. dplyr might not suffice: you will need another important tidyverse package: [tidyr](https://tidyr.tidyverse.org/).
+
+Tidy data is data where:
+
+- Every column is variable.
+- Every row is an observation.
+- Every cell is a single value.
+
+---
+class: left, top
+
+# Bonus challenge 1- Create tidy data with tidyr
+
+After reading `20240425_ias_plants.txt` dataset, make it tidy. Please notice that, for some species, two vernacular names are given. See figure below.
+
+![:scale 110%]({{ site.baseurl}}/assets/images/20240425/20240425_tidy_data_ias.png)
+
+---
+class: left, top
+
+# Bonus challenge 2: dplyr + stringr = love
+
+We said that dplyr matches nicely with other tidyverse packages. Example: stringr in this case:
+
+```
+a <- tibble(
+  name = c("Damiano", "Amber", "Hans", "Dirk", "Emma", "Raïsa"),
+  my_favorite_number_string = c("104", "023", "07", "666", "3", "9")
+)
+## Add the commando here to get this output:
+
+# A tibble: 6 × 2
+  name    my_favorite_number_string
+  <chr>   <chr>
+1 Emma    3
+2 Hans    07
+3 Raïsa   9
+4 Amber   023
+5 Damiano 104
+6 Dirk    666
+```
+
+---
+class: left, top
+
+# The package of the month.
+
+
+---
+class: left, top
+
+# Resources
+
+- The commented [solutions](https://github.com/inbo/coding-club/blob/main/src/20240425/20240425_challenges_solutions.R) are available. You can download them automatically via `inborutils::setup_codingclub_session("20240425")`
+- Edited [video recording](https://vimeo.com/805138374) is available on the INBO coding club channel (vimeo)
+- [dplyr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240425_cheat_sheet_data_transformation.pdf).
+- [tidyr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240425_cheat_sheet_tidyr.pdf).
+- [dplyr](https://dplyr.tidyverse.org/) package documentation.
+- [tidyr](https://tidyr.tidyverse.org/) package documentation.
+- [data transformation chapter](https://r4ds.had.co.nz/transform.html) in the [R for data science](https://r4ds.had.co.nz/index.html) book.
+- [tidylog](https://github.com/elbersb/tidylog) package.
+
+---
+class: left, top
+
+# Coding club topics 2023: you vote!
+
+Every month you can vote among **two topics**!
+
+Poll for March's coding club is still open! Let us know your favorite before tomorrow!
+
+https://forms.gle/pEQi153z8q9juDEy7
+
+You can choose between:
+
+- Make great plots with ggplot (level: beginner/intermediate).
+- Read data from INBO databases in R (credentials needed).
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room number and name  -->
+Topic: making outstanding plots with ggplot OR read data from INBO databases in R <br>
+Room:  HT - 01.05 - Isala Van Diest <br>
+Date: **30/03/2023**, from **10:00** to **12:30** <br>
+Help needed with technical setup? You are welcom from **9:45am**
