@@ -3,6 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
+| 2024-04-25 | beyond ggplot | [slides]({{ site.baseurl }}{% link sessions/20240425_data_wrangling_with_tidyverse.html  %}) | [hackmd](https://hackmd.io/bQqDeUHUQSqJ9reMykkM2A?view) | 01.71 - Frans Breziers |  |
 | 2024-03-26 | beyond ggplot | [slides]({{ site.baseurl }}{% link sessions/20240326_beyond_ggplot.html  %}) | [hackmd](https://hackmd.io/t6cbOs9iSCqBiUbYLyfkBQ?view) | 01.69 - Paul Janssen | [vimeo](https://vimeo.com/928549430?share=copy) |
 | 2024-02-29 | become a ggplot hero | [slides]({{ site.baseurl }}{% link sessions/20240229_become_a_ggplot_hero.html  %}) | [hackmd](https://hackmd.io/OKAoEJMTQZWT_2Lvl5cEmQ?view) | 01.19 - Paul Van Ostaijen | [vimeo](https://vimeo.com/919340067?share=copy) |
 | 2024-01-30 | the art of manipulating strings | [slides]({{ site.baseurl }}{% link sessions/20240130_manipulating_strings.html  %}) | [hackmd](https://hackmd.io/hk0kqt6nT6qWp9nyLj3RaQ?view) | 01.70 - Ferdinand Peeters | [vimeo](https://vimeo.com/910769329?share=copy) |
