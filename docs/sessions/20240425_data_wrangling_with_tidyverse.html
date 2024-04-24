@@ -50,9 +50,9 @@ Kind reminder to... myself.
 ---
 class: left, top
 
-## New Hexagon Stickers
+## New Hex Stickers
 
-New INBO coding club stickers arrived! Party! You can be the first one having one.
+We have finally new INBO coding club stickers! You can be the first one having one.
 
 ![:scale 40%]({{ site.baseurl}}/assets/images/20240326/20240326_coding_club_logo.png)
 
@@ -65,11 +65,25 @@ class: center, middle
 ---
 class: left, top
 
-The dplyr cheat sheet as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240425_cheat_sheet_data_transformation.pdf) or as [html](https://rstudio.github.io/cheatsheets/html/data-transformation.html).
+The dplyr cheat sheet is available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240425_cheat_sheet_data_transformation.pdf) or as [html](https://rstudio.github.io/cheatsheets/html/data-transformation.html).
 
 ![:scale 85%]({{ site.baseurl}}/assets/images/20240425/20240425_data-transformation.png)
 
 New to dplyr? The best resource for self study is the [data transformation chapter](https://r4ds.had.co.nz/transform.html) in R for data science.
+
+---
+class: left, top
+
+You could benefit of the cheatsheets of other two important tidyverse packages: tidyr and purrr.
+
+- [tidyr](https://tidyr.tidyverse.org/): cheasheet available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240425_tidyr.pdf) or [html](https://rstudio.github.io/cheatsheets/html/tidyr.html).
+- [purrr](https://purrr.tidyverse.org/): cheasheet available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240425_purrr.pdf) or [html](https://rstudio.github.io/cheatsheets/html/purrr.html).
+
+
+<center>![:scale 100%]({{ site.baseurl}}/assets/images/20240425/20240425_tidyr_logo.png)</center>
+
+<center>![:scale 100%]({{ site.baseurl}}/assets/images/20240425/20240425_purrr_logo.png)</center>
+
 
 ---
 class: left, top
@@ -120,35 +134,42 @@ class: left, top
 
 Today we will work with:
 
-- `20240326_rodents.txt`, a tab separated file with observations of 5 rodents species in Belgium up to 2020.
+- `20240424_observations.csv` and `20240425_media.csv`: observations and media
+tables of a Camera Trap Data Package*. Derived from the
+[example](https://github.com/tdwg/camtrap-dp/tree/02ce57229209dd65249113a193dbad7c84b8d5da/example)
+provided in documentation.
 
-- `20240425_challenges.R`: R script with code to start with
+- `20240425_si_species_per_year_cell.csv`: comma separated value file with the
+species (`speciesKey` column) present in each EEA (European Environment agency)
+cell code of 1km x 1km (`eea_cell_code` column) per year (`year` column) of
+Slovenia (country code: SI). Source: extracted from the
+[Slovenian occurrence cube](https://zenodo.org/records/10528506).
 
----
-class: left, top
+- [20240425_ias_plants.csv](https://github.com/inbo/coding-club/blob/main/data/20240425/20240425_ias_plants.csv): a list of invasive alien plants. One column contain the scientific names, while the others contain vernacular names in English, Dutch and French.
 
-# Data and scripts description
+- [20240425_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20240425/20240425_challenges.R):
+R script to start from (some code is already provided)
 
-- Partridge data is inspired by the [yearly partridge counting](https://www.natuurenbos.be/patrijs) that is done from January 15th untill March 31st. Each game management unit (wildbeheerseenheid, **WBE**) is required to count partridges in their territory if they want to hunt them. There are two dataframes:
 
-1. [20240425_partridge.txt](https://github.com/inbo/coding-club/blob/main/data/20240425/20240425_partridge.txt): a dataset with observations of partridges. This includes the date of the observation, the fieldworker who submitted the observation, the type of observation (`couple`, `single`, `group`, or only `sound`), and location (WBE number and coordinates `x`, `y`).
-2. [20240425_wbe_info.txt](https://github.com/inbo/coding-club/blob/main/data/20240425/20240425_wbe_info.txt): for each WBE, this dataframe contains the unique identification number (`wbe`), name, province, and surface area.
+<small> __\*  Website: https://camtrap-dp.tdwg.org/. Do you know that INBO has
+been and still is actively involved in the development of this data exchange
+format? Ask to Peter Desmet :-) </small>
 
-- [20240425_ias_plants.txt](https://github.com/inbo/coding-club/blob/main/data/20240425/20240425_ias_plants.txt): a list of invasive alien plants. One column contain the scientific names, while the others contain vernacular names in English, Dutch and French.
-
-- [20240425_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20240425/20240425_challenges.R): R script to start from (some code is already provided)
 
 ---
 class: left, top
 
 # Why dplyr?
 
-A lot of reasons. But the main one is that it makes data manipulation code easy to read (in comparison with basic R). Other important reasons?
+A lot of reasons. But the main one is that it makes the code easy to read (in comparison with basic R). Other important reasons?
 
-- actively maintained (people from posit, the company behind RStudio).
-- works nicely with all other tidyverse packages.
-- open development on [GitHub](https://github.com/tidyverse/dplyr/): issues, questions, dev ideas etc. are welcome.
-- functions have very good names. Some of them are exactly the same as in SQL, e.g. `filter()`, `select()`.
+- It is actively maintained (people from posit, the company behind RStudio).
+- It works nicely with all other tidyverse packages.
+- Its development is open on [GitHub](https://github.com/tidyverse/dplyr/):
+issues, questions, dev ideas etc. are welcome.
+- Its functions have very good names. Some of them are exactly the same as in
+SQL, e.g. `filter()`, `select()`.
+
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -158,19 +179,29 @@ class: left, top
 
 [Single table verbs](https://dplyr.tidyverse.org/articles/dplyr.html#single-table-verbs) = functions working on one data.frame.
 
-After reading `partridge` dataset (code provided):
+After reading the camera trap observations as a dataframe called `obs` (code provided):
 
 1. Display first 8 rows; display the last 8 rows.
 
-2. Select columns `wbe` and `date`.
+2. Select columns `observationLevel`, `eventStart`, `eventEnd` and `scientificName`
 
-3. Display the **distinct** values of `type` as a data.frame with one column, `type`.
+3. Display the **distinct** values of `observationLevel` as a data.frame with
+one column, `observationLevel`. How many different values of `observationLevel` are?
 
-4. How to remove observations with type `Sound`? How to remove observations with type = `Sound` and `wbe` = NA?
+4. How to remove observations with observationLevel `"media"`? How to remove
+observations with observationLevel `"media"` and empty `scientificName`?
 
-5. Add a new column called `seen` which is TRUE if `type` is not `"Sound"`. Add a column `month` with the month of the observation. Tip: use `lubridate::month()` function. Install lubridate package if not yet done.
+5. Add a new column called `is_classified_by_human` which is TRUE if `classificationMethod`
+is equal to `"human"`.  Add a new column `month` with the month of the
+observation (`eventStart`). Tip: use lubridate's `month()` and `year()` functions.
 
-6. **Relocate** the column `seen` after `type` and `month` after `date`.
+6. Move the column `count` after `behavior`.
+
+7. Move all columns starting with `"taxon."` before `observationLevel`
+
+8. Observations with `observationLevel` = `"event"` have no `mediaID`, i.e.
+`mediaID` is `NA`. Is this statement true or false?
+
 
 ---
 class: left, top
@@ -188,21 +219,35 @@ Can you apply the pipe to concatenate some steps of challenge 1?
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
-# Challenge 2 - Summaries
+# Challenge 2 - Single table verbs: summaries
 
-1. How many observations per WBE? Save it as `overview_partridge` as we will use it in challenge 3.
+1. How many observations per deploymentID? Show it as a dataframe with two
+columns: `deploymentID` and `n_obs`.
 
-2. How many observations per WBE and type?
+2. How many observations per `deploymentID` and `observationLevel`?
 
-3. Order the previous output per n_obs (descending order), wbe (ascending order) and type (alphabetically).
+3. Order the previous output per `n_obs` (descending order).
 
-4. For each month, return the wbe with the highest number of observations and report the number of observations for those wbe that month.
+4. Create a summary dataframe with the number of media-based observations
+(`observationLevel` = "media"), the number of event-based observations
+(`observationLevel` = "event") and the total number of observations per
+deploymentID. Notice that `observationLevel` is always filled in. The result
+should be a dataframe with 4 columns: `deploymentID`, `n_obs_event`,
+`n_obs_media` and `n_obs`. Tip: one way to solve this is by combining dplyr
+with tidyr.
 
+5. For each month, year and `deploymentID`, return the `eventStart` of the
+first and the last event-based observation (observationLevel = `event`) if
+there are 3 or more event-based observations. Call these two columns
+`first_event_obs` and `last_event_obs` respectively.
+
+6. How to return the same dataframe as 5 but now limiting us to the months with
+the highest number of event-based observations for each year and `deploymentID`?
 
 ---
 class: left, top
 
-## Intermezzo: dplyr is a living thing
+## Intermezzo - dplyr is a living thing
 
 We said at the beginning that dplyr is actively maintained. There is more! dplyr had moved and is actually moving forward to get better and better.
 
@@ -218,7 +263,12 @@ class: left, top
 
 ## Intermezzo - Two-table verbs
 
-Two-table verbs = functions which take two data.frames as input to typically return one data.frame as output. A nice [article](https://dplyr.tidyverse.org/articles/two-table.html) on dplyr website. The most famous two-table function family is the "join" family. Give a look to the [news around joins](https://www.tidyverse.org/blog/2023/01/dplyr-1-1-0-joins/)* also mentioned in previous slide.
+Two-table verbs = functions which take two data.frames as input to typically
+return one data.frame as output. A nice
+[article](https://dplyr.tidyverse.org/articles/two-table.html) on dplyr website.
+The most famous two-table function family is the "join" family. Give a look to the
+[news about joins](https://www.tidyverse.org/blog/2023/01/dplyr-1-1-0-joins/)*
+also mentioned in previous slide.
 
 ![:scale 80%]({{ site.baseurl}}/assets/images/20240425/20240425_joins_cheat_sheet.png)
 
@@ -231,17 +281,26 @@ class: left, top
 
 # Challenge 3 - Two-table verbs
 
-After reading the game management units details as `WBE` (code provided):
+After reading the camera trap media information as a dataframe called `media` (code provided):
 
-1. Add WBE details in `WBE` to `overview_partridge` (where available)
+1. How to add the media information stored in `media` to the observations?
 
-2. How are the columns ordered? Are the columns of `overview_partridge` on the left? Try to put them on the right.
+2. How are the columns ordered? Are the columns from observations on the
+left? Try to put them on the right.
 
-3. Which WBEs are not in `partridge`, i.e. are not linked to any observation?
+3. Are there media not in observations, i.e. are there media not linked to any
+observation?
 
-4. Some observations have a missing value for column `wbe` and some WBEs have no observations at all. Get rid of them while joining.
+4. Some observations have a missing value for column `mediaID`. Get rid of
+them while joining.
 
-5. Now, join both again but retain ALL EXISTING WBEs. Set the number of observations equal to 0 for all WBEs where no partridges were observed.
+5. As deploymentID is present in both dataframes, it gets duplicated and the
+suffixes `".x"` and `".y"` are added. How to change the suffixes to `"_obs"`
+and `"_media"` while performing the exercise 1?
+
+6. How to add the suffix only for the column `deploymentID` in `media`?
+
+7. How to avoid actually to have this column twice?
 
 ---
 class: left, top
@@ -252,9 +311,9 @@ An example:
 
 ```
 people <- tibble(
-  first_name = c("Amber", "Damiano", "Dirk", "Emma", "Raïsa", "Hans"),
+  first_name = c("Amber", "Damiano", "Dirk", "Emma", "Raïsa", "Rhea"),
   second_name = c("Mertens", "Oldoni", "Maes",
-                  "Cartuyvels", "Carmen", "Vancalster")
+                  "Cartuyvels", "Carmen", "Maesele")
 )
 
 hobbys <- tibble( # purely invented!
@@ -275,7 +334,7 @@ people %>%
 ---
 class: left, top
 
-# Bonus challenge - Create tidy data with tidyr
+# Bonus challenge 1 - Create tidy data
 
 Sometimes, the first data manipulation you have to perform is to create tidy data. dplyr might not suffice: you will need another important tidyverse package: [tidyr](https://tidyr.tidyverse.org/).
 
@@ -288,23 +347,32 @@ Tidy data is data where:
 ---
 class: left, top
 
-# Bonus challenge 1- Create tidy data with tidyr
+# Bonus challenge 1 - dplyr + tidyr = love
 
-After reading `20240425_ias_plants.txt` dataset, make it tidy. Please notice that, for some species, two vernacular names are given. See figure below.
+Probably you have already used tidyr to solve one of the previous exercises.
+Still, its importance is worth another exercise.
 
-![:scale 110%]({{ site.baseurl}}/assets/images/20240425/20240425_tidy_data_ias.png)
+After reading `20240425_ias_plants.txt` dataset (code provided), make it tidy.
+Please notice that two vernacular names of the same language are given for
+some species, e.g. "gewone gunnera;reuzenrabarber".
+They should be split as two rows.
+
+<center>![:scale 100%]({{ site.baseurl}}/assets/images/20240425/20240425_tidyr_logo.png)</center>
 
 ---
 class: left, top
 
-# Bonus challenge 2: dplyr + stringr = love
+# Bonus challenge 2 - dplyr + stringr = love
 
-We said that dplyr matches nicely with other tidyverse packages. Example: stringr in this case:
+We said that dplyr matches nicely with other tidyverse packages.
+Example: stringr in this case. stringr has a very convenient function to
+**rank** people by their favorite numbers. Notice that the heading zeros must
+remain in the output.
 
 ```
 a <- tibble(
-  name = c("Damiano", "Amber", "Hans", "Dirk", "Emma", "Raïsa"),
-  my_favorite_number_string = c("104", "023", "07", "666", "3", "9")
+  name = c("Damiano", "Amber", "Rhea", "Dirk", "Emma", "Raïsa"),
+  my_favorite_number_string = c("104", "023", "07", "O666", "3", "9")
 )
 ## Add the commando here to get this output:
 
@@ -312,48 +380,104 @@ a <- tibble(
   name    my_favorite_number_string
   <chr>   <chr>
 1 Emma    3
-2 Hans    07
+2 Rhea    07
 3 Raïsa   9
 4 Amber   023
 5 Damiano 104
-6 Dirk    666
+6 Dirk    0666
 ```
 
 ---
 class: left, top
 
-# The package of the month.
+# Bonus challenge 3 - dplyr + tidyverse packages = love
 
+For this challenge it _could_ be that you need to use dplyr in combination with
+other tidyverse packages. And that's fine!
+
+After reading `20240425_si_species_per_year_cell.csv` dataset (code provided):
+
+1. Calculate the cumulative number of species observed over time
+(`year`) in each square (`eea_cell_code`).
+
+2. Find the 10 cells with the highest cumulative number of species.
+
+
+---
+class: left, top
+
+# Bonus challenge 4 - dealing with lists? Let's purrr!
+
+Sometimes your data are encapsulated lists. That's where purrr can rescue you.
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20240425/2024_04_25_example_output_bonus_challenge_4.png)
+
+Thanks Pieter. Solution: https://gist.github.com/PietrH/c2c5be775a54da21e8b09c947b279fb5
+
+
+---
+class: left, top
+
+# The package of the month. Damiano's choice
+
+[tidylog](https://github.com/elbersb/tidylog): provides feedback about dplyr and tidyr operations. I like it a lot, especially while joining dataframes or using long pipes:
+
+```
+library(tidylog)
+> band_members %>% inner_join(band_instruments)
+Joining with `by = join_by(name)`
+inner_join: added one column (plays)
+            > rows only in x  (1)
+            > rows only in y  (1)
+            > matched rows     2
+            >                 ===
+            > rows total       2
+```
+
+
+```
+mtcars %>%
+    select(mpg, cyl, hp, am) %>%
+    filter(mpg > 15) %>%
+    mutate(mpg_round = round(mpg)) %>%
+    group_by(cyl, mpg_round, am) %>%
+    tally() %>%
+    filter(n >= 1)
+#> select: dropped 7 variables (disp, drat, wt, qsec, vs, …)
+#> filter: removed 6 rows (19%), 26 rows remaining
+#> mutate: new variable 'mpg_round' (double) with 15 unique values and 0% NA
+#> group_by: 3 grouping variables (cyl, mpg_round, am)
+#> tally: now 20 rows and 4 columns, 2 group variables remaining (cyl, mpg_round)
+#> filter (grouped): no rows removed
+```
 
 ---
 class: left, top
 
 # Resources
 
-- The commented [solutions](https://github.com/inbo/coding-club/blob/main/src/20240425/20240425_challenges_solutions.R) are available. You can download them automatically via `inborutils::setup_codingclub_session("20240425")`
-- Edited [video recording](https://vimeo.com/805138374) is available on the INBO coding club channel (vimeo)
+- The commented solutions and the edited video recording will be soon available.
 - [dplyr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240425_cheat_sheet_data_transformation.pdf).
 - [tidyr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240425_cheat_sheet_tidyr.pdf).
+- [purrr cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240425_cheat_sheet_purrr.pdf).
 - [dplyr](https://dplyr.tidyverse.org/) package documentation.
 - [tidyr](https://tidyr.tidyverse.org/) package documentation.
+- [purrr](https://purrr.tidyverse.org/) package documentation.
 - [data transformation chapter](https://r4ds.had.co.nz/transform.html) in the [R for data science](https://r4ds.had.co.nz/index.html) book.
 - [tidylog](https://github.com/elbersb/tidylog) package.
+- Bonus challenge 4 solution source: a [GitHub gist](https://gist.github.com/PietrH/c2c5be775a54da21e8b09c947b279fb5) of Pieter Huybrechts.
 
 ---
 class: left, top
 
-# Coding club topics 2023: you vote!
+# Coding club topic of May?
 
-Every month you can vote among **two topics**!
+Every month you can vote among **two topics**.
+Poll for May's coding club will be launched soon!
 
-Poll for March's coding club is still open! Let us know your favorite before tomorrow!
+![:scale 100%]({{ site.baseurl}}/assets/images/20240425/20240425_vote.jpg)
 
-https://forms.gle/pEQi153z8q9juDEy7
-
-You can choose between:
-
-- Make great plots with ggplot (level: beginner/intermediate).
-- Read data from INBO databases in R (credentials needed).
+<small>Image source: https://learn.e-limu.org/topic/view/?t=248&c=46</small>
 
 ---
 class: center, middle
