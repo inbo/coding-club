@@ -137,7 +137,7 @@ Today we will work with:
 - [20240425_observations.csv](https://github.com/inbo/coding-club/blob/main/data/20240425/20240425_observations.csv)
 and [20240425_media.csv](https://github.com/inbo/coding-club/blob/main/data/20240425/20240425_media.csv):
 observations and media tables of a Camera Trap Data Package*. Derived from the
-[example](https://github.com/tdwg/camtrap-dp/tree/02ce57229209dd65249113a193dbad7c84b8d5da/example) package.
+[camtrap-dp](https://github.com/tdwg/camtrap-dp/tree/02ce57229209dd65249113a193dbad7c84b8d5da/example) package.
 
 - [20240425_si_species_per_year_cell.csv](https://github.com/inbo/coding-club/blob/main/data/20240425/20240425_si_species_per_year_cell.csv):
 comma separated value file with the species (`speciesKey` column) present in
@@ -145,7 +145,7 @@ each EEA (European Environment agency) cell code of 1km x 1km (`eea_cell_code`
 column) per year (`year` column) of Slovenia (country code: SI). Source:
 extracted from the [Slovenian occurrence cube](https://zenodo.org/records/10528506).
 
-- [20240425_ias_plants.csv](https://github.com/inbo/coding-club/blob/main/data/20240425/20240425_ias_plants.csv): a list of invasive alien plants. One column contain the scientific names, while the others contain vernacular names in English, Dutch and French.
+- [20240425_ias_plants.csv](https://github.com/inbo/coding-club/blob/main/data/20240425/20240425_ias_plants.csv): a list of invasive alien plants. One column contains the scientific names, while the others contain vernacular names in English, Dutch and French.
 
 - [20240425_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20240425/20240425_challenges.R):
 R script to start from (some code is already provided)
@@ -153,7 +153,7 @@ R script to start from (some code is already provided)
 
 <small> \*  Website: https://camtrap-dp.tdwg.org/. Do you know that INBO has
 been and still is actively involved in the development of this data exchange
-format? Ask to Peter Desmet :-) </small>
+format? Ask Peter Desmet :-) </small>
 
 
 ---
@@ -183,7 +183,7 @@ After reading the camera trap observations as a dataframe called `obs` (code pro
 1. Display first 8 rows; display the last 8 rows.
 2. Select columns `observationLevel`, `eventStart`, `eventEnd` and `scientificName`
 3. Display the **distinct** values of `observationLevel` as a data.frame with
-one column, `observationLevel`. How many different values of `observationLevel` are?
+one column, `observationLevel`. How many different values of `observationLevel` are there?
 4. How to remove observations with `observationLevel` = `"media"`? How to remove
 observations with `observationLevel` = `"media"` and empty `scientificName`?
 5. Add a new column called `is_classified_by_human` which is TRUE if `classificationMethod`
@@ -191,8 +191,8 @@ is equal to `"human"`.  Add a new column `month` with the month of the
 observation (`eventStart`). Tip: use lubridate's `month()` and `year()` functions.
 6. Move the column `count` after `behavior`.
 7. Move all columns starting with `"taxon."` before `observationLevel`
-8. Observations with `observationLevel` = `"event"` have no `mediaID`, i.e.
-`mediaID` is `NA`. Is this statement true or false?
+8. Is the following statement true of false: Observations with `observationLevel` = `"event"` have no `mediaID`, i.e.
+`mediaID` is `NA`.
 
 
 ---
@@ -213,10 +213,10 @@ class: left, top
 
 # Challenge 2 - Single table verbs: summaries
 
-1. How many observations per deploymentID? Show it as a dataframe with two
+1. How many observations are there per deploymentID? Show it as a dataframe with two
 columns: `deploymentID` and `n_obs`.
 
-2. How many observations per `deploymentID` and `observationLevel`?
+2. How many observations are there per `deploymentID` and `observationLevel`?
 
 3. Order the previous output per `n_obs` (descending order).
 
@@ -233,7 +233,7 @@ first and the last event-based observation (observationLevel = `event`) if
 there are 3 or more event-based observations. Call these two columns
 `first_event_obs` and `last_event_obs` respectively.
 
-6. How to return the same dataframe as 5 but now limiting us to the months with
+6. How can you return the same dataframe as in exercice 5 but now limiting us to the months with
 the highest number of event-based observations for each year and `deploymentID`?
 
 ---
@@ -241,11 +241,11 @@ class: left, top
 
 ## Intermezzo - dplyr is a living thing
 
-We said at the beginning that dplyr is actively maintained. There is more!
+We said at the beginning that dplyr is actively being maintained. There is more!
 dplyr had moved and is actually moving forward to get better and better.
 
-dplyr released in early 2023 an important new version, dplyr 1.1.0. At the moment
-we are at version 1.1.4. It means new very nice functions have been added, other
+dplyr released an important new version in early 2023, dplyr 1.1.0. At the moment,
+we are at version 1.1.4. This means new, very nice functions have been added, but other,
 older functions got superseded or some arguments deprecated etc. Read more
 in this 4 blogposts:
 
@@ -262,7 +262,7 @@ class: left, top
 Two-table verbs = functions which take two data.frames as input to typically
 return one data.frame as output. A nice
 [article](https://dplyr.tidyverse.org/articles/two-table.html) on dplyr website.
-The most famous two-table function family is the "join" family. Give a look to the
+The most famous two-table function family is the "join" family. Have a look at the
 [news about joins](https://www.tidyverse.org/blog/2023/01/dplyr-1-1-0-joins/)*
 also mentioned in previous slide.
 
@@ -285,7 +285,7 @@ After reading the camera trap media information as a dataframe called `media`
 2. How are the columns ordered? Are the columns from observations on the
 left? Try to put them on the right.
 
-3. Are there media not in observations, i.e. are there media not linked to any
+3. Are there media not in observations, i.e. are there media that are not linked to any
 observation?
 
 4. Some observations have a missing value for column `mediaID`. Get rid of
@@ -293,11 +293,11 @@ them while joining.
 
 5. As deploymentID is present in both dataframes, it gets duplicated and the
 suffixes `".x"` and `".y"` are added. How to change the suffixes to `"_obs"`
-and `"_media"` while performing the exercise 1?
+and `"_media"` while performing exercise 1?
 
 6. How to add the suffix only for the column `deploymentID` in `media`?
 
-7. How to avoid actually to have this column twice?
+7. How can you avoid to have this column twice?
 
 ---
 class: left, top
