@@ -80,9 +80,9 @@ You could benefit of the cheatsheets of other two important tidyverse packages: 
 - [purrr](https://purrr.tidyverse.org/): cheasheet available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240425_purrr.pdf) or [html](https://rstudio.github.io/cheatsheets/html/purrr.html).
 
 
-<center>![:scale 100%]({{ site.baseurl}}/assets/images/20240425/20240425_tidyr_logo.png)</center>
+<center>![:scale 30%]({{ site.baseurl}}/assets/images/20240425/20240425_tidyr_logo.png)</center>
 
-<center>![:scale 100%]({{ site.baseurl}}/assets/images/20240425/20240425_purrr_logo.png)</center>
+<center>![:scale 30%]({{ site.baseurl}}/assets/images/20240425/20240425_purrr_logo.png)</center>
 
 
 ---
@@ -151,7 +151,7 @@ Slovenia (country code: SI). Source: extracted from the
 R script to start from (some code is already provided)
 
 
-<small> __\*  Website: https://camtrap-dp.tdwg.org/. Do you know that INBO has
+<small> \*  Website: https://camtrap-dp.tdwg.org/. Do you know that INBO has
 been and still is actively involved in the development of this data exchange
 format? Ask to Peter Desmet :-) </small>
 
@@ -178,27 +178,19 @@ class: left, top
 # Challenge 1 - Single table verbs
 
 [Single table verbs](https://dplyr.tidyverse.org/articles/dplyr.html#single-table-verbs) = functions working on one data.frame.
-
 After reading the camera trap observations as a dataframe called `obs` (code provided):
 
 1. Display first 8 rows; display the last 8 rows.
-
 2. Select columns `observationLevel`, `eventStart`, `eventEnd` and `scientificName`
-
 3. Display the **distinct** values of `observationLevel` as a data.frame with
 one column, `observationLevel`. How many different values of `observationLevel` are?
-
 4. How to remove observations with observationLevel `"media"`? How to remove
 observations with observationLevel `"media"` and empty `scientificName`?
-
 5. Add a new column called `is_classified_by_human` which is TRUE if `classificationMethod`
 is equal to `"human"`.  Add a new column `month` with the month of the
 observation (`eventStart`). Tip: use lubridate's `month()` and `year()` functions.
-
 6. Move the column `count` after `behavior`.
-
 7. Move all columns starting with `"taxon."` before `observationLevel`
-
 8. Observations with `observationLevel` = `"event"` have no `mediaID`, i.e.
 `mediaID` is `NA`. Is this statement true or false?
 
@@ -249,9 +241,13 @@ class: left, top
 
 ## Intermezzo - dplyr is a living thing
 
-We said at the beginning that dplyr is actively maintained. There is more! dplyr had moved and is actually moving forward to get better and better.
+We said at the beginning that dplyr is actively maintained. There is more!
+dplyr had moved and is actually moving forward to get better and better.
 
-dplyr released in early 2023 an important new version, dplyr 1.1.0. At the moment we are at version 1.1.4. It means new very nice functions have been added, other older functions got superseded or some arguments are deprecated etc. Read more in this 4 blogposts:
+dplyr released in early 2023 an important new version, dplyr 1.1.0. At the moment
+we are at version 1.1.4. It means new very nice functions have been added, other
+older functions got superseded or some arguments deprecated etc. Read more
+in this 4 blogposts:
 
 - [dplyr 1.1.0: joins](https://www.tidyverse.org/blog/2023/01/dplyr-1-1-0-joins/)
 - [dplyr 1.1.0: Per-operation grouping](https://www.tidyverse.org/blog/2023/02/dplyr-1-1-0-per-operation-grouping/)
@@ -270,7 +266,7 @@ The most famous two-table function family is the "join" family. Give a look to t
 [news about joins](https://www.tidyverse.org/blog/2023/01/dplyr-1-1-0-joins/)*
 also mentioned in previous slide.
 
-![:scale 80%]({{ site.baseurl}}/assets/images/20240425/20240425_joins_cheat_sheet.png)
+![:scale 70%]({{ site.baseurl}}/assets/images/20240425/20240425_joins_cheat_sheet.png)
 
 <br>
 <small> __\* Note__: the cheatsheet doesn't reflect the new features shown in the article.</small>
@@ -281,7 +277,8 @@ class: left, top
 
 # Challenge 3 - Two-table verbs
 
-After reading the camera trap media information as a dataframe called `media` (code provided):
+After reading the camera trap media information as a dataframe called `media`
+(code provided):
 
 1. How to add the media information stored in `media` to the observations?
 
@@ -357,7 +354,7 @@ Please notice that two vernacular names of the same language are given for
 some species, e.g. "gewone gunnera;reuzenrabarber".
 They should be split as two rows.
 
-<center>![:scale 100%]({{ site.baseurl}}/assets/images/20240425/20240425_tidyr_logo.png)</center>
+<center>![:scale 30%]({{ site.baseurl}}/assets/images/20240425/20240425_tidyr_logo.png)</center>
 
 ---
 class: left, top
@@ -403,16 +400,22 @@ After reading `20240425_si_species_per_year_cell.csv` dataset (code provided):
 2. Find the 10 cells with the highest cumulative number of species.
 
 
+Thanks Hans for the core of this challenge.
+
 ---
 class: left, top
 
-# Bonus challenge 4 - dealing with lists? Let's purrr!
+# Bonus challenge 4 - lists + purrr = love
 
 Sometimes your data are encapsulated lists. That's where purrr can rescue you.
+A typical situation is parsing JSON files. Read the ETN's
+datapackage json as `datapackage_json` (code provided) and pick some information
+to transform it to a data.frame as shown here below.
 
-![:scale 80%]({{ site.baseurl}}/assets/images/20240425/2024_04_25_example_output_bonus_challenge_4.png)
+![:scale 50%]({{ site.baseurl}}/assets/images/20240425/2024_04_25_example_output_bonus_challenge_4.png)
 
-Thanks Pieter. Solution: https://gist.github.com/PietrH/c2c5be775a54da21e8b09c947b279fb5
+Thanks Pieter for the challenge and the
+[solution](https://gist.github.com/PietrH/c2c5be775a54da21e8b09c947b279fb5).
 
 
 ---
@@ -465,7 +468,7 @@ class: left, top
 - [purrr](https://purrr.tidyverse.org/) package documentation.
 - [data transformation chapter](https://r4ds.had.co.nz/transform.html) in the [R for data science](https://r4ds.had.co.nz/index.html) book.
 - [tidylog](https://github.com/elbersb/tidylog) package.
-- Bonus challenge 4 solution source: a [GitHub gist](https://gist.github.com/PietrH/c2c5be775a54da21e8b09c947b279fb5) of Pieter Huybrechts.
+- Source of the bonus challenge 4: a Pieter's [GitHub gist](https://gist.github.com/PietrH/c2c5be775a54da21e8b09c947b279fb5).
 
 ---
 class: left, top
@@ -475,7 +478,7 @@ class: left, top
 Every month you can vote among **two topics**.
 Poll for May's coding club will be launched soon!
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20240425/20240425_vote.jpg)
+![:scale 30%]({{ site.baseurl}}/assets/images/20240425/20240425_vote.jpg)
 
 <small>Image source: https://learn.e-limu.org/topic/view/?t=248&c=46</small>
 
