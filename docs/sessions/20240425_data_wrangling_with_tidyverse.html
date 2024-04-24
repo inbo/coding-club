@@ -184,8 +184,8 @@ After reading the camera trap observations as a dataframe called `obs` (code pro
 2. Select columns `observationLevel`, `eventStart`, `eventEnd` and `scientificName`
 3. Display the **distinct** values of `observationLevel` as a data.frame with
 one column, `observationLevel`. How many different values of `observationLevel` are?
-4. How to remove observations with observationLevel `"media"`? How to remove
-observations with observationLevel `"media"` and empty `scientificName`?
+4. How to remove observations with `observationLevel` = `"media"`? How to remove
+observations with `observationLevel` = `"media"` and empty `scientificName`?
 5. Add a new column called `is_classified_by_human` which is TRUE if `classificationMethod`
 is equal to `"human"`.  Add a new column `month` with the month of the
 observation (`eventStart`). Tip: use lubridate's `month()` and `year()` functions.
@@ -387,7 +387,7 @@ a <- tibble(
 ---
 class: left, top
 
-# Bonus challenge 3 - dplyr + tidyverse packages = love
+# Bonus challenge 3 - dplyr + tidyverse = love
 
 For this challenge it _could_ be that you need to use dplyr in combination with
 other tidyverse packages. And that's fine!
@@ -410,13 +410,10 @@ class: left, top
 Sometimes your data are encapsulated lists. That's where purrr can rescue you.
 A typical situation is parsing JSON files. Read the ETN's
 datapackage json as `datapackage_json` (code provided) and pick some information
-to transform it to a data.frame as shown here below.
-
-![:scale 50%]({{ site.baseurl}}/assets/images/20240425/2024_04_25_example_output_bonus_challenge_4.png)
-
-Thanks Pieter for the challenge and the
+to transform it to a data.frame as shown here below. Thanks Pieter for the challenge and the
 [solution](https://gist.github.com/PietrH/c2c5be775a54da21e8b09c947b279fb5).
 
+![:scale 50%]({{ site.baseurl}}/assets/images/20240425/2024_04_25_example_output_bonus_challenge_4.png)
 
 ---
 class: left, top
@@ -478,9 +475,10 @@ class: left, top
 Every month you can vote among **two topics**.
 Poll for May's coding club will be launched soon!
 
-![:scale 30%]({{ site.baseurl}}/assets/images/20240425/20240425_vote.jpg)
+<center>![:scale 30%]({{ site.baseurl}}/assets/images/20240425/20240425_vote.jpg)</center>
 
-<small>Image source: https://learn.e-limu.org/topic/view/?t=248&c=46</small>
+<bottom><small>Image source: https://learn.e-limu.org/topic/view/?t=248&c=46</small></bottom>
+
 
 ---
 class: center, middle
@@ -488,7 +486,7 @@ class: center, middle
 ![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
 
 <!--  Adjust the room number and name  -->
-Topic: making outstanding plots with ggplot OR read data from INBO databases in R <br>
-Room:  HT - 01.05 - Isala Van Diest <br>
-Date: **30/03/2023**, from **10:00** to **12:30** <br>
+Topic: to be decided <br>
+Room:  HT - 01.18 - Joseph Poelaert(?) <br>
+Date: **28/05/2024**, from **10:00** to **12:30** <br>
 Help needed with technical setup? You are welcom from **9:45am**
