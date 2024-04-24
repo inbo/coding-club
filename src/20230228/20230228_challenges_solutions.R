@@ -156,7 +156,7 @@ partridge %>%
 partridge %>%
   group_by(month, wbe) %>%
   summarise(n_obs = n(), .groups = "drop") %>%
-  # use filter on the ungroped data.frame
+  # use filter on the ungrouped data.frame
   filter(n_obs == max(n_obs))
 
 ## CHALLENGE 3 one and two-table verbs
@@ -167,8 +167,7 @@ WBE <- read_csv("./data/20230228/20230228_wbe_info.txt", na = "")
 # 1. Add province, WBE name, and surface area to `overview_partridge` (where available)?
 overview_partridge %>% left_join(WBE, by = "wbe")
 
-# notice that in this case the join occurs by a column which is has same name in
-# both data.frames. What such column is named differently? You need `by =
+# both data.frames. What if such column is named differently? You need `by =
 # c("col1name" = "col2name")`
 overview_partridge %>% left_join(WBE, by = c("wbe" = "wbe"))
 
@@ -217,19 +216,19 @@ ias_tidy <- ias %>%
                                "dutch_name" ~ "nl",
                                "french_name" ~ "fr"))
 
-# notice also how you can use tidyselect predicates to select the columns to
+# Notice also how you can use tidyselect predicates to select the columns to
 # pivot. In this case, we can select all columns ending with `"h_name"`:
 ias_tidy <- ias %>%
-  pivot_longer(
+  tidyr::pivot_longer(
     ends_with("h_name"),
     names_to = "language",
     values_to = "vernacular_name") %>%
-  mutate(language = case_match(language,
+  dplyr::mutate(language = dplyr::case_match(language,
                                "english_name" ~ "en",
                                "dutch_name" ~ "nl",
                                "french_name" ~ "fr")) %>%
   # to take care of double vernacular names in same language
-  separate_longer_delim(vernacular_name, delim = ";")
+  tidyr::separate_longer_delim(vernacular_name, delim = ";")
 
 ## BONUS CHALLENGE 2 - sharing is caring
 
