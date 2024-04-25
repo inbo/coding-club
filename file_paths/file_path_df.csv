@@ -187,7 +187,7 @@ data/20240326/20240326_rodents.txt,20240326_rodents.txt,data,20240326
 data/20240326/20240326_coding_club_logo_1.png,20240326_coding_club_logo_1.png,data,20240326
 data/20240425/20240425_observations.csv,20240425_observations.csv,data,20240425
 data/20240425/20240425_media.csv,20240425_media.csv,data,20240425
-data/20240425/20230425_ias_plants.csv,20230425_ias_plants.csv,data,20240425
+data/20240425/20240425_ias_plants.csv,20240425_ias_plants.csv,data,20240425
 data/20240425/20240425_si_species_per_year_cell.csv,20240425_si_species_per_year_cell.csv,data,20240425
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
