@@ -151,6 +151,16 @@ is.na(
   )
 )
 
+# An alternative solution
+
+# Alternative solution using `setequal()`
+dplyr::setequal(
+  dplyr::select(
+    dplyr::filter(obs, observationLevel == "event" & is.na(mediaID)), mediaID
+  ),
+  dplyr::select(dplyr::filter(obs, observationLevel == "event"), mediaID)
+)
+
 ## Notice how the code starts to become very hard to read as we start to perform
 ## multiple data manipulation operations. The pipe `%>%` will help us. See
 ## intermezzo here below.
@@ -179,12 +189,13 @@ obs %>%
 # realised how important the %>% was among the R users. Why don't we use it?
 # Just because there are still people (outside INBO) which could have not R 4.0
 # or higher installed. So, to be inclusive we will still use `%>%` from the
-# tidyverse ecosystem instead of `%>%`.
-# Notice that researchers at INBO can internally already use the new pipe, `%>%`.
-obs %>%
-  dplyr::filter(observationLevel == "event") %>%
-  dplyr::distinct(mediaID) %>%
-  dplyr::pull() %>%
+# tidyverse ecosystem instead of `%>%`. Notice that researchers at INBO can
+# internally already use the new pipe, `|>` as our IT team has rolled R 4 on our
+# laptops a lot of time ago.
+obs |>
+  dplyr::filter(observationLevel == "event") |>
+  dplyr::distinct(mediaID) |>
+  dplyr::pull() |>
   is.na()
 
 ## CHALLENGE 2 - Summaries
