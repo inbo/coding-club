@@ -184,14 +184,13 @@ obs %>%
   dplyr::pull() %>%
   is.na()
 
-# Why the cheat sheet shows this pipe `%>%` instead of `%>%`? The `%>%` is the
+# Why the cheat sheet shows this pipe `|>` instead of `%>%`? The `|>` is the
 # pipe introduced in R 4.0. It is base R! That's good news. R developers
-# realised how important the %>% was among the R users. Why don't we use it?
-# Just because there are still people (outside INBO) which could have not R 4.0
-# or higher installed. So, to be inclusive we will still use `%>%` from the
-# tidyverse ecosystem instead of `%>%`. Notice that researchers at INBO can
-# internally already use the new pipe, `|>` as our IT team has rolled R 4 on our
-# laptops a lot of time ago.
+# realised how important the %>% was within the R community. Why don't we use it
+# here? Just because there are still people (outside INBO) which could still run
+# R v3. So, to be inclusive we will still use `%>%` from the tidyverse ecosystem
+# instead of `|>`. Notice that we at INBO can already use the new pipe, `|>`, as
+# our IT team has rolled R v4 on our laptops a lot of time ago.
 obs |>
   dplyr::filter(observationLevel == "event") |>
   dplyr::distinct(mediaID) |>
