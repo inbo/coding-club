@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2024_05_28 | spatial data in R with sf | [slides](https://inbo.github.io/coding-club/sessions/20240528_spatial_data_in_r_with_sf.html#1) | [hackmd](https://hackmd.io/U0dlJRHQQT2_5OP3jYTtBA?view) | 01.69 - Paul Janssen |
+| 2024_05_28 | spatial data in R with sf | [slides]({{ site.baseurl }}{% link sessions/20240528_spatial_data_in_r_with_sf.html  %}) | [hackmd](https://hackmd.io/U0dlJRHQQT2_5OP3jYTtBA?view) | 01.69 - Paul Janssen |
 | 2024-04-25 | data wrangling with tidyverse | [slides]({{ site.baseurl }}{% link sessions/20240425_data_wrangling_with_tidyverse.html  %}) | [hackmd](https://hackmd.io/bQqDeUHUQSqJ9reMykkM2A?view) | 01.71 - Frans Breziers | [vimeo](https://vimeo.com/940822870?share=copy) |
 | 2024-03-26 | beyond ggplot | [slides]({{ site.baseurl }}{% link sessions/20240326_beyond_ggplot.html  %}) | [hackmd](https://hackmd.io/t6cbOs9iSCqBiUbYLyfkBQ?view) | 01.69 - Paul Janssen | [vimeo](https://vimeo.com/928549430?share=copy) |
 | 2024-02-29 | become a ggplot hero | [slides]({{ site.baseurl }}{% link sessions/20240229_become_a_ggplot_hero.html  %}) | [hackmd](https://hackmd.io/OKAoEJMTQZWT_2Lvl5cEmQ?view) | 01.19 - Paul Van Ostaijen | [vimeo](https://vimeo.com/919340067?share=copy) |
