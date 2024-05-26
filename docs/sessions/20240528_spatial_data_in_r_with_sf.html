@@ -219,10 +219,9 @@ class: left, top
 
 - `20240528_challenges.R`: R script to start with.
 
-<small> __\* Source__: European Environment Agency: https://www.eea.europa.eu/data-and-maps/data/natura-11#tab-gis-data.
-<\br>
-See [specifications](https://sdi.eea.europa.eu/catalogue/srv/api/records/3792c53b-1944-444a-a317-2fc478abc664/attachments/eea_reference_grid_v1.pdf) (pdf). Download link to the entire EEA reference grid: https://sdi.eea.europa.eu/data/3792c53b-1944-444a-a317-2fc478abc664 (large file: 4.1 GB).
-</small>
+<small> __\* Source__: from European Environment Agency data server: https://www.eea.europa.eu/data-and-maps/data/natura-11#tab-gis-data.</small>
+<br>
+<small> __\*\* Note__:  See [specifications](https://sdi.eea.europa.eu/catalogue/srv/api/records/3792c53b-1944-444a-a317-2fc478abc664/attachments/eea_reference_grid_v1.pdf) (pdf). Download link to the entire EEA reference grid: https://sdi.eea.europa.eu/data/3792c53b-1944-444a-a317-2fc478abc664 (large file: 4.1 GB).</small>
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -239,7 +238,7 @@ Using the cheatsheet and starting from the code provided in `20240528_challenges
 5. How to retrieve information about the Coordinate Reference System (CRS) of `pa`?
 6. Import the EEA reference grid from  `20240528_utm10_belgium.geojson`: call it `utm_10`.
 7. Do `pa` and `lepidoptera` have the same CRS? Do `pa` and `utm_10` have the same CRS?
-8. Extract the protected areas of type (`SITETYPE`) B as `pa_b`. Hint: do it as you would do it in a standard data.frame. The motto of the sf package is "Spatial data, simplified" for a reason!
+8. Extract the protected areas of type (`SITETYPE`) B as `pa_b`. Hint: do it as for a standard data.frame. The motto of the sf package is "Spatial data, simplified" for a reason!
 
 ---
 class: left, top
@@ -276,7 +275,7 @@ Using data in CRS 3035:
 3. Sometimes it's interesting to calculate the centroid of a polygon, e.g. for visualizations. Calculate the centroids of `pa`. How to calculate the area of the protected areas?
 4. How to get only the observations, as circles, **totally** contained in protected areas?
 5. How to get the _union_ of all the protected areas? How such union is expressed in sf?
-6. Which grid cells of `utm_10` intersect which protected area? Hint: the same of a previous exercise, _repetita iuvant_!
+6. Which grid cells of `utm_10` intersect which protected area? Hint: the same as a previous exercise, _repetita iuvant_!
 
 ---
 class: left, top
