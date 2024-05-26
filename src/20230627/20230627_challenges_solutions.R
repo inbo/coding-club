@@ -4,8 +4,7 @@ library(mapview) # optional; only needed to map spatial data on a map quickly
 
 ## CHALLENGE 1
 
-lepidoptera_df <- read_tsv("./data/20230627/20230627_lepidoptera_iNaturalist_2023.csv")
-
+lepidoptera_df <- readr::read_tsv("./data/20230627/20230627_lepidoptera_iNaturalist_2023.csv")
 
 # 1
 
@@ -25,7 +24,7 @@ prot_areas <- st_read("./data/20230627/20230627_protected_areas.gpkg",
 prot_areas
 
 # you can eventually use the alias function `read_sf()`, maybe easier to
-# rememeber as it is similar to readr functions, e.g. `read_csv()`,
+# remember as it is similar to readr functions, e.g. `read_csv()`,
 # `read_tsv()`, `read_delim()` ? Up to you!
 prot_areas <- read_sf("./data/20230627/20230627_protected_areas.gpkg",
                       layer = "ps_hbtrl")
@@ -49,9 +48,9 @@ waldo::compare(
 
 # 6
 provinces_be <- readRDS(file = "./data/20230627/20230627_provinces_be.rds")
+class(provinces_be)
 
 provinces_be <- st_as_sf(provinces_be)
-
 
 # 7
 # dplyr's filter works nicely with sf spatial data.frames as well: handy!
@@ -129,7 +128,7 @@ lepidoptera_3035_circles <- st_buffer(
   dist = lepidoptera_3035$coordinateUncertaintyInMeters
 )
 
-# to make the circles even more accurate, increase the number of segments oer
+# to make the circles even more accurate, increase the number of segments per
 # quadrant
 lepidoptera_3035_circles <- st_buffer(
   lepidoptera_3035,
@@ -152,7 +151,7 @@ lepidoptera_pts_in_prot_areas
 View(lepidoptera_pts_in_prot_areas)
 
 # ADVANCED: not requested but you could do this by using purrr package and add
-# an help column, `in_prot_area`:
+# an help column,`in_prot_area`:
 lepidoptera_3035 %>%
   mutate(in_prot_area =
            purrr::map_dbl(
