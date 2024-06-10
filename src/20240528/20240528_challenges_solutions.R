@@ -1,7 +1,6 @@
 library(sf)         # To work with vector spatial data
 library(tidyverse)  # To do datascience
 library(mapview)    # Optional: for fast visualization purposes
-library(terra)      # To work with rasters (only needed in BONUS CHALLENGE)
 
 
 # File paths
