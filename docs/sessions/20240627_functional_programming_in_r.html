@@ -46,18 +46,92 @@ class: center, middle
 ---
 class: left, top
 
-# The purrr package
+## Functional programming
 
-![:scale 80%]({{ site.baseurl}}/assets/images/20240627/20240627_purrr.png)
+There are 3 main programming paradigms: procedural programming, object-oriented programming and functional programming.
 
-The [purrr homepage](https://purrr.tidyverse.org) is the best reference for your "functional programming experience".
+- Functional programming: _"wrap up for-loops in a function, and call that function instead of using the for-loop directly"_, [R for Data Science](https://r4ds.had.co.nz/iteration.html#for-loops-vs.functionals)
+
+There are three best practices that you should generally follow*:
+
+- Your functions should accept at least one argument.
+
+- Your functions should return data, or another function.
+
+- Don’t use loops! Loops declare a procedure = procedural programming
+
+Do you know that you are doing functional programming everytime you use the pipes (`%>%` from tidyverse or the new `|>` from R 4.0)?
+
+<small> __\* Source__: From blogpost [Functional Programming 101 -
+A DEEP DIVE ON THE BENEFITS OF FUNCTIONAL PROGRAMMING AND WHY IT’S ACTUALLY EASIER THAN YOU THINK](https://github.com/readme/guides/functional-programming-basics).
 
 ---
 class: left, top
 
-# Functional programming
+## Functional programming and R
+
+- R is basically a functional language: "_it lends itself to a style of problem solving centred on functions_"*.
+
+- Functional programming in basic R: `apply()`, `lapply()`, `tapply()`.
+
+- The [purrr](https://purrr.tidyverse.org) package provides a complete and consistent set of tools.
+
+- The most important purrr function? `map()`!
+
+<center>![:scale 30%]({{ site.baseurl}}/assets/images/20200630/20200630_purrr_logo.png)<br></center>
 
 
+<small> __\* Source__: Nobody teaches R better than Hadley Wickham, I think. The chapter [**Functional programming**](https://adv-r.hadley.nz/fp.html#fp) from his great [Advanced R](https://adv-r.hadley.nz/index.html) book. A must reading for our summer!
+
+---
+class: left, top
+
+## Functional programming: why?
+
+But why doing functional programming?
+
+Are purrr's functions or apply() functions faster than loops? Not necessarily! It's just another way of programming. And it's a question of clarity: **code is easier to write and to read**.
+
+[Bjarne Stroustrup](https://en.wikipedia.org/wiki/Bjarne_Stroustrup), the developer of C++ programming language: "_To become significantly more reliable, code must become more transparent. In particular, nested conditions and loops must be viewed with great suspicion. Complicated control flows confuse programmers. Messy code often hides bugs._""
+
+To "forget" loops and become a functional programmer, you need first a little of practice, and here we are: doing some purrr "fitness" exercises at the INBO coding _gym_ club.
+
+---
+class: left, top
+
+## Functionals: the `map()` function
+
+A **functional** is a function that takes a function as an input and returns a vector as output.
+
+`apply()`, `lapply()`, `tapply()`, `map()`: they are all examples of **functionals**.
+
+
+```r
+plus_two <- function(x) x + 2
+map(1:3, plus_two)
+#> [[1]]
+#> [1] 3
+#>
+#> [[2]]
+#> [1] 4
+#>
+#> [[3]]
+#> [1] 5
+```
+
+![:scale 70%]({{ site.baseurl}}/assets/images/20240627/20240627_map.png)
+<br><small>Source: Hadley Wickham, https://adv-r.hadley.nz/functionals.html</small>
+
+---
+class: left, top
+
+## The `map()` function
+
+Why `map()` is called map? It refers to the math concept of _map_ or [_mapping_](https://en.wikipedia.org/wiki/Map_(mathematics)), which is quite a synonym of function, i.e. an operation that associates each element of a set with one or more elements of another set.
+
+![:scale 70%]({{ site.baseurl}}/assets/images/20240627/20240627_Function_color_example_3.png)
+
+<small> __\* Source__: by Function_color_example_3.gif: Wvbailey. The original uploader was Wvbailey at English Wikipedia.derivative work: Zerodamage - This file was derived from: Function color example 3.gif:, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=20802095
 
 ---
 class: left, top
@@ -185,6 +259,7 @@ class: left, top
 - Challenges solutions and edited video recording will be available soon
 - [purrr](https://r-spatial.github.io/sf/) package homepage.
 - [purrr cheatsheet](https://rstudio.github.io/cheatsheets/html/purrr.html) webpage
+- The [Advanced R](https://adv-r.hadley.nz/index.html) book of Hadley Wickham: the [Introduction](https://adv-r.hadley.nz/fp.html) to the chapter and the entire [chapter 9](https://adv-r.hadley.nz/functionals.html#functionals) about functional programming. This resource was extensively used to introduce the concepts and to write the challenges.
 
 
 ---
