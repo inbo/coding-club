@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2024_05_28 | spatial data in R with sf | [slides]({{ site.baseurl }}{% link sessions/20240528_spatial_data_in_r_with_sf.html  %}) | [hackmd](https://hackmd.io/U0dlJRHQQT2_5OP3jYTtBA?view) | 01.69 - Paul Janssen | [vimeo](https://vimeo.com/954753713?share=copy)
+| 2024-06-27 | functional programming in R | [slides]({{ site.baseurl }}{% link sessions/20240627_functional_programming_in_r.html  %}) | [hackmd](https://hackmd.io/p2UZHhNaSgSG649TO3LgJg?view) | 01.70 - Ferdinand Peters | 
 | 2024-05-28 | spatial data in R with sf | [slides]({{ site.baseurl }}{% link sessions/20240528_spatial_data_in_r_with_sf.html  %}) | [hackmd](https://hackmd.io/U0dlJRHQQT2_5OP3jYTtBA?view) | 01.69 - Paul Janssen | [vimeo](https://vimeo.com/954753713?share=copy)
 | 2024-04-25 | data wrangling with tidyverse | [slides]({{ site.baseurl }}{% link sessions/20240425_data_wrangling_with_tidyverse.html  %}) | [hackmd](https://hackmd.io/bQqDeUHUQSqJ9reMykkM2A?view) | 01.71 - Frans Breziers | [vimeo](https://vimeo.com/940822870?share=copy) |
 | 2024-03-26 | beyond ggplot | [slides]({{ site.baseurl }}{% link sessions/20240326_beyond_ggplot.html  %}) | [hackmd](https://hackmd.io/t6cbOs9iSCqBiUbYLyfkBQ?view) | 01.69 - Paul Janssen | [vimeo](https://vimeo.com/928549430?share=copy) |
