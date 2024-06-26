@@ -192,6 +192,11 @@ data/20240425/20240425_si_species_per_year_cell.csv,20240425_si_species_per_year
 data/20240528/20240528_lepidoptera_2024.tsv,20240528_lepidoptera_2024.tsv,data,20240528
 data/20240528/20240528_protected_areas_BE.gpkg,20240528_protected_areas_BE.gpkg,data,20240528
 data/20240528/20240528_utm10_belgium.geojson,20240528_utm10_belgium.geojson,data,20240528
+data/20240627/20240627_lepidoptera_2024.tsv,20240627_lepidoptera_2024.tsv,data,20240627
+data/20240627/20240627_lepidoptera_in_prot_areas.RData,20240627_lepidoptera_in_prot_areas.RData,data,20240627
+data/20240627/20240627_sensor_A1.txt,20240627_sensor_A1.txt,data,20240627
+data/20240627/20240627_sensor_G7.txt,20240627_sensor_G7.txt,data,20240627
+data/20240627/20240627_sensor_H4.txt,20240627_sensor_H4.txt,data,20240627
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
@@ -370,3 +375,4 @@ src/20240425/20240425_challenges.R,20240425_challenges.R,src,20240425
 src/20240425/20240425_challenges_solutions.R,20240425_challenges_solutions.R,src,20240425
 src/20240528/20240528_challenges.R,20240528_challenges.R,src,20240528
 src/20240528/20240528_challenges_solutions.R,20240528_challenges_solutions.R,src,20240528
+src/20240627/20240627_challenges.R,20240627_challenges.R,src,20240627
