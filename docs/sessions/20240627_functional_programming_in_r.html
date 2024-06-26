@@ -62,7 +62,7 @@ There are three best practices that you should generally follow*:
 
 Do you know that you are doing functional programming everytime you use the pipes (`%>%` from tidyverse or the new `|>` from R 4.0)?
 
-<small> __\* Source__: From blogpost [Functional Programming 101 -
+<small> __\* Source__: blogpost [Functional Programming 101 -
 A DEEP DIVE ON THE BENEFITS OF FUNCTIONAL PROGRAMMING AND WHY IT’S ACTUALLY EASIER THAN YOU THINK](https://github.com/readme/guides/functional-programming-basics).
 
 ---
@@ -94,7 +94,7 @@ Are purrr's functions or apply() functions faster than loops? Not necessarily! I
 
 [Bjarne Stroustrup](https://en.wikipedia.org/wiki/Bjarne_Stroustrup), the developer of C++ programming language: "_To become significantly more reliable, code must become more transparent. In particular, nested conditions and loops must be viewed with great suspicion. Complicated control flows confuse programmers. Messy code often hides bugs._""
 
-To "forget" loops and become a functional programmer, you need first a little of practice, and here we are: doing some purrr "fitness" exercises at the INBO coding _gym_ club.
+To "forget" loops and become a functional programmer, you need first a little of practice, and here we are: our purrr workout at the INBO coding _gym_.
 
 ---
 class: left, top
@@ -119,7 +119,7 @@ map(1:3, plus_two)
 #> [1] 5
 ```
 
-![:scale 70%]({{ site.baseurl}}/assets/images/20240627/20240627_map.png)
+![:scale 20%]({{ site.baseurl}}/assets/images/20240627/20240627_map.png)
 <br><small>Source: Hadley Wickham, https://adv-r.hadley.nz/functionals.html</small>
 
 ---
@@ -127,9 +127,9 @@ class: left, top
 
 ## The `map()` function
 
-Why `map()` is called map? It refers to the math concept of _map_ or [_mapping_](https://en.wikipedia.org/wiki/Map_(mathematics)), which is quite a synonym of function, i.e. an operation that associates each element of a set with one or more elements of another set.
+Why `map()` is called map? It refers to the math concept of _map_ or [_mapping_](https://en.wikipedia.org/wiki/Map_(mathematics), which is quite a synonym of function, i.e. an operation that associates each element of a set with one or more elements of another set.
 
-![:scale 70%]({{ site.baseurl}}/assets/images/20240627/20240627_Function_color_example_3.png)
+![:scale 20%]({{ site.baseurl}}/assets/images/20240627/20240627_Function_color_example_3.png)
 
 <small> __\* Source__: by Function_color_example_3.gif: Wvbailey. The original uploader was Wvbailey at English Wikipedia.derivative work: Zerodamage - This file was derived from: Function color example 3.gif:, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=20802095
 
@@ -141,15 +141,18 @@ class: left, top
 
 Watch these two great videos (pdf slides are downloadable) about the talk given by Charlotte Wickham at the useR! International R User 2017 Conference: [part 1](https://learn.microsoft.com/en-us/shows/user-international-r-user-conferences-user-international-r-user-2017-conference/solving-iteration-problems-purrr/) and [part 2](https://learn.microsoft.com/en-us/shows/user-international-r-user-conferences-user-international-r-user-2017-conference/solving-iteration-problems-purrr-ii/).
 
-<p><center>![:scale 100%]({{ site.baseurl}}/assets/images/20240627/20240627_webinars_CharlotteWickham.png)<br></center>
+<p><center>![:scale 90%]({{ site.baseurl}}/assets/images/20240627/20240627_webinars_CharlotteWickham.png)<br></center>
 
 
 ---
 class: left, top
 
-Install packages: (maybe not needed)
+# Packages: install and load
+
+Only tidyverse today. purrr is part of it.
 
 ```r
+# if needed
 install.packages("tidyverse")
 ```
 
@@ -162,7 +165,7 @@ library(tidyverse)
 ---
 class: center, top
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20240627/20240627_purrr_cheat_sheet.png)<br>
+![:scale 90%]({{ site.baseurl}}/assets/images/20240627/20240627_purrr_cheat_sheet.png)<br>
 
 Download and use the [purrr cheatsheet](https://github.com/inbo/coding-club/blob/main/cheat_sheets/20240627_cheat_sheet_purrr.pdf). [Online version](https://rstudio.github.io/cheatsheets/html/purrr.html) available as webpage. Also pdf in other 6 languages.
 
@@ -231,25 +234,25 @@ class: left, top
 
 # Basics: `map()`
 
-The _mantra_ of this 2 hours coding session is: **FOR EACH __ OF __ APPLY FUNCTION __**
+The _mantra_ of this 2 hours coding session is: **FOR EACH** \_\_ **OF** __ **APPLY FUNCTION** __
 
-<p>![:scale 85%]({{ site.baseurl}}/assets/images/20240627/20240627_map.png)</p>
+<p>![:scale 60%]({{ site.baseurl}}/assets/images/20240627/20240627_map.png)</p>
 
 ---
 class: left, top
 
 # Basics: `map()`
 
-The _mantra_ of this 2 hours coding session is: **FOR EACH __ OF __ APPLY FUNCTION __**
+The _mantra_ of this 2 hours coding session is: **FOR EACH** \_\_ **OF** __ **APPLY FUNCTION** __
 
-<p>![:scale 85%]({{ site.baseurl}}/assets/images/20200630/20200630_map_basics.png)</p>
+<p>![:scale 80%]({{ site.baseurl}}/assets/images/20200630/20200630_map_basics.png)</p>
 
 ---
 class: left, top
 
 # Challenge 0
 
-<p><center>![:scale 50%]({{ site.baseurl}}/assets/images/20240627/20240627_map.png)</center></p>
+<p><center>![:scale 30%]({{ site.baseurl}}/assets/images/20240627/20240627_map.png)</center></p>
 
 ```r
 # height of 5 giraffes
@@ -265,7 +268,7 @@ class: left, top
 
 # Challenge 0
 
-<p><center>![:scale 50%]({{ site.baseurl}}/assets/images/20240627/20240627_map.png)</center></p>
+<p><center>![:scale 30%]({{ site.baseurl}}/assets/images/20240627/20240627_map.png)</center></p>
 
 ```r
 # height of 5 giraffes
@@ -293,7 +296,7 @@ Write `map()` statements to:
 1. Compute the mean of every column in `swiss` data.frame.
 2. Determine the type of each column in  `iris` data.frame.
 3. After creating the variable `list_wtih_dfs` as a named list with `swiss` and `iris` (code provided), compute the number of rows of each data.frame.
-4. `map` returns ALWAYS a list, **ALWAYS**. Apply the right `map_*()` variants to the previous exercises to return a numeric vector (exercise 1), a character vector (exercise 2) or a data.frame (exercise 3). Hint: use cheat sheet or the sections https://adv-r.hadley.nz/functionals.html#map-atomic, https://r4ds.had.co.nz/iteration.html#the-map-functions.
+4. `map()` returns ALWAYS a list, **ALWAYS**. Apply the right `map_*()` variants to the previous exercises to return a numeric vector (exercises 1 and 3), a character vector (exercise 2) or a data.frame (exercises 1, 2 and 3). Hint: use cheat sheet or the sections https://adv-r.hadley.nz/functionals.html#map-atomic, https://r4ds.had.co.nz/iteration.html#the-map-functions.
 
 
 ---
@@ -325,6 +328,13 @@ giraffes <- tibble::tibble("weight" = weight_giraffe,
 giraffes
 ```
 
+<small> __\* Disclaimer__: any actual names of INBO colleagues are used in a fictitious manner. :-)</small>
+
+---
+class: left, top
+
+# Intermezzo: the `map` strategy
+
 <p>Example: <bold>FOR EACH</bold> giraffe OF giraffes <bold>DO APPLY </bold> bmi function (weight / height^2)</p>
 
 ```r
@@ -342,12 +352,10 @@ Caused by error in `.f()`:
 ! argument "height" is missing, with no default
 ```
 
-<small> __\* Disclaimer__: any actual names of INBO colleagues are used in a fictitious manner. :-)</small>
-
 ---
 class: left, top
 
-# Intermezzo: the `map` strategy
+## Intermezzo: the `map` strategy
 
 1. Do it for one element
 2. Turn it into a <bold>recipe</bold>
@@ -364,32 +372,28 @@ bmi(amber$weight, amber$height)
 ---
 class: left, top
 
-# Intermezzo: the `map` strategy
+## Intermezzo: the `map` strategy
 
 ### 2. Turn it into a recipe
 
 Abstract it so that Amber can be Damiano, Dirk or any other giraffe. How to do so? Functions, again!
 
 Define a (anonymous) function around it:
-
 ```r
 function(x) bmi(x$weight, x$height)
 ```
 
 Alternative way (see cheat sheet) in "modern R" (R 4.0 or higher):
-
 ```r
 \(x) bmi(x$weight, x$height)
 ```
 
 Old school, with triddle `~` and `.x` pronoun. It works perfectly, but maybe less readable:
-
 ```r
 ~ bmi(.x$weight, .x$height)
 ```
 
 Or, you can really give a name to this function!
-
 ```r
 function(x) bmi(x$weight, x$height)
 ```
@@ -397,36 +401,31 @@ function(x) bmi(x$weight, x$height)
 ---
 class: left, top
 
-# Intermezzo: the `map` strategy
+## Intermezzo: the `map` strategy
 
 ### 3. Use `map()` to apply it for all elements
 
 Via anonymous function:
-
 ```r
 map(giraffes, function(x) bmi(x$weight, x$height))
 ```
 
 Or if you defined the function `bmi_giraffe`:
-
 ```r
 map(giraffes, bmi_giraffe)
 ```
 
 Or via shortcut, new way:
-
 ```r
 map(giraffes, \(x) bmi(x$weight, x$height))
 ```
 
 Or via shortcut, old way:
-
 ```r
 map(giraffes, ~ bmi(.x$weight, .x$height))
 ```
 
 Finally, you do not need to be stuck with x. Sometimes is better to give a more meaningful name:
-
 ```
 map(giraffes, function(giraffe) bmi(giraffe$weight, giraffe$height))
 ```
@@ -437,9 +436,11 @@ class: left, top
 
 # Challenge 2
 
-1. Read all sensor data files as a list of data.frames by applying the provided function `read_sensor_data()` to all the elements of the provided list `sensors` with sensor IDs. Hint: see https://adv-r.hadley.nz/functionals.html#passing-arguments.
+1. Read all sensor data files as a list of data.frames by applying the provided function `read_sensor_data()` to all the elements of the provided list `sensors` with sensor IDs.
 
-2. Calculate 10 random numbers from a normal distribution (`rnorm(n = 10)`) for each pair of the 4 provided mean and standard deviation and return it as a list of 4. Hint: [mapping-over-multiple-arguments](https://r4ds.had.co.nz/iteration.html#mapping-over-multiple-arguments)
+2. Now, you want to generalize your script. You rewrite `read_sensor_data()` as provided in the code. How to apply map in this situation? Notice that your path and extensions are constants. Hint: see https://adv-r.hadley.nz/functionals.html#passing-arguments.
+
+3. Calculate 10 random numbers from a normal distribution (`rnorm(n = 10)`) for each pair of the 4 provided mean and standard deviation and return it as a list of 4. Hint: [mapping-over-multiple-arguments](https://r4ds.had.co.nz/iteration.html#mapping-over-multiple-arguments)
 
 4. Get maximum and minimum datetime for all sensor data data.frames. Return them as a data.frame. This time you have to write your own function. Hint: write a function containing:
 ```r
@@ -452,7 +453,7 @@ class: left, top
 
 # Challenge 3
 
-Nothing better than using the result of a pervious coding club as start point for a challenge!
+Nothing better than using the result of a previous coding club as start point for a challenge!
 
 In challenge 3.1 of the May session, we created a list with the (row numbers of the) lepidoptera observations taken in protected areas.
 
@@ -471,8 +472,14 @@ first 10 elements:
  9: (empty)
 ```
 
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3
+
 1. The typical next step is: how many observations for ech protected areas? purr can help us, of course.
-2. Now, given `obs`, the data.frame with the GBIF observations (see the provided code), how to get a data.frame with only the observations taken in protected areas?
+2. Given `obs`, the data.frame with the GBIF observations (see the provided code), how to get a data.frame with only the observations taken in protected areas?
 3. purrr is more than the `map` family. To join the data.frames `species_1`, `species_2` and `species_3` (code provided) you could apply `full_join()` twice:
 ```r
 full_join(species_1, species_2, by = "species") %>%
@@ -492,7 +499,7 @@ class: left, top
 
 Are you still hesitating about `purrr` potential? You still don't know what it can do in combination with tidyr! They can really do a lot for making your modelling research a lot more understandable for (future) you and all your colleagues. Check the second page of the tidyr cheat sheet.
 
-<p><center>![:scale 50%]({{ site.baseurl}}/assets/images/20240627/20240627_second_page_cheatsheet_tidyr.png)</center></p>
+<p><center>![:scale 40%]({{ site.baseurl}}/assets/images/20240627/20240627_second_page_cheatsheet_tidyr.png)</center></p>
 
 1. Group your data
 2. Nest it to create nested data.frames (column containing data.frames, aka **list-columns**)
@@ -527,17 +534,15 @@ geom_point(aes(x = bill_length_mm ,
 ```
 2. Save the created plots using species name and extension `png`. Hint: https://r4ds.had.co.nz/iteration.html#walk
 
-<p><center>![:scale 10%]({{ site.baseurl}}/assets/images/20240627/20240627_palmer_penguins_data.png)</center></p>
-
 
 ---
 class: left, top
 
 # The package of the month. Damiano's choice
 
-Are you bored to see and use `iris` everywhere to test code? I am. Why not using penguins?!? The package [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) provide a great dataset for data exploration & visualization. A valid alternative to `iris`!
+Are you bored to see and use `iris` everywhere to test code? I am. Why not using something else? Why not using penguins?!? The package [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) provide a great dataset for data exploration & visualization. A valid alternative to `iris`!
 
-<p><center>![:scale 80%]({{ site.baseurl}}/assets/images/20240627/20240627_palmerpenguins_homepage.png)
+<p><center>![:scale 85%]({{ site.baseurl}}/assets/images/20240627/20240627_palmerpenguins_homepage.png)
 
 
 ---
@@ -552,7 +557,6 @@ class: left, top
 - The [Advanced R](https://adv-r.hadley.nz/index.html) book of Hadley Wickham: the [Introduction](https://adv-r.hadley.nz/fp.html) to the chapter and the entire [chapter 9](https://adv-r.hadley.nz/functionals.html#functionals) about functional programming. This resource was extensively used to introduce the concepts and inspired some challenges.
 - Well-written and complete tutorial: https://r4ds.had.co.nz/iteration.html#for-loops-vs.functionals (from 21.4 up to 21.9)
 - Beautiful webinar (pdf slides are downloadable) from Charlotte Wickham: [part 1](https://learn.microsoft.com/en-us/shows/user-international-r-user-conferences-user-international-r-user-2017-conference/solving-iteration-problems-purrr/) and [part 2](https://learn.microsoft.com/en-us/shows/user-international-r-user-conferences-user-international-r-user-2017-conference/solving-iteration-problems-purrr-ii/). Introduction to `map()` and the map strategy material come from her.
-- Well-written and complete tutorial: https://r4ds.had.co.nz/iteration.html#for-loops-vs.functionals (from 21.4 up to 21.9)
 - The package [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) which offers a valid alternative to `iris` to test your data wrangling and data visualization code.
 
 ---
@@ -560,7 +564,7 @@ class: center, middle
 
 Enjoy the summer and solve the Word Search. No INBO coding club in July!
 
-![:scale 80%]({{ site.baseurl}}/assets/images/20240627/20240627_SUMMER_HOLIDAYS_399189.png)
+![:scale 60%]({{ site.baseurl}}/assets/images/20240627/20240627_SUMMER_HOLIDAYS_399189.png)
 <br><small>Source: https://wordmint.com/public_puzzles/399189</small>
 
 ---
