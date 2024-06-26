@@ -133,6 +133,17 @@ Why `map()` is called map? It refers to the math concept of _map_ or [_mapping_]
 
 <small> __\* Source__: by Function_color_example_3.gif: Wvbailey. The original uploader was Wvbailey at English Wikipedia.derivative work: Zerodamage - This file was derived from: Function color example 3.gif:, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=20802095
 
+
+---
+class: left, top
+
+## Webinars: solve iteration problems with purrr
+
+Watch these two great videos (pdf slides are downloadable) about the talk given by Charlotte Wickham at the useR! International R User 2017 Conference: [part 1](https://learn.microsoft.com/en-us/shows/user-international-r-user-conferences-user-international-r-user-2017-conference/solving-iteration-problems-purrr/) and [part 2](https://learn.microsoft.com/en-us/shows/user-international-r-user-conferences-user-international-r-user-2017-conference/solving-iteration-problems-purrr-ii/).
+
+<p><center>![:scale 100%]({{ site.baseurl}}/assets/images/20240627/20240627_webinars_CharlotteWickham.png)<br></center>
+
+
 ---
 class: left, top
 
@@ -153,7 +164,7 @@ class: center, top
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20240627/20240627_purrr_cheat_sheet.png)<br>
 
-Download and use the [purrr cheatsheet](https://github.com/inbo/coding-club/blob/main/cheat_sheets/20240425_cheat_sheet_purrr.pdf). [Online version](https://rstudio.github.io/cheatsheets/html/purrr.html) available as webpage. Also pdf in other 6 languages.
+Download and use the [purrr cheatsheet](https://github.com/inbo/coding-club/blob/main/cheat_sheets/20240627_cheat_sheet_purrr.pdf). [Online version](https://rstudio.github.io/cheatsheets/html/purrr.html) available as webpage. Also pdf in other 6 languages.
 
 ---
 class: left, top
@@ -205,21 +216,33 @@ class: left, top
 
 ## Data
 
-- [swiss](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/swiss.html) and [iris](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/iris.html): two base R datasets.
-- Datasets with sensor data: [20240627_sensor_A1.txt](https://github.com/inbo/coding-club/blob/master/data/20240627/20240627_sensor_A1.txt), [20240627_sensor_G7.txt](https://github.com/inbo/coding-club/blob/master/data/20240627/20240627_sensor_G7.txt), and [20240627_sensor_H4.txt](https://github.com/inbo/coding-club/blob/master/data/20240627/20240627_sensor_H4.txt)
+- Datasets [swiss](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/swiss.html) and [iris](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/iris.html): two base R datasets.
+- Datasets with sensor data: `20240627_sensor_A1.txt`, `20240627_sensor_G7.txt` and `20240627_sensor_H4.txt`.
+- `20240627_lepidoptera_2024.tsv`: observations of Lepidoptera taken in 2024. Derived from: GBIF.org (22 May 2024) GBIF Occurrence Download https://doi.org/10.15468/dl.mnaffe.
+- List containing the row numers of the GBIF observations in `20240627_lepidoptera_2024.tsv` falling in each of the Belgian Natura2000 protected areas. Provided as an R object: `20240627_lepidoptera_in_prot_areas.RData`.
+
 
 ## Scripts
 
 - [20240627_challenges.R](https://github.com/inbo/coding-club/blob/main/src/20240627/20240627_challenges.R): R script to start with.
 
 ---
-class: left, middle
+class: left, top
 
 # Basics: `map()`
 
 The _mantra_ of this 2 hours coding session is: **FOR EACH __ OF __ APPLY FUNCTION __**
 
 <p>![:scale 85%]({{ site.baseurl}}/assets/images/20240627/20240627_map.png)</p>
+
+---
+class: left, top
+
+# Basics: `map()`
+
+The _mantra_ of this 2 hours coding session is: **FOR EACH __ OF __ APPLY FUNCTION __**
+
+<p>![:scale 85%]({{ site.baseurl}}/assets/images/20200630/20200630_map_basics.png)</p>
 
 ---
 class: left, top
@@ -272,42 +295,141 @@ Write `map()` statements to:
 3. After creating the variable `list_wtih_dfs` as a named list with `swiss` and `iris` (code provided), compute the number of rows of each data.frame.
 4. `map` returns ALWAYS a list, **ALWAYS**. Apply the right `map_*()` variants to the previous exercises to return a numeric vector (exercise 1), a character vector (exercise 2) or a data.frame (exercise 3). Hint: use cheat sheet or the sections https://adv-r.hadley.nz/functionals.html#map-atomic, https://r4ds.had.co.nz/iteration.html#the-map-functions.
 
+
 ---
 class: left, top
 
-# Intermezzo: passing (extra) arguments
+# Intermezzo: the `map` strategy
 
-Sometimes you need to pass extra arguments to the function you want to apply. Example: how to apply mean and median without taking into account NA values?
+So far so good. But data science is rarely so easy.
+
+We use again our giraffes*, this time as a list:
 
 ```r
-# height of 5 giraffes
-height_giraffe <- runif(n = 5, min = 4.3, max = 5.7)
-
-# weight of 5 giraffes
-weight_giraffe <- rnorm(n = 5, mean = 1192, sd = 300)
-
-# there are some NAs
-weight_giraffe[3] <- NA
-
-# data.frame with height and weight
-df_giraffe <- tibble(height = height_giraffe,
-                     weight = weight_giraffe)
+# Height of 5 giraffes
+height_giraffe <- runif(n = 6, min = 4.3, max = 5.7)
+# Weight of 5 giraffes
+weight_giraffe <- rnorm(n = 6, mean = 1192, sd = 300)
+# GPS tracker ID
+gps_tracker_giraffe <- c("A31", "E4T", "RT4", "YU7", "3G1", "ON9")
+# Giraffes nicknames
+nicknames_giraffe <- sample(
+  c("Amber", "Damiano", "Dirk", "Emma", "Raïsa", "Rhea")
+)
+# List with weight, height and GPS tracker IDs. Use nicknames as list element names.
+giraffes <- tibble::tibble("weight" = weight_giraffe,
+                           "height" = height_giraffe,
+                           "gpsID" = gps_tracker_giraffe) %>%
+  transpose %>%
+  set_names(nicknames_giraffe)
+giraffes
 ```
 
-- FOR EACH column OF `df_giraffe` APPLY FUNCTION mean
-- FOR EACH column OF `df_giraffe` APPLY FUNCTION median
+<p>Example: <bold>FOR EACH</bold> giraffe OF giraffes <bold>DO APPLY </bold> bmi function (weight / height^2)</p>
 
-Read more in section ["Passing arguments"](https://adv-r.hadley.nz/functionals.html#passing-arguments)
+```r
+bmi <- function(weight, height) weight / height^2
+```
+
+But:
+
+```r
+map(giraffe, bmi)
+Error in `map()`:
+ℹ In index: 1.
+ℹ With name: Amber.
+Caused by error in `.f()`:
+! argument "height" is missing, with no default
+```
+
+<small> __\* Disclaimer__: any actual names of INBO colleagues are used in a fictitious manner. :-)</small>
 
 ---
 class: left, top
 
-# Intermezzo: passing (extra) arguments
+# Intermezzo: the `map` strategy
 
-Sometimes a picture is worth a thousand words...
+1. Do it for one element
+2. Turn it into a <bold>recipe</bold>
+3. Use `map()` to do it for all elements
 
-<p><center>![:scale 50%]({{ site.baseurl}}/assets/images/20240627/20240627_map-arg.png)</center></p>
-<br><small>Source: Hadley Wickham, https://adv-r.hadley.nz/functionals.html#passing-arguments</small>
+
+### 1. Do it for one element
+
+```r
+amber <- giraffes$Amber
+bmi(amber$weight, amber$height)
+```
+
+---
+class: left, top
+
+# Intermezzo: the `map` strategy
+
+### 2. Turn it into a recipe
+
+Abstract it so that Amber can be Damiano, Dirk or any other giraffe. How to do so? Functions, again!
+
+Define a (anonymous) function around it:
+
+```r
+function(x) bmi(x$weight, x$height)
+```
+
+Alternative way (see cheat sheet) in "modern R" (R 4.0 or higher):
+
+```r
+\(x) bmi(x$weight, x$height)
+```
+
+Old school, with triddle `~` and `.x` pronoun. It works perfectly, but maybe less readable:
+
+```r
+~ bmi(.x$weight, .x$height)
+```
+
+Or, you can really give a name to this function!
+
+```r
+function(x) bmi(x$weight, x$height)
+```
+
+---
+class: left, top
+
+# Intermezzo: the `map` strategy
+
+### 3. Use `map()` to apply it for all elements
+
+Via anonymous function:
+
+```r
+map(giraffes, function(x) bmi(x$weight, x$height))
+```
+
+Or if you defined the function `bmi_giraffe`:
+
+```r
+map(giraffes, bmi_giraffe)
+```
+
+Or via shortcut, new way:
+
+```r
+map(giraffes, \(x) bmi(x$weight, x$height))
+```
+
+Or via shortcut, old way:
+
+```r
+map(giraffes, ~ bmi(.x$weight, .x$height))
+```
+
+Finally, you do not need to be stuck with x. Sometimes is better to give a more meaningful name:
+
+```
+map(giraffes, function(giraffe) bmi(giraffe$weight, giraffe$height))
+```
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -315,42 +437,74 @@ class: left, top
 
 # Challenge 2
 
-So far so good. But data science is rarely so easy.
-
-1. Read all sensor data files as a list of data.frames by applying the provided function `read_sensor_data()` to all the elements of the provided list `sensors` with sensor IDs. Hint: see intermezzo.
+1. Read all sensor data files as a list of data.frames by applying the provided function `read_sensor_data()` to all the elements of the provided list `sensors` with sensor IDs. Hint: see https://adv-r.hadley.nz/functionals.html#passing-arguments.
 
 2. Calculate 10 random numbers from a normal distribution (`rnorm(n = 10)`) for each pair of the 4 provided mean and standard deviation and return it as a list of 4. Hint: [mapping-over-multiple-arguments](https://r4ds.had.co.nz/iteration.html#mapping-over-multiple-arguments)
 
-3. Let's get back to our giraffes once again! <bold>FOR EACH </bold> giraffe OF list `info_giraffe` <bold>DO</bold> calculate the body mass index (weight / height^2). Both the function `bmi()` and the list `info_giraffe`*  are provided.
-
-4. Get maximum and minimum datetime for all sensor data data.frames. Return them as a data.frame. This time you have to write your own function. Hint: write a function containing
+4. Get maximum and minimum datetime for all sensor data data.frames. Return them as a data.frame. This time you have to write your own function. Hint: write a function containing:
 ```r
 summarize(df, min_datetime = min(datetime), max_datetime = max(datetime))
 ```
 
-<small> __\* Disclaimer__: any actual names of INBO colleagues are used in a fictitious manner. :-)
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
 
+# Challenge 3
+
+Nothing better than using the result of a pervious coding club as start point for a challenge!
+
+In challenge 3.1 of the May session, we created a list with the (row numbers of the) lepidoptera observations taken in protected areas.
+
+```
+> lepidoptera_in_prot_areas
+Sparse geometry binary predicate list of length 310, where the predicate was `contains'
+first 10 elements:
+ 1: (empty)
+ 2: (empty)
+ 3: 233, 241, 259, 302, 306, 320, 461, 488, 498, 501, ...
+ 4: (empty)
+ 5: 547, 549
+ 6: (empty)
+ 7: (empty)
+ 8: 217, 235, 283, 412, 826
+ 9: (empty)
+```
+
+1. The typical next step is: how many observations for ech protected areas? purr can help us, of course.
+2. Now, given `obs`, the data.frame with the GBIF observations (see the provided code), how to get a data.frame with only the observations taken in protected areas?
+3. purrr is more than the `map` family. To join the data.frames `species_1`, `species_2` and `species_3` (code provided) you could apply `full_join()` twice:
+```r
+full_join(species_1, species_2, by = "species") %>%
+  full_join(species_3, by = "species")
+```
+But this is definitely not DRY and prone to errors! Try to do it DRY by using lists and purrr. Hint: try function `reduce()`, second page of the cheat sheet.
+4. Do you know that dplyr offers some tools which are basically functional programming? Write the code to solve the following pseudo code:
+- FOR EACH column OF df_giraffe and class numeric, APPLY FUNCTION `floor()`
+- FOR EACH column OF df_giraffe ending with `ight` (height, weight), APPLY FUNCTION `floor()`
+
+Hint: see vignette about dplyr's [colum-wise operations](https://dplyr.tidyverse.org/articles/colwise.html).
 
 ---
-class: left, middle
+class: left, top
 
-# Intermezzo: `purrr` unleashed
+# Bonus challenge: purrr + tidyr = power
 
-Are you still hesitating about `purrr` potential? Well, check what `purrr` can do for your modelling work in the second page of the cheat sheet.
+Are you still hesitating about `purrr` potential? You still don't know what it can do in combination with tidyr! They can really do a lot for making your modelling research a lot more understandable for (future) you and all your colleagues. Check the second page of the tidyr cheat sheet.
 
-<p><center>![:scale 50%]({{ site.baseurl}}/assets/images/20200630/20200630_second_page_cheatsheet_purrr.png)</center></p>
+<p><center>![:scale 50%]({{ site.baseurl}}/assets/images/20240627/20240627_second_page_cheatsheet_tidyr.png)</center></p>
 
 1. Group your data
-2. Nest it to create nested data.frames (column containing data.frames!)
+2. Nest it to create nested data.frames (column containing data.frames, aka **list-columns**)
 3. Work with it (apply modelling as in cheat sheet or whatever else you have in mind)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
-class: left, middle
+class: left, top
 
-# Challenge 3
+# Bonus challenge: purrr + tidyr = power
 
-Let's play with [penguins](https://github.com/allisonhorst/palmerpenguins#palmerpenguins-) data! Group `penguins` data.frame by species and nest it as shown below:
+Let's play with [penguins](https://github.com/allisonhorst/palmerpenguins#palmerpenguins) data! Group `penguins` data.frame by species and nest it as shown below:
 
 ```r
 penguins %>%
@@ -365,41 +519,25 @@ penguins %>%
 3 Chinstrap <tibble [68 x 6]>
 ```
 
-Add a column called  `plot` containing ggplot objects based on the geometry and aesthetics below:
-
+1. Add a column called  `plot` containing ggplot objects based on the geometry and aesthetics below:
 ```r
 geom_point(aes(x = bill_length_mm ,
                y = bill_depth_mm,
                colour = sex))
 ```
+2. Save the created plots using species name and extension `png`. Hint: https://r4ds.had.co.nz/iteration.html#walk
 
-<p><center>![:scale 10%]({{ site.baseurl}}/assets/images/20200630/20200630_palmer_penguins_data.png)</center></p>
+<p><center>![:scale 10%]({{ site.baseurl}}/assets/images/20240627/20240627_palmer_penguins_data.png)</center></p>
 
----
-background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
-class: left, top
-
-# Challenge 3
-
-Do you know that dplyr offers some tools to apply selective functional programming?
-
-1. FOR EACH column OF df_giraffe and class numeric, APPLY FUNCTION `floor()`
-2. FOR EACH column OF df_giraffe ending with `ght` (height, weight), APPLY FUNCTION `floor()`
-
-Hint: see vignette about [colum-wise operations](https://dplyr.tidyverse.org/articles/colwise.html).
 
 ---
 class: left, top
 
-# Bonus challenge
+# The package of the month. Damiano's choice
 
-?group_map()
+Are you bored to see and use `iris` everywhere to test code? I am. Why not using penguins?!? The package [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) provide a great dataset for data exploration & visualization. A valid alternative to `iris`!
 
----
-class: left, top
-
-# The package of the month.
-
+<p><center>![:scale 80%]({{ site.baseurl}}/assets/images/20240627/20240627_palmerpenguins_homepage.png)
 
 
 ---
@@ -410,13 +548,20 @@ class: left, top
 - Challenges solutions and edited video recording will be available soon
 - [purrr](https://r-spatial.github.io/sf/) package homepage.
 - [purrr cheatsheet](https://rstudio.github.io/cheatsheets/html/purrr.html) webpage
-- The [Advanced R](https://adv-r.hadley.nz/index.html) book of Hadley Wickham: the [Introduction](https://adv-r.hadley.nz/fp.html) to the chapter and the entire [chapter 9](https://adv-r.hadley.nz/functionals.html#functionals) about functional programming. This resource was extensively used to introduce the concepts and to write the challenges.
-
+- Download the [purrr cheatsheet]() from our repository
+- The [Advanced R](https://adv-r.hadley.nz/index.html) book of Hadley Wickham: the [Introduction](https://adv-r.hadley.nz/fp.html) to the chapter and the entire [chapter 9](https://adv-r.hadley.nz/functionals.html#functionals) about functional programming. This resource was extensively used to introduce the concepts and inspired some challenges.
+- Well-written and complete tutorial: https://r4ds.had.co.nz/iteration.html#for-loops-vs.functionals (from 21.4 up to 21.9)
+- Beautiful webinar (pdf slides are downloadable) from Charlotte Wickham: [part 1](https://learn.microsoft.com/en-us/shows/user-international-r-user-conferences-user-international-r-user-2017-conference/solving-iteration-problems-purrr/) and [part 2](https://learn.microsoft.com/en-us/shows/user-international-r-user-conferences-user-international-r-user-2017-conference/solving-iteration-problems-purrr-ii/). Introduction to `map()` and the map strategy material come from her.
+- Well-written and complete tutorial: https://r4ds.had.co.nz/iteration.html#for-loops-vs.functionals (from 21.4 up to 21.9)
+- The package [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) which offers a valid alternative to `iris` to test your data wrangling and data visualization code.
 
 ---
 class: center, middle
 
-Enjoy the summer! No INBO coding club in July!
+Enjoy the summer and solve the Word Search. No INBO coding club in July!
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20240627/20240627_SUMMER_HOLIDAYS_399189.png)
+<br><small>Source: https://wordmint.com/public_puzzles/399189</small>
 
 ---
 class: center, middle
