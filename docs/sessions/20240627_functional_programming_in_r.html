@@ -479,7 +479,7 @@ first 10 elements:
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
-# Challenge 3
+# Challenge 3A
 
 1. The typical next step is: how many observations for ech protected areas? purr can help us, of course.
 2. Given `obs`, the data.frame with the GBIF observations (see the provided code), how to get a data.frame with only the observations taken in protected areas?
@@ -489,11 +489,43 @@ full_join(species_1, species_2, by = "species") %>%
   full_join(species_3, by = "species")
 ```
 But this is definitely not DRY and prone to errors! Try to do it DRY by using lists and purrr. Hint: try function `reduce()`, second page of the cheat sheet.
-4. Do you know that dplyr offers some tools which are basically functional programming? Write the code to solve the following pseudo code:
-- FOR EACH column OF df_giraffe and class numeric, APPLY FUNCTION `floor()`
-- FOR EACH column OF df_giraffe ending with `ight` (height, weight), APPLY FUNCTION `floor()`
 
-Hint: see vignette about dplyr's [colum-wise operations](https://dplyr.tidyverse.org/articles/colwise.html).
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3B - a little of dplyr
+
+Do you know that dplyr offers some tools which are basically functional programming?
+
+```r
+# Height of 5 giraffes
+height_giraffe <- runif(n = 6, min = 4.3, max = 5.7)
+# Weight of 5 giraffes
+weight_giraffe <- rnorm(n = 6, mean = 1192, sd = 300)
+# GPS tracker ID
+gps_tracker_giraffe <- c("A31", "E4T", "RT4", "YU7", "3G1", "ON9")
+# Giraffes nicknames
+nicknames_giraffe <- sample(
+  c("Amber", "Damiano", "Dirk", "Emma", "Raïsa", "Rhea")
+)
+# Data.frame with weight, height and GPS tracker IDs.
+df <- tibble::tibble(
+  "weight" = weight_giraffe,
+  "height" = height_giraffe,
+  "gpsID" = gps_tracker_giraffe
+)
+```
+
+Write the code to solve the following pseudo code:
+
+1. FOR EACH column OF df and class numeric, APPLY FUNCTION `floor()`. Modify the columns.
+
+2. FOR EACH column OF df ending with `ight` (height, weight), APPLY FUNCTION `floor()`. Modify the columns. Same result of exercise 1 expected.
+
+3. Instead of modifying the columns, how to add new ones?
+
+Hint: see vignette about [colum-wise operations](https://dplyr.tidyverse.org/articles/colwise.html).
 
 ---
 class: left, top
