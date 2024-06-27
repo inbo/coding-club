@@ -76,7 +76,7 @@ read_sensor_data <- function(
 
 # If data files are where they should be, here the path_pattern and
 # extension to use. Just copied from the @example above the function.
-path_pattern_datafiles <- "./data/20200630/20200630_sensor_"
+path_pattern_datafiles <- "./data/20240627/20240627_sensor_"
 file_extension <- ".txt"
 
 # Apply function to one sensor ID as check.
