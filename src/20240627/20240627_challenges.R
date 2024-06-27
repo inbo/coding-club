@@ -5,6 +5,9 @@ library(tidyverse)
 
 
 
+# 1.3
+list_with_dfs <- list(swiss = swiss, iris = iris)
+names(list_with_dfs)
 
 
 
