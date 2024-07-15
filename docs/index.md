@@ -61,6 +61,16 @@ More specifically, the core team takes care of:
 
 Check the [workflow page]({{ site.baseurl }}{% link workflow.md  %}) to see the step-by-step workflow to organize an INBO coding club.
 
+### How to become a member of the INBO Coding Club?
+
+For INBO Employees
+
+If you have an INBO email account, simply reach out to any of the core team members to be added to our internal R mailing list. All Coding Club-related communications will be distributed through this channel.
+
+For External Collaborators
+
+Are you from another organization or university and involved in INBO projects or activities? We'd love to have you join us! Contact us, and we'll add you to our external invitee list to ensure you're informed about all Coding Club events.
+
 ### Did we figure that out ourselves?
 
 No :-). We got inspired by foreign initiatives such as the [ourcodingclub Edinburgh](https://ourcodingclub.github.io/). Moreover, more and more initiatives illustrate that coding together can be effective to improve ecological/environmental research. Interesting reading material in that sense is the [Ocean Health Index project paper](https://www.nature.com/articles/s41559-017-0160) published in Nature Eccology & Evolution. The Software and Data Carpentry organisation proves that we all can overcome our fear to code. Their material is highly inspiring for setting up the challenges, e.g. the [ecology workshop](http://www.datacarpentry.org/lessons/#ecology-workshop).
