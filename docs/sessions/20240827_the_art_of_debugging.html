@@ -41,13 +41,13 @@ class: left, top
 class: center, middle
 
 <!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
-![:scale 90%]({{ site.baseurl}}/assets/images/220240827/220240827_badge_debug.png)
+![:scale 90%]({{ site.baseurl}}/assets/images/20240827/20240827_badge_debug.png)
 
 
 ---
 class: center, middle
 
-![:scale 100%]({{ site.baseurl}}/assets/images/220240827/220240827_debugging_phdcomics.gif)
+![:scale 100%]({{ site.baseurl}}/assets/images/20240827/20240827_debugging_phdcomics.gif)
 
 Your 1 minute of glory after tons of frustration.
 
@@ -91,7 +91,7 @@ You can download the material of today:
 
 - automatically via `inborutils::setup_codingclub_session()`*
 
-- manually** from GitHub folders [coding-club/data/220240827](https://github.com/inbo/coding-club/tree/master/data/220240827) and [coding-club/src/220240827](https://github.com/inbo/coding-club/tree/master/src/220240827)
+- manually** from GitHub folders [coding-club/data/20240827](https://github.com/inbo/coding-club/tree/master/data/20240827) and [coding-club/src/20240827](https://github.com/inbo/coding-club/tree/master/src/20240827)
 
 <br>
 <small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20220428")` to download the coding club material of April, 28 2022. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
@@ -103,10 +103,9 @@ class: left, top
 
 # Data and scripts description
 
+- `20240827_eel_Rhea.txt`, `20240827_eel_Amber.txt` and `20240827_eel_Emma.txt`: eels tagging data. Thanks, Pieterjan Verhelst and LifeWatch Flanders for providing us these data! Filenames are of course fictive :-)
 
-- `220240827_eel_Anna.txt`, `220240827_eel_Amber.txt` and `220240827_eel_Lisa.txt`: eels tagging data. Thanks, Pieterjan Verhelst and LifeWatch Flanders for providing us these data!
-
-- `220240827_challenges.R`: R script with code to start with
+- `20240827_challenges.R`: R script with code to start with
 
 ---
 class: left, top
@@ -135,25 +134,24 @@ class: left, top
 
 Can AI tools help you to detect and solve bugs? YES. However, keep in mind these aspects:
 
-- proposed solution is not always working. The chatbot tends to please you by almost always proposing some code even if the answer is out of scope (the chatbot didn't understand the error you submitted).
+- proposed solution is not always working or right. The chatbot tends to please you by almost always proposing some code even if the answer is out of scope (the chatbot didn't understand the error you submitted).
 - Spend time to better explain the issue to the chatbot. This way to solve bugs is called ITERATIVE*.
 - providing a basic example can also improve the quality of the returned answer.
 
 <br>
-<small> __\* Note__: old school "googling" is at first instance a SEQUENTIAL approach instead. You surf among the links returned by the search browser and you start to read the proposed solutions.
+<small> __\* Note__: old school "googling" is at first instance a SEQUENTIAL approach. You surf among the links returned by the search browser and you start to read/apply the proposed solutions.
 
 ---
 class: left, top
 
 # AI working group at INBO
 
-Do you know that INBO:
+Do you know there is a new INBO working group dedicated to AI? It will explore and evaluate the AI needs of the INBO researchers and the AI tools we are already using. Are they good enough? Are they worth the money? How open are they? What about open data and ethical concerns? What about environmental concerns (energy consumption, CO2 emission)
 
-- has a new working group dedicated to AI? It will explore and evaluate the AI needs of the INBO researchers and the AI tools we are already using.
-- a 3-month proof period has been launched for testing the AI tools we would like to test.
-- organised info sessions about AI and will continue to do it. Should we need a specific info session or workshop about **coding with AI**? Let's speak about it!
+- A 3-month proof period has been launched for testing the AI tools INBO researchers would like to test.
+- INBO organised some info sessions already and workshops about AI and will continue to do it. Should we need a specific info session or workshop about **coding with AI**? Let's speak about it!
 
-For more questions, please ask to Hans, Aaike or other members of the AI workgroup.
+For more questions, please ask Hans, Aaike or other members of the AI workgroup.
 
 ---
 class: left, top
@@ -230,7 +228,7 @@ https://www.awesomescreenshot.com/image/40098063?key=2fcb63ab83df27bbb5b9997c0c4
 class: left, top
 
 You have some code, it doesn't work as expected...
-<center>![:scale 100%]({{ site.baseurl}}/assets/images/220240827/220240827_print_in_action1.png)</center>
+<center>![:scale 100%]({{ site.baseurl}}/assets/images/20240827/20240827_print_in_action1.png)</center>
 
 You start to search by inserting `print()` instructions here and there..
 
@@ -239,7 +237,7 @@ class: left, top
 
 Welcome to the `print()` FESTIVAL!
 
-<center>![:scale 100%]({{ site.baseurl}}/assets/images/220240827/220240827_print_in_action2.png)</center>
+<center>![:scale 100%]({{ site.baseurl}}/assets/images/20240827/20240827_print_in_action2.png)</center>
 
 
 And what if the error is not in your code but in a function embedded in it?
@@ -247,11 +245,13 @@ And what if the error is not in your code but in a function embedded in it?
 ---
 class: left, top
 
-# From `print()` to Debugging
+# From `print()` to debugging
 
-If you are addicted to `print()`, the first detox method is `browser()`. From documentation:
+If you are addicted to `print()`, the first detox is `browser()`. From its documentation:
 
 > Interrupt the execution of an expression and allow the inspection of the environment where `browser` was called from.
+
+Drawback: as `print()`, you need to clean your code by removing all `browser()` you inserted.
 
 ---
 class: left, top
@@ -264,8 +264,8 @@ class: left, top
 ---
 class: center, middle
 
-![:scale 90%]({{ site.baseurl}}/assets/images/220240827/20240827_cheat_sheet_rstudio-ide.png)
-Download cheatsheet [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/220240827_cheat_sheet_rstudio-ide.pdf)* or go to the [HTML version](https://rstudio.github.io/cheatsheets/html/rstudio-ide.html).
+![:scale 90%]({{ site.baseurl}}/assets/images/20240827/20240827_cheat_sheet_rstudio-ide.png)
+Download cheatsheet [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240827_cheat_sheet_rstudio-ide.pdf)* or go to the [HTML version](https://rstudio.github.io/cheatsheets/html/rstudio-ide.html).
 
 <br>
 <small> __\* PDF cheatsheet is available in other 7 languages, e.g. French and Spanish. Go to https://rstudio.github.io/cheatsheets/html/rstudio-ide.html to download it.
@@ -275,12 +275,12 @@ class: center, middle
 
 https://rstudio.github.io/cheatsheets/html/rstudio-ide.html#debug-mode
 
-![:scale 90%]({{ site.baseurl}}/assets/images/220240827/220240827_debug_mode_zoom_cheatsheet.png)
+![:scale 90%]({{ site.baseurl}}/assets/images/20240827/20240827_debug_mode_zoom_cheatsheet.png)
 
 ---
 class: center, middle
 
-![:scale 45%]({{ site.baseurl}}/assets/images/220240827/220240827_debug_mode_zoom_cheatsheet2.png)
+![:scale 45%]({{ site.baseurl}}/assets/images/20240827/20240827_debug_mode_zoom_cheatsheet2.png)
 
 ---
 class: left, top
@@ -328,7 +328,7 @@ class: left, top
 `traceback` your code to find where it stops to work.
 
 In RStudio: in **Debug pane** -> **On Error** -> **Error Inspector** and then click on **Show Traceback** in the error message <p>
-![:scale 100%]({{ site.baseurl}}/assets/images/220240827/220240827_livecoding_show_traceback.png)</p>
+![:scale 100%]({{ site.baseurl}}/assets/images/20240827/20240827_livecoding_show_traceback.png)</p>
 
 In basic R:
 
@@ -345,9 +345,10 @@ class: left, top
 
 ### 1st alternative
 
-Source the file with the functions only and set breakpoints (red circles) where you think something wrong happens
+Source the file with the functions only and set breakpoints (red circles) where you think something wrong happens. Setting a breakpoint is exactly the same as typing `browser()`!
+
 <p>
-![:scale 50%]({{ site.baseurl}}/assets/images/220240827/220240827_livecoding_show_breakpoint.png)</p>
+![:scale 50%]({{ site.baseurl}}/assets/images/20240827/20240827_livecoding_show_breakpoint.png)</p>
 
 ---
 class: left, top
@@ -375,7 +376,7 @@ class: left, top
 
 Once you are in debugging mode, use **Next** (n) to move to next line, **Continue** (c) to go to next breakpoint (red circles)
 <p>
-![:scale 70%]({{ site.baseurl}}/assets/images/220240827/220240827_livecoding_show_debugging_mode_actions.png)</p>
+![:scale 70%]({{ site.baseurl}}/assets/images/20240827/20240827_livecoding_show_debugging_mode_actions.png)</p>
 
 ---
 class: left, top
@@ -441,7 +442,7 @@ class: left, top
 
 # Intermezzo: defensive programming
 
-Debugging starts already while writing code! Defensive programming is the best way to solve bunch of (future) bugs: the future-you will praise you.
+Debugging starts already while writing code! Defensive programming is the best way to solve many (future) bugs: the future-you will praise you.
 
 1. Add pre-conditions to your functions to avoid unexpected and unpredictable errors in later stages (**fail fast principle**: stop the current operation as soon as any unexpected error occurs)
 ```r
@@ -515,12 +516,12 @@ Apply defensive programming to avoid unexpected behavior or cryptic error messag
 Function crashes with:
 
 1.  "very large" numbers
-![]({{ site.baseurl}}/assets/images/220240827/220240827_challenge3_unexpected_error_big_numbers.png)
+![]({{ site.baseurl}}/assets/images/20240827/20240827_challenge3_unexpected_error_big_numbers.png)
 2. decimal numbers
-![]({{ site.baseurl}}/assets/images/220240827/220240827_challenge3_unexpected_error_decimal_number.png)
+![]({{ site.baseurl}}/assets/images/20240827/20240827_challenge3_unexpected_error_decimal_number.png)
 3. negative numbers
 4. vectors or list of numbers
-![]({{ site.baseurl}}/assets/images/220240827/220240827_challenge3_unexpected_error_multiple_numbers.png)
+![]({{ site.baseurl}}/assets/images/20240827/20240827_challenge3_unexpected_error_multiple_numbers.png)
 
 
 ---
@@ -530,24 +531,24 @@ class: left, top
 
 1. Build up code in small pieces, testing along the way, step by step
 1. Make big changes in small steps
-1. Smaller functions are better: easier to debug, easier to understand
+1. Write short functions: easier to debug, easier to understand
 
 ---
 class: left, top
 
 # Miscellaneous tips: do not code so _hard_
 
-1. Do not __hard__code numbers: use variables instead (number of iterations, parameter values in simulations, ...). Easier to read and reduce bugs when you use the same number multiple times
+1. Do not __hard__code numbers: use variables instead (number of iterations, parameter values in simulations, ...). Easier to read and reduce the amount of potential bugs when you use the same number multiple times.
 1. Avoid using **global variables** in your function
 ```r
 txt <- "INBO"
-my_function <- function() {
-  paste(txt, "is fantastic!")
+b <- function(adjective) {
+  paste(txt, "is", adjective)
 }
-> my_function()
-[1] "INBO is fantastic!"
+> my_function("fantastic")
+[1] "INBO is fantastic"
 ```
-1. Avoid reusing **global variables** names in your function: very confusing and prone to bugs.
+2. Avoid reusing **global variables** names in your function: very confusing and prone to bugs.
 ```r
 txt <- "INBO"
 my_function <- function() {
@@ -567,11 +568,11 @@ class: left, top
 
 We are typically lazy, aren't we?
 
-A: "Does my code run?"
+A: "Does your code run?"
 
 B: "Yes!"
 
-A: "But it takes hours and GB of memory!"
+A: "But it takes hours and GBs of memory!"
 
 B: "I don't mind, it runs after all ..."
 
@@ -586,7 +587,7 @@ class: left, top
 
 Some bugs are worth being shared with others: package developers, your team, all the R community! It will help future-you, it will help your colleagues, it will help others worldwide.
 
-![:scale 90%]({{ site.baseurl}}/assets/images/220240827/20240827_share_debugging_stories.png)
+![:scale 90%]({{ site.baseurl}}/assets/images/20240827/20240827_share_debugging_stories.png)
 
 Source: https://wizardzines.com/comics/share-debugging-stories/
 
