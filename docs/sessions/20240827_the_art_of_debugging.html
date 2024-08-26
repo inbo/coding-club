@@ -1,0 +1,625 @@
+---
+layout: presentation
+title: computer says no - the art of debugging
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 27 AUGUST 2024
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+
+01.21 - Jeanne Brabants
+
+---
+class: left, top
+
+# Reminders
+
+1. Did we confirm the room via _roomie_?
+2. Did we start the recording?
+
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/220240827/220240827_badge_debug.png)
+
+
+---
+class: center, middle
+
+![:scale 100%]({{ site.baseurl}}/assets/images/220240827/220240827_debugging_phdcomics.gif)
+
+Your 1 minute of glory after tons of frustration.
+
+---
+class: center, middle
+
+_Finding your bug is a process of confirming the many things that you believe are true — until you find one which is not true. _ (Norm Matloff)
+
+---
+class: left, top
+
+## How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+## First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+# Share your code during the coding session
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/5tqGH6BCTwu59f7GEmRUag?edit and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/5tqGH6BCTwu59f7GEmRUag?edit" height="450px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub folders [coding-club/data/220240827](https://github.com/inbo/coding-club/tree/master/data/220240827) and [coding-club/src/220240827](https://github.com/inbo/coding-club/tree/master/src/220240827)
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20220428")` to download the coding club material of April, 28 2022. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data and scripts description
+
+
+- `220240827_eel_Anna.txt`, `220240827_eel_Amber.txt` and `220240827_eel_Lisa.txt`: eels tagging data. Thanks, Pieterjan Verhelst and LifeWatch Flanders for providing us these data!
+
+- `220240827_challenges.R`: R script with code to start with
+
+---
+class: left, top
+
+# Load libraries
+
+```r
+library(tidyverse)
+```
+
+---
+class: left, top
+
+# Debugging first rule
+
+Read carefully the error message and search on the web: let's google the error! Nowadays, you would maybe use Artificial Intelligence tools as:
+- [ChatGPT](https://chat.openai.com/) from Open AI
+- [Microsoft copilot](https://copilot.microsoft.com/) from Microsoft
+- [Gemini](https://gemini.google.com/) from Google
+- [Claude](https://claude.ai/) from Anthropic (public-benefit company founded by former members of OpenAI, siblings Daniela Amodei and Dario Amodei)
+
+---
+class: left, top
+
+# Debugging and AI
+
+Can AI tools help you to detect and solve bugs? YES. However, keep in mind these aspects:
+
+- proposed solution is not always working. The chatbot tends to please you by almost always proposing some code even if the answer is out of scope (the chatbot didn't understand the error you submitted).
+- Spend time to better explain the issue to the chatbot. This way to solve bugs is called ITERATIVE*.
+- providing a basic example can also improve the quality of the returned answer.
+
+<br>
+<small> __\* Note__: old school "googling" is at first instance a SEQUENTIAL approach instead. You surf among the links returned by the search browser and you start to read the proposed solutions.
+
+---
+class: left, top
+
+# AI working group at INBO
+
+Do you know that INBO:
+
+- has a new working group dedicated to AI? It will explore and evaluate the AI needs of the INBO researchers and the AI tools we are already using.
+- a 3-month proof period has been launched for testing the AI tools we would like to test.
+- organised info sessions about AI and will continue to do it. Should we need a specific info session or workshop about **coding with AI**? Let's speak about it!
+
+For more questions, please ask to Hans, Aaike or other members of the AI workgroup.
+
+---
+class: left, top
+
+# Debugging first rule
+
+Read carefully the error message and search on the web. Let's train our eyes!
+
+Example 1
+
+```
+Error in `mutate()`:
+ℹ In argument: `delta_t = as.numeric(as.duration(time_first_dist_to_use -
+  departure))`.
+Caused by error in `as.duration()`:
+! could not find function "as.duration"
+Run `rlang::last_trace()` to see where the error occurred.
+```
+
+https://www.awesomescreenshot.com/image/40093399?key=8b0ede621e12a0f58eaf7c84fcb83d45
+
+---
+class: left, top
+
+# Debugging first rule
+
+Read carefully the error message and search on the web. Let's train our eyes!
+
+Example 2
+
+```
+my_function <- function() {
+  txt <- "fantastic"
+  paste("R is" txt)
+}
+Error: unexpected symbol in:
+"    txt <- "fantastic"
+    paste("R is" txt"
+```
+
+https://www.awesomescreenshot.com/image/40096422?key=151ba2b88885ab651c003414c0907886
+
+---
+class: left, top
+
+# Debugging first rule
+
+Read carefully the error message and search on the web. Let's train our eyes!
+
+Example 3: error is far from being informative for "normal" people
+
+```
+my_gamma_est <- function(data) {
+  # fit a gamma distribution to a vector of numbers
+  m < mean(data)
+  v <- var(data)
+  s <- v/m
+  a <- m/s
+  return(list(a=a,s=s))
+}
+```
+
+```
+my_gamma_est(cats$Hwt)
+Error in my_gamma_est(cats$Hwt) :
+  'list' object cannot be coerced to type 'double'
+```
+
+It seems ChatGPT cannot help us so much:
+
+https://www.awesomescreenshot.com/image/40098063?key=2fcb63ab83df27bbb5b9997c0c418581
+
+---
+class: left, top
+
+You have some code, it doesn't work as expected...
+<center>![:scale 100%]({{ site.baseurl}}/assets/images/220240827/220240827_print_in_action1.png)</center>
+
+You start to search by inserting `print()` instructions here and there..
+
+---
+class: left, top
+
+Welcome to the `print()` FESTIVAL!
+
+<center>![:scale 100%]({{ site.baseurl}}/assets/images/220240827/220240827_print_in_action2.png)</center>
+
+
+And what if the error is not in your code but in a function embedded in it?
+
+---
+class: left, top
+
+# From `print()` to Debugging
+
+If you are addicted to `print()`, the first detox method is `browser()`. From documentation:
+
+> Interrupt the execution of an expression and allow the inspection of the environment where `browser` was called from.
+
+---
+class: left, top
+
+## Why debugging?
+
+- Save time: "debugging" using `print()` is time consumming  + you have to clean up your code after
+- Versatile: you can jump in **loops**, in **if-else** statements, in **functions**, you can proceed line by line and check the environment your code lives in at that precise moment.
+
+---
+class: center, middle
+
+![:scale 90%]({{ site.baseurl}}/assets/images/220240827/20240827_cheat_sheet_rstudio-ide.png)
+Download cheatsheet [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/220240827_cheat_sheet_rstudio-ide.pdf)* or go to the [HTML version](https://rstudio.github.io/cheatsheets/html/rstudio-ide.html).
+
+<br>
+<small> __\* PDF cheatsheet is available in other 7 languages, e.g. French and Spanish. Go to https://rstudio.github.io/cheatsheets/html/rstudio-ide.html to download it.
+
+---
+class: center, middle
+
+https://rstudio.github.io/cheatsheets/html/rstudio-ide.html#debug-mode
+
+![:scale 90%]({{ site.baseurl}}/assets/images/220240827/220240827_debug_mode_zoom_cheatsheet.png)
+
+---
+class: center, middle
+
+![:scale 45%]({{ site.baseurl}}/assets/images/220240827/220240827_debug_mode_zoom_cheatsheet2.png)
+
+---
+class: left, top
+
+#### A live code intro
+
+```
+library(MASS) # provides `cats` data
+gamma_est <- function(data) {
+  # this fits a gamma distribution to a collection of numbers
+  m <- mean(data)
+  v <- var(data)
+  s <- v/m
+  a <- m/s
+  return(list(a=a,s=s))
+}
+calc_var <- function(estimates){
+  var_of_ests <- apply(estimates, 2, var)
+  return(((n-1)^2/n)*var_of_ests)
+}
+gamma_jackknife <- function(data) {
+  ## jackknife the estimation
+  n <- length(data)
+  jack_estimates <- gamma_est(data[-1])
+  for (omitted_point in 2:n) {
+    jack_estimates <- rbind(jack_estimates, gamma_est(data[-omitted_point]))
+  }
+  jack_var = calc_var(jack_estimates)
+  return(sqrt(jack_var))
+}
+# jackknife gamma dist. estimates of cat heart weights
+gamma_jackknife(cats$Hwt)
+Error in FUN(newX[, i], ...) : is.atomic(x) is not TRUE
+```
+
+Credits: Chris Paciorek. Session 2.5 of his very interesting [tutorial](https://htmlpreview.github.io/?https://github.com/berkeley-scf/tutorial-R-debugging/blob/master/R-debugging.html)
+
+---
+class: left, top
+
+# A memory aid
+
+## Traceback your code
+
+`traceback` your code to find where it stops to work.
+
+In RStudio: in **Debug pane** -> **On Error** -> **Error Inspector** and then click on **Show Traceback** in the error message <p>
+![:scale 100%]({{ site.baseurl}}/assets/images/220240827/220240827_livecoding_show_traceback.png)</p>
+
+In basic R:
+
+```r
+options(error = "traceback") # trace the error back, better than options(error = "message")
+```
+
+---
+class: left, top
+
+# A memory aid
+
+## Debug your code: activate debugging mode
+
+### 1st alternative
+
+Source the file with the functions only and set breakpoints (red circles) where you think something wrong happens
+<p>
+![:scale 50%]({{ site.baseurl}}/assets/images/220240827/220240827_livecoding_show_breakpoint.png)</p>
+
+---
+class: left, top
+
+# A memory aid
+
+## Debug your code: activate debugging mode
+
+### 2nd alternative
+
+Activate debugging mode on a specific function by using `debug(function_name)` or `debugonce(function_name)`.
+
+```r
+debug(calc_var) # or debugonce(calc_var)
+```
+
+Once this function is debugged, run `undebug(function_name)`.
+
+---
+class: left, top
+
+# A memory aid
+
+## Debug your code: work in debugging mode
+
+Once you are in debugging mode, use **Next** (n) to move to next line, **Continue** (c) to go to next breakpoint (red circles)
+<p>
+![:scale 70%]({{ site.baseurl}}/assets/images/220240827/220240827_livecoding_show_debugging_mode_actions.png)</p>
+
+---
+class: left, top
+
+# 123 magic
+
+Write down a positive integer on a piece of paper:
+
+```
+886328712442992
+```
+
+Count up the number of even and odd digits, and the total number of digits:
+
+```
+10 5 15
+```
+
+String the digits of those three numbers together to make a new number:
+
+```
+10515
+```
+
+Perform the same operation on the obtained number:
+
+```
+1 4 5 ⟶ 145
+```
+
+And keep iterating:
+
+```
+1 2 3 ⟶ 123
+```
+
+You'll always arrive at the number 123!
+
+<small>Credits (login via Google account or some other methods):<br>
+(EN) https://dodona.ugent.be/en/courses/239/series/2168/activities/192047393/<br>
+(NL) https://dodona.ugent.be/nl/courses/239/series/2168/activities/192047393/
+</small>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+Use debug techniques to find (and possibly solve) the bug in function `evenOdd()`.
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+Use debug techniques to find (and possibly solve) the bugs in functions `step()` and `steps()`.
+
+---
+class: left, top
+
+# Intermezzo: defensive programming
+
+Debugging starts already while writing code! Defensive programming is the best way to solve bunch of (future) bugs: the future-you will praise you.
+
+1. Add pre-conditions to your functions to avoid unexpected and unpredictable errors in later stages (**fail fast principle**: stop the current operation as soon as any unexpected error occurs)
+```r
+# PSEUDOCODE !!
+if (date < today) stop("Date is too early");
+if (class input != numeric vector) stop("Invalid type of input: only numeric vectors allowed.")
+```
+
+2. Assert statements to validate output at intermediate steps, e.g. output of 3rd party libraries that you use in your project.
+
+---
+class: left, top
+
+# Intermezzo: defensive programming
+
+Example: apply defensive programming to the `custom_min()` function here below to avoid unexpected  behaviors:
+
+```
+# customized `min()` function for NUMERIC(!) vectors
+# to avoid warning while calculating min() of empty vectors
+custom_min <- function(x) {
+  if (length(x)>0) min(x) else NA
+}
+> custom_min(c("e", "r", "a")) # passing chars should return an error
+[1] "a"
+```
+
+---
+class: left, top
+
+# Intermezzo: defensive programming - example
+
+The package [assertthat](https://rdocumentation.org/packages/assertthat/versions/0.2.1) is very useful while applying defensive programming in your coding life. What we do is adding assertion(s) to our function.
+
+```
+library(assertthat)
+# customized `min()` function for NUMERIC(!) vectors
+# to avoid warning while calculating min() of empty vectors
+custom_min <- function(x) {
+  # check x argument (assertion)
+  assertthat::assert_that(
+    is.numeric(x),
+    msg = "Invalid type of input: only numeric vectors allowed."
+  )
+  # function core follows
+  if (length(x)>0) min(x) else NA
+}
+
+# only numeric input are allowed, error arises otherwise
+custom_min(c("a", "b"))
+Error: Invalid type of input: only numeric vectors allowed.
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3 - Debug & defensive programming
+
+Let's move to something more familiar: eels tagging data.
+
+The function `get_migrations()` works nicely in example 1, but it fails in other examples. By giving a look to the function, the values passed to the arguments and the error messages, try to understand what is going wrong and add a series of checks (assertions) to fail "fast" and "nicely".
+
+---
+class: left, top
+
+# Bonus challenge
+
+Apply defensive programming to avoid unexpected behavior or cryptic error messages to functions described in challenge 1 and 2.
+
+Function crashes with:
+
+1.  "very large" numbers
+![]({{ site.baseurl}}/assets/images/220240827/220240827_challenge3_unexpected_error_big_numbers.png)
+2. decimal numbers
+![]({{ site.baseurl}}/assets/images/220240827/220240827_challenge3_unexpected_error_decimal_number.png)
+3. negative numbers
+4. vectors or list of numbers
+![]({{ site.baseurl}}/assets/images/220240827/220240827_challenge3_unexpected_error_multiple_numbers.png)
+
+
+---
+class: left, top
+
+# Miscellaneous tips: smaller the better
+
+1. Build up code in small pieces, testing along the way, step by step
+1. Make big changes in small steps
+1. Smaller functions are better: easier to debug, easier to understand
+
+---
+class: left, top
+
+# Miscellaneous tips: do not code so _hard_
+
+1. Do not __hard__code numbers: use variables instead (number of iterations, parameter values in simulations, ...). Easier to read and reduce bugs when you use the same number multiple times
+1. Avoid using **global variables** in your function
+```r
+txt <- "INBO"
+my_function <- function() {
+  paste(txt, "is fantastic!")
+}
+> my_function()
+[1] "INBO is fantastic!"
+```
+1. Avoid reusing **global variables** names in your function: very confusing and prone to bugs.
+```r
+txt <- "INBO"
+my_function <- function() {
+  txt <- "fantastic"
+  paste("coding together is", txt)
+}
+> my_function()
+[1] "coding together is fantastic"
+> txt
+[1] "INBO"
+```
+
+---
+class: left, top
+
+# Miscellaneous tips: optimize your code
+
+We are typically lazy, aren't we?
+
+A: "Does my code run?"
+
+B: "Yes!"
+
+A: "But it takes hours and GB of memory!"
+
+B: "I don't mind, it runs after all ..."
+
+However, this kind of code could easily crash when running on bigger datasets.
+
+Let's try the [profiler](https://support.posit.co/hc/en-us/articles/218221837-Profiling-with-RStudio#using-the-profiler) built in RStudio!
+
+---
+class: left, top
+
+# Miscellaneous tips: share your debugging story
+
+Some bugs are worth being shared with others: package developers, your team, all the R community! It will help future-you, it will help your colleagues, it will help others worldwide.
+
+![:scale 90%]({{ site.baseurl}}/assets/images/220240827/20240827_share_debugging_stories.png)
+
+Source: https://wizardzines.com/comics/share-debugging-stories/
+
+---
+class: left, top
+
+# The packages of the month. Damiano's choice
+
+- [**errorist**](https://r-pkg.thecoatlessprofessor.com/errorist/index.html): automatically search errors and warnings the second they arise by opening a browser tab with a Google search. Built upon the more flexible [**searcher**](https://r-pkg.thecoatlessprofessor.com/searcher/) package.
+- [**naniar**](https://naniar.njtierney.com/): unexpected missing data are a very typical source of bugs. The naniar package provides an elegant solution to handle them.
+- [**skimr**](https://docs.ropensci.org/skimr/): a better knowledge of the data reduces sensibly the time spent to locate bugs. skimr does summary statistics which conforms to the [principle of least surprise](https://en.wikipedia.org/wiki/Principle_of_least_astonishment), displaying summary statistics the user can skim quickly to understand their data. It's an R Open Science labelled package!
+
+---
+class: left, top
+
+# Resources
+
+- Commented challenges solutions and edited video recording will be available soon
+- [webinar](https://youtu.be/-yy_3htRHdU) and related [tutorial](https://htmlpreview.github.io/?https://github.com/berkeley-scf/tutorial-R-debugging/blob/master/R-debugging.html) from Chris Paciorek, Department of Statistics, UC Berkley
+- [Debugging in RStudio tutorial](https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio) written by posit (company behind RStudio) itself
+- [Debugging chapter](https://adv-r.hadley.nz/debugging.html) from Hadley Wickham's book Advanced R, 2nd edition.
+- [profiler](https://support.posit.co/hc/en-us/articles/218221837-Profiling-with-RStudio#using-the-profiler) tutorial.
+- [errorist](https://r-pkg.thecoatlessprofessor.com/errorist/index.html) package homepage.
+- [naniar](https://naniar.njtierney.com/) package homepage.
+- [skimr](https://docs.ropensci.org/skimr/) package homepage.
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.19 - Paul Van Ostaijen<br>
+Date: __26/09/2024__, van 10:00 tot 12:30<br>
+Subject: to be decided<br>
+(registration announced via DG_useR@inbo.be)
