@@ -105,7 +105,7 @@ class: left, top
 
 - `20240827_eel_Rhea.txt`, `20240827_eel_Amber.txt` and `20240827_eel_Emma.txt`: eels tagging data. Thanks, Pieterjan Verhelst and LifeWatch Flanders for providing us these data! Filenames are of course fictive :-)
 
-- `20240827_challenges.R`: R script with code to start with
+- `20240827_challenges.R`: R script with code to start with.
 
 ---
 class: left, top
@@ -139,8 +139,7 @@ Can AI tools help you to detect and solve bugs? YES. However, keep in mind these
 - providing a basic example can also improve the quality of the returned answer.
 
 <br>
-<small> __\* Note__: old school "googling" is at first instance a SEQUENTIAL approach. You surf among the links returned by the search browser and you start to read/apply the proposed solutions.
-
+<small><left>\* Old school "googling" is at first instance a SEQUENTIAL approach. You surf among the links returned by the search browser and you start to read/apply the proposed solutions.</left></small>
 ---
 class: left, top
 
@@ -149,7 +148,7 @@ class: left, top
 Do you know there is a new INBO working group dedicated to AI? It will explore and evaluate the AI needs of the INBO researchers and the AI tools we are already using. Are they good enough? Are they worth the money? How open are they? What about open data and ethical concerns? What about environmental concerns (energy consumption, CO2 emission)
 
 - A 3-month proof period has been launched for testing the AI tools INBO researchers would like to test.
-- INBO organised some info sessions already and workshops about AI and will continue to do it. Should we need a specific info session or workshop about **coding with AI**? Let's speak about it!
+- INBO organised some info sessions already and workshops about AI and will continue to do it. Do we need a specific info session or workshop about **coding with AI**? Let's speak about it!
 
 For more questions, please ask Hans, Aaike or other members of the AI workgroup.
 
@@ -268,7 +267,7 @@ class: center, middle
 Download cheatsheet [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240827_cheat_sheet_rstudio-ide.pdf)* or go to the [HTML version](https://rstudio.github.io/cheatsheets/html/rstudio-ide.html).
 
 <br>
-<small> __\* PDF cheatsheet is available in other 7 languages, e.g. French and Spanish. Go to https://rstudio.github.io/cheatsheets/html/rstudio-ide.html to download it.
+<small> \* PDF cheatsheet is available in other 7 languages, e.g. French and Spanish. Go to https://rstudio.github.io/cheatsheets/html/rstudio-ide.html to download it.</small>
 
 ---
 class: center, middle
@@ -276,11 +275,6 @@ class: center, middle
 https://rstudio.github.io/cheatsheets/html/rstudio-ide.html#debug-mode
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20240827/20240827_debug_mode_zoom_cheatsheet.png)
-
----
-class: center, middle
-
-![:scale 45%]({{ site.baseurl}}/assets/images/20240827/20240827_debug_mode_zoom_cheatsheet2.png)
 
 ---
 class: left, top
@@ -333,7 +327,7 @@ In RStudio: in **Debug pane** -> **On Error** -> **Error Inspector** and then cl
 In basic R:
 
 ```r
-options(error = "traceback") # trace the error back, better than options(error = "message")
+options(error = "traceback") # Trace the error back, better than options(error = "message")
 ```
 
 ---
@@ -451,7 +445,7 @@ if (date < today) stop("Date is too early");
 if (class input != numeric vector) stop("Invalid type of input: only numeric vectors allowed.")
 ```
 
-2. Assert statements to validate output at intermediate steps, e.g. output of 3rd party libraries that you use in your project.
+2. Assert statements to validate output at intermediate steps, e.g. output of third party libraries that you use in your project.
 
 ---
 class: left, top
@@ -461,7 +455,7 @@ class: left, top
 Example: apply defensive programming to the `custom_min()` function here below to avoid unexpected  behaviors:
 
 ```
-# customized `min()` function for NUMERIC(!) vectors
+# Customized `min()` function for NUMERIC(!) vectors
 # to avoid warning while calculating min() of empty vectors
 custom_min <- function(x) {
   if (length(x)>0) min(x) else NA
@@ -479,7 +473,7 @@ The package [assertthat](https://rdocumentation.org/packages/assertthat/versions
 
 ```
 library(assertthat)
-# customized `min()` function for NUMERIC(!) vectors
+# Customized `min()` function for NUMERIC(!) vectors
 # to avoid warning while calculating min() of empty vectors
 custom_min <- function(x) {
   # check x argument (assertion)
@@ -491,7 +485,7 @@ custom_min <- function(x) {
   if (length(x)>0) min(x) else NA
 }
 
-# only numeric input are allowed, error arises otherwise
+# Only numeric input are allowed, error arises otherwise
 custom_min(c("a", "b"))
 Error: Invalid type of input: only numeric vectors allowed.
 ```
@@ -587,7 +581,7 @@ class: left, top
 
 Some bugs are worth being shared with others: package developers, your team, all the R community! It will help future-you, it will help your colleagues, it will help others worldwide.
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20240827/20240827_share_debugging_stories.png)
+![:scale 50%]({{ site.baseurl}}/assets/images/20240827/20240827_share_debugging_stories.png)
 
 Source: https://wizardzines.com/comics/share-debugging-stories/
 
