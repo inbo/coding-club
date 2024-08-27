@@ -2,8 +2,6 @@ library(tidyverse)
 
 ## CHALLENGE 1
 
-# Use debug techniques to find the bug in the function evenOdd()
-
 #' Function evenOdd() takes an integer n and returns a list containing two integers
 #' that respectively indicate how many even and odd digits occur in n
 #'
@@ -29,18 +27,19 @@ evenOdd <- function(n) {
 
 ## CHALLENGE 2
 
-# Using debug techniques find what is going wrong in functions step() and steps()
-
 #' Function step() takes a positive integer:
 #' 886328712442992
 #'
 #' Write down a positive integer:
 #' 398473234
+#'
 #' Count up the number of even and odd digits, and the total number of digits:
 #' 4 5 9
+#' 
 #' String the digits of those three numbers together to make a new number:
 #' 459
-#' Return it as a number
+#' 
+#' Return it as a number.
 #' @examples
 #' step(398473234)
 #' 459
@@ -107,6 +106,8 @@ custom_min <- function(x) {
   # Function core follows
   if (length(x)>0) min(x) else NA
 }
+
+
 
 ## CHALLENGE 3
 
