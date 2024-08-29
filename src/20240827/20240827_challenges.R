@@ -27,19 +27,9 @@ evenOdd <- function(n) {
 
 ## CHALLENGE 2
 
-#' Function step() takes a positive integer:
-#' 886328712442992
+#' Function step() takes a positive integer, count up the number of even and
+#' odd digits, and the total number of digits and return it as a number.
 #'
-#' Write down a positive integer:
-#' 398473234
-#'
-#' Count up the number of even and odd digits, and the total number of digits:
-#' 4 5 9
-#' 
-#' String the digits of those three numbers together to make a new number:
-#' 459
-#' 
-#' Return it as a number.
 #' @examples
 #' step(398473234)
 #' 459
