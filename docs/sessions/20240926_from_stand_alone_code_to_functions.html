@@ -153,8 +153,9 @@ Functions are the building blocks of your data analysis: give your functions und
 ---
 class: left, top
 
-# Introduction: output of R functions
+# Introduction: multiple outputs?
 
+Can your recipe prepare different meals at the same time?
 Can a R function return multiple outputs?
 
 NO. R functions return only **one output**: `return(my_output)`
@@ -162,18 +163,16 @@ NO. R functions return only **one output**: `return(my_output)`
 But you can put your outputs (e.g. a data.frame and a plot) in a list. A named list will make everybody (future-you included) very happy: documentation begins by naming things :-)
 
 ```r
-library(tidyverse)
-my_summary_function <- function(df, x_colname, y_colname) {
-  df_prev <- head(df)
-  point_overview <- ggplot(df) + geom_point(aes(.data[[x_colname]], .data[[y_colname]]))
-  return(list(df_preview = df_prev, plot_overview = point_overview))
+prepare_doughs <- function(grains, yeast, water, salt) {
+  # code to generate `bread` and `focaccia`
+  bread <- grains + yeast + water + salt
+  focaccia <- grains + 1.5 * yeast + 0.7 * water + 2 * salt
+  return(list(bread = bread, focaccia = focaccia))
 }
 
-overview_mtcars_mpg_disp <- my_summary_function(df = mtcars,
-                                                x_colname = "mpg",
-                                                y_colname = "disp")
-overview_mtcars_mpg_disp$df_preview
-overview_mtcars_mpg_disp$plot_overview
+doughs <- prepare_doughs(20,1,2,3)
+doughs$bread
+doughs$focaccia
 ```
 
 ---
