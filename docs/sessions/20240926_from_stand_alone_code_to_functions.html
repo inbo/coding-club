@@ -1,0 +1,256 @@
+---
+layout: presentation
+title: From stand alone code to functions in R
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 26 SEPTEMBER 2024
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+
+01.19 Paul Van Ostaijen
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20240926/20240926_badge.png)
+
+---
+class: left, top
+
+# Introduction: coding is cooking
+
+Working with functions is like using a food processor (NL: keukenrobot). A **function** is like a **recipe**. And coding is cooking...
+
+- With a food processor, you can use preset recipes, but you can also create your own recipes.
+- Working with functions, you can use preset functions (`names()`, `length()`, `median()`, ...), but you can also create your own functions.
+
+Think to have a food processor here in front of you:
+- You can define your own recipe by defining the needed **ingredients**, the **actions** to perform and then save it for later use by giving it a **name**.
+- You can define your own function by defining the needed **input arguments**, the **code** to execute and then save it for later use by giving it a **name**.
+
+My recipe, ehum, function:
+
+```
+make_bread <- function(grains, yeast, water, salt) {
+    # code to generate `bread`.
+    # The code here can be easy (easy bread recipes do exist)
+    # or quite complex (complex bread recipes do exist too)
+    bread <- grains + yeast + water + salt
+    return(bread)
+}
+```
+
+
+---
+class: left, top
+
+# Introduction: coding is cooking
+
+- When ready, you can add ingredients to the food processor, select your own recipe, press `Play` and you will get the **food**.
+- When ready, you can pass input arguments to the function, call your own function, press `Enter` and you will get the **output**.
+
+
+You can use:
+- the same recipe with different ingredients
+- the same function with different input arguments
+
+```
+# Use the recipe with different ingredients
+bread1 <- make_bread(grains1, yeast1, water1, salt1)
+bread2 <- make_bread(grains2, yeast2, water2, salt2)
+```
+
+You can use:
+- the same ingredients with different recipes
+- the same input arguments with different functions
+
+```
+# Make savory pie dough with the same ingredients
+savory_pie_dough1 <- make_savory_pie_dough(grains1, yeast1, water1, salt1)
+# Make focaccia with the same ingredients
+focaccia1 <- make_focaccia(grains1, yeast1, water1, salt1)
+```
+
+
+---
+class: left, middle
+
+# My first function
+
+```r
+get_even_numbers <- function(numbers) {
+    # "do something" with `numbers` to generate an `output`
+    # example: `numbers` is a vector of numbers.
+    # Return the even numbers out of `numbers`
+    output <- numbers[numbers %%2 == 0]
+    return(output)
+}
+
+# Use the function
+input1 <- c(2, 5, 15)
+even1 <- get_even_numbers(input1)
+even1
+
+input2 <- c(1, 6, 9, 10, 12, 21)
+even2 <- get_even_numbers(input2)
+even2
+```
+
+---
+class: left, top
+
+# Introduction: When do we ABSOLUTELY need functions?
+
+If both these conditions are true:
+
+- you have to `"do something"` longer than one line of code
+- you need to `"do something"` at least for two different inputs
+
+
+---
+class: left, top
+
+# Introduction: When SHOULD we use functions?
+
+- the `"do something"` is actually a workflow: split it in (small) functions
+- the `"do something"` is very short (e.g. a one-line formula) but often used: putting it in a function will give it an understandable name and will avoid typos
+
+.center[![:scale 60%]({{ site.baseurl}}/assets/images/20240926/20240926_logical_process_from_just_code_to_functions.png)
+]
+
+
+---
+class: left, top
+
+# Introduction: good names
+
+Functions are the building blocks of your data analysis: give your functions understandable and short enough names. It's better for future-you, it's better for everybody.
+
+
+.center[![:scale 70%]({{ site.baseurl}}/assets/images/20240926/20240926_functions_as_building_blocks.jpg)
+]
+
+---
+class: left, top
+
+# Introduction: output of R functions
+
+Can a R function return multiple outputs?
+
+NO. R functions return only **one output**: `return(my_output)`
+
+But you can put your outputs (e.g. a data.frame and a plot) in a list. A named list will make everybody (future-you included) very happy: documentation begins by naming things :-)
+
+```r
+library(tidyverse)
+my_summary_function <- function(df, x_colname, y_colname) {
+  df_prev <- head(df)
+  point_overview <- ggplot(df) + geom_point(aes(.data[[x_colname]], .data[[y_colname]]))
+  return(list(df_preview = df_prev, plot_overview = point_overview))
+}
+
+overview_mtcars_mpg_disp <- my_summary_function(df = mtcars,
+                                                x_colname = "mpg",
+                                                y_colname = "disp")
+overview_mtcars_mpg_disp$df_preview
+overview_mtcars_mpg_disp$plot_overview
+```
+
+---
+class: center, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+
+---
+class: center, middle
+
+# Share your code during the coding session
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/htj9oDrNQX6NN15jToGmHQ?both and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/htj9oDrNQX6NN15jToGmHQ?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub folders [coding-club/data/20240926](https://github.com/inbo/coding-club/tree/master/data/20240926) and [coding-club/src/20240926](https://github.com/inbo/coding-club/tree/master/src/20240926)
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20201027")` to download the coding club material of October, 27 2020. If date is omitted, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+
+---
+class: left, top
+
+# Did you write a function useful for yourself and your colleagues?
+
+Share it by submitting it to [`inborutils`](https://github.com/inbo/inborutils) package.
+
+.center[![:scale 80%]({{ site.baseurl}}/assets/images/20240926/20240926_inborutils.png)]
+
+
+---
+class:left, top
+
+# Resources
+
+- Challenges solutions and video recording will be soon available.
+- Do you want to learn more about functions?  Get a more [formal framework](https://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/functions.pdf), go [in depth](http://adv-r.had.co.nz/Functions.html#function-arguments), do a check [under the hood](http://swcarpentry.github.io/swc-releases/2017.08/r-novice-inflammation/14-supp-call-stack/) or learn more about [programming with `dplyr`](https://dplyr.tidyverse.org/articles/programming.html).
+- The [INBO styleguide for R code](https://inbo.github.io/tutorials/tutorials/styleguide_r_code/).
+- The [B-Cubed software development guide](https://docs.b-cubed.eu/dev-guide/).
+- The [checklist](https://packages.inbo.be/checklist/index.html) package: a set of checks for R projects (and R packages).
+- The [usethis](https://usethis.r-lib.org/index.html) package: a workflow package, useful for both for R packages and non-package projects.
+- Some advices from [tidyverse style guide](https://style.tidyverse.org/documentation.html) can also be useful.
+- Packages [ROxygen2](https://roxygen2.r-lib.org/index.html) and [docstring](https://github.com/dasonk/docstring).
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.17 - Clara Peeters<br>
+Date: __29/10/2024__, van 10:00 tot 12:30<br>
+Subject: From stand alone functions to R packages <br>
+(registration announced via DG_useR@inbo.be)
