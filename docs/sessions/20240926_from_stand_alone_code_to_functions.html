@@ -222,21 +222,21 @@ If you have only this function, you are not allowed to prepare only bread, or on
 2. Use them to rewrite `make_doughs()`.
 
 <br>
-<small> \* Atomic = not divisible in smaller parts. This definition is still current in use even if in some ways outdated: atoms are divisible in smaller parts :-) </small>
+<small> \* Atomic = not divisible in smaller parts. Ok, atoms are divisible in smaller parts, but we are not in the atomic world :-) </small>
 
 ---
 class: left, top
 
 .center[![:scale 10%]({{ site.baseurl}}/assets/images/20240926/20240926_film.png)]
 
-# Antwerp's Unlikely Allies: Ladybeetles, Grasshoppers, and Data Science
+# The Antwerp trilogy: Ladybeetles, Grasshoppers, and Data Science
 
 Once upon a time there was a biologist, Dorothy*. She received in January 2011 observations of the asian ladybeetle (_Harmonia axyridis_) collected in the surroundings of Antwerp. These observations are stored in [20240926_harmonia_axyridis_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20240926/20240926_harmonia_axyridis_2010.txt). She wrote some code to read the observations, do some data wrangling and plot the results. You can find the code in [20240926_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20240926/20240926_challenges.R).
 
 What seemed to be a one-shot anlysis, becomes very soon something more: she receives a similar file from another contractor containing observations of the bow-winged grasshopper (_Chorthippus biguttulus_) collected in the same area: [20240926_chorthippus_biguttulus_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20240926/20240926_chorthippus_biguttulus_2010.txt).
 
 <br>
-<small> __\* Dorothy is a tribute to [Dorothy Crowfoot Hodgkin](https://en.wikipedia.org/wiki/Dorothy_Hodgkin), a British chemist who won the Nobel Prize in Chemistry in 1964. She was a pioneer in the field of X-ray crystallography to study interesting biological molecules. Among others, she discovered the structure of the vitamine B12. </small>
+<small> __\* The fictive Dorothy character is a tribute to [Dorothy Crowfoot Hodgkin](https://en.wikipedia.org/wiki/Dorothy_Hodgkin), a British chemist who won the Nobel Prize in Chemistry in 1964. She was a pioneer in the field of X-ray crystallography to study interesting biological molecules. Among others, she discovered the structure of the vitamine B12. </small>
 
 
 ---
@@ -244,14 +244,20 @@ class: left, top
 
 .center[![:scale 10%]({{ site.baseurl}}/assets/images/20240926/20240926_film.png)]
 
-# Antwerp's Unlikely Allies: Ladybeetles, Grasshoppers, and Data Science
+# The Antwerp trilogy: Ladybeetles, Grasshoppers, and Data Science
 
 Dorothy also learns that she will have to redo the same analysis in the future, for sure on observations of the Asian ladybeetle, [20240926_harmonia_axyridis_2011.txt](https://github.com/inbo/coding-club/blob/master/data/20240926/20240926_harmonia_axyridis_2011.txt)
 
 And, she is afraid, new data of bow-winged grasshopper will find her sooner or later. I think you can find yourself in the role of Dorothy.
 
-Before starting, a **best practice reminder**: write the functions in a **separate file**.
-You can call it `20240926_functions.R`. You can use your functions in the challenge file by first *sourcing* this file, e.g. `source("./src/20240926/20240926_functions.R")` or clikcing the "Source" button in RStudio.
+
+---
+class: left, top
+
+# Best practices
+
+Before starting, a **best practice** reminder: write the functions in a **separate file**.
+You can call it `20240926_functions.R`. This function should contain ONLY the functions. You can use your functions in the challenge file by first *sourcing* this file, e.g. `source("./src/20240926/20240926_functions.R")` or clikcing the "Source" button in RStudio.
 
 
 ---
@@ -303,7 +309,7 @@ Better an error than a wrong result, right? So, please, be careful!
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
-# Challenge 2A - Defaults
+# Challenge 2: defaults and arguments
 
 How does Dorothy proceed to write the following functions?
 
@@ -377,7 +383,7 @@ docstring(make_bread) # or just
 ---
 class: left, top
 
-# Challenge 3
+# Challenge  3: automatize the workflow
 
 Now that we have all blocks, automatize the entire workflow by creating a macrofunction called analyse_obs() embedding all steps developed in the previous challenges. Think about which arguments you need as input. Return a named list containing:
 
