@@ -82,6 +82,7 @@ grains <- 20
 yeast <- 1
 water <- 2
 salt <- 3
+
 # Add ingredients in the food processor = Pass input values to arguments of the function
 bread <- make_bread(grains, yeast, water, salt) # Press `Enter`
 bread
@@ -279,10 +280,11 @@ And, she is afraid, new data of bow-winged grasshopper will find her sooner or l
 ---
 class: left, top
 
-# Best practices
+# Best practices and suggestions
 
-Before starting, a **best practice** reminder: write the functions in a **separate file**.
-You can call it `20240926_functions.R`. This function should contain ONLY the functions. You can use your functions in the challenge file by first *sourcing* this file, e.g. `source("./src/20240926/20240926_functions.R")` or clikcing the "Source" button in RStudio.
+- Best practice: write the functions in a **separate file**. You can call it `20240926_functions.R`. Put only the functions in this file!
+- Best practice: **source** this file, e.g. run `source("./src/20240926/20240926_functions.R")` or just click the "Source" button in RStudio.
+- Suggestion: leave the given script (`20240926_challenges.R`) as it is. Create a new file, e.g. `20240926_workflow.R` where you can put your code which will make use of the functions.
 
 
 ---
@@ -425,6 +427,17 @@ class: left, top
 Share it by submitting it to [`inborutils`](https://github.com/inbo/inborutils) package. This package is a collection of functions that are useful for INBO data scientists. You can find there functions for data wrangling, data visualization, data analysis, and more. The package is maintained by INBO (Hans Vancalster, BMK team).
 
 .center[![:scale 80%]({{ site.baseurl}}/assets/images/20240926/20240926_inborutils_homepage.png)]
+
+
+---
+class: left, top
+
+# The R tip package of the month: Floris' choice
+
+**Keep R weird**: most of you have seen the email of Floris about a very inspiring R key note talk of Kelly Bodwin at the [useR! 2024](https://userconf2024.sched.com/) conference.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KOQBfC1WPwM?si=gITorL71h8s6ttO_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 
 ---
