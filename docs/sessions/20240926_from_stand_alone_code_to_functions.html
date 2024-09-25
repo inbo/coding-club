@@ -46,8 +46,14 @@ Working with functions is like using a food processor (NL: keukenrobot). A **fun
 - Working with functions, you can use preset functions (`names()`, `length()`, `median()`, ...), but you can also create your own functions.
 
 Think to have a food processor here in front of you:
-- You can define your own recipe by defining the needed **ingredients**, the **actions** to perform and then save it for later use by giving it a **name**.
-- You can define your own function by defining the needed **input arguments**, the **code** to execute and then save it for later use by giving it a **name**.
+- You can define your own **recipe** by defining the needed **ingredients**, the **actions** to perform and then save it for later use by giving it a **name**.
+- You can define your own **function** by defining the needed **input arguments**, the **code** to execute and then save it for later use by giving it a **name**.
+
+
+---
+class: left, top
+
+# Introduction: coding is cooking
 
 My recipe, ehum, function:
 
@@ -68,15 +74,31 @@ class: left, top
 # Introduction: coding is cooking
 
 - When ready, you can add ingredients to the food processor, select your own recipe, press `Play` and you will get the **food**.
-- When ready, you can pass input arguments to the function, call your own function, press `Enter` and you will get the **output**.
+- When ready, you can pass inputs to the function, call your own function, press `Enter` and you will get the **output**.
 
+```
+# Prepare ingredients on the table = Define input values
+grains <- 20
+yeast <- 1
+water <- 2
+salt <- 3
+# Add ingredients in the food processor = Pass input values to arguments of the function
+bread <- make_bread(grains, yeast, water, salt) # Press `Enter`
+bread
+```
+
+
+---
+class: left, top
+
+# Introduction: coding is cooking
 
 You can use:
 - the same recipe with different ingredients
 - the same function with different input arguments
 
 ```
-# Use the recipe with different ingredients
+# Use the recipe with different (amount of) ingredients
 bread1 <- make_bread(grains1, yeast1, water1, salt1)
 bread2 <- make_bread(grains2, yeast2, water2, salt2)
 ```
@@ -123,8 +145,11 @@ class: left, top
 
 Functions are the building blocks of your data analysis: give your functions understandable and short enough names. It's better for future-you, it's better for everybody. Naming things is an art, a special skill: for some people is a job itself!
 
-.center[![:scale 70%]({{ site.baseurl}}/assets/images/20240926/20240926_functions_as_building_blocks.jpg)
-]
+From the B-Cubed software development guide (section [Naming functions](https://docs.b-cubed.eu/dev-guide/#r-function-naming)):
+
+_Use **verbs** to name functions whenever possible, this is a clear indication that a function does something, in contrast to other objects. For more guidance please refer to the tidyverse style guide [section on functions](https://style.tidyverse.org/functions.html#naming). Keep in mind that the name of the function should describe what it does as closely as possible._
+
+_If you find this difficult, consider if your function isn’t doing too much. Ideally a function should only do one thing, and only return one thing._
 
 
 ---
@@ -203,7 +228,7 @@ class: left, top
 
 # Challenge 0
 
-Let's start immediately with a small but hopefully insightful challenge. In the intro we wrote the function `make_doughs()`:
+Let's warm up. In the intro we wrote the function `make_doughs()`:
 
 ```
 make_doughs <- function(grains, yeast, water, salt) {
@@ -227,7 +252,7 @@ If you have only this function, you are not allowed to prepare only bread, or on
 ---
 class: left, top
 
-.center[![:scale 10%]({{ site.baseurl}}/assets/images/20240926/20240926_film.png)]
+.center[![:scale 5%]({{ site.baseurl}}/assets/images/20240926/20240926_film.png)]
 
 # The Antwerp trilogy: Ladybeetles, Grasshoppers, and Data Science
 
@@ -242,7 +267,7 @@ What seemed to be a one-shot anlysis, becomes very soon something more: she rece
 ---
 class: left, top
 
-.center[![:scale 10%]({{ site.baseurl}}/assets/images/20240926/20240926_film.png)]
+.center[![:scale 5%]({{ site.baseurl}}/assets/images/20240926/20240926_film.png)]
 
 # The Antwerp trilogy: Ladybeetles, Grasshoppers, and Data Science
 
@@ -315,13 +340,13 @@ How does Dorothy proceed to write the following functions?
 
 1. `clean_data()`: function to return the cleaned data.frame without suspected or not enough precise observations (step 2). Input arguments:
     - `df`: data.frame with observations
-    -  `max_coord_uncertain`: maximum of `coordinateUncertaintyInMeters` (numeric), default value as in script.
-    - `issues_to_discard`: issues whose obs have to be filtered out (character vector), default value as in script.
-    - `occurrenceStatus_to_discard`: the `occurrenceStatus` values whose obs have to be filtered out (character vector), default value as in script.
+    -  `max_coord_uncertain`: maximum of `coordinateUncertaintyInMeters` allowed (numeric). Default value as in script.
+    - `issues_to_discard`: issues whose obs have to be removed (character). Default value as in script.
+    - `occurrenceStatus_to_discard`: the `occurrenceStatus` values whose obs have to be removed (character). Default value as in script.
 
 2. `calc_grid_cell()`:  function to return the input data.frame with an extra column containing the cell code (step 3). Allow users to specify different cell sizes (lat/lon). Default values as in script. How to deal with data.frames where lat/lon columns are named differently?
 
-3. `calc_n_obs_ind()`: function to calculate the number of observations and individuals in each grid cell (step 4)
+3. `calc_n_obs_ind()`: function to calculate the number of observations and individuals in each grid cell (step 4).
 
 4. `plot_distr_cells()`: function to create a histogram showing the cells distribution for both number of observations and number of individuals (step 5). Allow the user to choose the histogram binwidth. Default value as in script.
 
@@ -415,6 +440,7 @@ class:left, top
 - Packages [Roxygen2](https://roxygen2.r-lib.org/index.html) and [docstring](https://github.com/dasonk/docstring).
 - The [checklist](https://packages.inbo.be/checklist/index.html) package: a set of checks for R projects and R packages.
 - The [usethis](https://usethis.r-lib.org/index.html) package: a workflow package, useful for both for R packages and projects.
+
 
 ---
 class: center, middle
