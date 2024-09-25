@@ -345,11 +345,8 @@ How does Dorothy proceed to write the following functions?
     -  `max_coord_uncertain`: maximum of `coordinateUncertaintyInMeters` allowed (numeric). Default value as in script.
     - `issues_to_discard`: issues whose obs have to be removed (character). Default value as in script.
     - `occurrenceStatus_to_discard`: the `occurrenceStatus` values whose obs have to be removed (character). Default value as in script.
-
 2. `calc_grid_cell()`:  function to return the input data.frame with an extra column containing the cell code (step 3). Allow users to specify different cell sizes (lat/lon). Default values as in script. How to deal with data.frames where lat/lon columns are named differently?
-
 3. `calc_n_obs_ind()`: function to calculate the number of observations and individuals in each grid cell (step 4).
-
 4. `plot_distr_cells()`: function to create a histogram showing the cells distribution for both number of observations and number of individuals (step 5). Allow the user to choose the histogram binwidth. Default value as in script.
 
 
@@ -422,9 +419,9 @@ Now that we have all blocks, automatize the entire workflow by creating a macrof
 ---
 class: left, top
 
-# Did you write a function useful for yourself and your colleagues?
+# The package of the month: inborutils
 
-Share it by submitting it to [`inborutils`](https://github.com/inbo/inborutils) package. This package is a collection of functions that are useful for INBO data scientists. You can find there functions for data wrangling, data visualization, data analysis, and more. The package is maintained by INBO (Hans Vancalster, BMK team).
+Did you write a function useful for yourself and your colleagues? Share it by submitting it to [`inborutils`](https://github.com/inbo/inborutils) package. This package is a collection of functions that are useful for INBO data scientists. You can find there functions for data wrangling, data visualization, data analysis, and more. The package is maintained by INBO (Hans Vancalster, BMK team).
 
 .center[![:scale 80%]({{ site.baseurl}}/assets/images/20240926/20240926_inborutils_homepage.png)]
 
