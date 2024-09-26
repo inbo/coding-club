@@ -100,8 +100,8 @@ You can use:
 
 ```
 # Use the recipe with different (amount of) ingredients
-bread1 <- make_bread(grains1, yeast1, water1, salt1)
-bread2 <- make_bread(grains2, yeast2, water2, salt2)
+bread1 <- make_bread(grains = grains1, yeast = yeast1, water = water1, salt = salt1)
+bread2 <- make_bread(grains = grains2, yeast = yeast2, water = water2, salt = salt2)
 ```
 
 You can use:
@@ -173,7 +173,7 @@ make_doughs <- function(grains, yeast, water, salt) {
   return(doughs)
 }
 
-doughs <- make_doughs(20,1,2,3)
+doughs <- make_doughs(grains = 20, yeast = 1, water = 2, salt = 3)
 doughs$bread
 > 26
 doughs$focaccia
@@ -297,9 +297,9 @@ class: left, top
 gets the observations of _Chorthippus biguttulus_. Can she write a function called
 `get_obs_2010()` which takes
 as argument a species (e.g. `"Harmonia axyridis"`) and returns the observations
-of 2010 as a data.frame?
+of 2010 as a data.frame? (Step 1)
 
-2. It's January 2012. Dorothy gets the observations of Harmonia axyridis collected in 2011. She is wise so she is going to change the function she wrote the year before by renaming it `get_obs()` and adding `year` as extra argument. How does she proceed?
+2. It's January 2012. Dorothy gets the observations of Harmonia axyridis collected in 2011. She is wise so she is going to change the function she wrote the year before by renaming it `get_obs()` and adding `year` as extra argument. How does she proceed? (Step 1)
 
 
 ---
