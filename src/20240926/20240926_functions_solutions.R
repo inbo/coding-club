@@ -6,6 +6,29 @@ library(tidyr)
 library(assertthat)
 
 
+# CHALLENGE 0 functions
+
+make_bread <- function(grains, yeast, water, salt) {
+  # Code to generate `bread`
+  bread <- grains + yeast + water + salt
+  return(bread)
+}
+
+make_focaccia <- function(grains, yeast, water, salt) {
+  # Code to generate `focaccia`
+  focaccia <- grains + 1.5 * yeast + 0.7 * water + 2 * salt
+  return(focaccia)
+}
+
+make_doughs <- function(grains, yeast, water, salt) {
+  # Function to generate `bread`
+  bread <- make_bread(grains, yeast, water, salt)
+  # Function to generate `bread`
+  focaccia <- make_focaccia(grains, yeast, water, salt)
+  doughs <- list(bread = bread, focaccia = focaccia)
+  return(doughs)
+}
+
 # CHALLENGE 1 functions
 
 get_obs_2010 <- function(species) {
@@ -172,7 +195,7 @@ plot_distr_cells <- function(df, bin_width = 5) {
 }
 
 
-## CHALLENGE 3
+## CHALLENGE 3 function
 
 #' Automatize the entire workflow by creating a macrofunction called analyse_obs() embedding all steps developed in the previous challenges. Think about which arguments you need as input. Return a named list containing:
 #' - The data.frame as returned by calc_n_obs_ind()

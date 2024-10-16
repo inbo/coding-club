@@ -10,6 +10,20 @@
 #' function solutions are saved in `20240926_functions_solutions.R`
 source("./src/20240926/20240926_functions_solutions.R")
 
+
+## CHALLENGE 0
+
+# Use `make_doughs() as defined in the `20240926_functions_solutions.R` file
+# to create the doughs
+doughs1 <- make_doughs(grains = 20, yeast = 1, water = 2, salt = 3)
+doughs1$bread
+doughs1$focaccia
+
+doughs2 <- make_doughs(grains = 10, yeast = 0.5, water = 1, salt = 1)
+doughs2$bread
+doughs2$focaccia
+
+
 ## CHALLENGE 1.1
 
 ha_2010 <- get_obs_2010(species = "Harmonia axyridis")
