@@ -3,4 +3,4 @@ logo: assets/images/coding_club_logo.png
 description:
 show_downloads: false
 theme: jekyll-theme-minimal
-baseurl: coding-club.inbo.be
+baseurl: /coding-club.inbo.be
