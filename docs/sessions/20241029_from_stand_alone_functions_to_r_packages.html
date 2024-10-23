@@ -43,7 +43,7 @@ class: left, top
 
 - R is your kitchen
 - R console is your food processor.
-- Functions are like recipes: they take inputs (ingredients), do something and return an output (meal). Functions are the building blocks of your data analysis.
+- Functions are like recipes: they tell you how to take inputs (ingredients), process them in some way and return an output (food).
 
 ---
 class: left, top
@@ -94,7 +94,7 @@ class: left, top
 
 Answer is NO.
 
-- One recipe = one meal
+- One recipe = one food
 - One function = one output
 
 Still, the output can be a named list containing multiple elements.
@@ -102,9 +102,9 @@ Still, the output can be a named list containing multiple elements.
 ---
 class: left, top
 
-# Recap: how to source your stand alone functions
+# Recap: how to load your stand alone functions?
 
-Separate the functions from the code making use of them. Save the functions in a R file, e.g. `my_functions.R`. This allows you to **SOURCE** this file, e.g. run `source("make_meals.R")` or just click the "Source" button in RStudio.
+Separate the functions from the code which calls them. Save the functions in a R file, e.g. `make_meals.R`. This allows you to **SOURCE** this file, e.g. by running `source("make_meals.R")` or just by clicking the "Source" button in RStudio.
 
 
 .center[![:scale 100%]({{ site.baseurl}}/assets/images/20241029/20241029_source_functions.png)]
@@ -117,7 +117,7 @@ class: left, top
 - Use the `roxygen2` package to document your functions. This will help future-you to understand what the function does, what the arguments are, what the output is, and how to use the function.
 - You can create a roxygen documentation Skeleton via `Code` -> `Insert Roxygen Skeleton`. You will need this today as well!
 
-.center[![:scale 80%]({{ site.baseurl}}/assets/images/20241029/20241029_insert_skeleton_documentation.png)]
+.center[![:scale 60%]({{ site.baseurl}}/assets/images/20241029/20241029_insert_skeleton_documentation.png)]
 
 
 ---
@@ -188,7 +188,7 @@ You will get a new pop-up window (see screenshot right) with the following optio
 - Create project as subdirectory of: place it where you prefer, e.g. in your `src/20241029/` subdirectory.*
 - Yes, select `"Open in new session"`, always a good idea.
 
-![:scale 70%]({{ site.baseurl}}/assets/images/20241029_new_project_wizard_rstudio.png)
+![:scale 70%]({{ site.baseurl}}/assets/images/20241029/20241029_new_project_wizard_rstudio.png)
 
 <br>
 <small> __\*\* Note__: you will get a warning if you already have a coding club R project in the root folder. This happens because you are creating a new R project within the existing one. You can still proceed and ignoring the warning. Of course, this should be avoided, but storing all our R packages today in the coding club src/20241029/ directory will help us to find them back.</small>
