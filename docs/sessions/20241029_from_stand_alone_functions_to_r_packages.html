@@ -176,22 +176,61 @@ You can download the material of today:
 ---
 class: left, top
 
-# Challenge 0 - How to start a Package
+# From functions to packages
 
-There are oh so many ways to start a R package. Let's start with this one provided by RStudio!
+- A package is a collection of (documented) functions.
+- A package is a very good way to organize and share your functions.
 
-Go to `File` -> `New Project` -> `New Directory` -> `R package using devtools` (see screenshot left)
+If a function is like a recipe, a package is like a well-organised bundle of recipes, a cookbook!
 
-You will get a new pop-up window (see screenshot right) with the following options:
-
-- Directory name: typically the name of the package. Let's choose `fiRst`, as it is our first R package :-)
-- Create project as subdirectory of: place it where you prefer, e.g. in your `src/20241029/` subdirectory.*
-- Yes, select `"Open in new session"`, always a good idea.
-
-![:scale 70%]({{ site.baseurl}}/assets/images/20241029/20241029_new_project_wizard_rstudio.png)
+.center[![:scale 60%]({{ site.baseurl}}/assets/images/20241029/20241029_cookbook.png)]
 
 <br>
-<small> __\*\* Note__: you will get a warning if you already have a coding club R project in the root folder. This happens because you are creating a new R project within the existing one. You can still proceed and ignoring the warning. Of course, this should be avoided, but storing all our R packages today in the coding club src/20241029/ directory will help us to find them back.</small>
+<small>[Picture](https://pixabay.com/nl/photos/kookboek-oud-recepten-voorbereiding-982661/) by [Petra](https://pixabay.com/nl/users/ptra-359668/) on [pixabay](https://pixabay.com/en/).</small>
+
+
+---
+class: left, top
+
+# Challenge 0 - How to create a R package
+
+Let's start a R package in RStudio!
+
+Go to `File` -> `New Project` -> `New Directory` -> `R package using devtools` (see screenshot).
+
+.center[![:scale 80%]({{ site.baseurl}}/assets/images/20241029_select_project_type.png)]
+
+---
+class: left, top
+
+# Challenge 0 - How to create a R package
+
+In the new pop-up window (see screenshot) choose:
+
+- `Directory name`: the name of the package, e.g. `fiRst`
+- `Create project as subdirectory of`: place it where you prefer, e.g. in your `src/20241029/` subdirectory.*
+- Yes, select `"Open in new session"`, always a good idea.
+
+.center[![:scale 80%]({{ site.baseurl}}/assets/images/20241029/20241029_create_project.png)]
+
+---
+class: left, top
+
+# Challenge 0 - How to install your package
+
+Stand alone functions were _loaded_ by `Source` button (or `source()` commando). A package needs to be _installed_ and _loaded_. To do so, you have a pane in RStudio called `Build`.
+
+- Click on the `Build` pane.
+- Click on `Install` (see screenshot below). It will install the package, restart R and load the package (run `library(fiRst)`) automatically.
+
+.center[![:scale 60%]({{ site.baseurl}}/assets/images/20241029/20241029_build_install.png)]
+
+
+---
+class: left, top
+
+Every RStudio project linked to a package has a `DESCRIPTION` file. This file contains metadata about the package, including the package name, version, author, and dependencies (packages yours depends on).
+
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
