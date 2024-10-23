@@ -1,0 +1,244 @@
+---
+layout: presentation
+title: From stand alone functions to R packages
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 29 OCTOBER 2024
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+
+01.17 - Clara Peeters
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20241029/20241029_badge.png)
+
+
+
+---
+class: left, top
+
+# Recap: coding is cooking
+
+- R is your kitchen
+- R console is your food processor.
+- Functions are like recipes: they take inputs (ingredients), do something and return an output (meal). Functions are the building blocks of your data analysis.
+
+---
+class: left, top
+
+# Recap: define the function
+
+- Define the recipe to make bread in the food processor settings
+- Define the function `make_bread()`
+
+```
+make_bread <- function(grains, yeast, water, salt) {
+    # Code to generate `bread`.
+    # The code here can be easy (easy bread recipes do exist)
+    # or quite complex (complex bread recipes do exist too)
+    bread <- grains + yeast + water + salt
+    return(bread)
+}
+```
+
+---
+class: left, top
+
+# Recap: use the function
+
+- When ready, you can add ingredients to the food processor, select your own recipe, press `Play` and you will get the **food**.
+- When ready, you can pass inputs to the function, call your own function, press `Enter` and you will get the **output**.
+
+```
+# Prepare ingredients on the table = Define input values
+g <- 20
+y <- 1
+w <- 2
+s <- 3
+# Add ingredients in the food processor = Pass input values to arguments of the function
+bread <- make_bread(
+  grains = g,
+  yeast = y,
+  water = w,
+  salt = s
+) # Press `Enter`
+bread
+```
+
+---
+class: left, top
+
+# Recap: multiple outputs?
+
+Answer is NO.
+
+- One recipe = one meal
+- One function = one output
+
+Still, the output can be a named list containing multiple elements.
+
+---
+class: left, top
+
+# Recap: how to source your stand alone functions
+
+Separate the functions from the code making use of them. Save the functions in a R file, e.g. `my_functions.R`. This allows you to **SOURCE** this file, e.g. run `source("make_meals.R")` or just click the "Source" button in RStudio.
+
+
+.center[![:scale 100%]({{ site.baseurl}}/assets/images/20241029/20241029_source_functions.png)]
+
+---
+class: left, top
+
+# Recap: document your functions
+
+- Use the `roxygen2` package to document your functions. This will help future-you to understand what the function does, what the arguments are, what the output is, and how to use the function.
+- You can create a roxygen documentation Skeleton via `Code` -> `Insert Roxygen Skeleton`.
+
+.center[![:scale 80%]({{ site.baseurl}}/assets/images/20241029/20241029_insert_skeleton_documentation.png)]
+
+
+---
+class: left, top
+
+# Recp: style your functions
+
+- [INBO Styleguide for R code](https://inbo.github.io/tutorials/tutorials/styleguide_r_code/): the official guide followed by us at INBO.
+- The [tidyverse style guide](https://style.tidyverse.org/documentation.html): a widely used and generic enough guide. All tidyverse packcages follow it.
+- The [B-cubed software development guide](https://docs.b-cubed.eu/dev-guide/) mostly written by our colleague, Pieter. A very good guide covring all different aspects of software development (for both R and Python) also focussed on metadata.
+
+---
+class: center, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+
+---
+class: center, middle
+
+# Share your code during the coding session
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/cbAR638FR7CQJmoP7rSgdA?both and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/cbAR638FR7CQJmoP7rSgdA?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub folders [coding-club/data/20241029](https://github.com/inbo/coding-club/tree/master/data/20241029) and [coding-club/src/20241029](https://github.com/inbo/coding-club/tree/master/src/20241029)
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20201027")` to download the coding club material of October, 27 2020. If date is omitted, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+
+---
+class: left, top
+
+# Challenge 0
+
+
+
+
+
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+
+
+
+---
+class: left, top
+
+# Intermezzo
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+
+---
+class: left, top
+
+# Challenge  3
+
+
+---
+class: left, top
+
+# The package of the month
+
+
+
+---
+class:left, top
+
+# Resources
+
+- Challenges solutions and the edited video recording will be available soon.
+- The [INBO styleguide for R code](https://inbo.github.io/tutorials/tutorials/styleguide_r_code/).
+- The [B-Cubed software development guide](https://docs.b-cubed.eu/dev-guide/).
+- Some advices from [tidyverse style guide](https://style.tidyverse.org/documentation.html) can also be useful.
+- Packages [Roxygen2](https://roxygen2.r-lib.org/index.html) and [docstring](https://github.com/dasonk/docstring).
+- The [checklist](https://packages.inbo.be/checklist/index.html) package: a set of checks for R projects and R packages.
+- The [usethis](https://usethis.r-lib.org/index.html) package: a workflow package, useful for both R packages and projects.
+- The [devtools](https://devtools.r-lib.org/index.html) package: a package development package.
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.23 - Léon Stynen <br>
+Date: __28/11/2024__, van 10:00 tot 12:30<br>
+Subject: To be decided <br>
+(registration announced via DG_useR@inbo.be)
