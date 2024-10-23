@@ -115,7 +115,7 @@ class: left, top
 # Recap: document your functions
 
 - Use the `roxygen2` package to document your functions. This will help future-you to understand what the function does, what the arguments are, what the output is, and how to use the function.
-- You can create a roxygen documentation Skeleton via `Code` -> `Insert Roxygen Skeleton`.
+- You can create a roxygen documentation Skeleton via `Code` -> `Insert Roxygen Skeleton`. You will need this today as well!
 
 .center[![:scale 80%]({{ site.baseurl}}/assets/images/20241029/20241029_insert_skeleton_documentation.png)]
 
@@ -176,13 +176,22 @@ You can download the material of today:
 ---
 class: left, top
 
-# Challenge 0
+# Challenge 0 - How to start a Package
 
+There are oh so many ways to start a R package. Let's start with this one provided by RStudio!
 
+Go to `File` -> `New Project` -> `New Directory` -> `R package using devtools` (see screenshot left)
 
+You will get a new pop-up window (see screenshot right) with the following options:
 
+- Directory name: typically the name of the package. Let's choose `fiRst`, as it is our first R package :-)
+- Create project as subdirectory of: place it where you prefer, e.g. in your `src/20241029/` subdirectory.*
+- Yes, select `"Open in new session"`, always a good idea.
 
+![:scale 70%]({{ site.baseurl}}/assets/images/20241029_new_project_wizard_rstudio.png)
 
+<br>
+<small> __\*\* Note__: you will get a warning if you already have a coding club R project in the root folder. This happens because you are creating a new R project within the existing one. You can still proceed and ignoring the warning. Of course, this should be avoided, but storing all our R packages today in the coding club src/20241029/ directory will help us to find them back.</small>
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
