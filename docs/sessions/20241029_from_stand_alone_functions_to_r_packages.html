@@ -180,13 +180,13 @@ Go to https://hackmd.io/cbAR638FR7CQJmoP7rSgdA?both and start by adding your nam
 ---
 class: left, top
 
-# Download data and code
+# Download code
 
-You can download the material of today:
+You can download the material of today (only code):
 
 - automatically via `inborutils::setup_codingclub_session()`*
 
-- manually** from GitHub folders [coding-club/data/20241029](https://github.com/inbo/coding-club/tree/master/data/20241029) and [coding-club/src/20241029](https://github.com/inbo/coding-club/tree/master/src/20241029)
+- manually** from GitHub folder [coding-club/src/20241029](https://github.com/inbo/coding-club/tree/master/src/20241029)
 
 <br>
 <small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20201027")` to download the coding club material of October, 27 2020. If date is omitted, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
@@ -366,7 +366,7 @@ Follow the section ["Using testthat in practise""](https://docs.b-cubed.eu/dev-g
 ---
 class: left, top
 
-# Challenge  3: data and documentation
+# Challenge  3B: data and documentation
 
 1. A package has sometimes a dummy dataset to show how the functions work. This dataset is (lazily) loaded when the package is loaded. Add the dummy data.frame `ingredients` provided in `20241029_challenges.R`, section "Challenge 3", to the `bRead` package. Document it as well. Hint: see Chapter [Data](https://r-pkgs.org/data.html), in particular the very first section, 7.1, and 7.1.2.
 2. Documenting is sometimes more than just writing a function documentation. Sometimes you need to add something more complex, e.g. a workflow. This can be done by adding a **vignette**. A vignette is a `.Rmd` file. Create a vignette with title "Bread is the answer" via usethis. You can use `bread_is_the_answer` as filename. Hint: cheatsheet, 2nd page.
