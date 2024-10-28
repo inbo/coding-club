@@ -190,6 +190,15 @@ If a function is like a recipe, a package is like a well-organised bundle of rec
 
 
 ---
+class: center, middle
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20241029/20241029_package-development_cheatsheet.png.png)
+Download cheatsheet [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20241029_package-development.pdf)* or go to the [HTML version](https://rstudio.github.io/cheatsheets/html/package-development.html).
+
+<br>
+<small><left> \* PDF cheatsheet is available in other 6 languages, e.g. [Dutch](https://rstudio.github.io/cheatsheets/translations/dutch/package-development_nl.pdf) and [Italian](https://rstudio.github.io/cheatsheets/translations/italian/package-development_it.pdf).</left></small>
+
+---
 class: left, top
 
 # Challenge 0 - How to create a R package
@@ -216,12 +225,12 @@ In the new pop-up window choose:
 ---
 class: left, top
 
-# Challenge 0 - How to install your package
+# Challenge 0 - How to install a R package?
 
-Stand alone functions were _loaded_ by `Source` button (or `source()` commando). A package needs to be _installed_ and _loaded_. To do so, you have a pane in RStudio called `Build`.
+Stand alone functions ae _loaded_ by `Source` button (or `source()` commando). A package needs to be _installed_ and _loaded_. To do so, you have a pane in RStudio called `Build`.
 
 - Click on the `Build` pane.
-- Click on `Install` (see screenshot below). It will install the package, restart R and load the package (run `library(fiRst)`) automatically.
+- Click on `Install`: it will install the package, restart R and load the package (run `library(fiRst)`) automatically.
 
 ![:scale 60%]({{ site.baseurl}}/assets/images/20241029/20241029_build_install.png)
 
@@ -229,28 +238,56 @@ Stand alone functions were _loaded_ by `Source` button (or `source()` commando).
 ---
 class: left, top
 
-Every RStudio project linked to a package has a `DESCRIPTION` file. This file contains metadata about the package, including the package name, version, author, and dependencies (packages yours depends on).
-
-
----
-background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
-class: left, top
-
 # Challenge 1
 
+1. As any book, also a cookbook has more than just a title: it has an author, a short description and important **metadata**, e.g. publisher and IBAN number.
+Every R package has an essential file for this: `DESCRIPTION`. It contains metadata about the package, including the package name, version, author, and dependencies (packages yours depends on). Open it and edit it. Set yourself as **aut**hor and **cre**ator. About license, choose the `MIT` license or the  `GPL-3` license.*
+2. Installing is one thing. Another important operation is checking your package. It helps you to detect issues with your package. Click on `Check` in the `Build` pane. What do you see?
+3. Typically a cookbook has at least one recipe :-) Well, packages have at least one function. Our package? Not yet :-) R files with functions `MUST` be placed in the `./R` folder. Place the functions `make_bread()` and `make_focaccia()` in `./R` folder. Best practice: one function = one file, and `file_name` = `function_name`.
+4. Try to install your package once again. Can you use your new functions? Try to find why and solve the issue. Hint: documentation is more than just a nice-to-have.
 
 
+![:scale 60%]({{ site.baseurl}}/assets/images/20241029/20241029_check.png)
+
+<br>
+<small> \* For more information about software dedicated licenses, check the [choosealicense.com](https://choosealicense.com/) website. The proposed licenses are two open licenses typically used for code at INBO.  </small>
 
 ---
 class: left, top
 
-# Intermezzo
+# Intermezzo 1 - recap
+
+We learned three important functions of the devtools package. They do a lot of things for you:
+- `devtools::install()` is the commando behind the button `Install` in the Build pane to install the package.
+- `devtools::check()` is the commando behind the button `Check` in the Build pane to check the package.
+- `devtools::document()` is the commando behind Other -> Documentation (Ctrl + Shift + D) to generate the documentation for your functions.
+
+---
+class: left, top
+
+# Intermezzo 1 - usethis
+
+
+You wonder: if I can use devtools commandos to install/check/document my package, why is there no commando to create a package? Why must I click here and there in RStudio to do so? Well, there is a package for that: `usethis`. It is a brother package of devtools that automates many tasks for you. For example, you can create the very same package described in challenge 0 with `usethis::create_package("path/to/package")`!
+
+So, if you are in the console of the coding club project (root folder), and you want to create a package, let's say `secondR` in the `src/20241029/` folder, you can run:
+
+```
+usethis::create_package("src/20241029/secondR")
+```
+
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
 # Challenge 2
+
+1. We want to create a new package called `bRead`. Check if your package name is available on CRAN, GitHub, Bioconductor. That is important because you do not want to have the same name as another package. Is it an abbreviation? Is it a name that is easy to remember? Is it a name that is easy to type? Hint: session [Naming your package](https://docs.b-cubed.eu/dev-guide/#r-pkg-naming) from the B-Cubed software dev guide.
+2. Create a new package called `bRead` (either via RStudio or via usethis).
+3. Add MIT license. While doing this, please add ÌNBO as copyright holder (or the organisation you belong to).
+4. Add your neigbour to the authors with role contributor.
+5. Add code of counduct and contributing guidelines.
 
 
 ---
