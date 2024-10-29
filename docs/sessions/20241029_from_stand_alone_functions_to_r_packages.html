@@ -193,6 +193,20 @@ You can download the material of today (only code):
 <br>
 <small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
+---
+class: left, top
+
+# Packages to install?
+
+Check you have the needed packages already installed.
+
+```
+needed_pkgs <- c("devtools","usethis","roxygen2","testthat", "pkgdown")
+pkgs_to_install <- needed_pkgs[!needed_pkgs %in% rownames(installed.packages())]
+pkgs_to_install
+```
+
+Do you need to install them? Please, do NOT do it in RStudio. Open basic R and run
 
 ---
 class: left, top
@@ -246,7 +260,7 @@ In the new pop-up window choose:
 ---
 class: left, top
 
-# Challenge 0 - How to install a R package?
+# Challenge 0 - How to install and share a R package?
 
 Stand alone functions ae _loaded_ by `Source` button (or `source()` command). A package needs to be _installed_ and _loaded_. To do so, you have a pane in RStudio called `Build`.
 
@@ -255,6 +269,8 @@ Stand alone functions ae _loaded_ by `Source` button (or `source()` command). A 
 
 .center[![:scale 60%]({{ site.baseurl}}/assets/images/20241029/20241029_build_install.png)]
 
+
+The best way for sharing your package is to put it on GitHub via a new repository, but we will not cover that aspect here. Still, via devtools  (again!) you can "bundle" your package in a single compressed file (.tar.gz). This is the file you can share with your colleagues.
 
 ---
 class: left, top
@@ -312,7 +328,6 @@ We will create a new package called `bRead`*.
 5. Add a basic `README.md` file**. Hint: `usethis` package helps.
 5. Tell the world how to contribute! Add code of conduct and contributing guidelines. Hint: `usethis` package helps.
 6. Add the functions `make_bread()` and `make_focaccia()` to the package. Make sure they are documented. Install your package and check if the functions work. Hint: copy paste the documented functions, part of the solution of challenge 1.
-7. The best way for sharing your package is to put it on GitHub via a new repository, but we will not cover that aspect here. Still, via devtools  (again!) you can "bundle" your package in a single compressed file (.tar.gz). Hint: cheatsheet, 2nd page.
 
 <small> \* The name `bRead` seems to follow an old-fashioned way of naming a package. See this very nice blogpost: [Naming Things](https://www.njtierney.com/post/2018/06/20/naming-things/). This topic is so wide and fascinating we can speak about it for an entire lunch plus extended coffee break. </small>
 <br>
@@ -322,7 +337,7 @@ We will create a new package called `bRead`*.
 ---
 class: left, top
 
-Intermezzo 2: dependencies
+# Intermezzo 2: dependencies
 
 Often your package depends on other packages, i.e. somewhere in your functions you are using functions from other packages.  You can add this dependency in the `DESCRIPTION` file. Example, let's add some assertions in `make_bread()`:
 
@@ -342,7 +357,7 @@ How to let R know that your package depends on `assertthat`? Add `assertthat` to
 ---
 class: left, top
 
-Intermezzo 2: tests
+# Intermezzo 2: tests
 
 Tests are important to check if your functions work as expected. Why testing?
 
@@ -406,7 +421,7 @@ Do you not have enough about R packages? Great!
 
 On November 7, 1pm-3pm, I will give an online workshop about R packages hosted by GBIF. The workshop is free, but you need to register. More information and registration link [here](https://www.gbif.org/event/gvRWGsyeY9jx5Yrs9bTvi/how-to-package-your-functions-from-standalone-to-r-packages-b-cubed-workshop).
 
-.center[![:scale 80%]({{ site.baseurl}}/assets/images/20241029/20241029_workshop_gbif_b_cubed.png)]
+.center[![:scale 70%]({{ site.baseurl}}/assets/images/20241029/20241029_workshop_gbif_b_cubed.png)]
 
 ---
 class:left, top
@@ -417,13 +432,15 @@ class:left, top
 - The main resource for package development: the [R packages book](https://r-pkgs.org/), 2nd edition.
 - The [B-Cubed software development guide](https://docs.b-cubed.eu/dev-guide/).
 - The [rOpenSci Packages: Development, Maintenance, and Peer Review](https://devguide.ropensci.org/) guide.
+- The [INBO styleguide for R code](https://inbo.github.io/tutorials/tutorials/styleguide_r_code/).
 - Some advices from [tidyverse style guide](https://style.tidyverse.org/documentation.html) can also be useful.
 - Package [Roxygen2](https://roxygen2.r-lib.org/index.html) for easily writing documentation.
-- The [usethis](https://usethis.r-lib.org/index.html) package: a workflow package, useful for both R packages and projects.
-- The [devtools](https://devtools.r-lib.org/index.html) package: a package development package.
-- The [checklist](https://packages.inbo.be/checklist/index.html) package: a set of checks for R projects and R packages, a very nice INBO output (our Thierry!).
+- The [devtools](https://devtools.r-lib.org/index.html) package: THE package for software development in R.
+- The [usethis](https://usethis.r-lib.org/index.html) package: a workflow package, useful for both R packages and projects. The "brother" of usethis.
+- The [testthat](https://testthat.r-lib.org/) package: THE package for testing your package.
+- The [pkgdown](https://pkgdown.r-lib.org/) package: to create beautiful websites out of your package documentation.
+- The [checklist](https://packages.inbo.be/checklist/index.html) package: a set of checks for R projects and R packages, a very nice INBO output (our Thierry!). The "usethis" on steroids :-)
 - Blogpost about naming R packages: [Naming Things](https://www.njtierney.com/post/2018/06/20/naming-things/).
-- The [INBO styleguide for R code](https://inbo.github.io/tutorials/tutorials/styleguide_r_code/).
 
 ---
 class: center, middle
