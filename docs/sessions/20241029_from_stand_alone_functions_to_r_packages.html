@@ -382,9 +382,6 @@ class: left, top
 1. A package has sometimes a dummy dataset to show how the functions work. This dataset is (lazily) loaded when the package is loaded. Add the dummy data.frame `ingredients` provided in `20241029_challenges.R`, section "Challenge 3", to the `bRead` package. Document it as well. Hint: see Chapter [Data](https://r-pkgs.org/data.html), in particular the very first section, 7.1, and 7.1.2.
 2. Documenting is sometimes more than just writing a function documentation. Sometimes you need to add something more complex, e.g. a workflow. This can be done by adding a **vignette**. A vignette is a `.Rmd` file. Create a vignette with title "Bread is the answer" via usethis. You can use `bread_is_the_answer` as filename. Hint: cheatsheet, 2nd page.
 3. Copy paste the content of `20241029_challenges.Rmd` to the vignette. How to **build** the **vignette**? Hint: devtools again!
-4. Create a documentation website for your package*. The pkgdown package helps. Hint: cheatsheet, 2nd page.
-
-<small> \* Most of the R packages have a documentation website. For more advanced users: sometimes the generation of the website is automatised via GitHub Actions. In this way you focus only on writing. Everytime you push to the main branch, your website is updated for you. Examples: [inbodb](https://inbo.github.io/inbodb/index.html), [camtrapdp](https://inbo.github.io/camtrapdp/). The GitHub Action is a `.yaml` file in `.github` folder. See the `pkgdown.yaml` of [inbodb](https://github.com/inbo/inbodb/blob/main/.github/workflows/pkgdown.yaml) and [camtrapdp](https://github.com/inbo/camtrapdp/blob/main/.github/workflows/pkgdown.yaml). </small>
 
 ---
 class: left, top
@@ -403,6 +400,10 @@ class: left, top
 # Bonus challenge
 
 Create a package called `bRead2` using the [checklist](https://packages.inbo.be/checklist/) package. Hint: https://packages.inbo.be/checklist/articles/getting_started.html. Notice also that the checklist package is git and GitHub minded.
+
+Try also to create a documentation website for your package*. The pkgdown package helps. Hint: cheatsheet, 2nd page.
+
+<small> \* Most of the R packages have a documentation website. For more advanced users: sometimes the generation of the website is automatised via GitHub Actions. In this way you focus only on writing. Everytime you push to the main branch, your website is updated for you. Examples: [inbodb](https://inbo.github.io/inbodb/index.html), [camtrapdp](https://inbo.github.io/camtrapdp/). The GitHub Action is a `.yaml` file in `.github` folder. See the `pkgdown.yaml` of [inbodb](https://github.com/inbo/inbodb/blob/main/.github/workflows/pkgdown.yaml) and [camtrapdp](https://github.com/inbo/camtrapdp/blob/main/.github/workflows/pkgdown.yaml). </small>
 
 
 ---
