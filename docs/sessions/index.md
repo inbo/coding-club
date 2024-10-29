@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2024-10-26 | from stand alonce functions to R packages | [slides]({{ site.baseurl }}{% link sessions/20241029_from_stand_alone_functions_to_r_packages.html  %}) | [hackmd](https://hackmd.io/cbAR638FR7CQJmoP7rSgdA?view) | 01.17 - Clara Peeters |  |
+| 2024-10-26 | from stand alone functions to R packages | [slides]({{ site.baseurl }}{% link sessions/20241029_from_stand_alone_functions_to_r_packages.html  %}) | [hackmd](https://hackmd.io/cbAR638FR7CQJmoP7rSgdA?view) | 01.17 - Clara Peeters |  |
 | 2024-09-26 | from stand alonce code to functions in R | [slides]({{ site.baseurl }}{% link sessions/20240926_from_stand_alone_code_to_functions.html  %}) | [hackmd](https://hackmd.io/htj9oDrNQX6NN15jToGmHQ?view) | 01.19 Paul Van Ostaijen | [vimeo](https://vimeo.com/1020238177) |
 | 2024-08-27 | computer says no: debug youR code | [slides]({{ site.baseurl }}{% link sessions/20240827_the_art_of_debugging.html  %}) | [hackmd](https://hackmd.io/5tqGH6BCTwu59f7GEmRUag?view) | 01.21 - Jeanne Brabants | [vimeo](https://vimeo.com/1004025584)
 | 2024-06-27 | functional programming in R | [slides]({{ site.baseurl }}{% link sessions/20240627_functional_programming_in_r.html  %}) | [hackmd](https://hackmd.io/p2UZHhNaSgSG649TO3LgJg?view) | 01.70 - Ferdinand Peters | [vimeo](https://vimeo.com/984798654)
