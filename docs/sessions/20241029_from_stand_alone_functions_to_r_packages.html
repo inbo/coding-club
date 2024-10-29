@@ -276,10 +276,10 @@ class: left, top
 
 # Challenge 1
 
-1. As any book, also a cookbook has more than just a title: it has an author, a short description and important **metadata**, e.g. publisher and IBAN number.
-Every R package has an essential file for this: `DESCRIPTION`. It contains metadata about the package, including the package name, version, author, and dependencies (packages yours depends on). Open it and edit it. Set yourself as **aut**hor and **cre**ator. About [license](https://choosealicense.com/), choose the `MIT` license or the  `GPL-3` license.
+1. A (cook)book has more than just a title: it has an author, a short description and important **metadata**, e.g. publisher and IBAN number.
+Every R package has an essential file for this: `DESCRIPTION`. It contains metadata about the package, including the package name, license and authors. Open it and edit it. Set yourself as **aut**hor and **cre**ator. About [license](https://choosealicense.com/), choose the `MIT` license or the  `GPL-3` license.
 2. Installing is one thing. Another important operation is checking your package. It helps you to detect issues with your package. Click on `Check` in the `Build` pane (see screenshot). What do you see?
-3. Typically a cookbook has at least one recipe :-) Well, packages have at least one function. Our package? Not yet! R files `MUST` be placed in the `./R` folder. Place the functions `make_bread()` and `make_focaccia()` provided in `20241029_challenges.R`, "Challenge 1" section, in the `./R` folder. Best practice: one function = one file, and `file_name` = `function_name`.
+3. Typically a cookbook has at least one recipe and packages have at least one function :-) Our package? Not yet! R files `MUST` be placed in the `./R` folder. Place the functions `make_bread()` and `make_focaccia()` provided in `20241029_challenges.R`, "Challenge 1" section, in the `./R` folder. Best practice: one function = one file, and `file_name` = `function_name`.
 4. Try to install your package once again. Can you use your new functions? Probably not. Try to solve the issue. Hint: documentation is more than just a nice-to-have.
 
 .center[![:scale 50%]({{ site.baseurl}}/assets/images/20241029/20241029_check.png)]
