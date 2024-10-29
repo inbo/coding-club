@@ -1,0 +1,44 @@
+## Intro
+
+The package `bRead` is the answer to all your culinary questions. Load it first:
+
+```{r setup}
+library(bRead)
+```
+
+We provide you with two functions to make bread and focaccia. Also we provide you some ingredients:
+
+```{r show-ingredients}
+ingredients
+```
+
+
+## Bread
+
+Let's make some bread using the `make_bread()` function:
+
+```{r use-bRead-to-make-some-bread}
+# Prepare the ingredients
+ingredients_for_bread <- ingredients[1,]
+# Make the bread
+make_bread(grains = ingredients_for_bread$grains,
+           water = ingredients_for_bread$water,
+           salt = ingredients_for_bread$salt,
+           yeast = ingredients_for_bread$yeast)
+```
+
+## Focaccia is the answer
+
+Are you still hungry? And are you bored of bread? Try focaccia!
+
+```{r use-bRead-to-make-some-focaccia}
+# Prepare the ingredients
+ingredients_for_focaccia <- ingredients[2,]
+# Make the focaccia
+make_focaccia(grains = ingredients_for_focaccia$grain,
+              water = ingredients_for_focaccia$water,
+              salt = ingredients_for_focaccia$salt,
+              yeast = ingredients_for_focaccia$yeast)
+```
+
+Happy meal!
