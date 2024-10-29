@@ -252,7 +252,7 @@ class: left, top
 In the new pop-up window choose:
 
 - `Directory name`: the name of the package, e.g. `fiRst`
-- `Create project as subdirectory of`: place it where you prefer, e.g. in your `src/20241029/` subdirectory.*
+- `Create project as subdirectory of`: place it where you prefer, e.g. in your `src/20241029/` subdirectory.
 - Yes, select `"Open in new session"`, always a good idea.
 
 .center[![:scale 68%]({{ site.baseurl}}/assets/images/20241029/20241029_create_project.png)]
@@ -278,15 +278,12 @@ class: left, top
 # Challenge 1
 
 1. As any book, also a cookbook has more than just a title: it has an author, a short description and important **metadata**, e.g. publisher and IBAN number.
-Every R package has an essential file for this: `DESCRIPTION`. It contains metadata about the package, including the package name, version, author, and dependencies (packages yours depends on). Open it and edit it. Set yourself as **aut**hor and **cre**ator. About license, choose the `MIT` license or the  `GPL-3` license.*
+Every R package has an essential file for this: `DESCRIPTION`. It contains metadata about the package, including the package name, version, author, and dependencies (packages yours depends on). Open it and edit it. Set yourself as **aut**hor and **cre**ator. About [license](https://choosealicense.com/), choose the `MIT` license or the  `GPL-3` license.
 2. Installing is one thing. Another important operation is checking your package. It helps you to detect issues with your package. Click on `Check` in the `Build` pane (see screenshot). What do you see?
 3. Typically a cookbook has at least one recipe :-) Well, packages have at least one function. Our package? Not yet! R files containing functions `MUST` be placed in the `./R` folder. Place the functions `make_bread()` and `make_focaccia()` provided in `20241029_challenges.R`, "Challenge 1" section, in the `./R` folder. Best practice: one function = one file, and `file_name` = `function_name`.
 4. Try to install your package once again. Can you use your new functions? Probably not. Try to solve the issue. Hint: documentation is more than just a nice-to-have.
 
 .center[![:scale 50%]({{ site.baseurl}}/assets/images/20241029/20241029_check.png)]
-
-<br>
-<small> \* For more information about software dedicated licenses, check the [choosealicense.com](https://choosealicense.com/) website. The proposed licenses are two open licenses typically used for code at INBO.  </small>
 
 ---
 class: left, top
@@ -388,8 +385,6 @@ class: left, top
 3. Copy paste the content of `20241029_challenges.Rmd` to the vignette. How to **build** the **vignette**? Hint: devtools again!
 3. Create a documentation website for your package*. The pkgdown package helps. Hint: cheatsheet, 2nd page.
 
-
-
 <small> \* Most of the R packages have a documentation website.Sometimes the generation of the website is automatised via GitHub Actions. In this way you focus only on writing. Everytime you push to the main branch, your website is updated for you. Examples: [inbodb](https://inbo.github.io/inbodb/index.html), [camtrapdp](https://inbo.github.io/camtrapdp/). The GitHub Action is a `.yaml` file in `.github` folder. See the `pkgdown.yaml` of [inbodb](https://github.com/inbo/inbodb/blob/main/.github/workflows/pkgdown.yaml) and [camtrapdp](https://github.com/inbo/camtrapdp/blob/main/.github/workflows/pkgdown.yaml). </small>
 
 
@@ -441,6 +436,7 @@ class:left, top
 - The [pkgdown](https://pkgdown.r-lib.org/) package: to create beautiful websites out of your package documentation.
 - The [checklist](https://packages.inbo.be/checklist/index.html) package: a set of checks for R projects and R packages, a very nice INBO output (our Thierry!). The "usethis" on steroids :-)
 - Blogpost about naming R packages: [Naming Things](https://www.njtierney.com/post/2018/06/20/naming-things/).
+- For more information about software dedicated licenses, check the [choosealicense.com](https://choosealicense.com/) website.
 
 ---
 class: center, middle
