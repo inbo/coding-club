@@ -339,16 +339,18 @@ Often your package depends on other packages, i.e. somewhere in your functions y
 
 ```r
 make_bread <- function(grains, yeast, water, salt) {
-  assertthat::is.scalar(grains)
-  assertthat::is.scalar(yeast)
-  assertthat::is.scalar(water)
-  assertthat::is.scalar(salt)
+  assertthat::assert_that(assertthat::is.numeric(grains))
+  assertthat::assert_that(assertthat::is.numeric(yeast))
+  assertthat::assert_that(assertthat::is.numeric(water))
+  assertthat::assert_that(assertthat::is.numeric(salt))
   bread <- grains + yeast + water + salt
   return(bread)
 }
 ```
 
 How to let R know that your package depends on `assertthat`? Add `assertthat` to the `Imports` field in the `DESCRIPTION` file! You can do it manually, but `usethis` can help you with `usethis::use_package("assertthat")`.
+
+<small> \* The 4 lines with assertions in the code chunk were wrong until Nov 5 2024: `assertthat::is.numeric(grains)` has been corrected using `assertthat::assert_that(assertthat::is.number(grains))`. Same for `water`, `yeast` and `salt`.  </small>
 
 ---
 class: left, top

@@ -19,10 +19,10 @@ make_focaccia <- function(grains, yeast, water, salt) {
 ## Intermezzo 2 - dependencies
 
 make_bread <- function(grains, yeast, water, salt) {
-  assertthat::assert_that(is.scalar(grains))
-  assertthat::assert_that(is.scalar(yeast))
-  assertthat::assert_that(is.scalar(water))
-  assertthat::assert_that(is.scalar(salt))
+  assertthat::assert_that(assertthat::is.numeric(grains))
+  assertthat::assert_that(assertthat::is.numeric(yeast))
+  assertthat::assert_that(assertthat::is.numeric(water))
+  assertthat::assert_that(assertthat::is.numeric(salt))
   bread <- grains + yeast + water + salt
   return(bread)
 }
