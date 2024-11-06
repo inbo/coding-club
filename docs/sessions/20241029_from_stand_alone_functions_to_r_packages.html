@@ -339,10 +339,10 @@ Often your package depends on other packages, i.e. somewhere in your functions y
 
 ```r
 make_bread <- function(grains, yeast, water, salt) {
-  assertthat::assert_that(assertthat::is.numeric(grains))
-  assertthat::assert_that(assertthat::is.numeric(yeast))
-  assertthat::assert_that(assertthat::is.numeric(water))
-  assertthat::assert_that(assertthat::is.numeric(salt))
+  assertthat::assert_that(assertthat::is.number(grains))
+  assertthat::assert_that(assertthat::is.number(yeast))
+  assertthat::assert_that(assertthat::is.number(water))
+  assertthat::assert_that(assertthat::is.number(salt))
   bread <- grains + yeast + water + salt
   return(bread)
 }
