@@ -144,12 +144,11 @@ Today we will mainly use:
 - ggplot: allows to plot geospatial vector data. No maps!
 - [ggspatial]():
 - [mapview](https://r-spatial.github.io/mapview/): the package for creating interactive maps very quickly and conveniently. Fill the gap of quick (not presentation grade) interactive plotting to examine and visually investigate spatial data. It uses [Leaflet](http://leafletjs.com/) or [Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/api/)+ [Deck.gl](https://deck.gl/) javascript libraries in the background via [mapdeck](https://symbolixau.github.io/mapdeck/articles/mapdeck.html). Your first choice before moving to leaflet.
-- leaflet: a R wrapper for the very popular [Leaflet JavaScript library](http://leafletjs.com/) by [Vladamir Agafonkin](http://agafonkin.com/en/). More verbose than mapview. A very good package for fine tuning dynamic maps. A little knowledge of html is needed for labels and pop ups.
 
 ---
 class: left, top
 
-Install and load the packages:
+## Install and load packages
 
 ```r
 # Load the packages and install if needed
@@ -221,7 +220,7 @@ class: left, top
 # Data and code files description
 
 1. [20241128_ias_union_concern_Natura2000_B.gpkg](https://github.com/inbo/coding-club/blob/master/data/20241128_ias_union_concern_Natura2000_B.gpkg): geopackage with the number of alien species of Union concern observed in the Flemish NATURA2000 protected areas, type B.
-2. [20241128_flemish_municipalities.gpkg](https://github.com/inbo/coding-club/blob/master/data/20241128_flemish_municipalities.gpkg): geopcakge with the Flemish municipalities.
+2. [20241128_flemish_municipalities.gpkg](https://github.com/inbo/coding-club/blob/main/data/20241128/20241128_flemish_municipalities.gpkg): geopcakge with the Flemish municipalities.
 3. [20241128_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20241128/20241128_challenges.R): R script to start from.
 
 ---
@@ -229,6 +228,8 @@ background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png
 class: left, top
 
 # Challenge 1 - plots
+
+**IMPORTANT**: The code to read the spatial files is provided!
 
 1. How to plot the Natura2000 areas with ggplot? **Fill** the areas based on the number of alien species of Union concern, `n_ias`. This kind of map is known as **choropleth map**. Hint: see documentation of the [geom_sf](https://ggplot2.tidyverse.org/reference/ggsf.html) function or the general hint below.
 
@@ -240,9 +241,8 @@ class: left, top
 
 5. How to avoid overlapping labels? Hint: see the general hint below.
 
-General hint: Follow the first part of this good [tutorial](https://r-charts.com/spatial/maps-ggplot2/) from R CHARTS!
+**General hint**: Follow the first part of this good [tutorial](https://r-charts.com/spatial/maps-ggplot2/) from R CHARTS!
 
-**NOTE**: The code to read the spatial files is provided!
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -254,7 +254,7 @@ Let'use [ggspatial](https://github.com/paleolimbot/ggspatial) to create static m
 
 1. Let's add now map tiles from OpenStreetMap  (default) as background. Is the resolution of the automaticaly chosen zoom level not enough? Increase it, but still do not hardcode the zoom level. Hint: Type `?annotation_map_tile` in the R console to get help.
 2. Add caching option to avoid downloading the tiles each time you run the code.
-3. Add a north arrow at the top right corner of the map and a scale bar at the bottom left corner of the map. Hint: see [dedicated section](https://paleolimbot.github.io/ggspatial/articles/ggspatial.html#using-north-arrow-and-scalebar) in ggspatial article.
+3. Add a north arrow at the top right corner of the map and a scale bar at the bottom left corner. Hint: see [dedicated section](https://paleolimbot.github.io/ggspatial/articles/ggspatial.html#using-north-arrow-and-scalebar) in ggspatial article.
 4. Which other tiles you can use with `annotation_map_tile()`? Test them and let's find your favourite ones.
 
 ---
@@ -262,9 +262,9 @@ class: left, top
 
 ## Intermezzo: leaflet vs mapview
 
-[Leaflet](https://leafletjs.com/) is a very popular JavaScript library for interactive maps. The R package [leaflet](https://rstudio.github.io/leaflet/) is a wrapper for that library. It allows to create interactive maps that can be embedded in a web page. The package is very flexible and allows to create maps with a lot of functionalities. The documentation is very good and there are a lot of examples available (check the "Articles"!).
+[Leaflet](https://leafletjs.com/) is a very popular JavaScript library for interactive maps by [Vladamir Agafonkin](http://agafonkin.com/en/). The R package [leaflet](https://rstudio.github.io/leaflet/) is a wrapper for that library. It allows to create interactive maps that can be embedded in a web page. The package is very flexible and allows to create maps with a lot of functionalities. The documentation is wonderful and there are a lot of examples available (check the "Articles"!).
 
-However, if you are looking for a quick and easy way to create interactive maps, you can use [mapview](https://r-spatial.github.io/mapview/). It is a wrapper for leaflet and allows to create interactive maps with just one line of code. It is very useful to quickly explore your data and to create maps for presentations or reports. The documentation is also very good and there are a lot of examples available in the "Articles".
+However, if you are looking for a quick and easy way to create interactive maps, you can use [mapview](https://r-spatial.github.io/mapview/). It allows to create interactive maps with just one line of code (= less verbose). It is very useful to quickly explore your data and to create maps for presentations or reports. The documentation is also very good and there are a lot of examples available in the "Articles".
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -293,8 +293,7 @@ class: left, top
 
 Do you know INBO is very active in spatial data? Just think about qgisprocess package (see coding club of Dec 2023).But check also the R package [inbospatial](https://github.com/inbo/inbospatial): a collection of useful R functions for spatial data. Version 0.0.3 has been released just few days ago. This package will be helpful for the next challenge!
 
-![:scale 80%]({{ site.baseurl}}/assets/images/20241128/20241128_inbospatial_0_0_3.png)
-
+![:scale 90%]({{ site.baseurl}}/assets/images/20241128/20241128_inbospatial_0_0_3.png)
 
 ---
 class: left, top
@@ -303,22 +302,20 @@ class: left, top
 
 Amog other things, inbospatial provides a lot of layers!
 
-1. Add to the previous dynamic map, for example, the layer related to the public forest and nature areas managed by the Flemish Nature & Forest Agency
+1. Add to the previous dynamic map, for example, the layer related to the public forest and nature areas managed by the [Flemish Nature & Forest Agency](https://www.natuurenbos.be/).
 
-2. Use the GRB basemap ( 'Grootschalig Referentiebestand') as map tiles to have very good detailed borders of municipalities. Use this layer instead of the municipality layer.
+2. Use the GRB basemap (Grootschalig Referentiebestand) as map tiles to have very good detailed borders of municipalities. Use this layer instead of the municipality layer.
 
 Hint: check the documentation ["adding WMS tiles"](https://inbo.github.io/inbospatial/reference/add_wms.html).
 
 NOTE: while trying adding these layers it could be that you get an error saying you need to install some extra leaflet packages: `leaflet.extras` and `leaflet.extras2`. Install them and try again.
 
-Hint: https://inbo.github.io/inbospatial/reference/add_wms.html
-
 ---
 class: left, top
 
-## leaflet extra exercises
+## Leaflet extra exercises
 
-leaflet or not to leaflet? It's up to you! You can stick to work with mapview or you can go full throttle with leaflet. One thing is sure: the [leaflet for R](https://rstudio.github.io/leaflet/) documentation is one of the best package documentations ever written!
+Leaflet or not to leaflet? It's up to you! You can stick to work with mapview or you can go full throttle with leaflet.
 
 Check the bonus challenges of the INBO coding club of August 31, 2023 for more inspiration. The [leaflet for R](https://rstudio.github.io/leaflet/) documentation is one of the best package documentations ever written, that's for sure!
 
@@ -345,7 +342,7 @@ class: left, top
 
 Ever heard about the Geographic Information System of the Commission, [GISCO](https://ec.europa.eu/eurostat/web/gisco)? And about [giscoR](https://ropengov.github.io/giscoR/)? giscoR is a package that allows you to download spatial data from the GISCO portal. It is a great tool to get administrative boundaries, land cover, etc. for the entire Europe/world. The package is still in development but it is already very useful. Check the [vignette](https://cran.r-project.org/web/packages/giscoR/vignettes/giscoR.html) to get started.
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20241128/20241128_giscoR.png)
+![:scale 110%]({{ site.baseurl}}/assets/images/20241128/20241128_giscoR.png)
 
 ---
 class: left, top
