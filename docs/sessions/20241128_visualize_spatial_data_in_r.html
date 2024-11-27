@@ -214,11 +214,9 @@ class: left, top
 
 # Data and code files description
 
-1. [20241128_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20241128/20241128_challenges.R): R script to start from.
-3. [20241128_protected_areas.gpkg](https://github.com/inbo/coding-club/blob/master/data/20241128/20241128_protected_areas.gpkg): geopackage with NATURA2000 protected areas
-5. [20241128_n_moths.txt](https://github.com/inbo/coding-club/blob/master/data/20241128/20241128_n_moths.txt): number of moth species at UTM 1x1km cell level in Pajottenland.
-6. [20241128_utm1km_Pajottenland.gpkg](https://github.com/inbo/coding-club/blob/master/data/20241128/20241128_utm1km_Pajottenland.gpkg): geopackage with UTM 1x1km cells covering the [Pajottenland](https://en.wikipedia.org/wiki/Pajottenland) region.
-7. [20241128_Pajottenland_municipalities.gpkg](https://github.com/inbo/coding-club/blob/master/data/20241128/20241128_Pajottenland_municipalities.gpkg): geopcakge with the municipalities located in the Pajottenland region.
+1. [20241128_ias_union_concern_Natura2000_B.gpkg](https://github.com/inbo/coding-club/blob/master/data/20241128_ias_union_concern_Natura2000_B.gpkg): geopackage with the number of alien species of Union concern observed in the Flemish NATURA2000 protected areas, type B.
+2. [20241128_flemish_municipalities.gpkg](https://github.com/inbo/coding-club/blob/master/data/20241128_flemish_municipalities.gpkg): geopcakge with the Flemish municipalities.
+3. [20241128_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20241128/20241128_challenges.R): R script to start from.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -226,9 +224,9 @@ class: left, top
 
 # Challenge 1 - plots
 
-1. How to plot the Natura2000 areas with ggplot? **Fill** the areas based on the number of alien species of Union concern, `n_ias`. This kind of map is known as **choropleth map**. Hint: see documentation of the [geom_sf](https://ggplot2.tidyverse.org/reference/ggsf.html) function.
+1. How to plot the Natura2000 areas with ggplot? **Fill** the areas based on the number of alien species of Union concern, `n_ias`. This kind of map is known as **choropleth map**. Hint: see documentation of the [geom_sf](https://ggplot2.tidyverse.org/reference/ggsf.html) function or the general hint below.
 
-2. Add the GEB code (`SITECODE` column) as labels. Show them in black, with fontsize 2 and bold style. You will probably get a warning message. How to avoid it? A question of Coordinate Reference System! See the general hint below.
+2. Add the site code (`SITECODE` column) as labels. Show them in black, with fontsize 2 and bold style.
 
 3. A pure ggplot question: how to set the color of the borders of the Natura2000 areas to black?
 
