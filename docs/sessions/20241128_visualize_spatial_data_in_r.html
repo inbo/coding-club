@@ -1,0 +1,368 @@
+---
+layout: presentation
+title: visualize spatial data in R
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+  <!-- Adjust the presentation to the session. Focus on the challenges,
+this is not a coding tutorial.
+
+Note, to include figures, store the image in the `/docs/assets/images`
+folder and use the jekyll base.url reference as done in this template
+or see https://jekyllrb.com/docs/liquid/tags/#links.
+  using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 28 NOVEMBER 2024
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck<br>
+01.23 - Léon Stynen
+
+---
+class: left, top
+
+## ROOMIE: room reservation
+
+```
+> if (isFALSE(roomie)) {
++   warning("Please confirm asap the room reservation on the roomie")
++ }
+Warning message:
+Please confirm asap the room reservation on the roomie
+```
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20241128/20241128_badge.png)
+
+
+---
+class: left, top
+
+What do we mean with geospatial data?
+
+### Spatial vector data
+
+Points, lines, polygons, etc. Topic of the coding club of [28 May](https://inbo.github.io/coding-club/sessions/20240528_spatial_data_in_r_with_sf.html#1)
+
+- **sf** : newest and recommended package
+- **sp** : its predecessor (retired)
+
+### Spatial raster data
+
+Topic of the coding club of [24 November 2022](https://inbo.github.io/coding-club/sessions/20221124_coding_club_rasters.html)
+
+- [**terra**](https://rspatial.github.io/terra/reference/terra-package.html) : newest and recommended package
+- [**raster**](https://rspatial.org/raster/pkg/index.html) : its predecessor (no support for sf), match with sp
+- [**stars**](https://r-spatial.github.io/stars/): for **s**patio**t**emporal **ar**ray**s**. Important for people involved in remote sensing where data often comes in the form of dense arrays, with space and time being array dimensions.
+
+For more info, read this great [article](https://geocompx.org/post/2021/spatial-classes-conversion/) about conversions among different spatial classes in R.
+
+---
+class: left, top
+
+Today we play around the visualization of spatial vector data. No raster data!
+
+
+---
+class: left, top
+
+# Plot vs maps
+
+You can **plot** geospatial data.
+
+But a plot is not a map, as chocolate is not (yet) a chocolate pie.
+You need one "ingredient" more. What?
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20241128/20241128_plot.png)
+
+---
+class: left, top
+
+# From plots to maps
+
+You need tiles.
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20241128/20241128_map.png)
+
+Example above uses [OpenStreetMap](https://www.openstreetmap.org/) tiles.
+
+---
+class: left, top
+
+# Tiles
+
+You have a lot of tiles. Some are available for being used with an open license, others not.
+
+There are tiles covering the entire world, or just a specific region (= Flanders, see the [Web Map (Tile) Service](https://www.vlaanderen.be/digitaal-vlaanderen/onze-oplossingen/geografische-webdiensten/ons-gis-aanbod/raadpleegdiensten#wat-is-een-wmts) of the Flemish Authority)
+
+* Image from [README](https://github.com/riatelab/maptiles#readme) of maptiles package
+![:scale 80%]({{ site.baseurl}}/assets/images/20241128/20241128_tiles.png)
+
+---
+class: left, top
+
+# Static vs dynamic maps
+
+**Static maps**: data on the map and the tiles of the background are fixed: no zooming in/out. Easy for pdfs or other static content.
+
+**dynamic maps**: zooming in/out is possible. Perfect for web pages.
+
+---
+class: left, top
+
+## Geospatial visualization in R
+
+Geospatial visualization in R is evolving fast. The packages are numerous and the choice is not always easy. The [R-Spatial CRAN Task View](https://github.com/cran-task-views/Spatial/tree/main)* is a handy source to get an updated overview of R spatial packages. See section related to [visualization](https://github.com/cran-task-views/Spatial/blob/main/Spatial.md#visualizing-spatial-data).
+
+\* Thanks Floris for the tip!
+
+---
+class: left, top
+
+# Packages used today
+
+There are a lot of packages. Really a lot! What should we use? Choose preferably the actively maintained packages.
+
+Today we will mainly use:
+
+- ggplot: allows to plot geospatial vector data. No maps!
+- [maptiles](https://github.com/riatelab/maptiles): the best way to add tiles to your plots. A lot of tiles are freely available for the entire world. Option to use also specific endpoints (tile repositories on the web)
+- [mapview](https://r-spatial.github.io/mapview/): the package for creating interactive maps very quickly and conveniently. Fill the gap of quick (not presentation grade) interactive plotting to examine and visually investigate both aspects of spatial data. It uses [Leaflet](http://leafletjs.com/) or [Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/api/)+ [Deck.gl](https://deck.gl/) javascript libraries in the background via [mapdeck](https://symbolixau.github.io/mapdeck/articles/mapdeck.html). Your first choice before moving to leaflet.
+- leaflet: a R wrapper for the very popular [Leaflet JavaScript library](http://leafletjs.com/) by [Vladamir Agafonkin](http://agafonkin.com/en/). A very good package for fine tuning dynamic maps. A little knowledge of html is needed for labels and pop ups.
+
+---
+class: left, top
+
+Install the packages:
+
+```r
+install.packages(
+  c("sf", "terra", "maptiles", "leaflet", "leafem", "mapview",
+    "htmltools", "htmlwidgets", "crosstalk", "DT"
+  )
+)
+```
+
+Load the packages:
+
+```r
+library(tidyverse)
+library(sf)
+library(terra)
+library(maptiles)
+library(mapview)
+library(leaflet)
+library(htmltools)
+library(htmlwidgets)
+library(leafem)
+library(crosstalk)
+library(DT)
+```
+
+---
+class: center, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+<br> No yellow sticky notes online. We use hackmd (see next slide) but basic principle doesn't change.
+
+---
+class: center, top
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/xnVuPm-KS_-3oEIMHSrdJQ?edit
+
+<iframe src="https://hackmd.io/xnVuPm-KS_-3oEIMHSrdJQ?edit" height="450px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+- Download everything automatically via `inborutils::setup_codingclub_session()`
+- manually*, from [data/20241128](https://github.com/inbo/coding-club/blob/master/data/20241128/) and [src/20241128](https://github.com/inbo/coding-club/blob/master/src/20241128). Place the R script in your folder `src/20241128/` and data in `data/20241128/`.
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data and code files description
+
+1. [20241128_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20241128/20241128_challenges.R): R script to start from.
+3. [20241128_protected_areas.gpkg](https://github.com/inbo/coding-club/blob/master/data/20241128/20241128_protected_areas.gpkg): geopackage with NATURA2000 protected areas
+5. [20241128_n_moths.txt](https://github.com/inbo/coding-club/blob/master/data/20241128/20241128_n_moths.txt): number of moth species at UTM 1x1km cell level in Pajottenland.
+6. [20241128_utm1km_Pajottenland.gpkg](https://github.com/inbo/coding-club/blob/master/data/20241128/20241128_utm1km_Pajottenland.gpkg): geopackage with UTM 1x1km cells covering the [Pajottenland](https://en.wikipedia.org/wiki/Pajottenland) region.
+7. [20241128_Pajottenland_municipalities.gpkg](https://github.com/inbo/coding-club/blob/master/data/20241128/20241128_Pajottenland_municipalities.gpkg): geopcakge with the municipalities located in the Pajottenland region.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1 - plots
+
+1. How to plot the Natura2000 areas with ggplot? **Fill** the areas based on the number of alien species of Union concern, `n_ias`. This kind of map is known as **choropleth map**. Hint: see documentation of the [geom_sf](https://ggplot2.tidyverse.org/reference/ggsf.html) function.
+
+2. Add the GEB code (`SITECODE` column) as labels. Show them in black, with fontsize 2 and bold style. You will probably get a warning message. How to avoid it? A question of Coordinate Reference System! See the general hint below.
+
+3. A pure ggplot question: how to set the color of the borders of the Natura2000 areas to black?
+
+4. A pure ggplot question: **Scale** the color using the **c**ontinuous **viridis** palette. Hint: see documentation of the [scale_fill_viridis](https://ggplot2.tidyverse.org/reference/scale_viridis.html) family of functions.
+
+5. How to avoid overlapping labels? Hint: see the general hint below.
+
+General hint: Follow the first part of this good [tutorial](https://r-charts.com/spatial/maps-ggplot2/) from R CHARTS!
+
+**NOTE**: The code to read the spatial files is provided!
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2 - static maps
+
+Let'use [ggspatial](https://github.com/paleolimbot/ggspatial) to create static maps.
+
+1. Let's add now map tiles from OpenStreetMap  (default) as background. Is the resolution of the automaticaly chosen zoom level not enough? Increase it, but still do not hardcode the zoom level. Hint: Type `?annotation_map_tile` in the R console to get help.
+2. Add cahing option to avoid downloading the tiles each time you run the code.
+3. Add a north arrow at the top right corner of the map and a scale bar at the bottom left corner of the map. Hint: see [dedicated section]((https://paleolimbot.github.io/ggspatial/articles/ggspatial.html#using-north-arrow-and-scalebar)) in ggspatial article.
+4. Which other tiles you can use with `annotation_map_tile()`? Test one or more and let's find the favourite ones from the group.
+
+
+---
+class: left, top
+## Intermezzo: leaflet vs mapview
+
+[Leaflet](https://leafletjs.com/) is a very popular JavaScript library for interactive maps. The R package [leaflet](https://rstudio.github.io/leaflet/) is a wrapper for that library. It allows to create interactive maps that can be embedded in a web page. The package is very flexible and allows to create maps with a lot of functionalities. The documentation is very good and there are a lot of examples available (check the "Articles"!).
+
+However, if you are looking for a quick and easy way to create interactive maps, you can use [mapview](https://r-spatial.github.io/mapview/). It is a wrapper for leaflet and allows to create interactive maps with just one line of code. It is very useful to quickly explore your data and to create maps for presentations or reports. The documentation is also very good and there are a lot of examples available in the "Articles".
+
+---
+class: left, top
+
+## Intermezzo: INBO goes spatial
+
+Do you know INBO is very active in spatial data? Just think about qgisprocess package (see coding club of Dec 2023).But check also the R package [inbospatial](https://github.com/inbo/inbospatial): a collection of useful R functions for spatial data. Version 0.0.3 has been released just few days ago. This package will be helpful for the next challenge!
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20241128/20241128_inbospatial_0_0_3.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3 - dynamic maps: vector data
+
+Using [mapview](https://r-spatial.github.io/mapview/):
+
+1. Show number of alien species of Union concern for Natura2000 areas on a map. The color of the areas should represent the number of alien species. Display the legend. Set the contour of the areas in gray30. What happens when clicking on an area? Beautiful, isn't?
+2. Let's fine tune the previous  map. Use "OpenStreetMap" map tiles only, set
+the opacity of the areas to 0.8 and the contour lines to 0.1. Set `"Alien species of Union concern"` as legend title and layer name. Show only `SITECODE`, `NAAM` and `n_ias` in the popups. Hint:
+[mapview advanced controls](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html) and [mapview popups](https://r-spatial.github.io/mapview/articles/mapview_04-popups.html).
+3. Create a separate map with the provinces of Belgium. Use black as line color. Set
+ layer name as `"municipality"`. Again, allow Open Street Map tiles only.
+ No legend. Set line width of the polygons to 1 and set opacity of the polygons to 0.
+4. Combine the two maps. Make sure the hover text still shows the number of
+ alien species.
+5. You have already installed and loaded [leafem](https://r-spatial.github.io/leafem/), a package with leaflet extensions for mapview, so you should see by default the mouse coordinates (lat, lon) and zoom level on top left. If not, check how to add them in the [extra leaflet functionalities](https://r-spatial.github.io/mapview/articles/mapview_06-add.html) vignette. Add also the INBO coding club logo to the map with a link to the INBO coding club homepage: https://inbo.github.io/coding-club/. Link to the logo is provided in the R code. You don't need to download it!
+
+# Challenge 3B - inbospatial
+
+Amog other things, inbospatial provides a lot of layers!
+
+1. Add to the previous dynamic map, for example, the layer related to the public forest and nature areas managed by the Flemish Nature & Forest Agency
+
+2. Use the GRB basemap ( 'Grootschalig Referentiebestand') as map tiles to have very good detailed borders of municipalities. Use this layer instead of the municipality layer.
+
+Hint: check the documentation ["adding WMS tiles"](https://inbo.github.io/inbospatial/reference/add_wms.html).
+
+NOTE: while trying adding these layers it could be that you get an error saying you need to install some extra leaflet packages: `leaflet.extras` and `leaflet.extras2`. Install them and try again.
+
+Hint: https://inbo.github.io/inbospatial/reference/add_wms.html
+
+---
+class: left, top
+
+## leaflet extra exercises
+
+leaflet or not to leaflet? It's up to you! You can stick to work with mapview or you can go full throttle with leaflet. One thing is sure: the [leaflet for R](https://rstudio.github.io/leaflet/) documentation is one of the best package documentations ever written!
+
+Check the bonus challenges of the INBO coding club of August 31, 2023 for more inspiration. The [leaflet for R](https://rstudio.github.io/leaflet/) documentation is one of the best package documentations ever written, that's for sure!
+
+---
+class: left, top
+
+# The packages of the month - Amber's choice
+
+Do you dream of switching from static to dynamic maps with one line of code? Well, give [tmap](https://r-tmap.github.io/tmap/) a try! Give a look to the [Get Started](https://r-tmap.github.io/tmap/articles/tmap-getstarted.html) page:
+
+```
+tmap_mode("view") # to dynamic maps
+tmap_mode("plot") # to static maps
+```
+
+Less flexible than mapview but the possibility to switch from static to dynamic visualization is really a nice-to-have.
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20241128/20241128_tmap.png)
+
+---
+class: left, top
+
+# The packages of the month - Damiano's choice
+
+Ever heard about the Geographic Information System of the Commission, [GISCO](https://ec.europa.eu/eurostat/web/gisco)? And about [giscoR](https://ropengov.github.io/giscoR/)? giscoR is a package that allows you to download spatial data from the GISCO portal. It is a great tool to get administrative boundaries, land cover, etc. for the entire Europe/world. The package is still in development but it is already very useful. Check the [vignette](https://cran.r-project.org/web/packages/giscoR/vignettes/giscoR.html) to get started.
+
+![:scale 60%]({{ site.baseurl}}/assets/images/20241128/20241128_giscoR.png)
+
+---
+class: left, top
+
+# Resources
+
+- Challenges solutions and edited video recording will be available soon.
+- [ggplot2](https://ggplot2.tidyverse.org/): our standard package for plots, which can also be used for displaying spatial data.
+- [ggspatial](https://paleolimbot.github.io/ggspatial/index.html) documentation. Suit well for static maps and ggplot2 compatible.
+- Are you a ggplot fan? The package [**ggmap**](https://github.com/dkahle/ggmap#readme) is also something you will enjoy!
+- [mapview](https://r-spatial.github.io/mapview/) documentation.
+- [leaflet](https://rstudio.github.io/leaflet/) for R documentation.
+- [leafem](https://r-spatial.github.io/leafem/) documentation.
+- [leafpop](https://rdrr.io/cran/leafpop/) documentation.
+- INBO's R package: [inbospatial](https://github.com/inbo/inbospatial): a collection of useful R functions for spatial data.
+- [tmap](https://r-tmap.github.io/tmap/) documentation.
+- [giscoR](https://ropengov.github.io/giscoR/) documentation.
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room number and name  -->
+Topic: RepoRts - how to combine code and text in R <br>
+Room:  HT - 01.69 - Paul Janssen <br>
+Date: **17/12/2024**, van **10:00** tot **12:00** <br>
+Help needed with packages or setup? You are welcom from **9:45**
