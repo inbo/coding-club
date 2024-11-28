@@ -15,10 +15,17 @@ required_packages <- c(
 # Install packages not yet installed
 installed_packages <- required_packages %in% rownames(installed.packages())
 if (any(installed_packages == FALSE)) {
+  if (!"https://inbo.r-universe.dev" %in% getOption("repos")) {
+    # Install inbospatial via GitHub
+    devtools::install_github("inbo/inbospatial")
+    # Remove inbospatial from the list of packages to install
+    required_packages <- required_packages[required_packages != "inbospatial"]
+  }
+  # Install packages not yet installed
   install.packages(required_packages[!installed_packages])
 }
 
-# Packages loading
+# Load packages
 invisible(lapply(required_packages, library, character.only = TRUE))
 
 
