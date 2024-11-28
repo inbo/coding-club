@@ -32,7 +32,7 @@ invisible(lapply(required_packages, library, character.only = TRUE))
 
 ## CHALLENGE 1 - Plots
 
-# Load the
+# Load the number of alien species in protected areas
 ias_in_pa <- sf::st_read(
   dsn = "./data/20241128/20241128_ias_union_concern_Natura2000_B.gpkg"
 )
