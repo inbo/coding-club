@@ -205,6 +205,8 @@ data/20240926/20240926_harmonia_axyridis_2011.txt,20240926_harmonia_axyridis_201
 data/20240926/20240926_chorthippus_biguttulus_2010.txt,20240926_chorthippus_biguttulus_2010.txt,data,20240926
 data/20241128/20241128_ias_union_concern_Natura2000_B.gpkg,20241128_ias_union_concern_Natura2000_B.gpkg,data,20241128
 data/20241128/20241128_flemish_municipalities.gpkg,20241128_flemish_municipalities.gpkg,data,20241128
+data/20241217/20241217_occurrence_cube_anemone.tsv,20241217_occurrence_cube_anemone.tsv,data,20241217
+data/20241217/20241217_utm1_be.gpkg,20241217_utm1_be.gpkg,data,20241217
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
@@ -396,3 +398,4 @@ src/20241029/fiRst_0.0.0.9000.tar.gz,fiRst_0.0.0.9000.tar.gz,src,20241029
 src/20241029/bRead_0.0.0.9000.tar.gz,bRead_0.0.0.9000.tar.gz,src,20241029
 src/20241029/bRead2_0.0.0.9000.tar.gz,bRead2_0.0.0.9000.tar.gz,src,20241029
 src/20241128/20241128_challenges.R,20241128_challenges.R,src,20241128
+src/20241217/20241217_challenges.R,20241217_challenges.R,src,20241217
