@@ -84,6 +84,15 @@ sf_anemone_cube <- cells_in_cube %>%
 sf_anemone_cube %>% head(n = 30)
 
 
+
+## End CHALLENGE 1
+
+
+
+## CHALLENGE 2
+
+
+
 # Data visualization
 
 # In this section we will show how the number of occurrences and the number of occupied grid cells vary by year and species. Both static plots and dynamic maps are generated.

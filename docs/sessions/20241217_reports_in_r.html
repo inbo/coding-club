@@ -48,7 +48,7 @@ class: left, top
 - [**FOSDEM**](https://fosdem.org/2025/) is a free event for software developers to meet, share ideas and collaborate. Every year, thousands of developers of free and open source software from all over the world gather at the event in Brussels. You don't need to register. Just turn up and join in!
 - Lighning talk about our club will be given at the dev room "Open Research": see [timetable](https://fosdem.org/2025/schedule/track/research/).
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20241217/20241217_fossdem_coding_club.png)
+![:scale 80%]({{ site.baseurl}}/assets/images/20241217/20241217_fossdem_coding_club.png)
 
 ---
 class: center, middle
@@ -138,7 +138,7 @@ class: left, top
 - Save it as `test.Rmd`
 - **knit** it to create html (= `rmarkdown::render("test.Rmd")` in console)
 
-![:scale 70%]({{ site.baseurl}}/assets/images/20241217/20241217_knit_does_the_magic.png)
+![:scale 100%]({{ site.baseurl}}/assets/images/20241217/20241217_knit_does_the_magic.png)
 
 ---
 class: left, top
@@ -155,7 +155,7 @@ Why do people use YAML for writing configurations files? Because YAML is very, v
 ---
 title: "test"
 author: "Damiano Oldoni"
-date: "13-12-2022"
+date: "17-12-2024"
 output: html_document
 ---
 ```
@@ -177,7 +177,7 @@ class: left, top
 
 1. [20241217_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20241217/20241217_challenges.R): R script to start with and containing both code and text.
 2. [20241217_occurrence_cube_anemone.tsv](https://github.com/inbo/coding-club/blob/master/data/20241217/20241217_occurrence_cube_anemone.tsv): species occurrence cube* for alien species of genus _Anemone_ from 2010 to 2023 in Belgium. Extracted from https://doi.org/10.15468/dl.2phyja.
-3. [20241217_utm1_be.gpkg](https://github.com/inbo/coding-club/blob/master/data/20241217/20241217_utm1_be.gpkg): spatial grid of Belgium at 1km x 1Km resolution derived by the [shapefile](https://www.eea.europa.eu/data-and-maps/data/eea-reference-grids-2/gis-files/belgium-shapefile) as provided by the European Environment Agency (EEA).
+3. [20241217_utm1_be.gpkg](https://github.com/inbo/coding-club/blob/master/data/20241217/20241217_utm1_be.gpkg): spatial grid of Belgium at 1km x 1km resolution. Derived from the [Belgium shapefile](https://www.eea.europa.eu/data-and-maps/data/eea-reference-grids-2/gis-files/belgium-shapefile) provided by the European Environment Agency (EEA).
 
 
 <small>* A species occurrence cube is a new experimental output of GBIF developed in the context of the [B-Cubed](https://b-cubed.eu/) project. An occurrence cube aggregates occurrences per taxon (e.g. species), time (e.g. year) and space (e.g. EEA grid cells). For more info, please check the document ["Specification for species occurrence cubes and their production"](https://docs.b-cubed.eu/occurrence-cube/specification/).</small>
@@ -191,10 +191,15 @@ class: left, top
 Convert the text and the code in [20241217_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20241217/20241217_challenges.R) to a Rmd document called `20241217_anemone_analysis.Rmd` and _knit_ it as html. Using the cheatsheet and the specific tips provided, please, take care of:
 
 1. Converting the comments to text.
-2. Showing the library you need to load but avoiding to show any returned **message** (errors or warnings are allowed). Tip: see [list](https://yihui.org/knitr/options/#text-output) with all test-output chunk options. How to avoid showing **warnings** as well?
+
+2. Showing the library you need to load but avoiding to show any returned **message** (errors or warnings are allowed). Tip: check the [list](https://yihui.org/knitr/options/#text-output) with all test-output chunk options. How to avoid showing **warnings** as well?
+
 3. adding **inline code** where needed, e.g. min(anemone_cube$year) and max(anemone_cube$year) in the script. [Tip](https://bookdown.org/yihui/rmarkdown/r-code.html).
+
 4. Setting the date automatically in the YAML header. [Tip](https://bookdown.org/yihui/rmarkdown-cookbook/update-date.html).
+
 5. Paging the data frames so that they look always nice. [Tip](https://bookdown.org/yihui/rmarkdown/html-document.html#data-frame-printing).
+
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -202,11 +207,14 @@ class: left, top
 
 # Challenge 2
 
-Let's add some extra text and code to the Rmd to generate visualizations and maps.
+Let's add some text and code from [20241217_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20241217/20241217_challenges.R) to the Rmd to generate visualizations and maps.
 
 1. Add a table of content. Allow the table of contents being always visible, even when the document is scrolled. [Tip](https://bookdown.org/yihui/rmarkdown/html-document.html#table-of-contents).
+
 2. Add section numbers to the table of content. [Tip](https://bookdown.org/yihui/rmarkdown/html-document.html#section-numbering).
+
 3. Use tabbed sections where mentioned (static plots). Tip: check the [tabbed](https://bookdown.org/yihui/rmarkdown/html-document.html#tabbed-sections) section.
+
 4. The chunk codes for the plots and the dynamic map can be quite long and so potentially distracting for the readers. Please, fold them. Readers can then choose to display them by clicking the fold buttons: Tip: check the [fold-show](https://bookdown.org/yihui/rmarkdown-cookbook/fold-show.html) section.
 
 ---
@@ -217,8 +225,10 @@ class: left, top
 What happens in a R Markdown stays in that R Markdown! For example: knitting a Rmd containing a variable created in another Rmd will return an error: "variable not found". Three solutions:
 
 1. Put all your workflow in a single Rmd. Good for blogposts and tutorials. Not for complex data analysis, workflows and reports.
+
 2. Save temporary outputs at the end of a Rmd and load them at the beginning of the second Rmd. You have to knit both and be sure to update the second Rmd if you change the first one. Not handy if you work with many Rmds.
-3. Create a book with bookdown!
+
+3. Create a book with [bookdown](https://bookdown.org/)!
 
 ---
 class: left, top
@@ -227,7 +237,7 @@ class: left, top
 
 First, make a new book with the RStudio Project Wizard (File > New Project > New Directory > Book project using bookdown) and select gitbook from the dropdown menu. Call the directory, and so, the project, `report_anemone`. Notice you can _build_ your book via a "Buid book" option in the Build pane of RStudio (see screenshot below). More about gitbook style in the [dedicated chapter](https://bookdown.org/yihui/bookdown/html.html#gitbook-style) from the bookdown guide.
 
-![:scale 110%]({{ site.baseurl}}/assets/images/20241217/20241217_build_book.png)
+![:scale 100%]({{ site.baseurl}}/assets/images/20241217/20241217_build_book.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -243,9 +253,9 @@ Try to convert the content of your Rmd document in the book we have just created
 ---
 class: left, top
 
-# Bonus challenge
+# Bonus challenge 1
 
-1. Now you know how to create a _book_, you can understand the phylosophy behind the INBO package `INBOmd` and can fully understand the [slides](https://inbo.github.io/inbomd_examples/inbomd_workshop/inbomd_workshop.pdf) of Thierry! Give `INBOmd` a try by creating the same book as in challenge 3: your report is 100% INBO-styled, yeah! Tip: check `?INBOmd::report()` as well.
+Now you know how to create a _book_, you can understand the phylosophy behind the INBO package `INBOmd` and can fully understand the [slides](https://inbo.github.io/inbomd_examples/inbomd_workshop/inbomd_workshop.pdf) of Thierry! Give `INBOmd` a try by creating the same book as in challenge 3: your report is 100% INBO-styled, yeah! Tip: check `?INBOmd::report()` as well.
 
 ---
 class: left, top
@@ -264,32 +274,31 @@ class: left, top
 ---
 class: left, top
 
-## Quarto documents (.qmd): are they the future?
+## Quarto (.qmd): is it the future?
 
 Do you know about [Quarto](https://quarto.org/) documents? Well, probably we all will write them within a year or two...
 
 Quarto is*:
 
-- A way to combine the (benefits of) R (R Markdown, bookdown, tidyverse packages) and Python (Jupyter Book, Jupyter notebooks, pandas, matplotlib) data science ecocystems
-- A rewrite of RMarkdown with multilanguage as a first-class concern
-- A way to get an accessible webpage AND a publication-ready PDF from the same source
-- A really big wrapper around Pandoc (the document converter used to "knit" Rmd documents)
-- Not a prototype anymore: tens of thousands of users already
+- A way to combine the (benefits of) R (R Markdown, bookdown, tidyverse packages) and Python (Jupyter Book, Jupyter notebooks, pandas, matplotlib) data science ecocystems.
+- A rewrite of RMarkdown with multilanguage as a first-class concern.
+- A way to get an accessible webpage AND a publication-ready PDF from the same source.
+- A really big wrapper around Pandoc (the document converter used to "knit" Rmd documents).
+- Not a prototype anymore: tens of thousands of users already.
 
 
-Do you know that the [Communicate section](https://r4ds.hadley.nz/communicate) of the R for Data Science book focusses on Quarto and is written using Quarto?**
+Do you know that the [Communicate section](https://r4ds.hadley.nz/communicate) of the R for Data Science book focusses on Quarto and is written using Quarto?
 
 One thing is for sure: all effort you did up to now is not for nothing! Quarto is very similar to Rmd.
 
 
-<small>\** Credits: Carlos Scheidegger, see his [slides](https://cscheid.net/static/2023-esip-quarto-talk/#/title-slide) and [live presentation](https://youtu.be/uQ3yZjM1bj8)<br>
-\** * Thanks Floris Vanderhaeghe for all your enlightening info about Quarto!
+<small>\** Credits: Carlos Scheidegger, see his [slides](https://cscheid.net/static/2023-esip-quarto-talk/#/title-slide) and [live presentation](https://youtu.be/uQ3yZjM1bj8)
 </small>
 
 ---
 class: left, top
 
-## Quarto documents (.qmd): are they the future?
+## Quarto (.qmd): is it the future?
 
 The [getting started](https://quarto.org/docs/get-started/hello/rstudio.html) tutorial is the best start to learn Quarto.
 
@@ -298,6 +307,8 @@ Give it a try:
 - `File` ->  `New File` -> `Quarto Document...` -> Title: "test", Output format: HTML (deafult)
 - Visual Markdown Editor (VME) is used by default, but you can switch to `Source`
 - **Render** it to create html (opened automatically in your browser as a Background job)
+
+Check also the talk ["Mixing R, Python, and Quarto: Crafting the Perfect Open Source Cocktail"](https://www.youtube.com/watch?v=8174mk6SGcU&;list=PL9HYL-VRX0oSFkdF4fJeY63eGDvgofcbn&;index=57) by Alenka Frim and Nic Crane.
 
 ---
 class: left, top
@@ -333,6 +344,7 @@ class: left, top
 7. [Article](https://www.educative.io/blog/yaml-tutorial) about YAML
 8. quarto (.qmd) format: a [getting started](https://quarto.org/docs/get-started/hello/rstudio.html)
 9. Carlos Scheidegger's [slides](https://cscheid.net/static/2023-esip-quarto-talk/#/title-slide) and [live presentation](https://youtu.be/uQ3yZjM1bj8)
+10. Recording of the talk ["Mixing R, Python, and Quarto: Crafting the Perfect Open Source Cocktail"](https://www.youtube.com/watch?v=8174mk6SGcU&;list=PL9HYL-VRX0oSFkdF4fJeY63eGDvgofcbn&;index=57) by Alenka Frim and Nic Crane at the posit::conf(2024)
 10. Officeverse: [bookdown](https://ardata-fr.github.io/officeverse/) and officer [package documentation](https://davidgohel.github.io/officer/).
 
 ---
