@@ -45,3 +45,6 @@ docs/.sass-cache/
 # Jekyll files
 .jekyll-cache/
 _site/
+
+# Avoid quarto generated files
+src/20241217/20241217_anemone_quarto_files
