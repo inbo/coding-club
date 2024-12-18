@@ -17,7 +17,6 @@ execute:
   warning: true
   error: false
   include: true
-  cache: true
 project:
   execute-dir: project
 from: markdown+emoji
