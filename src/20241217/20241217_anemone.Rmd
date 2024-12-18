@@ -1,0 +1,273 @@
+---
+title: "Read and visualize Anemone occurrence data"
+author: 
+- "Damiano Oldoni"
+- "Coauthor A"
+- "Coauthor B"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    df_print: paged
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    number_sections: true
+    code_folding: show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+In this document we will:
+
+1. read occurrence cube data
+2. explore data
+3. preprocess data
+4. visualize data
+
+
+# Read and preprocess
+
+```{r load-libraries, message=FALSE, warning=FALSE}
+# Load libraries:
+library(tidyverse)    # to do datascience
+library(INBOtheme)    # to apply INBO style to graphs
+library(sf)           # to work with geospatial vector data
+library(mapview)      # to make dynamic leaflet maps
+
+```
+
+
+## Read data
+
+Read _Anemone_ data from the occurrence cube file `20241217_occurrence_cube_anemone.tsv`:
+
+```{r read data}
+anemone_cube <- readr::read_tsv(
+  file = "./data/20241217/20241217_occurrence_cube_anemone.tsv",
+  na = ""
+)
+```
+
+Read the Belgian grid from the geopackage file `20241217_utm1_be.gpkg`, derived from the shapefile as provided by the [European Environment Agency](https://www.eea.europa.eu/en):
+
+```{r read grid}
+be_grid <- sf::st_read("./data/20241217/20241217_utm1_be.gpkg")
+```
+
+
+## Explore data
+
+This dataset contain data from `r min(anemone_cube$year)` to `r max(anemone_cube$year)` related to `r length(unique(anemone_cube$specieskey))` species and their distribution in Belgium based on a grid of 1 km x 1 km.
+
+Preview with the first 30 rows of the dataset:
+
+```{r}
+head(anemone_cube, n = 30)
+```
+
+
+## Taxonomic information
+
+Species present in the dataset:
+
+```{r}
+anemone_cube %>% distinct(specieskey, species)
+```
+
+## Temporal information
+
+The data are temporally defined at year level. Years present:
+```{r}
+anemone_cube %>% dplyr::distinct(year)
+```
+
+## Geographical information
+
+The geographical information is represented by the `eeacellcode` column, which contains the identifiers of the grid cells containing at least one occurrence of the species.
+
+The dataset contains `r length(unique(anemone_cube$eeacellcode))` unique grid cells.
+
+## Preprocess data
+
+Add geometrical information to the occurrence cube via `eeacellcode`, which contains the identifiers of the grid cells containing at least one occurrence of the species.
+
+```{r add geom information}
+cells_in_cube <- be_grid %>%
+  dplyr::filter(CELLCODE %in% unique(anemone_cube$eeacellcode)) %>%
+  dplyr::select(-c(EOFORIGIN, NOFORIGIN))
+sf_anemone_cube <- cells_in_cube %>%
+  dplyr::left_join(anemone_cube, by = c("CELLCODE" = "eeacellcode")) %>%
+  dplyr::rename("eeacellcode" = "CELLCODE")
+
+```
+
+Final (spatial) dataset:
+
+```{r}
+sf_anemone_cube %>% head(n = 30)
+```
+
+
+# Data visualization
+
+In this section we will show how the number of occurrences and the number of occupied grid cells vary by year and species. Both static plots and dynamic maps are generated.
+
+## Static plots {.tabset}
+
+Show number of occurrences  and number of occupied grid cells (make a tabbed section out of it)
+
+### per species
+
+```{r class.source = "fold-hide"}
+n_per_species <- sf_anemone_cube %>%
+  dplyr::group_by(species) %>%
+  dplyr::summarize(occurrences = sum(occurrences),
+                   grid_cells = n_distinct(eeacellcode),
+                   .groups = "drop") %>%
+  tidyr::pivot_longer(cols = c(occurrences, grid_cells),
+                      names_to = "variable",
+                      values_to = "n")
+
+ggplot(n_per_species, aes(x = species, y = n)) +
+  geom_bar(stat = 'identity') +
+  facet_grid(.~variable, scales = "free_y") +
+  ggplot2::theme(axis.text.x = element_text(angle = 60, hjust = 1))
+```
+
+
+
+### per year
+
+```{r class.source = "fold-hide"}
+n_per_year <- sf_anemone_cube %>%
+  dplyr::group_by(year) %>%
+  dplyr::summarize(occurrences = sum(occurrences),
+                   grid_cells = n_distinct(eeacellcode),
+                   .groups = "drop") %>%
+  tidyr::pivot_longer(cols = c(occurrences, grid_cells),
+                      names_to = "variable",
+                      values_to = "n")
+
+ggplot(n_per_year,aes(x = year, y = n)) +
+  geom_bar(stat = 'identity') +
+  facet_grid(.~variable, scales = "free_y") +
+  ggplot2::theme(axis.text.x = element_text(angle = 60, hjust = 1))
+```
+
+
+
+
+### per year and province
+
+```{r class.source = "fold-hide"}
+n_occs_per_year_species <-
+  sf_anemone_cube %>%
+  dplyr::group_by(year, species) %>%
+  dplyr::summarize(occurrences = sum(occurrences),
+                   grid_cells = n_distinct(eeacellcode),
+                   .groups = "drop") %>%
+  tidyr::pivot_longer(cols = c(occurrences, grid_cells),
+                      names_to = "variable",
+                      values_to = "n")
+
+ggplot(n_occs_per_year_species,
+       aes(x = year, y = n, fill = species)) +
+  geom_bar(stat = 'identity') +
+  facet_grid(.~variable) +
+  ggplot2::theme(axis.text.x = element_text(angle = 60, hjust = 1))
+```
+
+
+## Dynamic maps
+
+### Leaflet maps
+
+We show a map with the distribution of _Anemone_ in Belgium. We show the total number of occurrences per grid cell. The color of the grid cells is based on the number of occurrences. The legend shows the color scale and the number of occurrences per grid cell.
+
+```{r class.source = "fold-hide"}
+n_occs_per_cell <- sf_anemone_cube %>%
+  dplyr::group_by(eeacellcode) %>%
+  dplyr::summarize(
+    occurrences = sum(occurrences),
+    min_coordinateuncertaintyinmeters = min(mincoordinateuncertaintyinmeters),
+    min_mintemporaluncertainty = min(mintemporaluncertainty),
+    .groups = "drop")
+map_anemone <- mapview::mapview(n_occs_per_cell,
+                                zcol = "occurrences",
+                                legend = TRUE
+)
+map_anemone
+```
+
+# Notes
+
+Extra information came out during the INBO coding club have been added here below.
+
+## Date of the document
+
+If you want to set a fix date for the document, please replace the `r Sys.Date()` in the YAML header with the desired date in the format `YYYY-MM-DD`.  For example, `date: "2024-12-17"`.
+
+## `reveal.js`
+
+Presentations in RMarkdown via `reveal.js`:
+
+- <https://bookdown.org/yihui/rmarkdown/revealjs.html>
+- <https://github.com/rstudio/revealjs>
+
+reveal.js is an html presentation framework; RStudio/RMarkdown (as many other programming environments) have convenience functions to export to a reveal.js presentation.
+Because your presentation will essentially be *html*, it is versatile with media content and animation.
+For example, you can embed YouTube videos or interactive maps.
+
+Info on reveal.js (with example) at <https://revealjs.com>.
+
+There is an impressive demo included at <https://quarto.org/docs/presentations/revealjs>.
+
+Do you want to create presentations with R Markdown and exporting to PDF? `INBOmd` has house style presentations to do so. See some [examples](https://inbo.github.io/inbomd_examples)They won't work on reveal.js, of course.
+
+## Convert a `.R` script to a `.Rmd`: stitching
+
+You can convert an R script to an Rmd file: it's called _stitching_. Use the `stitch()` function from the `knitr` package.
+
+Example:
+
+```r
+library("knitr")
+knitr::stitch("src/20241217/20241217_challenges.R")
+```
+
+More info at <https://yihui.org/knitr/demo/stitch/>.
+
+
+## Convert a `.Rmd` to a `.R` script: purling
+
+The opposite of stitching is called _purling_. You can do it via the `purl()` function from `knitr` package:
+<https://bookdown.org/yihui/rmarkdown-cookbook/purl.html>
+
+This enables a good workflow to produce well-documented R scripts: write an Rmd, `purl` it to a `.R` file. All the supporting text will become comments in the R script. Handy if you need to share your code with someone who doesn't use RMarkdown or a machine which has to execute automatically some code (workflow automatisation).
+
+
+## References and citation in RMarkdown
+
+Do you know Hans Van Calster wrote a wonderful tutorial about how to cite in RMarkdown? It's available at <https://tutorials.inbo.be/tutorials/r_citations_markdown>.
+
+Other docuemntation can be found at:
+
+- https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html
+- https://docs.citationstyles.org/en/stable/primer.html
+
+
+## Caching
+
+If a chunk takes a long time to run, you can cache the results. This means that the chunk will only be run once, and the results will be saved. The next time you knit the document, the results will be loaded from the cache. This can save a lot of time when you are working on a document.
+
+Example:
+
+```r
+# ```{r, cache=TRUE}
+# code that takes a long time to run
+# ```
+```
