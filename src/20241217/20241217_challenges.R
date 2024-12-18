@@ -4,7 +4,7 @@
 # make an html version of it.
 
 
-# Title : "Read and preprocess geese data"
+# Title : "Read and visualize Anemone occurrence data"
 
 
 # # Setup
@@ -149,7 +149,7 @@ n_occs_per_year_species <-
 ggplot(n_occs_per_year_species,
        aes(x = year, y = n, fill = species)) +
   geom_bar(stat = 'identity') +
-  facet_grid(.~variable, scales = "free_y") +
+  facet_grid(.~variable) +
   ggplot2::theme(axis.text.x = element_text(angle = 60, hjust = 1))
 
 # # Dynamic maps
