@@ -255,7 +255,7 @@ This enables a good workflow to produce well-documented R scripts: write an Rmd,
 
 Do you know Hans Van Calster wrote a wonderful tutorial about how to cite in RMarkdown? It's available at <https://tutorials.inbo.be/tutorials/r_citations_markdown>.
 
-Other docuemntation can be found at:
+Other documentation can be found at:
 
 - https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html
 - https://docs.citationstyles.org/en/stable/primer.html
