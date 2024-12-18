@@ -31,8 +31,9 @@ In this document we will:
 
 # Read and preprocess
 
-```{r load-libraries, message=FALSE, warning=FALSE}
-# Load libraries:
+Load packages:
+
+```{r load-pkgs, message=FALSE, warning=FALSE}
 library(tidyverse)    # to do datascience
 library(INBOtheme)    # to apply INBO style to graphs
 library(sf)           # to work with geospatial vector data
