@@ -140,10 +140,12 @@ Which code version is more readable?
 
 ```
 library(dplyr)
+
 # Version 1
 mtcars %>%
   filter(mpg > 20) %>%
   select(mpg, cyl, hp)
+
 # Version 2
 select(filter(mtcars, mpg > 20), mpg, cyl, hp)
 ```
@@ -183,7 +185,11 @@ class: left, top
 
 Today we will work with:
 
-- [20250130_butterfly_transect_count](): a butterfly transect count dataset in a messy format
+- [20250130_butterflies_eu.csv](https://github.com/inbo/coding-club/blob/main/data/20250130/20250130_butterflies_eu.csv): taxon core of the GBIF checklist: ["National checklists and red lists for European butterflies"](https://www.gbif.org/dataset/f9af6ffd-febc-4626-b2e8-809b1c60fa01#description).
+- [20250130_butterflies_eu_distributions.csv](https://github.com/inbo/coding-club/blob/main/data/20250130/20250130_butterflies_eu_distributions.csv): distribution extension of the "National checklists and red lists for European butterflies". It contains the distribution of the species at country level, especially the threat status.
+- [20250130_butterflies_eu_vernacularnames_dutch_all_GBIF.csv](https://github.com/inbo/coding-club/blob/main/data/20250130/20250130_butterflies_eu_vernacularnames_dutch_all_GBIF.csv): all Dutch vernacular names found on GBIF related to the butterflies listed in the "National checklists and red lists for European butterflies".
+- [20250130/20250130_transect_counts.csv](https://github.com/inbo/coding-club/blob/main/data/20250130/20250130_transect_counts.csv): butterfly transect count. Derived from `20250130_butterfly_transect_counts_raw.xls`.
+- [20250130_butterfly_transect_counts_raw.xls](https://github.com/inbo/coding-club/blob/main/data/20250130/20250130_butterfly_transect_counts_raw.xls): raw and untidy transect counts Excel sheet. Only needed in Bonus Challenge 2.
 - [20250130_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20250130/20250130_challenges.R):
 R script to start from (some code is already provided)
 
