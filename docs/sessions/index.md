@@ -3,6 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
+| 2024-12-17 | Data wrangling with tidyverse | [slides]({{ site.baseurl }}{% link sessions/20250130_data_wrangling_tidyverse.html  %}) | [hackmd](https://hackmd.io/@damianooldoni/HJM0WEu_1l?view) | 01.70 - Ferdinand Peeters |  |
 | 2024-12-17 | Reports in R | [slides]({{ site.baseurl }}{% link sessions/20241217_reports_in_r.html  %}) | [hackmd](https://hackmd.io/lZNAaZtmQOC6yfBLY5UiTA?view) | 01.69 - Paul Janssen | [vimeo](https://vimeo.com/1041690812) |
 | 2024-11-28 | Visualize spatial data in R | [slides]({{ site.baseurl }}{% link sessions/20241128_visualize_spatial_data_in_r.html  %}) | [hackmd](https://hackmd.io/xnVuPm-KS_-3oEIMHSrdJQ?view) | 01.23 - Léon Stynen | [vimeo](https://vimeo.com/1041724864) |
 | 2024-10-29 | from stand alone functions to R packages | [slides]({{ site.baseurl }}{% link sessions/20241029_from_stand_alone_functions_to_r_packages.html  %}) | [hackmd](https://hackmd.io/cbAR638FR7CQJmoP7rSgdA?view) | 01.17 - Clara Peeters | [vimeo](https://vimeo.com/1029233461) |
