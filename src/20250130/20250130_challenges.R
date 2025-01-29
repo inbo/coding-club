@@ -64,7 +64,16 @@ butterflies_eu_vern_dutch <- purrr::map(
 
 
 
-## BONUS CHALLENGE
+
+
+## BONUS CHALLENGE 1 - Choices 🤷
+
+
+
+
+
+
+## BONUS CHALLENGE 2 - Tidying up your data 🧹
 
 library(readxl)
 

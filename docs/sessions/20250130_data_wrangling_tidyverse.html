@@ -42,9 +42,9 @@ Please confirm asap the room reservation on the roomie
 ---
 class: left, top
 
-## Welcome Oberon
+## Welcome Oberon to the core team 👋
 
-Oberon Geunens (team "Estuaries") is the new member of the INBO coding club. He will replace Amber Mertens.
+Oberon Geunens (team "Estuaries") is the new member of the INBO coding club core team. He will replace Amber Mertens. He is a data scientist with a passion for spatial data visualization.
 
 ---
 class: left, top
@@ -134,8 +134,19 @@ class: left, top
 
 From [dplyr](https://dplyr.tidyverse.org/articles/dplyr.html#the-pipe) documentation:
 
-
 ![:scale 100%]({{ site.baseurl}}/assets/images/20240425/20240425_pipe.png)
+
+Which code version is more readable?
+
+```
+library(dplyr)
+# Version 1
+mtcars %>%
+  filter(mpg > 20) %>%
+  select(mpg, cyl, hp)
+# Version 2
+select(filter(mtcars, mpg > 20), mpg, cyl, hp)
+```
 
 ---
 class: left, top
@@ -235,7 +246,7 @@ more functional style, which can be more readable and maintainable. [rgbif](http
 
 purrr and rgbif can be combined to make powerful and flexible workflows. Let's show some examples of how you can use them together to get vernacular names.
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20250130/20250130_purrr_rgbif_logos.png)
+![:scale 70%]({{ site.baseurl}}/assets/images/20250130/20250130_purrr_rgbif_logos.png)
 
 ---
 class: left, top
@@ -287,12 +298,20 @@ class: left, top
 1. The data.frame `butterflies_eu_vern_dutch` contains several vernacular names for the same species (`taxonKey`). Some of them are exactly the same: they are just collected from different checklists. How many unique vernacular names are there for each taxon?
 2. We can see that some unique vernacular names are just the same name written in different ways. For example, "Atalanta" and "atalanta". How many unique vernacular names are there for each taxon if we ignore the case/capitalization? Return a data.frame with two columns: `taxonKey` and `n`. Order the result by `n`, from high to low. Tip: stringr package can be useful.
 3. The previous result means that we need to make some choices: vernacular names are not only written in different ways, but they ARE sometimes really different! Example: "akkerparelmoervlinder" and "paarse parelmoervlinder". Before making a choice, let's analyse the situation. Instead of counting only, return a data.frame with three columns: `taxonKey`, `vernacularName_lower` (lowercase version of `vernacularName`) and `n_names` (number of vernacular names). Again, order the output by `n_names`, from high to low.
-4. It's time to make choices. In case of multiple vernacular names, the expert (our Dirk) indicated most of the time the preferred vernacular name source via column `preferred` (`preferred` = `TRUE`). Then, keep only the rows with `preferred` = `TRUE` for each taxon. If there is only one vernacular name, keep that. Just select the first vernacular name if there is no preferred one. Return a data.frame called `butterflies_eu_vern_dutch_preferred` with same columns as `butterflies_eu_vern_dutch`.
 
 ---
 class: left, top
 
-# Bonus challenge - tidying up your data
+# Bonus challenge 1 - choices 🤷
+
+Input: `butterflies_eu_vern_dutch`.
+
+It's time to make choices. In case of multiple vernacular names, the expert (our Dirk) indicated most of the time the preferred vernacular name source via column `preferred` (`preferred` = `TRUE`). So, keep only the rows with `preferred` = `TRUE` for each taxon. Select the first vernacular name if there is no preferred one. If there is only one vernacular name, just keep that. Return a data.frame called `butterflies_eu_vern_dutch_preferred` with same columns as `butterflies_eu_vern_dutch`.
+
+---
+class: left, top
+
+# Bonus challenge 2 - tidying up your data 🧹
 
 Making use of readxl package, load the data from the Excel file `20250130_butterfly_transect_count_raw.xlsx` and save it as `transect_counts`. The data is in a messy format. Can you tidy it up? Apply the tidy data principles *:
 
@@ -324,7 +343,8 @@ class: left, top
 6. [rgbif homepage](https://docs.ropensci.org/rgbif/).
 7 The [GBIF API](https://techdocs.gbif.org/en/openapi/) documentation.
 8. The game changing article of Hadley Wickham: [Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf), from 2014.
-9. [tidylog homepage](https://github.com/elbersb/tidylog): no fancy package website, but still well written `README`.
+9. [readxl homepage](https://readxl.tidyverse.org/).
+10. [tidylog homepage](https://github.com/elbersb/tidylog): no fancy package website, but still well written `README`.
 
 ---
 class: center, middle
