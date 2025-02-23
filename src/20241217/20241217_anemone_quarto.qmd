@@ -19,6 +19,7 @@ execute:
   include: true
 project:
   execute-dir: project
+output-dir: docs
 from: markdown+emoji
 editor: visual
 ---
@@ -223,3 +224,4 @@ map_anemone
 ## Caching
 
 Caching in Quarto is done in the header, under `execute:`, via `cache: true`. This is similar to the `cache = TRUE` option in RMarkdown. More info at <https://quarto.org/docs/projects/code-execution.html>.
+
