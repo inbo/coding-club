@@ -1,0 +1,198 @@
+---
+layout: presentation
+title: Static dashboards with flexdashboard
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+  <!-- Adjust the presentation to the session. Focus on the challenges,
+this is not a coding tutorial.
+
+Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+folder and use the jekyll base.url reference as done in this template
+or see https://jekyllrb.com/docs/liquid/tags/#links.
+  using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 28 NOVEMBER 2023
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+
+01.70 - Ferdinand Peeters
+
+---
+class: left, top
+
+## ROOMIE: room reservation
+
+```
+> if (isFALSE(roomie)) {
++   warning("Please confirm asap the room reservation on the roomie.")
++ }
+Warning message:
+Please confirm asap the room reservation on the roomie.
+```
+
+## Start recording
+
+```
+> if (isFALSE(recordIsON)) {
++   warning("Please start recording asap!")
++ }
+Warning message:
+Please start recording asap!
+```
+
+
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20250224/20250224_badge.png)
+
+---
+class: center, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20250224/20250224_flexdashboard_logo.png)
+Check the homepage of [flexdashboard](https://pkgs.rstudio.com/flexdashboard/) R package. It's a package developed by posit (RStudio).
+
+---
+class: left, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+# Share your code during the coding session
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/mo4U_EMFTJW_B1mtEnD7eA?edit and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/mo4U_EMFTJW_B1mtEnD7eA?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub folders [coding-club/data/20250224](https://github.com/inbo/coding-club/tree/master/data/20250224) and [coding-club/src/20250224](https://github.com/inbo/coding-club/tree/master/src/20250224)
+
+<br>
+
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20220428")` to download the coding club material of April, 28 2022. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data and scripts description
+
+1. [20250224_craywatch_cleaned.txt](https://github.com/inbo/coding-club/blob/master/data/20250224/20250224_craywatch_cleaned.txt): tab separated text file with GBIF observations of 6 invasive alien crayfishes in Flanders. Derived from [10.15468/dl.pszsrh](https://doi.org/10.15468/dl.pszsrh). The query the GBIF download was based on, is the same query running realtime to show the layer "Nieuwe waarnemingen" (new observations) in the [craywatch map](https://craywatch.inbo.be/kaart/).
+2. [20250224_](https://github.com/inbo/coding-club/blob/master/data/20250224/20250224_): geopackage with the Flemish provinces.
+
+3. [20250224_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20250224/20250224_challenges.R): R script to start with.
+
+---
+class: left, top
+
+Install new packages:
+
+```r
+install.packages("flexdashboard")
+install.packages("heatmaply")
+```
+
+Load packages (if needed, install other missing packages as well):
+
+```r
+library(flexdashboard)  # to create dashboards using RMarkdown
+library(tidyverse)      # to do datascience
+library(here)           # to work easily with paths
+library(sf)             # to work with geospatial vector data
+library(leaflet)        # to make dynamic maps
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 0: discover the flexdashboard template
+
+Do you know RStudio has a flexdashboard template to start with?
+
+- Open RStudio
+- Go to File > New File > R Markdown...
+- Select "From Template"
+- Choose "Flex Dashboard"
+- Click "OK"
+
+Explore the template and try to knit it. What happens?
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1: one page dashboard
+
+Let's create a (static) dashboard called "" using [flexdashboard](https://pkgs.rstudio.com/flexdashboard/index.html).
+
+1. Use the code in 20250224_challenges.R under "#### Challenge 1" to generate a  dashboard. Use the [Tabset Column](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#tabset-column) layout. Set the first histogram (catches per year and province) on the left. On the right, display two bar charts (catches per province and catches per year) as a set of 2 tabs.
+2. Replace "Chart1", "Chart2" and "Chart3" with better titles.
+3. Add a second page with catch analysis at species level. Check the [Multiple pages](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#multiple-pages) section in the documentation. Divide the dashboard in two columns: on the left the catches per year and species, on the right the data with the fitted model.
+4. Replace "Page1" and "Page2" with better titles.
+5. A dashboard is not a dashboard without some interactive maps :-) Use the code under "# Maps" to add a third page with the heatmap and the leaflet map. Put each of them in a separate column.
+
+Please, feel free to experiment with other layouts. Enjoy flexdashboard!
+
+---
+class: left, top
+
+# Packge/Software of the month
+
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20250224/20250224_R_weekly_highlights.png)
+
+
+---
+class: left, top
+
+# Resources
+
+- Solutions and video recording will be soon available online.
+- [flexdashboard](https://pkgs.rstudio.com/flexdashboard/index.html) package documentation.
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.71 - Frans Breziers<br>
+Date: __25/03/2025__, van 10:00 tot 12:30<br>
+Subject: **to be decided** <br>
+(registration announced via DG_useR@inbo.be)
