@@ -51,8 +51,6 @@ Warning message:
 Please start recording asap!
 ```
 
-
-
 ---
 class: center, middle
 
@@ -64,6 +62,17 @@ class: center, top
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20250224/20250224_flexdashboard_logo.png)
 Check the homepage of [flexdashboard](https://pkgs.rstudio.com/flexdashboard/) R package. It's a package developed by posit (RStudio).
+
+---
+class: center, top
+
+# Why static dashboards?
+
+- **Quick**: easy to create and share
+- **Reproducible**: code and data are together
+- **Interactive** to a certain extent: crosstalk, plotly, leaflet, etc.
+- **Customizable** to a certain extent: within the configuration part of the flexdashboard document
+- **Free**: no need to pay for a dashboarding tool, e.g. Shinyapps.io, Tableau, PowerBI, etc.
 
 ---
 class: left, top
@@ -112,8 +121,10 @@ class: left, top
 
 # Data and scripts description
 
-1. [20250224_craywatch_cleaned.txt](https://github.com/inbo/coding-club/blob/master/data/20250224/20250224_craywatch_cleaned.txt): tab separated text file with GBIF observations of 6 invasive alien crayfishes in Flanders. Derived from [10.15468/dl.pszsrh](https://doi.org/10.15468/dl.pszsrh). The query the GBIF download was based on, is the same query running realtime to show the layer "Nieuwe waarnemingen" (new observations) in the [craywatch map](https://craywatch.inbo.be/kaart/).
-2. [20250224_](https://github.com/inbo/coding-club/blob/master/data/20250224/20250224_): geopackage with the Flemish provinces.
+Today we will work with crayfishes data.
+
+1. [20250224_craywatch_raw.txt](https://github.com/inbo/coding-club/blob/master/data/20250224/20250224_craywatch_raw.txt): tab separated text file with GBIF observations of 6 invasive alien crayfishes in Flanders from 2024-06-13, start of the [craywatch](https://craywatch.inbo.be/) project. Derived from [10.15468/dl.pszsrh](https://doi.org/10.15468/dl.pszsrh). The query the GBIF download was based on, is the same query running realtime to show the layer "Nieuwe waarnemingen" (new observations) in the [craywatch map](https://craywatch.inbo.be/kaart/). **Note**: needed only for the Bonus challenge.
+2. [20250224_craywatch_cleaned.txt](https://github.com/inbo/coding-club/blob/master/data/20250224/20250224_craywatch_cleaned.txt): reduced version, with only the columns needed for the dashboard, and removing an occurrence without `year` information.
 
 3. [20250224_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20250224/20250224_challenges.R): R script to start with.
 
@@ -124,17 +135,17 @@ Install new packages:
 
 ```r
 install.packages("flexdashboard")
-install.packages("heatmaply")
 ```
 
 Load packages (if needed, install other missing packages as well):
 
 ```r
-library(flexdashboard)  # to create dashboards using RMarkdown
 library(tidyverse)      # to do datascience
 library(here)           # to work easily with paths
 library(sf)             # to work with geospatial vector data
 library(leaflet)        # to make dynamic maps
+library(DT)             # to make interactive tables
+library(flexdashboard)  # to make dashboards
 ```
 
 ---
@@ -159,21 +170,79 @@ class: left, top
 
 # Challenge 1: one page dashboard
 
-Let's create a (static) dashboard called "" using [flexdashboard](https://pkgs.rstudio.com/flexdashboard/index.html).
+Let's create a (static) dashboard called "Craywatch dashboard" using [flexdashboard](https://pkgs.rstudio.com/flexdashboard/index.html). You can save the R Markdown document as `20250224_craywatch_dashboard_v1.Rmd`, for example.
 
-1. Use the code in 20250224_challenges.R under "#### Challenge 1" to generate a  dashboard. Use the [Tabset Column](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#tabset-column) layout. Set the first histogram (catches per year and province) on the left. On the right, display two bar charts (catches per province and catches per year) as a set of 2 tabs.
-2. Replace "Chart1", "Chart2" and "Chart3" with better titles.
-3. Add a second page with catch analysis at species level. Check the [Multiple pages](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#multiple-pages) section in the documentation. Divide the dashboard in two columns: on the left the catches per year and species, on the right the data with the fitted model.
-4. Replace "Page1" and "Page2" with better titles.
-5. A dashboard is not a dashboard without some interactive maps :-) Use the code under "# Maps" to add a third page with the heatmap and the leaflet map. Put each of them in a separate column.
+1. Use the code in 20250224_challenges.R under "#### Challenge 1" to generate a one page  dashboard. Let's work with rows. Use the [Chart Stack](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#chart-stack-fill) layout. Set the histogram (number of obs per month and species) on top. Below, show the leaflet.
+2. Replace "Chart1", "Chart2" with better titles.
 
-Please, feel free to experiment with other layouts. Enjoy flexdashboard!
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2: gauges, value boxes and multipaging
+
+User interface can be improved by adding gauges and multipaging. Check the [multiple pages](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#multiple-pages) section in the flexdashboard documentation.
+
+Use the code in 20250224_challenges.R under "#### Challenge 2" to add a first page to the dashboard containing:
+
+1. A gauge on top to show in percentage the number of observations linked to craywatch (= obs from waarnemingen.be dataset). In this way we show how impactful is citizen science for detecting these species. Tip: check the [gauges](https://pkgs.rstudio.com/flexdashboard/articles/using.html#gauges) section in the flexdashboard documentation.
+
+2. A value box with the absolute number of observations linked to craywatch (waarnemingen.be). Use a camera as `icon`. Tip: check the [value boxes](https://pkgs.rstudio.com/flexdashboard/articles/using.html#value-boxes) section in the flexdashboard documentation. And if you find a way to combine the gauge and the value box next to each other, please, shout it loudly 📢
+
+3. At the bottom, a histogram with the number of observations per dataset.
+
+4. Place the dashboard of challenge 1 in a second page. Replace also "Page 1"" and "Page 2" with better titles.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3: extras
+
+1. Allow users to check the the source code. Opt for embedding it. Tip: check the [source code](https://pkgs.rstudio.com/flexdashboard/articles/using.html#source-code) section in the flexdashboard documentation..
+2. Allow users to explore the data theirselves! Add a third page with a datatable. Tip: check the [datatables](https://pkgs.rstudio.com/flexdashboard/articles/using.html#datatables) section in the flexdashboard documentation.
+3. Publish the dashboard on RPubs, an easy web publishing service provided by RStudio.
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20250224/2025_RPubs.png)
 
 ---
 class: left, top
 
-# Packge/Software of the month
+## flexdashboard limitations and its future: Quarto
 
+The biggest limitation of flexdashboard? You cannot combine it with Rmarkdown website functionality and flexdashboard, see this [old issue](https://github.com/rstudio/flexdashboard/issues/72).
+
+The reason the issue is still open is that the same company behind flexdashboard was in the meantime developing [Quarto](https://quarto.org/docs/)! Quarto creates dynamic content with not only R, but also [Python](https://quarto.org/docs/computations/python.html), [Julia],(https://quarto.org/docs/computations/julia.html) and [Observable](https://quarto.org/docs/computations/ojs.html). So, you can create R dashboards with Quarto! Check the extensive [Quarto Dashboards](https://quarto.org/docs/dashboards/) guide. The syntax is quite similar to flexdashboard, of course, with the advantage that you can combine dashboards and standard Quarto documents (.qmd extension, not really far from R Markdown syntax) in the same website.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Bonus challenge: quarto website embedding the dashboard
+
+Create a Quarto poject. Its rendered version is a website with the following structure:
+
+- A homepage with a short introduction to the dashboard and the data behind: `index.qmd`.
+- The dashboard with its three pages as created at the end of Challenge 3: how many quarto files do you need? One per page or one for all pages as in flexdashboard?
+- A page "About the Data" where you show how to get from the raw occurrences (20250224_craywatch_raw.txt) to the cleaned dataset: `about_the_data.qmd`. You can eventually save the cleaned data at the end of this document. So, the dashboard just needs to read it as we did in the challenges.
+
+No worries: you don't have to do all this alone. Get inspired by this example: [euroraccoon repository](https://github.com/b-cubed-eu/euroraccoon) and its rendered [website](https://b-cubed-eu.github.io/euroraccoon/). Notice that in the example the dashboard just shows the plots as pngs (saved in About the Data page): no real R code is run. Still, saving the output of "About the Data" to use it as input for the dashboard is still valid.  Quarto documentation is source a very good reference as well.
+
+---
+class: left, top
+
+# Packge/Software of the month: Quarto + Observable JS
+
+Unfortunately, R is not the best programming language to create interactive dashboards, simply because R has not be thought to be used for web development. That's why you need Shiny. But hosting Shiny apps is not free unless you create small dashboards for yourself or very few people. Do you want to do some serious web development? Learn Java Script. Or...
+
+Do you know that you can create interactive Shiny-like dashboards with Quarto + Observable JS?
+
+- [Observable JS](https://observablehq.com/): a platform to create and share data visualizations and dashboards. Observable JS is distinguished by its reactive runtime, which is especially well suited for interactive data exploration and analysis. It is free and open-source. You can use it to create interactive dashboards, like Shiny, but with JavaScript.
+- You can use Observable JS in Quarto, the "new" R Markdown alternative. Check in particular the [Observable JS](https://quarto.org/docs/interactive/ojs/) Quarto documentation.
+- Do you need an example to be convinced? Check the [Palmer Penguins example](https://quarto.org/docs/interactive/ojs/examples/penguins.html).
+
+
+About ObservableJS: you can go quite far. Check this [Youtube video tutorial](https://www.youtube.com/watch?v=1k1ExCgzXl0) to create a Spotify related dashboard using Observable JS, GitHub Actions, and GitHub Pages. See [code repository](https://github.com/melissavanbussel/spotify-dashboard). Spoiler: she uses chatGPT for some steps.
 
 ![:scale 80%]({{ site.baseurl}}/assets/images/20250224/20250224_R_weekly_highlights.png)
 
@@ -185,6 +254,9 @@ class: left, top
 
 - Solutions and video recording will be soon available online.
 - [flexdashboard](https://pkgs.rstudio.com/flexdashboard/index.html) package documentation.
+- [Observable JS](https://observablehq.com/) homepage
+- quarto documentation about [Observable JS](https://quarto.org/docs/interactive/ojs/).
+- craywatch project: [craywatch.inbo.be](https://craywatch.inbo.be/)
 
 ---
 class: center, middle
