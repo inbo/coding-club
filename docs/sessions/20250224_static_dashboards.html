@@ -83,15 +83,15 @@ class: left, top
 flexdashboard was recently a topic in dg_useR (Dec 18)! How to adjust the font of the dashboard navigation bar ([custom themes](https://pkgs.rstudio.com/flexdashboard/articles/theme.html#custom-themes)) and the height and width of the charts ([sizing](https://pkgs.rstudio.com/flexdashboard/articles/using.html#sizing))? The help provided by Pieter Huybrechts is a nice, colorful, funny [dashboard](https://pietrh.github.io/flexdashboard-fonts-demo/). Here [its code](https://github.com/PietrH/flexdashboard-fonts-demo/blob/main/experiments-sizing-fonts.Rmd).
 
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20250224/20250224_pink_dashboard.png)
+![:scale 100%]({{ site.baseurl}}/assets/images/20250224/20250224_pink_dashboard.png)
 ---
 class: left, top
 
-## How to get started?
+# How to get started?
 
 Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
 
-## First time coding club?
+# First time coding club?
 
 Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
 
@@ -182,7 +182,7 @@ class: left, top
 
 Let's create a (static) dashboard called "Craywatch dashboard" using [flexdashboard](https://pkgs.rstudio.com/flexdashboard/index.html). You can save the R Markdown document as `20250224_craywatch_dashboard_v1.Rmd`, for example.
 
-1. Use the code in 20250224_challenges.R under "#### Challenge 1" to generate a one page  dashboard. Let's work with rows. Use the [Chart Stack](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#chart-stack-fill) layout. Set the histogram (number of obs per month and species) on top. Below, show the leaflet.
+1. Use the code in 20250224_challenges.R under "# Challenge 1" to generate a one page  dashboard. Let's work with rows. Use the [Chart Stack](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#chart-stack-fill) layout. Set the histogram (number of obs per month and species) on top. Below, show the leaflet.
 2. Replace "Chart1", "Chart2" with better titles.
 
 ---
@@ -193,7 +193,7 @@ class: left, top
 
 User interface can be improved by adding gauges and multipaging. Check the [multiple pages](https://pkgs.rstudio.com/flexdashboard/articles/layouts.html#multiple-pages) section in the flexdashboard documentation.
 
-Use the code in 20250224_challenges.R under "#### Challenge 2" to add a first page to the dashboard containing:
+Use the code in 20250224_challenges.R under "# Challenge 2" to add a first page to the dashboard containing:
 
 1. A gauge on top to show in percentage the number of observations linked to craywatch (= obs from waarnemingen.be dataset). In this way we show how impactful is citizen science for detecting these species. Tip: check the [gauges](https://pkgs.rstudio.com/flexdashboard/articles/using.html#gauges) section in the flexdashboard documentation.
 
@@ -211,14 +211,23 @@ class: left, top
 
 1. Allow users to check the the source code. Opt for embedding it. Tip: check the [source code](https://pkgs.rstudio.com/flexdashboard/articles/using.html#source-code) section in the flexdashboard documentation..
 2. Allow users to explore the data theirselves! Add a third page with a datatable. Tip: check the [datatables](https://pkgs.rstudio.com/flexdashboard/articles/using.html#datatables) section in the flexdashboard documentation.
+3. Set INBO color as primary color. Tip: check the [custome themes](https://pkgs.rstudio.com/flexdashboard/articles/theme.html#custom-themes) section in the flexdashboard documentation.
 3. Publish the dashboard on RPubs, an easy web publishing service provided by RStudio.
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20250224/2025_RPubs.png)
 
 ---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
-## flexdashboard limitations and its future: Quarto
+## Bonus challenge 1
+
+Pubishing via RPubs is nice, but you can also host the dashboard on GitHub Pages. Tip: the tutorial ["Deploying flexdashboard on Github Pages"](https://ramikrispin.github.io/2020/09/deploying-flexdashboard-on-github-pages/) of Rami Krispin can help you a lot.
+
+---
+class: left, top
+
+## Intermezzo - flexdashboard limitations and its future: Quarto
 
 The biggest limitation of flexdashboard? You cannot combine it with Rmarkdown website functionality and flexdashboard, see this [old issue](https://github.com/rstudio/flexdashboard/issues/72).
 
@@ -243,19 +252,13 @@ class: left, top
 
 # Packge/Software of the month: Quarto + Observable JS
 
-Unfortunately, R is not the best programming language to create interactive dashboards, simply because R has not be thought to be used for web development. That's why you need Shiny. But hosting Shiny apps is not free unless you create small dashboards for yourself or very few people. Do you want to do some serious web development? Learn Java Script. Or...
+Unfortunately, R is not the best programming language to create interactive dashboards, simply because R has not be thought to be used for web development. That's why you need [Shiny](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/). But hosting Shiny apps is not free unless you create small dashboards for yourself or very few people. Do you want to do some serious web development? Learn Java Script. Or...
 
 Do you know that you can create interactive Shiny-like dashboards with Quarto + Observable JS?
 
 - [Observable JS](https://observablehq.com/): a platform to create and share data visualizations and dashboards. Observable JS is distinguished by its reactive runtime, which is especially well suited for interactive data exploration and analysis. It is free and open-source. You can use it to create interactive dashboards, like Shiny, but with JavaScript.
 - You can use Observable JS in Quarto, the "new" R Markdown alternative. Check in particular the [Observable JS](https://quarto.org/docs/interactive/ojs/) Quarto documentation.
-- Do you need an example to be convinced? Check the [Palmer Penguins example](https://quarto.org/docs/interactive/ojs/examples/penguins.html).
-
-
-About ObservableJS: you can go quite far. Check this [Youtube video tutorial](https://www.youtube.com/watch?v=1k1ExCgzXl0) to create a Spotify related dashboard using Observable JS, GitHub Actions, and GitHub Pages. See [code repository](https://github.com/melissavanbussel/spotify-dashboard). Spoiler: she uses chatGPT for some steps.
-
-![:scale 80%]({{ site.baseurl}}/assets/images/20250224/20250224_R_weekly_highlights.png)
-
+- Do you need an example to be convinced? Check the [Palmer Penguins example](https://quarto.org/docs/interactive/ojs/examples/penguins.html) to start with. Check this [Youtube video tutorial](https://www.youtube.com/watch?v=1k1ExCgzXl0) to create a Spotify related dashboard using Observable JS, GitHub Actions, and GitHub Pages. See [code repository](https://github.com/melissavanbussel/spotify-dashboard). Spoiler: she uses chatGPT for some steps.
 
 ---
 class: left, top
@@ -264,8 +267,11 @@ class: left, top
 
 - Solutions and video recording will be soon available online.
 - [flexdashboard](https://pkgs.rstudio.com/flexdashboard/index.html) package documentation.
-- [Observable JS](https://observablehq.com/) homepage
-- quarto documentation about [Observable JS](https://quarto.org/docs/interactive/ojs/).
+- Example of flexdashboard custom themes and sizing of Pieter: https://pietrh.github.io/flexdashboard-fonts-demo/#big-plot-with-two-tables
+- Example of website embedding a dashboard: [euroraccoon GitHub repository](https://github.com/b-cubed-eu/euroraccoon) and its rendered [website](https://b-cubed-eu.github.io/euroraccoon/).
+- [Quarto Dashboards](https://quarto.org/docs/dashboards/) guide
+- [Observable JS](https://observablehq.com/) homepage.
+- Quarto documentation about [Observable JS](https://quarto.org/docs/interactive/ojs/).
 - craywatch project: [craywatch.inbo.be](https://craywatch.inbo.be/)
 
 ---
