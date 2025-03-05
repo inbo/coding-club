@@ -68,6 +68,20 @@ n_obs_craywatch <- cray_df %>%
 tot_obs <- nrow(cray_df)
 percentage_craywatch <- n_obs_craywatch / tot_obs * 100
 
+## Histogram of the number of observations per dataset ####
+n_obs_per_dataset <- cray_df %>%
+  count(datasetName) %>%
+  mutate(datasetName = reorder(datasetName, n))
+ggplot(data = n_obs_per_dataset,
+       aes(x = datasetName, y = n)) +
+  geom_bar(stat = "identity",
+           fill = "cornflowerblue") +
+  geom_text(aes(label = n), vjust = 0, hjust = 0) +
+  scale_x_discrete(label = function(x) stringr::str_trunc(x, 30)) +
+  scale_y_continuous(limits = c(0, 1300)) +
+  labs(x = "", y = "Number of observations") +
+  theme_minimal() +
+  coord_flip()
 
 # BONUS CHALLENGE ####
 
