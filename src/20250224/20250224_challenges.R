@@ -83,7 +83,7 @@ ggplot(data = n_obs_per_dataset,
   theme_minimal() +
   coord_flip()
 
-# BONUS CHALLENGE ####
+# BONUS CHALLENGE 2 ####
 
 cray_raw_df <- readr::read_tsv(
   here::here("data", "20250224", "20250224_craywatch_raw.txt"),
