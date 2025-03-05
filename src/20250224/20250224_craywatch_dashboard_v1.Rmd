@@ -1,0 +1,63 @@
+---
+title: "Craywatch dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    vertical_layout: scroll
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)    # to do datascience
+library(here)         # to work easily with paths
+library(sf)           # to work with geospatial vector data
+library(leaflet)      # to make dynamic maps
+```
+
+
+```{r load_data, include=FALSE}
+cray_df <- readr::read_tsv(
+  here::here("data", "20250224", "20250224_craywatch_cleaned.txt"),
+  na = "",
+  guess_max = 10000
+)
+```
+
+
+### Number of observations per month
+    
+```{r}
+n_obs_per_month_species <-
+  cray_df %>%
+  count(year, month, species) %>%
+  # combine year and month to a single date
+  mutate(date = as.Date(paste0(year, "-", month, "-01"))) %>%
+  arrange(date, species) %>%
+  relocate(date,species, n, everything())
+ggplot(n_obs_per_month_species,
+       aes(x = date, y = n, fill = species)) +
+  geom_bar(stat = 'identity') +
+  # Use inferno colors for the species
+  scale_fill_viridis_d(option = "inferno") +
+  # Add title and labels
+  ggtitle("Number of observations per month and species") +
+  xlab("Date") + ylab("Number of observations")
+```
+    
+### Distribution of observations
+
+```{r}
+cray_fl <- sf::st_as_sf(cray_df,
+                        coords = c("decimalLongitude", "decimalLatitude"),
+                        crs = 4326)
+
+# Create a palette that maps species to colors
+pal <- colorFactor("inferno", cray_fl$species)
+leaflet(cray_fl) %>%
+  addTiles() %>%
+  addCircleMarkers(popup = ~paste0(cray_fl$eventDate, ": ", cray_fl$species),
+                   color = pal(cray_fl$species),
+                   stroke = FALSE,
+                   fillOpacity = 0.5,
+                   radius = 4) %>%
+  addLegend(pal = pal, values = ~species,
+            position = "bottomright")
+```

@@ -1,0 +1,149 @@
+---
+title: "Craywatch dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    theme:
+      version: 4
+      bg: "#ffffff"
+      fg: "#356196" 
+      primary: "#c04384"
+      navbar-bg: "#000000"
+      # within `theme` you can set a lot more than just colors!
+      base_font:
+        Cailibri
+      heading_font:
+        Sans Pro
+    # If vertical layout: `scroll` the table is not rendered properly
+    vertical_layout: fill
+    source_code: embed
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)      # to do datascience
+library(here)           # to work easily with paths
+library(sf)             # to work with geospatial vector data
+library(leaflet)        # to make dynamic maps
+library(DT)             # to make interactive tables
+library(flexdashboard)  # to make dashboards
+```
+
+
+```{r load_data, include=FALSE}
+cray_df <- readr::read_tsv(
+  here::here("data", "20250224", "20250224_craywatch_cleaned.txt"),
+  na = "",
+  guess_max = 10000
+)
+```
+
+
+Citizen science {data-orientation=rows}
+=====================================  
+
+Row
+-------------------------------------
+
+### Craywatch related data
+    
+```{r}
+# Number of observations linked to craywatch (via waarnemingen.be)
+dataset_name <- "Waarnemingen.be - Non-native animal occurrences in Flanders and the Brussels Capital Region, Belgium"
+n_obs_craywatch <- cray_df %>%
+  filter(datasetName == dataset_name) %>%
+  nrow()
+tot_obs <- nrow(cray_df)
+percentage_craywatch <- n_obs_craywatch / tot_obs * 100
+gauge(min = 0,
+      max = tot_obs,
+      value = n_obs_craywatch, label = "waarnemingen.be")
+```
+
+### Number of observations via waarneemingen.be
+
+```{r}
+# Number of observations
+valueBox(n_obs_craywatch, icon = "ion-android-camera")
+```
+
+
+Row
+-------------------------------------
+
+### Number of observations per dataset
+
+```{r}
+n_obs_per_dataset <- cray_df %>%
+  count(datasetName) %>%
+  arrange(desc(n)) %>%
+  # Abbreviate the dataset names
+  mutate(datasetName = case_when(
+    datasetName == "Waarnemingen.be - Non-native animal occurrences in Flanders and the Brussels Capital Region, Belgium" ~ "Waarnemingen.be",
+    datasetName == "RATO - Daily operations commissioned by the province East Flanders, Belgium" ~ "RATO",
+    datasetName == "Invasive species - American bullfrog (Lithobates catesbeianus) in Flanders, Belgium (post 2018)" ~ "American bullfrog ( INBO)",
+    datasetName == "iNaturalist research-grade observations" ~ "iNaturalist",
+    datasetName == "Monitoring of fishes and crustaceans by Province East Flanders in Flanders, Belgium" ~ "Monitoring POV",
+    TRUE ~ stringr::str_trunc(.data$datasetName, 20)
+  ))
+# Plot the number of observations per dataset
+ggplot(n_obs_per_dataset, aes(x = reorder(datasetName, n), y = n)) +
+  geom_col(fill = "steelblue") +
+  coord_flip() +
+  # Add title and labels
+  ggtitle("Number of observations per dataset") +
+  ylab("Number of observations") + xlab("Dataset")
+```
+
+
+
+Taxonomic and temporal distribution
+=====================================     
+   
+### Number of observations per month
+    
+```{r}
+n_obs_per_month_species <-
+  cray_df %>%
+  count(year, month, species) %>%
+  # combine year and month to a single date
+  mutate(date = as.Date(paste0(year, "-", month, "-01"))) %>%
+  arrange(date, species) %>%
+  relocate(date,species, n, everything())
+ggplot(n_obs_per_month_species,
+       aes(x = date, y = n, fill = species)) +
+  geom_bar(stat = 'identity') +
+  # Use inferno colors for the species
+  scale_fill_viridis_d(option = "inferno") +
+  # Add title and labels
+  ggtitle("Number of observations per month and species") +
+  xlab("Date") + ylab("Number of observations")
+```
+
+
+### Distribution of observations
+
+```{r}
+cray_fl <- sf::st_as_sf(cray_df,
+                        coords = c("decimalLongitude", "decimalLatitude"),
+                        crs = 4326)
+
+# Create a palette that maps species to colors
+pal <- colorFactor("inferno", cray_fl$species)
+leaflet(cray_fl) %>%
+  addTiles() %>%
+  addCircleMarkers(popup = ~paste0(cray_fl$eventDate, ": ", cray_fl$species),
+                   color = pal(cray_fl$species),
+                   stroke = FALSE,
+                   fillOpacity = 0.5,
+                   radius = 4) %>%
+  addLegend(pal = pal, values = ~species,
+            position = "bottomright")
+```
+
+Explore the data
+=====================================
+
+### Explore the data
+
+```{r}
+DT::datatable(cray_df)
+```

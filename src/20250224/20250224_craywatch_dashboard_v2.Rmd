@@ -1,0 +1,135 @@
+---
+title: "Craywatch dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: scroll
+editor_options:
+# This has nothing to do with the dashboard output. It's a general Rmd option:
+# when you run code chunks, it's like you would run them in console:
+# the output is not placed below the chunk, but in console. 
+# Plots are placed in the Plots pane and leaflet maps in the Viewer pane.
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+# Load libraries:
+library(tidyverse)      # to do datascience
+library(here)           # to work easily with paths
+library(sf)             # to work with geospatial vector data
+library(leaflet)        # to make dynamic maps
+library(DT)             # to make interactive tables
+library(flexdashboard)  # to make dashboards
+
+
+# Read data
+cray_df <- readr::read_tsv(
+  here::here("data", "20250224", "20250224_craywatch_cleaned.txt"),
+  na = "",
+  guess_max = 10000
+)
+```
+
+Citizen science {data-orientation=rows}
+=====================================  
+
+Row
+-------------------------------------
+
+### Citizen science data for detecting crayfish
+
+```{r}
+dataset_name <- paste("Waarnemingen.be - Non-native animal occurrences in",
+  "Flanders and the Brussels Capital Region, Belgium")
+n_obs_craywatch <- cray_df %>%
+  filter(datasetName == dataset_name) %>%
+  nrow()
+tot_obs <- nrow(cray_df)
+percentage_craywatch <- n_obs_craywatch / tot_obs * 100
+
+gauge(
+  percentage_craywatch, min = 0, max = 100, symbol = "%",
+  gaugeSectors(success = c(75, 100), warning = c(40, 74), danger = c(0, 39)),
+  # You can add a small label, displayed below the value
+  label = "waarnemingen.be"
+)
+```
+
+### Number of observations from craywatch 
+
+```{r}
+valueBox(tot_obs,
+         # caption overwrites the title after the `###` above
+         caption = "Number of observations linked to craywatch (waarnemingen.be)",
+         icon = "ion-android-camera")
+```
+
+Row
+-------------------------------------
+
+### Number of observations per dataset
+
+```{r}
+n_obs_per_dataset <- cray_df %>%
+  count(datasetName) %>%
+  # The `mutate()` here below is important to have ordered bars in the plot from high to low `n`.
+  # `arrange(desc(datasetName))` will not do the job
+  mutate(datasetName = reorder(datasetName, n))
+ggplot(data = n_obs_per_dataset,
+       aes(x = datasetName, y = n)) +
+  geom_bar(stat = "identity",
+           fill = "cornflowerblue") +
+  geom_text(aes(label = n), vjust = 0, hjust = 0) +
+  scale_x_discrete(label = function(x) stringr::str_trunc(x, 30)) +
+  scale_y_continuous(limits = c(0, 1300)) +
+  labs(x = "", y = "Number of observations") +
+  theme_minimal() +
+  coord_flip()
+```
+
+
+Crayfish distribution
+=====================================  
+
+### Number of observations per month
+
+```{r}
+n_obs_per_month_species <-
+  cray_df %>%
+  count(year, month, species) %>%
+  # combine year and month to a single date
+  mutate(date = as_date(paste0(year, "-", month, "-01"))) %>%
+  arrange(date, species) %>%
+  relocate(date, species, n, everything())
+
+ggplot(n_obs_per_month_species,
+       aes(x = date, y = n, fill = species)) +
+  geom_bar(stat = "identity") +
+  # Use inferno colors for the species
+  scale_fill_viridis_d(option = "inferno") +
+  # Add title and labels
+  labs(title = "Number of observations per month and species",
+       x = "", y = "Number of observations") +
+  scale_x_date(breaks = n_obs_per_month_species$date, date_labels = "%b") +
+  theme_minimal()
+```
+
+### Distribution of observations
+
+```{r}
+cray_fl <- sf::st_as_sf(cray_df,
+                        coords = c("decimalLongitude", "decimalLatitude"),
+                        crs = 4326)
+
+# Create a palette that maps species to colors
+pal <- colorFactor("inferno", cray_fl$species)
+leaflet(cray_fl) %>%
+  addTiles() %>%
+  addCircleMarkers(popup = ~paste0(cray_fl$eventDate, ": ", cray_fl$species),
+                   color = pal(cray_fl$species),
+                   stroke = FALSE,
+                   fillOpacity = 0.5,
+                   radius = 4) %>%
+  addLegend(pal = pal, values = ~species,
+            position = "bottomright")
+```
