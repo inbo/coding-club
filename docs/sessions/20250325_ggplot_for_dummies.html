@@ -1,0 +1,381 @@
+---
+layout: presentation
+title: ggplot for dummies
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 25 MARCH 2025
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+
+01.71 - Frans Breziers
+
+---
+class: left, top
+
+## ROOMIE: room reservation
+
+```
+> if (isFALSE(roomie)) {
++   warning("Please confirm asap the room reservation on the roomie")
++ }
+Warning message:
+Please confirm asap the room reservation on the roomie
+```
+
+---
+class: left, top
+
+## Record the session
+
+Kind reminder to... myself.
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20250325/20250325_badge_ggplot.png)
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 100%]({{ site.baseurl}}/assets/images/20250325/20250325_ggplot2_for_dummies.png)
+
+---
+class: center, top
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20250325/20250325_cheat_sheet_ggplot.png)
+<br> Download [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20250325_cheat_sheet_ggplot2.pdf)
+
+CC-BY posit. Download the cheat sheet in [English](https://rstudio.github.io/cheatsheets/data-visualization.pdf) or in [Dutch](https://rstudio.github.io/cheatsheets/translations/dutch/data-visualization_nl.pdf). Do you know that this cheat sheet is available as [html](https://rstudio.github.io/cheatsheets/html/data-visualization.html) format? The pdf is, besides Dutch and English, available in other 8 languages. See e.g. the [French](https://rstudio.github.io/cheatsheets/translations/french/data-visualization_fr.pdf) and the [Turkish](https://rstudio.github.io/cheatsheets/translations/turkish/data-visualization_tr.pdf) versions.
+
+---
+class: left, middle
+
+## How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+## First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+# Share your code during the coding session
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/wZgZhU9FR6S8O4HGrT71ng?both and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/wZgZhU9FR6S8O4HGrT71ng?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub foders [coding-club/data/20250325](https://github.com/inbo/coding-club/tree/master/data/20250325) and [coding-club/src/20250325](https://github.com/inbo/coding-club/tree/master/src/20250325)
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20230228")` to download the coding club material of February, 28 2023. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data and scripts description
+
+Today we will work with `occs_benelux` dataset. The dataset contains the number of GBIF occurrences in the Benelux countries (Belgium, The Netherlands and Luxembourg) per year from 2000 up to 2024. The dataset is available in the `20250325_occs_benelux.tsv` file.
+
+
+R script:
+
+- `20250325_challenges.R`:  code to start
+
+<small> __\* Note__: ???</small>
+
+---
+class: left, top
+
+# Load libraries
+
+If needed, install them first (`install.packages("package_name")`).
+
+```r
+library(tidyverse)
+library(colorblindr)
+```
+
+---
+class: left, middle
+
+# ggplot recipe: data - mapping - geometry
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20250325/20250325_ggplot_recipe.png)
+
+The grammar of graphics! The ggplot2 package is based on the layered grammar of graphics, a concept introduced by Leland Wilkinson in 1999. The grammar of graphics is a system for building graphs by combining components, each of which represents a different aspect of the graph data.
+
+---
+class: left, top
+
+# Choose the right data visualization
+
+Not every type of data visualization is suitable for every data. The [Data Visualization Catalogue](https://datavizcatalogue.com/) (non-code based) project can help you to choose the right plot for your data. For an R-oriented perspective, the ["from Data to Viz""](https://www.data-to-viz.com/) proejct can be a good alternative.
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+We will use `occs_benelux_animals`, a subset of `occs_benelux` containing only the  occurrences of animals. The code to create `occs_benelux_animals` from `occs_benelux` is provided!
+
+1. Do a scatter plot (=points) with the number of occurrences (y) per year (x). Distinguish the countries by color.
+2. Add a title (e.g. "GBIF occurrence records in the Benelux") and labels for the axes (e.g. "year" and "number of occurrences").
+3. To better represent the data, use a logarithmic scale for the y-axis.
+4. Add a smoother to the plot. Use "loess" method and color the smoother by country. Show the confidence interval (standard error).
+5. This kind of data could be also represented by a bar plot. Try to do it (without smoother). The grammar of graphics makes this kind of change quite easy, isn't? What do you think about? Which one is more informative: the scatter plot of the bar plot? And why?
+
+---
+class: left, top
+
+# Intermezzo: aesthetics
+
+This works:
+
+```r
+ggplot(data = iris,
+       mapping = aes(x = Sepal.Length,
+                     y = Petal.Length,
+                     color = Species)) +
+  geom_point()
+```
+
+This works too:
+
+```r
+ggplot(data = iris) +
+  geom_point(mapping = aes(x = Sepal.Length,
+                           y = Petal.Length,
+                           color = Species))
+```
+
+Both are good. Still, we have the feeling that the second version is used more often.
+
+Another option using pipe:
+
+```r
+iris %>%
+  ggplot(mapping = aes(x = Sepal.Length,
+                       y = Petal.Length,
+                       color = Species)) +
+  geom_point()
+```
+
+---
+class: left, top
+
+# Intermezzo: aesthetics
+
+The only case where it is better to opt for the second option is when you plot two or more geometries with **different** aesthetics.
+For example, plot pressure and temperature vs time* :
+
+```r
+# dummy dataset
+press_temp <- tibble::tibble(
+  year = c(2000:2004),
+  press = c(1.0, 1.1, 1.4, 1.2, 1.6),
+  temp = c(13.2, 15.1, 12.2, 11.8, 10.9)
+)
+ggplot(press_temp) +
+  geom_point(mapping = aes(x = year, y = press)) +
+  geom_point(mapping = aes(x = year, y = temp), color = "red") +
+  scale_y_continuous(sec.axis = sec_axis(~., name = "temperature")) +
+  theme(axis.line.y.right = element_line(color = "red"),
+        axis.text.y.right = element_text(color = "red"),
+        axis.title.y.right = element_text(color = "red"))
+```
+
+<br>
+<small> __\* Note__: such kind of plot is an example of BAD PRACTICES, by the way!
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2: life is better with colors 🌈
+
+We will build upon the scatter plot of the previous challenge. Changing color is a **scaling** operation.
+
+1. Set color **manual**ly. Use `"black"` for Belgium, `"skyblue"` for The Netherlands and `"indian red"` for Luxembourg. Hint: give a look to the cheatsheet.
+2. A very popular way of defining colours (not just in R) is hex codes. Hex codes are an hash, `#`, followed by a combination of six characters - which can be any of the digits 0 - 9, or any of the letters A - F. There many tools to pick colors and get their hex codes. For example, [colorhexa](https://www.colorhexa.com/). Enter the color names used above in https://www.colorhexa.com/ to get their correspondent hexcodes. Create same plot using the hexcodes.
+3. You have just created a palette: a vector with colors. Do you know that thousands of already predefined palettes exist? Let's set the color automatically by using the viridis palette, probably the most used palette! The `viridis` palette is so famous that ggplot has its own [set of functions](https://ggplot2.tidyverse.org/reference/scale_viridis.html) for dealing with it.
+4. An easy, interactive way to explore palettes for use in R? Use the handy [Color Palette Finder on the R Graph Gallery](https://r-graph-gallery.com/color-palette-finder). Pick a palette and use it in your plot.
+5. Accessibility is important. People with color deficiencies should be able to read your plots as well. The viridis palette is very accessible, for example. Use the [{colorblindr} package](https://github.com/clauswilke/colorblindr) to simulate how the plots you’ve created may look to people with colour blindness. Tip: check section ["Accessible Choices"](https://nrennie.rbind.io/blog/colours-in-r/#accessible-choices) from Nicola Rennie's blogpost.
+
+---
+class: left, top
+
+# Intermezzo: customize non-data components
+
+You can personalize almost everything within your plots. ggplot2 provides some predefined themes via functions named `theme_*()`, e.g. `theme_bw()` for a white background with black lines. See more on the cheat sheet.
+
+
+```r
+ggplot(data = iris,
+       mapping = aes(x = Sepal.Length,
+                     y = Petal.Length,
+                     color = Species)) +
+  geom_point() +
+  theme_bw()
+```
+
+But you can also customize any non-data component via function `theme()`! Look at the help `?theme`. Notice the help functions `element_*()`, e.g. `element_line()`, `element_text()` and  `element_rect()` (rect stands for rectangle).
+
+```r
+ggplot(data = iris,
+       mapping = aes(x = Sepal.Length,
+                     y = Petal.Length,
+                     color = Species)) +
+  geom_point() +
+  # we love flashy plots!
+  theme(panel.background = element_rect(fill = "yellow"),
+        panel.grid.major = element_line(colour = "blue", linewidth = 2))
+```
+
+---
+class: left, top
+
+# Intermezzo: customize non-data components
+
+Do you know that INBO has its own theme? It's called [INBOtheme](https://inbo.github.io/INBOtheme/): it's a package. Install it, load it and all figures will authomatically have an INBO touch. Read the nice [tutorials](https://inbo.github.io/INBOtheme/articles/index.html) for more.
+
+```r
+library(INBOtheme)
+ggplot(data = iris,
+       mapping = aes(x = Sepal.Length,
+                     y = Petal.Length,
+                     color = Species)) +
+  geom_point() +
+  ggtitle("Iris dataset: Petal length vs Sepal length")
+```
+
+INBOtheme takes care of the quality of your plots: a message is returned if more than 4 colors are used. This is because using more than 4 colours might make the plot hard to read.
+
+```
+library(INBOtheme)
+ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
+  geom_point()
+> using more than 4 colours might make the plot hard to read
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3A - faceting
+
+Up to now we used `occs_benelux_animals` dataset. But how to visualize the data for each kingdom separately? No, we don't need to run a loop or something like that, thanks to the **faceting** feature of ggplot2. Check the cheatsheet.
+
+1. Show scatter plots for each kingdom separately on **one row**.
+
+2. Show scatter plots for each kingdom in a grid: 2x2.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3B - one dataset, many valid plots
+
+Based on `species_be`, let's show how many species have been observed in Belgium for each order and IUCN red list category in 2025. The code to get these counts is provided: see variable `n_species_per_order_iucn`. We have 91 different combinations. Use **bar plots**. Try **faceting**. Depending on the chosen facet(s), you emphasize different aspects of the data. Visualize the data in a way that you think is most informative. As you can see some combinations are empty or almost empty, while few others are highly populated. How to deal with it? Choosing is not easy, but it's a good exercise to think about the best way to visualize your data and the story you want to tell.
+
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20250325/2025_facet_iucn_order.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Bonus challenge - is ggplot enough?
+
+Based on `species_be`, let's try to visualize how many species are present in Wallonia and/or Brussels and/or Flanders. The code to get the number of species is provided: see variable `n_species_region`. As you can see, there are 8 different combinations. What's the most appropriate graph to visualize the number of species in Flanders and/or Wallonia and/or Brussels? Is ggplot the best choice? If it can help, exclude the species in federal territory (sea), i.e. not belonging to any region, (`inWallonia` = `inBrussels` = `inFlanders` = `FALSE`).
+
+Check https://www.data-to-viz.com/#explore to find the best graph for this situation.
+
+
+---
+class: left, top
+
+# The package of the month: Damiano's choice
+
+[ggstatsplot](https://indrajeetpatil.github.io/ggstatsplot/) R package is an extension of ggplot2 package for creating graphics with details from statistical tests.
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20250325/20250325_ggstatsplot.png)
+
+---
+class: left, top
+
+## Resources
+
+- The edited video recording and the extended and commented solutions will be available soon.
+- `ggplot2` R package: https://ggplot2.tidyverse.org/
+- Article of H. Wickham about the layered [grammar of graphics](http://vita.had.co.nz/papers/layered-grammar.pdf)
+- The [R Graphics Cookbook, 2nd edition](https://r-graphics.org/): the reference book about graphics in R. A must to have :-)
+- R for Data Science: [Chapter 3: Data visualization](https://r4ds.had.co.nz/data-visualisation.html)
+- R for Data Science: [Chapter 28: Graphics for communication](https://r4ds.had.co.nz/graphics-for-communication.html)
+- [Datacarpentry's data visualiation tutorial](https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html)
+- [Stanford University tutorial](https://cengel.github.io/R-data-viz/data-visualization-with-ggplot2.html): chapter 1
+- [INBOtheme](https://inbo.github.io/INBOtheme/) homepage
+- [R Graph Gallery](https://r-graph-gallery.com/index.html): a collection of charts made with R
+- Very instructive and comprehensive blogpost about [working with colors in R](https://nrennie.rbind.io/blog/colours-in-r/) from data visualization specialist, [Nicola Rennie](https://nrennie.rbind.io/).
+- [from Data to Viz](https://www.data-to-viz.com/): a good help to find the most appropriate graph for your data from another data visualization specialist: [Yan Holtz](https://github.com/holtzy). Another good source of inspiration is [Data Visualization Catalogue](https://datavizcatalogue.com/) which informs you about the different data visualization techniques with no link to a specific programming language.
+- [ggstatsplot](https://indrajeetpatil.github.io/ggstatsplot/) R package: ggplot2 extensionfor creating graphics with details from statistical tests.
+
+---
+class: left, top
+
+# Topic of the next coding club: you vote! ✍️
+
+As usaul, you can vote among **two topics**. The poll for April's coding club is not yet open. You will receive an email with the link to the poll soon.
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.16 - Rik Wouters<br>
+Date: __24/04/2025__, van 10:00 tot 12:30<br>
+Subject: to be decided <br>
+(registration announced via DG_useR@inbo.be)
