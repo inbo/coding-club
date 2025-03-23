@@ -248,13 +248,13 @@ class: left, top
 
 # Challenge 2: life is better with colors 🌈
 
-We will build upon the scatter plot of the previous challenge. Changing color is a **scaling** operation.
+We will build upon the scatter plot of the previous challenge. Changing colors is a **scaling** operation.
 
-1. Set color **manual**ly. Use `"black"` for Belgium, `"skyblue"` for The Netherlands and `"indian red"` for Luxembourg. Hint: give a look to the cheatsheet.
+1. Set colors **manual**ly. Use `"black"` for Belgium, `"skyblue"` for The Netherlands and `"indian red"` for Luxembourg. Hint: give a look to the cheatsheet.
 2. A popular way of defining colours is by hex codes. Hex codes are an hash, `#`, followed by a combination of six characters - which can be any of the digits 0 - 9, or any of the letters A - F. There many tools to pick colors and get their hex codes. For example, [colorhexa](https://www.colorhexa.com/): enter the color names used above to get their correspondent hexcodes. Create same plot using the hexcodes.
 3. You have just created a 3-color **palette**: a vector with colors. Thousands of already predefined palettes exist. Let's set the color automatically by using the famous viridis palette. The `viridis` palette is so famous that ggplot has its own [set of functions](https://ggplot2.tidyverse.org/reference/scale_viridis.html) for dealing with it.
-4. Use the handy [Color Palette Finder on the R Graph Gallery](https://r-graph-gallery.com/color-palette-finder) to explore palettes interactively. Pick a palette and use it in your plot. Tip: you could need to use the {paletteer} package, which collects many of these palettes together into a single R package.
-5. Accessibility is important. People with color deficiencies should be able to read your plots as well. The viridis palette is very accessible. Use the [{colorblindr} package](https://github.com/clauswilke/colorblindr) to simulate how the plots you’ve just created may look to people with colour blindness. Tip: check section ["Accessible Choices"](https://nrennie.rbind.io/blog/colours-in-r/#accessible-choices) from Nicola Rennie's blogpost.
+4. Use the [R Graph Gallery's color palette finder](https://r-graph-gallery.com/color-palette-finder) to explore palettes interactively. Pick a palette and use it in your plot. Tip: you could need to use the [{paletteer} package](https://pmassicotte.github.io/paletteer_gallery/), which collects many of these palettes together into a single R package.
+5. Accessibility for people with color deficiencies is important. Use the [{colorblindr} package](https://github.com/clauswilke/colorblindr) to simulate how the plots you’ve just created may look to people with colour blindness. Tip: check section ["Accessible Choices"](https://nrennie.rbind.io/blog/colours-in-r/#accessible-choices) from Nicola Rennie's blogpost.
 
 ---
 class: left, top
@@ -272,6 +272,11 @@ ggplot(data = iris,
   geom_point() +
   theme_bw()
 ```
+
+---
+class: left, top
+
+# Intermezzo: customize non-data components
 
 But you can also customize any non-data component via function `theme()`! Look at the help `?theme`. Notice the help functions `element_*()`, e.g. `element_line()`, `element_text()` and  `element_rect()` (rect stands for rectangle).
 
