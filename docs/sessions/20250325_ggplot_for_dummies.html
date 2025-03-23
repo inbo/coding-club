@@ -117,15 +117,17 @@ class: left, top
 
 Today we will work with two datasets:
 
-- `occs_benelux` dataset. The dataset contains the number of GBIF occurrences in the Benelux countries (Belgium, The Netherlands and Luxembourg) per year from 2000 up to 2024. The dataset is available in the `20250325_occs_benelux.tsv` file. Challenges: 1, 2 and 3A.
-- `species_be` dataset. The dataset contains the species observed in Belgium and its regions in 2025*. The dataset is available in the `20250325_species_in_BE.tsv` file. Challenges: 3B and bonus challenge.
+- `occs_benelux` dataset. The dataset contains the number of GBIF occurrences in the Benelux countries (Belgium, The Netherlands and Luxembourg) per year from 2000 up to 2024*. The dataset is available in the `20250325_occs_benelux.tsv` file. Challenges: 1, 2 and 3A.
+- `species_be` dataset. The dataset contains the species observed in Belgium and its regions in 2025**. The dataset is available in the `20250325_species_in_BE.tsv` file. Challenges: 3B and bonus challenge.
 
 
 R script:
 
 - `20250325_challenges.R`:  code to start
 
-<small> __\* Note__: Based on 4 GBIF downloads:
+<small>
+__\* __ Data retrieved on March 19 2025 via `rgbif::occ_count()`.
+__\*\* __ Based on 4 GBIF downloads:
 - GBIF.org (19 March 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.yy23qs
 - GBIF.org (19 March 2025) GBIF Occurrence Download  https://doi.org/10.15468/dl.d6n7ur
 - GBIF.org (19 March 2025) GBIF Occurrence Download  https://doi.org/10.15468/dl.gd6gsr
