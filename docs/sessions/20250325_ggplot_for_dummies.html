@@ -115,14 +115,22 @@ class: left, top
 
 # Data and scripts description
 
-Today we will work with `occs_benelux` dataset. The dataset contains the number of GBIF occurrences in the Benelux countries (Belgium, The Netherlands and Luxembourg) per year from 2000 up to 2024. The dataset is available in the `20250325_occs_benelux.tsv` file.
+Today we will work with two datasets:
+
+- `occs_benelux` dataset. The dataset contains the number of GBIF occurrences in the Benelux countries (Belgium, The Netherlands and Luxembourg) per year from 2000 up to 2024. The dataset is available in the `20250325_occs_benelux.tsv` file. Challenges: 1, 2 and 3A.
+- `species_be` dataset. The dataset contains the species observed in Belgium and its regions in 2025*. The dataset is available in the `20250325_species_in_BE.tsv` file. Challenges: 3B and bonus challenge.
 
 
 R script:
 
 - `20250325_challenges.R`:  code to start
 
-<small> __\* Note__: ???</small>
+<small> __\* Note__: Based on 4 GBIF downloads:
+- GBIF.org (19 March 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.yy23qs
+- GBIF.org (19 March 2025) GBIF Occurrence Download  https://doi.org/10.15468/dl.d6n7ur
+- GBIF.org (19 March 2025) GBIF Occurrence Download  https://doi.org/10.15468/dl.gd6gsr
+- GBIF.org (19 March 2025) GBIF Occurrence Download  https://doi.org/10.15468/dl.a9qjx8
+</small>
 
 ---
 class: left, top
@@ -133,6 +141,7 @@ If needed, install them first (`install.packages("package_name")`).
 
 ```r
 library(tidyverse)
+library(paletteer)
 library(colorblindr)
 ```
 
@@ -241,7 +250,7 @@ We will build upon the scatter plot of the previous challenge. Changing color is
 1. Set color **manual**ly. Use `"black"` for Belgium, `"skyblue"` for The Netherlands and `"indian red"` for Luxembourg. Hint: give a look to the cheatsheet.
 2. A very popular way of defining colours (not just in R) is hex codes. Hex codes are an hash, `#`, followed by a combination of six characters - which can be any of the digits 0 - 9, or any of the letters A - F. There many tools to pick colors and get their hex codes. For example, [colorhexa](https://www.colorhexa.com/). Enter the color names used above in https://www.colorhexa.com/ to get their correspondent hexcodes. Create same plot using the hexcodes.
 3. You have just created a palette: a vector with colors. Do you know that thousands of already predefined palettes exist? Let's set the color automatically by using the viridis palette, probably the most used palette! The `viridis` palette is so famous that ggplot has its own [set of functions](https://ggplot2.tidyverse.org/reference/scale_viridis.html) for dealing with it.
-4. An easy, interactive way to explore palettes for use in R? Use the handy [Color Palette Finder on the R Graph Gallery](https://r-graph-gallery.com/color-palette-finder). Pick a palette and use it in your plot.
+4. An easy, interactive way to explore palettes for use in R? Use the handy [Color Palette Finder on the R Graph Gallery](https://r-graph-gallery.com/color-palette-finder). Pick a palette and use it in your plot. Notice you could need to install and load the {paletteer} package, which collects many of these palettes together into a single R package.
 5. Accessibility is important. People with color deficiencies should be able to read your plots as well. The viridis palette is very accessible, for example. Use the [{colorblindr} package](https://github.com/clauswilke/colorblindr) to simulate how the plots you’ve created may look to people with colour blindness. Tip: check section ["Accessible Choices"](https://nrennie.rbind.io/blog/colours-in-r/#accessible-choices) from Nicola Rennie's blogpost.
 
 ---
@@ -328,10 +337,9 @@ class: left, top
 
 # Bonus challenge - is ggplot enough?
 
-Based on `species_be`, let's try to visualize how many species are present in Wallonia and/or Brussels and/or Flanders. The code to get the number of species is provided: see variable `n_species_region`. As you can see, there are 8 different combinations. What's the most appropriate graph to visualize the number of species in Flanders and/or Wallonia and/or Brussels? Is ggplot the best choice? If it can help, exclude the species in federal territory (sea), i.e. not belonging to any region, (`inWallonia` = `inBrussels` = `inFlanders` = `FALSE`).
+Based on `species_be`, let's try to visualize how many species are present in Wallonia and/or Brussels and/or Flanders. The code to get the number of species per region (variable `n_species_region`) is provided. As you can see, there are 8 different combinations. What's the most appropriate graph to visualize the number of species in Flanders and/or Wallonia and/or Brussels? Is ggplot the best choice? If it can help, exclude the species in federal territory (sea), i.e. not belonging to any region, (`inWallonia` = `inBrussels` = `inFlanders` = `FALSE`).
 
 Check https://www.data-to-viz.com/#explore to find the best graph for this situation.
-
 
 ---
 class: left, top
@@ -358,6 +366,7 @@ class: left, top
 - [INBOtheme](https://inbo.github.io/INBOtheme/) homepage.
 - [{colorblindr} package](https://github.com/clauswilke/colorblindr) to simulate how plots may look to people with different type of colour blindness.
 - [R Graph Gallery](https://r-graph-gallery.com/index.html): a collection of charts made with R.
+- [{paletteer} package](https://github.com/EmilHvitfeldt/paletteer) to use many palettes without loading tens of different R packages.
 - Very instructive and comprehensive blogpost about [working with colors in R](https://nrennie.rbind.io/blog/colours-in-r/) from data visualization specialist, [Nicola Rennie](https://nrennie.rbind.io/).
 - [from Data to Viz](https://www.data-to-viz.com/): a good help to find the most appropriate graph for your data from another data visualization specialist: [Yan Holtz](https://github.com/holtzy). Another good source of inspiration is [Data Visualization Catalogue](https://datavizcatalogue.com/) which informs you about the different data visualization techniques with no link to a specific programming language.
 - [colorhexa](https://www.colorhexa.com/): online tool to pick colors.
