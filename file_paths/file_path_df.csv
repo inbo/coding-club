@@ -215,6 +215,8 @@ data/20250130/20250130_butterfly_transect_counts_raw.xls,20250130_butterfly_tran
 data/20250224/20250224_craywatch_raw.txt,20250224_craywatch_raw.txt,data,20250224
 data/20250224/20250224_craywatch_cleaned.txt,20250224_craywatch_cleaned.txt,data,20250224
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
+data/20250325/20250325_occs_benelux.tsv,20250325_occs_benelux.tsv,data,20250325
+data/20250325/20250325_species_in_BE.tsv,20250325_species_in_BE.tsv,data,20250325
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
 src/20180222/20180222_import_spreadsheets.R,20180222_import_spreadsheets.R,src,20180222
@@ -420,3 +422,4 @@ src/20250224/20250224_craywatch_dashboard_v2.Rmd,20250224_craywatch_dashboard_v2
 src/20250224/20250224_craywatch_dashboard_v2.Rmd,20250224_craywatch_dashboard_v2.html,src,20250224
 src/20250224/20250224_craywatch_dashboard_v2.Rmd,20250224_craywatch_dashboard_v3.Rmd,src,20250224
 src/20250224/20250224_craywatch_dashboard_v2.Rmd,20250224_craywatch_dashboard_v3.html,src,20250224
+src/20250325/20250325_challenges.R,20250325_challenges.R,src,20250325
