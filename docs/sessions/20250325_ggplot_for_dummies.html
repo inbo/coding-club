@@ -318,8 +318,7 @@ class: left, top
 
 # Challenge 3B - one dataset, many valid plots
 
-Based on `species_be`, let's show how many species have been observed in Belgium for each order and IUCN red list category in 2025. The code to get these counts is provided: see variable `n_species_per_order_iucn`. We have 91 different combinations. Use **bar plots**. Try **faceting**. Depending on the chosen facet(s), you emphasize different aspects of the data. Visualize the data in a way that you think is most informative. As you can see some combinations are empty or almost empty, while few others are highly populated. How to deal with it? Choosing is not easy, but it's a good exercise to think about the best way to visualize your data and the story you want to tell.
-
+Based on `species_be`, let's show how many species have been observed in Belgium in 2025 for each order (column `order`) and IUCN red list category (column `iucnRedListCategory`). The code to get these counts (variable `n_species_per_order_iucn`) is provided. Use **bar plots**. Try reproducing the **faceting** shown in the screenshot below. As you can see some combinations are empty or almost empty, while few others are highly populated. How to deal with it? Choosing is not easy, but it's a good exercise to think about the best way to visualize your data and the story you want to tell.
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20250325/2025_facet_iucn_order.png)
 
@@ -355,11 +354,13 @@ class: left, top
 - R for Data Science: [Chapter 3: Data visualization](https://r4ds.had.co.nz/data-visualisation.html)
 - R for Data Science: [Chapter 28: Graphics for communication](https://r4ds.had.co.nz/graphics-for-communication.html)
 - [Datacarpentry's data visualiation tutorial](https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html)
-- [Stanford University tutorial](https://cengel.github.io/R-data-viz/data-visualization-with-ggplot2.html): chapter 1
-- [INBOtheme](https://inbo.github.io/INBOtheme/) homepage
-- [R Graph Gallery](https://r-graph-gallery.com/index.html): a collection of charts made with R
+- [Stanford University tutorial](https://cengel.github.io/R-data-viz/data-visualization-with-ggplot2.html): chapter 1.
+- [INBOtheme](https://inbo.github.io/INBOtheme/) homepage.
+- [{colorblindr} package](https://github.com/clauswilke/colorblindr) to simulate how plots may look to people with different type of colour blindness.
+- [R Graph Gallery](https://r-graph-gallery.com/index.html): a collection of charts made with R.
 - Very instructive and comprehensive blogpost about [working with colors in R](https://nrennie.rbind.io/blog/colours-in-r/) from data visualization specialist, [Nicola Rennie](https://nrennie.rbind.io/).
 - [from Data to Viz](https://www.data-to-viz.com/): a good help to find the most appropriate graph for your data from another data visualization specialist: [Yan Holtz](https://github.com/holtzy). Another good source of inspiration is [Data Visualization Catalogue](https://datavizcatalogue.com/) which informs you about the different data visualization techniques with no link to a specific programming language.
+- [colorhexa](https://www.colorhexa.com/): online tool to pick colors.
 - [ggstatsplot](https://indrajeetpatil.github.io/ggstatsplot/) R package: ggplot2 extensionfor creating graphics with details from statistical tests.
 
 ---
