@@ -117,8 +117,8 @@ class: left, top
 
 Today we will work with two datasets:
 
-- `occs_benelux` dataset. The dataset contains the number of GBIF occurrences in the Benelux countries (Belgium, The Netherlands and Luxembourg) per year from 2000 up to 2024*. The dataset is available in the `20250325_occs_benelux.tsv` file. Challenges: 1, 2 and 3A.
-- `species_be` dataset. The dataset contains the species observed in Belgium and its regions in 2025**. The dataset is available in the `20250325_species_in_BE.tsv` file. Challenges: 3B and bonus challenge.
+- `20250325_occs_benelux.tsv` contains the number of GBIF occurrences in the Benelux countries (Belgium, The Netherlands and Luxembourg) per year from 2000 up to 2024*. We will use `occs_benelux` in challenges 1, 2, and 3A.
+- `20250325_species_in_BE.tsv` contains the species observed in Belgium and its regions in 2025**. We will use `species_be` in challenge 3B and the bonus challenge.
 
 
 R script:
@@ -162,10 +162,10 @@ class: left, top
 
 # Choose the right data visualization
 
-Not every type of data visualization is suitable for every data. The [Data Visualization Catalogue](https://datavizcatalogue.com/) (non-code based) project can help you to choose the right plot for your data. For an R-oriented perspective, the ["from Data to Viz""](https://www.data-to-viz.com/) proejct can be a good alternative.
+Not every type of data visualization is suitable for every data. The [Data Visualization Catalogue](https://datavizcatalogue.com/) (non-code based) project can help you to choose the right plot for your data. For an R-oriented perspective, the ["from Data to Viz""](https://www.data-to-viz.com/) project can be a good alternative.
 
 - How many variables do you have?
-- Are they categorical (e.g. `country`: `BE`, `NL` or `LU`), numerical?
+- Are they categorical (e.g. `country`: `BE`, `NL` or `LU`), ordinal, numerical?
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -175,7 +175,7 @@ class: left, top
 
 We will use `occs_benelux_animals`, a subset of `occs_benelux` containing only the  occurrences of animals. The code to create `occs_benelux_animals` from `occs_benelux` is provided!
 
-1. Do a scatter plot (=points) with the number of occurrences (y) per year (x). Distinguish the countries by color.
+1. Make a scatter plot (=points) with the number of occurrences (y) per year (x). Distinguish the countries by color.
 2. Add a title (e.g. "GBIF occurrence records in the Benelux") and labels for the axes (e.g. "year" and "number of occurrences").
 3. To better represent the data, use a logarithmic scale for the y-axis.
 4. Add a smoother to the plot. Use "loess" method and color the smoother by country. Show the confidence interval (standard error).
@@ -250,9 +250,9 @@ class: left, top
 
 We will build upon the scatter plot of the previous challenge. Changing colors is a **scaling** operation.
 
-1. Set colors **manual**ly. Use `"black"` for Belgium, `"skyblue"` for The Netherlands and `"indian red"` for Luxembourg. Hint: give a look to the cheatsheet.
-2. A popular way of defining colours is by hex codes. Hex codes are an hash, `#`, followed by a combination of six characters - which can be any of the digits 0 - 9, or any of the letters A - F. There many tools to pick colors and get their hex codes. For example, [colorhexa](https://www.colorhexa.com/): enter the color names used above to get their correspondent hexcodes. Create same plot using the hexcodes.
-3. You have just created a 3-color **palette**: a vector with colors. Thousands of already predefined palettes exist. Let's set the color automatically by using the famous viridis palette. The `viridis` palette is so famous that ggplot has its own [set of functions](https://ggplot2.tidyverse.org/reference/scale_viridis.html) for dealing with it.
+1. Set colors **manual**ly. Use `"black"` for Belgium, `"skyblue"` for The Netherlands and `"indian red"` for Luxembourg. Hint: look at the cheatsheet.
+2. A popular way of defining colours is by hex codes. Hex codes are an hash, `#`, followed by a combination of six characters - (digits 0 - 9, or letters A - F). There are many tools to pick colors and get their hex codes. For example, [colorhexa](https://www.colorhexa.com/): enter the color names used above to get their correspondent hexcodes. Create same plot using the hexcodes.
+3. You just created a 3-color **palette**: a vector with colors. Thousands of predefined palettes exist. Let's set the color automatically by using the famous viridis palette. The `viridis` palette is so famous that ggplot has its own [set of functions](https://ggplot2.tidyverse.org/reference/scale_viridis.html) for dealing with it.
 4. Use the [R Graph Gallery's color palette finder](https://r-graph-gallery.com/color-palette-finder) to explore palettes interactively. Pick a palette and use it in your plot. Tip: you could need to use the [{paletteer} package](https://pmassicotte.github.io/paletteer_gallery/).
 5. Accessibility is important. Use the [{colorblindr} package](https://github.com/clauswilke/colorblindr) to simulate how the plots you’ve just created may look to people with colour blindness. Tip: check section ["Accessible Choices"](https://nrennie.rbind.io/blog/colours-in-r/#accessible-choices) from Nicola Rennie's blogpost.
 
@@ -296,7 +296,7 @@ class: left, top
 
 # Intermezzo: customize non-data components
 
-Do you know that INBO has its own theme? It's called [INBOtheme](https://inbo.github.io/INBOtheme/): it's a package. Install it, load it and all figures will authomatically have an INBO touch. Read the nice [tutorials](https://inbo.github.io/INBOtheme/articles/index.html) for more.
+Did you know that INBO has its own theme? It's called [INBOtheme](https://inbo.github.io/INBOtheme/). Install the package, load it and all figures will authomatically have an INBO touch. Read the nice [tutorials](https://inbo.github.io/INBOtheme/articles/index.html) for more.
 
 ```r
 library(INBOtheme)
@@ -308,7 +308,7 @@ ggplot(data = iris,
   ggtitle("Iris dataset: Petal length vs Sepal length")
 ```
 
-INBOtheme takes care of the quality of your plots: a message is returned if more than 4 colors are used. This is because using more than 4 colours might make the plot hard to read.
+INBOtheme helps you manage of the quality of your plots. For example, a message is returned if more than 4 colors are used since using more than 4 colours might make the plot hard to read.
 
 ```
 library(INBOtheme)
@@ -323,7 +323,7 @@ class: left, top
 
 # Challenge 3A - faceting
 
-Up to now we used `occs_benelux_animals` dataset. But how to visualize the data for each kingdom separately? No, we don't need to run a loop or something like that, thanks to the **faceting** feature of ggplot2. Check the cheatsheet.
+Up to now we used `occs_benelux_animals` dataset. But can we visualize the data for each kingdom separately? We don't need to run a loop and create a plot for each kingdom seperately, thanks to the **faceting** feature of ggplot2. Check the cheatsheet.
 
 1. Show scatter plots for each kingdom separately on one row.
 
@@ -335,9 +335,9 @@ class: left, top
 
 # Challenge 3B - one dataset, many valid plots
 
-Based on `species_be`, let's show how many plants have been observed in Belgium in 2025 for each order (column `order`) and IUCN red list category (column `iucnRedListCategory`). The code to get these counts (variable `n_species_per_order_iucn`) is provided. Use **bar plots**. Try reproducing the **faceting** shown in the screenshot below. As you can see some combinations are empty or almost empty, while few others are highly populated. How to deal with it? Think about the best way to visualize your data and the story you want to tell.
+Based on `species_be`, let's show how many plants have been observed in Belgium in 2025 for each order (column `order`) and IUCN red list category (column `iucnRedListCategory`). The code to get these counts (variable `n_species_per_order_iucn`) is provided. Use **bar plots**. Try reproducing the **faceting** shown in the screenshot below. As you can see some combinations contain little or no data, while few others are highly populated. How to deal with it? Think about the best way to visualize your data and the story you want to tell.
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20250325/2025_facet_iucn_order.png)
+![:scale 800%]({{ site.baseurl}}/assets/images/20250325/2025_facet_iucn_order.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -391,7 +391,7 @@ class: left, top
 
 # Topic of the next coding club: you vote! ✍️
 
-As usaul, you can vote among **two topics**. The poll for April's coding club is not yet open. You will receive an email with the link to the poll soon.
+As usual, you can vote among **two topics**. The poll for April's coding club is not yet open. You will receive an email with the link to the poll soon.
 
 ---
 class: center, middle

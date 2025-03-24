@@ -3,7 +3,7 @@ library(colorblindr)
 library(paletteer)
 
 occs_benelux <- readr::read_tsv("data/20250325/20250325_occs_benelux.tsv")
-species_be <- readr::read_tsv("data/20250325/species_in_BE.tsv")
+species_be <- readr::read_tsv("data/20250325/20250325_species_in_BE.tsv")
 
 occs_benelux_animals <- occs_benelux %>%
   dplyr::filter(kingdom == "Animalia")
