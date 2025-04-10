@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2025-03-25 | ggplot for dummies | [slides]({{ site.baseurl }}{% link sessions/20250325_ggplot_for_dummies.html  %}) | [hackmd](https://hackmd.io/wZgZhU9FR6S8O4HGrT71ng?view) | 01.70 - Ferdinand Peeters |  |
+| 2025-03-25 | ggplot for dummies | [slides]({{ site.baseurl }}{% link sessions/20250325_ggplot_for_dummies.html  %}) | [hackmd](https://hackmd.io/wZgZhU9FR6S8O4HGrT71ng?view) | 01.70 - Ferdinand Peeters | [vimeo](https://vimeo.com/1074429822) |
 | 2025-02-24 | Static dashboards with flexdashboard | [slides]({{ site.baseurl }}{% link sessions/20250224_static_dashboards.html  %}) | [hackmd](https://hackmd.io/lg9HjiCZS1eMFTikgZ-P3Q?view) | 01.70 - Ferdinand Peeters | [vimeo](https://vimeo.com/1064250550) |
 | 2025-01-30 | Data wrangling with tidyverse | [slides]({{ site.baseurl }}{% link sessions/20250130_data_wrangling_tidyverse.html  %}) | [hackmd](https://hackmd.io/@damianooldoni/HJM0WEu_1l?view) | 01.70 - Ferdinand Peeters |  |
 | 2024-12-17 | Reports in R | [slides]({{ site.baseurl }}{% link sessions/20241217_reports_in_r.html  %}) | [hackmd](https://hackmd.io/lZNAaZtmQOC6yfBLY5UiTA?view) | 01.69 - Paul Janssen | [vimeo](https://vimeo.com/1041690812) |
