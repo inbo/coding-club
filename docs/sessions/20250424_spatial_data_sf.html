@@ -61,7 +61,7 @@ class: left, top
 - Short answer: because Thierry says so :-)
 - Long answer: sp is not actively maintained anymore. It relied to retired packages (rgdal, rgeos, maptools) and now uses sf as backend instead. So, why not use sf directly?
 
-![:scale 140%]({{ site.baseurl}}/assets/images/20250424/20250424_mail_Thierry.png)
+![:scale 150%]({{ site.baseurl}}/assets/images/20250424/20250424_mail_Thierry.png)
 
 ---
 class: left, top
@@ -113,7 +113,7 @@ Bill Rankin, 2006 containing (almost) all the projections available in ArcGIS.
 
 Example 1: [**Lambert Azimuthal Equal Area**](https://en.wikipedia.org/wiki/Lambert_azimuthal_equal-area_projection), used by the [European Environment Agency](https://www.eea.europa.eu/) (EEA) to provide standard grids of Europe. Parameters: latitude of origin 52° N, longitude of origin 10° E
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20250424/20250424_Lambert_Azimuthal_Equal_Area.png)
+![:scale 80%]({{ site.baseurl}}/assets/images/20250424/20250424_Lambert_Azimuthal_Equal_Area.png)
 
 ---
 class: left, top
@@ -131,7 +131,7 @@ class: left, top
 
 What does your favorite [map projection](https://xkcd.com/977/) say about you?
 
-![:scale 50%]({{ site.baseurl}}/assets/images/20250424/20250424_peirce_quincuncial.png)
+![:scale 30%]({{ site.baseurl}}/assets/images/20250424/20250424_peirce_quincuncial.png)
 
 <small>
 The Peirce quincuncial projection is the conformal map projection from the sphere to an unfolded square dihedron, developed by Charles Sanders Peirce in 1879. Each octant projects onto an isosceles right triangle, and these are arranged into a square. The name quincuncial refers to this arrangement: the north pole at the center and quarters of the south pole in the corners form a quincunx pattern [..] rarely used for geographic purposes. The projection has seen use in digital photography for portraying spherical panoramas (see [example](https://en.wikipedia.org/wiki/Peirce_quincuncial_projection#/media/File:PeircePanorama2007.jpg)).
@@ -156,7 +156,7 @@ class: left, top
 
 A common way to specify the CRS is by providing the EPSG (numeric) code or identifier. EPSG stands for European Petroleum Survey Group*, an organization that maintained a geodetic parameter database with standard codes, the EPSG codes, for coordinate systems, datums, spheroids, units and such alike.  There are a lot of EPSG codes! Full list: https://spatialreference.org/
 
-![:scale 60%]({{ site.baseurl}}/assets/images/20250424/20250424_epsg_codes.png)
+![:scale 50%]({{ site.baseurl}}/assets/images/20250424/20250424_epsg_codes.png)
 
 <small>
 In 2005, the International Association of Oil & Gas Producers (IOGP) absorbed the European Petroleum Survey Group (1986–2005) into its structure as **IOGP Geodesy Subcommittee**. The Geodesy subcommittee kept the name of the EPSG Registry to avoid confusion. Source: chapter "The dilemma thickens" of https://www.spatialsource.com.au/gda2020-and-overcoming-the-web-mercator-dilemma/.
@@ -166,7 +166,7 @@ In 2005, the International Association of Oil & Gas Producers (IOGP) absorbed th
 ---
 class: center, top
 
-![:scale 60%]({{ site.baseurl}}/assets/images/20250424/20250424_sf_cheat_sheet.png)<br>
+![:scale 70%]({{ site.baseurl}}/assets/images/20250424/20250424_sf_cheat_sheet.png)<br>
 
 sf [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20211026_cheat_sheet_sf.pdf)
 
@@ -278,7 +278,7 @@ class: left, top
 3. Which layers does the  geospatial file `20250424_protected_areas_BE.gpkg` contain? What differences can you see between the first and the other layers?
 4. Read the layer `NaturaSite_polygon`: call it `pa`.
 5. Read the other layers as well. Call them `pa_bioregion` and `pa_habitats`. Are these spatial data.frames?
-6. How to retrieve information about the Coordinate Reference System (CRS) of `pa`, `heracleum` and `municipalities`?
+6. How to retrieve information about the CRS of `pa`, `heracleum` and `municipalities`?
 7. Do `pa` and `heracleum` have the same CRS? Do `heracleum` and `municipalities` have the same CRS?
 8. Extract the protected areas of type (`SITETYPE`) A as `pa_a`. Hint: do it as you would do with a standard data.frame. The motto of the sf package is "Spatial data, simplified" for a reason!
 
@@ -294,6 +294,7 @@ class: left, top
  should not be idealized as points in space, but as circles. Create such circles
  using the values stored in column `coordinateUncertaintyInMeters` of
  `heracleum`. Call this sf object `heracleum_circles`.
+4. Find the centroids of the municipalities. Call it `municipalities_centroids`.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -301,16 +302,13 @@ class: left, top
 
 # Challenge 3 - Manipulating spatial objects
 
-Using the cheatsheet and/or the vignette ["3. Manipulating Simple Feature Geometries"](https://r-spatial.github.io/sf/articles/sf3.html), try to solve the next challenges:
-
-1. Find the centroids of the municipalities.
-2. For each occurrence, find the nearest municipality as centroid.
-3. For each occurrence, find the nearest municipality as polygon. Do you find some differences with the previous results?
-4. Protected areas extend often over several municipalities. For each protected area of type A, find (the index of) the municipalities it belongs to.
-5. Create a new sf object called `pa_durme_kruibeke` with the part of the protected area `"Durme en Middenloop van de Schelde"` (`SITECODE`: `"BE2301235"`) falling within the municipality of Kruibeke (`mun_name_up`: `"KRUIBEKE"`).
-7. We would expect that the distance between `pa_durme_kruibeke` and the municipality of Kruibeke is 0. How to check it? Can you calculate the distance between the municipalities and the protected areas of type A? Calculate the distance using Lambert72 (EPSG: 31370) projection: do you get the same distances?
-8. For each protected area of type A, get (the index of) the occurrences as circles that intersect within the protected area. How to get only the occurrences that are totally contained in the protected area?
-9. Sometimes you need to grid your polygons. Examples: you need to do a transect survey with a standardized research effort. Create a grid with 5kmx5km cells.
+1. For each occurrence, find the nearest municipality as centroid.
+2. For each occurrence, find the nearest municipality as polygon. Do you find some differences with the previous results?
+3. Protected areas extend often over several municipalities. For each protected area of type A, find (the index of) the municipalities it belongs to.
+4. Create a new sf object called `pa_durme_kruibeke` with the part of the protected area `"Durme en Middenloop van de Schelde"` (`SITECODE`: `"BE2301235"`) falling within the municipality of Kruibeke (`mun_name_up`: `"KRUIBEKE"`).
+5. We would expect that the distance between `pa_durme_kruibeke` and the municipality of Kruibeke is 0. How to check it? Can you calculate the distance between the municipalities and the protected areas of type A? Calculate the distance using Lambert72 (EPSG: 31370) projection: do you get the same distances?
+6. For each protected area of type A, get (the index of) the occurrences as circles that intersect within the protected area. How to get only the occurrences that are totally contained in the protected area?
+7. Sometimes you need to grid your polygons. Examples: you need to do a transect survey with a standardized research effort. Create a grid with 5kmx5km cells.
 
 ---
 class: left, top
