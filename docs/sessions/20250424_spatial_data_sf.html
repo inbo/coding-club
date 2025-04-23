@@ -1,0 +1,366 @@
+---
+layout: presentation
+title: spatial data in R with sf
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 24 APRIL 2025
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+
+01.16 - Rik Wouters
+
+---
+class: left, top
+
+# Reminders
+
+1. Did we confirm the room reservation on the _roomie_?
+2. Did we start the recording?
+
+---
+class: left, top
+
+# The sf package
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20250424/20250424_sf_principle.jpg)
+
+The [sf homepage](https://r-spatial.github.io/sf/) is the best place to start your "spatial" voyage.
+
+---
+class: left, top
+
+# The sf package
+
+sf stays for: _[simple features](https://en.wikipedia.org/wiki/Simple_Features)_, a scary way to express "geographic features", where feature is a scary term to refer to an abstraction of real world phenomena with geometrical properties such as lat/lon (or x-y).
+
+
+---
+class: left, top
+
+## I use sp. Why do you bother me with sf?
+
+- Short answer: because Thierry says so :-)
+- Long answer: sp is not actively maintained anymore. It relied to retired packages (rgdal, rgeos, maptools) and now uses sf as backend instead. So, why not use sf directly?
+
+![:scale 140%]({{ site.baseurl}}/assets/images/20250424/20250424_mail_Thierry.png)
+
+---
+class: left, top
+
+## I use sp. Why do you bother me with sf?
+
+sf is not only the present and the future, but also the recent past!
+
+This [sp-sf migration table](https://github.com/r-spatial/sf/wiki/Migrating) will help you refactoring your code.
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20250424/20250424_migrating_table.png)
+
+---
+class: left, top
+
+Install the package:
+
+```r
+install.packages("sf")
+```
+
+Load the package:
+
+```r
+library(sf)
+```
+
+---
+class: left, top
+
+# Introduction: sf package
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20250424/20250424_sf_object.png)
+
+
+---
+class: left, top
+
+# Spatial coordinates
+
+Two types of spatial coordinates:
+
+- **projected** (or Cartesian) coordinates: refer to points on a flat space. The coordinates are the distance along the x and y axis
+- **unprojected** or **geographic** coordinates: refer to angles (latitude, longitude) pointing to locations on a sphere (or ellipsoid)
+
+No geospatial data without specifying the **Coordinate Reference System** (CRS) you work with!
+
+And what is a [(map) projection](https://en.wikipedia.org/wiki/Map_projection)? A way to visualize a surface of a sphere on a flat space.
+
+---
+class: left, top
+
+# Projections
+
+A lot of projections exist. Each one has its own purpose. Check this [projection reference](http://www.radicalcartography.net/?projectionref) page by
+Bill Rankin, 2006 containing (almost) all the projections available in ArcGIS.
+
+Example 1: [**Lambert Azimuthal Equal Area**](https://en.wikipedia.org/wiki/Lambert_azimuthal_equal-area_projection), used by the [European Environment Agency](https://www.eea.europa.eu/) (EEA) to provide standard grids of Europe. Parameters: latitude of origin 52° N, longitude of origin 10° E
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20250424/20250424_Lambert_Azimuthal_Equal_Area.png)
+
+---
+class: left, top
+
+# Projections
+
+Example 2: [Lambert coordinate systems](https://nl.wikipedia.org/wiki/Lambertco%C3%B6rdinaten), used by the [Belgian National Geographic Institute](https://ngi.be/) (NGI) to provide standard grids of Belgium. The most important is the Lambert72 (LB72), for 50 years the most used grid of Flanders/Belgium. Parameters: latitude of origin 49° 18′ 0″ N, longitude of origin 2° 18′ 0″ E.
+
+Do you know that Flemish Authority is [moving towards the Lambert2008 projection](https://www.vlaanderen.be/digitaal-vlaanderen/van-lambert72-naar-lambert2008)?
+
+---
+class: center, top
+
+# Projections: it can get crazy!
+
+What does your favorite [map projection](https://xkcd.com/977/) say about you?
+
+![:scale 20%]({{ site.baseurl}}/assets/images/20250424/20250424_peirce_quincuncial.png)
+
+The Peirce quincuncial projection is the conformal map projection from the sphere to an unfolded square dihedron, developed by Charles Sanders Peirce in 1879. Each octant projects onto an isosceles right triangle, and these are arranged into a square. The name quincuncial refers to this arrangement: the north pole at the center and quarters of the south pole in the corners form a quincunx pattern. [..] Rarely used for geographic purposes. The projection has seen use in digital photography for portraying [spherical panoramas](https://en.wikipedia.org/wiki/Peirce_quincuncial_projection#/media/File:PeircePanorama2007.jpg).
+
+<small> __\* Source__: Wikipedia contributors, "Peirce quincuncial projection," Wikipedia, The Free Encyclopedia, https://en.wikipedia.org/w/index.php?title=Peirce_quincuncial_projection&oldid=1203589626 (accessed May 21, 2024).</small>
+
+---
+class: left, top
+
+# Projections
+
+Some INBOers are so nerdy to collect the map projection cards of [Daniel Huffman](https://somethingaboutmaps.com/). I am one of them :-) Why?
+- Short answer: they are cool.
+- Long answer: they are a perfect example of diversity and change of perspective while looking at things. [“We must constantly look at things in a different way.”](https://www.youtube.com/watch?v=XtYRC00IoUs), just to cite Mr. Keating from the movie _Dead Poets Society_.
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20250424/20250424_amp_projection_cards.png)
+
+---
+class: left, top
+
+# Projections: CRS & EPSG codes
+
+A common way to specify the CRS is by providing the EPSG (numeric) code or identifier. EPSG stands for European Petroleum Survey Group*, an organization that maintained a geodetic parameter database with standard codes, the EPSG codes, for coordinate systems, datums, spheroids, units and such alike.  There are a lot of EPSG codes! Full list: https://spatialreference.org/
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20250424/20250424_epsg_codes.png)
+
+<small>
+In 2005, the International Association of Oil & Gas Producers (IOGP) absorbed the European Petroleum Survey Group (1986–2005) into its structure as **IOGP Geodesy Subcommittee**. The Geodesy subcommittee kept the name of the EPSG Registry to avoid confusion. Source: chapter "The dilemma thickens" of https://www.spatialsource.com.au/gda2020-and-overcoming-the-web-mercator-dilemma/.
+</small>
+
+
+---
+class: center, top
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20250424/20250424_sf_cheat_sheet.png)<br>
+
+sf [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20211026_cheat_sheet_sf.pdf)
+
+See also this very nice [article with some examples](https://r-spatial.github.io/sf/articles/sf2.html) and the excellent books: [Spatial Data Science With Applications in R](https://r-spatial.org/book/)* and  [geocomputation with R](https://r.geocompx.org/)**.
+
+<small>
+\* Pebesma, E.; Bivand, R. (2023). Spatial Data Science: With Applications in R (1st ed.). 314 pages. Chapman and Hall/CRC, Boca Raton. https://doi.org/10.1201/9780429459016
+\*\* Lovelace, R., Nowosad, J., & Muenchow, J. (2025). Geocomputation with R (Second). CRC Press.
+</small>
+
+---
+class: left, middle
+
+## How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+## First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+# Share your code during the coding session
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/s-Obj5yOTxult4YYO3XCxw?both and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/s-Obj5yOTxult4YYO3XCxw?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub foders [coding-club/data/20250424](https://github.com/inbo/coding-club/tree/master/data/20250424) and [coding-club/src/20250424](https://github.com/inbo/coding-club/tree/master/src/20250424)
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20230228")` to download the coding club material of February, 28 2023. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data and scripts description
+
+Today we will work with  datasets:
+
+- `20250424_heracleum_BE.tsv` contains GBIF occurrences* of giant hogweed (_Heracleum mantegazzianum_) taken in Belgium from 2024 up to present.
+- `20250424_communesgemeente-belgium.zip` contains the shapefile with the municipalities of Belgium**. Please, unzip it before use.
+- `20250424_protected_areas_BE.gpkg` contains the Natura2000 protected areas of Belgium***. Please, unzip it before use.
+
+
+R script:
+
+- `20250424_challenges.R`: code to start with the challenges.
+
+<small>
+__\* __ Derived from GBIF.org (22 April 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.2bptj3
+__\*\* __ Derived from a geopackage with all European Natura2000 areas: https://www.eea.europa.eu/en/datahub/datahubitem-view/6fc8ad2d-195d-40f4-bdec-576e7d1268e4
+__\*\*\* __ Source: https://data.gov.be/nl/datasets/httpswwwodwbbeexploredatasetcommunesgemeente-belgium.
+</small>
+
+---
+class: left, top
+
+# Load libraries
+
+If needed, install them first (`install.packages("package_name")`).
+
+```r
+library(tidyverse)
+library(sf)
+```
+
+We don't cover visualization of spatial data today, but if you want to easily inspect the spatial objects on a map, install and load the [mapview R package](https://r-spatial.github.io/mapview/). Use `mapview()` function to visualize your sf objects:
+
+```r
+library(mapview)
+# one object
+mapview(my_sf_object)
+# more objects = more layers
+mapview(list(my_sf_object1, my_sf_object2, my_sf_object3))
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+ Starting from the code provided in `20250424_challenges.R`:
+
+1. Create a geospatial data.frame called `heracleum` starting from `heracleuam_df`. Use the columns `decimalLongitude` and `decimalLatitude` to specify the coordinates. Note that GBIF data are stored using [WGS 84](https://epsg.io/4326) (CRS = 4326).
+2. Which layers does the  geospatial file `20250424_protected_areas_BE.gpkg` contain? What differences can you see between the first and the other layers?
+3. Read the layer `NaturaSite_polygon`: call it `pa`.
+4. Read the other layers as well. Call them `pa_bioregion` and `pa_habitats`. Are these spatial data.frames?
+5. Import the shapefile with the municipalities of Belgium: call it `municipalities`.
+6. How to retrieve information about the Coordinate Reference System (CRS) of `pa`, `heracleum` and `municipalities`?
+7. Do `pa` and `heracleum` have the same CRS? Do `pa` and `municipalities` have the same CRS?
+8. Extract the protected areas of type (`SITETYPE`) A as `pa_a`. Hint: do it as for a standard data.frame. The motto of the sf package is "Spatial data, simplified" for a reason!
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+1. Create `pa_a_wgs84` by **transform**ing `pa_a` to WGS 84 (EPSG code: 4326).
+2. Write a geopackage called `pa_a_heracleum_4326.gpkg` with two layers: `NaturaSite_A`, containing the protected areas of type A (`pa_a_wgs84`) and `heracleum_occs`, containing `heracleum`.
+3. Due to spatial uncertainty (gridded data, GPS uncertainty, etc.) observations
+ should not be idealized as points in space, but as circles. Create such circles
+ using the values stored in column `coordinateUncertaintyInMeters` of
+ `heracleum`. Call this sf object `heracleum_circles`.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3 - Manipulating spatial objects
+
+Using the cheatsheet and/or the vignette ["3. Manipulating Simple Feature Geometries"](https://r-spatial.github.io/sf/articles/sf3.html), try to solve the next challenges:
+
+1. Find the centroids of the municipalities.
+2. For each occurrence, find the nearest municipality as centroid.
+3. For each occurrence, find the nearest municipality as polygon. Do you find some differences with the previous results?
+4. Protected areas extend often over several municipalities. For each protected area of type A, find (the index of) the municipalities it belongs to.
+5. Create a new sf object called `pa_durme_kruibeke` with the part of the protected area `"Durme en Middenloop van de Schelde"` (`SITECODE`: `"BE2301235"`) falling within the municipality of Kruibeke (`mun_name_up`: `"KRUIBEKE"`).
+7. We would expect that the distance between `pa_durme_kruibeke` and the municipality of Kruibeke is 0. How to check it? Can you calculate the distance between the municipalities and the protected areas of type A? Calculate the distance using Lambert72 (EPSG: 31370) projection: do you get the same distances?
+8. For each protected area of type A, get (the index of) the occurrences as circles that intersect within the protected area. How to get only the occurrences that are totally contained in the protected area?
+9. Sometimes you need to grid your polygons. Examples: you need to do a transect survey with a standardized research effort. Create a grid with 5kmx5km cells.
+
+
+
+1. Which observations in `lepidoptera_3035` (points), are _contained_ in which protected area?
+2. But we should maybe better check which observations, as circles (!), _intersect_ each protected area. How to do it?
+
+4. How to get only the observations, as circles, **totally** contained in protected areas?
+5. How to get the _union_ of all the protected areas? How such union is expressed in sf?
+
+
+---
+class: left, top
+
+# The package of the month: Damiano's choice
+
+[ggstatsplot](https://indrajeetpatil.github.io/ggstatsplot/) R package is an extension of ggplot2 package for creating graphics with details from statistical tests.
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20250424/20250424_ggstatsplot.png)
+
+---
+class: left, top
+
+## Resources - part 1
+
+- Edited video recording of the session and challenges solutions will be available soon.
+- [sf homepage](https://r-spatial.github.io/sf/): the best place to start your "spatial" voyage.
+- sf [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20211026_cheat_sheet_sf.pdf)
+- See also this very nice [article with some examples](https://r-spatial.github.io/sf/articles/sf2.html)
+- Excellent online books: [Spatial Data Science With Applications in R](https://r-spatial.org/book/) and  [geocomputation with R](https://r.geocompx.org/). Printed versions available.
+
+
+---
+class: left, top
+
+# Topic of the next coding club: you vote! ✍️
+
+As usual, you can vote among **two topics**. The poll for April's coding club is not yet open. You will receive an email with the link to the poll soon.
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.16 - Rik Wouters<br>
+Date: __24/04/2025__, van 10:00 tot 12:30<br>
+Subject: to be decided <br>
+(registration announced via DG_useR@inbo.be)
