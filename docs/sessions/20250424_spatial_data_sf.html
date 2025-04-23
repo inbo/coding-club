@@ -92,14 +92,6 @@ library(sf)
 ---
 class: left, top
 
-# Introduction: sf package
-
-![:scale 100%]({{ site.baseurl}}/assets/images/20250424/20250424_sf_object.png)
-
-
----
-class: left, top
-
 # Spatial coordinates
 
 Two types of spatial coordinates:
@@ -133,7 +125,7 @@ Example 2: [Lambert coordinate systems](https://nl.wikipedia.org/wiki/Lambertco%
 Do you know that Flemish Authority is [moving towards the Lambert2008 projection](https://www.vlaanderen.be/digitaal-vlaanderen/van-lambert72-naar-lambert2008)?
 
 ---
-class: center, top
+class: left, top
 
 # Projections: it can get crazy!
 
@@ -152,9 +144,9 @@ class: left, top
 
 Some INBOers are so nerdy to collect the map projection cards of [Daniel Huffman](https://somethingaboutmaps.com/). I am one of them :-) Why?
 - Short answer: they are cool.
-- Long answer: they are a perfect example of diversity and change of perspective while looking at things. [“We must constantly look at things in a different way.”](https://www.youtube.com/watch?v=XtYRC00IoUs), just to cite Mr. Keating from the movie _Dead Poets Society_.
+- Long answer: they are a perfect example of diversity and change of perspective while looking at things. [“We must constantly look at things in a different way.”](https://www.youtube.com/watch?v=XtYRC00IoUs), just to cite Mr. Keating from the movie _Dead Poets Society_ (1989).
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20250424/20250424_amp_projection_cards.png)
+![:scale 80%]({{ site.baseurl}}/assets/images/20250424/20250424_amp_projection_cards.png)
 
 ---
 class: left, top
@@ -173,7 +165,7 @@ In 2005, the International Association of Oil & Gas Producers (IOGP) absorbed th
 ---
 class: center, top
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20250424/20250424_sf_cheat_sheet.png)<br>
+![:scale 60%]({{ site.baseurl}}/assets/images/20250424/20250424_sf_cheat_sheet.png)<br>
 
 sf [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20211026_cheat_sheet_sf.pdf)
 
@@ -185,7 +177,7 @@ See also this very nice [article with some examples](https://r-spatial.github.io
 </small>
 
 ---
-class: left, middle
+class: left, top
 
 ## How to get started?
 
@@ -222,9 +214,9 @@ You can download the material of today:
 - manually** from GitHub foders [coding-club/data/20250424](https://github.com/inbo/coding-club/tree/master/data/20250424) and [coding-club/src/20250424](https://github.com/inbo/coding-club/tree/master/src/20250424)
 
 <br>
-<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20230228")` to download the coding club material of February, 28 2023. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<small> You can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20230228")` to download the coding club material of February, 28 2023. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
 <br>
-<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+<small> Check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup).</small>
 
 ---
 class: left, top
@@ -243,9 +235,11 @@ R script:
 - `20250424_challenges.R`: code to start with the challenges.
 
 <small>
-__\* __ Derived from GBIF.org (22 April 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.2bptj3
-__\*\* __ Derived from a geopackage with all European Natura2000 areas: https://www.eea.europa.eu/en/datahub/datahubitem-view/6fc8ad2d-195d-40f4-bdec-576e7d1268e4
-__\*\*\* __ Source: https://data.gov.be/nl/datasets/httpswwwodwbbeexploredatasetcommunesgemeente-belgium.
+__\* __ Derived from GBIF.org (22 April 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.2bptj3.
+
+__\*\* __ Source: https://data.gov.be/nl/datasets/httpswwwodwbbeexploredatasetcommunesgemeente-belgium.
+
+__\*\*\* __ Derived from a geopackage with all European Natura2000 areas: https://www.eea.europa.eu/en/datahub/datahubitem-view/6fc8ad2d-195d-40f4-bdec-576e7d1268e4.
 </small>
 
 ---
@@ -278,14 +272,14 @@ class: left, top
 
  Starting from the code provided in `20250424_challenges.R`:
 
-1. Create a geospatial data.frame called `heracleum` starting from `heracleuam_df`. Use the columns `decimalLongitude` and `decimalLatitude` to specify the coordinates. Note that GBIF data are stored using [WGS 84](https://epsg.io/4326) (CRS = 4326).
-2. Which layers does the  geospatial file `20250424_protected_areas_BE.gpkg` contain? What differences can you see between the first and the other layers?
-3. Read the layer `NaturaSite_polygon`: call it `pa`.
-4. Read the other layers as well. Call them `pa_bioregion` and `pa_habitats`. Are these spatial data.frames?
-5. Import the shapefile with the municipalities of Belgium: call it `municipalities`.
+1. Import the shapefile with the municipalities of Belgium: call it `municipalities`.
+2. Create a geospatial data.frame called `heracleum` starting from `heracleuam_df`. Use the columns `decimalLongitude` and `decimalLatitude` to specify the coordinates. Note that GBIF data are stored using [WGS 84](https://epsg.io/4326) (CRS = 4326).
+3. Which layers does the  geospatial file `20250424_protected_areas_BE.gpkg` contain? What differences can you see between the first and the other layers?
+4. Read the layer `NaturaSite_polygon`: call it `pa`.
+5. Read the other layers as well. Call them `pa_bioregion` and `pa_habitats`. Are these spatial data.frames?
 6. How to retrieve information about the Coordinate Reference System (CRS) of `pa`, `heracleum` and `municipalities`?
-7. Do `pa` and `heracleum` have the same CRS? Do `pa` and `municipalities` have the same CRS?
-8. Extract the protected areas of type (`SITETYPE`) A as `pa_a`. Hint: do it as for a standard data.frame. The motto of the sf package is "Spatial data, simplified" for a reason!
+7. Do `pa` and `heracleum` have the same CRS? Do `heracleum` and `municipalities` have the same CRS?
+8. Extract the protected areas of type (`SITETYPE`) A as `pa_a`. Hint: do it as you would do with a standard data.frame. The motto of the sf package is "Spatial data, simplified" for a reason!
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -294,7 +288,7 @@ class: left, top
 # Challenge 2
 
 1. Create `pa_a_wgs84` by **transform**ing `pa_a` to WGS 84 (EPSG code: 4326).
-2. Write a geopackage called `pa_a_heracleum_4326.gpkg` with two layers: `NaturaSite_A`, containing the protected areas of type A (`pa_a_wgs84`) and `heracleum_occs`, containing `heracleum`.
+2. Write a geopackage called `pa_a_heracleum_4326.gpkg` with two layers: `NaturaSite_A`, containing the protected areas of type A (`pa_a_wgs84`) and `heracleum_occs`, containing `heracleum`. Hint: check https://r-spatial.github.io/sf/articles/sf2.html#using-st_write.
 3. Due to spatial uncertainty (gridded data, GPS uncertainty, etc.) observations
  should not be idealized as points in space, but as circles. Create such circles
  using the values stored in column `coordinateUncertaintyInMeters` of
@@ -318,27 +312,25 @@ Using the cheatsheet and/or the vignette ["3. Manipulating Simple Feature Geomet
 9. Sometimes you need to grid your polygons. Examples: you need to do a transect survey with a standardized research effort. Create a grid with 5kmx5km cells.
 
 
+---
+class: left, top
 
-1. Which observations in `lepidoptera_3035` (points), are _contained_ in which protected area?
-2. But we should maybe better check which observations, as circles (!), _intersect_ each protected area. How to do it?
+# The package of the month. Your choice
 
-4. How to get only the observations, as circles, **totally** contained in protected areas?
-5. How to get the _union_ of all the protected areas? How such union is expressed in sf?
+Do you know that Floris Vanderhaeghe (BMK team) is the maintainer of [qgisprocess](https://r-spatial.github.io/qgisprocess/), a package to provide an R interface to the popular and open source desktop geographic information system (GIS) program [QGIS](https://qgis.org/en/site/). Something 19 (!) people participating to the internal INBO survey would like to learn more about.
 
+qgisprocess has a [cheat sheet](https://r-spatial.github.io/qgisprocess/articles/cheatsheet_en.html) too!
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20250424/20250424_qgisprocess_cheatsheet.png)
+
+Floris wrote also some [slides](https://florisvdh.github.io/foss4g-2023-qgisprocess) presenting the package.
+
+The package was also the topic of the INBO coding club of December, 2023. See the [slides](https://inbo.github.io/coding-club/sessions/20231214_qgisprocess.html) and the edited [video recording](https://vimeo.com/900825991?share=copy).
 
 ---
 class: left, top
 
-# The package of the month: Damiano's choice
-
-[ggstatsplot](https://indrajeetpatil.github.io/ggstatsplot/) R package is an extension of ggplot2 package for creating graphics with details from statistical tests.
-
-![:scale 100%]({{ site.baseurl}}/assets/images/20250424/20250424_ggstatsplot.png)
-
----
-class: left, top
-
-## Resources - part 1
+## Resources
 
 - Edited video recording of the session and challenges solutions will be available soon.
 - [sf homepage](https://r-spatial.github.io/sf/): the best place to start your "spatial" voyage.
@@ -352,7 +344,7 @@ class: left, top
 
 # Topic of the next coding club: you vote! ✍️
 
-As usual, you can vote among **two topics**. The poll for April's coding club is not yet open. You will receive an email with the link to the poll soon.
+As usual, you can vote among **two topics**. The poll for May's coding club is not yet open. You will receive an email with the link to the poll soon.
 
 ---
 class: center, middle
@@ -360,7 +352,7 @@ class: center, middle
 ![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
 
 <!--  Adjust the room and date  -->
-Room: 01.16 - Rik Wouters<br>
-Date: __24/04/2025__, van 10:00 tot 12:30<br>
+Room: 01.72 - Kaat Tilley <br>
+Date: __27/05/2025__, van 10:00 tot 12:30<br>
 Subject: to be decided <br>
 (registration announced via DG_useR@inbo.be)
