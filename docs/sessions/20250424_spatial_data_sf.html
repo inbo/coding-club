@@ -59,7 +59,7 @@ class: left, top
 ## I use sp. Why do you bother me with sf?
 
 - Short answer: because Thierry says so :-)
-- Long answer: sp is not actively maintained anymore. It relied to retired packages (rgdal, rgeos, maptools) and now uses sf as backend instead. So, why not use sf directly?
+- Long answer: sp is not actively maintained anymore. It relied on retired packages (rgdal, rgeos, maptools) and now uses sf as backend instead. So, why not use sf directly?
 
 ![:scale 150%]({{ site.baseurl}}/assets/images/20250424/20250424_mail_Thierry.png)
 
@@ -120,9 +120,9 @@ class: left, top
 
 # Projections
 
-Example 2: [Lambert coordinate systems](https://nl.wikipedia.org/wiki/Lambertco%C3%B6rdinaten), used by the [Belgian National Geographic Institute](https://ngi.be/) (NGI) to provide standard grids of Belgium. The most important is the Lambert72 (LB72), for 50 years the most used grid in Flanders/Belgium. Parameters: latitude of origin 49° 18′ 0″ N, longitude of origin 2° 18′ 0″ E.
+Example 2: [Lambert coordinate systems](https://nl.wikipedia.org/wiki/Lambertco%C3%B6rdinaten), used by the [Belgian National Geographic Institute](https://ngi.be/) (NGI) to provide standard grids of Belgium. The most important is the Lambert72 (LB72), which has been the most used grid in Flanders/Belgium for over 50 years. Parameters: latitude of origin 49° 18′ 0″ N, longitude of origin 2° 18′ 0″ E.
 
-Do you know that Flemish Authority is [moving towards the Lambert2008 projection](https://www.vlaanderen.be/digitaal-vlaanderen/van-lambert72-naar-lambert2008)?
+Did you know that Flemish Authority is [moving towards the Lambert2008 projection](https://www.vlaanderen.be/digitaal-vlaanderen/van-lambert72-naar-lambert2008)?
 
 ---
 class: left, top
@@ -131,7 +131,7 @@ class: left, top
 
 What does your favorite [map projection](https://xkcd.com/977/) say about you?
 
-![:scale 25%]({{ site.baseurl}}/assets/images/20250424/20250424_peirce_quincuncial.png)
+![:scale 23%]({{ site.baseurl}}/assets/images/20250424/20250424_peirce_quincuncial.png)
 
 <small>
 The Peirce quincuncial projection is the conformal map projection from the sphere to an unfolded square dihedron, developed by Charles Sanders Peirce in 1879. Each octant projects onto an isosceles right triangle, and these are arranged into a square. The name quincuncial refers to this arrangement: the north pole at the center and quarters of the south pole in the corners form a quincunx pattern [..] rarely used for geographic purposes. The projection has seen use in digital photography for portraying spherical panoramas (see [example](https://en.wikipedia.org/wiki/Peirce_quincuncial_projection#/media/File:PeircePanorama2007.jpg)).
@@ -170,10 +170,11 @@ class: center, top
 
 sf [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20211026_cheat_sheet_sf.pdf)
 
-See also this very nice [article with some examples](https://r-spatial.github.io/sf/articles/sf2.html) and the excellent books: [Spatial Data Science With Applications in R](https://r-spatial.org/book/)* and  [geocomputation with R](https://r.geocompx.org/)**.
+See also this very nice [article with some examples](https://r-spatial.github.io/sf/articles/sf2.html) and the excellent books: [Spatial Data Science With Applications in R](https://r-spatial.org/book/)\* and  [geocomputation with R](https://r.geocompx.org/)\*\*.
 
 <small>
 \* Pebesma, E.; Bivand, R. (2023). Spatial Data Science: With Applications in R (1st ed.). 314 pages. Chapman and Hall/CRC, Boca Raton. https://doi.org/10.1201/9780429459016
+
 \*\* Lovelace, R., Nowosad, J., & Muenchow, J. (2025). Geocomputation with R (Second). CRC Press.
 </small>
 
@@ -228,7 +229,7 @@ Today we will work with  datasets:
 
 - `20250424_heracleum_BE.tsv` contains GBIF occurrences* of giant hogweed (_Heracleum mantegazzianum_) taken in Belgium from 2024 up to present.
 - `20250424_communesgemeente-belgium.zip` contains the shapefile with the municipalities of Belgium**. Please, unzip it before use.
-- `20250424_protected_areas_BE.gpkg` contains the Natura2000 protected areas of Belgium** *. Please, unzip it before use.
+- `20250424_protected_areas_BE.gpkg` contains the Natura2000 protected areas of Belgium\*\*\*. Please, unzip it before use.
 
 
 R script:
@@ -317,7 +318,7 @@ class: left, top
 
 Do you know that "our" Floris Vanderhaeghe is the maintainer of [qgisprocess](https://r-spatial.github.io/qgisprocess/), a package to provide an R interface to the popular and open source desktop geographic information system (GIS) program [QGIS](https://qgis.org/en/site/). Something 19 (!) people participating to the internal INBO survey would like to learn more about.
 
-qgisprocess has a [cheat sheet](https://r-spatial.github.io/qgisprocess/articles/cheatsheet_en.html) too! Floris wrote also some [slides](https://florisvdh.github.io/foss4g-2023-qgisprocess) presenting the package at the [FOSS4G 2023](https://2023.foss4g.org/) conference.
+qgisprocess has a [cheat sheet](https://r-spatial.github.io/qgisprocess/articles/cheatsheet_en.html) too! Floris also wrote some [slides](https://florisvdh.github.io/foss4g-2023-qgisprocess) presenting the package at the [FOSS4G 2023](https://2023.foss4g.org/) conference.
 
 The package was also the topic of the INBO coding club of December, 2023. See the [slides](https://inbo.github.io/coding-club/sessions/20231214_qgisprocess.html) and the edited [video recording](https://vimeo.com/900825991?share=copy).
 
