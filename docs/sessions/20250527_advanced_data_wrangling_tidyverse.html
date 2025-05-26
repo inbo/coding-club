@@ -47,7 +47,7 @@ class: left, top
 
 Packages from the tidyverse ecosystem are widely used for data wrangling in R. The most popular ones are [**dplyr**](https://dplyr.tidyverse.org/) and [**tidyr**](https://tidyr.tidyverse.org/). They provide a set of functions to manipulate data frames in a consistent and easy-to-use way. Another important package is [**purrr**](https://purrr.tidyverse.org/), which allows you to write code in a more functional style, making it easier to work with lists and data frames.
 
-Of course all these packages have very nice cheat sheets to help you remember the most important functions and how to use them. The dplyr cheat sheet is the most popular one, but tidyr and purrr also have their own cheat sheets.
+All these packages have very nice cheatsheets:
 
 - dplyr: cheatsheet available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20250130_cheat_sheet_data_transformation.pdf) or [html](https://rstudio.github.io/cheatsheets/html/data-transformation.html).
 - tidyr: cheatsheet available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20250130_cheat_sheet_tidyr.pdf) or [html](https://rstudio.github.io/cheatsheets/html/tidyr.html).
@@ -55,11 +55,7 @@ Of course all these packages have very nice cheat sheets to help you remember th
 
 The best resource for self study? The [data transformation chapter](https://r4ds.hadley.nz/data-transform.html) in R for data science (2e) book*, free online. The first edition is also available in [Spanish](http://es.r4ds.hadley.nz/), [Italian](https://it.r4ds.hadley.nz/), [Turkish](https://tr.r4ds.hadley.nz/) and [Portuguese](https://pt.r4ds.hadley.nz/).
 
-<center>![:scale 25%]({{ site.baseurl}}/assets/images/20250527/20250527_dplyr_logo.png)</center>
-
-<center>![:scale 25%]({{ site.baseurl}}/assets/images/20250527/20250527_tidyr_logo.png)</center>
-
-<center>![:scale 25%]({{ site.baseurl}}/assets/images/20250527/20250527_purrr_logo.png)</center>
+<center>![:scale 80%]({{ site.baseurl}}/assets/images/20250527/20250527_logos.png)</center>
 
 <br>
 <small> __\* Authors__: Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.</small>
@@ -109,10 +105,6 @@ SQL, e.g. `filter()`, `select()`.
 class: left, top
 
 # The pipe %>% operator
-
-From [dplyr](https://dplyr.tidyverse.org/articles/dplyr.html#the-pipe) documentation:
-
-![:scale 100%]({{ site.baseurl}}/assets/images/20240425/20240425_pipe.png)
 
 Which code version is more readable?
 
@@ -194,7 +186,7 @@ R script to start from. Some code is already provided.
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
 class: left, top
 
-## Challenge 1
+# Challenge 1
 
 1. Some counters changed organisation during the years. Create a data.frame with two columns `counter_name` and `n_organisations` with the number of organisations a counter has belonged to. Order by `n_organisations` from high to low, and by `counter_name` alphabetically. Save the result as `counters_organisations`.
 2. Instead of only having the amount of organisations a counter belongs to, we now want an additional column called `organisations` containing the organisation IDs, comma separated. Same order as before.  Save the result as `counters_organisations` (overwrite).
@@ -212,7 +204,7 @@ class: left, top
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
-## Challenge 2 -
+# Challenge 2
 
 Create an overview table containing the number of counts and the dates and the counters per each hunting ground, as shown here below.
 
@@ -221,7 +213,7 @@ Create an overview table containing the number of counts and the dates and the c
 ---
 class: left, top
 
-## Intermezzo - Anonymysation 🕵
+# Intermezzo - Anonymysation 🕵
 
 Anonymysation is part of cryptography, which is the practice of securing information by transforming it into an unreadable format. Anonymysation is a specific type of cryptography that aims to protect the identity of individuals in a dataset.
 
@@ -235,9 +227,9 @@ The best ways to anonymyze the data? Use [hash functions](https://en.wikipedia.o
 ---
 class: left, top
 
-## Intermezzo - digest R package
+# Intermezzo - {digest} R package
 
-How to anonymyze in R? Use the [digest](https://eddelbuettel.github.io/digest/) R package! Why "digest"?
+How to anonymyze in R? Use the [{digest}](https://eddelbuettel.github.io/digest/) R package! Why "digest"?
 
 ```r
 digest::digest(object = "Damiano Oldoni", algo = "sha256")
@@ -252,20 +244,27 @@ Check [`digest()` documentation](https://eddelbuettel.github.io/digest/man/diges
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
-## Challenge 3
+# Challenge 3
 
 1. Replace `counter_name` in `counts` with the anonymized version of the counter name. Use the `digest::digest()` function with `algo = "sha256"`. Save the result as `counts_anonymised`.
 2. Starting from counts_anonymised we could create an overview table with anonymysed counter names. However, such a table would be unpractical, as it would be unreadable due to the long hashes. Order the hashes alphabetically* and use their index as counter name. You can store the hashes and their index in a two-column data.frame called `ordered_hashes`.
-3. Let's change type of data. Some taxa in GBIF have multiple vernacular names in the same language. Inspired by the code provided, which starts from the ["Ad hoc checklist of alien species in Belgium"](https://www.gbif.org/dataset/1f3505cd-5d98-4e23-bd3b-ffe59d05d7c2),  create a data.frame with columns `taxonKey`, `vernacularName`, `language` and `n`, where `n` is the number of vernacular names per language and taxon. The data.frame must show only the taxa/vernacular names where `n` > 1.
-4. The data.frame is in the so-called long format, which is nice and **tidy**.
-However, sometimes is useful to have the data represented in a wide format, where each row is a taxon and each column is a vernacular name in a specific language, e.g. name columns like `vernacularName_nld`, `vernacularName_eng`, etc. Save the result as a data.frame called `vernacular_names_wide`.
-Do not include vernacular names where `language` = `""` (empty string).
-If multiple names are available for a taxon in a specific language, store them as a list.
-5. Insted of storing the names as a list, keep only the first one. Save the result as a data.frame called `vernacular_names_wide_first`.
-6. Even better, use the `preferred` column to keep only the preferred vernacular name for each taxon and language. If there is no preferred vernacular name, just keep the first one. Save the result as a data.frame called `vernacular_names_wide_preferred`.
 
 <br>
 <small> __\*__: Digits come first, letters follow, standard sorting :-)</small>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3B
+
+1. Some taxa in GBIF have multiple vernacular names in the same language. Inspired by the code provided, which starts from the ["Ad hoc checklist of alien species in Belgium"](https://www.gbif.org/dataset/1f3505cd-5d98-4e23-bd3b-ffe59d05d7c2),  create a data.frame with columns `taxonKey`, `vernacularName`, `language` and `n`, where `n` is the number of vernacular names per language and taxon. The data.frame must show only the taxa/vernacular names where `n` > 1.
+2. The data.frame is in the so-called long format, which is nice and **tidy**.
+However, sometimes is useful to have the data represented in a wide format, where each row is a taxon and each column is a vernacular name in a specific language, e.g. name columns like `vernacularName_nld`, `vernacularName_eng`, etc. Save the result as a data.frame called `vernacular_names_wide`.
+Do not include vernacular names where `language` = `""` (empty string).
+If multiple names are available for a taxon in a specific language, store them as a list.
+3. Insted of storing the names as a list, keep only the first one. Save the result as a data.frame called `vernacular_names_wide_first`.
+4. Even better, use the `preferred` column to keep only the preferred vernacular name for each taxon and language. If there is no preferred vernacular name, just keep the first one. Save the result as a data.frame called `vernacular_names_wide_preferred`.
 
 ---
 class: left, top
@@ -300,5 +299,5 @@ class: center, middle
 <!--  Adjust the room number and name  -->
 Topic: to be chosen <br>
 Room:  HT - 01.71 - Frans Breziers <br>
-Date: **26/06/2025** (Monday!), from **10:00** to **12:30** <br>
+Date: **26/06/2025**, from **10:00** to **12:30** <br>
 **Help** needed with technical setup? You are welcome from **9:45am**

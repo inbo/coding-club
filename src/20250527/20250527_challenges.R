@@ -55,23 +55,23 @@ digest::digest(object = "Damiano Oldoni", algo = "blake3")
 
 
 
-# CHALLENGE 3 ####
+# CHALLENGE 3A ####
 
-## 3.1 ####
-
-
-
-## 3.2 ####
+## 3A.1 ####
 
 
 
-## 3.3 ####
+## 3A.2 ####
+
+
+
+# CHALLENGE 3B ####
 library(rgbif)
 
 taxa_ad_hoc <- rgbif::name_usage(
   datasetKey = "1f3505cd-5d98-4e23-bd3b-ffe59d05d7c2",
   limit = 1000 # Enough high to get all taxa
-  ) %>%
+) %>%
   purrr::pluck("data") %>% # Similar to use $data, but nice for piping
   dplyr::filter(origin == "SOURCE") # Remove any higher taxonomy provided by checklist authors
 
@@ -89,16 +89,19 @@ vernacular_names_example <- rgbif::name_usage(
   limit = 1000) %>%
   purrr::pluck("data")
 
+## 3B.1 ####
 
 
 
-##3.4 ####
+
+##3B.2 ####
 
 
 
-## 3.5 ####
+## 3B.3 ####
 
 
 
-## 3.6 ####
+## 3B.4 ####
+
 
