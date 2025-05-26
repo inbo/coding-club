@@ -2,7 +2,7 @@ library(tidyverse)
 library(digest)
 library(rgbif)
 
-# Read dataset, `counts` ####
+# Read dataset `counts` ####
 counts <- readr::read_tsv(
   file = "data/20250527/20250527_partridge_counts.tsv",
   na = ""
