@@ -220,6 +220,7 @@ data/20250325/20250325_species_in_BE.tsv,20250325_species_in_BE.tsv,data,2025032
 data/20250424/20250424_protected_areas_BE.gpkg,20250424_protected_areas_BE.gpkg,data,20250424
 data/20250424/20250424_heracleum_BE.tsv,20250424_heracleum_BE.tsv,data,20250424
 data/20250424/20250424_communesgemeente-belgium.zip,20250424_communesgemeente-belgium.zip,data,20250424
+data/20250527/20250527_partridge_counts.tsv,20250527_partridge_counts.tsv,data,20250527
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
 src/20180222/20180222_import_spreadsheets.R,20180222_import_spreadsheets.R,src,20180222
@@ -429,3 +430,4 @@ src/20250325/20250325_challenges.R,20250325_challenges.R,src,20250325
 src/20250325/20250325_challenges_solutions.R,20250325_challenges_solutions.R,src,20250325
 src/20250424/20250424_challenges.R,20250424_challenges.R,src,20250424
 src/20250424/20250424_challenges_solutions.R,20250424_challenges_solutions.R,src,20250424
+src/20250527/20250527_challenges.R,20250527_challenges.R,src,20250527

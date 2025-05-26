@@ -1,0 +1,304 @@
+---
+layout: presentation
+title: Advanced data wrangling with tidyverse
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+  <!-- Adjust the presentation to the session. Focus on the challenges,
+this is not a coding tutorial.
+
+Note, to include figures, store the image in the `/docs/assets/images`
+folder and use the jekyll base.url reference as done in this template
+or see https://jekyllrb.com/docs/liquid/tags/#links.
+  using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 27 MAY 2025
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck<br>
+01.72 - Kaat Tilley <br>
+
+---
+class: left, top
+
+# Reminders
+
+1. Did we confirm the room reservation on the _roomie_?
+2. Did we start the recording?
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20250527/20250527_badge.png)
+
+---
+class: left, top
+
+# Data wrangling with tidyverse
+
+Packages from the tidyverse ecosystem are widely used for data wrangling in R. The most popular ones are [**dplyr**](https://dplyr.tidyverse.org/) and [**tidyr**](https://tidyr.tidyverse.org/). They provide a set of functions to manipulate data frames in a consistent and easy-to-use way. Another important package is [**purrr**](https://purrr.tidyverse.org/), which allows you to write code in a more functional style, making it easier to work with lists and data frames.
+
+Of course all these packages have very nice cheat sheets to help you remember the most important functions and how to use them. The dplyr cheat sheet is the most popular one, but tidyr and purrr also have their own cheat sheets.
+
+- dplyr: cheatsheet available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20250130_cheat_sheet_data_transformation.pdf) or [html](https://rstudio.github.io/cheatsheets/html/data-transformation.html).
+- tidyr: cheatsheet available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20250130_cheat_sheet_tidyr.pdf) or [html](https://rstudio.github.io/cheatsheets/html/tidyr.html).
+- purrr: cheatsheet available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20240627_cheat_sheet_purrr.pdf) or [html](https://rstudio.github.io/cheatsheets/html/purrr.html).
+
+The best resource for self study? The [data transformation chapter](https://r4ds.hadley.nz/data-transform.html) in R for data science (2e) book*, free online. The first edition is also available in [Spanish](http://es.r4ds.hadley.nz/), [Italian](https://it.r4ds.hadley.nz/), [Turkish](https://tr.r4ds.hadley.nz/) and [Portuguese](https://pt.r4ds.hadley.nz/).
+
+<center>![:scale 25%]({{ site.baseurl}}/assets/images/20250527/20250527_dplyr_logo.png)</center>
+
+<center>![:scale 25%]({{ site.baseurl}}/assets/images/20250527/20250527_tidyr_logo.png)</center>
+
+<center>![:scale 25%]({{ site.baseurl}}/assets/images/20250527/20250527_purrr_logo.png)</center>
+
+<br>
+<small> __\* Authors__: Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.</small>
+
+---
+class: left, top
+
+## How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+## First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+# Share your code during the coding session
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/uigLOMvhRii0MwjTMRD4OA?both and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/uigLOMvhRii0MwjTMRD4OA?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Why dplyr?
+
+A lot of reasons. But the main one is that it makes the code easy to read (in comparison with basic R). Other important reasons?
+
+- It is actively maintained (people from posit, the company behind RStudio).
+- It works nicely with all other tidyverse packages.
+- Its development is open on [GitHub](https://github.com/tidyverse/dplyr/):
+issues, questions, dev ideas etc. are welcome.
+- Its functions have very good names. Some of them are exactly the same as in
+SQL, e.g. `filter()`, `select()`.
+
+
+---
+class: left, top
+
+# The pipe %>% operator
+
+From [dplyr](https://dplyr.tidyverse.org/articles/dplyr.html#the-pipe) documentation:
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20240425/20240425_pipe.png)
+
+Which code version is more readable?
+
+```
+library(dplyr)
+
+# Version 1
+mtcars %>%
+  filter(mpg > 20) %>%
+  select(mpg, cyl, hp)
+
+# Version 2
+select(filter(mtcars, mpg > 20), mpg, cyl, hp)
+```
+
+RStudio provides a shortcut to insert a pipe:
+`Ctrl + Shift + M`.
+
+---
+class: left, top
+
+# Pipe %>% or pipe |>
+
+From [tidyverse blogpost](https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/)
+R 4.1.0 introduced a native pipe operator, |>. As described in the R News:
+
+> R now provides a simple native forward pipe syntax |>. The simple form of the forward pipe inserts the left-hand side as the first argument in the right-hand side call. The pipe implementation as a syntax transformation was motivated by suggestions from Jim Hester and Lionel Henry.
+
+See section ["|> vs. %>%"](https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/#-vs) to know the slightly different behavior of the two pipes.
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub folders [data/20250527](https://github.com/inbo/coding-club/tree/master/data/20250527) and [src/20250527](https://github.com/inbo/coding-club/tree/master/src/20250527)
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20230228")` to download the coding club material of February, 28 2023. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Packages
+
+Aside the tidyverse packages, please install {digest} and {rgbif} packages, which are used in the challenges.
+
+```r
+install.packages(c("digest", "rgbif"))
+```
+
+Load the packages:
+
+```r
+library(tidyverse)
+library(digest)
+library(rgbif)
+```
+
+---
+class: left, top
+
+# Data and scripts description
+
+Today we will work with:
+
+- [20250527_partridge_counts.tsv](https://github.com/inbo/coding-club/blob/main/data/20250527/20250527_partridge_counts.tsv): tab-separated text file with counts of partridges in Flanders, derived by standard INBO monitoring data collected with the help of volunteers.
+- GBIF vernacular names via rgbif package, making use of the GBIF API.
+- [20250527_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20250527/20250527_challenges.R):
+R script to start from. Some code is already provided.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+## Challenge 1
+
+1. Some counters changed organisation during the years. Create a data.frame with two columns `counter_name` and `n_organisations` with the number of organisations a counter has belonged to. Order by `n_organisations` from high to low, and by `counter_name` alphabetically. Save the result as `counters_organisations`.
+2. Instead of only having the amount of organisations a counter belongs to, we now want an additional column called `organisations` containing the organisation IDs, comma separated. Same order as before.  Save the result as `counters_organisations` (overwrite).
+3. Add a new column called `org_counter` to `counts` with a string formatted as follows: `organisation_id`-`counter_name`, e.g. `398668-Germayne Galea`.
+4. Now we want to create a **vector** of organisations/counters (column `org_counter`) which is ordered according to:
+- (1) the first date they submitted the data (`date_digitalisation`),
+- (2) the organisation ID (`organisation_id`)*, alphabetically,
+- (3) their name (`counter_name`)*, alphabetically
+
+
+<br>
+<small> __\* __: Notice that you can make use of the new column `org_counter` to order by organisation ID and counter name.</small>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+## Challenge 2 -
+
+Create an overview table containing the number of counts and the dates and the counters per each hunting ground, as shown here below.
+
+<center>![:scale 100%]({{ site.baseurl}}/assets/images/20250527/20250527_challenge2_overview_table.png)</center>
+
+---
+class: left, top
+
+## Intermezzo - Anonymysation 🕵
+
+Anonymysation is part of cryptography, which is the practice of securing information by transforming it into an unreadable format. Anonymysation is a specific type of cryptography that aims to protect the identity of individuals in a dataset.
+
+Anonymysation is important in data wrangling because it allows you to share data without revealing sensitive information. It is also a legal requirement! See the **General Data Protection Regulation** (Regulation (EU) [2016/679](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:02016R0679-20160504)), abbreviated **GDPR**.
+
+The best ways to anonymyze the data? Use [hash functions](https://en.wikipedia.org/wiki/Hash_function), e.g. "old school"" [MD5](https://en.wikipedia.org/wiki/MD5) and [SHA-1](https://en.wikipedia.org/wiki/SHA-1)*, or the modern [SHA-256](https://en.wikipedia.org/wiki/SHA-2) and [BLAKE3](https://en.wikipedia.org/wiki/BLAKE_(hash_function)#BLAKE3). They transform the input into a hash value, or **digest**, which is a fixed-size string of characters that represents the original information.
+
+<br>
+<small> __\* IMPORTANT__: both [MD5](https://www.schneier.com/blog/archives/2005/03/more_hash_funct.html) and [SHA-1](https://www.schneier.com/blog/archives/2005/02/sha1_broken.html) has been cryptographically broken in early 2000s, i.e. they can be attacked faster than brute-force. Here mentioned for historical reasons.</small>
+
+---
+class: left, top
+
+## Intermezzo - digest R package
+
+How to anonymyze in R? Use the [digest](https://eddelbuettel.github.io/digest/) R package! Why "digest"?
+
+```r
+digest::digest(object = "Damiano Oldoni", algo = "sha256")
+[1] "d7bfed3738b012b4b0b5714934013985007474c35649079625a3478852418390"
+
+digest::digest(object = "Damiano Oldoni", algo = "blake3")
+[1] "415b624e3418156df9dcdfa04b6f29fd55ff68315da876c1336482a9ddefefe6"
+```
+Check [`digest()` documentation](https://eddelbuettel.github.io/digest/man/digest/) to get more information about the `digest()` function and all the supported hashing functions (algorithms). Do you know that "our" Thierry contributed to a [vignette](https://eddelbuettel.github.io/digest/vignette/) of the package? Well done, Thierry!
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+## Challenge 3
+
+1. Replace `counter_name` in `counts` with the anonymized version of the counter name. Use the `digest::digest()` function with `algo = "sha256"`. Save the result as `counts_anonymised`.
+2. Starting from counts_anonymised we could create an overview table with anonymysed counter names. However, such a table would be unpractical, as it would be unreadable due to the long hashes. Order the hashes alphabetically* and use their index as counter name. You can store the hashes and their index in a two-column data.frame called `ordered_hashes`.
+3. Let's change type of data. Some taxa in GBIF have multiple vernacular names in the same language. Inspired by the code provided, which starts from the ["Ad hoc checklist of alien species in Belgium"](https://www.gbif.org/dataset/1f3505cd-5d98-4e23-bd3b-ffe59d05d7c2),  create a data.frame with columns `taxonKey`, `vernacularName`, `language` and `n`, where `n` is the number of vernacular names per language and taxon. The data.frame must show only the taxa/vernacular names where `n` > 1.
+4. The data.frame is in the so-called long format, which is nice and **tidy**.
+However, sometimes is useful to have the data represented in a wide format, where each row is a taxon and each column is a vernacular name in a specific language, e.g. name columns like `vernacularName_nld`, `vernacularName_eng`, etc. Save the result as a data.frame called `vernacular_names_wide`.
+Do not include vernacular names where `language` = `""` (empty string).
+If multiple names are available for a taxon in a specific language, store them as a list.
+5. Insted of storing the names as a list, keep only the first one. Save the result as a data.frame called `vernacular_names_wide_first`.
+6. Even better, use the `preferred` column to keep only the preferred vernacular name for each taxon and language. If there is no preferred vernacular name, just keep the first one. Save the result as a data.frame called `vernacular_names_wide_preferred`.
+
+<br>
+<small> __\*__: Digits come first, letters follow, standard sorting :-)</small>
+
+---
+class: left, top
+
+# Package of the month: janitor
+
+A great package to clean data frames, especially when working with messy data. It provides functions to clean column names, remove empty rows and columns, and more. In the context of data wrangling, maybe the most important function is `tabyl()`, which is linked to tabyls: a tidy, fully-featured approach to counting things. Tabyls are frequency tables, similar to the `table()` function in base R, but more flexible and easier to use. And they match seamlessly with the [`adorn_*` functions](https://sfirke.github.io/janitor/articles/tabyls.html#the-adorn_-functions).
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20250527/20250527_janitor_small.png)
+
+---
+class: left, top
+
+# Resources
+
+1. Challenges solutions and edited video recording will be available soon. Stay tuned!
+2. [dplyr homepage](https://dplyr.tidyverse.org/).
+3. [tidyr homepage](https://tidyr.tidyverse.org/).
+4. [purrr homepage](https://purrr.tidyverse.org/).
+5. The [data transformation chapter](https://r4ds.hadley.nz/data-transform.html) in [R for data science 2nd edition](https://r4ds.hadley.nz/).
+6. [digest homepage](https://eddelbuettel.github.io/digest/).
+7. [rgbif homepage](https://docs.ropensci.org/rgbif/).
+8. [janitor homepage](https://sfirke.github.io/janitor/).
+9. **General Data Protection Regulation** (Regulation (EU) [2016/679](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:02016R0679-20160504)), or just GDPR.
+10. [Hash functions](https://en.wikipedia.org/wiki/Hash_function) to learn more about the different hashing algorithms for anonymysation.
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room number and name  -->
+Topic: to be chosen <br>
+Room:  HT - 01.71 - Frans Breziers <br>
+Date: **26/06/2025** (Monday!), from **10:00** to **12:30** <br>
+**Help** needed with technical setup? You are welcome from **9:45am**
