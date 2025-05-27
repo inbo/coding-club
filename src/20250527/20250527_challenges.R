@@ -12,40 +12,17 @@ counts <- readr::read_tsv(
 dplyr::glimpse(counts)
 
 
-
 # CHALLENGE 1 ####
 
 ## 1.1 ####
 
-
-
 ## 1.2 ####
-
-
 
 ## 1.3 ####
 
-
-
 ## 1.4 ####
 
-
-
 # CHALLENGE 2 ####
-
-counts %>%
-  mutate(date_count = as.Date(date_count)) %>%
-  dplyr::group_by(org_counter, date_count, hunting_ground) %>%
-  dplyr::reframe(
-    date_count = sprintf("%s (%s)", date_count, org_counter)
-  ) %>%
-  dplyr::group_by(hunting_ground) %>%
-  dplyr::reframe(
-    n_counts = dplyr::n_distinct(org_counter, date_count),
-    dates_counters = paste0(unique(date_count), collapse = ", ")
-  )
-
-
 
 # INTERMEZZO ####
 
@@ -54,16 +31,11 @@ digest::digest(object = "Damiano Oldoni", algo = "sha256")
 digest::digest(object = "Damiano Oldoni", algo = "blake3")
 
 
-
 # CHALLENGE 3A ####
 
 ## 3A.1 ####
 
-
-
 ## 3A.2 ####
-
-
 
 # CHALLENGE 3B ####
 library(rgbif)
@@ -86,22 +58,14 @@ backbone_taxon <- backbone_taxa[1]
 vernacular_names_example <- rgbif::name_usage(
   key = backbone_taxon,
   data = "vernacularNames",
-  limit = 1000) %>%
+  limit = 1000
+) %>%
   purrr::pluck("data")
 
 ## 3B.1 ####
 
-
-
-
 ##3B.2 ####
-
-
 
 ## 3B.3 ####
 
-
-
 ## 3B.4 ####
-
-
