@@ -188,7 +188,7 @@ class: left, top
 
 # Challenge 1
 
-1. Some counters changed organisation during the years. Create a data.frame with two columns `counter_name` and `n_organisations` with the number of organisations a counter has belonged to. Order by `n_organisations` from high to low, and by `counter_name` alphabetically. Save the result as `counters_organisations`.
+1. Some counters changed organisation during the year. Create a data.frame with two columns `counter_name` and `n_organisations` with the number of organisations a counter has belonged to. Order by `n_organisations` from high to low, and by `counter_name` alphabetically. Save the result as `counters_organisations`.
 2. Instead of only having the amount of organisations a counter belongs to, we now want an additional column called `organisations` containing the organisation IDs, comma separated. Same order as before.  Save the result as `counters_organisations` (overwrite).
 3. Add a new column called `org_counter` to `counts` with a string formatted as follows: `organisation_id`-`counter_name`, e.g. `398668-Germayne Galea`.
 4. Now we want to create a **vector** of organisations/counters (column `org_counter`) which is ordered according to:
@@ -206,7 +206,7 @@ class: left, top
 
 # Challenge 2
 
-Create an overview table containing the number of counts and the dates and the counters per each hunting ground, as shown here below.
+Create an overview table containing the number of counts, the dates, and the counters per each hunting ground, as shown here below.
 
 <center>![:scale 110%]({{ site.baseurl}}/assets/images/20250527/20250527_challenge2_overview_table.png)</center>
 
@@ -263,7 +263,7 @@ class: left, top
 However, sometimes is useful to have the data represented in a wide format, where each row is a taxon and each column is a vernacular name in a specific language, e.g. name columns like `vernacularName_nld`, `vernacularName_eng`, etc. Save the result as a data.frame called `vernacular_names_wide`.
 Do not include vernacular names where `language` = `""` (empty string).
 If multiple names are available for a taxon in a specific language, store them as a list.
-3. Insted of storing the names as a list, keep only the first one. Save the result as a data.frame called `vernacular_names_wide_first`.
+3. Instead of storing the names as a list, keep only the first one. Save the result as a data.frame called `vernacular_names_wide_first`.
 4. Even better, use the `preferred` column to keep only the preferred vernacular name for each taxon and language. If there is no preferred vernacular name, just keep the first one. Save the result as a data.frame called `vernacular_names_wide_preferred`.
 
 ---
