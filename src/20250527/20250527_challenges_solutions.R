@@ -169,7 +169,35 @@ counters <- counts %>%
 counters1 <- counts %>%
   dplyr::arrange(date_digitalisation, org_counter) %>%
   dplyr::slice(1, .by = org_counter) %>%
+  # Extract the results as a vector
   dplyr::pull(org_counter)
+
+
+# Not required, but interesting exercise. What if you don't want the unique
+# values, but a vector with as many rows as `counts`? You need then to join to
+# the original dataset. Notice the use of arguments `relationship` and
+# `unmatched`. The argument `relationship` is a new quality control argument
+# introduced in dplyr 1.1.1. More in vignette:
+# https://dplyr.tidyverse.org/news/index.html#dplyr-111. The argument
+# `unmatched` is a new quality control argument introduced in dplyr 1.1.0, which
+# allows to specify what to do with unmatched rows. In this case we want to
+# raise an error if there are unmatched rows, so we set `unmatched = "error"`.
+# More in vignette:
+# https://www.tidyverse.org/blog/2023/01/dplyr-1-1-0-joins/#unmatched-rows
+counters_with_repetitions <- counts %>%
+  dplyr::left_join(
+    counts %>%
+      dplyr::arrange(org_counter, date_digitalisation) %>%
+      dplyr::slice(1, .by = org_counter) %>%
+      dplyr::rename(c(first_digitalisation = date_digitalisation)) %>%
+      dplyr::select(org_counter, first_digitalisation)
+    , by = dplyr::join_by(org_counter),
+    relationship = "many-to-one",
+    unmatched = "error"
+  ) %>%
+  dplyr::arrange(first_digitalisation, organisation_id, counter_name) %>%
+  dplyr::pull(org_counter)
+
 
 
 # CHALLENGE 2 ####
@@ -201,7 +229,7 @@ overview
 # specify any order, actually.
 overview2 <- counts |>
   dplyr::arrange(date_count) |>
-  mutate(
+  dplyr::mutate(
     date_counter=sprintf(
       '%s (%i-%s)',
       as.Date(date_count),
@@ -209,12 +237,12 @@ overview2 <- counts |>
       counter_name
     )
   ) |>
-  summarize(
-    n_counts=n_distinct(date_counter),
-    dates_counters=paste(unique(date_counter),collapse=', '),
-    .by=hunting_ground
+  dplyr::summarise(
+    n_counts = dplyr::n_distinct(date_counter),
+    dates_counters = paste(unique(date_counter),collapse=', '),
+    .by = hunting_ground
   ) |>
-  arrange(hunting_ground)
+  dplyr::arrange(hunting_ground)
 overview2
 
 
@@ -239,7 +267,19 @@ counts_anonymised <- counts %>%
     )
   )
 
-# Alternative: vectorize the `digest::digest()` function using `Vectorize()`. In this way we can apply the function to a vector of values without using `purrr::map_chr()`.
+# The very same workflow, but using all arguments by their names
+counts_anonymised <- counts %>%
+  dplyr::mutate(counter_name = purrr::map_chr(
+    .x = counter_name,
+    .f = function(x){
+      digest::digest(object = x,algo = "sha256")
+      }
+    )
+  )
+
+# Alternative: vectorize the `digest::digest()` function using `Vectorize()`. In
+# this way we can apply the function to a vector of values without using
+# `purrr::map_chr()`.
 vectorized_digest <- Vectorize(digest::digest, "object", "algo")
 counts_anonymised2 <- counts
 counts_anonymised2$counter_name <- vectorized_digest(
@@ -255,11 +295,20 @@ counts_anonymised3$counter_name <- vectorized_digest(
 names(counts_anonymised3$counter_name) <- NULL
 
 
-# Another suggested alternative is worth to be discussed. It uses `dplyr::mutate()` only, no `{purrr}` or vectorized function. The solution is however wrong. Can you find out why?
+# Of course, we realize that the names are still visible in column
+# `org_counter`, but this is just an exercise :-) If you prefer, remove or use
+# same anonymisation on `org_counter` as well.
+
+
+# Another suggested alternative is worth to be discussed. It uses
+# `dplyr::mutate()` only, no `{purrr}` or vectorized function. The solution is
+# however wrong. Can you find out why?
 counts_anonymised4 <- counts %>%
   mutate(counter_name = digest::digest(object = counter_name, algo = "sha256"),
          .by = counter_name)
+# The returned hash is not the same as the one in `counts_anonymised`:
 counts_anonymised4$counter_name[1] == counts_anonymised$counter_name[1]
+
 # The problem is that `mutate()` with `.by` argument does not work as expected
 # here. It applies the function to each group defined by `counter_name`. Let's
 # take the first name as example, "Germayne Galea":
@@ -269,8 +318,9 @@ counts %>%
 counts_anonymised4 %>%
   dplyr::filter(counter_name == counts_anonymised4$counter_name[1]) %>%
   nrow()
-# This hash is the same for all the 75 rows and it is the hash of a vector
-# containing 75 times `"Germayne Galea"`. See below:
+# This hash is the same for all the 75 rows and it is the hash returned by the
+# `digest()` function if applied to a vector containing 75 times `"Germayne
+# Galea"`. See below:
 counts_anonymised4$counter_name[1]
 digest::digest(object = rep("Germayne Galea",75), algo = "sha256")
 
