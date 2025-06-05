@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2025-05-27 | advanced data wrangling with tidyverse | [slides]({{ site.baseurl }}{% link sessions/20250527_advanced_data_wrangling_tidyverse.html  %}) | [hackmd](https://hackmd.io/uigLOMvhRii0MwjTMRD4OA?view) | 01.72 - Kaat Tilley |  |
+| 2025-05-27 | advanced data wrangling with tidyverse | [slides]({{ site.baseurl }}{% link sessions/20250527_advanced_data_wrangling_tidyverse.html  %}) | [hackmd](https://hackmd.io/uigLOMvhRii0MwjTMRD4OA?view) | 01.72 - Kaat Tilley | [vimeo](https://vimeo.com/1090982289) |
 | 2025-04-24 | spatial data in R with sf | [slides]({{ site.baseurl }}{% link sessions/20250424_spatial_data_sf.html  %}) | [hackmd](https://hackmd.io/s-Obj5yOTxult4YYO3XCxw?view) | 01.16 - Rik Wouters | [vimeo](https://vimeo.com/1080856019) |
 | 2025-03-25 | ggplot for dummies | [slides]({{ site.baseurl }}{% link sessions/20250325_ggplot_for_dummies.html  %}) | [hackmd](https://hackmd.io/wZgZhU9FR6S8O4HGrT71ng?view) | 01.70 - Ferdinand Peeters | [vimeo](https://vimeo.com/1074429822) |
 | 2025-02-24 | Static dashboards with flexdashboard | [slides]({{ site.baseurl }}{% link sessions/20250224_static_dashboards.html  %}) | [hackmd](https://hackmd.io/lg9HjiCZS1eMFTikgZ-P3Q?view) | 01.70 - Ferdinand Peeters | [vimeo](https://vimeo.com/1064250550) |
