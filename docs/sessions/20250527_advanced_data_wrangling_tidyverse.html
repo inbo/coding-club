@@ -188,17 +188,21 @@ class: left, top
 
 # Challenge 1
 
-1. Some counters changed organisation during the year. Create a data.frame with two columns `counter_name` and `n_organisations` with the number of organisations a counter has belonged to. Order by `n_organisations` from high to low, and by `counter_name` alphabetically. Save the result as `counters_organisations`.
-2. Instead of only having the amount of organisations a counter belongs to, we now want an additional column called `organisations` containing the organisation IDs, comma separated. Same order as before.  Save the result as `counters_organisations` (overwrite).
+1. Some counters were active during many days. Create a data.frame with two columns `counter_name` and `n_days` with the number of days a counter was active. Order by `n_days` from high to low, and by `counter_name` alphabetically.* Save the result as `counters_days`.
+2. Instead of only having the number of days a counter was active, we now want an additional column called `days` containing the days, comma separated. Same order as before.  Save the result as `counters_days` (overwrite).
 3. Add a new column called `org_counter` to `counts` with a string formatted as follows: `organisation_id`-`counter_name`, e.g. `398668-Germayne Galea`.
-4. Now we want to create a **vector** of organisations/counters (column `org_counter`) which is ordered according to:
+4. Now we want to create a **vector** with the unique** organisations/counters (column `org_counter`) which is ordered according to:
 - (1) the first date they submitted the data (`date_digitalisation`),
-- (2) the organisation ID (`organisation_id`)*, alphabetically,
-- (3) their name (`counter_name`)*, alphabetically
+- (2) the organisation ID (`organisation_id`)***, alphabetically,
+- (3) their name (`counter_name`)***, alphabetically
 
 
 <br>
-<small> __\* __: Notice that you can make use of the new column `org_counter` to order by organisation ID and counter name.</small>
+<small>
+__\* __: Original assignment was about counting the number of organisations a counter has belonged to as in a previous version of the dataset it occurred that some counters changed organisation during the year. However, in the current dataset this is not the case. So we modified exercises 1 and 2 during the coding club session. Notice you can do a similar exercise by taking into account other columns such as `type_obs` or `hunting_ground`.
+__\*\* __: Original assignment did not mention uniqueness. some people were therefore confused during the coding club.
+__\*\*\* __: Notice that you can make use of the new column `org_counter` to order by organisation ID and counter name.
+</small>
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -264,7 +268,7 @@ However, sometimes is useful to have the data represented in a wide format, wher
 Do not include vernacular names where `language` = `""` (empty string).
 If multiple names are available for a taxon in a specific language, store them as a list.
 3. Instead of storing the names as a list, keep only the first one. Save the result as a data.frame called `vernacular_names_wide_first`.
-4. Even better, use the `preferred` column to keep only the preferred vernacular name for each taxon and language. If there is no preferred vernacular name, just keep the first one. Save the result as a data.frame called `vernacular_names_wide_preferred`.
+4. Even better, use the `preferred` column to keep only the preferred vernacular name for each taxon and language. If multiple preferred names are, just keep the first name. If there is no preferred vernacular name (`preferred` is always `FALSE` or `NA`), just keep the first name. Save the result as a data.frame called `vernacular_names_wide_preferred`.
 
 ---
 class: left, top
