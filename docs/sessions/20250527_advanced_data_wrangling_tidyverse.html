@@ -193,15 +193,15 @@ class: left, top
 3. Add a new column called `org_counter` to `counts` with a string formatted as follows: `organisation_id`-`counter_name`, e.g. `398668-Germayne Galea`.
 4. Now we want to create a **vector** with the unique** organisations/counters (column `org_counter`) which is ordered according to:
 - (1) the first date they submitted the data (`date_digitalisation`),
-- (2) the organisation ID (`organisation_id`)***, alphabetically,
-- (3) their name (`counter_name`)***, alphabetically
+- (2) the organisation ID (`organisation_id`)\*\*\*, alphabetically,
+- (3) their name (`counter_name`)\*\*\*, alphabetically
 
 
 <br>
 <small>
-__\* __: Original assignment was about counting the number of organisations a counter has belonged to as in a previous version of the dataset it occurred that some counters changed organisation during the year. However, in the current dataset this is not the case. So we modified exercises 1 and 2 during the coding club session. Notice you can do a similar exercise by taking into account other columns such as `type_obs` or `hunting_ground`.
-__\*\* __: Original assignment did not mention uniqueness. some people were therefore confused during the coding club.
-__\*\*\* __: Notice that you can make use of the new column `org_counter` to order by organisation ID and counter name.
+__\* __ Original assignment was about counting the number of organisations a counter has belonged to. We modified exercises 1 and 2 during the coding club session. Notice you can do a similar exercise by using other columns such as `type_obs` or `hunting_ground`.<br>
+__\*\* __ Original assignment did not mention uniqueness. Some people were therefore confused during the coding club.<br>
+__\*\*\* __ You can make use of the new column `org_counter` to order by organisation ID and counter name.
 </small>
 
 ---
