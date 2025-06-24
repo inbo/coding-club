@@ -64,7 +64,7 @@ Think to have a food processor here in front of you:
 - You can define your own **recipe** by defining the needed **ingredients**, the **actions** to perform and then save it for later use by giving it a **name**.
 - You can define your own **function** by defining the needed **input arguments**, the **code** to execute and then save it for later use by giving it a **name**.
 
-![:scale 50%]({{ site.baseurl}}/assets/images/20250626/20250626_recipe-functions.png)
+![:scale 100%]({{ site.baseurl}}/assets/images/20250626/20250626_recipe-functions.png)
 
 ---
 class: left, top
@@ -274,6 +274,8 @@ Edna is not only a lepidopterist: she likes data science and she uses R to do th
 <br>
 <small> __\* The fictive Edna character is a tribute to [Edna Mosher](https://en.wikipedia.org/wiki/Edna_Mosher), Canadian entomologist and lepidopterist known for her pioneering work on Lepidoptera pupae morphology (source: [Wikipedia](https://en.wikipedia.org/wiki/Edna_Mosher)). </small>
 
+![:scale 80%]({{ site.baseurl}}/assets/images/20250626/20250626_edna_mosher.jpg)
+<small> By Cgrinter - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=159211100 </small>
 ---
 class: left, top
 
@@ -338,7 +340,7 @@ In this challenge you will use the Edna's code in section `# CHALLENGE 2 ####` o
 
 1. Improve the functions `get_effort()`, `get_abundance()` and `get_richness()` by adding two arguments, `breaks` (numeric vector) and `labels` (character vector). Use the values provided by Edna as default values. The improved functions will return a data frame with a column more than the previous functions. This column is respectively called `categoric_effort`, `categoric_abundance` and `categoric_richness`.
 
-2. Write a function called `plot_abundance()` with an argument called `species` (character). The function returns a bar plot of the abundance with the provided `species` in the title.
+2. Write a function called `plot_abundance()` with an argument called `df` with a data frame containing abundance data (see output of `get_abundance()`) and an argument called `species` (character). The function returns a bar plot of the abundance with the provided `species` in the title.
 
 3. Edna must create the same plots with title and axis labels in Dutch for a workshop with citizen scientists. Can you improve `plot_abundance()` to handle it? You can use English title and labels as default values.
 
@@ -406,13 +408,13 @@ docstring(make_bread) # or just
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
-# Challenge  3: finalize the workflow
+# Challenge  3: finalise the workflow
 
 We are almost there! In this challenge you will use the Edna's code in section `# CHALLENGE 3 ####` of file `20250626_challenges.R`.
 
 1. Write two functions called `plot_effort()` and `plot_richness()` to return a bar plot of effort and richness, respectively. These functions must allow Edna to create plots with title and axis labels in Dutch as well. Again, English texts are the default values.
 
-2. Now that we have all blocks, automatize the entire workflow (without the plotting step) by creating a macrofunction called `get_indicators()` with argument `year` (numeric). This function must return a list of 3 elements: `effort`, `abundance` and `richness`.
+2. Automatise the entire workflow (without the plotting step) by creating a macrofunction called `get_indicators()` with argument `year` (numeric) to read the right csv file. This function must return a list of 3 data frames named `effort`, `abundance` and `richness`. And do not forget to allow Edna to set custom breaks and labels for the categorical effort/abundance/richness.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -432,7 +434,7 @@ class: left, top
 
 The goal of [legendry](https://teunbrand.github.io/legendry/) is to provide additional guide functionality to the ggplot2 ecosystem. It provides a set of functions to create guides and legends for ggplot2 plots, which can be useful when you want to customize their appearance or when you want to create legends for plots that do not have a built-in legend. See the very well-written [guided tour](https://teunbrand.github.io/legendry/articles/tour.html).
 
-.center[![:scale 80%]({{ site.baseurl}}/assets/images/20250626/20250626_logo_legendry.png)]
+.center[![:scale 40%]({{ site.baseurl}}/assets/images/20250626/20250626_logo_legendry.png)]
 
 ---
 class:left, top
@@ -454,25 +456,8 @@ class: left, top
 
 We take a break now. Have a nice summer! Let's meet again end August.
 
-<center>
 
-
-                 _..--+~/@-~--.
-             _-=~      (  .   "}
-          _-~     _.--=.\ \""""
-        _~      _-       \ \_\
-       =      _=          '--'
-      '      =                             .
-     :      :       ____                   '=_. ___
-___  |      ;                            ____ '~--.~.
-     ;      ;                               _____  } |
-  ___=       \ ___ __     __..-...__           ___/__/__
-     :        =_     _.-~~          ~~--.__
-_____ \         ~-+-~                   ___~=_______
-     ~@#~~ == ...______ __ ___ _--~~--_
-                                                    =
-</center>
-
+.center[![:scale 40%]({{ site.baseurl}}/assets/images/20250626/20250626_plesiosaurus_ascii_art.png)]
 
 We wish you an unforgettable summer full of dinos, dragons and adventures!
 
