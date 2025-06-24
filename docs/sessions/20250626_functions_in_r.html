@@ -267,27 +267,12 @@ class: left, top
 
 .center[![:scale 5%]({{ site.baseurl}}/assets/images/20250626/20250626_film.png)]
 
-# The Antwerp trilogy: Ladybeetles, Grasshoppers, and Data Science
+# Edna and the moths
 
-Once upon a time there was a biologist, Dorothy*. She received in January 2011 observations of the asian ladybeetle (_Harmonia axyridis_) collected in the surroundings of Antwerp. These observations are stored in [20250626_harmonia_axyridis_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20250626/20250626_harmonia_axyridis_2010.txt). She wrote some code to read the observations, do some data wrangling and plot the results. You can find the code in [20250626_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20250626/20250626_challenges.R).
-
-What seemed to be a one-shot anlysis, becomes very soon something more: she receives a similar file from another contractor containing observations of the bow-winged grasshopper (_Chorthippus biguttulus_) collected in the same area: [20250626_chorthippus_biguttulus_2010.txt](https://github.com/inbo/coding-club/blob/master/data/20250626/20250626_chorthippus_biguttulus_2010.txt).
+Edna is not only a lepidopterist: she likes data science and she uses R to do that. She collected data about moths yearly in some locations in Belgium. She has written also some code to analyse the data. But she is not happy with her code: it is not modular, it is not reusable, it is not easy to read and understand. She has asked you to help her to improve her code by (re)writing it using functions. You are happy to help her.
 
 <br>
-<small> __\* The fictive Dorothy character is a tribute to [Dorothy Crowfoot Hodgkin](https://en.wikipedia.org/wiki/Dorothy_Hodgkin), a British chemist who won the Nobel Prize in Chemistry in 1964. She was a pioneer in the field of X-ray crystallography to study interesting biological molecules. Among others, she discovered the structure of the vitamine B12. </small>
-
-
----
-class: left, top
-
-.center[![:scale 5%]({{ site.baseurl}}/assets/images/20250626/20250626_film.png)]
-
-# The Antwerp trilogy: Ladybeetles, Grasshoppers, and Data Science
-
-Dorothy also learns that she will have to redo the same analysis in the future, for sure on observations of the Asian ladybeetle, [20250626_harmonia_axyridis_2011.txt](https://github.com/inbo/coding-club/blob/master/data/20250626/20250626_harmonia_axyridis_2011.txt)
-
-And, she is afraid, new data of bow-winged grasshopper will find her sooner or later. I think you can find yourself in the role of Dorothy.
-
+<small> __\* The fictive Edna character is a tribute to [Edna Mosher](https://en.wikipedia.org/wiki/Edna_Mosher), Canadian entomologist and lepidopterist known for her pioneering work on Lepidoptera pupae morphology (source: [Wikipedia](https://en.wikipedia.org/wiki/Edna_Mosher)). </small>
 
 ---
 class: left, top
@@ -296,12 +281,11 @@ class: left, top
 
 - Leave the given script (`20250626_challenges.R`) as it is, so that you can always refer to it, while writing the functions.
 
-- Create a new file, e.g. `20250626_functions.R`: it contains only the functions. It's like a cookbook with the recipes.
+- Create a new file, e.g. `20250626_functions.R`: it must contains only the functions. It's like a cookbook with the recipes.
 
-- Create a new file, e.g. `20250626_workflow.R`: it contains your code which will call the functions.
+- Create a new file, e.g. `20250626_workflow.R`: it contains only your code where you will use the functions.
 
-- **Source** `20250626_challenges.R`, e.g. run `source("./src/20250626/20250626_functions.R")` or just click the "Source" button in RStudio, everytime you change the functions. This way you can test your functions while writing them.
-
+- **Source** `20250626_functions.R`, e.g. run `source("./src/20250626/20250626_functions.R")` or just click the "Source" button in RStudio, everytime you change the functions. This way you can test your functions while writing them.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -309,7 +293,11 @@ class: left, top
 
 # Challenge 1
 
+For this challenge, you will use the Edna's code in section `# CHALLENGE 1 ####` of file `20250626_challenges.R`.
 
+1. Write a function called `read_moth()` that reads the moth data from a file and returns a data frame. The function should have an argument: `year` (number), which is the year of the data to read. Tip: `sprintf()` can be useful, e.g. `sprintf("Damiano is born in %d.", 1982)`.
+2. Edna adds `year` column immediately in her workflow. So, add please this small step in `read_moth`.
+3. Write three functions: `get_effort()`, `get_abundance()` and `get_richness()` to calculate respectively the yearly effort, abundance and richness. The function must have an argument: `df` (data frame), which is the data to use. The function should return a data frame with the effort, abundance  or richness.
 
 ---
 class: left, top
@@ -346,14 +334,20 @@ class: left, top
 
 # Challenge 2: defaults and arguments
 
+In this challenge you will use the Edna's code in section `# CHALLENGE 2 ####` of file `20250626_challenges.R`.
 
+1. Improve the functions `get_effort()`, `get_abundance()` and `get_richness()` by adding two arguments, `breaks` (numeric vector) and `labels` (character vector). Use the values provided by Edna as default values. The improved functions will return a data frame with a column more than the previous functions. This column is respectively called `categoric_effort`, `categoric_abundance` and `categoric_richness`.
+
+2. Write a function called `plot_abundance()` with an argument called `species` (character). The function returns a bar plot of the abundance with the provided `species` in the title.
+
+3. Edna must create the same plots with title and axis labels in Dutch for a workshop with citizen scientists. Can you improve `plot_abundance()` to handle it? You can use English title and labels as default values.
 
 ---
 class: left, top
 
 # Intermezzo 2: document with style
 
-C. Bukowski once wrote that [_"Style is the answer to everything"_](https://genius.com/Charles-bukowski-style-annotated).
+The writer C. Bukowski once wrote that [_"Style is the answer to everything"_](https://genius.com/Charles-bukowski-style-annotated).
 
 Function documentation is essential while using R. How many times did you use the help (`?function_name`) in your daily woRk? So, let's document our functions with style!
 
@@ -409,12 +403,27 @@ docstring(make_bread) # or just
 ```
 
 ---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
-# Challenge  3: automatize the workflow
+# Challenge  3: finalize the workflow
 
-Now that we have all blocks, automatize the entire workflow by creating a macrofunction called
+We are almost there! In this challenge you will use the Edna's code in section `# CHALLENGE 3 ####` of file `20250626_challenges.R`.
 
+1. Write two functions called `plot_effort()` and `plot_richness()` to return a bar plot of effort and richness, respectively. These functions must allow Edna to create plots with title and axis labels in Dutch as well. Again, English texts are the default values.
+
+2. Now that we have all blocks, automatize the entire workflow (without the plotting step) by creating a macrofunction called `get_indicators()` with argument `year` (numeric). This function must return a list of 3 elements: `effort`, `abundance` and `richness`.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Bonus challenge
+
+Create a function called plot_indicators(). This function must have at least an argument called `indicators`, which is the list returned by `get_indicators()`. Probably you need other arguments as the function must allow Edna to create plots with title and axis labels in Dutch as well. The output is a list with three elements:
+- `effort`: a ggplot object with the effort plot as returned by `plot_effort()`.
+- `abundance`: a list of ggplot objects, one per species. Use the scientific names to name the list elements. Tip: you can use purrr package to loop over all species. Based on function `plot_abundance()`.
+- `richness`: a ggplot object with the richness plot as returned by `plot_richness`.
 
 ---
 class: left, top
@@ -467,7 +476,7 @@ _____ \         ~-+-~                   ___~=_______
 
 We wish you an unforgettable summer full of dinos, dragons and adventures!
 
-<small>It's a [plesiosaurus](https://en.wikipedia.org/wiki/Plesiosaurus), found at https://www.asciiart.eu/animals/reptiles/dinosaurs. </small>
+<small>It's a [plesiosaurus](https://en.wikipedia.org/wiki/Plesiosaurus), found at https://www.asciiart.eu/animals/reptiles/dinosaurs. 🦖</small>
 
 ---
 class: center, middle

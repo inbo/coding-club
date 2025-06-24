@@ -221,6 +221,8 @@ data/20250424/20250424_protected_areas_BE.gpkg,20250424_protected_areas_BE.gpkg,
 data/20250424/20250424_heracleum_BE.tsv,20250424_heracleum_BE.tsv,data,20250424
 data/20250424/20250424_communesgemeente-belgium.zip,20250424_communesgemeente-belgium.zip,data,20250424
 data/20250527/20250527_partridge_counts.tsv,20250527_partridge_counts.tsv,data,20250527
+data/20250626/20250626_moth_obs_2022.csv,20250626_moth_obs_2022.csv,data,20250626
+data/20250626/20250626_moth_obs_2023.csv,20250626_moth_obs_2023.csv,data,20250626
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
 src/20180222/20180222_import_spreadsheets.R,20180222_import_spreadsheets.R,src,20180222
@@ -432,3 +434,4 @@ src/20250424/20250424_challenges.R,20250424_challenges.R,src,20250424
 src/20250424/20250424_challenges_solutions.R,20250424_challenges_solutions.R,src,20250424
 src/20250527/20250527_challenges.R,20250527_challenges.R,src,20250527
 src/20250527/20250527_challenges_solutions.R,20250527_challenges_solutions.R,src,20250527
+src/20250626/20250626_challenges.R,20250626_challenges.R,src,20250626
