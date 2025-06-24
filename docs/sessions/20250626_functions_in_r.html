@@ -52,7 +52,7 @@ Coding is cooking! 🍲 🥘 Working with functions is like using a food process
 - With a food processor, you can use preset recipes, but you can also create your own recipes.
 - Working with functions, you can use preset functions (`names()`, `length()`, `median()`, ...), but you can also create your own functions.
 
-![:scale 50%]({{ site.baseurl}}/assets/images/20250626/20250626_food_processor.jpg)
+.center[![:scale 50%]({{ site.baseurl}}/assets/images/20250626/20250626_food_processor.jpg)]
 
 <small> Photo taken from https://www.livingalifeincolour.com/kitchen/equipment/appliances/ under a Creative Common licence. </small>
 ---
@@ -64,7 +64,7 @@ Think to have a food processor here in front of you:
 - You can define your own **recipe** by defining the needed **ingredients**, the **actions** to perform and then save it for later use by giving it a **name**.
 - You can define your own **function** by defining the needed **input arguments**, the **code** to execute and then save it for later use by giving it a **name**.
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20250626/20250626_recipe-functions.png)
+.center[![:scale 100%]({{ site.baseurl}}/assets/images/20250626/20250626_recipe-functions.png)]
 
 ---
 class: left, top
@@ -99,7 +99,12 @@ my_water <- 2
 my_salt <- 3
 
 # Add ingredients in the food processor = Pass input values to arguments of the function
-my_bread <- make_bread(grains = my_grains, yeast = my_yeast, water = my_yeast, salt = my_yeast) # Press `Enter`
+my_bread <- make_bread(
+  grains = my_grains,
+  yeast = my_yeast,
+  water = my_yeast,
+  salt = my_yeast
+) # Press `Enter`
 my_bread
 ```
 
@@ -114,19 +119,44 @@ You can use:
 
 ```
 # Use the recipe with different (amount of) ingredients
-bread1 <- make_bread(grains = grains1, yeast = yeast1, water = water1, salt = salt1)
-bread2 <- make_bread(grains = grains2, yeast = yeast2, water = water2, salt = salt2)
+bread1 <- make_bread(
+  grains = grains1,
+  yeast = yeast1,
+  water = water1,
+  salt = salt1
+)
+bread2 <- make_bread(
+  grains = grains2,
+  yeast = yeast2,
+  water = water2,
+  salt = salt2
+)
 ```
 
-You can have:
+---
+class: left, top
+
+# Introduction: coding is cooking
+
+Or, you can have:
 - different recipes using the same ingredients
 - different functions using the same input arguments
 
 ```
 # Make savory pie dough with the same ingredients
-savory_pie_dough1 <- make_savory_pie_dough(grains = grains1, yeast  = yeast1, water = water1, salt = salt1)
+savory_pie_dough1 <- make_savory_pie_dough(
+  grains = grains1,
+  yeast  = yeast1,
+  water = water1,
+  salt = salt1
+)
 # Make focaccia with the same ingredients
-focaccia1 <- make_focaccia(grains = grains1, yeast = yeast1, water = water1, salt = salt1)
+focaccia1 <- make_focaccia(
+  grains = grains1,
+  yeast = yeast1,
+  water = water1,
+  salt = salt1
+)
 ```
 
 ---
@@ -271,7 +301,8 @@ Edna is not only a lepidopterist: she likes data science and she uses R to do th
 <br>
 <small> __\* The fictive Edna character is a tribute to [Edna Mosher](https://en.wikipedia.org/wiki/Edna_Mosher), Canadian entomologist and lepidopterist known for her pioneering work on Lepidoptera pupae morphology (source: [Wikipedia](https://en.wikipedia.org/wiki/Edna_Mosher)). </small>
 
-![:scale 30%]({{ site.baseurl}}/assets/images/20250626/20250626_edna_mosher.jpg)
+.center[![:scale 26%]({{ site.baseurl}}/assets/images/20250626/20250626_edna_mosher.jpg)]
+<br>
 <small> By Cgrinter - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=159211100 </small>
 ---
 class: left, top
@@ -453,7 +484,7 @@ class: left, top
 
 We take a break in July. Have a nice summer! Let's meet again end August.
 
-.center[![:scale 80%]({{ site.baseurl}}/assets/images/20250626/20250626_plesiosaurus_ascii_art.png)]
+.center[![:scale 90%]({{ site.baseurl}}/assets/images/20250626/20250626_plesiosaurus_ascii_art.png)]
 
 We wish you an unforgettable summer full of dinos, dragons and adventures!
 
