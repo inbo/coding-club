@@ -60,7 +60,7 @@ class: left, top
 
 # Introduction: coding is cooking
 
-Think to have a food processor here in front of you:
+Imagine you have a food processor here in front of you:
 - You can define your own **recipe** by defining the needed **ingredients**, the **actions** to perform and then save it for later use by giving it a **name**.
 - You can define your own **function** by defining the needed **input arguments**, the **code** to execute and then save it for later use by giving it a **name**.
 
@@ -77,7 +77,7 @@ My recipe, ehum, function:
 make_bread <- function(grains, yeast, water, salt) {
     # Code to generate `bread`.
     # The code here can be easy (easy bread recipes do exist)
-    # or quite complex (complex bread recipes do exist too)
+    # or quite complex (complex bread recipes exist as well)
     bread <- grains + yeast + water + salt
     return(bread)
 }
@@ -186,7 +186,7 @@ class: left, top
 
 # Introduction: good names
 
-Functions are the building blocks of your data analysis: give your functions understandable and short enough names. It's better for future-you, it's better for everybody. Naming things is an art, a special skill: for some people is a job itself!
+Functions are the building blocks of your data analysis: give your functions understandable and short enough names. It's better for future-you, it's better for everybody. Naming things is an art, a special skill: for some people, it is a job!
 
 From the B-Cubed software development guide (section [Naming functions](https://docs.b-cubed.eu/dev-guide/#r-function-naming)):
 
@@ -284,7 +284,7 @@ make_doughs <- function(grains, yeast, water, salt) {
 }
 ```
 
-If you have only this function, you are not allowed to prepare only bread, or only focaccia. It's a pity, isn't it? Programmers say that this function needs a _refactoring_, an improvement as the function is not _atomic_*, it does too much. We can rewrite it as the composition of two _atomic_ functions: `make_bread()` and `make_focaccia()`.
+If you only have this function, you are not allowed to prepare only bread, or only focaccia. That's a pity, no? Programmers say that this function needs _refactoring_, an improvement as the function is not _atomic_*, it does too much. We can rewrite it as the composition of two _atomic_ functions: `make_bread()` and `make_focaccia()`.
 
 1. Write `make_bread()` and `make_focaccia()`. They return bread and focaccia respectively.
 2. Use them to rewrite `make_doughs()`.
@@ -297,7 +297,7 @@ class: left, top
 
 # Edna and the moths
 
-Edna\* is not only a lepidopterist: she likes data science and she uses R to do that. She collected data about moths yearly in some locations in Belgium. She has written also some code to analyse the data. But she is not happy with her code: it is not modular, it is not reusable, it is not easy to read and understand. She has asked you to help her to improve her code by (re)writing it using functions. You are happy to help her.
+Edna\* is not only a lepidopterist: she likes data science and she uses R to do that. She collected data about moths yearly in some locations in Belgium. She has also written some code to analyse the data. But she is not happy with her code: it is not modular, it is not reusable, it is not easy to read and understand. She has asked you to help her to improve her code by (re)writing it using functions. You are happy to help her.
 <br>
 <small> \* The fictive Edna character is a tribute to [Edna Mosher](https://en.wikipedia.org/wiki/Edna_Mosher), Canadian entomologist and lepidopterist known for her pioneering work on Lepidoptera pupae morphology (source: [Wikipedia](https://en.wikipedia.org/wiki/Edna_Mosher)). </small>
 
@@ -315,7 +315,7 @@ class: left, top
 
 - Create a new file, e.g. `20250626_workflow.R`: it contains only your code where you will use the functions.
 
-- **Source** `20250626_functions.R`, e.g. run `source("./src/20250626/20250626_functions.R")` or just click the "Source" button in RStudio, everytime you change the functions. This way you can test your functions while writing them.
+- **Source** `20250626_functions.R`, e.g. run `source("./src/20250626/20250626_functions.R")` or just click the "Source" button in RStudio, everytime you change the functions. This way, you can test your functions while writing them.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -326,13 +326,13 @@ class: left, top
 For this challenge, you will use the Edna's code in section `# CHALLENGE 1 ####` of file `20250626_challenges.R`.
 
 1. Write a function called `read_moth()` that reads the moth data from a file and returns a data frame. The function should have an argument: `year` (number), which is the year of the data to read. Tip: `sprintf()` can be useful, e.g. `sprintf("Damiano is born in %d.", 1982)`.
-2. Edna adds `year` column immediately in her workflow. So, add please this small step in `read_moth`.
-3. Write three functions: `get_effort()`, `get_abundance()` and `get_richness()` to calculate respectively the yearly effort, abundance and richness. The function must have an argument: `df` (data frame), which is the data to use. The function should return a data frame with the effort, abundance  or richness.
+2. Edna adds a `year` column immediately in her workflow. So, please add this small step in `read_moth`.
+3. Write three functions: `get_effort()`, `get_abundance()` and `get_richness()` to calculate respectively the yearly effort, abundance and richness. The function must have an argument: `df` (data frame), which is the data to use. The function should return a data frame with the effort, abundance, or richness.
 
 ---
 class: left, top
 
-# Intermezzo 1: what happens in the function stays in the function!
+# Intermezzo 1: what happens in the function, stays in the function!
 
 Unfortunately not in R :-/
 
@@ -352,7 +352,7 @@ make_tricky_bread(0.5, 20, 3.5)
 #> [1] 54
 ```
 
-Even if it works, it is **bad** practice as it can end up in wrong results.*
+Even if it works, it is **bad** practice as you may end up with wrong results.*
 Better an error than a wrong result, right? So, please, be careful!
 
 <br>
