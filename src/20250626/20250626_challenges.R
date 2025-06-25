@@ -88,7 +88,7 @@ plot_abundance_year_cossus_cossus <- abundance_year %>%
   dplyr::filter(species == "Cossus cossus") %>%
   ggplot2::ggplot(
     ggplot2::aes(x = locationID,
-                 y = total_abundance,
+                 y = abundance,
                  fill = categoric_abundance)) +
   geom_col() +
   labs(title = "Abundance of Cossus cossus by Location",
@@ -101,13 +101,13 @@ plot_abundance_year_cossus_cossus_nl <- abundance_year %>%
   dplyr::filter(species == "Cossus cossus") %>%
   ggplot2::ggplot(
     ggplot2::aes(x = locationID,
-                 y = total_abundance,
+                 y = abundance,
                  fill = categoric_abundance)) +
   geom_col() +
   labs(title = "Abundantie van Cossus cossus per Locatie",
        x = "Locatie",
        y = "Abundantie")
-plot_abundance_year_cossus_cossus
+plot_abundance_year_cossus_cossus_nl
 
 
 # CHALLENGE 3 ####
