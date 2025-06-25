@@ -445,6 +445,19 @@ We are almost there! In this challenge you will use Edna's code in section `# CH
 2. Automatise the entire workflow (without the plotting step) by creating a macrofunction called `get_indicators()` with argument `year` (numeric) to read the right csv file. This function must return a list of 3 data frames named `effort`, `abundance` and `richness`. And do not forget to allow Edna to set custom breaks and labels for the categorical effort/abundance/richness.
 
 ---
+class: left, top
+
+# Intermezzo 3: Principles for commenting
+
+When writing functions, you can use comments to explain the code. But do not overdo it! The code should be **self-explanatory**. If you need to write a lot of comments, it is a sign that your code is not clear enough. Some principles for commenting:
+1. **Comment the why, not the what**, e.g. why you use a specific function or why you use a specific approach. Pack as much information as possible in the code itself.
+2. Comment the **tricky parts**, the **assumptions**, the **limitations**
+3. Long, complex comments in the middle of your functions? Maybe worth to move them in the function documentation. Documentation is good, very good!
+4. Use helper functions or explaining variables. Example: `is_non_empty_string()` is better than `!is.na(x) && nzchar(x)`.
+
+Most of this page is based on the blogpost [Why comment your code as little (and as well) as possible](https://blog.r-hub.io/2023/01/26/code-comments-self-explaining-code/). Thanks Pieter for sending it ;-)
+
+---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
@@ -474,8 +487,9 @@ class:left, top
 - The [INBO styleguide for R code](https://inbo.github.io/tutorials/tutorials/styleguide_r_code/).
 - The [B-Cubed software development guide](https://docs.b-cubed.eu/dev-guide/).
 - Some advices from [tidyverse style guide](https://style.tidyverse.org/documentation.html) can also be useful.
+- Blogpost ["Why comment your code as little (and as well) as possible"](https://blog.r-hub.io/2023/01/26/code-comments-self-explaining-code/).
 - Packages [Roxygen2](https://roxygen2.r-lib.org/index.html) and [docstring](https://github.com/dasonk/docstring).
-- The [checklist](https://packages.inbo.be/checklist/index.html) package: a set of checks for R projects and R packages.
+- The [checklist](https://packages.inbo.be/checklist/index.html) package: a set of checks for R projects and R packages, created and maintained by our Thierry!
 - The [usethis](https://usethis.r-lib.org/index.html) package: a workflow package, useful for both for R packages and projects.
 - The [legendry](https://teunbrand.github.io/legendry/) package: push ggplot2 guides and legends to the next level.
 
