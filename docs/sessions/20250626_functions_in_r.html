@@ -368,7 +368,7 @@ In this challenge you will use Edna's code in section `# CHALLENGE 2 ####` of fi
 
 1. Improve the functions `get_effort()`, `get_abundance()` and `get_richness()` by adding two arguments, `breaks` (numeric vector) and `labels` (character vector). Use the values provided by Edna as default values. The improved functions will return a data frame with a column more than the previous functions. This column is respectively called `categoric_effort`, `categoric_abundance` and `categoric_richness`.
 
-2. Write a function called `plot_abundance()` with an argument called `df` with a data frame containing abundance data (see output of `get_abundance()`) and an argument called `species` (character). The function returns a bar plot of the abundance with the provided `species` in the title.
+2. Write a function called `plot_abundance()` with an argument called `df` with a data frame containing abundance data (see output of `get_abundance()`) and an argument called `scientific_name` (character). The function returns a bar plot of the abundance with the provided `scientific_name` in the title.
 
 3. Edna must create the same plots with title and axis labels in Dutch for a workshop with citizen scientists. Can you improve `plot_abundance()` to handle it? You can use English title and labels as default values.
 
@@ -463,7 +463,7 @@ class: left, top
 
 # Bonus challenge
 
-Create a function called plot_indicators(). This function must have at least an argument called `indicators`, which is the list returned by `get_indicators()`. Probably you need other arguments as the function must allow Edna to create plots with title and axis labels in Dutch as well. The output is a list with three elements:
+Create a function called `plot_indicators()`. This function must have at least an argument called `indicators`, which is the list returned by `get_indicators()`. Probably you need other arguments as the function must allow Edna to create plots with title and axis labels in Dutch as well. The output is a list with three elements:
 - `effort`: a ggplot object with the effort plot as returned by `plot_effort()`.
 - `abundance`: a list of ggplot objects, one per species. Use the scientific names to name the list elements. Tip: you can use purrr package to loop over all species. Based on function `plot_abundance()`.
 - `richness`: a ggplot object with the richness plot as returned by `plot_richness`.
