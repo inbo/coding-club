@@ -84,7 +84,7 @@ class: left, top
 
 # Today
 
-Today we play around the visualization of **spatial vector data** only. No raster data!
+Today we play around the visualisation of **spatial vector data** only. No raster data!
 
 ---
 class: left, top
@@ -127,7 +127,7 @@ class: left, top
 
 # Static vs dynamic maps
 
-**Static maps**: the data visualized on the map and the background tiles are fixed: no zooming in/out. Easy for pdfs or other static content.
+**Static maps**: the data visualised on the map and the background tiles are fixed: no zooming in/out. Easy for pdfs or other static content.
 
 **Dynamic maps**: zooming in/out is possible. Perfect for web pages. No PDFs!
 
@@ -140,7 +140,7 @@ class: left, top
 
 However, if you are looking for a quick and easy way to create interactive maps, you can use [mapview](https://r-spatial.github.io/mapview/), which at some extent can be considered a wrapper of the leaflet package. It allows to create interactive maps with just one line of code (= less verbose). It is very useful to quickly explore your data and to create maps probably good enough for presentations or reports. The documentation is also very good and there are a lot of examples available in the "Articles". Last but not least, "it makes use of some advanced rendering functionality that will enable viewing of much larger data than is possible with leaflet"*.
 
-\<small>* Source: [mapview documentation](https://r-spatial.github.io/mapview/index.html)</small>
+<small> \* Source: [mapview documentation](https://r-spatial.github.io/mapview/index.html)</small>
 
 ---
 class: left, top
@@ -160,13 +160,13 @@ And see what happens! Try clicking on a circle: beautiful, isn't?
 ---
 class: left, top
 
-## Geospatial visualization in R
+## Geospatial visualisation in R
 
-Geospatial visualization in R is evolving fast. The packages are numerous and the choice is not always easy. The [R-Spatial CRAN Task View](https://github.com/cran-task-views/Spatial/tree/main)* is a handy source to get an updated overview of R spatial packages. See section related to [visualization](https://github.com/cran-task-views/Spatial/blob/main/Spatial.md#visualizing-spatial-data).
+Geospatial visualisation in R is evolving fast. The packages are numerous and the choice is not always easy. The [R-Spatial CRAN Task View](https://github.com/cran-task-views/Spatial/tree/main)* is a handy source to get an updated overview of R spatial packages. See section related to [visualisation](https://github.com/cran-task-views/Spatial/blob/main/Spatial.md#visualizing-spatial-data).
 
 Another tip: choose packages actively maintained!
 
-<small>* __Note__: the CRAN Task View is a curated list of R packages for a particular task. It is maintained by the community. And thanks Floris Vanderhaeghe for the tip!</small>
+<small>* The CRAN Task View is a curated list of R packages for a particular task. It is maintained by the community. And thanks Floris Vanderhaeghe for the tip!</small>
 
 ---
 class: left, top
@@ -270,10 +270,11 @@ class: left, top
 # Data and code files description
 
 1. [20250826_giant_hogweed_fl_bxl.tsv](https://github.com/inbo/coding-club/blob/master/data/20250826/20250826_giant_hogweed_fl_bxl.tsv): tab-separated text file with the occurrences of giant hogweed (_Heracleum Mantegazzianum_) in Flanders and Brussels*.
-2. [20250826_giant_hogweed_per_municipality.gpkg](https://github.com/inbo/coding-club/blob/master/data/20250826_giant_hogweed_per_municipality.gpkg)*: geopackage with Flemish and Brussels municipalities. Column `n` contains the number of giant hogweed occurrences.
+2. [20250826_giant_hogweed_per_municipality.gpkg](https://github.com/inbo/coding-club/blob/master/data/20250826/20250826_giant_hogweed_per_municipality.gpkg)*: geopackage with Flemish and Brussels municipalities. Column `n` contains the number of giant hogweed occurrences.
 3. [20250826_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20250826/20250826_challenges.R): R script to start from.
 
-\* Occurrences are derived from GBIF.org (22 April 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.2bptj3. Municipalities are derived from https://data.gov.be/nl/datasets/httpswwwodwbbeexploredatasetcommunesgemeente-belgium.
+<small>\* Occurrences are derived from GBIF.org (22 April 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.2bptj3. Municipalities are derived from https://data.gov.be/nl/datasets/httpswwwodwbbeexploredatasetcommunesgemeente-belgium.
+</small>
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -285,13 +286,14 @@ class: left, top
 
 Using [mapview](https://r-spatial.github.io/mapview/):
 
-1. Create a map with the number of giant hogweed occurrences in the municipalities of Flanders and Brussels. The color of the municipalities should represent the number of occurrences. Display the legend. Set the color of the municipality borders to white.
+1. Create a map with the number of giant hogweed occurrences in the municipalities of Flanders and Brussels. The color of the municipalities should represent the number of occurrences. Display the legend. Set the color of the municipality borders to white. Hint: [mapview basics](https://r-spatial.github.io/mapview/articles/mapview_01-basics.html).
 2. Let's fine tune the previous map. Set
 the opacity of the areas to 0.8 and the contour lines to 0.5. Set `"Number of giant hogweed occurrences"` as legend title and layer name. Show only `mun_name_nl`, `mun_name_fr` and `n` in the popups. Hint:
 [mapview advanced controls](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html) and [mapview popups](https://r-spatial.github.io/mapview/articles/mapview_04-popups.html).
 3. Allow Open Street Map tiles only. Hint: see [mapview advanced controls](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html).
 4. Working with multiple layers is possible. For example, you can add the points with the occurrences of giant hogweed on top of the previous map. The code to read the occurrences is provided. Set the color of the points to gray80 and the size to 5. Set also the layer name as `"Giant hogweed occurrences"`. Hint: see section ["Multiple layers"](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html#multiple-layers).
 5. Add the mouse coordinates (lat, lon) and zoom level. Hint: check the [extra leaflet functionalities](https://r-spatial.github.io/mapview/articles/mapview_06-add.html) vignette.
+6. Extra: save the map as html file. No hint this time :-)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -329,7 +331,7 @@ Let'use [ggspatial](https://paleolimbot.github.io/ggspatial/) to create static m
 ---
 class: left, top
 
-# Bonus challenge - inbospatial
+# Bonus challenge: inbospatial
 
 Among other things, inbospatial provides a lot of layers!
 
@@ -342,6 +344,13 @@ Hint: check the documentation ["adding WMS tiles"](https://inbo.github.io/inbosp
 NOTE: while trying adding these layers it could be that you get an error saying you need to install some extra leaflet packages: `leaflet.extras` and `leaflet.extras2`. Install them and try again.
 
 OPEN QUESTION: how to add the correspondent layer/tile names in mapview? Maybe you can get this solved! Let you hear via the hackmd.
+
+---
+class: left, top
+
+# Bonus challenge 2: add your own GPS location
+
+Happy to add a question I got from Robrecht: how to add my own GPS location to a map?
 
 ---
 class: left, top
@@ -364,7 +373,7 @@ tmap_mode("view") # to dynamic maps
 tmap_mode("plot") # to static maps
 ```
 
-Less flexible than mapview but the possibility to switch from static to dynamic visualization is really a nice-to-have.
+Less flexible than mapview but the possibility to switch from static to dynamic visualisation is really a nice-to-have.
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20250826/20250826_tmap.png)
 
