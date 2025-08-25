@@ -29,26 +29,10 @@ Herman Teirlinck<br>
 ---
 class: left, top
 
-## ROOMIE: room reservation
+# Reminders
 
-```
-> if (isFALSE(roomie)) {
-+   warning("Please confirm asap the room reservation on the roomie.")
-+ }
-Warning message:
-Please confirm asap the room reservation on the roomie.
-```
-
-## Start recording
-
-```
-> if (isFALSE(recordIsON)) {
-+   warning("Please start recording asap!")
-+ }
-Warning message:
-Please start recording asap!
-```
-
+1. Did we confirm the room reservation on the _roomie_?
+2. Did we start the recording?
 
 ---
 class: center, middle
@@ -186,7 +170,7 @@ Today we will mainly use:
 
 - [ggplot2](): allows to plot geospatial vector data. No maps!
 - [ggspatial](https://paleolimbot.github.io/ggspatial/index.html): a tidy framework for interacting with spatial data using ggplot2 behind the screen.
-- [mapview](https://r-spatial.github.io/mapview/): the package for creating interactive maps very quickly and conveniently. Fill the gap of quick (not presentation grade) interactive plotting to examine and visually investigate spatial data. It uses [Leaflet](http://leafletjs.com/) or [Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/api/)+ [Deck.gl](https://deck.gl/) javascript libraries in the background via [mapdeck](https://symbolixau.github.io/mapdeck/articles/mapdeck.html). Your first choice before moving to the more complex and verbose [leaflet](https://rstudio.github.io/leaflet/) R package.
+- [mapview](https://r-spatial.github.io/mapview/): we have just spoken about it.
 
 ---
 class: left, top
@@ -309,7 +293,7 @@ class: left, top
 
 3. Add the municipality names in Dutch (`mun_name_nl` column) as labels. Show them in gray50 color, with fontsize 2 and bold style.
 
-4. A pure ggplot question: **Scale** the color using the **c**ontinuous **viridis** palette. Hint: see documentation of the [scale_fill_viridis](https://ggplot2.tidyverse.org/reference/scale_viridis.html) family of functions.
+4. A pure ggplot question: **scale** the color using the **c**ontinuous **viridis** palette. Hint: see documentation of the [scale_fill_viridis](https://ggplot2.tidyverse.org/reference/scale_viridis.html) family of functions.
 
 5. Depending on the size of the plot, you could get overlapping labels. How to avoid them? Hint: see the general hint below, section "Labels". Try also to reproduce the same padding around the labels as done by default with ggplot in 3.
 
