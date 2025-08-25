@@ -129,7 +129,33 @@ class: left, top
 
 **Static maps**: the data visualized on the map and the background tiles are fixed: no zooming in/out. Easy for pdfs or other static content.
 
-**dynamic maps**: zooming in/out is possible. Perfect for web pages.
+**Dynamic maps**: zooming in/out is possible. Perfect for web pages. No PDFs!
+
+---
+class: left, top
+
+## Dynamic maps: leaflet vs mapview
+
+[Leaflet](https://leafletjs.com/) is a very popular JavaScript library for interactive maps by [Vladamir Agafonkin](http://agafonkin.com/en/). The R package [leaflet](https://rstudio.github.io/leaflet/) is a wrapper for that library. It allows to create interactive maps that can be embedded in a web page. The package is very flexible and allows to create maps with a lot of functionalities. The documentation is wonderful and there are a lot of examples available (check the "Articles"!).
+
+However, if you are looking for a quick and easy way to create interactive maps, you can use [mapview](https://r-spatial.github.io/mapview/), which at some extent can be considered a wrapper of the leaflet package. It allows to create interactive maps with just one line of code (= less verbose). It is very useful to quickly explore your data and to create maps probably good enough for presentations or reports. The documentation is also very good and there are a lot of examples available in the "Articles". Last but not least, "it makes use of some advanced rendering functionality that will enable viewing of much larger data than is possible with leaflet"*.
+
+\<small>* Source: [mapview documentation](https://r-spatial.github.io/mapview/index.html)</small>
+
+---
+class: left, top
+
+## Dynamic maps: leaflet vs mapview
+
+We already used mapview during the coding club of April to easily visualise what we were doing.
+
+Today we build up from basic commando `mapview(my_sf_object)`:
+
+```
+mapview(breweries)
+```
+
+And see what happens! Try clicking on a circle: beautiful, isn't?
 
 ---
 class: left, top
@@ -158,7 +184,7 @@ class: left, top
 
 Today we will mainly use:
 
-- ggplot: allows to plot geospatial vector data. No maps!
+- [ggplot2](): allows to plot geospatial vector data. No maps!
 - [ggspatial](https://paleolimbot.github.io/ggspatial/index.html): a tidy framework for interacting with spatial data using ggplot2 behind the screen.
 - [mapview](https://r-spatial.github.io/mapview/): the package for creating interactive maps very quickly and conveniently. Fill the gap of quick (not presentation grade) interactive plotting to examine and visually investigate spatial data. It uses [Leaflet](http://leafletjs.com/) or [Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/api/)+ [Deck.gl](https://deck.gl/) javascript libraries in the background via [mapdeck](https://symbolixau.github.io/mapdeck/articles/mapdeck.html). Your first choice before moving to the more complex and verbose [leaflet](https://rstudio.github.io/leaflet/) R package.
 
@@ -171,14 +197,14 @@ class: left, top
 # Load the packages and install if needed
 required_packages <- c(
   "sf",
-  "ggplot2",
-  "ggrepel", # For avoiding label overlapping
+  "tidyverse", # In place of ggplot2, dplyr, readr
+  "mapview", # For (leaflet) maps
+  "leafpop", # For popups of leaflet maps
+  "leafem", # For providing extensions to leaflet maps
   "ggspatial", # For making static maps with ggplot
+  "ggrepel", # For avoiding label overlapping
   "prettymapr", # For using map tiles with ggspatial
   "raster", # For using map tiles with ggspatial
-  "mapview",
-  "leafem", # For providing extensions to leaflet maps
-  "leafpop", # For including tables, images and graphs in leaflet pop-ups
   "inbospatial" # For using useful R functions for dealing with spatial data
 )
 
@@ -243,16 +269,35 @@ class: left, top
 
 # Data and code files description
 
-1. [20250826_giant_hogweed_per_municipality.gpkg](https://github.com/inbo/coding-club/blob/master/data/20250826_giant_hogweed_per_municipality.gpkg)*: geopackage with Flemish and Brussels municipalities. Column `n` contains the number of giant hogweed (_Heracleum Mantegazzianum_) occurrences.
-2. [20250826_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20250826/20250826_challenges.R): R script to start from.
+1. [20250826_heracleum_fl_bxl.tsv](https://github.com/inbo/coding-club/blob/master/data/20250826/20250826_heracleum_fl_bxl.tsv): tab-separated text file with the occurrences of giant hogweed in Flanders and Brussels*.
+2. [20250826_giant_hogweed_per_municipality.gpkg](https://github.com/inbo/coding-club/blob/master/data/20250826_giant_hogweed_per_municipality.gpkg)*: geopackage with Flemish and Brussels municipalities. Column `n` contains the number of giant hogweed (_Heracleum Mantegazzianum_) occurrences.
+3. [20250826_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20250826/20250826_challenges.R): R script to start from.
 
-\* Derived from GBIF.org (22 April 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.2bptj3.
+\* Occurrences are derived from GBIF.org (22 April 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.2bptj3. Municipalities are derived from https://data.gov.be/nl/datasets/httpswwwodwbbeexploredatasetcommunesgemeente-belgium.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
 class: left, top
 
-# Challenge 1 - plots
+# Challenge 1 - dynamic maps
+
+**IMPORTANT**: The code to read the spatial files is provided!
+
+Using [mapview](https://r-spatial.github.io/mapview/):
+
+1. Create a map with the number of giant hogweed occurrences in the municipalities of Flanders and Brussels. The color of the municipalities should represent the number of occurrences. Display the legend. Set the color of the municipality borders to white.
+2. Let's fine tune the previous map. Set
+the opacity of the areas to 0.8 and the contour lines to 0.5. Set `"Number of giant hogweed occurrences"` as legend title and layer name. Show only `mun_name_nl`, `mun_name_fr` and `n` in the popups. Hint:
+[mapview advanced controls](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html) and [mapview popups](https://r-spatial.github.io/mapview/articles/mapview_04-popups.html).
+3. Allow Open Street Map tiles only. Hint: see [mapview advanced controls](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html).
+4. Working with multiple layers is possible. For example, you can add the points with the occurrences of giant hogweed on top of the previous map. The code to read the occurrences is provided. Set the color of the points to gray80 and the size to 5. Set also the layer name as `"Giant hogweed occurrences"`. Hint: see section ["Multiple layers"](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html#multiple-layers).
+5. Add the mouse coordinates (lat, lon) and zoom level. Hint: check the [extra leaflet functionalities](https://r-spatial.github.io/mapview/articles/mapview_06-add.html) vignette.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2 - plots
 
 **IMPORTANT**: The code to read the spatial files is provided!
 
@@ -269,10 +314,10 @@ class: left, top
 **General hint**: Follow the first part of this nice [tutorial](https://r-charts.com/spatial/maps-ggplot2/) from R CHARTS!
 
 ---
-background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
-# Challenge 2 - static maps
+# Challenge 3 - static maps
 
 Let'use [ggspatial](https://paleolimbot.github.io/ggspatial/) to create static maps. This package is actively maintained and it's getting better with time.
 
@@ -284,58 +329,19 @@ Let'use [ggspatial](https://paleolimbot.github.io/ggspatial/) to create static m
 ---
 class: left, top
 
-## Intermezzo: leaflet vs mapview
-
-[Leaflet](https://leafletjs.com/) is a very popular JavaScript library for interactive maps by [Vladamir Agafonkin](http://agafonkin.com/en/). The R package [leaflet](https://rstudio.github.io/leaflet/) is a wrapper for that library. It allows to create interactive maps that can be embedded in a web page. The package is very flexible and allows to create maps with a lot of functionalities. The documentation is wonderful and there are a lot of examples available (check the "Articles"!).
-
-However, if you are looking for a quick and easy way to create interactive maps, you can use [mapview](https://r-spatial.github.io/mapview/). It allows to create interactive maps with just one line of code (= less verbose). It is very useful to quickly explore your data and to create maps, probably good enough for presentations or reports. The documentation is also very good and there are a lot of examples available in the "Articles".
-
----
-class: left, top
-
-## Intermezzo: leaflet vs mapview
-
-We already used mapview during the coding club of April to visualise what we were doing.
-
-Today, just start with:
-
-```
-mapview(n_heracleum_bxl)
-```
-
-And see what happens!
-
----
-background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
-class: left, top
-
-# Challenge 3 - dynamic maps: vector data
-
-Using [mapview](https://r-spatial.github.io/mapview/):
-
-1. Show number of giant hogweed occurrences in Flanders and Brussels on a map. The color of the areas should represent the number of occurrences. Display the legend. Set the color of the municipality borders to white. What happens when clicking on an area? Beautiful, isn't?
-2. Let's fine tune the previous map. Set
-the opacity of the areas to 0.8 and the contour lines to 0.5. Set `"Number of giant hogweed occurrences"` as legend title and layer name. Show only `mun_name_nl`, `mun_name_fr` and `n` in the popups. Hint:
-[mapview advanced controls](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html) and [mapview popups](https://r-spatial.github.io/mapview/articles/mapview_04-popups.html).
-3. Allow Open Street Map tiles only. Hint: see [mapview advanced controls](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html).
-4. Working with multiple layers is possible. For example, you can add the points with the occurrences of giant hogweed on top of the previous map. The code to read the occurrences is provided. Set the color of the points to gray80 and the size to 5. Set also the layer name as `"Giant hogweed occurrences"`. Hint: see section ["Multiple layers"](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html#multiple-layers).
-5. Add the mouse coordinates (lat, lon) and zoom level. Hint: check the [extra leaflet functionalities](https://r-spatial.github.io/mapview/articles/mapview_06-add.html) vignette.
-
----
-class: left, top
-
 # Bonus challenge - inbospatial
 
-Among other things, inbospatial provides a lot of layers! For example:
-1. Create a map with the occurrences of giant hogweed as circles and a layer related to the public forest and nature areas managed by the [Flemish Nature & Forest Agency](https://www.natuurenbos.be/).
+Among other things, inbospatial provides a lot of layers!
 
-2. Add to 1 the GRB basemap (Grootschalig Referentiebestand) as map tiles to have very good detailed borders of municipalities.
+1. Create a map with the occurrences of giant hogweed as circles and a layer related to the public forest and nature areas managed by the [Flemish Nature & Forest Agency](https://www.natuurenbos.be/). Add also the legend for such areas.
+
+2. Add to the previous map the GRB basemap (Grootschalig Referentiebestand): these map tiles have very good detailed borders of municipalities.
 
 Hint: check the documentation ["adding WMS tiles"](https://inbo.github.io/inbospatial/reference/add_wms.html).
 
 NOTE: while trying adding these layers it could be that you get an error saying you need to install some extra leaflet packages: `leaflet.extras` and `leaflet.extras2`. Install them and try again.
 
-OPEN QUESTION: how to add the correspondent layer names? Maybe you can get this solved and help us?
+OPEN QUESTION: how to add the correspondent layer/tile names in mapview? Maybe you can get this solved! Let you hear via the hackmd.
 
 ---
 class: left, top
@@ -367,7 +373,7 @@ class: left, top
 
 # The packages of the month (advanced) - Pieters's choice
 
-Are you work already with targets and do you struggle to work with geospatial data formats? The package [geotargets](https://docs.ropensci.org/geotargets/) can help you!
+Have you already used the [targets](https://docs.ropensci.org/targets/) R package and have you ever struggled to include geospatial data formats in your worklows? The package [geotargets](https://docs.ropensci.org/geotargets/) can help you!
 
 ![:scale 110%]({{ site.baseurl}}/assets/images/20250826/20250826_geotargets.png)
 
