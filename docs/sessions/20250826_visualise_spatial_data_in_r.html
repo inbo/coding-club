@@ -269,8 +269,8 @@ class: left, top
 
 # Data and code files description
 
-1. [20250826_heracleum_fl_bxl.tsv](https://github.com/inbo/coding-club/blob/master/data/20250826/20250826_heracleum_fl_bxl.tsv): tab-separated text file with the occurrences of giant hogweed in Flanders and Brussels*.
-2. [20250826_giant_hogweed_per_municipality.gpkg](https://github.com/inbo/coding-club/blob/master/data/20250826_giant_hogweed_per_municipality.gpkg)*: geopackage with Flemish and Brussels municipalities. Column `n` contains the number of giant hogweed (_Heracleum Mantegazzianum_) occurrences.
+1. [20250826_giant_hogweed_fl_bxl.tsv](https://github.com/inbo/coding-club/blob/master/data/20250826/20250826_giant_hogweed_fl_bxl.tsv): tab-separated text file with the occurrences of giant hogweed (_Heracleum Mantegazzianum_) in Flanders and Brussels*.
+2. [20250826_giant_hogweed_per_municipality.gpkg](https://github.com/inbo/coding-club/blob/master/data/20250826_giant_hogweed_per_municipality.gpkg)*: geopackage with Flemish and Brussels municipalities. Column `n` contains the number of giant hogweed occurrences.
 3. [20250826_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20250826/20250826_challenges.R): R script to start from.
 
 \* Occurrences are derived from GBIF.org (22 April 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.2bptj3. Municipalities are derived from https://data.gov.be/nl/datasets/httpswwwodwbbeexploredatasetcommunesgemeente-belgium.
@@ -301,7 +301,7 @@ class: left, top
 
 **IMPORTANT**: The code to read the spatial files is provided!
 
-1. How to plot the municipalities of Brussels (`n_heracleum_bxl`) with ggplot? Hint: see documentation of the [geom_sf](https://ggplot2.tidyverse.org/reference/ggsf.html) function or the general hint below.
+1. How to plot the municipalities of Brussels (`n_giant_hogweed_bxl`) with ggplot? Hint: see documentation of the [geom_sf](https://ggplot2.tidyverse.org/reference/ggsf.html) function or the general hint below.
 
 2. Now, try to **fill** the municipalities based on the number of giant hogweed occurrences (column `n`). This kind of map is known as **choropleth map**. Set also the borders of the municipalities to red.
 
