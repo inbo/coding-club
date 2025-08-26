@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2025-09-26 | Visualise spatial data in R | [slides]({{ site.baseurl }}{% link sessions/20250826_visualise_spatial_data_in_r.html  %}) | [hackmd](https://hackmd.io/DsuDuIKjS4uPkg8CWQdUAA?view) | 01.72 - Kaat Tilley | |
+| 2025-08-26 | Visualise spatial data in R | [slides]({{ site.baseurl }}{% link sessions/20250826_visualise_spatial_data_in_r.html  %}) | [hackmd](https://hackmd.io/DsuDuIKjS4uPkg8CWQdUAA?view) | 01.72 - Kaat Tilley | |
 | 2025-06-26 | functions in R | [slides]({{ site.baseurl }}{% link sessions/20250626_functions_in_r.html  %}) | [hackmd](https://hackmd.io/4OyTIXFVSTiauDyZg8AsSA?view) | 01.71 - Frans Breziers | [vimeo](https://vimeo.com/1097975857) |
 | 2025-05-27 | advanced data wrangling with tidyverse | [slides]({{ site.baseurl }}{% link sessions/20250527_advanced_data_wrangling_tidyverse.html  %}) | [hackmd](https://hackmd.io/uigLOMvhRii0MwjTMRD4OA?view) | 01.72 - Kaat Tilley | [vimeo](https://vimeo.com/1090982289) |
 | 2025-04-24 | spatial data in R with sf | [slides]({{ site.baseurl }}{% link sessions/20250424_spatial_data_sf.html  %}) | [hackmd](https://hackmd.io/s-Obj5yOTxult4YYO3XCxw?view) | 01.16 - Rik Wouters | [vimeo](https://vimeo.com/1080856019) |
