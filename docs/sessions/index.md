@@ -3,6 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
+| 2025-09-25 | purrr-fectly functional | [slides]({{ site.baseurl }}{% link sessions/20250925_purrr.html  %}) | [hackmd](https://hackmd.io/w6HbM28FSnSxPOL2LtRNwg?view) | 01.17 - Clara Peeters |  |
 | 2025-08-26 | Visualise spatial data in R | [slides]({{ site.baseurl }}{% link sessions/20250826_visualise_spatial_data_in_r.html  %}) | [hackmd](https://hackmd.io/DsuDuIKjS4uPkg8CWQdUAA?view) | 01.72 - Kaat Tilley | [vimeo](https://vimeo.com/1115398489?share=copy#t=0) |
 | 2025-06-26 | functions in R | [slides]({{ site.baseurl }}{% link sessions/20250626_functions_in_r.html  %}) | [hackmd](https://hackmd.io/4OyTIXFVSTiauDyZg8AsSA?view) | 01.71 - Frans Breziers | [vimeo](https://vimeo.com/1097975857) |
 | 2025-05-27 | advanced data wrangling with tidyverse | [slides]({{ site.baseurl }}{% link sessions/20250527_advanced_data_wrangling_tidyverse.html  %}) | [hackmd](https://hackmd.io/uigLOMvhRii0MwjTMRD4OA?view) | 01.72 - Kaat Tilley | [vimeo](https://vimeo.com/1090982289) |
