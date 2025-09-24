@@ -149,17 +149,16 @@ class: left, top
 
 # Packages: install and load
 
-Only tidyverse is used today. purrr is part of it.
-
 ```r
-# if needed
-install.packages("tidyverse")
+# if needed: install.packages("tidyverse")
+install.packages("rgbif")
 ```
 
 Load the packages:
 
 ```r
 library(tidyverse)
+library(rgbif)
 ```
 
 ---
@@ -191,9 +190,9 @@ class: center, top
 # Share your code during the coding session
 
 <!-- Create a new hackmd file and replace this link (twice!) -->
-Go to https://hackmd.io/p2UZHhNaSgSG649TO3LgJg?edit and start by adding your name in section "Participants".
+Go to https://hackmd.io/w6HbM28FSnSxPOL2LtRNwg?edit and start by adding your name in section "Participants".
 
-<iframe src="https://hackmd.io/p2UZHhNaSgSG649TO3LgJg?edit" height="450px" width="800px"></iframe>
+<iframe src="https://hackmd.io/w6HbM28FSnSxPOL2LtRNwg?edit" height="450px" width="800px"></iframe>
 
 
 ---
@@ -219,10 +218,8 @@ class: left, top
 
 ## Data
 
-- Datasets [swiss](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/swiss.html) and [iris](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/iris.html): two base R datasets.
-- Datasets with sensor data: `20250925_sensor_A1.txt`, `20250925_sensor_G7.txt` and `20250925_sensor_H4.txt`.
-- `20250925_lepidoptera_2024.tsv`: observations of Lepidoptera taken in 2024. Derived from: GBIF.org (22 May 2024) GBIF Occurrence Download https://doi.org/10.15468/dl.mnaffe.
-- List containing the row numers of the GBIF observations in `20250925_lepidoptera_2024.tsv` falling in each of the Belgian Natura2000 protected areas. Provided as an R object: `20250925_lepidoptera_in_prot_areas.RData`.
+
+- [20250925_gbif_occs.csv](https://github.com/inbo/coding-club/blob/main/data/20250925/20250925_gbif_occs.csv) (for challenge 3): GBIF occurrences from 1950 to 2025 for 3 species (_Procyon lotor_, _Nasua narica_, _Muntiacus reevesis_) in some European countries (Netherlands, Austria, Estonia, Denmark).
 
 
 ## Scripts
@@ -245,7 +242,7 @@ class: left, top
 
 # Basics: `map()`
 
-The _mantra_ of this 2 hours coding session is:
+The _mantra_ of this coding club is:
 
 **FOR EACH** \_\_ **OF** \_\_ **APPLY FUNCTION** \_\_
 
@@ -262,8 +259,8 @@ class: left, top
 # height of 5 giraffes
 height_giraffe <- runif(n = 5, min = 4.3, max = 5.7)
 ```
-- FOR EACH element OF `height_giraffe` APPLY FUNCTION floor()
-- FOR EACH element OF `height_giraffe` APPLY FUNCTION as.character()
+- FOR EACH element OF `height_giraffe` APPLY FUNCTION `floor`
+- FOR EACH element OF `height_giraffe` APPLY FUNCTION `as.character`
 
 Do we need `map()`?
 
@@ -290,19 +287,6 @@ df_giraffe <- tibble(height = height_giraffe,
 - FOR EACH column OF `df_giraffe` APPLY FUNCTION median
 
 ---
-background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
-class: left, top
-
-# Challenge 1
-
-Write `map()` statements to:
-
-1. Compute the mean of every column in the `swiss` data.frame.
-2. Determine the type of each column in the `iris` data.frame.
-3. After creating the variable `list_with_dfs` as a named list with `swiss` and `iris` (code provided), compute the number of rows of each data.frame.
-4. `map()` ALWAYS returns a list, **ALWAYS**. Apply the right `map_*()` variants to the previous exercises to return a numeric vector (exercises 1 and 3), a character vector (exercise 2) or a data.frame (exercises 1, 2 and 3). Hint: use cheat sheet or the sections [map-atomic](https://adv-r.hadley.nz/functionals.html#map-atomic) and [the-map-functions](https://r4ds.had.co.nz/iteration.html#the-map-functions).
-
----
 class: left, top
 
 # Intermezzo: the `map` strategy
@@ -317,10 +301,10 @@ height_giraffe <- runif(n = 6, min = 4.3, max = 5.7)
 # Weight of 5 giraffes
 weight_giraffe <- rnorm(n = 6, mean = 1192, sd = 300)
 # GPS tracker ID
-gps_tracker_giraffe <- c("A31", "E4T", "RT4", "YU7", "3G1", "ON9")
+gps_tracker_giraffe <- c("B0G", "TRT", "4FB", "U7H", "31L", "O9Q")
 # Giraffes nicknames
 nicknames_giraffe <- sample(
-  c("Amber", "Damiano", "Dirk", "Emma", "Raïsa", "Rhea")
+  c("Oberon", "Raïsa", "Dirk", "Emma", "Damiano", "Rhea")
 )
 # List with weight, height and GPS tracker IDs. Use nicknames as list element names.
 giraffes <- tibble::tibble("weight" = weight_giraffe,
@@ -336,7 +320,7 @@ giraffes
 ---
 class: left, top
 
-# Intermezzo: the `map` strategy
+# The `map` strategy
 
 <p>Example: <bold>FOR EACH</bold> giraffe OF giraffes <bold>DO APPLY </bold> bmi function (weight / height^2)</p>
 
@@ -347,10 +331,10 @@ bmi <- function(weight, height) weight / height^2
 But:
 
 ```r
-map(giraffe, bmi)
+purrr::map(giraffes, bmi)
 Error in `map()`:
 ℹ In index: 1.
-ℹ With name: Amber.
+ℹ With name: Rhea.
 Caused by error in `.f()`:
 ! argument "height" is missing, with no default
 ```
@@ -358,7 +342,7 @@ Caused by error in `.f()`:
 ---
 class: left, top
 
-## Intermezzo: the `map` strategy
+## The `map` strategy
 
 1. Do it for one element
 2. Turn it into a <bold>recipe</bold>
@@ -368,27 +352,27 @@ class: left, top
 ### 1. Do it for one element
 
 ```r
-amber <- giraffes$Amber
-bmi(amber$weight, amber$height)
+oberon <- giraffes$Oberon
+bmi(oberon$weight, oberon$height)
 ```
 
 ---
 class: left, top
 
-## Intermezzo: the `map` strategy
+## The `map` strategy
 
 ### 2. Turn it into a recipe
 
-Abstract it so that Amber can be Damiano, Dirk or any other giraffe. How to do so? Functions, again!
+Abstract it so that Oberon can be Damiano, Dirk or any other giraffe. How to do so? Functions, again!
 
 Define a (anonymous) function around it:
 ```r
-function(x) bmi(x$weight, x$height)
+function(giraffe) bmi(giraffe$weight, giraffe$height)
 ```
 
 Alternative way (see cheat sheet) in "modern R" (R 4.0 or higher):
 ```r
-\(x) bmi(x$weight, x$height)
+\(x) bmi(x$weight, x$height) # it works also with \(giraffe)
 ```
 
 Old school, with triddle `~` and `.x` pronoun. It works perfectly, but maybe less readable:
@@ -396,15 +380,15 @@ Old school, with triddle `~` and `.x` pronoun. It works perfectly, but maybe les
 ~ bmi(.x$weight, .x$height)
 ```
 
-Or, you can give a name to this function! It's not anonymous anymore.
+Or, even better: give a name to this function! It is not anonymous anymore.
 ```r
-bmi_giraffe <- function(x) bmi(x$weight, x$height)
+bmi_giraffe <- function(giraffe) bmi(giraffe$weight, giraffe$height)
 ```
 
 ---
 class: left, top
 
-## Intermezzo: the `map` strategy
+## The `map` strategy
 
 ### 3. Use `map()` to apply it to all elements
 
@@ -420,14 +404,24 @@ map(giraffes, bmi_giraffe)
 
 Or via shortcut, new or old way:
 ```r
-map(giraffes, \(x) bmi(x$weight, x$height))
+map(giraffes, \(giraffe) bmi(giraffe$weight, giraffe$height)) # or \(x)
 map(giraffes, ~ bmi(.x$weight, .x$height))
 ```
 
-Finally, you do not need stick with x. Sometimes it is better to give a more meaningful name:
-```
-map(giraffes, function(giraffe) bmi(giraffe$weight, giraffe$height))
-```
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+The code provided creates a data frame, `species`, with 3 species and a nested list, `data_nl`, with data from GBIF related to those `species` in The Netherlands. The occurrences are in the slot `data`. See code.
+
+1. Use `species` column as names for `data_nl` elements instead of `taxonKey`. Hint: you can use another purrr function for it, but there could be other ways to solve it.
+2. How many records for each species of `data_nl`? Return it as a list.
+3. How to return it as a (named) vector of integers?
+4. Bundle the `data` slots into a data.frame. Do not hard code it, use purrr.
+5. It's time to apply same rgbif call for more countries. The vector with countries is provided. Create a named list, `data_countries`, with GBIF data for the 3 species in each country. In other words, `data_countries[[1]]` should be equal to the provided `data_nl` at the begin of this challenge.
+6. Why the returned list has no names? How to set countries as names? And how to have species instead of taxonKey as names of the nested lists (similar to 1). You should end up with something like this, for example: `data_countries$NL$\`Procyon lotor\``.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -435,170 +429,86 @@ class: left, top
 
 # Challenge 2
 
-1. Read all sensor data files as a list of data.frames by applying the provided function `read_sensor_data()` to all the elements of the provided list `sensors` with sensor IDs.
-
-2. Now, you want to generalize your script. You rewrite `read_sensor_data()` as provided in the code. How to apply map in this situation? Notice that your path and extensions are constants. Hint: see https://adv-r.hadley.nz/functionals.html#passing-arguments.
-
-3. Calculate 10 random numbers from a normal distribution (`rnorm(n = 10)`) for each pair of the 4 provided means and standard deviations and return it as a list of 4. Hint: [mapping-over-multiple-arguments](https://r4ds.had.co.nz/iteration.html#mapping-over-multiple-arguments)
-
-4. Get maximum and minimum datetime for all sensor data data.frames. Return them as a data.frame. This time you have to write your own function. Hint: write a function containing:
-```r
-summarize(df, min_datetime = min(datetime), max_datetime = max(datetime))
-```
+1. How many records for each species in each country? Return it as a list of countries where each element is a named vector of integers.
+2. How many records in total?
+3. The provided code creates a bar plot with the number of occurrences per year for Procyon lotor in NL. Generalize it to crete a similar plot for each species/country combination.
+4. How to save all the data as csv files? In total you should have at most(!) 3 species * 4 countries = 12 files. Use the following file name format:
+`"20250925_gbif_<taxonKey>_<species>_<country>.csv"` where species has the space replaced by underscore (_). For example: `"20250925_gbif_5218786_Procyon_lotor_NL.csv"`.
+5. Bundle all the data slots into a data.frame. Call it `data_countries_df`. Again, do not hard code the species and countries neither, but use purrr.
 
 ---
-background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
-# Challenge 3
+# Intermezzo: purrr is more than the `map()` family
 
-Nothing better than using the result of a previous coding club as a starting point for a challenge!
+Yes, purrr is much more than `map()`. It is in general a very nice set of tools to work with lists (and vectors).
 
-In challenge 3.1 of the May session, we created a list with the (row numbers of the) lepidoptera observations taken in protected areas.
+Example 1: how to remove NULL slots from a list?
 
 ```
-> lepidoptera_in_prot_areas
-Sparse geometry binary predicate list of length 310, where the predicate was `contains'
-first 10 elements:
- 1: (empty)
- 2: (empty)
- 3: 233, 241, 259, 302, 306, 320, 461, 488, 498, 501, ...
- 4: (empty)
- 5: 547, 549
- 6: (empty)
- 7: (empty)
- 8: 217, 235, 283, 412, 826
- 9: (empty)
+a <- list(z = 1, b = NULL, c = 3)
+purrr::compact(a)
+$z
+[1] 1
+
+$c
+[1] 3
 ```
 
----
-background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
-class: left, top
-
-# Challenge 3A
-
-1. The typical next step is: how many observations for ech protected areas? purr can help us, of course.
-2. Given `obs`, the data.frame with the GBIF observations (see the provided code), how to get a data.frame with only the observations taken in protected areas?
-3. purrr is more than the `map` family. To join the data.frames `species_1`, `species_2` and `species_3` (code provided) you could apply `full_join()` twice:
-```r
-full_join(species_1, species_2, by = "species") %>%
-  full_join(species_3, by = "species")
-```
-But this is definitely not DRY and prone to errors! Try to do it DRY by using lists and purrr. Hint: try function `reduce()`, second page of the cheat sheet.
-
----
-background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
-class: left, top
-
-# Challenge 3B - a little of dplyr
-
-Do you know that dplyr offers some tools which are basically functional programming?
+Example 2: how to bind a list in a vector?
 
 ```r
-# Height of 5 giraffes
-height_giraffe <- runif(n = 6, min = 4.3, max = 5.7)
-# Weight of 5 giraffes
-weight_giraffe <- rnorm(n = 6, mean = 1192, sd = 300)
-# GPS tracker ID
-gps_tracker_giraffe <- c("A31", "E4T", "RT4", "YU7", "3G1", "ON9")
-# Giraffes nicknames
-nicknames_giraffe <- sample(
-  c("Amber", "Damiano", "Dirk", "Emma", "Raïsa", "Rhea")
-)
-# Data.frame with weight, height and GPS tracker IDs.
-df <- tibble::tibble(
-  "weight" = weight_giraffe,
-  "height" = height_giraffe,
-  "gpsID" = gps_tracker_giraffe
-)
+purrr::list_c(a)
+[1] 1 3
 ```
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
-# Challenge 3B - a little of dplyr (continued)
+# Challenge 3 - purrr + tidyr = power
 
-Write the code to solve the following pseudo code:
+Are you still hesitating about the potential of `purrr`? You still don't know what it can do in combination with [tidyr](https://tidyr.tidyverse.org/)! They can really make your modelling research a lot more understandable for (future) you and all your colleagues.
 
-1. FOR EACH column OF df and class numeric, APPLY FUNCTION `floor()`. Modify the columns.
+If everything went well, `data_countries_df` (see 2.5) should be a data.frame similar to the one saved as "20250925_gbif_occs.csv". In any case, run the provided code to load the dataframe, group it by `species` and **nest** it. What nesting does?
 
-2. FOR EACH column OF df ending with `ight` (height, weight), APPLY FUNCTION `floor()`. Modify the columns. Same result of exercise 1 expected.
-
-3. Instead of modifying the columns, how to add new ones?
-
-Hint: see vignette about [colum-wise operations](https://dplyr.tidyverse.org/articles/colwise.html).
-
----
-class: left, top
-
-# Bonus challenge: purrr + tidyr = power
-
-Are you still hesitating about the potential of `purrr`? You still don't know what it can do in combination with tidyr! They can really do a lot for making your modelling research a lot more understandable for (future) you and all your colleagues. Check the second page of the tidyr cheat sheet.
-
-<p><center>![:scale 40%]({{ site.baseurl}}/assets/images/20250925/20250925_second_page_cheatsheet_tidyr.png)</center></p>
-
-1. Group your data
-2. Nest it to create nested data.frames (column containing data.frames, aka **list-columns**)
-3. Work with it (apply modelling as in cheat sheet or whatever else you have in mind)
-
----
-background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
-class: left, top
-
-# Bonus challenge: purrr + tidyr = power
-
-Let's play with [penguins](https://github.com/allisonhorst/palmerpenguins#palmerpenguins) data! Group `penguins` data.frame by species and nest it as shown below:
-
-```r
-penguins %>%
-  group_by(species) %>%
-  nest()
-# A tibble: 3 x 2
+```
+> data_nested
+# A tibble: 3 × 2
 # Groups:   species [3]
-  species   data
-  <fct>     <list>
-1 Adelie    <tibble [152 x 6]>
-2 Gentoo    <tibble [124 x 6]>
-3 Chinstrap <tibble [68 x 6]>
+  species           data
+  <chr>             <list>
+1 Procyon lotor     <tibble [627 × 142]>
+2 Nasua nasua       <tibble [11 × 142]>
+3 Muntiacus reevesi <tibble [67 × 142]>
 ```
 
-1. Add a column called  `plot` containing ggplot objects based on the geometry and aesthetics below:
-```r
-geom_point(aes(x = bill_length_mm ,
-               y = bill_depth_mm,
-               colour = sex))
-```
-2. Save the created plots using species name and extension `png`. Hint: https://r4ds.had.co.nz/iteration.html#walk
-
-
-**Note**: this challenge requires basic plotting knowledge, e.g. [ggplot2](https://ggplot2.tidyverse.org/reference/).
+1. Add a new column called `bar_plot` where each element is a ggplot2
+object containing a bar plot with the number of records per year for that species. Use the bars color (`fill`) to distinguish the country. You can use the provided code as starting point.
+2. Save the plots as png files. The file names should be `"20250925_gbif_<species>_barplot.png"`  where `species` has the space replaced by underscore (_). For example: `20250925_gbif_Procion_lotor_barplot.png`. Hint: combine purrr with [ggplot2::ggsave()](https://ggplot2.tidyverse.org/reference/ggsave.html).
 
 ---
 class: left, top
 
 # The package of the month. Damiano's choice
 
-Are you bored to see and use `iris` everywhere to test code? I am. Why not using something else? Why not using penguins?!? The package [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) provide a great dataset for data exploration & visualization. A valid alternative to `iris`!
+[rvest](https://rvest.tidyverse.org/) helps you scrape (or harvest) data from web pages. It works nice toegher with [polite](https://dmi3kno.github.io/polite/) for scraping multiple pages.
 
-<p><center>![:scale 85%]({{ site.baseurl}}/assets/images/20250925/20250925_palmerpenguins_homepage.png)
-
+<p><center>![:scale 85%]({{ site.baseurl}}/assets/images/20250925/20250925_rvest.png)
 
 ---
 class: left, top
 
 # Resources
 
-- [Challenges solutions](https://github.com/inbo/coding-club/blob/main/src/20250925/20250925_challenges_solutions.R) are available. You can opt to download them by using `inborutils::setup_codingclub_session("20250925")`.
-- Edited video recording is available on [vimeo](https://vimeo.com/984798654).
+- Challenges solutions and webinar will be available soon.
 - [purrr](https://r-spatial.github.io/sf/) package homepage.
 - [purrr cheatsheet](https://rstudio.github.io/cheatsheets/html/purrr.html) webpage
-- Download the [purrr cheatsheet]() from our repository
+- Download the [purrr cheatsheet](https://github.com/inbo/coding-club/blob/main/cheat_sheets/20250925_cheat_sheet_purrr.pdf) from our repository.
 - The [Advanced R](https://adv-r.hadley.nz/index.html) book of Hadley Wickham: the [Introduction](https://adv-r.hadley.nz/fp.html) to the chapter and the entire [chapter 9](https://adv-r.hadley.nz/functionals.html#functionals) about functional programming. This resource was extensively used to introduce the concepts and inspired some challenges.
 - Well-written and complete tutorial: https://r4ds.had.co.nz/iteration.html#for-loops-vs.functionals (from 21.4 up to 21.9)
 - Beautiful webinar (pdf slides are downloadable) from Charlotte Wickham: [part 1](https://learn.microsoft.com/en-us/shows/user-international-r-user-conferences-user-international-r-user-2017-conference/solving-iteration-problems-purrr/) and [part 2](https://learn.microsoft.com/en-us/shows/user-international-r-user-conferences-user-international-r-user-2017-conference/solving-iteration-problems-purrr-ii/). Introduction to `map()` and the map strategy material come from her.
-- The package [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) which offers a valid alternative to `iris` to test your data wrangling and data visualization code.
-- [furrr](https://furrr.futureverse.org/) package homepage for _parallel_ functional programming.
+- The package [rvest](https://rvest.tidyverse.org/) to harvest web pages (web scraping).
 
 ---
 class: center, middle
