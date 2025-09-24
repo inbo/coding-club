@@ -1,9 +1,9 @@
 library(tidyverse)
 
 
-## CHALLENGE 1
+# CHALLENGE 1 ####
 
-# 1.1
+## 1.1 ####
 swiss
 # Check class
 class(swiss)
@@ -35,7 +35,7 @@ str(list_with_dfs)
 purrr::map(list_with_dfs, nrow)
 
 
-# 1.4
+## 1.4 ####
 
 map_dbl(swiss, mean, na.rm = TRUE)
 map_chr(iris, class)
@@ -46,9 +46,9 @@ map_df(iris, class)
 map_df(list_with_dfs, nrow)
 
 
-## Challenge 2
+# CHALLENGE 2 ####
 
-# 2.1
+## 2.1 ####
 
 # Define the list with the sensor IDs
 sensors <- list("A1", "G7", "H4")
@@ -91,7 +91,7 @@ sensor_dfs <- map(sensors, ~ read_sensor_data(.x))
 sensor_dfs
 
 
-# 2.2
+## 2.2 ####
 
 #' Function to read a comma separated sensor data file.
 #'
@@ -154,7 +154,7 @@ sensor_dfs <- sensors %>%
 sensor_dfs
 
 
-# 2.3
+## 2.3 ####
 
 # Define means and standard deviations
 means <- c(-10, 0, 10, 20)
@@ -166,7 +166,7 @@ map2(means, st_dev, ~ rnorm(n = 10))
 map2(means, st_dev, ~rnorm(n = 10, mean = .x, sd = .y))
 
 
-# 2.4
+## 2.4 ####
 
 # Define function
 get_max_min_datetime <- function(sensor_df) {
@@ -181,7 +181,7 @@ get_max_min_datetime <- function(sensor_df) {
 map_df(sensor_dfs, get_max_min_datetime)
 
 
-## CHALLENGE 3A
+# CHALLENGE 3A ####
 
 # Load lepidoptera_in_prot_areas
 lepidoptera_in_prot_areas <- readRDS("./data/20240627/20240627_lepidoptera_in_prot_areas.RData")
@@ -191,7 +191,7 @@ lepidoptera_in_prot_areas
 class(lepidoptera_in_prot_areas)
 
 
-# 3.1
+## 3.1 ####
 
 # purrr::map_dbl() can help us to get the number of obs in each protected area
 purrr::map_dbl(
@@ -209,7 +209,7 @@ purrr::map_dbl(lepidoptera_in_prot_areas, ~ length(.x))
 purrr::map_dbl(lepidoptera_in_prot_areas, \(x) length(x))
 
 
-# 3.2
+## 3.2 ####
 
 obs <- readr::read_tsv("./data/20240627/20240627_lepidoptera_2024.tsv", na = "")
 str(obs)
@@ -217,7 +217,7 @@ str(obs)
 obs_in_prot_areas <- map_df(lepidoptera_in_prot_areas, function(x) dplyr::slice(obs, x))
 obs_in_prot_areas
 
-# 3.3
+## 3.3 ####
 
 # Species data.frames
 species_1 <- tibble(
