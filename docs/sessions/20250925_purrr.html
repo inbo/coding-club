@@ -417,10 +417,15 @@ class: left, top
 The code provided creates a data frame, `species`, with 3 species and a nested list, `data_nl`, with data from GBIF related to those `species` in The Netherlands. The occurrences are in the slot `data`. See code.
 
 1. Use `species` column as names for `data_nl` elements instead of `taxonKey`. Hint: you can use another purrr function for it, but there could be other ways to solve it.
+
 2. How many records for each species of `data_nl`? Return it as a list.
+
 3. How to return it as a (named) vector of integers?
+
 4. Bundle the `data` slots into a data.frame. Do not hard code it, use purrr.
+
 5. It's time to apply same rgbif call for more countries. The vector with countries is provided. Create a named list, `data_countries`, with GBIF data for the 3 species in each country. In other words, `data_countries[[1]]` should be equal to the provided `data_nl` at the begin of this challenge.
+
 6. Why the returned list has no names? How to set countries as names? And how to have species instead of taxonKey as names of the nested lists (similar to 1). You should end up with something like this, for example: data_countries$NL$Procyon lotor.
 
 ---
