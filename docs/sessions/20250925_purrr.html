@@ -289,7 +289,7 @@ df_giraffe <- tibble(height = height_giraffe,
 ---
 class: left, top
 
-# Intermezzo: the `map` strategy
+# The `map` strategy
 
 So far so good. But data science is rarely so easy.
 
@@ -430,16 +430,20 @@ class: left, top
 # Challenge 2
 
 1. How many records for each species in each country? Return it as a list of countries where each element is a named vector of integers.
+
 2. How many records in total?
+
 3. The provided code creates a bar plot with the number of occurrences per year for Procyon lotor in NL. Generalize it to crete a similar plot for each species/country combination.
+
 4. How to save all the data as csv files? In total you should have at most(!) 3 species * 4 countries = 12 files. Use the following file name format:
 `"20250925_gbif_<taxonKey>_<species>_<country>.csv"` where species has the space replaced by underscore (_). For example: `"20250925_gbif_5218786_Procyon_lotor_NL.csv"`.
+
 5. Bundle all the data slots into a data.frame. Call it `data_countries_df`. Again, do not hard code the species and countries neither, but use purrr.
 
 ---
 class: left, top
 
-# Intermezzo: purrr is more than the `map()` family
+# Intermezzo: purrr is more than `map()`
 
 Yes, purrr is much more than `map()`. It is in general a very nice set of tools to work with lists (and vectors).
 
@@ -483,8 +487,13 @@ If everything went well, `data_countries_df` (see 2.5) should be a data.frame si
 3 Muntiacus reevesi <tibble [67 × 142]>
 ```
 
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
 1. Add a new column called `bar_plot` where each element is a ggplot2
 object containing a bar plot with the number of records per year for that species. Use the bars color (`fill`) to distinguish the country. You can use the provided code as starting point.
+
 2. Save the plots as png files. The file names should be `"20250925_gbif_<species>_barplot.png"`  where `species` has the space replaced by underscore (_). For example: `20250925_gbif_Procion_lotor_barplot.png`. Hint: combine purrr with [ggplot2::ggsave()](https://ggplot2.tidyverse.org/reference/ggsave.html).
 
 ---
@@ -494,7 +503,7 @@ class: left, top
 
 [rvest](https://rvest.tidyverse.org/) helps you scrape (or harvest) data from web pages. It works nice toegher with [polite](https://dmi3kno.github.io/polite/) for scraping multiple pages.
 
-<p><center>![:scale 85%]({{ site.baseurl}}/assets/images/20250925/20250925_rvest.png)
+<p><center>![:scale 90%]({{ site.baseurl}}/assets/images/20250925/20250925_rvest.png)
 
 ---
 class: left, top
@@ -508,6 +517,7 @@ class: left, top
 - The [Advanced R](https://adv-r.hadley.nz/index.html) book of Hadley Wickham: the [Introduction](https://adv-r.hadley.nz/fp.html) to the chapter and the entire [chapter 9](https://adv-r.hadley.nz/functionals.html#functionals) about functional programming. This resource was extensively used to introduce the concepts and inspired some challenges.
 - Well-written and complete tutorial: https://r4ds.had.co.nz/iteration.html#for-loops-vs.functionals (from 21.4 up to 21.9)
 - Beautiful webinar (pdf slides are downloadable) from Charlotte Wickham: [part 1](https://learn.microsoft.com/en-us/shows/user-international-r-user-conferences-user-international-r-user-2017-conference/solving-iteration-problems-purrr/) and [part 2](https://learn.microsoft.com/en-us/shows/user-international-r-user-conferences-user-international-r-user-2017-conference/solving-iteration-problems-purrr-ii/). Introduction to `map()` and the map strategy material come from her.
+- [tidyr](https://tidyr.tidyverse.org/) homepage.
 - The package [rvest](https://rvest.tidyverse.org/) to harvest web pages (web scraping).
 
 ---
