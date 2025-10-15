@@ -1,0 +1,312 @@
+---
+layout: presentation
+title: rmarkdown your report
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 28 OCTOBER 2025
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+
+01.17 - Clara Peeters
+
+---
+class: left, top
+
+# Reminders
+
+1. Did we confirm the room reservation on the _roomie_?
+2. Did we start the recording?
+
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20251028/20251028_badge.png)
+
+---
+class: left, top
+
+## Markdown, R Markdown, bookdown, INBOmd: help!
+
+- Markdown: a markup language \* for creating formatted text using a plain-text editor (= you do NOT t get what you see).
+E.g. make text italic by surrounding it with underscores or asterisks, e.g. `__text__`
+- R Markdown: a file type with extension `Rmd` to _knit_ text (in Markdown) and code (in R) together. Goal: generate high quality shareable reports.
+- [`rmarkdown`](https://rmarkdown.rstudio.com/lesson-1.html): the R package to write R Markdown documents**.
+- [bookdown](https://bookdown.org/yihui/bookdown/): R package to make authoring _books_ or technical documents out of a series of R Markdown documents
+- [INBOmd](https://github.com/inbo/INBOmd#readme): R package containing templates to generate reports, slides or posters with the corporate identity of INBO or the Flemish government.
+
+![:scale 40%]({{ site.baseurl}}/assets/images/20251028/20251028_hexlogos.png)
+
+<small>\** A markup language is a language that annotates text so that the computer can manipulate that text. Most markup languages are human-readable. More on [Wikipedia](https://en.wikipedia.org/wiki/Markup_language#Descriptive_markup).<br>
+\** * R Markdown is by default installed within RStudio!
+</small>
+
+---
+class: left, top
+
+The main reference material for today's coding club:
+
+- R Markdown cheat sheet: [web version](https://rstudio.github.io/cheatsheets/html/rmarkdown.html). Download the [pdf version](https://github.com/inbo/coding-club/blob/main/cheat_sheets/20251028_cheat_sheet_rmarkdown.pdf) if you prefer.
+- The [R Markdown](https://bookdown.org/yihui/rmarkdown/) reference book
+- The [bookdown](https://bookdown.org/yihui/bookdown/) reference book
+- [Thierry's slides](https://inbo.github.io/inbomd_examples/inbomd_workshop/inbomd_workshop.pdf) about writing a report with INBOmd
+
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20251028/20251028_cheatsheet.png)
+
+---
+class: left, top
+
+# R Packages
+
+Load the packages (or install them first):
+
+```r
+library(tidyverse)    # to do datascience
+library(INBOtheme)    # to apply INBO style to graphs
+library(sf)           # to work with geospatial vector data
+library(mapview)      # to make dynamic maps
+```
+
+---
+class: center, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/@damianooldoni/rJMiAk6Tlx?both
+
+<iframe src="https://hackmd.io/@damianooldoni/rJMiAk6Tlx?edit" height="450px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Challenge 0: R Markdown in a nutshell
+
+- `File` ->  `New File` -> `R Markdown...` -> Title: "test", Author: your name, Output format: HTML (deafult)
+- Switch to Visual Markdown Editor (VME) and try to write further: amazing, isn't?
+- Save it as `test.Rmd`
+- **knit** it to create an html  page (= `rmarkdown::render("test.Rmd")` if you hate using the mouse as a real geek ⌨️ )
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20251028/20251028_knit_does_the_magic.png)
+
+---
+class: left, top
+
+# The YAML header: y a m l what???
+
+The first lines between triple dashes (`---`) is our **header**, needed to configure the output to generate by setting up the title, the author, the output type, etc.
+
+And why is it called a YAML header? Because it is written in YAML :-) YAML is a programming language typically used to write such kind of **configurations**.
+
+Why do people use YAML for writing configurations files? Because YAML is very, very **human readable**.
+
+```
+---
+title: "test"
+author: "Emma Cartuyvels"
+date: "28-10-2025"
+output: html_document
+---
+```
+
+---
+class: left, top
+
+# Download data and code
+
+- Download everything automatically via `inborutils::setup_codingclub_session()`.
+- manually*, from [data/20251028](https://github.com/inbo/coding-club/blob/master/data/20251028/) and [src/20251028](https://github.com/inbo/coding-club/blob/master/src/20251028). Place the R script in `/src/20251028/` and data in `/data/20251028/`.
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data and scripts description
+
+1. [20251028_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20251028/20251028_challenges.R): R script to start with and containing both code and text.
+2. [20251028_my_file_name.tsv](https://github.com/inbo/coding-club/blob/master/data/20251028/20251028_my_file_name.tsv)*: non existing file! I can show I am surprised by using an emoji 😮
+
+<small>* This is a footnote.</small>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+
+---
+class: left, top
+
+# Intermezzo
+
+What happens in a R Markdown stays in that R Markdown! For example: knitting a Rmd containing a variable created in another Rmd will return an error: "variable not found". Three solutions:
+
+1. Put all your workflow in a single Rmd. Good for blogposts and tutorials. Not for complex data analysis, workflows and reports.
+
+2. Save temporary outputs at the end of a Rmd and load them at the beginning of the second Rmd. You have to knit both and be sure to update the second Rmd if you change the first one. Not handy if you work with many Rmds.
+
+3. Create a book with [bookdown](https://bookdown.org/)!
+
+---
+class: left, top
+
+# Intermezzo: bookdown
+
+First, make a new book with the RStudio Project Wizard (File > New Project > New Directory > Book project using bookdown) and select gitbook from the dropdown menu. Call the directory, and so, the project, `report_anemone`. Notice you can _build_ your book via a "Buid book" option in the Build pane of RStudio (see screenshot below). More about gitbook style in the [dedicated chapter](https://bookdown.org/yihui/bookdown/html.html#gitbook-style) from the bookdown guide.
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20251028/20251028_build_book.png)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+
+# Challenge 3
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20251028/20251028_tip_challenge3.png)
+
+---
+class: left, top
+
+# Bonus challenge 1
+
+
+---
+class: left, top
+
+## Do you know that...
+
+1. Many INBO tutorials are written in R markdown and then _knitted_ as markdown documents? See [example](https://inbo.github.io/tutorials/tutorials/spatial_wfs_services/).
+2. Markdown is very popular to easily write (static) webpages. Check the [oscibio](https://oscibio.inbo.be/) team page or the [craywatch](https://craywatch.inbo.be/) website. Both use [Petridish](https://peterdesmet.com/petridish/), a Jekyll* template developed by our colleague Peter Desmet. So, a [Markdown document](https://github.com/inbo/craywatch/blob/main/pages/soorten/faxonius-limosus.md?plain=1) becomes a [webpage](https://craywatch.inbo.be/soorten/faxonius-limosus/).
+3. [Data processing pipelines](https://trias-project.github.io/alien-plants-belgium/dwc_mapping.html) published as GitHub pages are actually R markdown documents?
+4. The Hackmd pages we use at the INBO coding club follow markdown syntax? Yes, probably you know it!
+5. The process of creating an unified checklist of alien species in Belgium (published on GBIF as the [GRIIS checklist of Belgium](https://www.gbif.org/dataset/6d9e952f-948c-4483-9807-575348147c7e)) is a bookdown [document](https://trias-project.github.io/unified-checklist/)? Same for the R reference book of Hadley Wickham, [Advanced R](https://adv-r.hadley.nz/). View the [source](https://github.com/hadley/adv-r/blob/master/index.Rmd): amazing, isn't?
+
+<small>* [Jekyll](https://jekyllrb.com/) is a a static site generator. It takes text written in your favorite markup language (e.g; Markdown) and uses layouts (e.g. Petridsh) to create a static website.
+</small>
+
+---
+class: left, top
+
+## Quarto (.qmd): is it the future?
+
+Do you know about [Quarto](https://quarto.org/) documents? Well, probably we all will write them within a year or two...
+
+Quarto is*:
+
+- A way to combine the (benefits of) R (R Markdown, bookdown, tidyverse packages) and Python (Jupyter Book, Jupyter notebooks, pandas, matplotlib) data science ecocystems.
+- A rewrite of RMarkdown with multilanguage as a first-class concern.
+- A way to get an accessible webpage AND a publication-ready PDF from the same source.
+- A really big wrapper around Pandoc (the document converter used to "knit" Rmd documents).
+- Not a prototype anymore: tens of thousands of users already.
+
+
+Do you know that the [Communicate section](https://r4ds.hadley.nz/communicate) of the R for Data Science book focusses on Quarto and is written using Quarto?
+
+One thing is for sure: all effort you did up to now is not for nothing! Quarto is very similar to Rmd.
+
+
+<small>\** Credits: Carlos Scheidegger, see his [slides](https://cscheid.net/static/2023-esip-quarto-talk/#/title-slide) and [live presentation](https://youtu.be/uQ3yZjM1bj8)
+</small>
+
+---
+class: left, top
+
+## Quarto (.qmd): is it the future?
+
+The [getting started](https://quarto.org/docs/get-started/hello/rstudio.html) tutorial is the best start to learn Quarto.
+
+Give it a try:
+
+- `File` ->  `New File` -> `Quarto Document...` -> Title: "test", Output format: HTML (deafult)
+- Visual Markdown Editor (VME) is used by default, but you can switch to `Source`
+- **Render** it to create html (opened automatically in your browser as a Background job)
+
+Check also the talk ["Mixing R, Python, and Quarto: Crafting the Perfect Open Source Cocktail"](https://www.youtube.com/watch?v=8174mk6SGcU&;list=PL9HYL-VRX0oSFkdF4fJeY63eGDvgofcbn&;index=57) by Alenka Frim and Nic Crane.
+
+---
+class: left, top
+
+# Bonus challenge 2
+
+
+---
+class: left, top
+
+# The package of the month. x's choice
+
+
+---
+class: left, top
+
+# Resources
+
+1. Solutions and video recording will be available soon.
+2. Check out the range of outputs and formats you can create using R Markdown: https://rmarkdown.rstudio.com/gallery
+3. Article to learn more about [Visual Markdown Editor](https://rstudio.github.io/visual-markdown-editing/) in RStudio
+4. R Markdown cheat sheet: [html](https://rstudio.github.io/cheatsheets/html/rmarkdown.html) and [pdf](https://github.com/inbo/coding-club/blob/main/cheat_sheets/20251028_cheat_sheet_rmarkdown.pdf).
+5. Online book about [bookdown](https://bookdown.org/yihui/bookdown/).
+6. [Thierry's slides](https://inbo.github.io/inbomd_examples/inbomd_workshop/inbomd_workshop.pdf) about writing a report with INBOmd
+7. [Examples](https://inbo.github.io/inbomd_examples/) of reports, slides, posters, etc. created with INBO templates from `INBOmd` (with links to source code!)
+8. [Article](https://www.educative.io/blog/yaml-tutorial) about YAML
+9. quarto (.qmd) format: a [getting started](https://quarto.org/docs/get-started/hello/rstudio.html)
+10. Carlos Scheidegger's [slides](https://cscheid.net/static/2023-esip-quarto-talk/#/title-slide) and [live presentation](https://youtu.be/uQ3yZjM1bj8)
+11. Recording of the talk ["Mixing R, Python, and Quarto: Crafting the Perfect Open Source Cocktail"](https://www.youtube.com/watch?v=8174mk6SGcU&;list=PL9HYL-VRX0oSFkdF4fJeY63eGDvgofcbn&;index=57) by Alenka Frim and Nic Crane at the posit::conf(2024)
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room number and name  -->
+Topic: to be decided <br>
+Room:  HT - 01.23 - Léon Stynen <br>
+Date: **27/11/2025**, from **10:00** to **12:30** <br>
+Help needed with technical setup? You are welcom from **9:45am**
