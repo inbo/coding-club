@@ -38,6 +38,13 @@ class: left, top
 
 
 ---
+class: left, top
+
+# Damiano in Colombia [@Livingdata](https://www.livingdata2025.com/)
+
+Add picture here
+
+---
 class: center, middle
 
 <!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
@@ -46,14 +53,13 @@ class: center, middle
 ---
 class: left, top
 
-## Markdown, R Markdown, bookdown, INBOmd: help!
+## Markdown, R Markdown, Quarto: help!
 
 - Markdown: a markup language \* for creating formatted text using a plain-text editor (= you do NOT get what you see).
 E.g. make text italic by surrounding it with underscores or asterisks, e.g. `__text__`
 - R Markdown: a file type with extension `Rmd` to _knit_ text (in Markdown) and code (in R) together. Goal: generate high quality shareable reports.
-- [`rmarkdown`](https://rmarkdown.rstudio.com/lesson-1.html): the R package to write R Markdown documents**.
-- [bookdown](https://bookdown.org/yihui/bookdown/): R package to make authoring _books_ or technical documents out of a series of R Markdown documents
-- [INBOmd](https://github.com/inbo/INBOmd#readme): R package containing templates to generate reports, slides or posters with the corporate identity of INBO or the Flemish government.
+- [rmarkdown](https://rmarkdown.rstudio.com/lesson-1.html): the R package to write R Markdown documents**.
+- [Quarto](https://quarto.org/): the follow-up to RMarkdown with the option to include multiple languages.
 
 ![:scale 40%]({{ site.baseurl}}/assets/images/20251028/20251028_hexlogos.png)
 
@@ -68,11 +74,10 @@ The main reference material for today's coding club:
 
 - R Markdown cheat sheet: [web version](https://rstudio.github.io/cheatsheets/html/rmarkdown.html). Download the [pdf version](https://github.com/inbo/coding-club/blob/main/cheat_sheets/20251028_cheat_sheet_rmarkdown.pdf) if you prefer.
 - The [R Markdown](https://bookdown.org/yihui/rmarkdown/) reference book
-- The [bookdown](https://bookdown.org/yihui/bookdown/) reference book
-- [Thierry's slides](https://inbo.github.io/inbomd_examples/inbomd_workshop/inbomd_workshop.pdf) about writing a report with INBOmd
+- The [Quarto](https://quarto.org/docs/authoring/markdown-basics.html) guide
 
 
-![:scale 80%]({{ site.baseurl}}/assets/images/20251028/20251028_cheatsheet.png)
+![:scale 75%]({{ site.baseurl}}/assets/images/20251028/20251028_cheatsheet.png)
 
 ---
 class: left, top
@@ -85,7 +90,8 @@ Load the packages (or install them first):
 library(tidyverse)    # to do datascience
 library(INBOtheme)    # to apply INBO style to graphs
 library(sf)           # to work with geospatial vector data
-library(mapview)      # to make dynamic maps
+library(plotly)       # to make dynamic plots
+library(leaflet)      # to make dynamic maps
 ```
 
 ---
