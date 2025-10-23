@@ -4,7 +4,7 @@
 # make an html version of it.
 
 
-# Title : "Read and visualize Anemone occurrence data"
+# Title : "Read and visualize ABV occurrence data"
 
 
 # # Setup
@@ -13,7 +13,8 @@
 library(tidyverse)    # to do datascience
 library(INBOtheme)    # to apply INBO style to graphs
 library(sf)           # to work with geospatial vector data
-library(mapview)      # to make dynamic leaflet maps
+library(plotly)       # to make dynamic plots
+library(leaflet)      # to make dynamic maps
 
 
 # # Introduction
@@ -22,65 +23,65 @@ library(mapview)      # to make dynamic leaflet maps
 #
 # 1. read occurrence cube data
 # 2. explore data
-# 3. preprocess data
+# 3. visualize data
 #
 #
 # # Read data
 #
-# Read **ABV** data from the occurrence cube file `20241028_abv_cube.csv`:
+# Read **ABV** data from the occurrence cube file `20251028_abv_cube.csv`:
 abv_cube <- readr::read_csv(
   file = "./data/20251028/20251028_abv_cube.csv"
 )
 
-# Read the Belgian grid from the geopackage file `20241217_utm1_be.gpkg`:
-be_grid <- sf::st_read("./data/20241217/20241217_utm1_be.gpkg")
+# Read the Flemish grid from the geopackage file `20251028_utm_grid.gpkg`:
+vl_grid <- sf::st_read("./data/20251028/20251028_utm_grid.gpkg")
 
 
 # # Explore data
 
-# This dataset contain data from min(abv_cube$year) to max(abv_cube$year)
-# related to length(unique(anemone_cube$specieskey)) species and their distribution
-# in Belgium based on a grid of 1 km x 1 km.
+# This dataset contains data from min(abv_cube$year) to max(abv_cube$year)
+# related to length(unique(abv_cube$specieskey)) species from the
+# unique(abv_cube$family) family and their distribution in Flanders
+# based on a grid of 1 km x 1 km.
 
 
-# Preview with the first 30 rows of the dataset:
-head(anemone_cube, n = 30)
+# Preview of the first 30 rows of the dataset:
+head(abv_cube, n = 30)
 
 
 # ## Taxonomic information
 
 # Species present in the dataset:
-anemone_cube %>% distinct(specieskey, species)
+abv_cube %>% distinct(specieskey, species)
 
 
 # ## Temporal information
 
 # The data are temporally defined at year level. Years present:
-anemone_cube %>% dplyr::distinct(year)
+abv_cube %>% dplyr::distinct(year) %>% arrange(year)
 
 
 
 # ## Geographical information
 
-# The geographical information is represented by the `eeacellcode` column,
+# The geographical information is represented by the `mgrscode` column,
 # which contains the identifiers of the grid cells containing at least one
 # occurrence of the species.
 
-# The dataset contains `length(unique(anemone_cube$eeacellcode))` unique grid cells.
+# The dataset contains `length(unique(abv_cube$mgrscode))` unique grid cells.
 
 
 # # Preprocess data
 #
-# Add geometrical information to the occurrence cube via `eeacellcode`, which contains the identifiers of the grid cells containing at least one occurrence of the species.
-cells_in_cube <- be_grid %>%
-  dplyr::filter(CELLCODE %in% unique(anemone_cube$eeacellcode)) %>%
-  dplyr::select(-c(EOFORIGIN, NOFORIGIN))
-sf_anemone_cube <- cells_in_cube %>%
-  dplyr::left_join(anemone_cube, by = c("CELLCODE" = "eeacellcode")) %>%
-  dplyr::rename("eeacellcode" = "CELLCODE")
+# Add geometrical information to the occurrence cube via `mgrscode`, which contains the identifiers of the grid cells containing at least one occurrence of the species.
+cells_in_cube <- vl_grid %>%
+  dplyr::filter(mgrscode %in% unique(abv_cube$mgrscode)) %>%
+  dplyr::select(-c(TAG, Shape_Leng, Shape_Area))
+sf_abv_cube <- cells_in_cube %>%
+  dplyr::left_join(abv_cube, by = "mgrscode")
 
 # Final (spatial) dataset:
-sf_anemone_cube %>% head(n = 30)
+sf_abv_cube %>% head(n = 30)
 
 
 
@@ -98,14 +99,14 @@ sf_anemone_cube %>% head(n = 30)
 #
 # # Static plots
 #
-# # Show number of occurrences  and number of occupied grid cells (make a tabbed section out of it)
+# # Show number of occurrences and number of occupied grid cells (make a tabbed section out of it)
 #
 # ### per species (1st tab)
 
-n_per_species <- sf_anemone_cube %>%
+n_per_species <- sf_abv_cube %>%
   dplyr::group_by(species) %>%
-  dplyr::summarize(occurrences = sum(occurrences),
-                   grid_cells = n_distinct(eeacellcode),
+  dplyr::summarize(occurrences = sum(n),
+                   grid_cells = n_distinct(mgrscode),
                    .groups = "drop") %>%
   tidyr::pivot_longer(cols = c(occurrences, grid_cells),
                       names_to = "variable",
@@ -118,10 +119,10 @@ ggplot(n_per_species, aes(x = species, y = n)) +
 
 # ### per year (2nd tab)
 
-n_per_year <- sf_anemone_cube %>%
+n_per_year <- sf_abv_cube %>%
   dplyr::group_by(year) %>%
-  dplyr::summarize(occurrences = sum(occurrences),
-                   grid_cells = n_distinct(eeacellcode),
+  dplyr::summarize(occurrences = sum(n),
+                   grid_cells = n_distinct(mgrscode),
                    .groups = "drop") %>%
   tidyr::pivot_longer(cols = c(occurrences, grid_cells),
                       names_to = "variable",
@@ -133,13 +134,13 @@ ggplot(n_per_year,aes(x = year, y = n)) +
   ggplot2::theme(axis.text.x = element_text(angle = 60, hjust = 1))
 
 
-# ### per year and province (3rd tab)
+# ### per year and species (3rd tab)
 
 n_occs_per_year_species <-
-  sf_anemone_cube %>%
+  sf_abv_cube %>%
   dplyr::group_by(year, species) %>%
-  dplyr::summarize(occurrences = sum(occurrences),
-                   grid_cells = n_distinct(eeacellcode),
+  dplyr::summarize(occurrences = sum(n),
+                   grid_cells = n_distinct(mgrscode),
                    .groups = "drop") %>%
   tidyr::pivot_longer(cols = c(occurrences, grid_cells),
                       names_to = "variable",
@@ -151,20 +152,40 @@ ggplot(n_occs_per_year_species,
   facet_grid(.~variable) +
   ggplot2::theme(axis.text.x = element_text(angle = 60, hjust = 1))
 
-# # Dynamic maps
+# # Dynamic plots
 #
-# ## Leaflet maps
+# ## Leaflet dynamic map
 #
 # We show a map with the distribution of _Anemone_ in Belgium. We show the total number of occurrences per grid cell. The color of the grid cells is based on the number of occurrences. The legend shows the color scale and the number of occurrences per grid cell.
-n_occs_per_cell <- sf_anemone_cube %>%
-  dplyr::group_by(eeacellcode) %>%
+n_occs_per_cell <- sf_abv_cube %>%
+  dplyr::group_by(mgrscode) %>%
   dplyr::summarize(
-    occurrences = sum(occurrences),
+    occurrences = sum(n),
     min_coordinateuncertaintyinmeters = min(mincoordinateuncertaintyinmeters),
-    min_mintemporaluncertainty = min(mintemporaluncertainty),
     .groups = "drop")
-map_anemone <- mapview::mapview(n_occs_per_cell,
-                                zcol = "occurrences",
-                                legend = TRUE
+
+map_abv <- mapview::mapview(n_occs_per_cell,
+                            zcol = "occurrences",
+                            legend = TRUE
 )
-map_anemone
+
+map_abv
+
+
+# ## Plotly yearly abundance
+n_occs_per_year <- n_occs_per_year_species |>
+  dplyr::filter(variable == "occurrences") |>
+  st_drop_geometry()
+
+fig <- plot_ly(n_occs_per_year,
+               x = ~year,
+               y = ~n,
+               split = ~species,
+               stroke = ~species,
+               type = "scatter",
+               mode = "lines+markers")
+
+fig
+
+
+
