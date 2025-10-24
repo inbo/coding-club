@@ -1,0 +1,100 @@
+---
+title: "Read and visualize ABV occurrence data"
+author: "Emma Cartuyvels"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    df_print: paged
+---
+
+# Setup
+
+```{r load libraries, message=FALSE, warning=FALSE}
+library(tidyverse)    # to do datascience
+library(INBOtheme)    # to apply INBO style to graphs
+library(sf)           # to work with geospatial vector data
+library(plotly)       # to make dynamic plots
+library(leaflet)      # to make dynamic maps
+```
+
+
+# Introduction
+
+In this document we will:
+
+1. read occurrence cube data
+2. explore data
+3. visualize data
+
+
+# Read data
+
+Read **ABV** data from the occurrence cube file `20251028_abv_cube.csv`:
+```{r}
+abv_cube <- readr::read_csv(
+  file = "./data/20251028/20251028_abv_cube.csv"
+)
+```
+
+Read the Flemish grid from the geopackage file `20251028_utm_grid.gpkg`:
+```{r}
+vl_grid <- sf::st_read("./data/20251028/20251028_utm_grid.gpkg")
+```
+
+
+# Explore data
+
+This dataset contains data from `r min(abv_cube$year)` to `r max(abv_cube$year)`
+related to `r length(unique(abv_cube$specieskey))` species from the
+`r unique(abv_cube$family)` family and their distribution in Flanders
+based on a grid of 1 km x 1 km.
+
+Preview of the first 30 rows of the dataset:
+```{r}
+head(abv_cube, n = 30)
+```
+
+
+## Taxonomic information
+
+Species present in the dataset:
+```{r}
+abv_cube %>% distinct(specieskey, species)
+```
+
+
+## Temporal information
+
+The data are temporally defined at year level. Years present:
+```{r}
+abv_cube %>% dplyr::distinct(year) %>% arrange(year)
+```
+
+
+## Geographical information
+
+The geographical information is represented by the `mgrscode` column,
+which contains the identifiers of the grid cells containing at least one
+occurrence of the species.
+
+The dataset contains `r length(unique(abv_cube$mgrscode))` unique grid cells.
+
+
+# Preprocess data
+
+Add geometrical information to the occurrence cube via `mgrscode`, which contains the identifiers of the grid cells containing at least one occurrence of the species.
+```{r}
+cells_in_cube <- vl_grid %>%
+  dplyr::filter(mgrscode %in% unique(abv_cube$mgrscode)) %>%
+  dplyr::select(-c(TAG, Shape_Leng, Shape_Area))
+sf_abv_cube <- cells_in_cube %>%
+  dplyr::left_join(abv_cube, by = "mgrscode")
+```
+
+Final (spatial) dataset:
+```{r}
+sf_abv_cube %>% head(n = 30)
+```
+
+
+
