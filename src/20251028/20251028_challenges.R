@@ -97,7 +97,7 @@ sf_abv_cube %>% head(n = 30)
 
 # In this section we will show how the number of occurrences and the number of occupied grid cells vary by year and species. Both static plots and dynamic maps are generated.
 #
-# # Static plots
+# ## Static plots
 #
 # # Show number of occurrences and number of occupied grid cells (make a tabbed section out of it)
 #
@@ -152,11 +152,11 @@ ggplot(n_occs_per_year_species,
   facet_grid(.~variable) +
   ggplot2::theme(axis.text.x = element_text(angle = 60, hjust = 1))
 
-# # Dynamic plots
+# ## Dynamic plots
 #
-# ## Leaflet dynamic map
+# ### Leaflet dynamic map
 #
-# We show a map with the distribution of _Anemone_ in Belgium. We show the total number of occurrences per grid cell. The color of the grid cells is based on the number of occurrences. The legend shows the color scale and the number of occurrences per grid cell.
+# We show a map with the distribution of buntings in Flanders. We show the total number of occurrences per grid cell. The color of the grid cells is based on the number of occurrences. The legend shows the color scale and the number of occurrences per grid cell.
 n_occs_per_cell <- sf_abv_cube %>%
   dplyr::group_by(mgrscode) %>%
   dplyr::summarize(
@@ -172,7 +172,9 @@ map_abv <- mapview::mapview(n_occs_per_cell,
 map_abv
 
 
-# ## Plotly yearly abundance
+# ### Plotly yearly abundance
+#
+# We show a graph with the yearly abundances per species.
 n_occs_per_year <- n_occs_per_year_species |>
   dplyr::filter(variable == "occurrences") |>
   st_drop_geometry()
@@ -186,6 +188,4 @@ fig <- plot_ly(n_occs_per_year,
                mode = "lines+markers")
 
 fig
-
-
 
