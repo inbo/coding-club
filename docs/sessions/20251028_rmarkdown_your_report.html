@@ -55,16 +55,16 @@ class: left, top
 
 ## Markdown, R Markdown, Quarto: help!
 
-- Markdown: a markup language \* for creating formatted text using a plain-text editor (= you do NOT get what you see).
-E.g. make text italic by surrounding it with underscores or asterisks, e.g. `__text__`
+- Markdown: a markup language\* for creating formatted text using a plain-text editor (= you do NOT get what you see).
+E.g. make text italic by surrounding it with underscores or asterisks, e.g. `*text*` becomes *text*
 - R Markdown: a file type with extension `Rmd` to _knit_ text (in Markdown) and code (in R) together. Goal: generate high quality shareable reports.
 - [rmarkdown](https://rmarkdown.rstudio.com/lesson-1.html): the R package to write R Markdown documents**.
 - [Quarto](https://quarto.org/): the follow-up to RMarkdown with the option to include multiple languages.
 
 ![:scale 40%]({{ site.baseurl}}/assets/images/20251028/20251028_hexlogos.png)
 
-<small>\** A markup language is a language that annotates text so that the computer can manipulate that text. Most markup languages are human-readable. More on [Wikipedia](https://en.wikipedia.org/wiki/Markup_language#Descriptive_markup).<br>
-\** * R Markdown is by default installed within RStudio!
+<small>\* A markup language is a language that annotates text so that the computer can manipulate that text. Most markup languages are human-readable. More on [Wikipedia](https://en.wikipedia.org/wiki/Markup_language#Descriptive_markup).<br>
+\*\* R Markdown is by default installed within RStudio!
 </small>
 
 ---
@@ -129,7 +129,7 @@ class: left, top
 - `File` ->  `New File` -> `R Markdown...` -> Title: "test", Author: your name, Output format: HTML (deafult)
 - Switch to Visual Markdown Editor (VME) and try to write further: amazing, isn't?
 - Save it as `test.Rmd`
-- **knit** it to create an html  page (= `rmarkdown::render("test.Rmd")` if you hate using the mouse as a real geek ⌨️ )
+- **knit** it to create an html page (= `rmarkdown::render("test.Rmd")` if you hate using the mouse as a real geek ⌨️ )
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20251028/20251028_knit_does_the_magic.png)
 
@@ -169,7 +169,7 @@ class: left, top
 # Data and scripts description
 
 1. [20251028_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20251028/20251028_challenges.R): R script to start with, containing both code and text.
-2. [20251028_abv_cube.csv](https://github.com/inbo/coding-club/blob/master/data/20251028/20251028_abv_cube.csv): [ABV]() data downloaded in cube format from [GBIF]()
+2. [20251028_abv_cube.csv](https://github.com/inbo/coding-club/blob/master/data/20251028/20251028_abv_cube.csv): [ABV](https://inbo.github.io/abv-rapport/2023/index.html) (Algemene Broedvogel Monitoring) data downloaded in [cube format](https://docs.b-cubed.eu/occurrence-cube/specification/) from [GBIF](https://doi.org/10.15468/dl.b38nw5), filtered for buntings
 3. [20251028_utm_grid.gpkg](https://github.com/inbo/coding-club/blob/master/data/20251028/20251028_utm_grid.gpkg): 1 x 1 km grid of Flanders
 
 
@@ -182,7 +182,7 @@ class: left, top
 
 # Challenge 1
 
-Convert the text and the code in [20241217_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20241217/20241217_challenges.R) to a Rmd document called `20241217_anemone_analysis.Rmd` and _knit_ it as html. Using the cheatsheet and the specific tips provided, please, take care of:
+Convert the text and the code in [20251028_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20251028/20251028_challenges.R) to a Rmd document called `20251028_abv_analysis.Rmd` and _knit_ it as html. Using the cheatsheet and the specific tips provided, please, take care of:
 
 1. Converting the comments to text.
 
@@ -190,7 +190,7 @@ Convert the text and the code in [20241217_challenges.R](https://github.com/inbo
 
 3. adding **inline code** where needed, e.g. min(anemone_cube$year) and max(anemone_cube$year) in the script. [Tip](https://bookdown.org/yihui/rmarkdown/r-code.html).
 
-4. Setting the date automatically in the YAML header. [Tip](https://bookdown.org/yihui/rmarkdown-cookbook/update-date.html). (UPDATE: this is the default behavior now. Maybe try to change it back to use a fix date).
+4. Update the date in the YAML header automatically to the current date everytime you knit. [Tip](https://bookdown.org/yihui/rmarkdown-cookbook/update-date.html).
 
 5. Paging the data frames so that they look always nice. [Tip](https://bookdown.org/yihui/rmarkdown/html-document.html#data-frame-printing).
 
@@ -200,7 +200,7 @@ class: left, top
 
 # Challenge 2
 
-Let's add some text and code from [20241217_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20241217/20241217_challenges.R) to the Rmd to generate visualizations and maps.
+Let's add some text and code from [20251028_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20251028/20251028_challenges.R) to the Rmd to generate visualizations and maps.
 
 1. Add a table of content. Allow the table of contents being always visible, even when the document is scrolled. [Tip](https://bookdown.org/yihui/rmarkdown/html-document.html#table-of-contents).
 
