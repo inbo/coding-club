@@ -3,8 +3,12 @@ title: "Read and visualize ABV occurrence data"
 author: "Emma Cartuyvels"
 date: "`r Sys.Date()`"
 output:
-  html_document:
+  bookdown::html_document2:
+    toc: true
+    toc_float: true
+    number_sections: true
     df_print: paged
+    code_folding: show
 ---
 
 # Setup
@@ -97,4 +101,105 @@ sf_abv_cube %>% head(n = 30)
 ```
 
 
+# Data visualization
 
+In this section we will show how the number of occurrences and the number of occupied grid cells vary by year and species. Both static plots and dynamic maps are generated.
+
+## Static plots {.tabset}
+
+### per species
+```{r class.source = 'fold-hide'}
+n_per_species <- sf_abv_cube %>%
+  dplyr::group_by(species) %>%
+  dplyr::summarize(occurrences = sum(n),
+                   grid_cells = n_distinct(mgrscode),
+                   .groups = "drop") %>%
+  tidyr::pivot_longer(cols = c(occurrences, grid_cells),
+                      names_to = "variable",
+                      values_to = "n")
+
+ggplot(n_per_species, aes(x = species, y = n)) +
+  geom_bar(stat = 'identity') +
+  facet_grid(.~variable, scales = "free_y") +
+  ggplot2::theme(axis.text.x = element_text(angle = 60, hjust = 1))
+```
+
+
+### per year
+```{r class.source = 'fold-hide'}
+n_per_year <- sf_abv_cube %>%
+  dplyr::group_by(year) %>%
+  dplyr::summarize(occurrences = sum(n),
+                   grid_cells = n_distinct(mgrscode),
+                   .groups = "drop") %>%
+  tidyr::pivot_longer(cols = c(occurrences, grid_cells),
+                      names_to = "variable",
+                      values_to = "n")
+
+ggplot(n_per_year,aes(x = year, y = n)) +
+  geom_bar(stat = 'identity') +
+  facet_grid(.~variable, scales = "free_y") +
+  ggplot2::theme(axis.text.x = element_text(angle = 60, hjust = 1))
+```
+
+
+### per year and species
+```{r class.source = 'fold-hide'}
+n_occs_per_year_species <-
+  sf_abv_cube %>%
+  dplyr::group_by(year, species) %>%
+  dplyr::summarize(occurrences = sum(n),
+                   grid_cells = n_distinct(mgrscode),
+                   .groups = "drop") %>%
+  tidyr::pivot_longer(cols = c(occurrences, grid_cells),
+                      names_to = "variable",
+                      values_to = "n")
+
+ggplot(n_occs_per_year_species,
+       aes(x = year, y = n, fill = species)) +
+  geom_bar(stat = 'identity') +
+  facet_grid(.~variable) +
+  ggplot2::theme(axis.text.x = element_text(angle = 60, hjust = 1))
+```
+
+
+## Dynamic plots
+
+### Leaflet dynamic map
+
+We show a map with the distribution of buntings in Flanders. We show the total number of occurrences per grid cell. The color of the grid cells is based on the number of occurrences. The legend shows the color scale and the number of occurrences per grid cell.
+```{r buntings-map, fig.cap="Distribution of buntings in Flanders.", class.source = 'fold-hide'}
+n_occs_per_cell <- sf_abv_cube %>%
+  dplyr::group_by(mgrscode) %>%
+  dplyr::summarize(
+    occurrences = sum(n),
+    min_coordinateuncertaintyinmeters = min(mincoordinateuncertaintyinmeters),
+    .groups = "drop")
+
+map_abv <- mapview::mapview(n_occs_per_cell,
+                            zcol = "occurrences",
+                            legend = TRUE
+)
+
+map_abv
+```
+
+
+### Plotly yearly abundance
+
+We show a graph with the yearly abundances per species.
+```{r class.source = 'fold-hide'}
+n_occs_per_year <- n_occs_per_year_species |>
+  dplyr::filter(variable == "occurrences") |>
+  st_drop_geometry()
+
+fig <- plot_ly(n_occs_per_year,
+               x = ~year,
+               y = ~n,
+               split = ~species,
+               stroke = ~species,
+               type = "scatter",
+               mode = "lines+markers")
+
+fig
+```
