@@ -7,6 +7,7 @@ format:
     toc: true
     number-sections: true
     code-fold: show
+    df-print: paged
 editor: source
 knitr:
   opts_knit:
@@ -68,6 +69,8 @@ head(abv_cube, n = 30)
 
 Species present in the dataset:
 ```{r}
+#| label: tbl-species
+#| tbl-cap: "Species present in dataset."
 abv_cube %>% distinct(specieskey, species)
 ```
 
@@ -110,7 +113,9 @@ sf_abv_cube %>% head(n = 30)
 
 In this section we will show how the number of occurrences and the number of occupied grid cells vary by year and species. Both static plots and dynamic maps are generated.
 
-## Static plots {.tabset}
+## Static plots
+
+::: {.panel-tabset}
 
 ### per species
 ```{r}
@@ -173,6 +178,7 @@ ggplot(n_occs_per_year_species,
   ggplot2::theme(axis.text.x = element_text(angle = 60, hjust = 1))
 ```
 
+:::
 
 ## Dynamic plots
 
@@ -181,6 +187,8 @@ ggplot(n_occs_per_year_species,
 We show a map with the distribution of buntings in Flanders. We show the total number of occurrences per grid cell. The color of the grid cells is based on the number of occurrences. The legend shows the color scale and the number of occurrences per grid cell.
 ```{r}
 #| code-fold: true
+#| label: fig-leaflet-map
+#| fig-cap: "A map with the distribution of buntings in Flanders."
 
 n_occs_per_cell <- sf_abv_cube %>%
   dplyr::group_by(mgrscode) %>%
