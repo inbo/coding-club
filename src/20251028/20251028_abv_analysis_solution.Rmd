@@ -3,7 +3,7 @@ title: "Read and visualize ABV occurrence data"
 author: "Emma Cartuyvels"
 date: "`r Sys.Date()`"
 output:
-  bookdown::html_document2:
+  html_document:
     toc: true
     toc_float: true
     number_sections: true
@@ -62,7 +62,7 @@ head(abv_cube, n = 30)
 ## Taxonomic information
 
 Species present in the dataset:
-```{r}
+```{r species, tab.cap="Species present in the dataset."}
 abv_cube %>% distinct(specieskey, species)
 ```
 
@@ -108,7 +108,7 @@ In this section we will show how the number of occurrences and the number of occ
 ## Static plots {.tabset}
 
 ### per species
-```{r class.source = 'fold-hide'}
+```{r occ_species, class.source = 'fold-hide', fig.cap="Number of occurences per species"}
 n_per_species <- sf_abv_cube %>%
   dplyr::group_by(species) %>%
   dplyr::summarize(occurrences = sum(n),
@@ -168,7 +168,7 @@ ggplot(n_occs_per_year_species,
 ### Leaflet dynamic map
 
 We show a map with the distribution of buntings in Flanders. We show the total number of occurrences per grid cell. The color of the grid cells is based on the number of occurrences. The legend shows the color scale and the number of occurrences per grid cell.
-```{r buntings-map, fig.cap="Distribution of buntings in Flanders.", class.source = 'fold-hide'}
+```{r class.source = 'fold-hide'}
 n_occs_per_cell <- sf_abv_cube %>%
   dplyr::group_by(mgrscode) %>%
   dplyr::summarize(
