@@ -62,7 +62,7 @@ head(abv_cube, n = 30)
 ## Taxonomic information
 
 Species present in the dataset:
-```{r species, tab.cap="Species present in the dataset."}
+```{r}
 abv_cube %>% distinct(specieskey, species)
 ```
 
@@ -108,7 +108,7 @@ In this section we will show how the number of occurrences and the number of occ
 ## Static plots {.tabset}
 
 ### per species
-```{r occ_species, class.source = 'fold-hide', fig.cap="Number of occurences per species"}
+```{r class.source = 'fold-hide'}
 n_per_species <- sf_abv_cube %>%
   dplyr::group_by(species) %>%
   dplyr::summarize(occurrences = sum(n),
