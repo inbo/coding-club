@@ -19,7 +19,7 @@ or see https://jekyllrb.com/docs/liquid/tags/#links.
 -->
 
 <!--  Adjust the day, month  -->
-# 30 JANUARY 2024
+# 27 NOVEMBER 2025
 
 ## INBO coding club
 
@@ -41,6 +41,17 @@ Please confirm asap the room reservation on the roomie
 ```
 
 ---
+class: left, top
+
+# INBO Coding Club at Living Data 2025
+
+I gave a [lightning talk](https://www.livingdata2025.com/program.html?abstract=7005752) about our INBO coding club at [Living Data 2025](https://www.livingdata2025.com) during the session ["Community Engagement and Capacity Building for Increased Biodiversity Data Accessibility (Part 2)"](https://www.livingdata2025.com/program.html?session=6798479-2_2025-10-23_Ballroom+B1)!
+
+Check the [slides](https://speakerdeck.com/damianooldoni/serving-a-sustainable-coding-community-the-inbo-coding-club-story).
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20251127/20251127_slides_talk_living_data.png)
+
+---
 class: center, middle
 
 <!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
@@ -53,14 +64,14 @@ class: center, middle
 
 ![:scale 80%]({{ site.baseurl}}/assets/images/20251127/20251127_stringr_artwork.png)
 
-[Artwork by @allison_horst](https://twitter.com/allison_horst) (CC-BY license). Great artworks, by the way. Worth a look.
+[Artwork by @allison_horst](https://allisonhorst.com/) (CC-BY license). Great artworks, by the way. Worth a look.
 
 ---
 class: left, top
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20251127/20251127_stringr_cheatsheet.png)
 
-CC-BY RStudio. Download the [cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20251127_cheat_sheet_stringr.pdf). Do you know that this cheat sheet is available as [html](https://rstudio.github.io/cheatsheets/html/strings.html) format? Also downloadable in [Spanish](https://rstudio.github.io/cheatsheets/translations/spanish/strings_es.pdf), [Portuguese](https://rstudio.github.io/cheatsheets/translations/portuguese/strings_pt_br.pdf) and [Vietnamese](https://rstudio.github.io/cheatsheets/translations/vietnamese/strings_vi.pdf).
+CC BY SA [Posit Software](https://posit.co). Download the [cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20251127_cheat_sheet_stringr.pdf). Do you know that this cheat sheet is available as [html](https://rstudio.github.io/cheatsheets/html/strings.html) format? Also downloadable in [Spanish](https://rstudio.github.io/cheatsheets/translations/spanish/strings_es.pdf), [Portuguese](https://rstudio.github.io/cheatsheets/translations/portuguese/strings_pt_br.pdf) and [Vietnamese](https://rstudio.github.io/cheatsheets/translations/vietnamese/strings_vi.pdf).
 
 ---
 class: left, top
@@ -110,7 +121,7 @@ class: left, top
 # Data and scripts description
 
 - `20251127_bird_rings.txt`: tab separated text file with color and metal rings information. Source: INBO. Attention: the data have been manipulated here and there.
-- `20251127_scientificnames.txt`: text file with a list of scientific names
+- `20251127_scientificnames.txt`: text file with some scientific names to clean a little bit.
 
 ---
 class: left, top
@@ -131,8 +142,9 @@ No R script to start with today. Just read files:
 library(tidyverse)
 
 birds <- read_tsv("./data/20251127/20251127_bird_rings.txt")
-sc_names <- read_csv("./data/20251127/20251127_scientificnames.txt")
-sc_names <- sc_names$scientific_name
+sc_names_df <- read_tsv("./data/20251127/20251127_scientificnames.txt")
+View(sc_names_df) # Column `comment` gives you an idea about what you should clean
+sc_names <- sc_names_df$scientific_name
 ```
 
 ---
@@ -166,7 +178,15 @@ class: left, top
 
 And UTF? UTF stands for **Unicode Transformation Format**. This format specifies how to represent these code points in binary (= sequence of bytes). The most common UTF forms are UTF-8, UTF-16, UTF-32.
 
-More details on this clear described blog: [Unicode - UTF-8, UTF-16 and UTF32](https://www.geeksforgeeks.org/computer-organization-architecture/what-is-unicode/).
+More details? Check this clear described blog: [Unicode - UTF-8, UTF-16 and UTF32](https://www.geeksforgeeks.org/computer-organization-architecture/what-is-unicode/).
+
+
+---
+class: left, top
+
+# Intermezzo: Windows and encodings
+
+People working on Windows systems should be aware that Windows uses by default a different encoding: *Windows-1252* or *CP-1252* (Windows code page 1252). This encoding is a superset of ISO 8859-1, but not compatible with UTF-8. This may lead to problems when reading text files created on Windows systems. Always ensure that your text files are encoded in UTF-8. Still, Windows has started to support UTF-8 natively in recent years. More info: [Wikipedia - Windows-1252](https://en.wikipedia.org/wiki/Windows-1252).
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -192,7 +212,7 @@ class: left, top
 
 *regex* what?? REGular EXpresssions! Go to page 2 of the cheatsheet.
 
-![:scale 70%]({{ site.baseurl}}/assets/images/20200924/20200924_stringr_cheatsheet_regex.png)
+![:scale 70%]({{ site.baseurl}}/assets/images/20251127/20251127_regex_cheatsheet.png)
 
 ```
 example_string <- "I. love. the. 2025(!!) INBO. Coding. Club! Session. of. 27/11/2025...."
@@ -255,13 +275,13 @@ Are you bored of working with bird rings? Maybe you find cleaning scientific nam
 
 Matching scientific names against the GBIF Taxonomy Backbone fails sometimes just because the provided scientific name contains abbreviations like "sp.", "spec.", "indet.", "cf", "nov.", "ined". Try to clean the names provided in 20251127_scientificnames.txt by removing such abbreviations.
 
-Ensure also that the resulting scientific names have no whitespaces at the start or at the end and also that they have single spaces between words. Hint: Check the cheatsheet to find the stringr function to remove all these whitespaces.
+Ensure also that the resulting scientific names have no whitespaces at the start or at the end and also that they have single spaces between words. Hint: check the cheatsheet 🔍.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
-# Bonus challenge  - bird rings again!
+# Bonus challenge - bird rings again!
 
 1. The dots in color rings (column `color_ring_dots`), e.g. `KRO.C`, `KZ.AC`, are used for improving readibility. Apart from that, the values in column `color_ring_dots` should be exactly the same as the ones in column `color_ring`. Find anomalies.
 
@@ -286,47 +306,11 @@ class: left, top
 ---
 class: left, top
 
-# INBO coding club core team member wanted
+# The R package of the month
 
-Dirk, Emma, Raïsa, Amber are searching a new mate to replace Hans.
+A tidyverse package to scrape (or harvest) data from web pages: [rvest](https://rvest.tidyverse.org/).
 
-- Is your team still not represented in the core team?
-
-- Do you like to shape the INBO coding club of the future?
-
-- You do absoultely **NOT** need to be an R expert. Actually, better not!
-
-![:scale 90%]({{ site.baseurl}}/assets/images/20251127/2024013_team_members_wanted.png)
-
----
-class: left, top
-
-# The R tip of the month. Part 1
-
-We were used to call this chapter "R package of the month". But, not only R packages are worth of attention. This is the case of the [R-Graph-Gallery](https://r-graph-gallery.com/) of [Holtz Yan](https://github.com/holtzy)!
-
-![:scale 100%]({{ site.baseurl}}/assets/images/20251127/20251127_The-R-Graph-Gallery.png)
-
-Are you a Python user? Maybe you could have a look to the [Python Graph Gallery](https://python-graph-gallery.com/) as well.
-
-
----
-class: left, top
-
-# The R tip of the month. Part 2
-
-But that is just half of the story. First, we need to choose the most appropriate graph for our data, not always an easy step. [From Data to Viz](https://www.data-to-viz.com/) can really help us in the decision process.
-
-![:scale 110%]({{ site.baseurl}}/assets/images/20251127/20251127_From-data-to-Viz.png)
-
----
-class: left, top
-
-# EBR III
-
-Come with us to the [Empowering Biodiversity Research III](https://www.biodiversity.be/EBRIII/)! See mail of Dimi about group registration.
-
-![:scale 90%]({{ site.baseurl}}/assets/images/20251127/20251127_EBRIII.png)
+![:scale 100%]({{ site.baseurl}}/assets/images/20251127/20251127_rvest.png)
 
 ---
 class: center, middle
