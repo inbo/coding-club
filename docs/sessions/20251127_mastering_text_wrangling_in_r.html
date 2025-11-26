@@ -25,20 +25,17 @@ or see https://jekyllrb.com/docs/liquid/tags/#links.
 
 <!--  Adjust the room number and name  -->
 Herman Teirlinck Building
+
 01.23 Léon Stynen
+
 
 ---
 class: left, top
 
-## ROOMIE: room reservation
+# Reminders
 
-```
-> if (isFALSE(roomie)) {
-+   warning("Please confirm asap the room reservation on the roomie")
-+ }
-Warning message:
-Please confirm asap the room reservation on the roomie
-```
+1. Did we confirm the room reservation on the _roomie_?
+2. Did we start the recording?
 
 ---
 class: left, top
@@ -64,7 +61,7 @@ class: center, middle
 
 ![:scale 80%]({{ site.baseurl}}/assets/images/20251127/20251127_stringr_artwork.png)
 
-[Artwork by @allison_horst](https://allisonhorst.com/) (CC-BY license). Great artworks, by the way. Worth a look.
+Artwork by [Allison Horst](https://allisonhorst.com/) (CC-BY license). Great artworks, worth a look.
 
 ---
 class: left, top
@@ -120,8 +117,8 @@ class: left, top
 
 # Data and scripts description
 
-- `20251127_bird_rings.txt`: tab separated text file with color and metal rings information. Source: INBO. Attention: the data have been manipulated here and there.
-- `20251127_scientificnames.txt`: text file with some scientific names to clean a little bit.
+- `20251127_bird_rings.tsv`: tab separated text file with color and metal rings information. Source: INBO. Attention: the data have been manipulated here and there.
+- `20251127_scientificnames.tsv`: tab separated text file with some scientific names to clean a little bit.
 
 ---
 class: left, top
@@ -154,39 +151,33 @@ class: left, top
 # Challenge 1
 
 For this challenge we will work with two columns of `20251127_bird_rings.txt`:
-- `color_ring`: column containing the color rings
-- `metal_ring`: column containing the metal rings
+- `color_ring`: column containing the **color** rings
+- `metal_ring`: column containing the **metal** rings
 
-1. Get the length of the metal rings.
+1. Get the length of the **metal** rings.
 
-2. Do the color rings start with a "C"?
+2. Do the **color** rings start with a "C"?
 
-3. Do the color rings end with a "R"?
+3. Do the **color** rings end with a "R"?
 
-4. Are all the color rings uppercase?
+4. Are all the **color** rings uppercase?
 
-5. Solve all the anomalies found in (4) by setting all color rings uppercase.
+5. Solve all the anomalies found in (4) by setting all **color** rings uppercase.
 
-Extra: tidyverse packages are made to work nicely together. Use stringr and dplyr to get the birds with a 6 characters long **metal ring** and a **color ring** starting with a "C" and ending with a "R".
+Extra: tidyverse packages are made to work nicely together. Use stringr and dplyr to get the birds with a 6 characters long **metal** ring and a **color** ring starting with a "C" and ending with a "R".
 
 ---
 class: left, top
 
-# Intermezzo: Unicode, UTF-8, UTF-16, UTF-32????
+# Intermezzo: Unicode, UTF-8, UTF-16, UTF-32 ... and Windows
 
-*Unicode* is a computing industry standard for the consistent encoding, representation, and handling of text expressed in most of the world's writing systems. It assigns a unique number, or **code point**, to each character, no matter the platform, program, or language.
+**Unicode** is a computing industry standard for the consistent encoding, representation, and handling of text expressed in most of the world's writing systems. It assigns a unique number, or **code point**, to each character, no matter the platform, program, or language.
 
 And UTF? UTF stands for **Unicode Transformation Format**. This format specifies how to represent these code points in binary (= sequence of bytes). The most common UTF forms are UTF-8, UTF-16, UTF-32.
 
 More details? Check this clear described blog: [Unicode - UTF-8, UTF-16 and UTF32](https://www.geeksforgeeks.org/computer-organization-architecture/what-is-unicode/).
 
-
----
-class: left, top
-
-# Intermezzo: Windows and encodings
-
-People working on Windows systems should be aware that Windows uses by default a different encoding: *Windows-1252* or *CP-1252* (Windows code page 1252). This encoding is a superset of ISO 8859-1, but not compatible with UTF-8. This may lead to problems when reading text files created on Windows systems. Always ensure that your text files are encoded in UTF-8. Still, Windows has started to support UTF-8 natively in recent years. More info: [Wikipedia - Windows-1252](https://en.wikipedia.org/wiki/Windows-1252).
+People working on Windows systems should be aware that Windows uses by default a different encoding: **Windows-1252** or **CP-1252** (Windows code page 1252). This encoding is not fully compatible with UTF-8. This may lead to problems when reading text files created on Windows systems. Always ensure that your text files are encoded in UTF-8. Still, Windows has started to support UTF-8 natively in recent years. More info: [Wikipedia - Windows-1252](https://en.wikipedia.org/wiki/Windows-1252).
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -197,7 +188,7 @@ class: left, top
 1. Create a new column called `color_ring_complete` containing color ring information in this format:
 `background_color`+`inscription_color`+`"("`+`color_ring`+`")"`, e.g. RW(FJAC)
 
-2. All color rings have length 4: check it if you don't believe it! But are they all **4-letter only**? And is the third letter always an "A"?
+2. All color rings have length 4: check it, first, if you don't believe it :-) But are they all **4-letter only**? And is the third letter always an "A"?
 
 3. Do the color rings contain at least a digit?
 
@@ -261,9 +252,9 @@ Real life example: how to extract the version number from the URL of the used [C
 
 - URL 5: "cam/12.4.0.999/camtrap-dp-profile.json". Output: 12.4.0
 
-Rules: a version number is composed of two or three numbers separatd by a dot.
+Rule: a version number is composed of two or three numbers separatd by a dot.
 
-Solving this example required some complex regex expressions and is part of the Bonus Challenges. Still, this was a real situation! See [GitHub issue](https://github.com/inbo/camtraptor/issues/295).
+Solving this example requires some complex regex expressions and is part of the Bonus Challenge. Still, this was a real situation! See [GitHub issue](https://github.com/inbo/camtraptor/issues/295).
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -271,11 +262,13 @@ class: left, top
 
 # Challenge 3A
 
-Are you bored of working with bird rings? Maybe you find cleaning scientific names something more similar to your daily tasks.This challenge is for you!
+Are you bored of working with bird rings? Maybe you find cleaning scientific names something more similar to your daily tasks. This challenge is for you!
 
-Matching scientific names against the GBIF Taxonomy Backbone fails sometimes just because the provided scientific name contains abbreviations like "sp.", "spec.", "indet.", "cf", "nov.", "ined". Try to clean the names provided in 20251127_scientificnames.txt by removing such abbreviations.
+Matching scientific names against the GBIF Taxonomy Backbone or other taxonomy backbone services can fail sometimes because the names contains abbreviations like "sp.", "spec.", "indet.", "cf", "nov.", "ined". Try to clean the names provided in 20251127_scientificnames.txt by removing such abbreviations.
 
 Ensure also that the resulting scientific names have no whitespaces at the start or at the end and also that they have single spaces between words. Hint: check the cheatsheet 🔍.
+
+Also, the colunn `comment` in the file helps you about what to clean.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -289,19 +282,7 @@ class: left, top
 
 3. Find color rings (column `color_ring`) containing two consecutive vowels.
 
-
----
-class: left, top
-
-# Resources
-
-- Extended and commented solutions will be soon available.
-- The edited video recording will be soon available on our [vimeo channel](https://vimeo.com/user/8605285/folder/1978815).
-- The official [stringr](https://stringr.tidyverse.org/) website.
-- The beautiful [artwork collections](https://allisonhorst.com/) of Allison Horst.
-- ["Learn RegEx with Real Life Examples"](https://www.freecodecamp.org/news/practical-regex-guide-with-real-life-examples/): freecodecamp tutorial about regex.
-- Two widely used online regex testers: https://regex101.com/ and https://regexr.com/.
-- All kind of [regex exercises](https://www.hackerrank.com/domains/regex).
+4. How to extract the version number from the URLs provided in the [intermezzo slide](https://coding-club.inbo.be/sessions/20251127_mastering_text_wrangling_in_r.html#19)?
 
 ---
 class: left, top
@@ -313,12 +294,27 @@ A tidyverse package to scrape (or harvest) data from web pages: [rvest](https://
 ![:scale 100%]({{ site.baseurl}}/assets/images/20251127/20251127_rvest.png)
 
 ---
+class: left, top
+
+# Resources
+
+- Extended and commented solutions will be soon available.
+- The edited video recording will be soon available on our [vimeo channel](https://vimeo.com/user/8605285/folder/1978815).
+- The [stringr](https://stringr.tidyverse.org/) R package documentation.
+- The beautiful [artwork collections](https://allisonhorst.com/) of Allison Horst.
+- ["Learn RegEx with Real Life Examples"](https://www.freecodecamp.org/news/practical-regex-guide-with-real-life-examples/): freecodecamp tutorial about regex.
+- Two widely used online regex testers: https://regex101.com/ and https://regexr.com/.
+- All kind of [regex exercises](https://www.hackerrank.com/domains/regex).
+- The [rvest](https://rvest.tidyverse.org/) R package documentation.
+
+
+---
 class: center, middle
 
 ![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
 
 <!--  Adjust the room and date  -->
-Room: 01.19 - Paul Van Ostaijen<br>
-Date: __29/02/2024__, van 10:00 tot 12:30<br>
+Room: 01.71 - Frans Breziers<br>
+Date: __16/12/2025__, van 10:00 tot 12:00<br>
 Subject: **to be decided** <br>
 (registration announced via DG_useR@inbo.be)
