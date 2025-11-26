@@ -226,6 +226,8 @@ data/20250626/20250626_moth_obs_2023.csv,20250626_moth_obs_2023.csv,data,2025062
 data/20250826/20250826_giant_hogweed_fl_bxl.tsv,20250826_giant_hogweed_fl_bxl.tsv,data,20250826
 data/20250826/20250826_giant_hogweed_per_municipality.gpkg,20250826_giant_hogweed_per_municipality.gpkg,data,20250826
 data/20250925/20250925_gbif_occs.csv,20250925_gbif_occs.csv,data,20250925
+data/20251127/20251127_scientificnames.tsv,20251127_scientificnames.tsv,data,20251127
+data/20251127/20251127_bird_rings.tsv,20251127_bird_rings.tsv,data,20251127
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
 src/20180222/20180222_import_spreadsheets.R,20180222_import_spreadsheets.R,src,20180222

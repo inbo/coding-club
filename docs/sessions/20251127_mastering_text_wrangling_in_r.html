@@ -1,0 +1,340 @@
+---
+layout: presentation
+title: Mastering text wrangling in R
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+  <!-- Adjust the presentation to the session. Focus on the challenges,
+this is not a coding tutorial.
+
+Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+folder and use the jekyll base.url reference as done in this template
+or see https://jekyllrb.com/docs/liquid/tags/#links.
+  using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 30 JANUARY 2024
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+01.23 Léon Stynen
+
+---
+class: left, top
+
+## ROOMIE: room reservation
+
+```
+> if (isFALSE(roomie)) {
++   warning("Please confirm asap the room reservation on the roomie")
++ }
+Warning message:
+Please confirm asap the room reservation on the roomie
+```
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape or other programs based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20251127/20251127_badge.png)
+
+---
+class: center, middle
+
+## Strings + tidyverse = stringr
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20251127/20251127_stringr_artwork.png)
+
+[Artwork by @allison_horst](https://twitter.com/allison_horst) (CC-BY license). Great artworks, by the way. Worth a look.
+
+---
+class: left, top
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20251127/20251127_stringr_cheatsheet.png)
+
+CC-BY RStudio. Download the [cheat sheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20251127_cheat_sheet_stringr.pdf). Do you know that this cheat sheet is available as [html](https://rstudio.github.io/cheatsheets/html/strings.html) format? Also downloadable in [Spanish](https://rstudio.github.io/cheatsheets/translations/spanish/strings_es.pdf), [Portuguese](https://rstudio.github.io/cheatsheets/translations/portuguese/strings_pt_br.pdf) and [Vietnamese](https://rstudio.github.io/cheatsheets/translations/vietnamese/strings_vi.pdf).
+
+---
+class: left, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+# Share your code during the coding session
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/D46xpmDFR0KY0p5DL1SQRA?edit and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/D46xpmDFR0KY0p5DL1SQRA?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`<small>\*</small>
+
+- manually<small> \*\*</small> from GitHub folder [coding-club/data/20251127](https://github.com/inbo/coding-club/tree/master/data/20251127). No R script to download today. Just data.
+
+<br>
+
+<small> \* You can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20220428")` to download the coding club material of April, 28 2022. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> \*\* Check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data and scripts description
+
+- `20251127_bird_rings.txt`: tab separated text file with color and metal rings information. Source: INBO. Attention: the data have been manipulated here and there.
+- `20251127_scientificnames.txt`: text file with a list of scientific names
+
+---
+class: left, top
+
+# Load packages
+
+Loading tidyverse, we load stringr as well:
+
+```r
+library(tidyverse)
+```
+
+# Code to run
+
+No R script to start with today. Just read files:
+
+```r
+library(tidyverse)
+
+birds <- read_tsv("./data/20251127/20251127_bird_rings.txt")
+sc_names <- read_csv("./data/20251127/20251127_scientificnames.txt")
+sc_names <- sc_names$scientific_name
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+For this challenge we will work with two columns of `20251127_bird_rings.txt`:
+- `color_ring`: column containing the color rings
+- `metal_ring`: column containing the metal rings
+
+1. Get the length of the metal rings.
+
+2. Do the color rings start with a "C"?
+
+3. Do the color rings end with a "R"?
+
+4. Are all the color rings uppercase?
+
+5. Solve all the anomalies found in (4) by setting all color rings uppercase.
+
+Extra: tidyverse packages are made to work nicely together. Use stringr and dplyr to get the birds with a 6 characters long **metal ring** and a **color ring** starting with a "C" and ending with a "R".
+
+---
+class: left, top
+
+# Intermezzo: Unicode, UTF-8, UTF-16, UTF-32????
+
+*Unicode* is a computing industry standard for the consistent encoding, representation, and handling of text expressed in most of the world's writing systems. It assigns a unique number, or **code point**, to each character, no matter the platform, program, or language.
+
+And UTF? UTF stands for **Unicode Transformation Format**. This format specifies how to represent these code points in binary (= sequence of bytes). The most common UTF forms are UTF-8, UTF-16, UTF-32.
+
+More details on this clear described blog: [Unicode - UTF-8, UTF-16 and UTF32](https://www.geeksforgeeks.org/computer-organization-architecture/what-is-unicode/).
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+1. Create a new column called `color_ring_complete` containing color ring information in this format:
+`background_color`+`inscription_color`+`"("`+`color_ring`+`")"`, e.g. RW(FJAC)
+
+2. All color rings have length 4: check it if you don't believe it! But are they all **4-letter only**? And is the third letter always an "A"?
+
+3. Do the color rings contain at least a digit?
+
+4. Create a new column called `digit` containing the first digit, if any, as a number.
+
+Extra: again, by combining dplyr and stringr, select the birds whose color rings satisfy the conditions in (2).
+
+---
+class: left, top
+
+## Intermezzo: the power of regex
+
+*regex* what?? REGular EXpresssions! Go to page 2 of the cheatsheet.
+
+![:scale 70%]({{ site.baseurl}}/assets/images/20200924/20200924_stringr_cheatsheet_regex.png)
+
+```
+example_string <- "I. love. the. 2025(!!) INBO. Coding. Club! Session. of. 27/11/2025...."
+```
+
+---
+class: left, top
+
+## Intermezzo: the power of regex
+
+On internet you can find a lot of tutorials about regex. Check for example the ["Learn RegEx with Real Life Examples"](https://www.freecodecamp.org/news/practical-regex-guide-with-real-life-examples/) provided by freecodecamp.
+
+Some websites you can use to test regex expressions:
+
+- https://regex101.com/
+
+- https://regexr.com/ (more complex, but very complete)
+
+Or, if you want to do all in RStudio, the stringr function `str_view()` is your friend. Example:
+
+```r
+example_string <- "I. love. the. 2025(!!) INBO. Coding. Club! Session. of. 27/11/2025...."
+str_view(example_string, "[:digit:]")
+str_view(example_string, "\\d{4}", html = TRUE)
+```
+
+Challenge yourself by solving regular expressions online via https://www.hackerrank.com/domains/regex
+
+Do you use other regex resources? Shoot it and add the links in the hackmd. I will be happy to improve this slide and the "Resources" slide at the end.
+
+
+---
+class: left, top
+
+## Intermezzo: regex in real life
+
+Real life example: how to extract the version number from the URL of the used [Camtrap Data Package](https://camtrap-dp.tdwg.org/) profile version? Example, how to extract the expected outputs from these URLs?
+
+- URL1: "https://rs.gbif.org/sandbox/data-packages/camtrap-dp/1.0/profile/camtrap-dp-profile.json". Output: 1.0
+
+- URL2: "a/b/c/d1d/cam/3.0.5/camtrap-dp-profile.json". Output: 3.0.5
+
+- URL3: "a/b/c/d1d/cam/v2/camtrap-dp-profile.json". Output: NA
+
+- URL 4: "a/b/c/d1.d/cam/3.0.5/camtrap-dp-profile.json". Output: 3.0.5
+
+- URL 5: "cam/12.4.0.999/camtrap-dp-profile.json". Output: 12.4.0
+
+Rules: a version number is composed of two or three numbers separatd by a dot.
+
+Solving this example required some complex regex expressions and is part of the Bonus Challenges. Still, this was a real situation! See [GitHub issue](https://github.com/inbo/camtraptor/issues/295).
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3A
+
+Are you bored of working with bird rings? Maybe you find cleaning scientific names something more similar to your daily tasks.This challenge is for you!
+
+Matching scientific names against the GBIF Taxonomy Backbone fails sometimes just because the provided scientific name contains abbreviations like "sp.", "spec.", "indet.", "cf", "nov.", "ined". Try to clean the names provided in 20251127_scientificnames.txt by removing such abbreviations.
+
+Ensure also that the resulting scientific names have no whitespaces at the start or at the end and also that they have single spaces between words. Hint: Check the cheatsheet to find the stringr function to remove all these whitespaces.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Bonus challenge  - bird rings again!
+
+1. The dots in color rings (column `color_ring_dots`), e.g. `KRO.C`, `KZ.AC`, are used for improving readibility. Apart from that, the values in column `color_ring_dots` should be exactly the same as the ones in column `color_ring`. Find anomalies.
+
+2. Some metal rings (column `metal_ring`) start with one or more asterisks. Remove them.
+
+3. Find color rings (column `color_ring`) containing two consecutive vowels.
+
+
+---
+class: left, top
+
+# Resources
+
+- Extended and commented solutions will be soon available.
+- The edited video recording will be soon available on our [vimeo channel](https://vimeo.com/user/8605285/folder/1978815).
+- The official [stringr](https://stringr.tidyverse.org/) website.
+- The beautiful [artwork collections](https://allisonhorst.com/) of Allison Horst.
+- ["Learn RegEx with Real Life Examples"](https://www.freecodecamp.org/news/practical-regex-guide-with-real-life-examples/): freecodecamp tutorial about regex.
+- Two widely used online regex testers: https://regex101.com/ and https://regexr.com/.
+- All kind of [regex exercises](https://www.hackerrank.com/domains/regex).
+
+---
+class: left, top
+
+# INBO coding club core team member wanted
+
+Dirk, Emma, Raïsa, Amber are searching a new mate to replace Hans.
+
+- Is your team still not represented in the core team?
+
+- Do you like to shape the INBO coding club of the future?
+
+- You do absoultely **NOT** need to be an R expert. Actually, better not!
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20251127/2024013_team_members_wanted.png)
+
+---
+class: left, top
+
+# The R tip of the month. Part 1
+
+We were used to call this chapter "R package of the month". But, not only R packages are worth of attention. This is the case of the [R-Graph-Gallery](https://r-graph-gallery.com/) of [Holtz Yan](https://github.com/holtzy)!
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20251127/20251127_The-R-Graph-Gallery.png)
+
+Are you a Python user? Maybe you could have a look to the [Python Graph Gallery](https://python-graph-gallery.com/) as well.
+
+
+---
+class: left, top
+
+# The R tip of the month. Part 2
+
+But that is just half of the story. First, we need to choose the most appropriate graph for our data, not always an easy step. [From Data to Viz](https://www.data-to-viz.com/) can really help us in the decision process.
+
+![:scale 110%]({{ site.baseurl}}/assets/images/20251127/20251127_From-data-to-Viz.png)
+
+---
+class: left, top
+
+# EBR III
+
+Come with us to the [Empowering Biodiversity Research III](https://www.biodiversity.be/EBRIII/)! See mail of Dimi about group registration.
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20251127/20251127_EBRIII.png)
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.19 - Paul Van Ostaijen<br>
+Date: __29/02/2024__, van 10:00 tot 12:30<br>
+Subject: **to be decided** <br>
+(registration announced via DG_useR@inbo.be)
