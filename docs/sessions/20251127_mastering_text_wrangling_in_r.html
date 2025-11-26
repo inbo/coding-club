@@ -138,8 +138,8 @@ No R script to start with today. Just read files:
 ```r
 library(tidyverse)
 
-birds <- read_tsv("./data/20251127/20251127_bird_rings.txt")
-sc_names_df <- read_tsv("./data/20251127/20251127_scientificnames.txt")
+birds <- read_tsv("./data/20251127/20251127_bird_rings.tsv")
+sc_names_df <- read_tsv("./data/20251127/20251127_scientificnames.tsv")
 View(sc_names_df) # Column `comment` gives you an idea about what you should clean
 sc_names <- sc_names_df$scientific_name
 ```
@@ -282,7 +282,7 @@ class: left, top
 
 3. Find color rings (column `color_ring`) containing two consecutive vowels.
 
-4. How to extract the version number from the URLs provided in the [intermezzo slide](https://coding-club.inbo.be/sessions/20251127_mastering_text_wrangling_in_r.html#19)?
+4. How to extract the version number from the URLs provided in the [intermezzo slide](https://coding-club.inbo.be/sessions/20251127_mastering_text_wrangling_in_r.html#18)?
 
 ---
 class: left, top
