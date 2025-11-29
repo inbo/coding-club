@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2025-11-27 | mastering text wrangling in R | [slides]({{ site.baseurl }}{% link sessions/20251127_mastering_text_wrangling_in_r.html  %}) | [hackmd](https://hackmd.io/D46xpmDFR0KY0p5DL1SQRA?view) | 01.23 - Léon Stynen | [vimeo](https://vimeo.com/1141705801?share=copy&fl=sv&fe=ci)  |
+| 2025-11-27 | mastering text wrangling in R | [slides]({{ site.baseurl }}{% link sessions/20251127_mastering_text_wrangling_in_r.html  %}) | [hackmd](https://hackmd.io/D46xpmDFR0KY0p5DL1SQRA?view) | 01.23 - Léon Stynen | [vimeo](https://vimeo.com/1141705801)  |
 | 2025-10-28 | Rmarkdown your report | [slides]({{ site.baseurl }}{% link sessions/20251028_rmarkdown_your_report.html  %}) | [hackmd](https://hackmd.io/@damianooldoni/rJMiAk6Tlx?view) | 01.17 - Clara Peeters |  |
 | 2025-09-25 | purrr-fectly functional | [slides]({{ site.baseurl }}{% link sessions/20250925_purrr.html  %}) | [hackmd](https://hackmd.io/w6HbM28FSnSxPOL2LtRNwg?view) | 01.17 - Clara Peeters | [vimeo](https://vimeo.com/1125502081?share=copy) |
 | 2025-08-26 | visualise spatial data in R | [slides]({{ site.baseurl }}{% link sessions/20250826_visualise_spatial_data_in_r.html  %}) | [hackmd](https://hackmd.io/DsuDuIKjS4uPkg8CWQdUAA?view) | 01.72 - Kaat Tilley | [vimeo](https://vimeo.com/1115398489?share=copy#t=0) |
