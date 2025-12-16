@@ -246,7 +246,7 @@ class: left, top
 
 # Challenge 2 - Parquet, arrow and dplyr
 
-Use the [arrow](https://arrow.apache.org/docs/r/) R package and dplyr to open and explore the Parquet file `20251216_gbif_parquet_be_2022`:
+Use the [arrow](https://arrow.apache.org/docs/r/) R package and dplyr to open and explore the Parquet file `20251216_gbif_parquet_be_2022`. It contains all occurrences with spatial coordinates and no geospatial issues taken in Belgium from 2023 and it's 201MB. Be sure to have enough disk space. Derived from GBIF download with `downloadKey` [0054090-251120083545085](https://www.gbif.org/occurrence/download/0054090-251120083545085)) using [rgbif](https://docs.ropensci.org/rgbif/).
 
 1. What are the columns in the GBIF dataset? Hint: same as you do with a standard data frame in R.
 2. How many occurrences are in the GBIF dataset?
@@ -256,10 +256,6 @@ Use the [arrow](https://arrow.apache.org/docs/r/) R package and dplyr to open an
 6. Repeat 5 but take into account only occurrences with datetime specified up to the day (i.e. ignore occurrences with only year or year and month specified).
 7. How many occrrences are per occurrence status?
 
-Hint: Follow the blog post [Using Apache Arrow and Parquet with GBIF-mediated occurrences](https://data-blog.gbif.org/post/apache-arrow-and-parquet/). Opening the snapshot could take a while, be patient!
-
-2. Download the Parquet file (downloadKey: [0054090-251120083545085](https://www.gbif.org/occurrence/download/0054090-251120083545085)) using [rgbif](https://docs.ropensci.org/rgbif/).
-It contains all occurrences with spatial coordinates and no geospatial issues taken in Belgium from 2023 and it's 201MB. Be sure to have enough disk space.
 Hint: check the section "Downloading a simple parquet from GBIF" from the blog post [Using Apache Arrow and Parquet with GBIF-mediated occurrences](https://data-blog.gbif.org/post/apache-arrow-and-parquet/).
 
 ---
