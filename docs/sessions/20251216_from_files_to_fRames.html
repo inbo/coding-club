@@ -100,9 +100,11 @@ class: left, top
 
 ## Cheat sheets or getting started resources
 
-- The "data import cheatsheet" is a cheatsheet for three tidyverse packages: [readr](https://readr.tidyverse.org/), [readxl](https://readxl.tidyverse.org/) and [googlesheets4](https://googlesheets4.tidyverse.org/). Available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20250130_cheat_sheet_data_import.pdf) or [html](https://rstudio.github.io/cheatsheets/html/data-import.html).
+- The "data import cheatsheet" (see image below) is a cheatsheet for three tidyverse packages: [readr](https://readr.tidyverse.org/), [readxl](https://readxl.tidyverse.org/) and [googlesheets4](https://googlesheets4.tidyverse.org/). Available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20250130_cheat_sheet_data_import.pdf) or [html](https://rstudio.github.io/cheatsheets/html/data-import.html).
 - The arrow cheatsheet ([pdf](https://github.com/inbo/coding-club/blob/main/cheat_sheets/20251216_cheat_sheet_arrow)) is less fancy than the tidyverse one, but contains exactly what you need to work with the [arrow](https://arrow.apache.org/docs/r/) R package.
 - The [Getting Started with JSON and jsonlite](https://jeroen.r-universe.dev/articles/jsonlite/json-aaquickstart.html) page is not a cheat sheet, but you don't need more to get started with JSON files in R.
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20251216/20251216_data_import_cheatsheet.png)
 
 ---
 class: left, top
@@ -127,17 +129,13 @@ class: left, top
 
 #  Parquet
 
-What are Parquet files?
+What are Parquet files? From official [Parquet](https://parquet.apache.org/docs/overview/) documentation:
 
 > "Apache Parquet is an open source, column-oriented data file format designed for efficient data storage and retrieval. It provides high performance compression and encoding schemes to handle complex data in bulk and is supported in many programming languages and analytics tools."
 
-Cited from official [Parquet](https://parquet.apache.org/docs/overview/) documentation.
-
-But why the R package is called Arrow? What's Arrow actually?
+But why the R package is called Arrow? What's Arrow actually? From official [Arrow](https://arrow.apache.org/) documentation:
 
 > "Apache Arrow defines a language-independent columnar memory format for flat and nested data, organized for efficient analytic operations on modern hardware like CPUs and GPUs."
-
-Cited from official [Arrow](https://arrow.apache.org/) documentation.
 
 Parquet is optimized for "data at rest" while Arrow is optimized for "data in motion" - and they're designed to work together as part of a unified data pipeline: 
 many modern data tools use this combination - storing data in Parquet format on disk for efficient storage and querying, while using Arrow format in memory for fast processing.
@@ -152,6 +150,8 @@ It is a lightweight data-interchange format that is easy for humans to read and 
 It is often used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa). 
 
 One example: GBIF API responses! Example: info about an occurrence via `occurrenceID`: [5908536615](https://api.gbif.org/v1/occurrence/5908536615). Corresponding web page: https://www.gbif.org/occurrence/5908536615.
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20251216/20251216_example_json.png)
 
 ---
 class: left, top
@@ -168,7 +168,7 @@ class: left, top
 
 # Data and code files description
 
-1. Zenodo deposit [MH_ANTWERPEN - Western marsh harriers (Circus aeruginosus, Accipitridae) breeding near Antwerp (Belgium)](https://zenodo.org/records/10054153)*: an INBO bird tracking dataset. It contains animal tracking data collected by the LifeWatch GPS tracking network for [large birds](http://lifewatch.be/en/gps-tracking-network-large-birds) for the project/study "MH_ANTWERPEN".
+1. Zenodo deposit [MH_ANTWERPEN - Western marsh harriers (Circus aeruginosus, Accipitridae) breeding near Antwerp (Belgium)](https://zenodo.org/records/10054153)*: an INBO bird tracking dataset. It contains animal tracking data collected by the LifeWatch GPS tracking network for [large birds](http://lifewatch.be/en/gps-tracking-network-large-birds).
 2. [20251216_MH_ANTWERPEN-gps-2018.csv.gz](https://github.com/inbo/coding-club/blob/master/data/20251226/20251216_MH_ANTWERPEN-gps-2018.csv.gz): compressed CSV file with GPS tracking data. Same as `MH_ANTWERPEN-gps-2018.csv.gz` in the Zenodo deposit.
 3. [GBIF occurrence download](https://doi.org/10.15468/dl.kcdrmt) as Parquet file. It contains all occurrences with spatial coordinates and no geospatial issues taken in Belgium from 2023**.
 4. [20251216_list_butterflies](https://docs.google.com/spreadsheets/d/1hUd_qWIQ5Lg1g1cfxKyBkD56iUU9lcVeKV6bkN02Ing/edit?usp=sharing): Google Sheet with butterfly species observed during transect counts in 2024 and 2025. Totally made up data!
@@ -184,7 +184,7 @@ class: left, top
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
 class: left, top
 
-# Challenge 1 - zenodo, readr and JSON
+# Challenge 1A - zenodo and readr
 
 We know to read tabular data locally saved on our machine using readr. But readr can do more! And that's what we will explore now.
 Go to the Zenodo deposit [MH_ANTWERPEN - Western marsh harriers (Circus aeruginosus, Accipitridae) breeding near Antwerp (Belgium)](https://zenodo.org/records/10054153) (zenodo DOI: https://doi.org/10.5281/zenodo.3550093)
@@ -195,13 +195,20 @@ Pay attention to the column specifications. They must be the same as described i
 specified in the zenodo metadata, `"%Y-%m-%d %H:%M:%S.%f"`, is not supported by readr. Check documentation of lubridate::parse_date_time() to see how to handle fractional seconds__ in R.
 2. Use readr package to read the GPS zipped file `20251216_MH_ANTWERPEN-gps-2018.csv.gz` into R as a data frame called `gps_data`.
 3. Use readr package to read the same file (without prefix `20251216_`) from the zenodo into R as a data frame called `gps_data_url`.
-4. Use jsonlite to read the `datapackage.json` file from the zenodo into R as a list called `metadata`. 
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1B - zenodo, jsonlite and inborutils
+
+1. Use jsonlite to read the `datapackage.json` file from the zenodo into R as a list called `metadata`. 
 If you did everything correct, you should get a list of 3 elements: `id`, `profile` and `resources`. 
 Explore it and compare it with the `datapackage.json` file on zenodo.
-5. Sometimes you need to download a zenodo deposit programmatically: there is a function in our loved [inborutils](https://inbo.github.io/inborutils/reference/index.html) R package, didnt' you know?
+2. Sometimes you need to download a zenodo deposit programmatically: there is a function in our loved [inborutils](https://inbo.github.io/inborutils/reference/index.html) R package, didnt' you know?
 Find it and use it to download the entire zenodo deposit into the folder `data/20251216/mh_antwerpen_data`.*
 
-<small>* Thanks Hans and Floris to write this function!</small>
+<small>* Thanks Hans and Floris to write this very useful function!</small>
 
 ---
 class: left, top
@@ -215,7 +222,7 @@ __Frictionless Data Package__ is the fundamental building block of Frictionless.
 A Data Package is a simple container format and standard to describe and package a collection of (tabular) data. It is typically used to publish FAIR and open datasets.
 
 Standards based on Frictionless Data Package exist for specific domains:
-- Camera traps data exported by Agouti are a specific type of Frictionless Data Package, called Camera Trap Data Package.
+- [Camera Trap Data Package](https://camtrap-dp.tdwg.org/): a community-developed data exchange format for camera trap data. A Camtrap DP is a Frictionless Data Package. a specific type of Frictionless Data Package.
 - [Darwin Core Data Package](https://gbif.github.io/dwc-dp/#dp) (DwC-DP): an exchange format for biodiversity data. It extends the Frictionless Data Package specification as an implementation for the Darwin Core Conceptual Model. In Public Review phase: it will be the future of GBIF data downloads!
 
 ---
@@ -235,8 +242,6 @@ class: left, top
 
 # Challenge 2 - Parquet and arrow
 
-
-Use the [latest gbif snapshot]("s3://gbif-open-data-eu-central-1/occurrence/2021-11-01/occurrence.parquet"), the [arrow](https://arrow.apache.org/docs/r/) R package and dplyr functions to answer the following questions:
 
 1. How many occurrences are in the dataset?
 2. How many unique species are in the dataset?
@@ -283,23 +288,19 @@ Use [readxl](https://readxl.tidyverse.org/) R package to load the data from the 
 - section: transect section identifier
 - n: number of individuals observed
 
-The Excel file is a great example of dataset which is very readable by humans, but in a "messy format" for computers. Can you tidy it up? Apply the tidy data principles *:
-
-> Tidy datasets are easy to manipulate, model and visualize, and have a specific structure: each variable is a column, each observation is a row, and each type of observational unit is a table.
+The Excel file is a great example of dataset which is very readable by humans, but in a "messy format" for computers. Can you tidy it up? Apply the tidy data principles mentioned in challenge 3A.
 
 Aside the transect counts, Which are the other observational units contained in the file?
 How to link all tables? You will need to create unique identifiers. Which columns can be used for this?
 This exercise can take a while and can require some other tidyverse packages e.g. tidyr, dplyr, stringr, purrr.
 
-<small> \* More info about tidy data in ["Tidy Data"](https://vita.had.co.nz/papers/tidy-data.pdf). Wickham, H. (2014). Tidy Data. Journal of Statistical Software, 59(10), 1-23.
-
 ---
 class: left, top
 
-# Bonus challenge
+# Bonus challenges
 
-Read the zenodo deposit used in challenge 1 using the frictionless R package. 
-It should be very easy to read the "gps" and the "reference-data" resources!
+1. Load the zenodo deposit used in challenge 1 in R using the frictionless R package.  It should be very easy to read the "gps" and the "reference-data" resources!
+2. Try to access the [latest gbif snapshot]("s3://gbif-open-data-eu-central-1/occurrence/2021-11-01/occurrence.parquet") using the [arrow](https://arrow.apache.org/docs/r/) R package. Use some dplyr functions to see how fast you can get the answer. Try e.g. the code in the [GBIF blogpost](https://data-blog.gbif.org/post/apache-arrow-and-parquet/).
 
 ---
 class: left, top
