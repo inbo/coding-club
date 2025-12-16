@@ -197,7 +197,7 @@ Go to the Zenodo deposit [MH_ANTWERPEN - Western marsh harriers (Circus aerugino
 1. Use readr package to read the file `MH_ANTWERPEN-reference-data.csv` into R as a data frame called `ref_data`.
 Pay attention to the column specifications. They must be the same as described in the zenodo `datapackage.json
 `. Hint: see the section "Column specification with readr" in the data import cheatsheet. Notice also that the datetime format as
-specified in the zenodo metadata, `"%Y-%m-%d %H:%M:%S.%f"`, is not supported by readr. Check documentation of lubridate::parse_date_time() to see how to handle __fractional seconds__ in R.
+specified in the zenodo metadata, `"%Y-%m-%d %H:%M:%S.%f"`, is not supported by readr. Check lubridate [documentation](https://lubridate.tidyverse.org/reference/parse_date_time.html#details) to see how to handle __fractional seconds__ in R. lubridate is not needed though.
 2. Use readr package to read the GPS zipped file `20251216_MH_ANTWERPEN-gps-2018.csv.gz` into R as a data frame called `gps_data`.
 3. Use readr package to read the same file (without prefix `20251216_`) from zenodo into R as a data frame called `gps_data_url`.
 
