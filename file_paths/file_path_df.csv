@@ -214,7 +214,6 @@ data/20250130/20250130_transect_counts.csv,20250130_transect_counts.csv,data,202
 data/20250130/20250130_butterfly_transect_counts_raw.xls,20250130_butterfly_transect_counts_raw.xls,data,20250130
 data/20250224/20250224_craywatch_raw.txt,20250224_craywatch_raw.txt,data,20250224
 data/20250224/20250224_craywatch_cleaned.txt,20250224_craywatch_cleaned.txt,data,20250224
-src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 data/20250325/20250325_occs_benelux.tsv,20250325_occs_benelux.tsv,data,20250325
 data/20250325/20250325_species_in_BE.tsv,20250325_species_in_BE.tsv,data,20250325
 data/20250424/20250424_protected_areas_BE.gpkg,20250424_protected_areas_BE.gpkg,data,20250424
@@ -228,7 +227,10 @@ data/20250826/20250826_giant_hogweed_per_municipality.gpkg,20250826_giant_hogwee
 data/20250925/20250925_gbif_occs.csv,20250925_gbif_occs.csv,data,20250925
 data/20251127/20251127_scientificnames.tsv,20251127_scientificnames.tsv,data,20251127
 data/20251127/20251127_bird_rings.tsv,20251127_bird_rings.tsv,data,20251127
+data/20251216/20251226_butterfly_transect_counts_raw.xls,20251226_butterfly_transect_counts_raw.xls,data,20251226
+data/20251216/20251216_MH_ANTWERPEN-gps-2018.csv.gz,20251216_MH_ANTWERPEN-gps-2018.csv.gz,data,20251216
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
+src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
 src/20180222/20180222_import_spreadsheets.R,20180222_import_spreadsheets.R,src,20180222
 src/20180426/20180426_challenges.R,20180426_challenges.R,src,20180426
@@ -448,3 +450,4 @@ src/20250925/20250925_challenges.R,20250925_challenges.R,src,20250925
 src/20250925/20250925_challenges_solutions.R,20250925_challenges_solutions.R,src,20250925
 src/20251028/20251028_challenges.R,20251028_challenges.R,src,20251028
 src/20251127/20251127_challenges_solutions.R,20251127_challenges_solutions.R,src,20251127
+src/20251216/20251216_challenges.R,20251216_challenges.R,src,20251216
