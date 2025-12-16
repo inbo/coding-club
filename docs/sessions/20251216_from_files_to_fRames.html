@@ -25,7 +25,7 @@ or see https://jekyllrb.com/docs/liquid/tags/#links.
 <!--  Adjust the room number and name  -->
 Herman Teirlinck<br>
 01.71 - Frans Breziers<br>
-Christmas edition  🎅
+Christmas edition 🎅
 
 ---
 class: left, top
@@ -194,7 +194,7 @@ class: left, top
 We know to read tabular data locally saved on our machine using readr. But readr can do more! And that's what we will explore now.
 Go to the Zenodo deposit [MH_ANTWERPEN - Western marsh harriers (Circus aeruginosus, Accipitridae) breeding near Antwerp (Belgium)](https://zenodo.org/records/10054153) (zenodo DOI: https://doi.org/10.5281/zenodo.3550093)
 
-1. Use readr package to read the file `MH_ANTWERPEN_tracking_data.csv` into R as a data frame called `ref_data`.
+1. Use readr package to read the file `MH_ANTWERPEN-reference-data.csv` into R as a data frame called `ref_data`.
 Pay attention to the column specifications. They must be the same as described in the zenodo `datapackage.json
 `. Hint: see the section "Column specification with readr" in the data import cheatsheet. Notice also that the datetime format as
 specified in the zenodo metadata, `"%Y-%m-%d %H:%M:%S.%f"`, is not supported by readr. Check documentation of lubridate::parse_date_time() to see how to handle __fractional seconds__ in R.
