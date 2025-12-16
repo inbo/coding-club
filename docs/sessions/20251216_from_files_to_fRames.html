@@ -182,7 +182,7 @@ class: left, top
 <small>\* Spanoghe, G., Desmet, P., Milotic, T., Janssens, K., De Regge, N., Vanoverbeke, J., & Bouten, W. (2023). MH_ANTWERPEN - Western marsh harriers (Circus aeruginosus, Accipitridae) breeding near Antwerp (Belgium) [Data set]. Research Institute for Nature and Forest (INBO). https://doi.org/10.5281/zenodo.10054153
 </small>
 
-<small>\*\* Derived from "GBIF.org (15 December 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.kcdrmt"</small>
+<small>\*\* Derived from "GBIF.org (15 December 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.kcdrmt</small>
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -196,9 +196,9 @@ Go to the Zenodo deposit [MH_ANTWERPEN - Western marsh harriers (Circus aerugino
 1. Use readr package to read the file `MH_ANTWERPEN_tracking_data.csv` into R as a data frame called `ref_data`.
 Pay attention to the column specifications. They must be the same as described in the zenodo `datapackage.json
 `. Hint: see the section "Column specification with readr" in the data import cheatsheet. Notice also that the datetime format as
-specified in the zenodo metadata, `"%Y-%m-%d %H:%M:%S.%f"`, is not supported by readr. Check documentation of lubridate::parse_date_time() to see how to handle fractional seconds__ in R.
+specified in the zenodo metadata, `"%Y-%m-%d %H:%M:%S.%f"`, is not supported by readr. Check documentation of lubridate::parse_date_time() to see how to handle __fractional seconds__ in R.
 2. Use readr package to read the GPS zipped file `20251216_MH_ANTWERPEN-gps-2018.csv.gz` into R as a data frame called `gps_data`.
-3. Use readr package to read the same file (without prefix `20251216_`) from the zenodo into R as a data frame called `gps_data_url`.
+3. Use readr package to read the same file (without prefix `20251216_`) from zenodo into R as a data frame called `gps_data_url`.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
