@@ -80,8 +80,7 @@ required_packages <- c(
     "jsonlite",
     "readxl",
     "googlesheets4",
-    "arrow",
-    "rgbif"
+    "arrow"
 )
 
 # Install packages not yet installed
@@ -104,7 +103,7 @@ class: left, top
 - The arrow cheatsheet ([pdf](https://github.com/inbo/coding-club/blob/main/cheat_sheets/20251216_cheat_sheet_arrow)) is less fancy than the tidyverse one, but contains exactly what you need to work with the [arrow](https://arrow.apache.org/docs/r/) R package.
 - The [Getting Started with JSON and jsonlite](https://jeroen.r-universe.dev/articles/jsonlite/json-aaquickstart.html) page is not a cheat sheet, but you don't need more to get started with JSON files in R.
 
-![:scale 80%]({{ site.baseurl}}/assets/images/20251216/20251216_data_import_cheatsheet.png)
+![:scale 70%]({{ site.baseurl}}/assets/images/20251216/20251216_data_import_cheatsheet.png)
 
 ---
 class: left, top
@@ -160,6 +159,9 @@ class: left, top
 
 - Download everything automatically via `inborutils::setup_codingclub_session()`
 - manually*, from [data/20251216](https://github.com/inbo/coding-club/blob/master/data/20251216/) and [src/20251216](https://github.com/inbo/coding-club/blob/master/src/20251216). Place the R script in your folder `src/20251216/` and data in `data/20251216/`.
+
+There is still a directory from Google Drive you have to download manually: [20251216_gbif_parquet_be_2022](https://drive.google.com/drive/folders/19-wOEEu24zwXqbPxIU1bg_ChG-PFu_KF).
+Place it in your folder `data/20251216/20251216_gbif_parquet_be_2022`.
 
 <small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
@@ -242,6 +244,7 @@ class: left, top
 
 # Challenge 2 - Parquet and arrow
 
+Use the [arrow](https://arrow.apache.org/docs/r/) R package to read and explore the Parquet file `20251216_gbif_parquet_be_2022`.
 
 1. How many occurrences are in the dataset?
 2. How many unique species are in the dataset?
@@ -276,7 +279,6 @@ Variable = column; Observation = row; Observational unit = table (data frame).
 <small> \* More info about tidy data in ["Tidy Data"](https://vita.had.co.nz/papers/tidy-data.pdf). Wickham, H. (2014). Tidy Data. Journal of Statistical Software, 59(10), 1-23.
 </small>
 
-
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
@@ -300,7 +302,8 @@ class: left, top
 # Bonus challenges
 
 1. Load the zenodo deposit used in challenge 1 in R using the frictionless R package.  It should be very easy to read the "gps" and the "reference-data" resources!
-2. Try to access the [latest gbif snapshot]("s3://gbif-open-data-eu-central-1/occurrence/2021-11-01/occurrence.parquet") using the [arrow](https://arrow.apache.org/docs/r/) R package. Use some dplyr functions to see how fast you can get the answer. Try e.g. the code in the [GBIF blogpost](https://data-blog.gbif.org/post/apache-arrow-and-parquet/).
+2. In Challenge 2, you downloaded a Parquet file from Google Drive manually. How to do it programmatically in R? Hint: use the [googledrive](https://googledrive.tidyverse.org/) R package to download the file from Google Drive.
+3. Try to access the [latest gbif snapshot]("s3://gbif-open-data-eu-central-1/occurrence/2021-11-01/occurrence.parquet") using the [arrow](https://arrow.apache.org/docs/r/) R package. Use some dplyr functions to see how fast you can get the answer. Try e.g. the code in the [GBIF blogpost](https://data-blog.gbif.org/post/apache-arrow-and-parquet/) or try to get the same results as in challenge 2.
 
 ---
 class: left, top
@@ -329,7 +332,7 @@ class: left, top
 - [inborutils](https://inbo.github.io/inborutils/): INBO made R package with utility functions, among others downloading zenodo files.
 - [frictionless](https://docs.ropensci.org/frictionless/): R package to work with Frictionless Data Packages.
 - [Camtrap DP](https://camtrap-dp.tdwg.org/): Data exchange format for camera trap data, a specific type of Frictionless Data Package.
-- [rgbif](https://docs.ropensci.org/rgbif/): R package to interface with GBIF API, among others to download occurrence downloads as Parquet files.
+- [googledrive](https://googledrive.tidyverse.org/): R package to interact with Google Drive.
 - [Officer](https://davidgohel.github.io/officer/): R package to manipulate and format Word documents.
 
 ---
@@ -338,7 +341,7 @@ class: center, middle
 ![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
 
 <!--  Adjust the room number and name  -->
-Room:  HT - 01.17 - Clara Peeters <br>
-Date: __25/09/2025__, van __10:00__ tot __12:30__ <br>
+Room:  HT - 01.55 - Hilda Ram <br>
+Date: __26/01/2026 Monday(!)__, van __10:00__ tot __12:30__ <br>
 Subject: not yet decided <br>
 (registration announced via DG_useR@inbo.be)
