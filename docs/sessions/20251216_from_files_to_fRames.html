@@ -172,7 +172,7 @@ class: left, top
 
 1. Zenodo deposit [MH_ANTWERPEN - Western marsh harriers (Circus aeruginosus, Accipitridae) breeding near Antwerp (Belgium)](https://zenodo.org/records/10054153)*: an INBO bird tracking dataset. It contains animal tracking data collected by the LifeWatch GPS tracking network for [large birds](http://lifewatch.be/en/gps-tracking-network-large-birds).
 2. [20251216_MH_ANTWERPEN-gps-2018.csv.gz](https://github.com/inbo/coding-club/blob/master/data/20251226/20251216_MH_ANTWERPEN-gps-2018.csv.gz): compressed CSV file with GPS tracking data. Same as `MH_ANTWERPEN-gps-2018.csv.gz` in the Zenodo deposit.
-3. [GBIF occurrence download](https://doi.org/10.15468/dl.kcdrmt) as Parquet file. It contains all occurrences with spatial coordinates and no geospatial issues taken in Belgium from 2023**.
+3. [20251216_gbif_parquet_be_2022](https://drive.google.com/drive/folders/19-wOEEu24zwXqbPxIU1bg_ChG-PFu_KF?usp=drive_link): Parquet file containing all occurrences with spatial coordinates and no geospatial issues taken in Belgium from 2023**.
 4. [20251216_list_butterflies](https://docs.google.com/spreadsheets/d/1hUd_qWIQ5Lg1g1cfxKyBkD56iUU9lcVeKV6bkN02Ing/edit?usp=sharing): Google Sheet with butterfly species observed during transect counts in 2024 and 2025. Totally made up data!
 5. [20251226_butterfly_transect_counts_raw.xls](https://github.com/inbo/coding-club/blob/master/data/20251226/20251226_butterfly_transect_counts_raw.xls): Excel file with butterfly transect counts.
 6. [20251216_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20251216/20251216_challenges.R): R script to start from.
@@ -242,14 +242,17 @@ Move to Bonus challenge 1 if you cannot wait using it to import the zenodo packa
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
-# Challenge 2 - Parquet and arrow
+# Challenge 2 - Parquet, arrow and dplyr
 
-Use the [arrow](https://arrow.apache.org/docs/r/) R package to read and explore the Parquet file `20251216_gbif_parquet_be_2022`.
+Use the [arrow](https://arrow.apache.org/docs/r/) R package and dplyr to open and explore the Parquet file `20251216_gbif_parquet_be_2022`:
 
-1. How many occurrences are in the dataset?
-2. How many unique species are in the dataset?
-3. What are the top 10 most observed species in terms of number of occurrences?
-4. What is the temporal coverage of the dataset (min and max year of observation)?
+1. What are the columns in the GBIF dataset? Hint: same as you do with a standard data frame in R.
+2. How many occurrences are in the GBIF dataset?
+3. How many unique species are in the GBIF dataset?
+4. What are the top 10 most observed species in terms of number of occurrences? Do not take into account observations at higher rank: species must be not NA.
+5. What is the temporal coverage of the GBIF dataset (min and max datetime of observation)?
+6. Repeat 5 but take into account only occurrences with datetime specified up to the day (i.e. ignore occurrences with only year or year and month specified).
+7. How many occrrences are per occurrence status?
 
 Hint: Follow the blog post [Using Apache Arrow and Parquet with GBIF-mediated occurrences](https://data-blog.gbif.org/post/apache-arrow-and-parquet/). Opening the snapshot could take a while, be patient!
 
@@ -302,7 +305,7 @@ class: left, top
 # Bonus challenges
 
 1. Load the zenodo deposit used in challenge 1 in R using the frictionless R package.  It should be very easy to read the "gps" and the "reference-data" resources!
-2. In Challenge 2, you downloaded a Parquet file from Google Drive manually. How to do it programmatically in R? Hint: use the [googledrive](https://googledrive.tidyverse.org/) R package to download the file from Google Drive.
+2. We downloaded the Parquet file for challenge 2 from Google Drive manually. How to do it programmatically in R? Use the [googledrive](https://googledrive.tidyverse.org/) R package to download the file from Google Drive. It can take a while.
 3. Try to access the [latest gbif snapshot]("s3://gbif-open-data-eu-central-1/occurrence/2021-11-01/occurrence.parquet") using the [arrow](https://arrow.apache.org/docs/r/) R package. Use some dplyr functions to see how fast you can get the answer. Try e.g. the code in the [GBIF blogpost](https://data-blog.gbif.org/post/apache-arrow-and-parquet/) or try to get the same results as in challenge 2.
 
 ---
