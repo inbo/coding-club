@@ -10,8 +10,11 @@
 
 #### 4 weeks before coding club
 
-*   Define a topic (e.g. "_data wrangling_",...) and the level (introductory, intermediate or advanced). Provide this information to the session info in this sheet.
-*   Create a new column [in the subscription table](https://docs.google.com/spreadsheets/d/1D80p7lxLUnWUxEkTIYOMhhYdL39kZOKgKmLOXsr4HGM/edit) and provide subscription/waiting list as function of the room space availability
+*   Create a form to allow club members to vote the topic of the next coding club session. You can use this [Google Form template](https://docs.google.com/forms/d/1u8wP32Ec8KDlV-PzayEoVYsnLNBCIht0JtDdHfHls-I/edit).
+
+#### 3 weeks before coding club
+
+*   Create a new column [in the subscription table](https://docs.google.com/spreadsheets/d/1D80p7lxLUnWUxEkTIYOMhhYdL39kZOKgKmLOXsr4HGM/edit) and provide subscription/waiting list as function of the room space availability.
 *   Sent out an invitation mail to dg_user@inbo.be AND all email addresses listed on the [external_invites sheet of the subscription sheets](https://docs.google.com/spreadsheets/d/1D80p7lxLUnWUxEkTIYOMhhYdL39kZOKgKmLOXsr4HGM/edit#gid=337239598). Introduce the topic, the complexity level and add a link to the subscription table. Add the [coding club logo]({{ site.baseurl }}{% link /assets/images/coding_club_logo_1.png %}) to the mail.
 
 #### Within 1 week before coding club
@@ -24,13 +27,14 @@
     * When creating the slideshow, serving the website live is possible with setting up a local server in the terminal from `./docs`: `bundle exec jekyll serve --baseurl ""` (make sure to have Ruby (with Devkit, version <= 2.7), with the gems `jekyll`, `jekyll-theme-minimal` and `github-pages` installed ). Info on the theme used is available [here](https://github.com/pages-themes/minimal).
 * Set up 3 challenges (we experienced that 3 is mostly enough for a 2 hour session) with an increasing complexity:
     *   Explain the challenges in the slideshow
-    *   Provide a draft working script in a file `yyyymmdd_challenges.R` and add it to the `src` folder
-    *   Provide example solutions in a file `yyyymmdd_solutions.R` for yourself
+    *   Provide a draft working script in a file `yyyymmdd_challenges.R` and add it to the `src` folder.
+    *   Provide example solutions in a file `yyyymmdd_challenges_solutions.R` for yourself. Do not share it before the coding club session!
     *   If the challenge uses new datasets, add them to the [data](https://github.com/inbo/coding-club/tree/master/data) folder. Use consistent naming, e.g. `yyyymmdd_topic_with_underscores_lower_case.csv`
     * If useful, provide a script to get started and add it to the  [src](https://github.com/inbo/coding-club/tree/master/src) folder.
-* Update the [session overview page](https://github.com/inbo/coding-club/blob/master/docs/sessions/index.md) overview table with the date, topic name, slideshow link, hackmd link and location (room).
-*   (Make sure all subscribers do have internet access, otherwise provide them with internet access: for the Hermann Teirlinck building see [https://bezoekers.vonet.be/](https://bezoekers.vonet.be/))
+* Update the [session overview page](https://github.com/inbo/coding-club/blob/master/docs/sessions/index.md) with the date, topic name, slideshow link, hackmd link and location (room).
 *   If a cheat sheet exists about the topic, download it and add it to the [cheat sheet folder](https://github.com/inbo/coding-club/tree/master/cheat_sheets). Use consistent naming, `yyyymmdd_cheat_sheet_topicname.pdf`.
+*   (Make sure all subscribers do have internet access, otherwise provide them with internet access: for the Hermann Teirlinck building see [https://bezoekers.vonet.be/](https://bezoekers.vonet.be/)).
+*  Add `yyyymmdd_challenges_solutions.R` and every new dataset to [`file_path_df.csv`](https://github.com/inbo/coding-club/blob/main/file_paths/file_path_df.csv). In this way participants will be able to download all material easily using the [`setup_codingclub_session()`](https://inbo.github.io/inborutils/reference/setup_codingclub_session.html) function from the [`inborutils`](https://inbo.github.io/inborutils/) package.
 
 __Remark__, when creating links to other files, make sure to use the [jekyll link system](https://jekyllrb.com/docs/liquid/tags/#links) by combining the base url reference with the relative link.
 
@@ -55,11 +59,12 @@ __Remark__, when creating links to other files, make sure to use the [jekyll lin
 #### After coding club
 
 *   Upload the `YYYYMMDD_challenges_solutions.R` file to the [src](https://github.com/inbo/coding-club/tree/master/src) folder.
-*   Edit the video recording of the coding club session
-*   Publish video to INBO Vimeo channel in the dedicated folder called "INBO Coding Club". (Title and settings in template below)
+*   Edit the video recording of the coding club session.
+*   Publish video to INBO Vimeo channel in the dedicated folder called "INBO Coding Club". (Title and settings in template below).
+*   Update the [session overview page](https://github.com/inbo/coding-club/blob/main/docs/sessions/index.md) with the link to the video.
+*   Send an email to all coding club members to announce that the solutions and the video are online.
 
 ## Templates
-
 
 ### Invitation email example
 
@@ -67,7 +72,7 @@ _change links to proper links_
 
 If your unaware of the coding club existence, make sure to check the [coding club introduction page](https://inbo.github.io/coding-club/) on intranet. In short, the coding club is open to anyone who want to develop R skills in a pleasant and supportive environment to do research more effectively.
 
-The next coding club will take place on __Tuesday 26 February__, room 01.70 - Ferdinand Peeters at Herman Teirlinck (Tour & Taxis Brussels), 10-12h. The topic of this coding club is geospatial data handling in R and more specific working with simple features (sf), also known as vector data (cfr. stored in shapefiles or geojson files). Hence we will try to read in files, transform data, combine the spatial data with non-spatial data, etc. (Notice, making maps will be the topic of a follow-up coding club.)
+The next coding club will take place on __Tuesday 26 February__, room 01.70 - Ferdinand Peeters at Herman Teirlinck (Tour & Taxis Brussels), 10am-12:30pm. The topic of this coding club is geospatial data handling in R and more specific working with simple features (sf), also known as vector data (cfr. stored in shapefiles or geojson files). Hence we will try to read in files, transform data, combine the spatial data with non-spatial data, etc. (Notice, making maps will be the topic of a follow-up coding club.)
 
 The concept of the coding club remains the same: everyone works together and learns from each other. We will provide some challenges and appropriate test cases. As always, presence at previous edition is not required to join in this time, you can just jump in this edition as well.
 
@@ -78,6 +83,10 @@ See you all theRe in good shape,
 Raïsa, Emma, Dirk, Hans, Damiano
 
 ![logo]({{site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+### Google Form template
+
+INBO coding club members are invited to vote for choosing the topic of the next coding club. We use Google Form to collect their preferences. We created a [template](https://docs.google.com/forms/d/1u8wP32Ec8KDlV-PzayEoVYsnLNBCIht0JtDdHfHls-I/edit) you can start from.
 
 ### Hackmd template
 
