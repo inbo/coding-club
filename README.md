@@ -17,7 +17,7 @@ The repository structure is described below.
 ```
 ├── README.md                 : Description of this repository
 ├── LICENSE                   : Repository license
-├── cheat_sheets              : Collection of cheatsheets used during sessions
+├── cheat_sheets              : Collection of cheat sheets used during sessions
 │   ├── 20180123_cheat...
 │   └── ...
 ├── docs                      : Coding club website
