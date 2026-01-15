@@ -382,7 +382,15 @@ counts
 # Up to you to save the data.frames `counts`, `events` and `counters` to CSV files :-)
 
 
-# BONUS Challenge ####
+# BONUS Challenges ####
+
+## BC.1 ####
+
+library(frictionless)
+mh_antwerpen_zenodo <- frictionless::read_package("https://zenodo.org/records/10054153/files/datapackage.json")
+
+ref_data_via_frictionless <- frictionless::read_resource(mh_antwerpen_zenodo, "reference-data")
+gps_via_frictionless <- frictionless::read_resource(mh_antwerpen_zenodo, "gps")
 
 library(googledrive)
 
@@ -401,7 +409,8 @@ if (!dir.exists(dest_folder)) {
   dir.create(dest_folder)
 }
 
-# Download all files in the folder (it can take some time)
+## BC.2 ####
+# Download all files from the Google Drive folder (it takes a lot of time, but you can stop the process whenever you want)
 purrr::walk2(
   files_in_folder$id,
   files_in_folder$name,
@@ -411,3 +420,16 @@ purrr::walk2(
       overwrite = TRUE
     )
 )
+
+## BC.3 ####
+# Open the Parquet file from Amazon Web Service "s3://gbif-open-data-eu-central-1/occurrence/2021-11-01/occurrence.parquet"
+# using arrow
+gbif_s3 <- arrow::open_dataset("s3://gbif-open-data-eu-central-1/occurrence/2021-11-01/occurrence.parquet")
+
+# Trying some queries as in Challenge 2
+# This one took a lot of time to execute. As mentioned in the blogpost (https://data-blog.gbif.org/post/apache-arrow-and-parquet/):
+# "A local copy will always run faster than a copy on AWS."
+gbif_s3 %>%
+  dplyr::count() %>%
+  dplyr::collect()
+
