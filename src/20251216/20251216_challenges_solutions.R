@@ -433,3 +433,15 @@ gbif_s3 %>%
   dplyr::count() %>%
   dplyr::collect()
 
+## BC.4 ####
+# This returns an error:
+# "Could not read schema from 'C:/Users/damiano_oldoni/Documents/GitHub/coding-club/data/20251216/occurrence.parquet/000000'"
+gbif_parquet <- arrow::open_dataset("data/20251216/occurrence.parquet")
+
+# Remove the file 000000 and it will work fine!
+remove_file <- "data/20251216/occurrence.parquet/000000"
+if (file.exists(remove_file)) {
+  file.remove(remove_file)
+}
+# Retry to open the Parquet file
+gbif_parquet <- arrow::open_dataset("data/20251216/occurrence.parquet")
