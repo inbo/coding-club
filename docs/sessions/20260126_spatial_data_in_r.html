@@ -1,0 +1,337 @@
+---
+layout: presentation
+title: spatial data in R with sf
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 26 JANUARY 2026
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+
+01.05 - Isala Van Diest
+
+---
+class: left, top
+
+# Reminders
+
+1. Did we confirm the room reservation on the _roomie_?
+2. Did we start the recording?
+
+---
+class: left, top
+
+# The sf package
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20260126/20260126_sf_principle.jpg)
+
+The [sf homepage](https://r-spatial.github.io/sf/) is the best place to start your "spatial" voyage.
+
+---
+class: left, top
+
+# The sf package
+
+sf stays for: _[simple features](https://en.wikipedia.org/wiki/Simple_Features)_, a scary way to express "geographic features", where feature is a scary term to refer to an abstraction of real world phenomena with geometrical properties such as lat/lon (or x-y).
+
+
+---
+class: left, top
+
+## I use sp. Why do you bother me with sf?
+
+- Short answer: because Thierry says so :-)
+- Long answer: sp is not actively maintained anymore. It relied on retired packages (rgdal, rgeos, maptools) and now uses sf as backend instead. So, why not use sf directly?
+
+![:scale 150%]({{ site.baseurl}}/assets/images/20260126/20260126_mail_Thierry.png)
+
+---
+class: left, top
+
+## I use sp. Why do you bother me with sf?
+
+sf is not only the present and the future, but also the recent past!
+
+This [sp-sf migration table](https://github.com/r-spatial/sf/wiki/Migrating) will help you refactoring your code.
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20260126/20260126_migrating_table.png)
+
+---
+class: left, top
+
+Install the package:
+
+```r
+install.packages("sf")
+```
+
+Load the package:
+
+```r
+library(sf)
+```
+
+---
+class: left, top
+
+# Spatial coordinates
+
+Two types of spatial coordinates:
+
+- **projected** (or Cartesian) coordinates: refer to points on a flat space. The coordinates are the distance along the x and y axis
+- **unprojected** or **geographic** coordinates: refer to angles (latitude, longitude) pointing to locations on a sphere (or ellipsoid)
+
+No geospatial data without specifying the **Coordinate Reference System** (CRS) you work with!
+
+And what is a [(map) projection](https://en.wikipedia.org/wiki/Map_projection)? A way to visualize a surface of a sphere on a flat space.
+
+---
+class: left, top
+
+# Projections
+
+A lot of projections exist. Each one has its own purpose. Check this [projection reference](http://www.radicalcartography.net/?projectionref) page by
+Bill Rankin, 2006 containing (almost) all the projections available in ArcGIS.
+
+Example 1: [**Lambert Azimuthal Equal Area**](https://en.wikipedia.org/wiki/Lambert_azimuthal_equal-area_projection), used by the [European Environment Agency](https://www.eea.europa.eu/) (EEA) to provide standard grids of Europe. Parameters: latitude of origin 52° N, longitude of origin 10° E
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20260126/20260126_Lambert_Azimuthal_Equal_Area.png)
+
+---
+class: left, top
+
+# Projections
+
+Example 2: [Lambert coordinate systems](https://nl.wikipedia.org/wiki/Lambertco%C3%B6rdinaten), used by the [Belgian National Geographic Institute](https://ngi.be/) (NGI) to provide standard grids of Belgium. The most important is the Lambert72 (LB72), which has been the most used grid in Flanders/Belgium for over 50 years. Parameters: latitude of origin 49° 18′ 0″ N, longitude of origin 2° 18′ 0″ E.
+
+Did you know that Flemish Authority is [moving towards the Lambert2008 projection](https://www.vlaanderen.be/digitaal-vlaanderen/van-lambert72-naar-lambert2008)?
+
+---
+class: left, top
+
+# Projections: it can get crazy!
+
+What does your favorite [map projection](https://xkcd.com/977/) say about you?
+
+![:scale 23%]({{ site.baseurl}}/assets/images/20260126/20260126_peirce_quincuncial.png)
+
+<small>
+The Peirce quincuncial projection is the conformal map projection from the sphere to an unfolded square dihedron, developed by Charles Sanders Peirce in 1879. Each octant projects onto an isosceles right triangle, and these are arranged into a square. The name quincuncial refers to this arrangement: the north pole at the center and quarters of the south pole in the corners form a quincunx pattern [..] rarely used for geographic purposes. The projection has seen use in digital photography for portraying spherical panoramas (see [example](https://en.wikipedia.org/wiki/Peirce_quincuncial_projection#/media/File:PeircePanorama2007.jpg)).
+
+ __Source__: Wikipedia contributors. (2025, April 1). Peirce quincuncial projection. In Wikipedia, The Free Encyclopedia. Retrieved 20:55, April 23, 2025, from https://en.wikipedia.org/w/index.php?title=Peirce_quincuncial_projection&oldid=1283416404.</small>
+
+---
+class: left, top
+
+# Projections
+
+Some INBOers are so nerdy to collect the map projection cards of [Daniel Huffman](https://somethingaboutmaps.com/). I am one of them :-) Why?
+- Short answer: they are cool.
+- Long answer: they are a perfect example of diversity and change of perspective while looking at things. [“We must constantly look at things in a different way.”](https://www.youtube.com/watch?v=XtYRC00IoUs), just to cite Mr. Keating from the movie _Dead Poets Society_ (1989).
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20260126/20260126_amp_projection_cards.png)
+
+---
+class: left, top
+
+# Projections: CRS & EPSG codes
+
+A common way to specify the CRS is by providing the EPSG (numeric) code or identifier. EPSG stands for European Petroleum Survey Group*, an organization that maintained a geodetic parameter database with standard codes, the EPSG codes, for coordinate systems, datums, spheroids, units and such alike.  There are a lot of EPSG codes! Full list: https://spatialreference.org/
+
+![:scale 45%]({{ site.baseurl}}/assets/images/20260126/20260126_epsg_codes.png)
+
+<small>
+In 2005, the International Association of Oil & Gas Producers (IOGP) absorbed the European Petroleum Survey Group (1986–2005) into its structure as **IOGP Geodesy Subcommittee**. The Geodesy subcommittee kept the name of the EPSG Registry to avoid confusion. Source: chapter "The dilemma thickens" of https://www.spatialsource.com.au/gda2020-and-overcoming-the-web-mercator-dilemma/.
+</small>
+
+
+---
+class: center, top
+
+![:scale 70%]({{ site.baseurl}}/assets/images/20260126/20260126_sf_cheat_sheet.png)<br>
+
+sf [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20211026_cheat_sheet_sf.pdf)
+
+See also this very nice [article with some examples](https://r-spatial.github.io/sf/articles/sf2.html) and the excellent books: [Spatial Data Science With Applications in R](https://r-spatial.org/book/)\* and  [geocomputation with R](https://r.geocompx.org/)\*\*.
+
+<small>
+\* Pebesma, E.; Bivand, R. (2023). Spatial Data Science: With Applications in R (1st ed.). 314 pages. Chapman and Hall/CRC, Boca Raton. https://doi.org/10.1201/9780429459016
+
+\*\* Lovelace, R., Nowosad, J., & Muenchow, J. (2025). Geocomputation with R (Second). CRC Press.
+</small>
+
+---
+class: left, top
+
+## How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+## First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+# Share your code during the coding session
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/acJrz9VVS9e1Mp_ED7pZeQ?both and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/acJrz9VVS9e1Mp_ED7pZeQ?edit" height="400px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub foders [coding-club/data/20260126](https://github.com/inbo/coding-club/tree/master/data/20260126) and [coding-club/src/20260126](https://github.com/inbo/coding-club/tree/master/src/20260126)
+
+<br>
+<small> \* You can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20230228")` to download the coding club material of February, 28 2023. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> \*\* Check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup).</small>
+
+---
+class: left, top
+
+# Data and scripts description
+
+Today we will work with  datasets:
+
+- `20260126_heracleum_BE.tsv` contains GBIF occurrences* of giant hogweed (_Heracleum mantegazzianum_) taken in Belgium from 2024 up to present.
+- `20260126_communesgemeente-belgium.zip` contains the shapefile with the municipalities of Belgium**. Please, unzip it before use.
+- `20260126_protected_areas_BE.gpkg` contains the Natura2000 protected areas of Belgium\*\*\*. Please, unzip it before use.
+
+
+R script:
+
+- `20260126_challenges.R`: code to start with the challenges.
+
+<small>
+__\* __ Derived from GBIF.org (22 April 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.2bptj3.
+<br>
+__\*\* __ Source: https://data.gov.be/nl/datasets/httpswwwodwbbeexploredatasetcommunesgemeente-belgium.
+<br>
+__\*\*\* __ Derived from a geopackage with all European Natura2000 areas: https://www.eea.europa.eu/en/datahub/datahubitem-view/6fc8ad2d-195d-40f4-bdec-576e7d1268e4.
+</small>
+
+---
+class: left, top
+
+# Load libraries
+
+If needed, install them first (`install.packages("package_name")`).
+
+```r
+library(tidyverse)
+library(sf)
+```
+
+We don't cover visualization of spatial data today, but if you want to easily inspect the spatial objects on a map, install and load the [mapview R package](https://r-spatial.github.io/mapview/). Use `mapview()` function to visualize your sf objects:
+
+```r
+library(mapview)
+# one object
+mapview(my_sf_object)
+# more objects = more layers
+mapview(list(my_sf_object1, my_sf_object2, my_sf_object3))
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+ Starting from the code provided in `20260126_challenges.R`:
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3 - Manipulating spatial objects
+
+
+---
+class: left, top
+
+# The package of the month. Your choice!
+
+Do you know that "our" Floris Vanderhaeghe is the maintainer of [qgisprocess](https://r-spatial.github.io/qgisprocess/), a package to provide an R interface to the popular and open source desktop geographic information system (GIS) program [QGIS](https://qgis.org/en/site/). Something 19 (!) people participating to the internal INBO survey would like to learn more about.
+
+qgisprocess has a [cheat sheet](https://r-spatial.github.io/qgisprocess/articles/cheatsheet_en.html) too! Floris also wrote some [slides](https://florisvdh.github.io/foss4g-2023-qgisprocess) presenting the package at the [FOSS4G 2023](https://2023.foss4g.org/) conference.
+
+The package was also the topic of the INBO coding club of December, 2023. See the [slides](https://inbo.github.io/coding-club/sessions/20231214_qgisprocess.html) and the edited [video recording](https://vimeo.com/900825991?share=copy).
+
+![:scale 50%]({{ site.baseurl}}/assets/images/20260126/20260126_qgisprocess_cheatsheet.png)
+
+---
+class: left, top
+
+## Resources
+
+- Edited video recording of the session is on [vimeo](https://vimeo.com/1080856019). Do you know that all INBO coding club video recordings are available on our official [INBO coding club vimeo folder](https://vimeo.com/user/8605285/folder/1978815?isPrivate=false)?
+- Extended [challenges solutions](https://github.com/inbo/coding-club/blob/main/src/20260126/20260126_challenges_solutions.R) are available. You can opt to download them automatically by using `inborutils::setup_codingclub_session("20260126")`.
+- [sf homepage](https://r-spatial.github.io/sf/): the best place to start your "spatial" voyage.
+- sf [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20211026_cheat_sheet_sf.pdf)
+- See also this very nice [article with some examples](https://r-spatial.github.io/sf/articles/sf2.html)
+- Excellent online books: [Spatial Data Science With Applications in R](https://r-spatial.org/book/) and  [geocomputation with R](https://r.geocompx.org/). Printed versions available.
+- [mapview homepage](https://r-spatial.github.io/mapview/) to visualize spatial data.
+- [Daniel Huffman](https://somethingaboutmaps.com/) website, with cartographic material (not necessarily in R).
+- [qgisprocess](https://r-spatial.github.io/qgisprocess/) package to provide an R interface to the popular and open source desktop geographic information system (GIS) program QGIS. Maintained by our INBO colleague, Floris Vanderhaeghe.
+
+
+---
+class: left, top
+
+# Topic of the next coding club: you vote! ✍️
+
+As usual, you can vote among **two topics**. The poll for May's coding club is not yet open. You will receive an email with the link to the poll soon.
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room and date  -->
+Room: 01.72 - Kaat Tilley <br>
+Date: __27/05/2025__, van 10:00 tot 12:30<br>
+Subject: to be decided <br>
+(registration announced via DG_useR@inbo.be)
