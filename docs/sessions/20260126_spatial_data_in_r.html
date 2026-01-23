@@ -244,21 +244,25 @@ class: left, top
 
 Today we will work with  datasets:
 
-- `20260126_heracleum_BE.tsv` contains GBIF occurrences* of giant hogweed (_Heracleum mantegazzianum_) taken in Belgium from 2024 up to present.
-- `20260126_communesgemeente-belgium.zip` contains the shapefile with the municipalities of Belgium**. Please, unzip it before use.
-- `20260126_protected_areas_BE.gpkg` contains the Natura2000 protected areas of Belgium\*\*\*. Please, unzip it before use.
-
-
+- `20260126_occurrences_raccoon_be.tsv` contains GBIF occurrences* of giant hogweed (_Heracleum mantegazzianum_) taken in Belgium from 2024 up to present.
+- `20260126_species_cube_raccoon_be.tsv` contains the species occurrence cube** of raccoon (_Procyon lotor_) in Belgium from 2020 up to 2025, using the EEA 1kmx1km grid.
+- `20260126_communesgemeente-belgium.zip` contains the shapefile with the municipalities of Belgium\*\*\*. Please, unzip it before use.
+- `20260126_protected_areas_BE.gpkg` contains the Natura2000 protected areas of Belgium\*\*\*\*.
+- `20260126_eea_10km_grid.gpkg` contains the EEA 10kmx10km grid covering Europe\*\*\*\*\*.
 R script:
 
 - `20260126_challenges.R`: code to start with the challenges.
 
 <small>
-__\* __ Derived from GBIF.org (22 April 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.2bptj3.
+__\* __ Derived from GBIF.org (06 January 2026) GBIF Occurrence Download https://doi.org/10.15468/dl.juf58a
 <br>
-__\*\* __ Source: https://data.gov.be/nl/datasets/httpswwwodwbbeexploredatasetcommunesgemeente-belgium.
+__\*\* __ Derived from GBIF.org (06 January 2026) GBIF Occurrence Download https://doi.org/10.15468/dl.zu6kf4
 <br>
-__\*\*\* __ Derived from a geopackage with all European Natura2000 areas: https://www.eea.europa.eu/en/datahub/datahubitem-view/6fc8ad2d-195d-40f4-bdec-576e7d1268e4.
+__\*\*\* __ Source: https://data.gov.be/nl/datasets/httpswwwodwbbeexploredatasetcommunesgemeente-belgium.
+<br>
+__\*\*\*\* __ Derived from a geopackage with all European Natura2000 areas: https://www.eea.europa.eu/en/datahub/datahubitem-view/6fc8ad2d-195d-40f4-bdec-576e7d1268e4.
+<br>
+__\*\*\*\*\* __ Derived from European Environment Agency (2013). EEA reference grid for Belgium (10km), May 2013. https://sdi.eea.europa.eu/catalogue/srv/api/records/a25da98d-0df0-420a-bc27-1c486376c72bf
 </small>
 
 ---
@@ -289,8 +293,20 @@ class: left, top
 
 # Challenge 1
 
- Starting from the code provided in `20260126_challenges.R`:
+Starting from the code provided in `20260126_challenges.R`:
 
+2. Create a geospatial data frame called `occs` starting from `occs_df`. Use 
+the columns `decimalLongitude` and `decimalLatitude` to specify the 
+coordinates. Note that GBIF data are stored using [WGS 84](https://epsg.io/4326) (CRS = 4326).
+3. Which layers does the  geospatial file `20260126_protected_areas_be.gpkg` contain? What differences can you see between 
+the first and the other layers?
+4. Read the layer `NaturaSite_polygon`: call it `pa`.
+5. Read the other layers as well. Call them `pa_bioregion` and `pa_habitats`. Are these spatial data.frames?
+6. Import the shapefile with the municipalities of Belgium (see `municipalities_folder` variable): call it `municipalities`.
+7. Import the EEA 10kmx10km grid (see `eea_grid_folder` variable): call it `eea_grid`.
+8. Retrieve information about the CRS of `occs`, `pa`, `municipalities` and `eea_grid`. Do they have the same CRS?
+9. Extract the protected areas of type (`SITETYPE`) A as `pa_a`. Hint: do it as you would do with a standard data.frame. 
+The motto of the sf package is "Spatial data, simplified" for a reason!
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
