@@ -111,6 +111,11 @@ No geospatial data without specifying the **Coordinate Reference System** (CRS) 
 
 And what is a [(map) projection](https://en.wikipedia.org/wiki/Map_projection)? A way to visualize a surface of a sphere on a flat space.
 
+![:scale 80%]({{ site.baseurl}}/assets/images/20260126/20260126_projections_pebesma.png)
+
+<small>
+"R Spatial", Edzer Pebesma, R Foundation. UseR! 2021: Jul 5, 2021, 15:30 UTC, https://edzer.github.io/UseR2021/#11
+</small>
 ---
 class: left, top
 
@@ -161,9 +166,11 @@ class: left, top
 
 # Projections
 
-Some INBOers are so nerdy to collect the map projection cards of [Daniel Huffman](https://somethingaboutmaps.com/). I am one of them :-) Why?
+Some INBOers collected the map projection cards of [Daniel Huffman](https://somethingaboutmaps.com/). I am one of them :-) Why?
 - Short answer: they are cool.
-- Long answer: they are a perfect example of diversity and change of perspective while looking at things. [“We must constantly look at things in a different way.”](https://www.youtube.com/watch?v=XtYRC00IoUs), just to cite Mr. Keating from the movie _Dead Poets Society_ (1989).
+- Long answer: they are a perfect example of diversity and change of perspective while looking at things. 
+[“We must constantly look at things in a different way.”](https://www.youtube.com/watch?v=XtYRC00IoUs), 
+just to cite Mr. Keating from the movie _Dead Poets Society_ (1989).
 
 ![:scale 80%]({{ site.baseurl}}/assets/images/20260126/20260126_amp_projection_cards.png)
 
@@ -245,7 +252,7 @@ class: left, top
 Today we will work with  datasets:
 
 - `20260126_occurrences_raccoon_be.tsv` contains GBIF occurrences* of giant hogweed (_Heracleum mantegazzianum_) taken in Belgium from 2024 up to present.
-- `20260126_species_cube_raccoon_be.tsv` contains the species occurrence cube** of raccoon (_Procyon lotor_) in Belgium from 2020 up to 2025, using the EEA 1kmx1km grid.
+- `20260126_species_cube_raccoon_be.tsv` contains the species occurrence cube** of raccoon (_Procyon lotor_) in Belgium from 2015 up to 2025, using the EEA 10kmx10km grid.
 - `20260126_communesgemeente-belgium.zip` contains the shapefile with the municipalities of Belgium\*\*\*. Please, unzip it before use.
 - `20260126_protected_areas_BE.gpkg` contains the Natura2000 protected areas of Belgium\*\*\*\*.
 - `20260126_eea_10km_grid.gpkg` contains the EEA 10kmx10km grid covering Europe\*\*\*\*\*.
@@ -256,7 +263,7 @@ R script:
 <small>
 __\* __ Derived from GBIF.org (06 January 2026) GBIF Occurrence Download https://doi.org/10.15468/dl.juf58a
 <br>
-__\*\* __ Derived from GBIF.org (06 January 2026) GBIF Occurrence Download https://doi.org/10.15468/dl.zu6kf4
+__\*\* __ Derived from GBIF.org (23 January 2026) GBIF Occurrence Download https://doi.org/10.15468/dl.bhc3h3
 <br>
 __\*\*\* __ Source: https://data.gov.be/nl/datasets/httpswwwodwbbeexploredatasetcommunesgemeente-belgium.
 <br>
@@ -314,6 +321,15 @@ class: left, top
 
 # Challenge 2
 
+1. Create `occs_3035` by **transform**ing `occs` to CRS with 
+[EPSG code 3035](https://epsg.io/3035) (called also ETRS89-extended / LAEA Europe).
+2. **Write** a geopackage called `pa_occs_3035.gpkg` with two layers: 
+first layer called `NaturaSite` and containing the protected areas (`pa`) and 
+a second layer called `raccoon_occs`, containing `occs_3035`. Hint: check 
+https://r-spatial.github.io/sf/articles/sf2.html#using-st_write.
+3. Transform also `municipalities` to the CRS with EPSG code 3035. Call them 
+`municipalities_3035`.	
+4. Find the centroids of `municipalities_3035`. Call it `municipalities_3035_centroids`.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
@@ -321,13 +337,22 @@ class: left, top
 
 # Challenge 3 - Manipulating spatial objects
 
-
+1. Let's work with `cube`. How can you make a sf data frame of it? 
+Hint: use the `eea_grid` spatial object and give a look to the `CELLCODE` 
+column. Call the new sf data frame `cube_sf`.
+2. For each municipality in `municipalities_3035`, get the number of protected areas intersecting it. You can add it as a new column `n_pa` to
+`municipalities_3035`.
+3. Are there municipalities without any protected areas? Extract them as `no_pa_municipalities_3035`. Hint: again, do it as you would do with a standard data.frame. 
+4. Get the 10 largest municipalities among no_pa_municipalities_3035.
 ---
 class: left, top
 
-# The package of the month. Your choice!
+# The package of the month: qgisprocess
 
-Do you know that "our" Floris Vanderhaeghe is the maintainer of [qgisprocess](https://r-spatial.github.io/qgisprocess/), a package to provide an R interface to the popular and open source desktop geographic information system (GIS) program [QGIS](https://qgis.org/en/site/). Something 19 (!) people participating to the internal INBO survey would like to learn more about.
+Do you know that "our" Floris Vanderhaeghe is the maintainer of 
+[qgisprocess](https://r-spatial.github.io/qgisprocess/), a package to provide 
+an R interface to the popular and open source desktop geographic information 
+system (GIS) program [QGIS](https://qgis.org/en/site/).
 
 qgisprocess has a [cheat sheet](https://r-spatial.github.io/qgisprocess/articles/cheatsheet_en.html) too! Floris also wrote some [slides](https://florisvdh.github.io/foss4g-2023-qgisprocess) presenting the package at the [FOSS4G 2023](https://2023.foss4g.org/) conference.
 
@@ -340,23 +365,18 @@ class: left, top
 
 ## Resources
 
-- Edited video recording of the session is on [vimeo](https://vimeo.com/1080856019). Do you know that all INBO coding club video recordings are available on our official [INBO coding club vimeo folder](https://vimeo.com/user/8605285/folder/1978815?isPrivate=false)?
-- Extended [challenges solutions](https://github.com/inbo/coding-club/blob/main/src/20260126/20260126_challenges_solutions.R) are available. You can opt to download them automatically by using `inborutils::setup_codingclub_session("20260126")`.
-- [sf homepage](https://r-spatial.github.io/sf/): the best place to start your "spatial" voyage.
+- Video recording and solutions will be available soon.
+- sf [homepage](https://r-spatial.github.io/sf/): the best place to start your "spatial" voyage.
 - sf [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20211026_cheat_sheet_sf.pdf)
 - See also this very nice [article with some examples](https://r-spatial.github.io/sf/articles/sf2.html)
+- Keynote "R spatial" of Edzer Pebesma at the useR! 2021 conference: [video](https://www.youtube.com/watch?v=cK08bxUJn5A) and [slides](https://edzer.github.io/UseR2021/#1). Very interesting to learn the principles and basics of spatial data in R
+- Everything what Edzer Pebesma says or write, actually :-)
 - Excellent online books: [Spatial Data Science With Applications in R](https://r-spatial.org/book/) and  [geocomputation with R](https://r.geocompx.org/). Printed versions available.
 - [mapview homepage](https://r-spatial.github.io/mapview/) to visualize spatial data.
 - [Daniel Huffman](https://somethingaboutmaps.com/) website, with cartographic material (not necessarily in R).
-- [qgisprocess](https://r-spatial.github.io/qgisprocess/) package to provide an R interface to the popular and open source desktop geographic information system (GIS) program QGIS. Maintained by our INBO colleague, Floris Vanderhaeghe.
-
-
----
-class: left, top
-
-# Topic of the next coding club: you vote! ✍️
-
-As usual, you can vote among **two topics**. The poll for May's coding club is not yet open. You will receive an email with the link to the poll soon.
+- [qgisprocess](https://r-spatial.github.io/qgisprocess/) package to provide 
+an R interface to the popular and open source desktop geographic information 
+system (GIS) program QGIS. Maintained by our INBO colleague, Floris Vanderhaeghe.
 
 ---
 class: center, middle
@@ -364,7 +384,7 @@ class: center, middle
 ![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
 
 <!--  Adjust the room and date  -->
-Room: 01.72 - Kaat Tilley <br>
-Date: __27/05/2025__, van 10:00 tot 12:30<br>
+Room: 00.48 - Keldermans -  <br>
+Date: __25/02/2026__, van 10:00 tot 12:30<br>
 Subject: to be decided <br>
 (registration announced via DG_useR@inbo.be)
