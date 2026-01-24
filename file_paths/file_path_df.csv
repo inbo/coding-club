@@ -230,7 +230,7 @@ data/20251127/20251127_bird_rings.tsv,20251127_bird_rings.tsv,data,20251127
 data/20251216/20251226_butterfly_transect_counts_raw.xls,20251226_butterfly_transect_counts_raw.xls,data,20251226
 data/20251216/20251216_MH_ANTWERPEN-gps-2018.csv.gz,20251216_MH_ANTWERPEN-gps-2018.csv.gz,data,20251216
 data/20260126/20260126_eea_grid_be.zip,20260126_eea_grid_be.zip,data,20260126
-data/20260126/20260126_protected_areas_BE.gpkg,20260126_protected_areas_BE.gpkg,data,20260126
+data/20260126/20260126_protected_areas_be.gpkg,20260126_protected_areas_be.gpkg,data,20260126
 data/20260126/20260126_communesgemeente-belgium.zip,20260126_communesgemeente-belgium.zip,data,20260126
 data/20260126/20260126_species_cube_raccoon_be.csv,20260126_species_cube_raccoon_be.csv,data,20260126
 data/20260126/20260126_occurrences_raccoon_be.txt,20260126_occurrences_raccoon_be.txt,data,20260126
