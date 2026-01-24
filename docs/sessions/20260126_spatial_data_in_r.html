@@ -142,18 +142,14 @@ class: left, top
 
 # Projections: it can get crazy!
 
-What does your favorite [map projection](https://xkcd.com/977/) say about you?
+What does your [favorite map projection say](https://xkcd.com/977/) about you?
 
 ![:scale 23%]({{ site.baseurl}}/assets/images/20260126/20260126_peirce_quincuncial.png)
 
 <small>
 The Peirce quincuncial projection is the conformal map projection from the 
 sphere to an unfolded square dihedron, developed by Charles Sanders Peirce in 
-1877. Each octant projects onto an isosceles right triangle, with eight such 
-triangles arranged into a square. 
-The name quincuncial refers to this arrangement: the north pole at the center 
-and quarters of the south pole in the corners form a quincunx pattern like 
-the pips on the five face of a traditional die.
+1877.
 
  __Source__: Wikipedia contributors. (2025, November 3). Peirce quincuncial projection. 
  In Wikipedia, The Free Encyclopedia. Retrieved 08:48, January 23, 2026, 
@@ -170,7 +166,7 @@ Some INBOers collected the map projection cards of [Daniel Huffman](https://some
 - Short answer: they are cool.
 - Long answer: they are a perfect example of diversity and change of perspective while looking at things. 
 [“We must constantly look at things in a different way.”](https://www.youtube.com/watch?v=XtYRC00IoUs), 
-just to cite Mr. Keating from the movie _Dead Poets Society_ (1989).
+said Mr. Keating in the film _Dead Poets Society_ (1989).
 
 ![:scale 80%]({{ site.baseurl}}/assets/images/20260126/20260126_amp_projection_cards.png)
 
@@ -247,18 +243,13 @@ You can download the material of today:
 ---
 class: left, top
 
-# Data and scripts description
+# Data description 1
 
-Today we will work with  datasets:
+Today we will work with these datasets:
 
-- `20260126_occurrences_raccoon_be.tsv` contains GBIF occurrences* of giant hogweed (_Heracleum mantegazzianum_) taken in Belgium from 2024 up to present.
-- `20260126_species_cube_raccoon_be.tsv` contains the species occurrence cube** of raccoon (_Procyon lotor_) in Belgium from 2015 up to 2025, using the EEA 10kmx10km grid.
-- `20260126_communesgemeente-belgium.zip` contains the shapefile with the municipalities of Belgium\*\*\*. Please, unzip it before use.
-- `20260126_protected_areas_BE.gpkg` contains the Natura2000 protected areas of Belgium\*\*\*\*.
-- `20260126_eea_10km_grid.gpkg` contains the EEA 10kmx10km grid covering Europe\*\*\*\*\*.
-R script:
-
-- `20260126_challenges.R`: code to start with the challenges.
+- [`20260126_occurrences_raccoon_be.tsv`](https://github.com/inbo/coding-club/tree/master/data/20260126/20260126_occurrences_raccoon_be.tsv) contains GBIF occurrences* of raccoon, _Procyon lotor_, in Belgium from 2000 up to 2025.
+- [`20260126_species_cube_raccoon_be.tsv`](https://github.com/inbo/coding-club/tree/master/src/20260126/20260126_species_cube_raccoon_be.tsv) contains the species occurrence cube** of raccoon (_Procyon lotor_) in Belgium from 2015 up to 2025, using the EEA 10kmx10km grid.
+- [`20260126_communesgemeente-belgium.zip`](https://github.com/inbo/coding-club/tree/master/src/20260126/20260126_communesgemeente-belgium.zip) contains the shapefile with the municipalities of Belgium\*\*\*. Please, unzip it before use.
 
 <small>
 __\* __ Derived from GBIF.org (06 January 2026) GBIF Occurrence Download https://doi.org/10.15468/dl.juf58a
@@ -266,11 +257,32 @@ __\* __ Derived from GBIF.org (06 January 2026) GBIF Occurrence Download https:/
 __\*\* __ Derived from GBIF.org (23 January 2026) GBIF Occurrence Download https://doi.org/10.15468/dl.bhc3h3
 <br>
 __\*\*\* __ Source: https://data.gov.be/nl/datasets/httpswwwodwbbeexploredatasetcommunesgemeente-belgium.
-<br>
-__\*\*\*\* __ Derived from a geopackage with all European Natura2000 areas: https://www.eea.europa.eu/en/datahub/datahubitem-view/6fc8ad2d-195d-40f4-bdec-576e7d1268e4.
-<br>
-__\*\*\*\*\* __ Derived from European Environment Agency (2013). EEA reference grid for Belgium (10km), May 2013. https://sdi.eea.europa.eu/catalogue/srv/api/records/a25da98d-0df0-420a-bc27-1c486376c72bf
 </small>
+
+---
+class: left, top
+
+# Data description 2
+
+Today we will work with these datasets:
+
+- [`20260126_protected_areas_BE.gpkg`](https://github.com/inbo/coding-club/tree/master/src/20260126/20260126_protected_areas_BE.gpkg) contains the Natura2000 protected areas of Belgium\*.
+- [`20260126_eea_10km_grid.gpkg`](https://github.com/inbo/coding-club/tree/master/src/20260126/20260126_eea_10km_grid.gpkg) contains the EEA 10kmx10km reference grid covering Belgium\*\*.
+
+<small>
+__\* __ Derived from a geopackage with all European Natura2000 areas: https://www.eea.europa.eu/en/datahub/datahubitem-view/6fc8ad2d-195d-40f4-bdec-576e7d1268e4.
+<br>
+__\*\* __ Source: European Environment Agency (2013), CC-BY 4.0. EEA reference grid for Belgium (10km), May 2013. https://sdi.eea.europa.eu/catalogue/srv/api/records/a25da98d-0df0-420a-bc27-1c486376c72bf
+</small>
+
+---
+class: left, top
+
+# Scripts description
+
+Today we will work with this R script:
+
+- [`20260126_challenges.R`](https://github.com/inbo/coding-club/tree/master/src/20260126/20260126_challenges.R): code to start with the challenges.
 
 ---
 class: left, top
@@ -290,8 +302,8 @@ We don't cover visualization of spatial data today, but if you want to easily in
 library(mapview)
 # one object
 mapview(my_sf_object)
-# more objects = more layers
-mapview(list(my_sf_object1, my_sf_object2, my_sf_object3))
+# 2 objects
+mapview(my_sf_object1) + mapview(my_sf_object2)
 ```
 
 ---
@@ -302,16 +314,16 @@ class: left, top
 
 Starting from the code provided in `20260126_challenges.R`:
 
-2. Create a geospatial data frame called `occs` starting from `occs_df`. Use 
+1. Create a geospatial data frame called `occs` starting from `occs_df`. Use 
 the columns `decimalLongitude` and `decimalLatitude` to specify the 
 coordinates. Note that GBIF data are stored using [WGS 84](https://epsg.io/4326) (CRS = 4326).
-3. Which layers does the  geospatial file `20260126_protected_areas_be.gpkg` contain? What differences can you see between 
+3. Which **layers** does the  geospatial file `20260126_protected_areas_be.gpkg` contain? What differences can you see between 
 the first and the other layers?
-4. Read the layer `NaturaSite_polygon`: call it `pa`.
-5. Read the other layers as well. Call them `pa_bioregion` and `pa_habitats`. Are these spatial data.frames?
-6. Import the shapefile with the municipalities of Belgium (see `municipalities_folder` variable): call it `municipalities`.
-7. Import the EEA 10kmx10km grid (see `eea_grid_folder` variable): call it `eea_grid`.
-8. Retrieve information about the CRS of `occs`, `pa`, `municipalities` and `eea_grid`. Do they have the same CRS?
+4. **Read** the layer `NaturaSite_polygon`: call it `pa`.
+5. **Read** the other layers as well. Call them `pa_bioregion` and `pa_habitats`. Are these spatial data.frames?
+6. **Read** the shapefile with the municipalities of Belgium (see `municipalities_folder` variable): call it `municipalities`.
+7. **Read** the EEA 10kmx10km grid (see `eea_grid_folder` variable): call it `eea_grid`.
+8. Get the **CRS** of `occs`, `pa`, `municipalities` and `eea_grid`. Do they have the same CRS?
 9. Extract the protected areas of type (`SITETYPE`) A as `pa_a`. Hint: do it as you would do with a standard data.frame. 
 The motto of the sf package is "Spatial data, simplified" for a reason!
 
@@ -337,13 +349,28 @@ class: left, top
 
 # Challenge 3 - Manipulating spatial objects
 
-1. Let's work with `cube`. How can you make a sf data frame of it? 
-Hint: use the `eea_grid` spatial object and give a look to the `CELLCODE` 
-column. Call the new sf data frame `cube_sf`.
-2. For each municipality in `municipalities_3035`, get the number of protected areas intersecting it. You can add it as a new column `n_pa` to
+1. Let's work with `cube`. How can you make a sf data frame of it? Call the new 
+sf data frame `cube_sf`.
+Hint: `eea_grid` and `cube` both have a column called `CELLCODE`.
+2. For each municipality in `municipalities_3035`, get the number of protected 
+areas intersecting it. You can add it as a new column `n_pa` to
 `municipalities_3035`.
-3. Are there municipalities without any protected areas? Extract them as `no_pa_municipalities_3035`. Hint: again, do it as you would do with a standard data.frame. 
-4. Get the 10 largest municipalities among no_pa_municipalities_3035.
+3. Are there municipalities without any protected areas? Extract them as 
+`no_pa_municipalities_3035`. Hint: do it as you would do with a 
+standard data.frame.
+4. Get the 10 largest municipalities among no_pa_municipalities_3035. 
+Hint: measure the **area**.
+5. Get the number of raccoon occurrences per municipality. Add it as a new
+column `n_occs` to `municipalities_3035`.
+6. Get the 10 municipalities with the highest number of raccoon occurrences. 
+Hint: do it as you would do with a standard data.frame.
+7. Add a column `protected_area_m2` to `municipalities_3035`, containing the total
+area of protected areas per municipality. You can eventually show it on a map
+using `mapview(municipalities_3035, zcol = "protected_area_m2")`.
+8. Add a column `protected_percentage` to `municipalities_3035`, containing 
+the percentage of municipality area that is protected. Which municipality has the
+highest percentage of protected area?
+
 ---
 class: left, top
 
