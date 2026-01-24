@@ -67,8 +67,10 @@ class: left, top
 
 # The sf package
 
-sf stays for: _[simple features](https://en.wikipedia.org/wiki/Simple_Features)_, a scary way to express "geographic features", where feature is a scary term to refer to an abstraction of real world phenomena with geometrical properties such as lat/lon (or x-y).
-
+sf stays for: _[simple features](https://en.wikipedia.org/wiki/Simple_Features)_, 
+a scary way to express "geographic features", where feature is a scary term to 
+refer to an abstraction of real world phenomena with geometrical properties 
+such as lat/lon (or x-y).
 
 ---
 class: left, top
@@ -76,7 +78,8 @@ class: left, top
 ## I use sp. Why do you bother me with sf?
 
 - Short answer: because Thierry says so :-)
-- Long answer: sp is not actively maintained anymore. It relied on retired packages (rgdal, rgeos, maptools) and now uses sf as backend instead. So, why not use sf directly?
+- Long answer: sp is not actively maintained anymore. It relied on retired packages 
+(rgdal, rgeos, maptools) and now uses sf as backend instead. So, why not use sf directly?
 
 ![:scale 150%]({{ site.baseurl}}/assets/images/20260126/20260126_mail_Thierry.png)
 
@@ -87,7 +90,8 @@ class: left, top
 
 sf is not only the present and the future, but also the recent past!
 
-This [sp-sf migration table](https://github.com/r-spatial/sf/wiki/Migrating) will help you refactoring your code.
+This [sp-sf migration table](https://github.com/r-spatial/sf/wiki/Migrating) 
+will help you refactoring your code.
 
 ![:scale 80%]({{ site.baseurl}}/assets/images/20260126/20260126_migrating_table.png)
 
@@ -113,12 +117,15 @@ class: left, top
 
 Two types of spatial coordinates:
 
-- **projected** (or Cartesian) coordinates: refer to points on a flat space. The coordinates are the distance along the x and y axis
-- **unprojected** or **geographic** coordinates: refer to angles (latitude, longitude) pointing to locations on a sphere (or ellipsoid)
+- **projected** (or Cartesian) coordinates: refer to points on a flat space. 
+The coordinates are the distance along the x and y axis
+- **unprojected** or **geographic** coordinates: refer to angles (latitude, 
+longitude) pointing to locations on a sphere (or ellipsoid)
 
 No geospatial data without specifying the **Coordinate Reference System** (CRS) you work with!
 
-And what is a [(map) projection](https://en.wikipedia.org/wiki/Map_projection)? A way to visualize a surface of a sphere on a flat space.
+And what is a [(map) projection](https://en.wikipedia.org/wiki/Map_projection)? 
+A way to visualize a surface of a sphere on a flat space.
 
 ![:scale 80%]({{ site.baseurl}}/assets/images/20260126/20260126_projections_pebesma.png)
 
@@ -164,7 +171,7 @@ sphere to an unfolded square dihedron, developed by Charles Sanders Peirce in
  In Wikipedia, The Free Encyclopedia. Retrieved 08:48, January 23, 2026, 
  from https://en.wikipedia.org/w/index.php?title=Peirce_quincuncial_projection&oldid=1320267734
 
-![:scale 20%](https://en.wikipedia.org/wiki/Peirce_quincuncial_projection#/media/File:PeircePanorama2007.jpg)
+![:scale 20%]({{ site.baseurl}}/assets/images/20260126/20260126_500px-PeircePanorama2007.jpg)
 
 ---
 class: left, top
