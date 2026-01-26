@@ -41,12 +41,12 @@ class: left, top
 
 # INBO Coding Club is 8 years old! 🎉
 
-First coding club session: 23 January 2018 🥳 
+First coding club session: 23 January 2018 🥳
 
-Thanks to all the participants and contributors over the years! 
+Thanks to all the participants and contributors over the years!
 Do you want hex stickers? Just take one!
 
-![:scale 70%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+![:scale 50%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
 
 ---
 class: center, middle
@@ -70,9 +70,9 @@ class: left, top
 
 # The sf package
 
-sf stays for: _[simple features](https://en.wikipedia.org/wiki/Simple_Features)_, 
-a scary way to express "geographic features", where feature is a scary term to 
-refer to an abstraction of real world phenomena with geometrical properties 
+sf stays for: _[simple features](https://en.wikipedia.org/wiki/Simple_Features)_,
+a scary way to express "geographic features", where feature is a scary term to
+refer to an abstraction of real world phenomena with geometrical properties
 such as lat/lon (or x-y).
 
 ---
@@ -81,7 +81,7 @@ class: left, top
 ## I use sp. Why do you bother me with sf?
 
 - Short answer: because Thierry says so :-)
-- Long answer: sp is not actively maintained anymore. It relied on retired packages 
+- Long answer: sp is not actively maintained anymore. It relied on retired packages
 (rgdal, rgeos, maptools) and now uses sf as backend instead. So, why not use sf directly?
 
 ![:scale 150%]({{ site.baseurl}}/assets/images/20260126/20260126_mail_Thierry.png)
@@ -93,7 +93,7 @@ class: left, top
 
 sf is not only the present and the future, but also the recent past!
 
-This [sp-sf migration table](https://github.com/r-spatial/sf/wiki/Migrating) 
+This [sp-sf migration table](https://github.com/r-spatial/sf/wiki/Migrating)
 will help you refactoring your code.
 
 ![:scale 80%]({{ site.baseurl}}/assets/images/20260126/20260126_migrating_table.png)
@@ -120,14 +120,14 @@ class: left, top
 
 Two types of spatial coordinates:
 
-- **projected** (or Cartesian) coordinates: refer to points on a flat space. 
+- **projected** (or Cartesian) coordinates: refer to points on a flat space.
 The coordinates are the distance along the x and y axis
-- **unprojected** or **geographic** coordinates: refer to angles (latitude, 
+- **unprojected** or **geographic** coordinates: refer to angles (latitude,
 longitude) pointing to locations on a sphere (or ellipsoid)
 
 No geospatial data without specifying the **Coordinate Reference System** (CRS) you work with!
 
-And what is a [(map) projection](https://en.wikipedia.org/wiki/Map_projection)? 
+And what is a [(map) projection](https://en.wikipedia.org/wiki/Map_projection)?
 A way to visualize a surface of a sphere on a flat space.
 
 ![:scale 80%]({{ site.baseurl}}/assets/images/20260126/20260126_projections_pebesma.png)
@@ -166,13 +166,13 @@ What does your [favorite map projection say](https://xkcd.com/977/) about you?
 ![:scale 23%]({{ site.baseurl}}/assets/images/20260126/20260126_peirce_quincuncial.png)
 
 <small>
-The Peirce quincuncial projection is the conformal map projection from the 
-sphere to an unfolded square dihedron, developed by Charles Sanders Peirce in 
+The Peirce quincuncial projection is the conformal map projection from the
+sphere to an unfolded square dihedron, developed by Charles Sanders Peirce in
 1877.
 
- __Source__: Wikipedia contributors. (2025, November 3). Peirce quincuncial projection. 
- In Wikipedia, The Free Encyclopedia. Retrieved 08:48, January 23, 2026, 
- from https://en.wikipedia.org/w/index.php?title=Peirce_quincuncial_projection&oldid=1320267734
+ __Source__: Wikipedia contributors. (2025, November 3). Peirce quincuncial projection.
+ In Wikipedia, The Free Encyclopedia. Retrieved 08:48, January 23, 2026,
+ from [link](https://en.wikipedia.org/w/index.php?title=Peirce_quincuncial_projection&oldid=1320267734)
 
 ![:scale 20%]({{ site.baseurl}}/assets/images/20260126/20260126_500px-PeircePanorama2007.jpg)
 
@@ -183,8 +183,8 @@ class: left, top
 
 Some INBOers collected the map projection cards of [Daniel Huffman](https://somethingaboutmaps.com/). I am one of them :-) Why?
 - Short answer: they are cool.
-- Long answer: they are a perfect example of diversity and change of perspective while looking at things. 
-[“We must constantly look at things in a different way.”](https://www.youtube.com/watch?v=XtYRC00IoUs), 
+- Long answer: they are a perfect example of diversity and change of perspective while looking at things.
+[“We must constantly look at things in a different way.”](https://www.youtube.com/watch?v=XtYRC00IoUs),
 said Mr. Keating in the film _Dead Poets Society_ (1989).
 
 ![:scale 80%]({{ site.baseurl}}/assets/images/20260126/20260126_amp_projection_cards.png)
@@ -205,7 +205,7 @@ In 2005, the International Association of Oil & Gas Producers (IOGP) absorbed th
 ---
 class: center, top
 
-![:scale 70%]({{ site.baseurl}}/assets/images/20260126/20260126_sf_cheat_sheet.png)<br>
+![:scale 60%]({{ site.baseurl}}/assets/images/20260126/20260126_sf_cheat_sheet.png)<br>
 
 sf [cheatsheet](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20211026_cheat_sheet_sf.pdf)
 
@@ -285,9 +285,9 @@ class: left, top
 
 Today we will work with these datasets:
 
-- [`20260126_protected_areas_be.gpkg`](https://github.com/inbo/coding-club/blob/main/data/20260126/20260126_protected_areas_be.gpkg) 
+- [`20260126_protected_areas_be.gpkg`](https://github.com/inbo/coding-club/blob/main/data/20260126/20260126_protected_areas_be.gpkg)
 contains the Natura2000 protected areas of Belgium\*.
-- [`20260126_eea_grid_be.zip`](https://github.com/inbo/coding-club/blob/main/data/20260126/20260126_eea_grid_be.zip) 
+- [`20260126_eea_grid_be.zip`](https://github.com/inbo/coding-club/blob/main/data/20260126/20260126_eea_grid_be.zip)
 contains the EEA 10kmx10km reference grid covering Belgium\*\*. The code to unzip is provided.
 
 <small>
@@ -310,11 +310,11 @@ class: left, top
 
 # Species occurrence cubes
 
-The "cubes" are a relative new data output format from GBIF, [conceived](https://doi.org/10.1101/2020.03.23.983601) by us 
+The "cubes" are a relative new data output format from GBIF, [conceived](https://doi.org/10.1101/2020.03.23.983601) by us
 at INBO during TrIAS project, and then [formalised](https://docs.b-cubed.eu/guides/occurrence-cube/) and realised by GBIF (in collaboration with us)
 during the [B-Cubed project](http://b-cubed.eu/).
-Read [more](https://www.gbif.org/occurrence-cubes) about it or come to the 
-Open Science Cafe about the B-Cubed project (Feb 24th) or to the 
+Read [more](https://www.gbif.org/occurrence-cubes) about it or come to the
+Open Science Cafe about the B-Cubed project (Feb 24th) or to the
 Open Science Workshop about how to create and use species occurrence cubes (
 March 31th).
 
@@ -350,17 +350,17 @@ class: left, top
 
 Starting from the code provided in `20260126_challenges.R`:
 
-1. Create a geospatial data frame called `occs` starting from `occs_df`. Use 
-the columns `decimalLongitude` and `decimalLatitude` to specify the 
+1. Create a geospatial data frame called `occs` starting from `occs_df`. Use
+the columns `decimalLongitude` and `decimalLatitude` to specify the
 coordinates. Note that GBIF data are stored using [WGS 84](https://epsg.io/4326) (CRS = 4326).
-3. Which **layers** does the  geospatial file `20260126_protected_areas_be.gpkg` contain? What differences can you see between 
+3. Which **layers** does the  geospatial file `20260126_protected_areas_be.gpkg` contain? What differences can you see between
 the first and the other layers?
 4. **Read** the layer `NaturaSite_polygon`: call it `pa`.
 5. **Read** the other layers as well. Call them `pa_bioregion` and `pa_habitats`. Are these spatial data.frames?
 6. **Read** the shapefile with the municipalities of Belgium (see `municipalities_folder` variable): call it `municipalities`.
 7. **Read** the EEA 10kmx10km grid (see `eea_grid_folder` variable): call it `eea_grid`.
 8. Get the **CRS** of `occs`, `pa`, `municipalities` and `eea_grid`. Do they have the same CRS?
-9. Extract the protected areas of type (`SITETYPE`) A as `pa_a`. Hint: do it as you would do with a standard data.frame. 
+9. Extract the protected areas of type (`SITETYPE`) A as `pa_a`. Hint: do it as you would do with a standard data.frame.
 The motto of the sf package is "Spatial data, simplified" for a reason!
 
 ---
@@ -369,14 +369,14 @@ class: left, top
 
 # Challenge 2
 
-1. Create `occs_3035` by **transform**ing `occs` to CRS with 
+1. Create `occs_3035` by **transform**ing `occs` to CRS with
 [EPSG code 3035](https://epsg.io/3035) (called also ETRS89-extended / LAEA Europe).
-2. **Write** a geopackage called `pa_occs_3035.gpkg` with two layers: 
-first layer called `NaturaSite` and containing the protected areas (`pa`) and 
-a second layer called `raccoon_occs`, containing `occs_3035`. Hint: check 
+2. **Write** a geopackage called `pa_occs_3035.gpkg` with two layers:
+first layer called `NaturaSite` and containing the protected areas (`pa`) and
+a second layer called `raccoon_occs`, containing `occs_3035`. Hint: check
 https://r-spatial.github.io/sf/articles/sf2.html#using-st_write.
-3. Transform also `municipalities` to the CRS with EPSG code 3035. Call them 
-`municipalities_3035`.	
+3. Transform also `municipalities` to the CRS with EPSG code 3035. Call them
+`municipalities_3035`.
 4. Find the centroids of `municipalities_3035`. Call it `municipalities_3035_centroids`.
 
 ---
@@ -385,25 +385,25 @@ class: left, top
 
 # Challenge 3 - Manipulating spatial objects
 
-1. Let's work with `cube`. How can you make a sf data frame of it? Call the new 
+1. Let's work with `cube`. How can you make a sf data frame of it? Call the new
 sf data frame `cube_sf`.
 Hint: `eea_grid` and `cube` both have a column called `CELLCODE`.
-2. For each municipality in `municipalities_3035`, get the number of protected 
+2. For each municipality in `municipalities_3035`, get the number of protected
 areas intersecting it. You can add it as a new column `n_pa` to
 `municipalities_3035`.
-3. Are there municipalities without any protected areas? Extract them as 
-`no_pa_municipalities_3035`. Hint: do it as you would do with a 
+3. Are there municipalities without any protected areas? Extract them as
+`no_pa_municipalities_3035`. Hint: do it as you would do with a
 standard data.frame.
-4. Get the 10 largest municipalities among no_pa_municipalities_3035. 
+4. Get the 10 largest municipalities among no_pa_municipalities_3035.
 Hint: measure the **area**.
 5. Get the number of raccoon occurrences per municipality. Add it as a new
 column `n_occs` to `municipalities_3035`.
-6. Get the 10 municipalities with the highest number of raccoon occurrences. 
+6. Get the 10 municipalities with the highest number of raccoon occurrences.
 Hint: do it as you would do with a standard data.frame.
 7. Add a column `protected_area_m2` to `municipalities_3035`, containing the total
 area of protected areas per municipality. You can eventually show it on a map
 using `mapview(municipalities_3035, zcol = "protected_area_m2")`.
-8. Add a column `protected_percentage` to `municipalities_3035`, containing 
+8. Add a column `protected_percentage` to `municipalities_3035`, containing
 the percentage of municipality area that is protected. Which municipality has the
 highest percentage of protected area?
 
@@ -412,9 +412,9 @@ class: left, top
 
 # The package of the month: qgisprocess
 
-Do you know that "our" Floris Vanderhaeghe is the maintainer of 
-[qgisprocess](https://r-spatial.github.io/qgisprocess/), a package to provide 
-an R interface to the popular and open source desktop geographic information 
+Do you know that "our" Floris Vanderhaeghe is the maintainer of
+[qgisprocess](https://r-spatial.github.io/qgisprocess/), a package to provide
+an R interface to the popular and open source desktop geographic information
 system (GIS) program [QGIS](https://qgis.org/en/site/).
 
 qgisprocess has a [cheat sheet](https://r-spatial.github.io/qgisprocess/articles/cheatsheet_en.html) too! Floris also wrote some [slides](https://florisvdh.github.io/foss4g-2023-qgisprocess) presenting the package at the [FOSS4G 2023](https://2023.foss4g.org/) conference.
@@ -437,11 +437,11 @@ class: left, top
 - Excellent online books: [Spatial Data Science With Applications in R](https://r-spatial.org/book/) and  [geocomputation with R](https://r.geocompx.org/). Printed versions available.
 - [mapview homepage](https://r-spatial.github.io/mapview/) to visualize spatial data.
 - [Daniel Huffman](https://somethingaboutmaps.com/) website, with cartographic material (not necessarily in R).
-- [qgisprocess](https://r-spatial.github.io/qgisprocess/) package to provide 
-an R interface to the popular and open source desktop geographic information 
+- [qgisprocess](https://r-spatial.github.io/qgisprocess/) package to provide
+an R interface to the popular and open source desktop geographic information
 system (GIS) program QGIS. Maintained by our INBO colleague, Floris Vanderhaeghe.
-- The [species occurrence cubes](https://www.gbif.org/occurrence-cubes), 
-aggregated format for GBIF occurrences, output of the 
+- The [species occurrence cubes](https://www.gbif.org/occurrence-cubes),
+aggregated format for GBIF occurrences, output of the
 [B-Cubed project](http://b-cubed.eu/).
 
 ---
