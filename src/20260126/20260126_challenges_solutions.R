@@ -215,11 +215,11 @@ municipalities_3035 <- municipalities_3035 %>%
   )
 
 # Check that `n_occs` column was added
-"n_occs" %in% colnames(municipalities_3035_1)
+"n_occs" %in% colnames(municipalities_3035)
 # Check that `n_occs` is numeric
-is.numeric(municipalities_3035_1$n_occs)
+is.numeric(municipalities_3035$n_occs)
 # Check that `n_occs` has non-negative values
-all(municipalities_3035_1$n_occs >= 0)
+all(municipalities_3035$n_occs >= 0)
 
 # Do a visual check with mapview
 mapview::mapview(municipalities_3035, zcol = "n_occs") +
