@@ -234,6 +234,9 @@ data/20260126/20260126_protected_areas_be.gpkg,20260126_protected_areas_be.gpkg,
 data/20260126/20260126_communesgemeente-belgium.zip,20260126_communesgemeente-belgium.zip,data,20260126
 data/20260126/20260126_species_cube_raccoon_be.csv,20260126_species_cube_raccoon_be.csv,data,20260126
 data/20260126/20260126_occurrences_raccoon_be.txt,20260126_occurrences_raccoon_be.txt,data,20260126
+data/20260225/20260225_butterflies_love_plants.csv,20260225_butterflies_love_plants.csv,data,20260225
+data/20260225/20260225_tdiff_tmax_tmin_01.tif,20260225_tdiff_tmax_tmin_01.tif,data,20260225
+data/20260225/20260225_moth_captures.csv,20260225_moth_captures.csv,data,20260225
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
@@ -459,3 +462,4 @@ src/20251216/20251216_challenges.R,20251216_challenges.R,src,20251216
 src/20251216/20251216_challenges_solutions.R,20251216_challenges_solutions.R,src,20251216
 src/20260126/20260126_challenges.R,20260126_challenges.R,src,20260126
 src/20260126/20260126_challenges_solutions.R,20260126_challenges_solutions.R,src,20260126
+src/20260225/20260225_challenges.R,20260225_challenges.R,src,20260225

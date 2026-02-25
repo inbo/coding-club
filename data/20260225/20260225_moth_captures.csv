@@ -1,0 +1,4 @@
+date,time,mothID,y,x,type,sex,total_distance
+2026-01-16,19:21:00,z3g1,50.72629,4.087742,capture,Male,205.5
+2026-01-19,19:07:00,z3g1,50.72604,4.087,recapture,Male,205.5
+2026-01-25,20:20:00,z3g1,50.72547,4.08887,recapture,Male,205.5

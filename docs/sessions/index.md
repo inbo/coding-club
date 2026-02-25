@@ -3,6 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
+| 2026-02-25 | Spatial data visualization unleashed | [slides]({{ site.baseurl }}{% link sessions/20260225_spatial_data_visualization_unleashed.html  %}) | [hackmd](https://hackmd.io/j90LerTrRxavEKDTCU-f7w?view) | 00.48 - Keldermans |  |
 | 2026-01-26 | spatial data in R | [slides]({{ site.baseurl }}{% link sessions/20260126_spatial_data_in_r.html  %}) | [hackmd](https://hackmd.io/acJrz9VVS9e1Mp_ED7pZeQ?view) | 01.05 - Isala Van Diest | [vimeo](https://vimeo.com/1159566109) |
 | 2025-12-16 | from files to fRames | [slides]({{ site.baseurl }}{% link sessions/20251216_from_files_to_fRames.html  %}) | [hackmd](https://hackmd.io/bH5VSSwAQ46FXetH_NKn1Q?view) | 01.71 - Frans Breziers | [vimeo](https://vimeo.com/1154956476)  |
 | 2025-11-27 | mastering text wrangling in R | [slides]({{ site.baseurl }}{% link sessions/20251127_mastering_text_wrangling_in_r.html  %}) | [hackmd](https://hackmd.io/D46xpmDFR0KY0p5DL1SQRA?view) | 01.23 - Léon Stynen | [vimeo](https://vimeo.com/1141705801)  |
