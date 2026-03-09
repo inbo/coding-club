@@ -314,8 +314,7 @@ as legend title and layer name. Show only `species` and `type` in the popups.
 Hint: check the
 [mapview advanced controls](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html) article.
 5. Start from the map in 1.2. Use Open Street Map tiles only, show the mouse
-coordinates (lat, lon) and zoom level in the map. Add also the useful "zoom-to-layer"
-button to the map. Hint: check [mapview advanced controls](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html)
+coordinates (lat, lon) and zoom level in the map. Remove the "zoom-to-layer" button from the map. Hint: check [mapview advanced controls](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html)
 and the [extra leaflet functionalities](https://r-spatial.github.io/mapview/articles/mapview_06-add.html) and [mapview popups](https://r-spatial.github.io/mapview/articles/mapview_04-popups.html) articles.
 6. (EXTRA) Create two layers for trees and shrubs. Set color based on species and
 add a legend for each layer. Be sure that colors are ordered by type and species.
@@ -339,7 +338,7 @@ value (`max_value_diff`). Hint: check the
 3. Show all three layers of the raster, with the same color palette. Set layer
 names and legend titles to `Average temperature fluctuation in January`,
 `Average maximum temperature in January` and `Average minimum temperature in
-January`. Make only the first layer visible and hide the other two layers. Hint:
+January`. Make only the first layer visible and hide the other two layers. Remove the "zoom-to-layer" button as well. Hint:
 check the
 [mapview advanced controls](https://r-spatial.github.io/mapview/articles/mapview_02-advanced.html)
 article again.
@@ -433,7 +432,8 @@ class: left, top
 
 # Resources
 
-- Solutions and video recording will be available soon.
+- Comprehensive [solutions](https://github.com/inbo/coding-club/blob/main/src/20260225/20260225_challenges_solutions.R) are available on GitHub. You can opt to download the solutions automatically by using `inborutils::setup_codingclub_session("20260126")`.
+- The edited [video recording](https://vimeo.com/1171754154) is available on our [vimeo channel](https://vimeo.com/user/8605285/folder/1978815).
 - [ggplot2](https://ggplot2.tidyverse.org/): our standard package for plots, which can also be used for displaying spatial data.
 - [ggspatial](https://paleolimbot.github.io/ggspatial/index.html) documentation. Suit well for static maps and it is ggplot2 compatible.
 - For the ggplot fanatics there is the [ggmap](https://github.com/dkahle/ggmap#readme) package!
