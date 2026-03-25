@@ -73,7 +73,9 @@ abv_cube %>% dplyr::distinct(year) %>% arrange(year)
 
 # # Preprocess data
 #
-# Add geometrical information to the occurrence cube via `mgrscode`, which contains the identifiers of the grid cells containing at least one occurrence of the species.
+# Add geometrical information to the occurrence cube via `mgrscode`, which 
+# contains the identifiers of the grid cells containing at least one occurrence 
+# of the species.
 cells_in_cube <- vl_grid %>%
   dplyr::filter(mgrscode %in% unique(abv_cube$mgrscode)) %>%
   dplyr::select(-c(TAG, Shape_Leng, Shape_Area))
@@ -95,7 +97,8 @@ sf_abv_cube %>% head(n = 30)
 
 # Data visualization
 
-# In this section we will show how the number of occurrences and the number of occupied grid cells vary by year and species. Both static plots and dynamic maps are generated.
+# In this section we will show how the number of occurrences and the number of 
+# occupied grid cells vary by year and species. Both static plots and dynamic maps are generated.
 #
 # ## Static plots
 #
