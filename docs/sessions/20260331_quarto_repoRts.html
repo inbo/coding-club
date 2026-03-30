@@ -148,7 +148,7 @@ the [Communicate section](https://r4ds.hadley.nz/communicate) of the R for Data 
 
 One thing is for sure: all effort you did up to now to learn R Markdown is not for nothing! Quarto is very similar to R Markdown; in my opinion even more intuitive.
 
-![:scale 70%]({{ site.baseurl}}/assets/images/20260331/20260331_quarto_hex_logo.png)
+![:scale 50%]({{ site.baseurl}}/assets/images/20260331/20260331_quarto_hex_logo.png)
 
 Check also the talk ["Mixing R, Python, and Quarto: Crafting the Perfect Open Source Cocktail"](https://www.youtube.com/watch?v=8174mk6SGcU&;list=PL9HYL-VRX0oSFkdF4fJeY63eGDvgofcbn&;index=57) by Alenka Frim and Nic Crane.
 
@@ -238,11 +238,11 @@ options. How to avoid showing **warnings** as well?
 
 5. Paging the data frames so that they look always nice. [Tip](https://quarto.org/docs/computations/r.html#data-frames).
 
-EXTRA: how to create a link of the family name returned by inline code in 3? TIP: the URL of the link is the composition of the prefix `https://www.gbif.org/species/` and the
+6. EXTRA: how to create a link of the family name returned by inline code in 3? TIP: the URL of the link is the composition of the prefix `https://www.gbif.org/species/` and the
 family key, `unique(abv_cube$familyKey)`.
 
 ---
-class: center, top
+class: left, top
 
 # Useful shortcuts
 
@@ -250,11 +250,11 @@ class: center, top
 you want to uncomment while pressing `Shift` + `Alt`.
 Press Esc when done to return to normal mode.
 
-![:scale 60%]({{ site.baseurl}}/assets/images/20260331/20260331_multiple_lines_edit_mode.png)
+![:scale 40%]({{ site.baseurl}}/assets/images/20260331/20260331_multiple_lines_edit_mode.png)
 
 - You can easily add a **new code chunck** by pressing<br>
 
-<kbd> Ctrl </kbd> + <kbd> Alt </kbd> + <kbd> i </kbd>
+`Ctrl` + `Alt` + `i`
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -330,6 +330,11 @@ Click the Render button to preview the book.
 
 Thumb rule: one chapter = one Quarto (.qmd) file.
 
+Again, YAML plays a very important role: check the `_quarto.yml` file! It is the
+**configuration file** of the book, where you can set the title, author, date,
+output format, but also the structure of the book (which .qmd files are included
+and in which order).
+
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
@@ -359,7 +364,7 @@ to write quarto documents with a specific INBO style?
 
 Thierry has already given a workshop or two and will continue to give workshops about this package in 2026. Now you have all the needed background to follow those workshops and to use the package to write your own INBO reports in quarto! Check the section ["Workshop"](https://inbo.github.io/flandersqmd/index.html#workshop).
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20260331/20260331_flandersqmd.png)
+![:scale 60%]({{ site.baseurl}}/assets/images/20260331/20260331_flandersqmd.png)
 
 ---
 class: left, top
