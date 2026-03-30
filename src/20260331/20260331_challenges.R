@@ -15,7 +15,9 @@ library(here)         # to build file paths in a project
 library(INBOtheme)    # to apply INBO style to graphs
 library(sf)           # to work with geospatial vector data
 library(plotly)       # to make dynamic plots
+library(mapview)      # to make maps
 library(leaflet)      # to make dynamic maps
+
 
 
 # # Introduction
@@ -32,12 +34,12 @@ library(leaflet)      # to make dynamic maps
 #
 # Read **ABV** data from the occurrence cube file `20251028_abv_cube.csv`:
 abv_cube <- read_csv(
-  file = here::here("data", "20251028", "20251028_abv_cube.csv")
+  file = here::here("data", "20260331", "20260331_abv_cube.csv")
 )
 
 # Read the Flemish grid from the geopackage file `20251028_utm_grid.gpkg`:
 vl_grid <- st_read(
-  dsn = here("data", "20251028", "20251028_utm_grid.gpkg")
+  dsn = here("data", "20260331", "20260331_utm_grid.gpkg")
 )
 
 
