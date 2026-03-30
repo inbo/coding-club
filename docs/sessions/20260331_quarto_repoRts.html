@@ -234,9 +234,9 @@ options. How to avoid showing **warnings** as well?
 
 3. adding **inline code** where needed, e.g. min(anemone_cube$year) and max(anemone_cube$year) in the script. [Tip](https://bookdown.org/yihui/rmarkdown/r-code.html).
 
-4. Update the date in the YAML header automatically to the current date everytime you knit. [Tip](https://bookdown.org/yihui/rmarkdown-cookbook/update-date.html).
+4. Update the date in the YAML header automatically to the current date every time you knit. [Tip](https://bookdown.org/yihui/rmarkdown-cookbook/update-date.html).
 
-5. Paging the data frames so that they look always nice. [Tip](https://quarto.org/docs/computations/r.html#data-frames).
+5. Paging the data frames so that they always look nice. [Tip](https://quarto.org/docs/computations/r.html#data-frames).
 
 6. EXTRA: how to create a link of the family name returned by inline code in 3? Tip: the URL of the link is the composition of the prefix `https://www.gbif.org/species/` and the
 family key, `unique(abv_cube$familyKey)`.
@@ -246,7 +246,7 @@ class: left, top
 
 # Useful shortcuts
 
-- To uncomment multiple lines faster, you can use the multiple lines edit mode by selecting with the mouse the lines
+- To uncomment multiple lines faster, you can use the multiple lines edit mode by selecting the lines
 you want to uncomment while pressing `Shift` + `Alt`.
 Press Esc when done to return to normal mode.
 
@@ -274,7 +274,7 @@ to the Quarto document to generate visualizations and maps.
 4. The chunk codes for the plots and the dynamic map can be quite long and so potentially distracting for the readers.
 Please, fold them. Readers can then choose to display them by clicking on "Show me the code". [Tip](https://quarto.org/docs/output-formats/html-code.html#folding-code).
 
-5. In table of contents, add "Other links" section with the link to [Algemene Broedvogel Monitoring](https://inbo.github.io/abv-rapport/2023/index.html)
+5. In the table of contents, add an "Other links" section with the link to the [Algemene Broedvogel Monitoring](https://inbo.github.io/abv-rapport/2023/index.html)
 report and the [GBIF species occurrence cube](https://doi.org/10.15468/dl.b38nw5),
 used to derive the dataset `20260331_abv_cube.csv`.
 [Tip](https://quarto.org/docs/output-formats/html-basics.html#code-links-and-other-links)
@@ -307,7 +307,7 @@ Because they are a nice way to share a lot of information in a structured way, i
 split your R Markdown document into multiple documents and combine them in a book.
 
 Quarto has a similar functionality to create books, called "quarto books".
-How does a quarto book looks like? Check the [R for Data Science (2e)](https://r4ds.hadley.nz/).
+What does a quarto book look like? Check the [R for Data Science (2e)](https://r4ds.hadley.nz/).
 
 <small>\* See 3rd challenge of the session of 17 Dec 2024, [slide 19](https://coding-club.inbo.be/sessions/20241217_reports_in_r.html#19)
   and download the resulting book (solution) as [zip file](https://github.com/inbo/coding-club/blob/main/src/20241217/20241217_anemone_report.zip).
@@ -328,7 +328,7 @@ as subdirectory of `coding-club/src/20260331` -> Create project
 
 Click the Render button to preview the book.
 
-Thumb rule: one chapter = one Quarto (.qmd) file.
+Rule of thumb: one chapter = one Quarto (.qmd) file.
 
 Again, YAML plays a very important role: check the `_quarto.yml` file! It is the
 **configuration file** of the book, where you can set the title, author, date,
@@ -359,7 +359,7 @@ class: left, top
 
 # Do you know that...
 
-INBO develoepd a package called [flandersqmd](https://inbo.github.io/flandersqmd/)
+INBO developed a package called [flandersqmd](https://inbo.github.io/flandersqmd/)
 to write quarto documents with a specific INBO style?
 
 Thierry has already given a workshop or two and will continue to give workshops about this package in 2026. Now you have all the needed background to follow those workshops and to use the package to write your own INBO reports in quarto! Check the section ["Workshop"](https://inbo.github.io/flandersqmd/index.html#workshop).
