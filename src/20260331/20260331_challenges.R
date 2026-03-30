@@ -1,4 +1,4 @@
-## CHALLENGE 1
+# CHALLENGE 1 ####
 
 # Convert the code below to a Rmd document called `visualize_n_occs.qmd` and
 # make an html version of it.
@@ -91,13 +91,7 @@ sf_abv_cube %>% head(n = 30)
 
 
 
-## End CHALLENGE 1
-
-
-
-## CHALLENGE 2
-
-
+# CHALLENGE 2 ####
 
 # Visualize data
 
