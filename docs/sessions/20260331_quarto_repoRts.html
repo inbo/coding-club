@@ -1,6 +1,6 @@
 ---
 layout: presentation
-title: rmarkdown your report
+title: QUarto repoRts
 ---
 
 class: center, middle
@@ -48,13 +48,13 @@ class: left, top
 
 ## Markdown, R Markdown, Quarto: help!
 
-- Markdown: a markup language\* for creating formatted text using a plain-text editor (= you do NOT get what you see).
+- **Markdown**: a markup language\* for creating formatted text using a plain-text editor (= you do NOT get what you see).
 E.g. make text italic by surrounding it with underscores or asterisks, e.g. `*text*` becomes *text*.
 Check [Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html) to learn more.
-- R Markdown: a file type with extension `Rmd` to _knit_ text (in Markdown) and code (in R) together.
+- **R Markdown**: a file type with extension `Rmd` to _knit_ text (in Markdown) and code (in R) together.
 Goal: generate high quality shareable reports.
-- [rmarkdown](https://rmarkdown.rstudio.com/lesson-1.html): the R package to write R Markdown documents**.
-- [Quarto](https://quarto.org/): the follow-up to R Markdown with the option to include multiple languages.
+- [**rmarkdown**](https://rmarkdown.rstudio.com/lesson-1.html): the R package to write R Markdown documents**.
+- [**Quarto**](https://quarto.org/): the follow-up to R Markdown with the option to include multiple languages.
 
 ![:scale 40%]({{ site.baseurl}}/assets/images/20260331/20260331_hexlogos.png)
 
@@ -74,14 +74,14 @@ Download the [pdf version](https://github.com/inbo/coding-club/blob/main/cheat_s
 - The [Using R in Quarto](https://quarto.org/docs/computations/r.html) guide.
 
 
-![:scale 75%]({{ site.baseurl}}/assets/images/20260331/20260331_cheatsheet.png)
+![:scale 75%]({{ site.baseurl}}/assets/images/20260331/20260331_quarto_cheatsheet.png)
 
 ---
 class: left, top
 
 # R Packages
 
-Load the packages (or install them first):
+Load the packages (or install them first)*:
 
 ```r
 library(tidyverse)    # to do datascience
@@ -91,6 +91,8 @@ library(sf)           # to work with geospatial vector data
 library(plotly)       # to make dynamic plots
 library(mapview)      # to make dynamic maps
 ```
+
+<small>\* This piece of code is also available in challenges script: you will get to it soon. </small>
 
 ---
 class: center, top
@@ -134,14 +136,21 @@ Quarto is*:
 - A really big wrapper around Pandoc (the document converter used to "knit" Rmd documents).
 - Not a prototype anymore: tens of thousands of users already.
 
-Do you know that the [Communicate section](https://r4ds.hadley.nz/communicate) of the R for Data Science book focusses on Quarto and is written using Quarto?
+<small>\* Credits: Carlos Scheidegger, see his [slides](https://cscheid.net/static/2023-esip-quarto-talk/#/title-slide) and [live presentation](https://youtu.be/uQ3yZjM1bj8)
+</small>
+
+---
+class: left, top
+
+## Quarto (.qmd): do you know that...
+
+the [Communicate section](https://r4ds.hadley.nz/communicate) of the R for Data Science book focusses on Quarto and is written using Quarto?
 
 One thing is for sure: all effort you did up to now to learn R Markdown is not for nothing! Quarto is very similar to R Markdown; in my opinion even more intuitive.
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20260331/20260331_quarto_hex_logo.png)
+![:scale 70%]({{ site.baseurl}}/assets/images/20260331/20260331_quarto_hex_logo.png)
 
-<small>\* Credits: Carlos Scheidegger, see his [slides](https://cscheid.net/static/2023-esip-quarto-talk/#/title-slide) and [live presentation](https://youtu.be/uQ3yZjM1bj8)
-</small>
+Check also the talk ["Mixing R, Python, and Quarto: Crafting the Perfect Open Source Cocktail"](https://www.youtube.com/watch?v=8174mk6SGcU&;list=PL9HYL-VRX0oSFkdF4fJeY63eGDvgofcbn&;index=57) by Alenka Frim and Nic Crane.
 
 ---
 class: left, top
@@ -156,8 +165,6 @@ Give it a try:
 - Visual Markdown Editor (VME) is used by default, but you can switch to `Source`
 - **Render** it to create html (opened automatically in your browser as a Background job)
 
-Check also the talk ["Mixing R, Python, and Quarto: Crafting the Perfect Open Source Cocktail"](https://www.youtube.com/watch?v=8174mk6SGcU&;list=PL9HYL-VRX0oSFkdF4fJeY63eGDvgofcbn&;index=57) by Alenka Frim and Nic Crane.
-
 ---
 class: left, top
 
@@ -166,8 +173,9 @@ class: left, top
 The first lines between triple dashes (`---`) is our **header**, needed to
 configure the output to generate by setting up the title, the author, the output type, etc.
 
-And why is it called a YAML header? Because it is written in YAML :-) YAML is a
-programming language typically used to write such kind of **configurations**.
+And why is it called a YAML header? Because it is written in YAML (YAML Ain’t
+Markup Language) :-) YAML is a programming language typically used to write such
+kind of **configurations**. Read more on the GitLab blogpost ["What is YAML: Understanding the Basics"](https://about.gitlab.com/topics/devops/what-is-yaml/) or the educative [blogpost](https://www.educative.io/blog/yaml-tutorial).
 
 Why do people use YAML for writing configurations files? Because YAML is very,
 very **human readable**.
@@ -189,7 +197,7 @@ class: left, top
 - Download everything automatically via `inborutils::setup_codingclub_session()`.
 - manually*, from [data/20260331](https://github.com/inbo/coding-club/blob/master/data/20260331/) and [src/20260331](https://github.com/inbo/coding-club/blob/master/src/20260331). Place the R script in `/src/20260331/` and data in `/data/20260331/`.
 
-<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+<small>\* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
 
 ---
 class: left, top
@@ -215,11 +223,11 @@ class: left, top
 
 Convert the text and the code in [20260331_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20260331/20260331_challenges.R)
 to a Quarto document called `20260331_abv_analysis.qmd` and _knit_ it as html.
-Using the cheatsheet and the specific tips provided, please, take care of:
+Using the cheatsheet and the specific tips provided. Please, take care of:
 
 1. Converting the comments to plain text.
 
-2. Showing the library you need to load but avoiding to show any returned **message**
+2. Showing the packages you need to load but avoiding to show any returned **message**
 (errors or warnings are allowed). Tip: check the
 [list](https://yihui.org/knitr/options/#text-output) with all test-output chunk
 options. How to avoid showing **warnings** as well?
@@ -230,8 +238,7 @@ options. How to avoid showing **warnings** as well?
 
 5. Paging the data frames so that they look always nice. [Tip](https://quarto.org/docs/computations/r.html#data-frames).
 
-EXTRA: how to create a link of the family name returned by inline code in 3?
-The URL is the composition of the prefix `https://www.gbif.org/species/` and the
+EXTRA: how to create a link of the family name returned by inline code in 3? TIP: the URL of the link is the composition of the prefix `https://www.gbif.org/species/` and the
 family key, `unique(abv_cube$familyKey)`.
 
 ---
@@ -243,7 +250,7 @@ class: center, top
 you want to uncomment while pressing `Shift` + `Alt`.
 Press Esc when done to return to normal mode.
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20260331/20260331_multiple_lines_edit_mode.png)
+![:scale 60%]({{ site.baseurl}}/assets/images/20260331/20260331_multiple_lines_edit_mode.png)
 
 - You can easily add a **new code chunck** by pressing<br>
 
@@ -255,8 +262,8 @@ class: left, top
 
 # Challenge 2
 
-Let's add the text and code from [20260331_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20260331/20260331_challenges.R) (below "Challenge 2" comment)
-to the Rmd to generate visualizations and maps.
+Let's add the text and code from [20260331_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20260331/20260331_challenges.R) (below `# Challenge 2 ####` comment)
+to the Quarto document to generate visualizations and maps.
 
 1. Add a table of content and place it on the left. [Tip](https://quarto.org/docs/output-formats/html-basics.html#table-of-contents).
 
@@ -267,9 +274,15 @@ to the Rmd to generate visualizations and maps.
 4. The chunk codes for the plots and the dynamic map can be quite long and so potentially distracting for the readers.
 Please, fold them. Readers can then choose to display them by clicking on "Show me the code". [Tip](https://quarto.org/docs/output-formats/html-code.html#folding-code).
 
-5. In table of contents, add Other links section with the link to [Algemene Broedvogel Monitoring](https://inbo.github.io/abv-rapport/2023/index.html)
-report and the [GBIF species occurrence cube](https://doi.org/10.15468/dl.b38nw5), used to derive the dataset `20260331_abv_cube.csv`.
+5. In table of contents, add "Other links" section with the link to [Algemene Broedvogel Monitoring](https://inbo.github.io/abv-rapport/2023/index.html)
+report and the [GBIF species occurrence cube](https://doi.org/10.15468/dl.b38nw5),
+used to derive the dataset `20260331_abv_cube.csv`.
 [Tip](https://quarto.org/docs/output-formats/html-basics.html#code-links-and-other-links)
+
+6. Add a "caution" callout section at the very begin of the document with the
+message: "This report is not intended to be a scientific report but rather a
+demonstration of how to write a report in Quarto".
+[Tip](https://quarto.org/docs/authoring/callouts.html#callout-types).
 
 ---
 class: left, top
@@ -277,25 +290,27 @@ class: left, top
 # Intermezzo 1: From R Markdown to quarto
 
 If you have already some knowledge about R Markdown, you found probably that the
-syntax of Quarto is very similar to R Markdown. Still, there are some differences which are sometimes difficult to remember.
-At Posit, they created a very useful [lookup document](https://quarto.org/docs/authoring/markdown-basics.html#r-markdown-to-quarto-lookup)
-to help you to find the right syntax for a specific functionality in Quarto when you only know how to do it in R Markdown.
-https://github.com/posit-dev/skills/blob/main/quarto/quarto-authoring/references/conversion-rmarkdown.md
+syntax of Quarto is very similar to R Markdown. Still, there are some differences
+which are sometimes difficult to remember. At Posit, they created a very useful
+[lookup document](https://github.com/posit-dev/skills/blob/main/quarto/quarto-authoring/references/conversion-rmarkdown.md)
+to help you to find the right syntax for a specific functionality in Quarto when
+you only know how to do it in R Markdown.
+
 
 ---
 class: left, top
 
 # Intermezzo 2: bookdown? No, quarto book!
 
-In previous coding clubs* we made books, using the [**bookdown**](https://bookdown.org/) package. Why books?
+In previous coding clubs\* we made books, using the [**bookdown**](https://bookdown.org/) package. Why books?
 Because they are a nice way to share a lot of information in a structured way, i.e.
 split your R Markdown document into multiple documents and combine them in a book.
 
 Quarto has a similar functionality to create books, called "quarto books".
 How does a quarto book looks like? Check the [R for Data Science (2e)](https://r4ds.hadley.nz/).
 
-<small>* See 3rd challenge of the session of 17 Dec 2024, [slide 19](https://coding-club.inbo.be/sessions/20241217_reports_in_r.html#19)
-  and the resulting book (solution) as [zip file](https://github.com/inbo/coding-club/blob/main/src/20241217/20241217_anemone_report.zip).
+<small>\* See 3rd challenge of the session of 17 Dec 2024, [slide 19](https://coding-club.inbo.be/sessions/20241217_reports_in_r.html#19)
+  and download the resulting book (solution) as [zip file](https://github.com/inbo/coding-club/blob/main/src/20241217/20241217_anemone_report.zip).
 </small>
 
 ---
@@ -321,8 +336,8 @@ class: left, top
 
 # Challenge 3
 
-Based on the template created in the intermezzo, create a quarto book about the ABV data analysis.
-Reuse the text and code from the previous challenges.
+Based on the template created in the intermezzo, create a quarto book about the
+ABV data analysis. Reuse the text and code from the previous challenges.
 
 1. Split the content in 5 chapters: Introduction (`index.qmd`), Read data
 (`read.qmd`), Explore data (`explore.qmd`), Preprocess data (`preprocess.qmd`)
@@ -344,6 +359,8 @@ to write quarto documents with a specific INBO style?
 
 Thierry has already given a workshop or two and will continue to give workshops about this package in 2026. Now you have all the needed background to follow those workshops and to use the package to write your own INBO reports in quarto! Check the section ["Workshop"](https://inbo.github.io/flandersqmd/index.html#workshop).
 
+![:scale 90%]({{ site.baseurl}}/assets/images/20260331/20260331_flandersqmd.png)
+
 ---
 class: left, top
 
@@ -362,15 +379,22 @@ class: left, top
 # Resources
 
 1. Solutions and video recording will be available soon.
-2. The Quarto (.qmd) format: a [getting started](https://quarto.org/docs/get-started/hello/rstudio.html)
-3. The main reference to learn quarto: https://quarto.org/
-4. Quarto cheat sheet: [html](https://rstudio.github.io/cheatsheets/html/rmarkdown.html) and [pdf](https://github.com/inbo/coding-club/blob/main/cheat_sheets/20230331_cheat_sheet_quarto.pdf).
-5. Carlos Scheidegger's [slides](https://cscheid.net/static/2023-esip-quarto-talk/#/title-slide) and [live presentation](https://youtu.be/uQ3yZjM1bj8) about quarto
-6. [Article](https://www.educative.io/blog/yaml-tutorial) about YAML
-7. Recording of the talk ["Mixing R, Python, and Quarto: Crafting the Perfect Open Source Cocktail"](https://www.youtube.com/watch?v=8174mk6SGcU&;list=PL9HYL-VRX0oSFkdF4fJeY63eGDvgofcbn&;index=57) by Alenka Frim and Nic Crane at the posit::conf(2024)
+2. The Quarto (.qmd) format: a [getting started](https://quarto.org/docs/get-started/hello/rstudio.html).
+3. The main reference to learn quarto: https://quarto.org/.
+4. Quarto cheat sheet: [html](https://rstudio.github.io/cheatsheets/html/rmarkdown.html)
+and [pdf](https://github.com/inbo/coding-club/blob/main/cheat_sheets/20230331_cheat_sheet_quarto.pdf).
+5. Carlos Scheidegger's [slides](https://cscheid.net/static/2023-esip-quarto-talk/#/title-slide)
+and [live presentation](https://youtu.be/uQ3yZjM1bj8) about quarto.
+6. Recording of the talk ["Mixing R, Python, and Quarto: Crafting the Perfect
+Open Source Cocktail"](https://www.youtube.com/watch?v=8174mk6SGcU&;list=PL9HYL-VRX0oSFkdF4fJeY63eGDvgofcbn&;index=57)
+by Alenka Frim and Nic Crane at the posit::conf(2024).
+7. [Article](https://www.educative.io/blog/yaml-tutorial) about YAML.
+8. Blogpost ["What is YAML: Understanding the Basics"](https://about.gitlab.com/topics/devops/what-is-yaml/).
 8. The [flandersqmd](https://inbo.github.io/flandersqmd/) R package to create
 quarto reports with a specific INBO style.
-9. The [trackdown](https://claudiozandonella.github.io/trackdown/) R package to collaboratively write reports in R markdown, bookdown, quarto or quarto books by easily switching between Google Docs and Markdown/Quarto documents.
+9. The [trackdown](https://claudiozandonella.github.io/trackdown/) R package to
+collaboratively write reports in R markdown, bookdown, quarto or quarto books by
+easily switching between Google Docs and Markdown/Quarto documents.
 
 ---
 class: center, middle
