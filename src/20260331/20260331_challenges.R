@@ -103,6 +103,7 @@ sf_abv_cube %>% head(n = 30)
 # ## Static plots
 #
 # # Show number of occurrences and number of occupied grid cells (make a tabbed section out of it)
+# # Show number of occurrences and number of occupied grid cells (make a tabbed section out of it)
 #
 # ### per species (1st tab)
 
