@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2026-03-31 | quarto repoRts | [slides]({{ site.baseurl }}{% link sessions/20260331_quarto_repoRts.html  %}) | [hackmd](https://hackmd.io/VNBTub-iRF-YyIMZ_bc7lg?view) | 01.71 - Frans Breziers |  |
+| 2026-03-31 | quarto repoRts | [slides]({{ site.baseurl }}{% link sessions/20260331_quarto_repoRts.html  %}) | [hackmd](https://hackmd.io/VNBTub-iRF-YyIMZ_bc7lg?view) | 01.71 - Frans Breziers | [vimeo](https://vimeo.com/1184810392) |
 | 2026-02-25 | spatial data visualization unleashed | [slides]({{ site.baseurl }}{% link sessions/20260225_spatial_data_visualization_unleashed.html  %}) | [hackmd](https://hackmd.io/j90LerTrRxavEKDTCU-f7w?view) | 00.48 - Keldermans | [vimeo](https://vimeo.com/1171754154?share=copy&fl=sv&fe=ci) |
 | 2026-01-26 | spatial data in R | [slides]({{ site.baseurl }}{% link sessions/20260126_spatial_data_in_r.html  %}) | [hackmd](https://hackmd.io/acJrz9VVS9e1Mp_ED7pZeQ?view) | 01.05 - Isala Van Diest | [vimeo](https://vimeo.com/1159566109) |
 | 2025-12-16 | from files to fRames | [slides]({{ site.baseurl }}{% link sessions/20251216_from_files_to_fRames.html  %}) | [hackmd](https://hackmd.io/bH5VSSwAQ46FXetH_NKn1Q?view) | 01.71 - Frans Breziers | [vimeo](https://vimeo.com/1154956476)  |
