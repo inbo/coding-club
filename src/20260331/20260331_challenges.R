@@ -16,8 +16,6 @@ library(INBOtheme)    # to apply INBO style to graphs
 library(sf)           # to work with geospatial vector data
 library(plotly)       # to make dynamic plots
 library(mapview)      # to make maps
-library(leaflet)      # to make dynamic maps
-
 
 
 # # Introduction
