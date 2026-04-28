@@ -50,7 +50,7 @@ The dplyr cheat sheet is available as [pdf](https://github.com/inbo/coding-club/
 ![:scale 85%]({{ site.baseurl}}/assets/images/20260429/20260429_cheat_sheet_dplyr.png)
 
 New to dplyr? The best resource for self study is the [data transformation chapter](https://r4ds.had.co.nz/transform.html) in R for data science. 
-The package documentation is also very good, with examples and vignettes for each function.
+The [dplyr homepage](https://dplyr.tidyverse.org/) is also very good, with examples and vignettes for each function.
 
 ---
 class: left, top
@@ -167,13 +167,10 @@ class: left, top
 
 Today we will work with:
 
-- [20260429_cube_marchantiophyta_flanders.tsv](https://github.com/inbo/coding-club/blob/main/data/20260429/cube_marchantiophyta_flanders.tsv): a [GBIF species occurrence cube](https://www.gbif.org/en/occurrence-cubes) with records of Marchantiophyta in Flanders grouped per year, species and grid cell (using the EEA 1kmx1km grid cell)*.
+- [20260429_cube_marchantiophyta_flanders.tsv](https://github.com/inbo/coding-club/blob/main/data/20260429/cube_marchantiophyta_flanders.tsv): a [GBIF species occurrence cube](https://www.gbif.org/en/occurrence-cubes) with records of Marchantiophyta ([Liverwort](https://en.wikipedia.org/wiki/Liverwort) in EN, [levermossen](https://nl.wikipedia.org/wiki/Levermossen) in NL) in Flanders from 2010 to 2025 grouped per year, species and grid cell. The [1km x 1km European Reference Grid](https://esdac.jrc.ec.europa.eu/content/european-reference-grids) has been used. This cube has been derived from a larger GBIF species occurrence cube, DOI: [10.15468/dl.furjrq](https://doi.org/10.15468/dl.furjrq).
 - [20260429_vernacular_names.tsv](https:://github.com/inbo/coding-club/blob/main/data/20260429/20260429_vernacular_names.tsv): vernacular names for the species in the cube.
 - [20260429_challenges.R](https:://github.com/inbo/coding-club/blob/main/src/20260429/20260429_challenges.R): R script to start from. Some code is already provided!
 
-
-<small> \* Derived from a large GBIF species occurrence cube. DOI: [10.15468/dl.furjrq](https://doi.org/10.15468/dl.furjrq).
-</small>
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -199,13 +196,16 @@ class: left, top
 ## Challenge 2A
 
 1. Rename the column `eeacellcode` to `cell_code`, `mincoordinateuncertaintyinmeters` to `min_coord_unc` and `mintemporaluncertainty` to `min_temp_unc`. You can overwrite `cube`.
+
 2. We want to explore how many records there are for each species. 
 For each species (columns `species` and `specieskey`), find the number of records (rows) in `cube`. 
 Save the results as a data frame with two columns, `species` and `n`. 
 Arrange the result by number of records in descending order and then by species alphabetically.
+
 3. We want to explore how precise are the data. For each species, find the different values of `min_coord_unc`. 
 Save the results as a data frame with two columns, `species` and `min_coord_unc`. 
 Arrange the result by species and then by `min_coord_unc` in ascending order.
+
 4. The combination of `species` and `specieskey` is not always unique: it can happen that two different species keys have the same species name. 
 This is due to the fact that the species name doesn't contain the authorship. 
 Create a data frame with three columns: `species`, `specieskey` and `n_species`, where `n_species` is the number of species keys that have the same species name. 
@@ -242,7 +242,7 @@ While preparing the dataset `vernacular_names` you will use in challenge 3, I ha
 The open science *instinct* told me to create an issue for John Waller, the maintainer of [rgbif](https://docs.ropensci.org/rgbif). 
 See [#842](https://github.com/ropensci/rgbif/issues/842)).
 
-![:scale 80%]({{ site.baseurl}}/assets/images/20260429/20260429_issue_rgbif.png)
+![:scale 100%]({{ site.baseurl}}/assets/images/20260429/20260429_issue_rgbif.png)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
