@@ -1,0 +1,313 @@
+---
+layout: presentation
+title: data wrangling with tidyverse
+---
+
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+<!-- Adjust the presentation to the session. Focus on the challenges,
+    this is not a coding tutorial.
+
+    Note, to include figures, store the image in the `/docs/assets/images/yyyymmdd/`
+    folder and use the jekyll base.url reference as done in this template
+    or see https://jekyllrb.com/docs/liquid/tags/#links.
+    using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 29 APRIL 2026
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck Building
+
+01.71 - Frans Breziers
+
+---
+class: left, top
+
+# Reminders
+
+1. Did we confirm the room reservation on the _roomie_?
+2. Did we start the recording?
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20260429/20260429_badge.png)
+
+---
+class: left, top
+
+The dplyr cheat sheet is available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20260429_cheat_sheet_data_transformation.pdf) or as [html](https://rstudio.github.io/cheatsheets/html/data-transformation.html).
+
+![:scale 85%]({{ site.baseurl}}/assets/images/20260429/20260429_cheat_sheet_dplyr.png)
+
+New to dplyr? The best resource for self study is the [data transformation chapter](https://r4ds.had.co.nz/transform.html) in R for data science.
+
+---
+class: left, top
+
+You could benefit of the cheatsheets of other two important tidyverse packages: tidyr and purrr.
+
+- [tidyr](https://tidyr.tidyverse.org/): cheatsheet available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20260429_cheat_sheet_tidyr.pdf) or [html](https://rstudio.github.io/cheatsheets/html/tidyr.html).
+- [purrr](https://purrr.tidyverse.org/): cheatsheet available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20260429_cheat_sheet_purrr.pdf) or [html](https://rstudio.github.io/cheatsheets/html/purrr.html).
+
+
+<center>![:scale 25%]({{ site.baseurl}}/assets/images/20260429/20260429_tidyr_logo.png)</center>
+
+<center>![:scale 25%]({{ site.baseurl}}/assets/images/20260429/20260429_purrr_logo.png)</center>
+
+---
+class: left, top
+
+## How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+## First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+---
+class: center, top
+
+# Share your code during the coding session
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/laEmld1JQTO99yEq_ipuzQ?both and start by adding your name in section "Participants".
+
+<iframe src="https://hackmd.io/laEmld1JQTO99yEq_ipuzQ?edit" height="400px" width="800px"></iframe>
+
+
+---
+class: left, top
+
+# Why dplyr?
+
+A lot of reasons. But the main one is that it makes the code easy to read (in comparison with basic R). Other important reasons?
+
+- It is actively maintained (people from posit, the company behind RStudio).
+- It works nicely with all other tidyverse packages.
+- Its development is open on [GitHub](https://github.com/tidyverse/dplyr/):
+issues, questions, dev ideas etc. are welcome.
+- Its functions have very good names. Some of them are exactly the same as in
+SQL, e.g. `filter()`, `select()`.
+
+
+
+---
+class: left, top
+
+# The pipe %>% operator
+
+From [dplyr](https://dplyr.tidyverse.org/articles/dplyr.html#the-pipe) documentation:
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20240425/20240425_pipe.png)
+
+Which code version is more readable?
+
+```
+library(dplyr)
+
+# Version 1
+mtcars %>%
+  filter(mpg > 20) %>%
+  select(mpg, cyl, hp)
+
+# Version 2
+select(filter(mtcars, mpg > 20), mpg, cyl, hp)
+```
+
+RStudio provides a shortcut to insert a pipe:
+`Ctrl + Shift + M`.
+
+---
+class: left, top
+
+# Pipe %>% or pipe |>
+
+From [tidyverse blogpost](https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/)
+R 4.1.0 introduced a native pipe operator, |>. As described in the R News:
+
+> R now provides a simple native forward pipe syntax |>. The simple form of the forward pipe inserts the left-hand side as the first argument in the right-hand side call. The pipe implementation as a syntax transformation was motivated by suggestions from Jim Hester and Lionel Henry.
+
+See section ["|> vs. %>%"](https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/#-vs) to know the slightly different behavior of the two pipes.
+
+---
+class: left, top
+
+# Download data and code
+
+You can download the material of today:
+
+- automatically via `inborutils::setup_codingclub_session()`*
+
+- manually** from GitHub folders [data/20260429](https://github.com/inbo/coding-club/tree/master/data/20260429) and [src/20260429](https://github.com/inbo/coding-club/tree/master/src/20260429)
+
+<br>
+<small> __\* Note__: you can use the date in "YYYYMMDD" format to download the coding club material of a specific day, e.g. run `setup_codingclub_session("20230228")` to download the coding club material of February, 28 2023. If date is omitted, i.e. `setup_codingclub_session()`, the date of today is used. For all options, check the [tutorial online](https://inbo.github.io/tutorials/tutorials/r_setup_codingclub_session/).</small>
+<br>
+<small> __\*\* Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data and scripts description
+
+Today we will work with:
+
+- [20260429_cube_marchantiophyta_flanders.tsv](https://github.com/inbo/coding-club/blob/main/data/20260429/cube_marchantiophyta_flanders.tsv): a GBIF species occurrence cube with records of Marchantiophyta in Flanders grouped per year, species and grid cell (using the EEA 1kmx1km grid cell)*.
+- [20260429_vernacular_names.tsv](https:://github.com/inbo/coding-club/blob/main/data/20260429/20260429_vernacular_names.tsv): vernacular names for the species in the cube.
+R script to start from (some code is already provided)
+
+
+<small> \* Derived from a large GBIF species occurrence cube, see https://doi.org/10.15468/dl.furjrq.
+</small>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+## Challenge 1
+
+1. Save the species as a vector `species` (No duplicates). 
+Save the species as a data frame `species_df` with the column name `specieskey`.
+
+2. From `cube_minimal`, select only the records with more than 1 occurrence and minimum coordinate uncertainty less than 1000 meters. 
+Save the result as `cube_occurrences_gt_1_precise`.
+
+3. Are all species in `cube_occurrences_gt_1` also present in `species`?
+
+4. The minimal information a cube should contain is the three dimensions, spatial (column `eeacellcode`)`, temporal (column `year`), taxonomic (`specieskey`) and the measure _number of occurrences_ (column `occurrences`). 
+Please, select those columns from `cube` and save the result as `cube_minimal`.
+
+5. Change order of the columns in `cube`. The first columns should be reserved for the dimensions. 
+Start with the taxonomic dimension (`specieskey` and `species`), followed by the temporal dimension (`year`) and then the spatial dimension (`eeacellcode`). 
+After the dimensions, the measures should be placed. Set them in order of importance: first `occurrences`, then `mincoordinateuncertaintyinmeters` and `mintemporaluncertainty`.
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+## Challenge 2
+
+1.Rename the column `eeacellcode` to `cell_code`, `mincoordinateuncertaintyinmeters` to `min_coord_unc` and `mintemporaluncertainty` to `min_temp_unc`. 
+You can overwrite `cube`.
+2. We want to explore how many records there are for each species. 
+For each species (columns `species` and `specieskey`), find the number of records (rows) in `cube`. 
+Save the results as a data frame with two columns, `species` and `n`. 
+Arrange the result by number of records in descending order and then by species alphabetically.
+3. We want to explore how precise are the data. For each species, find the different values of `min_coord_unc`. 
+Save the results as a data frame with two columns, `species` and `min_coord_unc`. 
+Arrange the result by species and then by `min_coord_unc` in ascending order.
+4. The combination of `species` and `specieskey` is not always unique: it can happen that two different species keys have the same species name. 
+This is due to the fact that the species name doesn't contain the authorship. 
+Create a data frame with three columns: `species`, `specieskey` and `n_species`, where `n_species` is the number of species keys that have the same species name. 
+Save the result as `species_name_key`. 
+Arrange the result by number of species keys in descending order and then by species alphabetically.
+5. We want to explore the species richness across the years. For each year, find the number of species (specieskey) in `cube`. 
+Save the results as a data frame with two columns, `year` and `n_species`. 
+Arrange the result by species richness in descending order and by year in ascending order. 
+ Save the result as `species_richness_year`.
+6. Based on 2.4, add a column `richness_category` to `species_richness_year` with the following categories: 
+"low" for years with 10 or less species, "medium" for years with 11 up to 20 species and "high" for years with more than 20 species. 
+We want to be sure that all the records are categorized, so if there is any record that does not fit in the previous categories, return an error. 
+Hint: get a look to the most updated dplyr tutorial about [recoding columns and replacing values](https://dplyr.tidyverse.org/articles/recoding-replacing.html).
+7.We want to create timseries from the cube. In particular, we want to calculate the measured occupancy, i.e. the number of occupied grid cells, and the total number of occurrences per species and year. 
+For each species and year, calculate the number of occupied grid cells (column `cell_code`) and the total number of occurrences (column `occurrences`). 
+Save the results as a data frame with four columns, `species`, `year`, `n_cells` and `n_occurrences`. 
+Arrange the result by specieskey and then by year in ascending order.
+
+---
+class: left, top
+
+## Intermezzo: open science = care for code
+
+While preparing the dataset `vernacular_names` you will use in challenge 3, I have found that some examples of rgbif functions were not informative as they should have been. 
+The open science *instinct* told me to create an issue for John Waller, the maintainer of [rgbif](https://docs.ropensci.org/rgbif). 
+See [#842](https://github.com/ropensci/rgbif/issues/842)).
+
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+## Challenge 3
+
+1. Select the vernacular names in English (language code `eng`), Dutch (language code `nld`) and German (language code `deu`) from the **provided** data frame `vernacular_names`.
+Select only the columns `taxonKey`, `vernacularName` and `language`.
+Transform the data frame from long to wide format, so that you have one column for each language with the vernacular name in that language. The column names should be `vernacular_name_eng`, `vernacular_name_nld` and `vernacular_name_deu`.
+Multiple vernacular names for species/language combination should result in a column containing lists.
+Save the result as `vernacular_wide_lists`.
+2. Instead of having lists, you can also collapse the multiple vernacular names into a single string, separated by a comma. 
+Take care of removing duplicates and NA values before collapsing the names.
+3. Join the vernacular names in `vernacular_names_wide` with the cube `cube` using the column `specieskey` from `cube` and `taxonKey` from `vernacular_names_wide`. 
+Save the result as `cube_vernacular`.
+
+---
+class: left, top
+
+# Bonus challenge
+
+1. Insert underscore `_` in the column names of `cube` between words. Save it as `cube_extra`.
+Hint: after the renaming in 2.1, the only columns to rename end with `count` or `key`. 
+You can use the [stringr](https://stringr.tidyverse.org/) package.
+
+2. Using the provided function `vernacular_name`, get the vernacular names for all the species (specieskey) in `cube`. You can use the `purrr` package to apply the function to all the species keys. 
+Save the result in a data frame. 
+This data frame should be the same as the data frame you used in challenge 3.
+
+
+---
+class: left, top
+
+# Package of the month: snakecase
+
+[snakecase](https://tazinho.github.io/snakecase/articles/introducing-the-snakecase-package.html) is a package to convert strings to different case styles. It can be useful to make your column names consistent and easier to work with. For example, you can convert easily from camel case to snakecase:
+
+```
+library(snakecase)
+to_snake_case("IDontKNOWWhat_thisCASE_is")
+[1] "i_dont_know_what_this_case_is"
+```
+
+![:scale 50%]({{ site.baseurl}}/assets/images/20260429/20260429_snakecase.png)
+
+---
+class: left, top
+
+# Resources
+
+1. Extended [challenges solutions](https://github.com/inbo/coding-club/blob/main/src/20260429/20260429_challenges_solutions.R) are available. You can opt to download them automatically by using `inborutils::setup_codingclub_session("20260429")`. No video recording this time, sorry!
+2. [dplyr homepage](https://dplyr.tidyverse.org/).
+3. [tidyr homepage](https://tidyr.tidyverse.org/).
+4. [purrr homepage](https://purrr.tidyverse.org/).
+5. [data transformation chapter](https://r4ds.hadley.nz/transform.html) in [R for data science 2nd edition.](https://r4ds.hadley.nz/).
+6. [rgbif homepage](https://docs.ropensci.org/rgbif/).
+7 The [GBIF API](https://techdocs.gbif.org/en/openapi/) documentation.
+8. The game changing article of Hadley Wickham: [Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf), from 2014.
+9. [readxl homepage](https://readxl.tidyverse.org/).
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room number and name  -->
+Topic: to be chosen <br>
+Room:  HT - 01.20 - Willy Van Der Meeren (?) <br>
+Date: **28/05/2026** (Monday!), from **10:00** to **12:30** <br>
+**Help** needed with technical setup? You are welcome from **9:45am**
