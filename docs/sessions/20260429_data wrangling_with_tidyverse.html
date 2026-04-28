@@ -198,10 +198,9 @@ After the dimensions, the measures should follow. Set them in order of importanc
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
-## Challenge 2
+## Challenge 2A
 
-1.Rename the column `eeacellcode` to `cell_code`, `mincoordinateuncertaintyinmeters` to `min_coord_unc` and `mintemporaluncertainty` to `min_temp_unc`. 
-You can overwrite `cube`.
+1.Rename the column `eeacellcode` to `cell_code`, `mincoordinateuncertaintyinmeters` to `min_coord_unc` and `mintemporaluncertainty` to `min_temp_unc`. You can overwrite `cube`.
 2. We want to explore how many records there are for each species. 
 For each species (columns `species` and `specieskey`), find the number of records (rows) in `cube`. 
 Save the results as a data frame with two columns, `species` and `n`. 
@@ -214,6 +213,13 @@ This is due to the fact that the species name doesn't contain the authorship.
 Create a data frame with three columns: `species`, `specieskey` and `n_species`, where `n_species` is the number of species keys that have the same species name. 
 Save the result as `species_name_key`. 
 Arrange the result by number of species keys in descending order and then by species alphabetically.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+## Challenge 2B
+
 5. We want to explore the species richness across the years. For each year, find the number of species (specieskey) in `cube`. 
 Save the results as a data frame with two columns, `year` and `n_species`. 
 Arrange the result by species richness in descending order and by year in ascending order. 
