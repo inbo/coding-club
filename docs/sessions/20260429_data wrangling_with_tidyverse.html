@@ -169,9 +169,9 @@ class: left, top
 
 Today we will work with:
 
-- [20260429_cube_marchantiophyta_flanders.tsv](https://github.com/inbo/coding-club/blob/main/data/20260429/cube_marchantiophyta_flanders.tsv): a GBIF species occurrence cube with records of Marchantiophyta in Flanders grouped per year, species and grid cell (using the EEA 1kmx1km grid cell)*.
+- [20260429_cube_marchantiophyta_flanders.tsv](https://github.com/inbo/coding-club/blob/main/data/20260429/cube_marchantiophyta_flanders.tsv): a [GBIF species occurrence cube](https://www.gbif.org/en/occurrence-cubes) with records of Marchantiophyta in Flanders grouped per year, species and grid cell (using the EEA 1kmx1km grid cell)*.
 - [20260429_vernacular_names.tsv](https:://github.com/inbo/coding-club/blob/main/data/20260429/20260429_vernacular_names.tsv): vernacular names for the species in the cube.
-R script to start from (some code is already provided)
+- [20260429_challenges.R](https:://github.com/inbo/coding-club/blob/main/src/20260429/20260429_challenges.R): R script to start from. Ssome code is already provided!
 
 
 <small> \* Derived from a large GBIF species occurrence cube, see https://doi.org/10.15468/dl.furjrq.
@@ -185,19 +185,14 @@ class: left, top
 
 1. Save the species as a vector `species` (No duplicates). 
 Save the species as a data frame `species_df` with the column name `specieskey`.
-
 2. From `cube_minimal`, select only the records with more than 1 occurrence and minimum coordinate uncertainty less than 1000 meters. 
 Save the result as `cube_occurrences_gt_1_precise`.
-
 3. Are all species in `cube_occurrences_gt_1` also present in `species`?
-
-4. The minimal information a cube should contain is the three dimensions, spatial (column `eeacellcode`)`, temporal (column `year`), taxonomic (`specieskey`) and the measure _number of occurrences_ (column `occurrences`). 
+4. The minimal information a cube should contain is the three dimensions, spatial (column `eeacellcode`), temporal (column `year`), taxonomic (`specieskey`) and the measure _number of occurrences_ (column `occurrences`). 
 Please, select those columns from `cube` and save the result as `cube_minimal`.
-
-5. Change order of the columns in `cube`. The first columns should be reserved for the dimensions. 
+5. Change the order of the columns in `cube`. The first columns should be reserved for the dimensions. 
 Start with the taxonomic dimension (`specieskey` and `species`), followed by the temporal dimension (`year`) and then the spatial dimension (`eeacellcode`). 
-After the dimensions, the measures should be placed. Set them in order of importance: first `occurrences`, then `mincoordinateuncertaintyinmeters` and `mintemporaluncertainty`.
-
+After the dimensions, the measures should follow. Set them in order of importance: first `occurrences`, then `mincoordinateuncertaintyinmeters` and `mintemporaluncertainty`.
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -240,7 +235,6 @@ class: left, top
 While preparing the dataset `vernacular_names` you will use in challenge 3, I have found that some examples of rgbif functions were not informative as they should have been. 
 The open science *instinct* told me to create an issue for John Waller, the maintainer of [rgbif](https://docs.ropensci.org/rgbif). 
 See [#842](https://github.com/ropensci/rgbif/issues/842)).
-
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
