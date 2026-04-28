@@ -55,15 +55,15 @@ The package documentation is also very good, with examples and vignettes for eac
 ---
 class: left, top
 
-You could benefit of the cheatsheets of other two important tidyverse packages: tidyr and purrr.
+You could benefit of the cheatsheet of another important tidyverse packages: [tidyr](https://tidyr.tidyverse.org/). Cheatsheet available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20260429_cheat_sheet_tidyr.pdf) or [html](https://rstudio.github.io/cheatsheets/html/tidyr.html).
+In bonus challenge you can also have a first look at two other important tidyverse packages:
 
-- [tidyr](https://tidyr.tidyverse.org/): cheatsheet available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20260429_cheat_sheet_tidyr.pdf) or [html](https://rstudio.github.io/cheatsheets/html/tidyr.html).
-- [purrr](https://purrr.tidyverse.org/): cheatsheet available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20260429_cheat_sheet_purrr.pdf) or [html](https://rstudio.github.io/cheatsheets/html/purrr.html).
-
+- [purrr](https://purrr.tidyverse.org/), the tidyverse package for functional programming. The cheatsheet is available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20260429_cheat_sheet_purrr.pdf) or [html](https://rstudio.github.io/cheatsheets/html/purrr.html)
+- [stringr](https://stringr.tidyverse.org/), the tidyverse package for string manipulation. The cheatsheet available as [pdf](https://github.com/inbo/coding-club/blob/master/cheat_sheets/20260429_cheat_sheet_stringr.pdf) or [html](https://rstudio.github.io/cheatsheets/html/strings.html)
 
 <center>![:scale 25%]({{ site.baseurl}}/assets/images/20260429/20260429_tidyr_logo.png)</center>
 
-<center>![:scale 25%]({{ site.baseurl}}/assets/images/20260429/20260429_purrr_logo.png)</center>
+<center>![:scale 25%]({{ site.baseurl}}/assets/images/20260429/20260429_stringr_logo.png)</center>
 
 ---
 class: left, top
@@ -242,6 +242,8 @@ While preparing the dataset `vernacular_names` you will use in challenge 3, I ha
 The open science *instinct* told me to create an issue for John Waller, the maintainer of [rgbif](https://docs.ropensci.org/rgbif). 
 See [#842](https://github.com/ropensci/rgbif/issues/842)).
 
+![:scale 50%]({{ site.baseurl}}/assets/images/20260429/20260429_issue_rgbif.png)
+
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
@@ -253,8 +255,10 @@ Select only the columns `taxonKey`, `vernacularName` and `language`.
 Transform the data frame from long to wide format, so that you have one column for each language with the vernacular name in that language. The column names should be `vernacular_name_eng`, `vernacular_name_nld` and `vernacular_name_deu`.
 Multiple vernacular names for species/language combination should result in a column containing lists.
 Save the result as `vernacular_wide_lists`.
+
 2. Instead of having lists, you can also collapse the multiple vernacular names into a single string, separated by a comma. 
-Take care of removing duplicates and NA values before collapsing the names.
+Take care of removing duplicates and NA values before collapsing the names. Save the result as `vernacular_names_wide`.
+
 3. Join the vernacular names in `vernacular_names_wide` with the cube `cube` using the column `specieskey` from `cube` and `taxonKey` from `vernacular_names_wide`. 
 Save the result as `cube_vernacular`.
 
@@ -267,7 +271,7 @@ class: left, top
 Hint: after the renaming in 2.1, the only columns to rename end with `count` or `key`. 
 You can use the [stringr](https://stringr.tidyverse.org/) package.
 
-2. Using the provided function `vernacular_name`, get the vernacular names for all the species (specieskey) in `cube`. You can use the `purrr` package to apply the function to all the species keys. 
+2. Using the provided function `vernacular_name`, get the vernacular names for all the species (specieskey) in `cube`. You can use the [purrr](https://purrr.tidyverse.org/) package to apply the function to all the species keys. 
 Save the result in a data frame. 
 This data frame should be the same as the data frame you used in challenge 3.
 
@@ -285,22 +289,20 @@ to_snake_case("IDontKNOWWhat_thisCASE_is")
 [1] "i_dont_know_what_this_case_is"
 ```
 
-![:scale 50%]({{ site.baseurl}}/assets/images/20260429/20260429_snakecase.png)
+![:scale 30%]({{ site.baseurl}}/assets/images/20260429/20260429_snakecase.png)
 
 ---
 class: left, top
 
 # Resources
 
-1. Extended [challenges solutions](https://github.com/inbo/coding-club/blob/main/src/20260429/20260429_challenges_solutions.R) are available. You can opt to download them automatically by using `inborutils::setup_codingclub_session("20260429")`. No video recording this time, sorry!
-2. [dplyr homepage](https://dplyr.tidyverse.org/).
-3. [tidyr homepage](https://tidyr.tidyverse.org/).
-4. [purrr homepage](https://purrr.tidyverse.org/).
+1. Extended challenges solutions and video recording will be available soon.
+2. [dplyr](https://dplyr.tidyverse.org/) package documentation.
+3. [tidyr](https://tidyr.tidyverse.org/) package documentation.
+4. [purrr](https://purrr.tidyverse.org/) package documentation.
 5. [data transformation chapter](https://r4ds.hadley.nz/transform.html) in [R for data science 2nd edition.](https://r4ds.hadley.nz/).
-6. [rgbif homepage](https://docs.ropensci.org/rgbif/).
-7 The [GBIF API](https://techdocs.gbif.org/en/openapi/) documentation.
-8. The game changing article of Hadley Wickham: [Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf), from 2014.
-9. [readxl homepage](https://readxl.tidyverse.org/).
+6. [rgbif](https://docs.ropensci.org/rgbif/) package documentation.
+7. [snakecase](https://readxl.tidyverse.org/) package documentation.
 
 ---
 class: center, middle
