@@ -180,11 +180,15 @@ class: left, top
 
 1. Save the species as a vector `species` (No duplicates). 
 Save the species as a data frame `species_df` with the column name `specieskey`.
+
 2. From `cube_minimal`, select only the records with more than 1 occurrence and minimum coordinate uncertainty less than 1000 meters. 
 Save the result as `cube_occurrences_gt_1_precise`.
+
 3. Are all species in `cube_occurrences_gt_1` also present in `species`?
+
 4. The minimal information a cube should contain is the three dimensions, spatial (column `eeacellcode`), temporal (column `year`), taxonomic (`specieskey`) and the measure _number of occurrences_ (column `occurrences`). 
 Please, select those columns from `cube` and save the result as `cube_minimal`.
+
 5. Change the order of the columns in `cube`. The first columns should be reserved for the dimensions. 
 Start with the taxonomic dimension (`specieskey` and `species`), followed by the temporal dimension (`year`) and then the spatial dimension (`eeacellcode`). 
 After the dimensions, the measures should follow. Set them in order of importance: first `occurrences`, then `mincoordinateuncertaintyinmeters` and `mintemporaluncertainty`.
