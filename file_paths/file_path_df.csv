@@ -239,6 +239,8 @@ data/20260225/20260225_tdiff_tmax_tmin_01.tif,20260225_tdiff_tmax_tmin_01.tif,da
 data/20260225/20260225_moth_captures.csv,20260225_moth_captures.csv,data,20260225
 data/20260331/20260331_abv_cube.csv,20260331_abv_cube.csv,data,20260331
 data/20260331/20260331_utm_grid.gpkg,20260331_utm_grid.gpkg,data,20260331
+data/20260429/20260429_cube_marchantiophyta_flanders.tsv,20260429_cube_marchantiophyta_flanders.tsv,data,20260429
+data/20260429/20260429_vernacular_names_marchantiophyta_flanders.tsv,20260429_vernacular_names_marchantiophyta_flanders.tsv,data,20260429
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
@@ -470,3 +472,4 @@ src/20260331/20260331_challenges.R,20260331_challenges.R,src,20260331
 src/20260331/20260331_abv_analysis_challenge1.qmd,20260331_abv_analysis_challenge1.qmd,src,20260331
 src/20260331/20260331_abv_analysis_challenge1_2.qmd,20260331_abv_analysis_challenge1_2.qmd,src,20260331
 src/20260331/20260331_abv_quarto_book_challenge3.zip,20260331_abv_quarto_book_challenge3.zip,src,20260331
+src/20260429/20260429_challenges.R,20260429_challenges.R,src,20260429
