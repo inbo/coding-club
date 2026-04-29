@@ -49,7 +49,7 @@ The dplyr cheat sheet is available as [pdf](https://github.com/inbo/coding-club/
 
 ![:scale 85%]({{ site.baseurl}}/assets/images/20260429/20260429_cheat_sheet_dplyr.png)
 
-New to dplyr? The best resource for self study is the [data transformation chapter](https://r4ds.had.co.nz/transform.html) in R for data science. 
+New to dplyr? The best resource for self study is the [data transformation chapter](https://r4ds.had.co.nz/transform.html) in R for data science.
 The [dplyr homepage](https://dplyr.tidyverse.org/) is also very good, with examples and vignettes for each function.
 
 ---
@@ -178,19 +178,19 @@ class: left, top
 
 ## Challenge 1
 
-1. Save the species as a vector `species` (No duplicates). 
+1. Save the species as a vector `species` (No duplicates).
 Save the species as a data frame `species_df` with the column name `specieskey`.
 
-2. From `cube_minimal`, select only the records with more than 1 occurrence and minimum coordinate uncertainty less than 1000 meters. 
+2. From `cube`, select only the records with more than 1 occurrence and minimum coordinate uncertainty less than 1000 meters.
 Save the result as `cube_occurrences_gt_1_precise`.
 
-3. Are all species in `cube_occurrences_gt_1` also present in `species`?
+3. Are all species in `cube_occurrences_gt_1_precise` also present in `species`?
 
-4. The minimal information a cube should contain is the three dimensions, spatial (column `eeacellcode`), temporal (column `year`), taxonomic (`specieskey`) and the measure _number of occurrences_ (column `occurrences`). 
+4. The minimal information a cube should contain is the three dimensions, spatial (column `eeacellcode`), temporal (column `year`), taxonomic (`specieskey`) and the measure _number of occurrences_ (column `occurrences`).
 Please, select those columns from `cube` and save the result as `cube_minimal`.
 
-5. Change the order of the columns in `cube`. The first columns should be reserved for the dimensions. 
-Start with the taxonomic dimension (`specieskey` and `species`), followed by the temporal dimension (`year`) and then the spatial dimension (`eeacellcode`). 
+5. Change the order of the columns in `cube`. The first columns should be reserved for the dimensions.
+Start with the taxonomic dimension (`specieskey` and `species`), followed by the temporal dimension (`year`) and then the spatial dimension (`eeacellcode`).
 After the dimensions, the measures should follow. Set them in order of importance: first `occurrences`, then `mincoordinateuncertaintyinmeters` and `mintemporaluncertainty`.
 
 ---
@@ -201,19 +201,19 @@ class: left, top
 
 1. Rename the column `eeacellcode` to `cell_code`, `mincoordinateuncertaintyinmeters` to `min_coord_unc` and `mintemporaluncertainty` to `min_temp_unc`. You can overwrite `cube`.
 
-2. We want to explore how many records there are for each species. 
-For each species (columns `species` and `specieskey`), find the number of records (rows) in `cube`. 
-Save the results as a data frame with two columns, `species` and `n`. 
+2. We want to explore how many records there are for each species.
+For each species (columns `species` and `specieskey`), find the number of records (rows) in `cube`.
+Save the results as a data frame with two columns, `species` and `n`.
 Arrange the result by number of records in descending order and then by species alphabetically.
 
-3. We want to explore how precise are the data. For each species, find the different values of `min_coord_unc`. 
-Save the results as a data frame with two columns, `species` and `min_coord_unc`. 
+3. We want to explore how precise are the data. For each species, find the different values of `min_coord_unc`.
+Save the results as a data frame with two columns, `species` and `min_coord_unc`.
 Arrange the result by species and then by `min_coord_unc` in ascending order.
 
-4. The combination of `species` and `specieskey` is not always unique: it can happen that two different species keys have the same species name. 
-This is due to the fact that the species name doesn't contain the authorship. 
-Create a data frame with three columns: `species`, `specieskey` and `n_species`, where `n_species` is the number of species keys that have the same species name. 
-Save the result as `species_name_key`. 
+4. The combination of `species` and `specieskey` is not always unique: it can happen that two different species keys have the same species name.
+This is due to the fact that the species name doesn't contain the authorship.
+Create a data frame with three columns: `species`, `specieskey` and `n_species`, where `n_species` is the number of species keys that have the same species name.
+Save the result as `species_name_key`.
 Arrange the result by number of species keys in descending order and then by species alphabetically.
 
 ---
@@ -222,19 +222,19 @@ class: left, top
 
 ## Challenge 2B
 
-1. We want to explore the species richness across the years. For each year, find the number of species (specieskey) in `cube`. 
-Save the results as a data frame with two columns, `year` and `n_species`. 
-Arrange the result by species richness in descending order and by year in ascending order. 
+1. We want to explore the species richness across the years. For each year, find the number of species (specieskey) in `cube`.
+Save the results as a data frame with two columns, `year` and `n_species`.
+Arrange the result by species richness in descending order and by year in ascending order.
 Save the result as `species_richness_year`.
 
-2. Based on 2.4, add a column `richness_category` to `species_richness_year` with the following categories: 
-"low" for years with 10 or less species, "medium" for years with 11 up to 20 species and "high" for years with more than 20 species. 
-We want to be sure that all the records are categorized, so if there is any record that does not fit in the previous categories, return an error. 
+2. Based on 2.4, add a column `richness_category` to `species_richness_year` with the following categories:
+"low" for years with 10 or less species, "medium" for years with 11 up to 20 species and "high" for years with more than 20 species.
+We want to be sure that all the records are categorized, so if there is any record that does not fit in the previous categories, return an error.
 Hint: get a look to the most updated dplyr tutorial about [recoding columns and replacing values](https://dplyr.tidyverse.org/articles/recoding-replacing.html).
 
-3. We want to create timseries from the cube. In particular, we want to calculate the measured occupancy, i.e. the number of occupied grid cells, and the total number of occurrences per species and year. 
-For each species and year, calculate the number of occupied grid cells (column `cell_code`) and the total number of occurrences (column `occurrences`). 
-Save the results as a data frame with four columns, `species`, `year`, `n_cells` and `n_occurrences`. 
+3. We want to create timseries from the cube. In particular, we want to calculate the measured occupancy, i.e. the number of occupied grid cells, and the total number of occurrences per species and year.
+For each species and year, calculate the number of occupied grid cells (column `cell_code`) and the total number of occurrences (column `occurrences`).
+Save the results as a data frame with four columns, `species`, `year`, `n_cells` and `n_occurrences`.
 Arrange the result by specieskey and then by year in ascending order.
 
 ---
@@ -242,8 +242,8 @@ class: left, top
 
 ## Intermezzo: open science = care for code
 
-While preparing the dataset `vernacular_names` you will use in challenge 3, I have found that some examples of rgbif functions were not informative as they should have been. 
-The open science *instinct* told me to create an issue for John Waller, the maintainer of [rgbif](https://docs.ropensci.org/rgbif). 
+While preparing the dataset `vernacular_names` you will use in challenge 3, I have found that some examples of rgbif functions were not informative as they should have been.
+The open science *instinct* told me to create an issue for John Waller, the maintainer of [rgbif](https://docs.ropensci.org/rgbif).
 See [#842](https://github.com/ropensci/rgbif/issues/842)).
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20260429/20260429_issue_rgbif.png)
@@ -260,10 +260,10 @@ Transform the data frame from long to wide format, so that you have one column f
 Multiple vernacular names for species/language combination should result in a column containing lists.
 Save the result as `vernacular_wide_lists`.
 
-2. Instead of having lists, you can also collapse the multiple vernacular names into a single string, separated by a comma. 
+2. Instead of having lists, you can also collapse the multiple vernacular names into a single string, separated by a comma.
 Take care of removing duplicates and NA values before collapsing the names. Save the result as `vernacular_names_wide`.
 
-3. Join the vernacular names in `vernacular_names_wide` with the cube `cube` using the column `specieskey` from `cube` and `taxonKey` from `vernacular_names_wide`. 
+3. Join the vernacular names in `vernacular_names_wide` with the cube `cube` using the column `specieskey` from `cube` and `taxonKey` from `vernacular_names_wide`.
 Save the result as `cube_vernacular`.
 
 ---
@@ -272,11 +272,11 @@ class: left, top
 # Bonus challenge
 
 1. Insert underscore `_` in the column names of `cube` between words. Save it as `cube_extra`.
-Hint: after the renaming in 2.1, the only columns to rename end with `count` or `key`, e.g. `genuscount` and `genuskey`. 
+Hint: after the renaming in 2.1, the only columns to rename end with `count` or `key`, e.g. `genuscount` and `genuskey`.
 You can use the [stringr](https://stringr.tidyverse.org/) package.
 
-2. Using the provided function `vernacular_name`, get the vernacular names for all the species (specieskey) in `cube`. You can use the [purrr](https://purrr.tidyverse.org/) package to apply the function to all the species keys. 
-Save the result in a data frame. 
+2. Using the provided function `vernacular_name`, get the vernacular names for all the species (specieskey) in `cube`. You can use the [purrr](https://purrr.tidyverse.org/) package to apply the function to all the species keys.
+Save the result in a data frame.
 This data frame should be the same as the data frame you used in challenge 3.
 
 
