@@ -232,7 +232,7 @@ Save the result as `species_richness_year`.
 We want to be sure that all the records are categorized, so if there is any record that does not fit in the previous categories, return an error.
 Hint: get a look to the most updated dplyr tutorial about [recoding columns and replacing values](https://dplyr.tidyverse.org/articles/recoding-replacing.html).
 
-3. We want to create timseries from the cube. In particular, we want to calculate the measured occupancy, i.e. the number of occupied grid cells, and the total number of occurrences per species and year.
+3. We want to create timeseries from the cube. In particular, we want to calculate the measured occupancy, i.e. the number of occupied grid cells, and the total number of occurrences per species and year.
 For each species and year, calculate the number of occupied grid cells (column `cell_code`) and the total number of occurrences (column `occurrences`).
 Save the results as a data frame with four columns, `species`, `year`, `n_cells` and `n_occurrences`.
 Arrange the result by specieskey and then by year in ascending order.
