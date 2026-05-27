@@ -148,7 +148,7 @@ class: left, top
 2. [`20260528_lu_nara_legend.txt`](https://github.com/inbo/coding-club/blob/master/data/20260528/20260528_lu_nara_legend.txt): legend to map land use index (1-9) to meaningful land use category ("Grasland", "Bos", "Akker", ...)
 3. [`20260528_wc2.1_10m_tmax_May.tif`](https://github.com/inbo/coding-club/blob/master/data/20260528/20260528_wc2.1_10m_tmax_May.tif): raster with May average maximum temperature at 10 minutes resolution*.
 4. [`20260528_wc2.1_10m_srad_May.tif`](https://github.com/inbo/coding-club/blob/master/data/20260528/20260528_wc2.1_5m_srad_May.tif): raster with May average solar radiation at 5 minutes resolution*.
-5. [``](): municipalities of Flanders as polygons (vector data)**.
+5. [`20260528_municipalities_flanders.gpkg`](https://github.com/inbo/coding-club/blob/master/data/20260528/20260528_municipalities_flanders.gpkg): geopackage file with the Flemish municipalities as polygons (vector data)**.
 6. [20260528_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20260528/20260528_challenges.R): R script to start from
 
 <small>* Source: [WorldClim](https://worldclim.org/data/worldclim21.html) historical data<br>
@@ -201,7 +201,6 @@ First, run the provided code to:
 4. Calculate the median light emission in 2024 for each municipality and add it to `municipalities_fl` as a new column called `median_light`. Tip: check the documentation of [{exactextractr}](https://isciences.gitlab.io/exactextractr) to find how to calculate the median value for each polygon.
 
 5. Calculate the mean difference in light emission between 2024 and 2012 for each municipality. Add it to `municipalities_fl` as a new column called `mean_diff_light`. Tip: check the documentation of [{exactextractr}](https://isciences.gitlab.io/exactextractr) to find how to calculate the mean value for each polygon.
-
 
 6. Combine `light_2024`, `light_2012` and `diff_light` in a three layers raster called `light_summary`. Tip: again, check the section about [creating rasters](https://rspatial.github.io/terra/reference/terra-package.html#i-creating-combining-and-sub-setting) to find how to **c**ombine SpatRasters. Which names do the layers have? Give them better names, e.g. `light_2024`, `light_2012` and `diff_light`.
 
