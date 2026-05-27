@@ -192,9 +192,8 @@ After running the provided code:
 1. Get the light emission in 2012. Stored it as `light_2012`. Tip: check the available layers in the [WCS layers table](https://inbo.github.io/inbospatial/articles/wfs_wcs.html#raster-data-examples) to find the correct layer name.
 2. **Crop** `light_2024` to get only the area around Antwerp province. Store it as `light_2024_antwerp` Tip: you can select the province by using `dplyr::filter(prov_name_n == "['Provincie Antwerpen']")`.
 3. Calculate the difference in light emission between 2024 and 2012. Store it as `diff_light`.
-4. Calculate the median light emission in 2024 for each municipality and add it to `municipalities_fl` as a new column `median_light`. Tip: check the documentation of [{exactextractr}](https://isciences.gitlab.io/exactextractr) to find how to calculate the median value for each polygon.
+4. Calculate the median light emission in 2024 for each municipality and add it to `municipalities_fl` as a new column `median_light`. Tip: check the documentation of [{exactextractr}](https://isciences.gitlab.io/exactextractr).
 5. Calculate the mean difference in light emission between 2024 and 2012 for each municipality. Add it to `municipalities_fl` as a new column `mean_diff_light`.
-
 6. Combine `light_2024`, `light_2012` and `diff_light` in a three layers raster called `light_summary`. Tip: check the section about [creating rasters](https://rspatial.github.io/terra/reference/terra-package.html#i-creating-combining-and-sub-setting) to find how to **c**ombine SpatRasters. Which names do the layers have? Give them better names: `light_2024`, `light_2012` and `diff_light`.
 7. Save `light_summary` as tif file `data/20260528/20260528_light_summary.tif`.
 8. Sometimes it's useful to transform vector data to raster data. Transform `municipalities_fl` (polygons, vector data) to a raster called `municipalities_fl_spat`.
