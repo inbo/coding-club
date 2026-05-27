@@ -1,0 +1,300 @@
+---
+layout: presentation
+title: Rasters in R
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+  <!-- Adjust the presentation to the session. Focus on the challenges,
+this is not a coding tutorial.
+
+Note, to include figures, store the image in the `/docs/assets/images`
+folder and use the jekyll base.url reference as done in this template
+or see https://jekyllrb.com/docs/liquid/tags/#links.
+  using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 28 MAY 2026
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck<br>
+01.20 - Willy Van Der Meeren
+
+---
+class: left, top
+
+# Reminders
+
+1. Did we confirm the room reservation on the _roomie_?
+2. Did we start the recording?
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20260528/20260528_badge.png)
+
+---
+class: left, top
+
+## Introduction: open software
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20260528/20260528_quote_about_arcgis.png)
+
+---
+class: left, top
+
+## raster, terra, stars, sf, sp, ... HELP!
+
+R is rapidly evolving to fill the gap with Python and C++. Downside: new packages are being developed, old ones are modified or superseded.
+
+### Spatial vector data
+
+Topic of the coding club session of January: [**sf**](https://r-spatial.github.io/sf/), the newest and recommended package. Its predecessor: **sp**.
+
+### Spatial raster data
+
+- [**terra**](https://rspatial.github.io/terra/reference/terra-package.html) : newest and recommended package
+- [**raster**](https://rspatial.org/raster/pkg/index.html) : its predecessor (no support for sf), match with sp
+- [**stars**](https://r-spatial.github.io/stars/) : for **s**patio**t**emporal **ar**ray**s**
+
+For more info, read this great [article](https://geocompr.github.io/post/2021/spatial-classes-conversion/) about conversions among different spatial classes in R.
+
+---
+class: left, top
+
+## A raster is ...
+
+
+- a `SpatRaster` object in `terra`
+- a  `RasterLayer` object in  `raster`
+- a `stars` object in `stars`
+
+And is typically saved in a raster format such as GeoTIFF with extension tif. GeoTIFF stays for **Geo**graphic **T**agged **I**mage **F**ile Format (.tif).
+
+---
+class: left, top
+
+## Continuous vs categorical rasters
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20260528/20260528_continuous_vs_categorical_rasters.png)
+
+---
+class: left, top
+
+Load the package:
+
+```r
+library(terra)
+library(exactextractr)
+library(sf)
+library(inbospatial)
+library(tidyverse)
+```
+
+Use `install.packages("pkgname")` where needed.
+
+---
+class: center, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+<br> No yellow sticky notes online. We use hackmd (see next slide) but basic principle doesn't change.
+
+---
+class: center, top
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/QW-TZty4RzO_FQ7cG6dhdw?both
+
+<iframe src="https://hackmd.io/QW-TZty4RzO_FQ7cG6dhdw?edit" height="450px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+- Download everything automatically via `inborutils::setup_codingclub_session()`
+- manually*, from [data/20260528](https://github.com/inbo/coding-club/blob/master/data/20260528/) and [src/20260528](https://github.com/inbo/coding-club/blob/master/src/20260528). Place the R script in your folder `src/20260528/` and data in `data/20260528/`.
+
+<small>* __Note__: check the getting started instructions on [how to download a single file](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup)</small>
+
+---
+class: left, top
+
+# Data and code files description
+
+1. [`20260528_lu_nara_2016_100m.tif`](https://github.com/inbo/coding-club/blob/master/data/20260528/20260528_lu_nara_2016_100m.tif): a categorical raster of land use of Flanders with 9 land use categories. Thanks, NARA team!
+2. [`20260528_lu_nara_legend.txt`](https://github.com/inbo/coding-club/blob/master/data/20260528/20260528_lu_nara_legend.txt): legend to map land use index (1-9) to meaningful land use category ("Grasland", "Bos", "Akker", ...)
+3. [`20260528_wc2.1_10m_tmax_May.tif`](https://github.com/inbo/coding-club/blob/master/data/20260528/20260528_wc2.1_10m_tmax_May.tif): raster with May average maximum temperature at 10 minutes resolution*.
+4. [`20260528_wc2.1_10m_srad_May.tif`](https://github.com/inbo/coding-club/blob/master/data/20260528/20260528_wc2.1_5m_srad_May.tif): raster with May average solar radiation at 5 minutes resolution*.
+5. [``](): municipalities of Flanders as polygons (vector data)**.
+6. [20260528_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20260528/20260528_challenges.R): R script to start from
+
+<small>* Source: [WorldClim](https://worldclim.org/data/worldclim21.html) historical data<br>
+__\*\* __ Derived from https://data.gov.be/nl/datasets/httpswwwodwbbeexploredatasetcommunesgemeente-belgium.
+</small>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+1. Read GeoTIFF `20260528_lu_nara_2016_100m.tif` as a terra SpatRaster
+# called `lu_nara_2016`. Tip: check the documentation section about [creating rasters](https://rspatial.github.io/terra/reference/terra-package.html#i-creating-combining-and-sub-setting).
+2. Which layers (**names**) does it contain? What is the **crs**? The **ext**ent? The **res**olution? What are the **minmax** values of the raster?
+3. **plot** the raster.
+4. Read `20260528_lu_nara_legend.txt` (code is provided!) so that you can set the
+color table associated with `lu_nara_2016`
+5. Calculate the most and least occurring land use category in each of the Natura2000 protected areas. Tip: use `exactextractr::exact_extract()` with the right [summary operations](https://isciences.gitlab.io/exactextractr/#summary-operations)
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20260528/20260528_set_color_table_raster.png)
+
+---
+class: left, top
+
+## INTERMEZZO 1 - inbospatial, WFS vs WCS
+
+The R package [{inbospatial}](https://inbo.github.io/inbospatial/) is to share useful R functions for dealing with *spatial raster** or vector data.
+
+**Web Feature Service** (WFS) is a standard protocol for serving geospatial data as "features" (e.g., vector data) over the web. The `inbospatial` package provides the function [`get_feature_wfs()`](https://inbo.github.io/inbospatial/reference/get_feature_wfs.html) to allow users to access and retrieve geospatial data directly from WFS providers.
+
+**Web Coverage Service** (WCS) is a standard protocol for serving geospatial data as "coverages" (e.g., raster data) over the web. The `inbospatial` package provides the function [`get_coverage_wcs()`](https://inbo.github.io/inbospatial/reference/get_coverage_wcs.html) to interact with WCS services, allowing users to access and retrieve geospatial data directly from WCS providers.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2
+
+First, run the provided code to:
+- Read the Flemish municipalities (vector data, polygons) as `municipalities_fl`.
+- download the raster with the light emission in Flanders at night in 2024 using inbospatial's `get_coverage_wcs()` function. The raster is stored as `light_2024`.
+
+1. Get the light emission in 2012. Stored it as `light_2012`. Tip: check the available layers in the [WCS layers table](https://inbo.github.io/inbospatial/articles/wfs_wcs.html#raster-data-examples) to find the correct layer name.
+
+2. **Crop** `light_2024` to get only the area around Antwerp province. Store it as `light_2024_antwerp` Tip: you can select the province by using dplyr::filter() with condition `prov_name_n == "['Provincie Antwerpen']"`.
+
+3. Calculate the difference in light emission between 2024 and 2012. Store it as `diff_light`.
+
+4. Calculate the median light emission in 2024 for each municipality and add it to `municipalities_fl` as a new column called `median_light`. Tip: check the documentation of [{exactextractr}](https://isciences.gitlab.io/exactextractr) to find how to calculate the median value for each polygon.
+
+5. Calculate the mean difference in light emission between 2024 and 2012 for each municipality. Add it to `municipalities_fl` as a new column called `mean_diff_light`. Tip: check the documentation of [{exactextractr}](https://isciences.gitlab.io/exactextractr) to find how to calculate the mean value for each polygon.
+
+
+6. Combine `light_2024`, `light_2012` and `diff_light` in a three layers raster called `light_summary`. Tip: again, check the section about [creating rasters](https://rspatial.github.io/terra/reference/terra-package.html#i-creating-combining-and-sub-setting) to find how to **c**ombine SpatRasters. Which names do the layers have? Give them better names, e.g. `light_2024`, `light_2012` and `diff_light`.
+
+7. Save `light_summary` as a file with name `data/20260528/20260528_light_summary.tif`.
+
+8. Sometimes it's useful to transform vector data to raster data. Try to transform `municipalities_fl` (polygons, vector data) to a raster called `municipalities_fl_spat`, where the suffix `_spat` comes from `SpatVector`, the terra class for rasters.
+
+---
+class: left, top
+
+## INTERMEZZO 2
+
+Big rasters? No problem! From [`raster` documentation](https://rspatial.github.io/raster/reference/raster-package.html):
+
+  _The package can work with large files because the objects it creates from these files only contain information about the structure of the data, such as the number of rows and columns, the
+spatial extent, and the filename, but it does not attempt to read all the cell values in memory. In computations with these objects, data is processed in chunks._
+
+This holds true for `terra` and `stars` as well, of course.
+bioclimatic variables
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3
+
+1. Read the tif raster file `data/20260528/20260528_wc2.1_10m_tmax_May.tif` with the maximum temperature in May at 10 minutes degree resolution. Store it as `max_temp`.
+
+2. Read the tif raster file `data/20260528/20260528_wc2.1_5m_srad_May.tif` with the solar radiation in May at 5 minutes degree resolution. Store it as `srad`.
+
+3. Calculate the [Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient) (a kind of **focal correlation**\*) between average solar radiation and average maximum temperature of January using {terra}. Also, this calculation could take long. Try to downsample the dataset with factor 5. Tip: do the two layers have the same resolution?
+
+4. Plot the **hist**ogram of the correlation values. Yes, there is a terra function to do this as well :-)
+
+<small>* Focal spatial correlation refers to the calculation of correlation coefficients within a defined neighborhood or moving window around each cell in raster data, allowing for the analysis of local relationships between variables.</small>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+
+# Bonus challenge
+
+Check the functions shown in this [workshop](https://nowosad.github.io/SIGR2021/workshop2/workshop2.html#1), which contains a lot of examples, exercises and references. Author: Jakub Nowosad.
+
+---
+class: left, top
+
+# The resource of the month - WorldClim
+
+WorldClim provides not only basic climate data but also semi-processed biorelated data: see the 19 [bioclimatic variables](https://worldclim.org/data/bioclim.html) such as the Temperature Seasonality (standard deviation ×100), Max Temperature of Warmest Month, Mean Temperature of Driest/Wetter Quarter, ...
+
+You can download them from the WorldClim 2.1 [homepage](https://worldclim.org/data/worldclim21.html) or directly in R!
+
+```
+# install.packages("geodata") # uncomment to install
+library(geodata)
+
+bioclim_vars <- worldclim_global(var = "bio", res = 10, path = tempdir())
+bioclim_vars
+class       : SpatRaster
+size        : 1080, 2160, 19  (nrow, ncol, nlyr)
+resolution  : 0.1666667, 0.1666667  (x, y)
+extent      : -180, 180, -90, 90  (xmin, xmax, ymin, ymax)
+coord. ref. : lon/lat WGS 84 (EPSG:4326)
+sources     : wc2.1_10m_bio_1.tif
+              wc2.1_10m_bio_2.tif
+              wc2.1_10m_bio_3.tif
+              ... and 16 more sources
+names       : wc2.1~bio_1, wc2.1~bio_2, wc2.1~bio_3, wc2.1~bio_4, wc2.1~bio_5, wc2.1~bio_6, ...
+min values  :  -54.724354,           1,    9.131122,           0,  -29.686001,  -72.500252, ...
+max values  :    30.98764,   21.147541,         100, 2363.845947,   48.082748,   26.299999, ...
+```
+
+---
+class: left, top
+
+
+# Resources
+
+- Solutions and video recording will be available on the coding club website after the session.
+- The `terra` package [documentation](https://rspatial.github.io/terra/reference/terra-package.html): extensive and easy to use at the same time.
+- [Spatial Data Science with R and `terra`](https://rspatial.org/terra/index.html): THE place to be to learn a lot about rasters and spatial data.
+- Great [workshop](https://nowosad.github.io/SIGR2021/workshop2/workshop2.html#1) with a lot of examples, exercises and references. Author: Jakub Nowosad
+- `exactextractr` package [documentation](https://isciences.gitlab.io/exactextractr/) very well written documentation
+- [WorldClim](https://worldclim.org/data/index.html): global climate and weather data
+
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room number and name  -->
+Topic: to be decided <br>
+Room:  HT - 01.21 - Jeanne Brabants <br>
+Date: **30/06/2026**, van **10:00** tot **12:30**
