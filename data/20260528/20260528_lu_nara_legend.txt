@@ -1,0 +1,10 @@
+id,land_use,color
+1,Open natuur,#DF73FF
+2,Bos,#267300
+3,Grasland,#98E600
+4,Akker,#FFFF00
+5,Urbaan,#A80000
+6,Laag groen,#89CD66
+7,Hog groen,#5C8944
+8,Water,#00C5FF
+9,Overig,#CCCCCC
