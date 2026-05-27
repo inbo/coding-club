@@ -151,7 +151,7 @@ class: left, top
 5. [`20260528_municipalities_flanders.gpkg`](https://github.com/inbo/coding-club/blob/master/data/20260528/20260528_municipalities_flanders.gpkg): geopackage file with the Flemish municipalities as polygons (vector data)**.
 6. [20260528_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20260528/20260528_challenges.R): R script to start from
 
-<small>* Source: [WorldClim](https://worldclim.org/data/worldclim21.html) historical data<br>
+<small> __\* Source__: [WorldClim](https://worldclim.org/data/worldclim21.html) historical data<br>
 __\*\* __ Derived from https://data.gov.be/nl/datasets/httpswwwodwbbeexploredatasetcommunesgemeente-belgium.
 </small>
 
@@ -162,19 +162,18 @@ class: left, top
 # Challenge 1
 
 1. Read GeoTIFF `20260528_lu_nara_2016_100m.tif` as a terra SpatRaster
-# called `lu_nara_2016`. Tip: check the documentation section about [creating rasters](https://rspatial.github.io/terra/reference/terra-package.html#i-creating-combining-and-sub-setting).
+called `lu_nara_2016`. Tip: check the documentation section about [creating rasters](https://rspatial.github.io/terra/reference/terra-package.html#i-creating-combining-and-sub-setting).
 2. Which layers (**names**) does it contain? What is the **crs**? The **ext**ent? The **res**olution? What are the **minmax** values of the raster?
 3. **plot** the raster.
-4. Read `20260528_lu_nara_legend.txt` (code is provided!) so that you can set the
-color table associated with `lu_nara_2016`
-5. Calculate the most and least occurring land use category in each of the Natura2000 protected areas. Tip: use `exactextractr::exact_extract()` with the right [summary operations](https://isciences.gitlab.io/exactextractr/#summary-operations)
+4. Read `20260528_lu_nara_legend.txt` (code is provided!) so that you can set the color table associated with `lu_nara_2016`.
+5. Calculate the most and least occurring land use category in each of the Natura2000 protected areas. Tip: use `exactextractr::exact_extract()` with the right [summary operations](https://isciences.gitlab.io/exactextractr/#summary-operations).
 
 ![:scale 90%]({{ site.baseurl}}/assets/images/20260528/20260528_set_color_table_raster.png)
 
 ---
 class: left, top
 
-## INTERMEZZO 1 - inbospatial, WFS vs WCS
+# Intermezzo 1 - inbospatial, WFS vs WCS
 
 The R package [{inbospatial}](https://inbo.github.io/inbospatial/) is to share useful R functions for dealing with *spatial raster** or vector data.
 
@@ -188,9 +187,7 @@ class: left, top
 
 # Challenge 2
 
-First, run the provided code to:
-- Read the Flemish municipalities (vector data, polygons) as `municipalities_fl`.
-- download the raster with the light emission in Flanders at night in 2024 using inbospatial's `get_coverage_wcs()` function. The raster is stored as `light_2024`.
+After running the provided code:
 
 1. Get the light emission in 2012. Stored it as `light_2012`. Tip: check the available layers in the [WCS layers table](https://inbo.github.io/inbospatial/articles/wfs_wcs.html#raster-data-examples) to find the correct layer name.
 
@@ -211,7 +208,7 @@ First, run the provided code to:
 ---
 class: left, top
 
-## INTERMEZZO 2
+# Intermezzo 2
 
 Big rasters? No problem! From [`raster` documentation](https://rspatial.github.io/raster/reference/raster-package.html):
 
@@ -296,4 +293,5 @@ class: center, top
 <!--  Adjust the room number and name  -->
 Topic: to be decided <br>
 Room:  HT - 01.21 - Jeanne Brabants <br>
-Date: **30/06/2026**, van **10:00** tot **12:30**
+Date: **30/06/2026** (Tuesday), van **10:00** tot **12:30
+Help needed with technical setup? You are welcome from 9:45am
