@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2026-05-28 | rasters in R | [slides]({{ site.baseurl }}{% link sessions/20260528_rasters_in_r.html  %}) | [hackmd](https://hackmd.io/QW-TZty4RzO_FQ7cG6dhdw?view) | 01.20 - Willy Van Der Meeren | |
+| 2026-05-28 | rasters in R | [slides]({{ site.baseurl }}{% link sessions/20260528_rasters_in_r.html  %}) | [hackmd](https://hackmd.io/QW-TZty4RzO_FQ7cG6dhdw?view) | 01.20 - Willy Van Der Meeren |  |
 | 2026-04-29 | data wrangling with tidyverse | [slides]({{ site.baseurl }}{% link sessions/20260429_data wrangling_with_tidyverse.html  %}) | [hackmd](https://hackmd.io/laEmld1JQTO99yEq_ipuzQ?view) | 01.71 - Frans Breziers |  |
 | 2026-03-31 | quarto repoRts | [slides]({{ site.baseurl }}{% link sessions/20260331_quarto_repoRts.html  %}) | [hackmd](https://hackmd.io/VNBTub-iRF-YyIMZ_bc7lg?view) | 01.71 - Frans Breziers | [vimeo](https://vimeo.com/1184810392) |
 | 2026-02-25 | spatial data visualization unleashed | [slides]({{ site.baseurl }}{% link sessions/20260225_spatial_data_visualization_unleashed.html  %}) | [hackmd](https://hackmd.io/j90LerTrRxavEKDTCU-f7w?view) | 00.48 - Keldermans | [vimeo](https://vimeo.com/1171754154?share=copy&fl=sv&fe=ci) |
