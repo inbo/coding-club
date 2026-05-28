@@ -7,7 +7,14 @@ library(tidyverse)
 ## CHALLENGE 1 ####
 
 
-
+legend <- readr::read_csv(
+  "./data/20260528/20260528_lu_nara_legend.txt",
+  col_types = readr::cols(
+    id = col_double(),
+    land_use = col_character(),
+    color = col_character()
+  ))
+legend
 
 
 # CHALLENGE 2 ####
