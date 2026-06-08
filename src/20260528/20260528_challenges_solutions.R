@@ -198,8 +198,8 @@ res(max_temp_lowres)
 # Calculate the focal spatial correlation
 max_temp_srad_corr <- terra::focalPairs(
   c(max_temp_lowres, srad_lowres),
-  w = 3, # it must be an odd number or a matrix
-  "pearson",
+  w = 3, # it must be an odd number or a matrix (3 is the default value)
+  fun = "pearson",
   na.rm=TRUE
 )
 terra::plot(max_temp_srad_corr)
