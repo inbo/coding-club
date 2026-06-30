@@ -295,37 +295,37 @@ The Royal Meteorological Institute (KMI) share a lot of data openly via WFS. For
 4. Get hourly meteorological data from the station of Diepenbeek from 2026-01-15 for a duration of 8 days. Get the data as CSV without saving it to disk. Hint: search the right `resp_body_*()` function and read the output of it with readr::read_csv().
 
 ---
-class: left, top
-
-# Intermezzo 2
-
-
----
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
-# Challenge 3 - waterinfo & wateRinfo
+# Challenge 3A - waterinfo & wateRinfo
 
-The R package wateRinfo is a wrapper around the waterinfo API.
+The R package wateRinfo is a wrapper around the Waterinfo API (download the [PDF](https://waterinfo.vlaanderen.be/download/9f5ee0c9-dafa-46de-958b-7cac46eb8c23?dl=0) documentation), which allows us to get the data behind the the [Waterinfo](https://www.waterinfo.vlaanderen.be/) data portal.
 
 1. Using the R package wateRinfo, **get** the list of measurement **stations** providing data about the [Penman evaporation](https://en.wikipedia.org/wiki/Penman_equation). Hint: check the [Example](https://docs.ropensci.org/wateRinfo/#example) of the homepage and the function documentation.
-2. Get the `timeseries_id` for Waregem daily Penman evaporation timeseries.
+2. Get the ID (integer) of the timeseries of Waregem daily Penman evaporation.
 3. Get the timeseries in 2 as a data.frame. Get the data for the entire 2025.*
 
-<small>* To get very long time series you need to ask a token via mail. See [Note on restrictions of the downloads](https://docs.ropensci.org/wateRinfo/#note-on-restrictions-of-the-downloads) section.</small>
+<small>* To get very long time series you need to ask a token via mail. See [Note on restrictions of the downloads](https://docs.ropensci.org/wateRinfo/#note-on-restrictions-of-the-downloads) section. A token is not needed to solve the challenges.</small>
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
-# Challenge 3 - waterinfo WITHOUT wateRinfo
+# Challenge 3B - waterinfo WITHOUT wateRinfo
+
+1. However, not everything is available via the R package wateRinfo. Example: the rainfall intensity at a specific hour obtained via composite radar data. The data returned are raster data. Check the chapter "2.5 Opvragen van beelden (meetwaarden rasterdata)".
+
+1. Get the instantaneous rainfall intensity in Belgium at 25-06-2026, 23am local time (UTC+2) as geotiff. Save it on disk as tiff file. You can open the returned file with `terra::rast()` and visualize it with `terra::plot()`.
+2. Get the total rainfall intensity in Belgium over the last 24 hours at 2026-06-28 12pm (midday) local time (UTC+2). Save it on disk as tiff file. Again, you can use terra to open and visualize the file.
+3. Repeat 2 but avoid to save the tiff on disk. Hint: same strategy as in challenge 2.1
+
 ---
-background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
+# Bonus challenge 1
 
-# Bonus challenge - KMI available datasets
-
+## XML - KMI available datasets
 The main entry point of the KMI data is returned by `getCapabilities`. And it is returned as XML. XML stays for Extended Markup Language: next JSON, XML is another popular text format used to exchange a wide variety of data on the Web. Homepage: https://www.w3.org/XML/.
 Try to find the list of available datasets. Check the section about **getCapabilities**. Build the query and use the package [{xml2}](https://xml2.r-lib.org/) to get into the returned data to extract the available datasets. Hint: replace json with xml in your httr2 code.
 
@@ -334,13 +334,30 @@ XML is not the easiest format to read, even if it was intended so. It's also not
 ---
 class: left, top
 
-# The package of the month
+# Bonus challenge 2
 
-
+We didn't speak about DOV data. You can use pydov to get data from DOV. You can use the R package [{reticulate}](https://rstudio.github.io/reticulate/) to run Python code in R! Do you have an example? Did you do it already Share your experience in the HackMD, please 🙏
 
 ---
 class: left, top
 
+# Big thanks
+
+A big thanks to Toon Van Daele for proposing this topic and for providing me very helpful code snippets 👏👏👏
+
+Also thanks to Pieter Huybrechts for showing me how many web services and APIs exist in Belgium and worldwide! Sorry Pieter to have not used them for this session. Feel free to share the examples you sent me via chat in the HackMD.
+
+---
+class: left, top
+
+# The R package of the month - geodata
+
+[{geodata}](https://rspatial.github.io/geodata/) is an R package for downloading geographic data. This package facilitates access to climate, elevation, soil, crop, species occurrence, and administrative boundary data, and is a successor of the getData() function from the raster package.
+
+Worth a try!
+
+---
+class: left, top
 
 # Resources
 
@@ -351,6 +368,7 @@ class: left, top
 - [{wateRinfo}](https://github.com/ropensci/wateRinfo) R package
 - [{worldmet}](https://openair-project.github.io/worldmet/) R package
 - [{pydov}](https://pydov.readthedocs.io/en/stable/) Python package
+- [{reticulate}](https://rstudio.github.io/reticulate/) R package: a R interface to Python. Useful for running the functions of pydov.
 
 ---
 class: center, middle
