@@ -49,7 +49,7 @@ A **web service** "is a service offered by an electronic device to another elect
 
 "In a web service, a web technology such as HTTP  (Hypertext Transfer Protocol) is used for transferring machine-readable file formats such as XML and JSON."*
 
-So instead of manually download a spreadsheet from a website and open it in R, you have your R script requesting the data to the web service (the **request**), you get the data back (the **response*$) and you keeps working.
+So instead of manually download a spreadsheet from a website and open it in R, you have your R script requesting the data to the web service (the **request**), you get the data back (the **response**) and you keeps working.
 
 No clicking, no manual downloads, no copy-pasting 😱
 
@@ -73,16 +73,6 @@ Think of a restaurant*. You (the customer) don't walk into the kitchen and cook 
 
 <small>* The restaurant metaphor is widely used in computer science. Difficult to cite the real reference :-) However, if you want to read further about APIs concepts without getting too complex, please check the blogpost [What is an API (and what do they have to do with restaurants)?](https://www.meeum.com/articles/what-is-api/) </small>
 
-
----
-class: left, top
-
-## Spatial Web Services
-
-In the last coding club, we spoke about Spatial Web Services making use of the nice table ["Overview of Spatial Web Services"](https://inbo.github.io/inbospatial/articles/wfs_wcs.html#overview-of-spatial-web-services) from the documentation of the [{inbospatial}](https://inbo.github.io/inbospatial/index.html) R package. Thanks Hans!
-
-![:scale 100%]({{ site.baseurl}}/assets/images/20260630/20260630_spatial_web_services.png)
-
 ---
 class: left, top
 
@@ -93,10 +83,10 @@ Of course web services and APIs are also commonly used for non spatial data. For
 It can happen that (very kind) people wrote R/Python packages built specifically as a **wrapper** around their API. What is a wrapper? A set of functions which send requests and read responses instead of you. You just program in R/Python as you are used to: behind the screen **API calls** are sent, **API responses** with data are received and data transformed for example in data.frames.
 
 Examples:
-- {rgbif}(https://docs.ropensci.org/rgbif/) R package: biodiversity data
-- {waterinfo}(https://docs.ropensci.org/wateRinfo) R package: hidrology data
-- {pydov}(https://pydov.readthedocs.io/en/stable/) Python package: soil, subsoil and groundwater of Flanders from  the [Databank Ondergrond Vlaanderen](https://www.dov.vlaanderen.be/) (DOV)
-- {reasin}(https://guardias-eu.github.io/reasin/): R package: alien species data from the European Alien Species Information Network (EASIN)
+- [{rgbif}](https://docs.ropensci.org/rgbif/) R package: biodiversity data
+- [{waterinfo}](https://docs.ropensci.org/wateRinfo) R package: hidrology data
+- [{pydov}](https://pydov.readthedocs.io/en/stable/) Python package: soil, subsoil and groundwater of Flanders from  the [Databank Ondergrond Vlaanderen](https://www.dov.vlaanderen.be/) (DOV)
+- [{reasin}](https://guardias-eu.github.io/reasin/): R package: alien species data from the European Alien Species Information Network (EASIN)
 - [{worldmet}](https://openair-project.github.io/worldmet/) R package to access data from the [NOAA Global Historical Climate Network](https://www.ncei.noaa.gov/products/global-historical-climatology-network-hourly) and the [NOAA Integrated Surface Database](https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database) (ISD)
 
 ---
@@ -104,11 +94,11 @@ class: left, top
 
 ## How does the "asking" actually work?
 
-It's clear: no requests (calls), no data :-)
+It's clear: no requests, no data :-)
 
 Most APIs we'll meet work over the same protocol your browser uses to load web pages: HTTP. You send a request to a specific web address (called an **endpoint**), and you get back a response — usually as **structured** data rather than a pretty webpage.
 
-How to build these specific web addresses? It's not magic: read the documentation, again and again! if the documentation is not clear, then it's a frustrating trial and error.
+How to build these specific web addresses? It's not magic: read the documentation, again and again! If the documentation is not clear, then it's a frustrating trial and error.
 
 ---
 class: left, top
@@ -124,6 +114,11 @@ https://api.gbif.org/v1/species/match?name=Passer%20domesticus
 You should see a wall of text known as JSON.
 
 ![:scale 100%]({{ site.baseurl}}/assets/images/20260630/20260630_basic_pattern-api_call.png)
+
+---
+class: left, top
+
+## GBIF APIs examples
 
 Your call can contains multiple parameter/query pairs (`&`):
 
@@ -189,9 +184,9 @@ class: left, top
 Check the ["Perform a request and fetch the response"](https://httr2.r-lib.org/articles/httr2.html#perform-a-request-and-fetch-the-response) from the Getting Started.
 
 ```
-resp <- req |> req_perform()
+resp <- req %>% req_perform()
 
-result <- resp |>
+result <- resp %>%
   resp_body_json()
 ```
 
@@ -262,8 +257,6 @@ Use httr2 to request the same GBIF data we visualised on our web browser.
 
 6. https://api.gbif.org/v1/occurrence/download/0073188-260519110011954
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20260630/20260630_set_color_table_raster.png)
-
 ---
 class: left, top
 
@@ -280,6 +273,15 @@ Geospatial web services are at INBO a relevant type of web services. There are d
 **Web Map Tile Service** (WMTS) is a standard protocol for serving digital maps using predefined image tiles. It complements the WMS. Developed by the OGC in 2010.
 
 ---
+class: left, top
+
+# Intermezzo 1 - The world of geospatial web services
+
+Thanks Hans for the nice overview table in ["Overview of Spatial Web Services"](https://inbo.github.io/inbospatial/articles/wfs_wcs.html#overview-of-spatial-web-services) from the documentation of the [{inbospatial}](https://inbo.github.io/inbospatial/index.html) R package. This package is another beautiful example of an R package wrapper!
+
+![:scale 90%]({{ site.baseurl}}/assets/images/20260630/20260630_spatial_web_services.png)
+
+---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
@@ -289,11 +291,9 @@ The Royal Meteorological Institute (KMI) share a lot of data openly via WFS. For
 
 1. Get the available AWS stations (`aws:aws_station`). Hint: use still the `application/json` outputFormat and pass the full request to `sf::st_read()` directly! Optional: you can then create a map using the `mapview::mapview()` function.
 2. Same data, but this time try to save it on disk as a CSV file directly. Hint: check the arguments of [`req_perform()`](https://httr2.r-lib.org/reference/req_perform.html).
-3. Get daily rain precipitation from the station ZEEBRUGGE from 2026-01-01 and save it direclty to disk as CSV file.
-4. Get hourly rain precipitation from the station of Diepenbeek from 2026-01-15 for a duration of 8 days. Get the data as CSV without saving it to disk. Hint: search the right `resp_body_*()` function and read the output of it with readr::read_csv().
+3. Get daily meteorological data from the station ZEEBRUGGE from 2026-01-01 and save it direclty to disk as CSV file.
+4. Get hourly meteorological data from the station of Diepenbeek from 2026-01-15 for a duration of 8 days. Get the data as CSV without saving it to disk. Hint: search the right `resp_body_*()` function and read the output of it with readr::read_csv().
 
-<small>* XML stays for Extended Markup Language: next JSON, XML is another popular text format used to exchange a wide variety of data on the Web. Homepage: https://www.w3.org/XML/.
-</small>
 ---
 class: left, top
 
@@ -304,9 +304,21 @@ class: left, top
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
-# Challenge 3
+# Challenge 3 - waterinfo & wateRinfo
 
+The R package wateRinfo is a wrapper around the waterinfo API.
 
+1. Using the R package wateRinfo, **get** the list of measurement **stations** providing data about the [Penman evaporation](https://en.wikipedia.org/wiki/Penman_equation). Hint: check the [Example](https://docs.ropensci.org/wateRinfo/#example) of the homepage and the function documentation.
+2. Get the `timeseries_id` for Waregem daily Penman evaporation timeseries.
+3. Get the timeseries in 2 as a data.frame. Get the data for the entire 2025.*
+
+<small>* To get very long time series you need to ask a token via mail. See [Note on restrictions of the downloads](https://docs.ropensci.org/wateRinfo/#note-on-restrictions-of-the-downloads) section.</small>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3 - waterinfo WITHOUT wateRinfo
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
