@@ -1,0 +1,2 @@
+event_id,location_id,start_id,end_id,name,start,end,day,month,year,start_hour,start_minute,start_second,end_hour,end_minute,end_second,temperatuur,cloudiness,cloudiness_unit,wind_speed,wind_speed_unit
+922-1713353400-1713356100,922,1713353400,1713356100,OOSTERLO,2024-04-17T11:30:00Z,2024-04-17T12:15:00Z,17,4,2024,11,30,0,12,15,0,14,0,okta,3,Beaufort
