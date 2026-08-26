@@ -52,8 +52,7 @@ Known for its user-friendly (we can argue about this...) syntax and powerful cap
 
 What is a relational database? The most basic definition, maybe, is:
 
-it's bunch of tables linked to each other, via some fields acting as internal *primary keys* (PK) and some **foreign keys** (FK) which are the fields used to point to primary keys of other tables.
-Very important: the **primary key** field of a table is the **unique identifier** within that table. So, that field cannot contain duplicates.
+it's bunch of tables linked to each other.
 
 In R, you maybe heard about the tidy data principles? Well, tidy data can be perfectly stored in a relational database as they use this very same idea, without using this terminology.
 
@@ -106,7 +105,7 @@ class: left, top
 
 The [GeeksforGeeks cheat sheet](https://www.geeksforgeeks.org/sql/sql-cheat-sheet/) can help.
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20260827/20260827_sql_cheatsheet.png)
+![:scale 110%]({{ site.baseurl}}/assets/images/20260827/20260827_sql_cheatsheet.png)
 
 ---
 class: left, top
@@ -120,7 +119,7 @@ You need "something" to*:
 - extract results/output
 - handle errors/exceptions
 
-And you need to do all of this for a specific type to database!
+And you need to do all of this for a specific type of database!
 
 So, you need two packages:
 - the [DBI](https://dbi.r-dbi.org/) R package
@@ -160,9 +159,9 @@ class: left, top
 
 ## What do we use today?
 
-Today we will use [SQLite](https://www.sqlite.org/index.html). Why? Simple, it's the most deployed and used database type in the world!
+Today we will use [**SQLite**](https://www.sqlite.org/index.html). Why? Because it's simple and it's the most deployed and used database type in the world!
 
-Billions and billions of copies of SQLite exist in the wild. SQLite is found in:*
+Billions and billions of copies of SQLite exist in the world. There are SQLite databases in:*
 
 - Every Android device
 - Every iPhone and iOS device
@@ -211,7 +210,7 @@ dbReadTable(con, "mtcars")
 ##  [ reached 'max' / getOption("max.print") -- omitted 23 rows ]
 ```
 
-<small>* Code example copy pasted from the [Basic Usage](https://rsqlite.r-dbi.org/#basic-usage) section in SQLite R package documentation website.</small>
+<small>* Example extracted from the [Basic Usage](https://rsqlite.r-dbi.org/#basic-usage) section in SQLite R package documentation website.</small>
 
 ---
 class: left, top
@@ -281,14 +280,14 @@ Using the Data Carpentry lesson - [chapter 1](https://datacarpentry.github.io/sq
 4. Get all the table `species` as data frame.
 5. Write a SQL query to **select** all the columns **from** the `species` table **where** taxa is `Reptile`.
 6. Write a SQL query to **select** the columns `species_id`, `genus` and `species` **from** the `species` table and species **where** taxa is `Reptile`.
-7. Clap your hands: you nailed it! But do not forget to **disconnect** from the database. Very often forgotten.
+7. Yes, you nailed it 👏 Now, do not forget to **disconnect** from the database.
 
 ---
 class: left, top
 
 # Intermezzo 1 - From SQL to R functions
 
-Are you running the same SQL pattern many times? Think about writing your own wrapping R function!
+If you run the same SQL pattern many times, maybe writing your own wrapping R function is a good idea. You can use the R package [{glue}](https://glue.tidyverse.org/) to build the SQL query string. This is a very useful package to avoid hardcoding values in your queries or making it a little safer against [SQL injection](https://www.geeksforgeeks.org/sql/sql-injection/).
 
 Example. Let's write an R function to allow you and your colleagues to retrieve all the surveys of a specific year from the table `surveys`:
 
@@ -307,9 +306,8 @@ get_surveys <- function(con, year) {
 # Use the R function
 get_surveys(con, 1980)
 ```
-Notice the use of the R package [{glue}](https://glue.tidyverse.org/) to build the SQL query string. This is a very useful package to avoid hardcoding values in your queries or making it a little safer against [SQL injection](https://www.geeksforgeeks.org/sql/sql-injection/).
 
-1 Function + 1 function + 1 function = 3 functions? Yes. But 3 = 1: one package! :-)
+1 function + 1 function + 1 function = 3 functions? Yes. But 3 = 1: one package! :-)
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
@@ -317,7 +315,7 @@ class: left, top
 
 # Challenge 2 - SQL queries non-stop
 
-Let's get fun and write a lot of queries to learn SQL basics functions! You can use the same links to find help and inspiration!
+Let's get fun and write a lot of queries to learn SQL basics functions! You can use the same sources mentioned in challenge 1 to find help and inspiration!
 First, connect to the same database used in challenge 1.
 
 1. In which years did surveys occur? Return the **unique** values. Hint: if you know how to do it with dplyr, you have half of the solution!
@@ -329,6 +327,8 @@ First, connect to the same database used in challenge 1.
 7.
 EXTRA: Improve 6 by avoiding hardcoding the `species_id` values in the second query. Use the [{glue}](https://glue.tidyverse.org/) instead.
 
+---
+class: left, top
 
 ## INTERMEZZO 2 - Make your query more readable
 
@@ -359,7 +359,7 @@ dbClearResult(res)
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
-# Challenge 3 - grouping, joining to become a pro
+# Challenge 3 - GROUP and JOIN to be a pro
 
 1. The "group by - summarise" principle is one of the pillars of data wrangling. Let's do it with SQL. How many species are per genus in `species` table? How many surveys are per species in `surveys` table?
 2. Joining is also an important tool in data wrangling. All joining in dplyr is inspired by SQL, did you know? So, let's join. For example, let's add species information from `species` table to the records in `surveys` table.
@@ -377,14 +377,14 @@ class: left, top
 2. After running the provided code, transform the tidy data frames `counts`, `events` and `counters` in a SQLite database containing three tables, `counts`, `events` and `counters`*.
 3. In 2, did you define primary and foreign keys? If yes, which ones? If not, how to define them? Hint: to work with primary and foreign keys, you need to define them as a machine cannot know which column of the data frame are your primary and foreign keys. Execute first SQL queries starting with `CREATE TABLE my_table_name` to create such tables and then populate them.
 
-<small>* At the INBO coding club we like recycle ♻️ So, we recycle data as well! The tidy dataset is the solution of the Challenge 3B of the session of 16 Dec 2025.</small>
+<small>* At the INBO coding club we like recycling ♻️ So, we recycle data too! The three tidy data frames are the solution of the Challenge 3B of the session of 16 Dec 2025.</small>
 
 ---
 class: left, top
 
 # The R package of the month: duckdb
 
-[DuckDB](https://duckdb.org/) is an open source, in-process (= same as SQLite), **analytical database** and it has its own R client: the R package [{duckdb}](https://duckdb.org/docs/api/r). It is a very fast and efficient database engine, which can be used in R to query data stored in files (e.g. CSV, Parquet) or in-memory data frames. It's dbplyr compatible and what you learned today with DBI and SQLite can be applied to DuckDB as well.
+[DuckDB](https://duckdb.org/) is an open source, in-process (= same as SQLite), **analytical database** and it has its own R client: the R package [{duckdb}](https://duckdb.org/docs/api/r). DuckDB is a very fast and efficient database engine, which can be used in R to query data stored in files (e.g. CSV, Parquet) or in-memory data frames. It's dbplyr compatible and what you learned today with DBI and SQLite can be applied to DuckDB as well.
 
 ```
 con <- dbConnect(duckdb::duckdb())
@@ -405,6 +405,7 @@ class: left, top
 - The [RSQLite](https://rsqlite.r-dbi.org/) R package documentation website
 - The [dbplyr](https://dbplyr.tidyverse.org/) R package documentation website
 - The [DuckDB](https://duckdb.org/) database homepage and the [duckdb](https://duckdb.org/docs/api/r) R package documentation website
+- The [inbodb](https://inbo.github.io/inbodb/index.html) R package documentation website to connect and work with INBO databases in R.
 
 ---
 class: center, middle
