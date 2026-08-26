@@ -41,7 +41,7 @@ ref_data <- readr::read_csv(
 # Check the column specifications
 readr::spec(ref_data)
 
-## 1.2 #### 
+## 1.2 ####
 gps_data <- readr::read_csv(
   file = "./data/20251216/20251216_MH_ANTWERPEN-gps-2018.csv.gz",
   # Specify the class of some columns
@@ -156,7 +156,7 @@ gbif_df %>%
   dplyr::group_by(occurrencestatus) %>%
   dplyr::summarise(n = dplyr::n()) %>%
   dplyr::collect()
-  
+
 
 # Challenge 3A ####
 
@@ -187,6 +187,11 @@ counts <- counts_raw %>%
                values_to = "n") %>%
   dplyr::filter(!is.na(n)) %>%
   dplyr::filter(!is.na(species))
+
+# Add unique identifier for each count based on row number
+counts <- counts %>%
+  dplyr::mutate(count_id = dplyr::row_number()) %>%
+  dplyr::relocate(count_id, .before = species)
 
 # Create an event data.frame with info about:
 # - location
