@@ -246,6 +246,7 @@ data/20260528/20260528_lu_nara_legend.txt,20260528_lu_nara_legend.txt,data,20260
 data/20260528/20260528_wc2.1_10m_tmax_May.tif,20260528_wc2.1_10m_tmax_May.tif,data,20260528
 data/20260528/20260528_wc2.1_5m_srad_May.tif,20260528_wc2.1_5m_srad_May.tif,data,20260528
 data/20260528/20260528_municipalities_flanders.gpkg,20260528_municipalities_flanders.gpkg,data,20260528
+data/20260827/20260827_portal_mammals.sqlite,20260827_portal_mammals.sqlite,data,20260827
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
@@ -481,3 +482,4 @@ src/20260429/20260429_challenges.R,20260429_challenges.R,src,20260429
 src/20260429/20260429_challenges_solutions.R,20260429_challenges_solutions.R,src,20260429
 src/20260528/20260528_challenges.R,20260528_challenges.R,src,20260528
 src/20260528/20260528_challenges_solutions.R,20260528_challenges_solutions.R,src,20260528
+src/20260827/20260827_challenges.R,20260827_challenges.R,src,20260827

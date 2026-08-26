@@ -1,0 +1,418 @@
+---
+layout: presentation
+title: SQL in ? Yes, we can!
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+  <!-- Adjust the presentation to the session. Focus on the challenges,
+this is not a coding tutorial.
+
+Note, to include figures, store the image in the `/docs/assets/images`
+folder and use the jekyll base.url reference as done in this template
+or see https://jekyllrb.com/docs/liquid/tags/#links.
+  using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 27 AUGUST 2026
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck<br>
+01.72 - Kaat Tilley
+
+---
+class: left, top
+
+# Reminders
+
+1. Did we confirm the room reservation on the _roomie_?
+2. Did we start the recording?
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20260827/20260827_badge.png)
+
+---
+class: left, top
+
+## SQL and databases
+
+Structured Query Language (SQL) is the standard language used to interact with **relational databases**.
+
+Allows users to store, retrieve, update and manage data efficiently through simple commands.
+Known for its user-friendly (we can argue about this...) syntax and powerful capabilities, SQL is widely used across industries.
+
+What is a relational database? The most basic definition, maybe, is:
+
+it's bunch of tables linked to each other, via some fields acting as internal *primary keys* (PK) and some **foreign keys** (FK) which are the fields used to point to primary keys of other tables.
+Very important: the **primary key** field of a table is the **unique identifier** within that table. So, that field cannot contain duplicates.
+
+In R, you maybe heard about the tidy data principles? Well, tidy data can be perfectly stored in a relational database as they use this very same idea, without using this terminology.
+
+<small>Source: https://www.geeksforgeeks.org/sql/what-is-sql/</small>
+
+---
+class: left, top
+
+## Database jargon
+
+People working with databases and SQL speak very own language. And they would say the same about us, R users :-)
+
+In R we work with data frames: in databases we work with **tables**.
+
+And a data frame has columns: tables have **fields**.
+
+Typically we speak about (unique) identifiers: in databases we have (primary) **keys**.
+
+---
+class: left, top
+
+## Database types
+
+As bikes or shoes, also databases are not all the same! Depending on the type of data (structure) and needs, you can have e.g. databases optimised for big data, for spatial data or for being so light to run on any electronic device.
+
+Examples:
+- MySQL, MariaDB (fork of MySQL)
+- SQL Server
+- PostgreSQL: spatial data
+- SQLite: the lightest and most portable type of database
+- Microsoft Access file: the way many INBO researchers started to organize their own data and learn SQL some years (decades) ago
+
+---
+class: left, top
+
+## Why SQL?
+
+We program in R. Why should we learn SQL?
+
+- Not all INBO databases have fancy R functions to allow you to get data. Sometimes you need to write your own queries.*
+- SQL is THE database language. If you ever have to deal with databases, sooner or later you will need at least a basic knowledge of SQL.
+- SQL is practically everywhere. So popular that [dplyr](https://dplyr.tidyverse.org/index.html) named some of its functions as correspondent SQL functions, e.g. [filter()](https://dplyr.tidyverse.org/reference/filter.html), [select()](https://dplyr.tidyverse.org/reference/select.html) and [group_by()](https://dplyr.tidyverse.org/reference/group_by.html).
+
+<small>* And then maybe try to write a function around that SQL query and ask Els to add the function to the [inbodb](https://inbo.github.io/inbodb/index.html) R package! </small>
+
+---
+class: left, top
+
+## SQL cheat sheets
+
+The [GeeksforGeeks cheat sheet](https://www.geeksforgeeks.org/sql/sql-cheat-sheet/) can help.
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20260827/20260827_sql_cheatsheet.png)
+
+---
+class: left, top
+
+## SQL in R - what do you need?
+
+You need "something" to*:
+
+- connect/disconnect to the database
+- create and execute statements
+- extract results/output
+- handle errors/exceptions
+
+And you need to do all of this for a specific type to database!
+
+So, you need two packages:
+- the [DBI](https://dbi.r-dbi.org/) R package
+- the R package for the specific database type
+
+<small>* This list is taken from the [DBI](https://dbi.r-dbi.org/) R package documentation homepage</small>
+
+---
+class: left, top
+
+## And ODBC?
+
+At INBO, you maybe heard about the R package [{odbc}](https://github.com/r-dbi/odbc) or maybe you heard that ODBC must to be installed or updated on your laptop.*
+Well, ODBC is NOT a type of database, but a set of drivers, i.e. a  standardized interface to "talk" with databases.
+
+```
+library(DBI)
+library(odbc)
+
+con <- DBI::dbConnect(
+  drv = odbc::odbc(),
+  Driver   = "MariaDB",
+  Server   = "myserver.example.com",
+  Database = "ecology_data",
+  UID      = "user",
+  PWD      = "password",
+  Port     = 3306
+)
+```
+
+The advantage of going through ODBC rather than a package built for one specific database is **portability**: different database types, but same R code pattern!
+
+<small>* I remember passing an hour with Jo trying to fix ODBC issues on my (new) laptop. You too?</small>
+
+---
+class: left, top
+
+## What do we use today?
+
+Today we will use [SQLite](https://www.sqlite.org/index.html). Why? Simple, it's the most deployed and used database type in the world!
+
+Billions and billions of copies of SQLite exist in the wild. SQLite is found in:*
+
+- Every Android device
+- Every iPhone and iOS device
+- Every Mac
+- Every Windows 10/11 installation
+- Every Firefox, Chrome, and Safari web browser
+- Every instance of Skype
+- Every instance of iTunes
+- Every Dropbox client
+- Every TurboTax and QuickBooks
+- PHP and Python
+- Most automotive multimedia systems
+
+<small>* This slide is almost copy-pasted from https://www.sqlite.org/mostdeployed.html</small>
+
+---
+class: left, top
+
+## Challenge 0 - SQL in R
+
+For using a SQLIte database in R you can couple DBI with the specific R package [RSQLite](https://rsqlite.r-dbi.org/). Basic usage*:
+
+```r
+library(DBI)
+# Create an ephemeral in-memory RSQLite database
+con <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
+dbListTables(con)
+## character(0)
+dbWriteTable(con, "mtcars", mtcars)
+dbListTables(con)
+## [1] "mtcars"
+dbListFields(con, "mtcars")
+##  [1] "mpg"  "cyl"  "disp" "hp"   "drat" "wt"   "qsec" "vs"   "am"   "gear"
+## [11] "carb"
+dbReadTable(con, "mtcars")
+##    mpg cyl  disp  hp drat    wt  qsec vs am gear carb
+## 1 21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
+## 2 21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
+## 3 22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
+## 4 21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1
+## 5 18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2
+## 6 18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
+## 7 14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
+## 8 24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2
+## 9 22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2
+##  [ reached 'max' / getOption("max.print") -- omitted 23 rows ]
+```
+
+<small>* Code example copy pasted from the [Basic Usage](https://rsqlite.r-dbi.org/#basic-usage) section in SQLite R package documentation website.</small>
+
+---
+class: left, top
+
+Load the packages:
+
+```r
+library(DBI)
+library(RSQLite)
+library(tidyverse)
+```
+
+Use `install.packages("pkgname")` where needed.
+
+---
+class: center, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+<br> No yellow sticky notes online. We use hackmd (see next slide) but basic principle doesn't change.
+
+---
+class: center, top
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/dzthDR3CTHy0g4BWir0VRw?both
+
+<iframe src="https://hackmd.io/dzthDR3CTHy0g4BWir0VRw?edit" height="450px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+- [`20260827_portal_mammals.sqlite`](https://github.com/inbo/coding-club/blob/main/data/20260827/20260827_portal_mammals.sqlite): SQLite database*
+- [`20260827_challenges.R`](https://github.com/inbo/coding-club/blob/main/src/20260827/20260827_challenges.R): R script to start with
+
+<small>
+  * Source: [Data Management with SQL for Ecologists](https://datacarpentry.github.io/sql-ecology-lesson/index.html).
+</small>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1 - Connect and query with SQL
+
+Using the Data Carpentry lesson - [chapter 1](https://datacarpentry.github.io/sql-ecology-lesson/01-sql-basic-queries.html), the [cheat sheet](https://www.geeksforgeeks.org/sql/sql-cheat-sheet/), [DBI](https://dbi.r-dbi.org/) and [SQLite](https://www.sqlite.org/index.html) documentation, or any other resource:
+
+1. Connect to the SQLite database `20260827_portal_mammals.sqlite`.
+2. Get the list of all tables available.
+3. Get the names of the fields in table `species`.
+4. Get all the table `species` as data frame.
+5. Write a SQL query to **select** all the columns **from** the `species` table **where** taxa is `Reptile`.
+6. Write a SQL query to **select** the columns `species_id`, `genus` and `species` **from** the `species` table and species **where** taxa is `Reptile`.
+7. Clap your hands: you nailed it! But do not forget to **disconnect** from the database. Very often forgotten.
+
+---
+class: left, top
+
+# Intermezzo 1 - From SQL to R functions
+
+Are you running the same SQL pattern many times? Think about writing your own wrapping R function!
+
+Example. Let's write an R function to allow you and your colleagues to retrieve all the surveys of a specific year from the table `surveys`:
+
+```r
+# Declar the R function
+get_surveys <- function(con, year) {
+  res <- dbSendQuery(
+    con,
+    glue::glue("SELECT * FROM surveys WHERE year = {year}")
+  )
+  surveys <- dbFetch(res)
+  dbClearResult(res)
+  return(surveys)
+}
+
+# Use the R function
+get_surveys(con, 1980)
+```
+Notice the use of the R package [{glue}](https://glue.tidyverse.org/) to build the SQL query string. This is a very useful package to avoid hardcoding values in your queries or making it a little safer against [SQL injection](https://www.geeksforgeeks.org/sql/sql-injection/).
+
+1 Function + 1 function + 1 function = 3 functions? Yes. But 3 = 1: one package! :-)
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2 - SQL queries non-stop
+
+Let's get fun and write a lot of queries to learn SQL basics functions! You can use the same links to find help and inspiration!
+First, connect to the same database used in challenge 1.
+
+1. In which years did surveys occur? Return the **unique** values. Hint: if you know how to do it with dplyr, you have half of the solution!
+2. Which species were found in which year? In other words, get the unique `years`-`species_id` combinations.
+3. Similar to 2, but remove the pairs with unidentified animals (`species_id`).
+4. The weight is expressed in grams. Return the first 100 surveys from table  `surveys` with the weight in kilograms.
+5. Order surveys by `hindfoot_length` and `year` and return the first 100 surveys. Surveys with no `hindfoot_length` must be discarded. Variant: order in descending order.
+6. Get surveys for any of the _Dipodomys_ species. Take it simple: split it in two queries. First get the `species_id` values you need to use from `species` table. Second, run the query with those codes, hardcoded (= just copy paste). No joining tables, for now :-)
+7.
+EXTRA: Improve 6 by avoiding hardcoding the `species_id` values in the second query. Use the [{glue}](https://glue.tidyverse.org/) instead.
+
+
+## INTERMEZZO 2 - Make your query more readable
+
+You have already noticed, maybe. Queries can become difficult to understand quite easily. Who said that SQL has an user-friendly syntax?
+
+Some tips:
+- Split the query on multiple lines
+- Use comments. IN SQL comment lines start with `--`
+
+Example:
+
+```r
+query <- "
+  -- Get records of Dipodomys species from 2000
+  -- These are in the surveys table, and we are interested in all columns
+  SELECT * FROM surveys
+  -- Year is stored in the field `year`
+  WHERE (year >= 2000)
+  -- Dipodomys' species have `species_id`: DM, DO, and DS
+  AND (species_id IN ('DM', 'DO', 'DS'));
+"
+res <- dbSendQuery(con, query)
+dbFetch(res)
+dbClearResult(res)
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3 - grouping, joining to become a pro
+
+1. The "group by - summarise" principle is one of the pillars of data wrangling. Let's do it with SQL. How many species are per genus in `species` table? How many surveys are per species in `surveys` table?
+2. Joining is also an important tool in data wrangling. All joining in dplyr is inspired by SQL, did you know? So, let's join. For example, let's add species information from `species` table to the records in `surveys` table.
+3. Same as 2, but this time add only the species names from `species` table to the records in `surveys` table.
+3. Let's combine all what we learned now for a more complex query :-) How many surveys (records) taken before 2000 are for each species from taxa `Reptile`? Return only the 5 most surveyed species.
+4. In addition to the intermezzo tips, it's good practice to save complex queries as a file (extension `.sql`). Save the query of the intermezzo and run it from file. Hint: you can use the R packages {glue} and {readr}.
+5. Are you very lazy? Don't you want to learn SQL so much? Ok. Just use {dplyr}, which will use {dbplyr} when you pass a database connection instead of a data frame. Try to get the same result of the intermezzo 2 using dplyr. Hint: the homepage of [dbplyr](https://dbplyr.tidyverse.org/) helps a lot.
+
+---
+class: left, top
+
+# Bonus challenge
+
+1. Are there primary keys defined in the SQLite database `20260827_portal_mammals.sqlite`? Hint: use the "magic" SQL query `"PRAGMA table_info(my_table_name);"`.
+2. After running the provided code, transform the tidy data frames `counts`, `events` and `counters` in a SQLite database containing three tables, `counts`, `events` and `counters`*.
+3. In 2, did you define primary and foreign keys? If yes, which ones? If not, how to define them? Hint: to work with primary and foreign keys, you need to define them as a machine cannot know which column of the data frame are your primary and foreign keys. Execute first SQL queries starting with `CREATE TABLE my_table_name` to create such tables and then populate them.
+
+<small>* At the INBO coding club we like recycle ♻️ So, we recycle data as well! The tidy dataset is the solution of the Challenge 3B of the session of 16 Dec 2025.</small>
+
+---
+class: left, top
+
+# The R package of the month: duckdb
+
+[DuckDB](https://duckdb.org/) is an open source, in-process (= same as SQLite), **analytical database** and it has its own R client: the R package [{duckdb}](https://duckdb.org/docs/api/r). It is a very fast and efficient database engine, which can be used in R to query data stored in files (e.g. CSV, Parquet) or in-memory data frames. It's dbplyr compatible and what you learned today with DBI and SQLite can be applied to DuckDB as well.
+
+```
+con <- dbConnect(duckdb::duckdb())
+  dbGetQuery(con, "SELECT * FROM 'data.csv' LIMIT 5;")
+```
+
+Why DuckDB? Because it's fast: often described as "SQLite for analytics". Where SQLite is optimized for transactional workloads (OnLineTrasactionalProcessing, OLTP: lots of small reads/writes, e.g. powering an app's backend), DuckDB is optimized for analytical workloads (OnLineAnalyticalProcessing, OLAP: scanning and aggregating large amounts of data — the kind of thing we do in data analysis, not app backends).
+
+---
+class: left, top
+
+# Resources
+
+- Comprehensive solutions and the edited video recording will be soon available.
+- The Data Carpentry course [Data Management with SQL for Ecologists](https://datacarpentry.github.io/sql-ecology-lesson/aio.html).
+- The [DBI](https://dbi.r-dbi.org/) R package documentation website
+- The [SQLIte](https://www.sqlite.org/index.html) database homepage
+- The [RSQLite](https://rsqlite.r-dbi.org/) R package documentation website
+- The [dbplyr](https://dbplyr.tidyverse.org/) R package documentation website
+- The [DuckDB](https://duckdb.org/) database homepage and the [duckdb](https://duckdb.org/docs/api/r) R package documentation website
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room number and name  -->
+Topic: to be decided <br>
+Room:  HT - 00.48 - Keldermans  <br>
+Date: **29/09/2026** (Tuesday), van **10:00** tot **12:30
+Help needed with technical setup? You are welcome from 9:45am
