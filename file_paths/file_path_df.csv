@@ -247,6 +247,9 @@ data/20260528/20260528_wc2.1_10m_tmax_May.tif,20260528_wc2.1_10m_tmax_May.tif,da
 data/20260528/20260528_wc2.1_5m_srad_May.tif,20260528_wc2.1_5m_srad_May.tif,data,20260528
 data/20260528/20260528_municipalities_flanders.gpkg,20260528_municipalities_flanders.gpkg,data,20260528
 data/20260827/20260827_portal_mammals.sqlite,20260827_portal_mammals.sqlite,data,20260827
+data/20260827/20260827_counts.csv,20260827_counts.csv,data,20260827
+data/20260827/20260827_counters.csv,20260827_counters.csv,data,20260827
+data/20260827/20260827_events.csv,20260827_events.csv,data,20260827
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
