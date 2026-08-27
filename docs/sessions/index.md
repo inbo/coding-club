@@ -3,6 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
+| 2026-08-27 | SQL in R? Yes, we can! | [slides]({{ site.baseurl }}{% link sessions/20260827_sql_in_r.html  %}) | [hackmd](https://hackmd.io/dzthDR3CTHy0g4BWir0VRw?view) | 01.72 - Kaat Tilley |  |
 | 2026-06-30 | webservices in R | [slides]({{ site.baseurl }}{% link sessions/20260630_webservices_in_r.html  %}) | [hackmd](https://hackmd.io/DnQ53lvgSPyVlmUc9x1R1Q?view) | 01.21 - Jeanne Brabants | [vimeo](https://vimeo.com/1217429725) |
 | 2026-05-28 | rasters in R | [slides]({{ site.baseurl }}{% link sessions/20260528_rasters_in_r.html  %}) | [hackmd](https://hackmd.io/QW-TZty4RzO_FQ7cG6dhdw?view) | 01.20 - Willy Van Der Meeren | [vimeo](https://vimeo.com/1198348627) |
 | 2026-04-29 | data wrangling with tidyverse | [slides]({{ site.baseurl }}{% link sessions/20260429_data wrangling_with_tidyverse.html  %}) | [hackmd](https://hackmd.io/laEmld1JQTO99yEq_ipuzQ?view) | 01.71 - Frans Breziers | [vimeo](https://vimeo.com/1198348627?share=copy&fl=sv&fe=ci) |
