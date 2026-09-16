@@ -373,7 +373,9 @@ class: left, top
 3. Same as 2, but this time add only the species names from `species` table to the records in `surveys` table.
 3. Let's combine all what we learned now for a more complex query :-) How many surveys (records) taken before 2000 are for each species from taxa `Reptile`? Return only the 5 most surveyed species.
 4. In addition to the intermezzo tips, it's good practice to save complex queries as a file (extension `.sql`). Save the query of the intermezzo and run it from file. Hint: you can use the R packages {glue} and {readr}.
-5. Are you very lazy? Don't you want to learn SQL so much? Ok. Just use {dplyr}, which will use {dbplyr} when you pass a database connection instead of a data frame. Try to get the same result of the intermezzo 2 using dplyr. Hint: the homepage of [dbplyr](https://dbplyr.tidyverse.org/) helps a lot.
+5. Are you very lazy? Don't you want to learn SQL so much? Ok. Just use {dplyr}, which will use {dbplyr}* when you pass a database connection instead of a data frame. Try to get the same result of the intermezzo 2 using dplyr. Hint: the homepage of [dbplyr](https://dbplyr.tidyverse.org/) helps a lot.
+
+<small>* Do you know that there is a very handy function in {dbplyr} to translate dplyr code to SQL? It's called [translate_sql()](https://dbplyr.tidyverse.org/articles/sql-translation.html).</small>
 
 ---
 class: left, top
