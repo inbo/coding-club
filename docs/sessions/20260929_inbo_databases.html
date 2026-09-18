@@ -143,9 +143,9 @@ class: left, top
 
 ## Challenge 0
 
-1. People at home: log in to the INBO VPN. Instructions available on the specific [IT INBO tutorial](https://ict-intranet.inbo.be/tutorials/vpn/index.html)
-2. If not done, install `inbodb` via `pak::pak("inbo/inbodb")`
-3. Load `inbodb` by running `library(inbodb)`. Load also `dplyr` and `DBI` packages with `library()` as well.
+1. People following remotely not connectected to the VO network: log in to the INBO VPN. Instructions available on the specific [IT INBO tutorial](https://ict-intranet.inbo.be/tutorials/vpn/index.html).
+2. If not done, install `inbodb` via `pak::pak("inbo/inbodb")` or `remotes::install_github("inbo/inbodb")`.
+3. Load `inbodb` by running `library(inbodb)`. Load also `dplyr`, `DBI` and `glue` packages with `library()` as well. Code provided in `20260929_challenges.R` script.
 4. Open connections to some databases to test (be patient, it could take a while):
 ```
 inboveg <- connect_inbo_dbase("D0010_00_Cydonia")
