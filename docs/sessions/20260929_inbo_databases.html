@@ -230,8 +230,8 @@ What else can you find in a schema? Well, besides tables, there are also **views
 It looks and acts like a table (you can query it, filter it, join it), but it doesn't store any data of its own. It's just a stored instruction: _"go fetch this specific slice/combination of the real tables, and show it to me as if it were one table."_
 
 How to recognize them?
-- In RStudio, you cannot open a view of a view 😄 No "table" symbol 𝄜 next to its name in connection pane
-- Their names typically start with `vw`. Example: the `inbo` schema of INBOVEG database `D0010_00_Cydonia` has no tables, only views.
+- In RStudio, you cannot open a view of a "view" 😄 No "table" symbol 𝄜 next to its name in connection pane
+- Their names typically start with `vw`. Example: the `inbo` schema of INBOVEG database `D0010_00_Cydonia` has no tables, only views. Try it yourself using the connection pane.
 
 .center[![:scale 30%]({{ site.baseurl}}/assets/images/20260929/20260929_views.png)]
 
@@ -241,11 +241,11 @@ class: left, top
 
 # Challenge 2
 
-Use inbodb to:
+Use inbodb functions to:
 
-1. Get observations of invasive species _Impatiens glandulifera_ and _Hydrocotyle ranunculoides_ from florabank database.
+1. Get observations of invasive species _Impatiens glandulifera_ and _Hydrocotyle ranunculoides_ from Florabank database.
 
-2. Get recordings collected during survey `ABS-LIM2011` in inboveg database.
+2. Get recordings collected during survey `ABS-LIM2011` in INBOVEG database.
 
 3. Get the most recent taxon lists with important species at provincial level. Tip: search for taxon lists containing the words `"provinciaal belangrijke soorten"`. See [taxon lists](https://inbo.github.io/inbodb/articles/get_data_taxonlijsten.html#taxonlists-overview) overview documentation for an example. Tip valid for the remaining exercises as well.
 
@@ -352,7 +352,7 @@ multiply_by_2(number) # no value given to argument b
 
 `b` is a function argument, but never evaluated, so no error. This is what we mean by being **lazy**: doing **the strict minimum** of evaluation*. For this reason lazy evaluation is sometimes referred as _call-by-need_.
 
-**IMPORTANT**: lazy evaluation is a very powerful feature of R, but it can also lead to unexpected behavior if not understood properly. In other words, always make sure that all arguments are used in the function body, unless you have a very good reasons to not do it.
+**IMPORTANT**: lazy evaluation is a very powerful feature of R. Great power, great responsability. In other words, always be sure that all arguments are used in the function body, unless you have a very good reasons to not do it.
 
 <small>
 * More about lazy evaluation? Give a look at [this tutorial](https://www.r-bloggers.com/2018/07/about-lazy-evaluation/)... or spend a coffeebreak with Thierry ;-)
@@ -366,20 +366,19 @@ class: left, top
 
 Not everything is already wrapped in a function. So, how to get your data?
 
-Do you know SQL? Excellent! Otherwise, just use dplyr syntax, which is translated into SQL behind the scenes using dbplyr, the database backend of dplyr. Just pay attention to use `tbl()` to connect to the table you are interested to and it will be used as it would be a data frame. Example from the "Use inbodb" section of the [inbodb homepage](https://inbo.github.io/inbodb/index.html):
+Do you know SQL? Excellent! Otherwise, just use dplyr syntax, which is translated into SQL behind the scenes using dbplyr, the database backend of dplyr. Just pay attention to use `tbl()` to connect to the table you are interested to and it will be used as it would be a data frame.
+
+Example adapted from the "Use inbodb" section of the [inbodb homepage](https://inbo.github.io/inbodb/index.html):
 
 ```r
-# open database connection
-con <- connect_inbo_dbase("D0152_00_Flora")
-
 # read a whole table
-dbReadTable(con, "Bron")
+dbReadTable(florabank, "Bron")
 
 # query a database using a SQL query
-dbGetQuery(con, "SELECT ID, Code, Beschrijving FROM Bron")
+dbGetQuery(florabank, "SELECT ID, Code, Beschrijving FROM Bron")
 
 # compose a query using R-code and dplyr syntax
-tbl(con, "Bron") |>
+tbl(florabank, "Bron") |>
   select("ID", "Code", "Beschrijving") |>
   collect()
 ```
@@ -392,7 +391,7 @@ class: left, top
 
 Feel free to use dplyr syntax or SQL syntax or experiment both!
 
-1. Get the first 10 rows of table `Taxon` of `florabank`.
+1. Get the first 10 rows of table `Taxon` of `florabank`. Warning: if you use SQL, notice that SQL Server databases do NOT support `LIMIT` clause.
 2. Get the scientific name (`NaamWetenschappelijk`) of Dutch name (`NaamNederlands`) `Slank snavelmos`.
 3. Make the query above reusable by creating a *template* so that you can provide any kind of Dutch name and get its scientific name back. Tip: the section ["Create and use query templates"](https://tutorials.inbo.be/tutorials/r_database_access/#create-and-use-query-templates) from the INBO tutorial "Read data from INBO databases (SQL Server) with R" is very helpful.
 4. Make a template out of the provided query in `20260929_challenges.R`. The function should allow the users to select any kind of fish species.
@@ -407,8 +406,6 @@ class: left, top
 We have just learned that R is lazy. We shouldn't be such as lazy! Please, [contribute](https://inbo.github.io/inbodb/CONTRIBUTING.html) to inbodb: future-you will thank you. Together we make of inbodb a more and more useful package.
 
 Contact Hans Vancalster and Els Lommelen (via GitHub issues or email) and provide them your SQL queries, some context and what are the expected inputs and output. Have you already an R function with the query template? Great! Send that too.
-
-
 
 .center[![:scale 100%]({{ site.baseurl}}/assets/images/20260929/contributing_inbodb.png)]
 
