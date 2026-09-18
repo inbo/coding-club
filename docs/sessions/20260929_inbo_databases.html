@@ -62,7 +62,6 @@ class: left, top
   - [meetnetten.be](https://www.vlaanderen.be/inbo/datasets/meetnettenbe/): see article [How to retrieve data from the Meetnetten database](https://inbo.github.io/inbodb/articles/get_data_meetnetten.html) and [functions](https://inbo.github.io/inbodb/reference/index.html#functions-to-query-the-meetnetten-database)
   - taxonlijsten: see article [How to retrieve data from the Taxonlijsten database](https://inbo.github.io/inbodb/articles/get_data_taxonlijsten.html) and [functions](https://inbo.github.io/inbodb/reference/index.html#functions-to-query-database-taxonlijsten)
 
-
 Check all the available [inbodb functions](https://inbo.github.io/inbodb/reference/index.html).
 
 .center[![:scale 60%]({{ site.baseurl}}/assets/images/20260929/20260929_functions_inbodb.png)]
@@ -115,8 +114,14 @@ Go to https://hackmd.io/tOalKnyaTfSgAMdYKFXJww?both
 ---
 class: left, top
 
-# Download data and code
+# Code
 
+No data files to download today: we will get the data from the databases :-)
+
+R scripts:
+- [20260929_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20260929/20260929_challenges.R): R script to start from
+
+Download it automatically via `inborutils::setup_codingclub_session()` or manually from the link provided nad place it in `src/20260929`.
 
 ---
 class: left, top
@@ -125,7 +130,7 @@ class: left, top
 
 1. People at home: log in to the INBO VPN. Instructions available on the specific [IT INBO tutorial](https://ict-intranet.inbo.be/tutorials/vpn/index.html)
 2. If not done, install `inbodb` via `pak::pak("inbo/inbodb")`
-3. Load `inbodb`. Run `library(inbodb)`.
+3. Load `inbodb` by running `library(inbodb)`. Load also `dplyr` and `DBI` packages with `library()` as well.
 4. Open connections to some databases to test (be patient, it could take a while):
 ```
 inboveg <- connect_inbo_dbase("D0010_00_Cydonia")
@@ -332,7 +337,7 @@ multiply_by_2(number) # no value given to argument b
 
 `b` is a function argument, but never evaluated, so no error. This is what we mean by being **lazy**: doing **the strict minimum** of evaluation*. For this reason lazy evaluation is sometimes referred as _call-by-need_.
 
-**IMPORTANT**: lazy evaluation is a very powerful feature of R, but it can also lead to unexpected behavior if not understood properly. In other words, the code above is bad practice: always make sure that all arguments are used in the function body, or provide default values for unused arguments.
+**IMPORTANT**: lazy evaluation is a very powerful feature of R, but it can also lead to unexpected behavior if not understood properly. In other words, always make sure that all arguments are used in the function body, unless you have a very good reasons to not do it.
 
 <small>
 * More about lazy evaluation? Give a look at [this tutorial](https://www.r-bloggers.com/2018/07/about-lazy-evaluation/)... or spend a coffeebreak with Thierry ;-)
@@ -342,29 +347,55 @@ multiply_by_2(number) # no value given to argument b
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
+# INTERMEZZO 3 - How to get your data?
+
+Not everything is already wrapped in a function. So, how to get your data?
+
+Do you know SQL? Excellent! Otherwise, just use dplyr syntax, which is translated into SQL behind the scenes using dbplyr, the database backend of dplyr. Just pay attention to use `tbl()` to connect to the table you are interested to and it will be used as it would be a data frame. Example from the "Use inbodb" section of the [inbodb homepage](https://inbo.github.io/inbodb/index.html):
+
+```r
+# open database connection
+con <- connect_inbo_dbase("D0152_00_Flora")
+
+# read a whole table
+dbReadTable(con, "Bron")
+
+# query a database using a SQL query
+dbGetQuery(con, "SELECT ID, Code, Beschrijving FROM Bron")
+
+# compose a query using R-code and dplyr syntax
+tbl(con, "Bron") |>
+  select("ID", "Code", "Beschrijving") |>
+  collect()
+```
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
 # Challenge 3 - Templates
 
-https://tutorials.inbo.be/tutorials/r_database_access/#create-and-use-query-templates
+Feel free to use dplyr syntax or SQL syntax or experiment both!
 
+1. Get the first 10 rows of table `Taxon` of `florabank`.
+2. Get the scientific name (`NaamWetenschappelijk`) of Dutch name (`NaamNederlands`) `Slank snavelmos`.
+3. Make the query above reusable by creating a *template* so that you can provide any kind of Dutch name and get its scientific name back. Tip: the section ["Create and use query templates"](https://tutorials.inbo.be/tutorials/r_database_access/#create-and-use-query-templates) from the INBO tutorial "Read data from INBO databases (SQL Server) with R" is very helpful.
+4. Make a template out of the provided query in `20260929_challenges.R`. The function should allow the users to select any kind of fish species.
+5. Similar to 4. Make a template ouf of the provided query in `20260929_challenges.R`. Variables: fish species (field `dt.NaamNL`), year(s) (field `dd.Jaar`), project(s) (field `dp.ProjectCode`), watercourse(s) (field `dv.VHAVispuntNaam`), basin(s) (field `dv.VHAVispuntBekkenNaam`) and observations status code (field `WaarnemingStatusCode`).
+6. Do not forget to disconnect to the databases when you are done with your queries.
 
 ---
 class: left, top
 
-# Contribute to inbodb
+# BONUS CHALLENGE - Contribute to inbodb
 
 We have just learned that R is lazy. We shouldn't be such as lazy! Please, [contribute](https://inbo.github.io/inbodb/CONTRIBUTING.html) to inbodb: future-you will thank you. Together we make of inbodb a more and more useful package.
 
-Contact Hans Vancalster and Els Lommelen (via GitHub issues or email) and provide them your SQL templates or R functions.
+Contact Hans Vancalster and Els Lommelen (via GitHub issues or email) and provide them your SQL queries, some context and what are the expected inputs and output. Have you already an R function with the query template? Great! Send that too.
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20260929/contributing_inbodb.png)
 
----
-class: left, top
 
-# Bonus challenge
-
-Let's contribute to inbodb! Contact Hans and Els with your SQL templates or R functions. Provide the query, some context and what are the expected inputs and output.
-
+.center[![:scale 100%]({{ site.baseurl}}/assets/images/20260929/contributing_inbodb.png)]
 
 ---
 class: left, top
@@ -379,7 +410,7 @@ Next to inbodb, INBO has another in-house package: [watina](https://inbo.github.
 
 Start maybe by giving a look to the [Getting Started](https://inbo.github.io/watina/articles/v010_getstarted.html) article. Check also the [list](https://inbo.github.io/watina/reference/index.html) of all watina functions for a rapid scan of all functionalities.
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20260929/20260929_watina.png)
+.center[![:scale 100%]({{ site.baseurl}}/assets/images/20260929/20260929_watina.png)]
 
 
 ---
