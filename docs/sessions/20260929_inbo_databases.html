@@ -1,0 +1,344 @@
+---
+layout: presentation
+title: INBO data in R
+---
+class: center, top
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!-- Do not forget to adapt the presentation title in the header! -->
+
+  <!-- Adjust the presentation to the session. Focus on the challenges,
+this is not a coding tutorial.
+
+Note, to include figures, store the image in the `/docs/assets/images`
+folder and use the jekyll base.url reference as done in this template
+or see https://jekyllrb.com/docs/liquid/tags/#links.
+  using the scale attribute ![:scale 30%](...), you can adjust the image size.
+-->
+
+<!--  Adjust the day, month  -->
+# 29 SEPTEMBER 2026
+
+## INBO coding club
+
+<!--  Adjust the room number and name  -->
+Herman Teirlinck<br>
+00.48 - Keldermans
+
+---
+class: left, top
+
+# Reminders
+
+1. Did we confirm the room reservation on the _roomie_?
+2. Did we start the recording?
+
+---
+class: center, middle
+
+<!-- Create a new badge using Inkscape based on the assets/images/coding_club_badges.svg file -->
+![:scale 90%]({{ site.baseurl}}/assets/images/20260929/20260929_badge.png)
+
+---
+class: left, top
+
+## Introduction
+
+We will explore the functionalities provided by two "made in INBO" packages and then we play with SQL and tidyverse.
+
+1. [inbodb](https://inbo.github.io/inbodb/index.html)
+2. [watina](https://inbo.github.io/watina/index.html)
+
+---
+class: left, top
+
+## `inbodb` package
+
+1. Connect to any INBO database
+2. Run specific queries for two INBO databases:
+  - [Florabank](https://www.vlaanderen.be/inbo/datasets/florabank/): see [functions](https://inbo.github.io/inbodb/reference/index.html#functions-to-query-florabank)
+  - [INBOVEG](https://www.vlaanderen.be/inbo/datasets/inboveg/): see article ["How to retrieve data from the INBOVEG database"](https://inbo.github.io/inbodb/articles/get_data_inboveg.html) and [functions](https://inbo.github.io/inbodb/reference/index.html#functions-to-query-inboveg)
+  - [meetnetten.be](https://www.vlaanderen.be/inbo/datasets/meetnettenbe/): see article [How to retrieve data from the Meetnetten database](https://inbo.github.io/inbodb/articles/get_data_meetnetten.html) and [functions](https://inbo.github.io/inbodb/reference/index.html#functions-to-query-the-meetnetten-database)
+  - taxonlijsten: see article [How to retrieve data from the Taxonlijsten database](https://inbo.github.io/inbodb/articles/get_data_taxonlijsten.html) and [functions](https://inbo.github.io/inbodb/reference/index.html#functions-to-query-database-taxonlijsten)
+
+
+[inbodb functions](https://inbo.github.io/inbodb/reference/index.html)
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20260929/20260929_functions_inbodb.png)
+
+---
+class: left, Topic
+
+## inbodb vs DBI
+
+In the last coding club (Aug 27) we spoke about "SQL in R" and we used the [DBI](https://dbi.r-dbi.org/) package to connect to a database and run SQL queries. The `inbodb` package is built on top of DBI and provides a more user-friendly interface to access INBO databases. So, what you could have learned in the last coding club, is still useful. But, no worries if you missed it, we will provide you some material to get started where needed.
+
+---
+class: left, top
+
+No cheatsheets today, but we have several material to start with:
+- a well-written [INBO tutorial](https://inbo.github.io/tutorials/tutorials/r_database_access/) is available about access to INBO databases
+- the [inbodb package website](https://inbo.github.io/inbodb/index.html), with its articles and function documentation, does the rest
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20260929/20260929_tutorial_INBO_database_access_in_r.PNG)
+
+---
+class: center, top
+
+### How to get started?
+
+Check the [Each session setup](https://inbo.github.io/coding-club/gettingstarted.html#each-session-setup) to get started.
+
+### First time coding club?
+
+Check the [First time setup](https://inbo.github.io/coding-club/gettingstarted.html#first-time-setup) section to setup.
+
+
+---
+class: left, top
+
+![:scale 100%]({{ site.baseurl}}/assets/images/coding_club_sticky_concept.png)
+
+<br> No yellow sticky notes online. We use hackmd (see next slide) but basic principle doesn't change.
+
+---
+class: center, top
+
+### Share your code during the coding session!
+
+<!-- Create a new hackmd file and replace this link (twice!) -->
+Go to https://hackmd.io/tOalKnyaTfSgAMdYKFXJww?both
+
+<iframe src="https://hackmd.io/tOalKnyaTfSgAMdYKFXJww?edit" height="450px" width="800px"></iframe>
+
+---
+class: left, top
+
+# Download data and code
+
+
+---
+class: left, top
+
+## Challenge 0
+
+1. People at home: log in to the INBO VPN. Instructions available on the specific [IT INBO tutorial](https://ict-intranet.inbo.be/tutorials/vpn/index.html)
+2. If not done, install `inbodb` via `pak::pak("inbo/inbodb")`
+3. Load `inbodb`: `library(inbodb)`
+4. Open connections to some databases to test (be patient, it could take up to a minute per database)
+```
+inboveg <- connect_inbo_dbase("D0010_00_Cydonia")
+florabank <- connect_inbo_dbase("D0021_00_userFlora")
+vis <- connect_inbo_dbase("W0001_10_Vis")
+```
+5. If it worked, you are ready to start the challenges.
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
+class: left, top
+
+# Challenge 1
+
+1. Find the R connection pane of RStudio and find all tables in dbo schema of Florabank database.
+
+2. Open a view of table `tblTaxon` of `florabank` (`D0021_00_userFlora`), table `ivRecording` of INBOVEG (`D0010_00_Cydonia`) and table `Taxonlijst` of taxonlijsten (`D0156_00_Taxonlijsten`). Tips: check [RStudio connection pane documentation](https://docs.posit.co/ide/user/ide/guide/data/data-connections.html#connections-pane); tables are under the (default) `dbo` _schema_.
+
+3. Still using the RStudio connection pane, find the type of the columns of (one of the) tables in 1, e.g. *char*acter, *int*eger.
+
+4. What type does `bit` stand for? Tip: check e.g. the values contained in column `??` of table `??` opened in 1
+
+5. How to get the fields names of table `tblTaxon` of `florabank` database in R directly? Tip: use `dBListFields()` function from the DBI package. Check examples in the [DBI homepage](https://dbi.r-dbi.org/#example).
+
+---
+class: left, top
+
+# Intermezzo 1 - database schemas
+
+The function `dbListFields()` worked well. So, why not trying the DBI function `dbListTables()` to get all the names of all the tables? Just try:
+
+```
+dbListTables(florabank)
+```
+
+789 tables??? And all that strange names? Well, that's because the `florabank` database is a SQL Server database and the DBI function `dbListTables()` is not able to filter on the default schema `dbo`. So, you get all tables in all schemas and much, much more.
+
+But wait a minute: what's a *schema*? and why do we have multiple schemas in a database?
+
+A schema is a way to *logically group* database objects like tables within a database. It helps organize and manage the database structure, especially in larger databases with many objects. In SQL Server, the **default** schema is **`dbo`**, but other schemas can be created for different purposes or users (check e.g. the INBOVEG database `D0010_00_Cydonia`). And there are also *system schemas*, like *`sys`*, which contain system tables that are used by SQL Server for internal management and operations.
+
+System schemas are NOT for user data, but for advanced database management and troubleshooting = never, I say, never touch them unless you are Frederic, Geert, Jo or some very few else from the data management team!*
+
+<small>* Typically and luckily we don't even have the rights to touch sys schema. But it's good to know what they are and why we should never touch them :-)</small>
+
+Do you really want to get table names from dbo schema? Filter on the `dbo` schema using the following code, where we use the function `dbGetQuery()` to run a SQL query on the database connection `florabank`:
+
+```r
+library(DBI)
+dbGetQuery(florabank, "
+  SELECT s.name AS schema_name, t.name AS table_name
+  FROM sys.tables t
+  JOIN sys.schemas s ON t.schema_id = s.schema_id
+  WHERE s.name = 'dbo'
+")
+```
+
+---
+class: left, top
+
+# Intermezzo 1 - database views
+
+What else can you find in a schema? Well, besides tables, there are also *views*. A view is a *virtual table*, call it a *saved search* or a *saved recipe* that is based on the result of a SQL query.
+
+It looks and acts like a table (you can query it, filter it, join it), but it doesn't store any data of its own.-! It's just a stored instruction: _"go fetch this specific slice/combination of the real tables, and show it to me as if it were one table."_
+
+How to recognize them?
+- In RStudio, you cannot open a view of a view 😄 No "table" symbol 𝄜 next to its name in connection pane
+- Their names typically start with `vw`. Example: the `inbo` schema of INBOVEG database `D0010_00_Cydonia` has no tables, only views.
+
+.center[![:scale 100%]({{ site.baseurl}}/assets/images/20260929/20260929_views.png)]
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
+class: left, top
+
+# Challenge 2 -
+
+
+
+---
+class: left, top
+
+# Intermezzo 1: R is lazy... so are we
+
+Let us get the locations from watina database using watina function `get_locs(watina)`. Why do you get an error if you try to save them in a text format (e.g. csv)?
+
+```r
+locations <- get_locs(watina)
+write_csv(x = locations, file = "./data/locations.csv")
+
+> Error in write_delim(x, file, delim = ",", na = na, append = append, col_names = col_names,  :
+  is.data.frame(x) is not TRUE
+```
+
+Is locations not a data.frame???
+
+```r
+class(locations)
+[1] "tbl_Microsoft SQL Server" "tbl_dbi"
+[3] "tbl_sql"                  "tbl_lazy"
+[5] "tbl"
+```
+
+All you have is a table (`tbl`), but most of all, it's a _lazy table_... Welcome to the lazy woRld!
+
+
+---
+class: left, top
+
+# Intermezzo 1: R is lazy... so are we
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20220125/20220125_lazy_query.png)
+
+`locations` is an SQL query, no data are really loaded on your laptop.
+It is like a reference to the result of the query but the full result of the query is not brought into memory.
+
+If you are thinking: _"are you kidding me?"_ Well, try this:
+
+
+```r
+locations %>% show_query()
+```
+
+IMPORTANT: to avoid bad surprises (crashes, out of memory issues), first run your queries lazily.
+
+---
+class: left, top
+
+# Intermezzo 2 - R is lazy...
+
+<best-practices-for-working-with-databases-march-2018-edgar-ruiz>![:scale 10%]({{ site.baseurl}}/assets/images/20220125/20220125_mister_lazy.jpg)</center>
+
+R is not only lazy with databases, R is ALWAYS lazy
+
+```r
+number <- 5
+multiply_by_2 <- function(a, b) {
+  a * 2 # b is not used
+}
+multiply_by_2(number) # no value given to argument b
+```
+
+`b` is a function argument, but never evaluated, so no error. This is what we mean by being **lazy**: doing **the strict minimum** of evaluation*. For this reason lazy evaluation is sometimes referred as _call-by-need_.
+
+<small>
+*More about lazy evaluation? Give a look at [this tutorial](https://www.r-bloggers.com/2018/07/about-lazy-evaluation/)... or spend a coffeebreak with Thierry ;-)
+</small>
+
+---
+background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
+class: left, top
+
+# Challenge 3 - Templates
+
+https://tutorials.inbo.be/tutorials/r_database_access/#create-and-use-query-templates
+
+
+---
+class: left, top
+
+# Contribute to inbodb
+
+We have just learned that R is lazy. We shouldn't be such as lazy! Please, [contribute](https://inbo.github.io/inbodb/CONTRIBUTING.html) to inbodb: future-you will thank you. Together we make of inbodb a more and more useful package.
+
+Contact Hans Vancalster and Els Lommelen (via GitHub issues or email) and provide them your SQL templates or R functions.
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20260929/contributing_inbodb.png)
+
+---
+class: left, top
+
+# Bonus challenge
+
+
+---
+class: left, top
+
+# The R package of the month: watina
+
+Next to inbodb, INBO has another in-house package: [watina](https://inbo.github.io/watina/index.html)! The maintainer is "our" Floris Vanderhaeghe. What does watina do?
+
+1. Connect to watina database
+2. Run specific queries for watina database
+3. Provide some useful helper functions
+
+Start maybe by giving a look to the [Getting Started](https://inbo.github.io/watina/articles/v010_getstarted.html) article. Check also the [list](https://inbo.github.io/watina/reference/index.html) of all watina functions for a rapid scan of all functionalities.
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20260929/20260929_watina.png)
+
+
+---
+class: left, top
+
+# Resources
+
+- Comprehensive [solutions](https://github.com/inbo/coding-club/blob/main/src/20260929/20260929_challenges_solutions.R) are available on GitHub. You can opt to download the solutions automatically by using `inborutils::setup_codingclub_session("20260929")`.
+- No webinar available this time, sorry! For some reasons, I didn't get any video recording in my mailbox 😭
+- The Data Carpentry course [Data Management with SQL for Ecologists](https://datacarpentry.github.io/sql-ecology-lesson/aio.html).
+- The [DBI](https://dbi.r-dbi.org/) R package documentation website
+- The [SQLIte](https://www.sqlite.org/index.html) database homepage
+- The [RSQLite](https://rsqlite.r-dbi.org/) R package documentation website
+- The [dbplyr](https://dbplyr.tidyverse.org/) R package documentation website
+- The [DuckDB](https://duckdb.org/) database homepage and the [duckdb](https://duckdb.org/docs/api/r) R package documentation website
+- The [inbodb](https://inbo.github.io/inbodb/index.html) R package documentation website to connect and work with INBO databases in R.
+
+---
+class: center, middle
+
+![:scale 30%]({{ site.baseurl}}/assets/images/coding_club_logo_1.png)
+
+<!--  Adjust the room number and name  -->
+Topic: to be decided <br>
+Room:  HT - 00.48 - Keldermans  <br>
+Date: **29/09/2026** (Tuesday), van **10:00** tot **12:30
+Help needed with technical setup? You are welcome from 9:45am
