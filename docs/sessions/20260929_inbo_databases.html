@@ -45,10 +45,10 @@ class: left, top
 
 ## Introduction
 
-We will explore the functionalities provided by two "made in INBO" packages and then we play with SQL and tidyverse.
+We will explore the functionalities provided by the "made in INBO" package [inbodb](https://inbo.github.io/inbodb/index.html) and then we will play with SQL and tidyverse.
 
-1. [inbodb](https://inbo.github.io/inbodb/index.html)
-2. [watina](https://inbo.github.io/watina/index.html)
+
+.center[![:scale 80%]({{ site.baseurl}}/assets/images/20260929/20260929_inbodb.png)]
 
 ---
 class: left, top
@@ -63,9 +63,9 @@ class: left, top
   - taxonlijsten: see article [How to retrieve data from the Taxonlijsten database](https://inbo.github.io/inbodb/articles/get_data_taxonlijsten.html) and [functions](https://inbo.github.io/inbodb/reference/index.html#functions-to-query-database-taxonlijsten)
 
 
-[inbodb functions](https://inbo.github.io/inbodb/reference/index.html)
+Check all the available [inbodb functions](https://inbo.github.io/inbodb/reference/index.html).
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20260929/20260929_functions_inbodb.png)
+.center[![:scale 60%]({{ site.baseurl}}/assets/images/20260929/20260929_functions_inbodb.png)]
 
 ---
 class: left, Topic
@@ -125,11 +125,12 @@ class: left, top
 
 1. People at home: log in to the INBO VPN. Instructions available on the specific [IT INBO tutorial](https://ict-intranet.inbo.be/tutorials/vpn/index.html)
 2. If not done, install `inbodb` via `pak::pak("inbo/inbodb")`
-3. Load `inbodb`: `library(inbodb)`
-4. Open connections to some databases to test (be patient, it could take up to a minute per database)
+3. Load `inbodb`. Run `library(inbodb)`.
+4. Open connections to some databases to test (be patient, it could take a while):
 ```
 inboveg <- connect_inbo_dbase("D0010_00_Cydonia")
-florabank <- connect_inbo_dbase("D0021_00_userFlora")
+florabank <- connect_inbo_dbase("D0152_00_Flora")
+taxonlijsten <- connect_inbo_dbase("D0156_00_Taxonlijsten")
 vis <- connect_inbo_dbase("W0001_10_Vis")
 ```
 5. If it worked, you are ready to start the challenges.
@@ -140,22 +141,24 @@ class: left, top
 
 # Challenge 1
 
-1. Find the R connection pane of RStudio and find all tables in dbo schema of Florabank database.
+1. Find the R connection pane of RStudio and find all tables under `dbo`* of Florabank database.
 
-2. Open a view of table `tblTaxon` of `florabank` (`D0021_00_userFlora`), table `ivRecording` of INBOVEG (`D0010_00_Cydonia`) and table `Taxonlijst` of taxonlijsten (`D0156_00_Taxonlijsten`). Tips: check [RStudio connection pane documentation](https://docs.posit.co/ide/user/ide/guide/data/data-connections.html#connections-pane); tables are under the (default) `dbo` _schema_.
+2. Open a view of table `Taxon` of `florabank` (`D0152_00_Flora`), table `ivRecording` of INBOVEG (`D0010_00_Cydonia`) and table `Taxonlijst` of taxonlijsten (`D0156_00_Taxonlijsten`). Tips: check [RStudio connection pane documentation](https://docs.posit.co/ide/user/ide/guide/data/data-connections.html#connections-pane); tables are under the (default) `dbo` _schema_.
 
 3. Still using the RStudio connection pane, find the type of the columns of (one of the) tables in 1, e.g. *char*acter, *int*eger.
 
 4. What type does `bit` stand for? Tip: check e.g. the values contained in column `??` of table `??` opened in 1
 
-5. How to get the fields names of table `tblTaxon` of `florabank` database in R directly? Tip: use `dBListFields()` function from the DBI package. Check examples in the [DBI homepage](https://dbi.r-dbi.org/#example).
+5. How to get the names of the fields of the tables in 2 directly in R? Tip: use `dBListFields()` function from the DBI package. Check examples in the [DBI homepage](https://dbi.r-dbi.org/#example).
+
+<small>* dbo is an acronym for database object(s) and it's the standard place in a database to place the data. More about it in Intermezzo 1.</small>
 
 ---
 class: left, top
 
 # Intermezzo 1 - database schemas
 
-The function `dbListFields()` worked well. So, why not trying the DBI function `dbListTables()` to get all the names of all the tables? Just try:
+The DBI function `dbListFields()` worked well. So, why not trying the DBI function `dbListTables()` to get the names of all the tables? Just try:
 
 ```
 dbListTables(florabank)
@@ -163,24 +166,38 @@ dbListTables(florabank)
 
 789 tables??? And all that strange names? Well, that's because the `florabank` database is a SQL Server database and the DBI function `dbListTables()` is not able to filter on the default schema `dbo`. So, you get all tables in all schemas and much, much more.
 
-But wait a minute: what's a *schema*? and why do we have multiple schemas in a database?
+---
+class: left, top
 
-A schema is a way to *logically group* database objects like tables within a database. It helps organize and manage the database structure, especially in larger databases with many objects. In SQL Server, the **default** schema is **`dbo`**, but other schemas can be created for different purposes or users (check e.g. the INBOVEG database `D0010_00_Cydonia`). And there are also *system schemas*, like *`sys`*, which contain system tables that are used by SQL Server for internal management and operations.
+# Intermezzo 1 - database schemas
+
+But wait a minute: did I say `schema`?!? what's a *schema*? And why do we have multiple schemas in a database?
+
+A schema is a way to **logically group** database objects like tables within a database. It helps organize and manage the database structure, especially in larger databases with many objects. In SQL Server, the **default** schema is **`dbo`**, but other schemas can be created for different purposes or users (check e.g. the INBOVEG database `D0010_00_Cydonia`). And there are also **system schemas**, like **`sys`**, which contain system tables that are used by SQL Server for internal management and operations.
 
 System schemas are NOT for user data, but for advanced database management and troubleshooting = never, I say, never touch them unless you are Frederic, Geert, Jo or some very few else from the data management team!*
 
-<small>* Typically and luckily we don't even have the rights to touch sys schema. But it's good to know what they are and why we should never touch them :-)</small>
+<small>* Typically and luckily we don't even have the rights to modify the sys schema. Still, it's good to know what it is and why we should never touch it :-)</small>
 
-Do you really want to get table names from dbo schema? Filter on the `dbo` schema using the following code, where we use the function `dbGetQuery()` to run a SQL query on the database connection `florabank`:
+---
+class: left, top
+
+# Intermezzo 1 - database schemas
+
+Do you really want to get table names from the dbo schema? Filter on `dbo` using the following code, where we use the function `dbGetQuery()` to run a SQL query on the database connection `florabank`. Notice we have rights to read from the system schema to get the table names and their corresponding schema names.
 
 ```r
 library(DBI)
-dbGetQuery(florabank, "
-  SELECT s.name AS schema_name, t.name AS table_name
-  FROM sys.tables t
-  JOIN sys.schemas s ON t.schema_id = s.schema_id
-  WHERE s.name = 'dbo'
-")
+dbGetQuery(
+  florabank,
+  "
+    SELECT s.name AS schema_name, t.name AS table_name
+    -- in sys there is a table, sys.tables, containing all tables information
+    FROM sys.tables t
+    JOIN sys.schemas s ON t.schema_id = s.schema_id
+    WHERE s.name = 'dbo'
+  "
+)
 ```
 
 ---
@@ -188,74 +205,118 @@ class: left, top
 
 # Intermezzo 1 - database views
 
-What else can you find in a schema? Well, besides tables, there are also *views*. A view is a *virtual table*, call it a *saved search* or a *saved recipe* that is based on the result of a SQL query.
+What else can you find in a schema? Well, besides tables, there are also **views**. A view is a kind of "**virtual table**"", a "**saved search*" or a "**saved recipe**" that is based on the result of a SQL query.
 
-It looks and acts like a table (you can query it, filter it, join it), but it doesn't store any data of its own.-! It's just a stored instruction: _"go fetch this specific slice/combination of the real tables, and show it to me as if it were one table."_
+It looks and acts like a table (you can query it, filter it, join it), but it doesn't store any data of its own. It's just a stored instruction: _"go fetch this specific slice/combination of the real tables, and show it to me as if it were one table."_
 
 How to recognize them?
 - In RStudio, you cannot open a view of a view 😄 No "table" symbol 𝄜 next to its name in connection pane
 - Their names typically start with `vw`. Example: the `inbo` schema of INBOVEG database `D0010_00_Cydonia` has no tables, only views.
 
-.center[![:scale 100%]({{ site.baseurl}}/assets/images/20260929/20260929_views.png)]
+.center[![:scale 30%]({{ site.baseurl}}/assets/images/20260929/20260929_views.png)]
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_2.png)
 class: left, top
 
-# Challenge 2 -
+# Challenge 2
 
+Use inbodb to:
 
+1. Get observations of invasive species _Impatiens glandulifera_ and _Hydrocotyle ranunculoides_ from florabank database.
+
+2. Get recordings collected during survey `ABS-LIM2011` in inboveg database.
+
+3. Get the most recent taxon lists with important species at provincial level. Tip: search for taxon lists containing the words `"provinciaal belangrijke soorten"`. See [taxon lists](https://inbo.github.io/inbodb/articles/get_data_taxonlijsten.html#taxonlists-overview) overview documentation for an example. Tip valid for the remaining exercises as well.
+
+4. Which features (kenmerken) are associated with this kind of taxon lists?
+
+5. Get the taxa from the latest version of the taxon list `Provinciaal belangrijke soorten - Limburg`.
+
+6. Get the habitat typical taxa from the latest version of the taxon list `Provinciaal belangrijke soorten - Limburg`.
 
 ---
 class: left, top
 
-# Intermezzo 1: R is lazy... so are we
+# Intermezzo 2 - R is lazy
 
-Let us get the locations from watina database using watina function `get_locs(watina)`. Why do you get an error if you try to save them in a text format (e.g. csv)?
+You have probably found already while working on challenge 2. What if you do not "collect" the data with `collect = TRUE`? Can you use `View()`? Yes, but you get something like this:
+
+```
+obs <- inbodb::get_florabank_observations(
+  florabank,
+  names = c("Impatiens glandulifera", "Hydrocotyle ranunculoides")
+)
+View(obs)
+```
+
+.center[![:scale 60%]({{ site.baseurl}}/assets/images/20260929/20260929_view_lazy.png)]
+
+---
+class: left, top
+
+# Intermezzo 2 - R is lazy
+
+And you cannot save it as csv file for example:
 
 ```r
-locations <- get_locs(watina)
-write_csv(x = locations, file = "./data/locations.csv")
+readr::write_csv(x = obs, file = "/data/20260929/obs.csv")
 
 > Error in write_delim(x, file, delim = ",", na = na, append = append, col_names = col_names,  :
   is.data.frame(x) is not TRUE
 ```
 
-Is locations not a data.frame???
+Is `obs` not a data.frame???
 
 ```r
-class(locations)
+class(obs)
 [1] "tbl_Microsoft SQL Server" "tbl_dbi"
 [3] "tbl_sql"                  "tbl_lazy"
 [5] "tbl"
 ```
 
-All you have is a table (`tbl`), but most of all, it's a _lazy table_... Welcome to the lazy woRld!
-
+All you have is a table (`tbl`), but most of all, it's a **lazy table**.
 
 ---
 class: left, top
 
-# Intermezzo 1: R is lazy... so are we
+# Intermezzo 2: R is lazy
 
-![:scale 100%]({{ site.baseurl}}/assets/images/20220125/20220125_lazy_query.png)
+.center[![:scale 60%]({{ site.baseurl}}/assets/images/20260929/20260929_print_lazy.png)]
 
-`locations` is an SQL query, no data are really loaded on your laptop.
-It is like a reference to the result of the query but the full result of the query is not brought into memory.
+`obs` is an SQL query, no data are really loaded on your laptop.
+It is like a **reference** to the result of the query but the full result of the query is not brought into memory.
 
-If you are thinking: _"are you kidding me?"_ Well, try this:
+Try also running `obs %>% show_query()`, which shows the SQL query running behind the scenes.
 
+---
+class: left, top
+
+# Intermezzo 2: R is lazy
+
+To avoid bad surprises (crashes, out of memory issues, ...), it's good practice to first run your queries lazily. You can fetch the output in two ways:
+- rerun the inbodb function with `collect = TRUE`
+- use the `collect()` dplyr function. This will bring the data into memory as a data frame.
 
 ```r
-locations %>% show_query()
+obs %>% collect()
+# A tibble: 6,937 × 15
+   NaamNederlands   NaamWetenschappelijk           AcceptedNaamWetensch…¹
+   <chr>            <chr>                          <chr>
+ 1 Reuzenbalsemien  Impatiens glandulifera Royle   Impatiens glandulifer…
+ 2 Reuzenbalsemien  Impatiens glandulifera Royle   Impatiens glandulifer…
+ 3 Reuzenbalsemien  Impatiens glandulifera Royle   Impatiens glandulifer…
+ 4 Reuzenbalsemien  Impatiens glandulifera Royle   Impatiens glandulifer…
+ 5 Reuzenbalsemien  Impatiens glandulifera Royle   Impatiens glandulifer…
+...
+# ℹ 6,927 more rows
+# ℹ abbreviated name: ¹​AcceptedNaamWetenschappelijk
+# ℹ 10 more variables: ...
 ```
-
-IMPORTANT: to avoid bad surprises (crashes, out of memory issues), first run your queries lazily.
-
 ---
 class: left, top
 
-# Intermezzo 2 - R is lazy...
+# Intermezzo 2 - R is lazy
 
 <best-practices-for-working-with-databases-march-2018-edgar-ruiz>![:scale 10%]({{ site.baseurl}}/assets/images/20220125/20220125_mister_lazy.jpg)</center>
 
@@ -271,8 +332,10 @@ multiply_by_2(number) # no value given to argument b
 
 `b` is a function argument, but never evaluated, so no error. This is what we mean by being **lazy**: doing **the strict minimum** of evaluation*. For this reason lazy evaluation is sometimes referred as _call-by-need_.
 
+**IMPORTANT**: lazy evaluation is a very powerful feature of R, but it can also lead to unexpected behavior if not understood properly. In other words, the code above is bad practice: always make sure that all arguments are used in the function body, or provide default values for unused arguments.
+
 <small>
-*More about lazy evaluation? Give a look at [this tutorial](https://www.r-bloggers.com/2018/07/about-lazy-evaluation/)... or spend a coffeebreak with Thierry ;-)
+* More about lazy evaluation? Give a look at [this tutorial](https://www.r-bloggers.com/2018/07/about-lazy-evaluation/)... or spend a coffeebreak with Thierry ;-)
 </small>
 
 ---
@@ -300,6 +363,8 @@ class: left, top
 
 # Bonus challenge
 
+Let's contribute to inbodb! Contact Hans and Els with your SQL templates or R functions. Provide the query, some context and what are the expected inputs and output.
+
 
 ---
 class: left, top
@@ -322,15 +387,11 @@ class: left, top
 
 # Resources
 
-- Comprehensive [solutions](https://github.com/inbo/coding-club/blob/main/src/20260929/20260929_challenges_solutions.R) are available on GitHub. You can opt to download the solutions automatically by using `inborutils::setup_codingclub_session("20260929")`.
-- No webinar available this time, sorry! For some reasons, I didn't get any video recording in my mailbox 😭
-- The Data Carpentry course [Data Management with SQL for Ecologists](https://datacarpentry.github.io/sql-ecology-lesson/aio.html).
-- The [DBI](https://dbi.r-dbi.org/) R package documentation website
-- The [SQLIte](https://www.sqlite.org/index.html) database homepage
-- The [RSQLite](https://rsqlite.r-dbi.org/) R package documentation website
-- The [dbplyr](https://dbplyr.tidyverse.org/) R package documentation website
-- The [DuckDB](https://duckdb.org/) database homepage and the [duckdb](https://duckdb.org/docs/api/r) R package documentation website
+- Comprehensive solutions and video recordings will be available soon.
 - The [inbodb](https://inbo.github.io/inbodb/index.html) R package documentation website to connect and work with INBO databases in R.
+- The [DBI](https://dbi.r-dbi.org/) R package documentation website
+- [INBO tutorial](https://tutorials.inbo.be/tutorials/r_database_access/) about database access and how to create and use query templates and more.
+- The [dbplyr](https://dbplyr.tidyverse.org/) R package documentation website
 
 ---
 class: center, middle
@@ -339,6 +400,6 @@ class: center, middle
 
 <!--  Adjust the room number and name  -->
 Topic: to be decided <br>
-Room:  HT - 00.48 - Keldermans  <br>
-Date: **29/09/2026** (Tuesday), van **10:00** tot **12:30
+Room:  HT - 01.19 - Paul Van Ostaijen  <br>
+Date: **29/10/2026** (Tuesday), van **10:00** tot **12:30
 Help needed with technical setup? You are welcome from 9:45am
