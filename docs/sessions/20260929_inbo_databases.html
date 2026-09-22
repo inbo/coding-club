@@ -60,7 +60,7 @@ class: left, top
 
 ## Introduction
 
-We will explore the functionalities provided by the "made in INBO" package [inbodb](https://inbo.github.io/inbodb/index.html) and then we will play with SQL and tidyverse.
+We will explore the built-in functionalities provided by the "made in INBO" package [inbodb](https://inbo.github.io/inbodb/index.html) and then we will play with SQL and tidyverse.
 
 
 .center[![:scale 80%]({{ site.baseurl}}/assets/images/20260929/20260929_inbodb.png)]
@@ -71,7 +71,7 @@ class: left, top
 ## `inbodb` package
 
 1. Connect to any INBO database
-2. Run specific queries for two INBO databases:
+2. Run specific queries for four INBO databases:
   - [Florabank](https://www.vlaanderen.be/inbo/datasets/florabank/): see [functions](https://inbo.github.io/inbodb/reference/index.html#functions-to-query-florabank)
   - [INBOVEG](https://www.vlaanderen.be/inbo/datasets/inboveg/): see article ["How to retrieve data from the INBOVEG database"](https://inbo.github.io/inbodb/articles/get_data_inboveg.html) and [functions](https://inbo.github.io/inbodb/reference/index.html#functions-to-query-inboveg)
   - [meetnetten.be](https://www.vlaanderen.be/inbo/datasets/meetnettenbe/): see article [How to retrieve data from the Meetnetten database](https://inbo.github.io/inbodb/articles/get_data_meetnetten.html) and [functions](https://inbo.github.io/inbodb/reference/index.html#functions-to-query-the-meetnetten-database)
@@ -86,12 +86,14 @@ class: left, Topic
 
 ## inbodb vs DBI
 
-In the last coding club (Aug 27) we spoke about "SQL in R" and we used the [DBI](https://dbi.r-dbi.org/) package to connect to a database and run SQL queries. The `inbodb` package is built on top of DBI and provides a more user-friendly interface to access INBO databases. So, what you could have learned in the last coding club, is still useful. But, no worries if you missed it, we will provide you some material to get started where needed.
+In the [last coding club](https://coding-club.inbo.be/sessions/20260827_sql_in_r.html#1) (Aug 27) we spoke about "SQL in R" and we used the [DBI](https://dbi.r-dbi.org/) package to connect to a database and run SQL queries. The `inbodb` package is built on top of DBI and provides a more user-friendly interface to access INBO databases. So, what you could have learned in the last coding club, is still useful. But, no worries if you missed it, we will provide you some material to get started where needed.
+
+.center[![:scale 80%]({{ site.baseurl}}/assets/images/20260929/20260929_dbi.png)]
 
 ---
 class: left, top
 
-No cheatsheets today, but we have several material to start with:
+No cheatsheets today, but we have several sources to start with:
 - a well-written [INBO tutorial](https://inbo.github.io/tutorials/tutorials/r_database_access/) is available about access to INBO databases
 - the [inbodb package website](https://inbo.github.io/inbodb/index.html), with its articles and function documentation, does the rest
 
@@ -136,16 +138,16 @@ No data files to download today: we will get the data from the databases :-)
 R scripts:
 - [20260929_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20260929/20260929_challenges.R): R script to start from
 
-Download it automatically via `inborutils::setup_codingclub_session()` or manually from the link provided nad place it in `src/20260929`.
+Download it automatically via `inborutils::setup_codingclub_session()` or manually and place it in `src/20260929`.
 
 ---
 class: left, top
 
 ## Challenge 0
 
-1. People following remotely not connectected to the VO network: log in to the INBO VPN. Instructions available on the specific [IT INBO tutorial](https://ict-intranet.inbo.be/tutorials/vpn/index.html).
+1. People out of the VO network: log in to the INBO VPN. Instructions available on the specific [IT INBO tutorial](https://ict-intranet.inbo.be/tutorials/vpn/index.html).
 2. If not done, install `inbodb` via `pak::pak("inbo/inbodb")` or `remotes::install_github("inbo/inbodb")`.
-3. Load `inbodb` by running `library(inbodb)`. Load also `dplyr`, `DBI` and `glue` packages with `library()` as well. Code provided in `20260929_challenges.R` script.
+3. Load `inbodb` by running `library(inbodb)`. Load also `dplyr`, `DBI` and `glue` packages with `library()` as well. Code already provided in `20260929_challenges.R` script.
 4. Open connections to some databases to test (be patient, it could take a while):
 ```
 inboveg <- connect_inbo_dbase("D0010_00_Cydonia")
@@ -153,7 +155,7 @@ florabank <- connect_inbo_dbase("D0152_00_Flora")
 taxonlijsten <- connect_inbo_dbase("D0156_00_Taxonlijsten")
 vis <- connect_inbo_dbase("W0001_10_Vis")
 ```
-5. If it worked, you are ready to start the challenges.
+5. If it worked, you are ready to fly into the challenges 🚀
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_1.png)
@@ -163,11 +165,11 @@ class: left, top
 
 1. Find the R connection pane of RStudio and find all tables under `dbo`* of Florabank database.
 
-2. Open a view of table `Taxon` of `florabank` (`D0152_00_Flora`), table `ivRecording` of INBOVEG (`D0010_00_Cydonia`) and table `Taxonlijst` of taxonlijsten (`D0156_00_Taxonlijsten`). Tips: check [RStudio connection pane documentation](https://docs.posit.co/ide/user/ide/guide/data/data-connections.html#connections-pane); tables are under the (default) `dbo` _schema_.
+2. Open a view of table `Taxon` of `florabank` (`D0152_00_Flora`), table `ivRecording` of INBOVEG (`D0010_00_Cydonia`) and table `TaxonlijstItem` of taxonlijsten (`D0156_00_Taxonlijsten`). Tips: check [RStudio connection pane documentation](https://docs.posit.co/ide/user/ide/guide/data/data-connections.html#connections-pane); tables are under the (default) `dbo` _schema_.
 
 3. Still using the RStudio connection pane, find the type of the columns of (one of the) tables in 1, e.g. *char*acter, *int*eger.
 
-4. What type does `bit` stand for? Tip: check e.g. the values contained in column `??` of table `??` opened in 1
+4. What type does `bit` stand for? Tip: check e.g. the values contained in columns `Addendum` and `Inactief` of table `TaxonlijstItem` of taxonlijsten database opened in 2.
 
 5. How to get the names of the fields of the tables in 2 directly in R? Tip: use `dBListFields()` function from the DBI package. Check examples in the [DBI homepage](https://dbi.r-dbi.org/#example).
 
@@ -184,14 +186,17 @@ The DBI function `dbListFields()` worked well. So, why not trying the DBI functi
 dbListTables(florabank)
 ```
 
-789 tables??? And all that strange names? Well, that's because the `florabank` database is a SQL Server database and the DBI function `dbListTables()` is not able to filter on the default schema `dbo`. So, you get all tables in all schemas and much, much more.
+
+What?!? 789 tables, and all that strange names?!? 😐
+
+Well, that's because the `florabank` database is a SQL Server database and the DBI function `dbListTables()` is not able to filter on the default schema `dbo`. So, you get all tables in all schemas and much, much more.
 
 ---
 class: left, top
 
 # Intermezzo 1 - database schemas
 
-But wait a minute: did I say `schema`?!? what's a *schema*? And why do we have multiple schemas in a database?
+But wait a minute: what is a **schema**? And why do we have multiple schemas in a database?
 
 A schema is a way to **logically group** database objects like tables within a database. It helps organize and manage the database structure, especially in larger databases with many objects. In SQL Server, the **default** schema is **`dbo`**, but other schemas can be created for different purposes or users (check e.g. the INBOVEG database `D0010_00_Cydonia`). And there are also **system schemas**, like **`sys`**, which contain system tables that are used by SQL Server for internal management and operations.
 
@@ -230,7 +235,7 @@ What else can you find in a schema? Well, besides tables, there are also **views
 It looks and acts like a table (you can query it, filter it, join it), but it doesn't store any data of its own. It's just a stored instruction: _"go fetch this specific slice/combination of the real tables, and show it to me as if it were one table."_
 
 How to recognize them?
-- In RStudio, you cannot open a view of a "view" 😄 No "table" symbol 𝄜 next to its name in connection pane
+- In RStudio, you cannot open a view of a "view" 😄 There is no "table" symbol 𝄜 next to its name in the connection pane
 - Their names typically start with `vw`. Example: the `inbo` schema of INBOVEG database `D0010_00_Cydonia` has no tables, only views. Try it yourself using the connection pane.
 
 .center[![:scale 30%]({{ site.baseurl}}/assets/images/20260929/20260929_views.png)]
@@ -247,11 +252,11 @@ Use inbodb functions to:
 
 2. Get recordings collected during survey `ABS-LIM2011` in INBOVEG database.
 
-3. Get the most recent taxon lists with important species at provincial level. Tip: search for taxon lists containing the words `"provinciaal belangrijke soorten"`. See [taxon lists](https://inbo.github.io/inbodb/articles/get_data_taxonlijsten.html#taxonlists-overview) overview documentation for an example. Tip valid for the remaining exercises as well.
+3. Get the most recent taxon lists with important species at provincial level. Tip: search for taxon lists containing the words `"provinciaal belangrijke soorten"`. See [taxon lists](https://inbo.github.io/inbodb/articles/get_data_taxonlijsten.html#taxonlists-overview) overview documentation for an example. Link is a valid tip for the remaining exercises as well.
 
-4. Which features (kenmerken) are associated with this kind of taxon lists?
+4. Which **features** (kenmerken) are associated with this kind of taxon lists?
 
-5. Get the taxa from the latest version of the taxon list `Provinciaal belangrijke soorten - Limburg`.
+5. Get the **items**, i.e. taxa,  from the latest version of the taxon list `Provinciaal belangrijke soorten - Limburg`.
 
 6. Get the habitat typical taxa from the latest version of the taxon list `Provinciaal belangrijke soorten - Limburg`.
 
@@ -270,7 +275,7 @@ obs <- inbodb::get_florabank_observations(
 View(obs)
 ```
 
-.center[![:scale 60%]({{ site.baseurl}}/assets/images/20260929/20260929_view_lazy.png)]
+.center[![:scale 80%]({{ site.baseurl}}/assets/images/20260929/20260929_view_lazy.png)]
 
 ---
 class: left, top
@@ -295,14 +300,14 @@ class(obs)
 [5] "tbl"
 ```
 
-All you have is a table (`tbl`), but most of all, it's a **lazy table**.
+All you have is a table (`tbl`), but most of all, it's a **LAZY** table (`tbl_lazy`).
 
 ---
 class: left, top
 
 # Intermezzo 2: R is lazy
 
-.center[![:scale 60%]({{ site.baseurl}}/assets/images/20260929/20260929_print_lazy.png)]
+.center[![:scale 100%]({{ site.baseurl}}/assets/images/20260929/20260929_print_lazy.png)]
 
 `obs` is an SQL query, no data are really loaded on your laptop.
 It is like a **reference** to the result of the query but the full result of the query is not brought into memory.
@@ -354,8 +359,7 @@ multiply_by_2(number) # no value given to argument b
 
 **IMPORTANT**: lazy evaluation is a very powerful feature of R. Great power, great responsability. In other words, always be sure that all arguments are used in the function body, unless you have a very good reasons to not do it.
 
-<small>
-* More about lazy evaluation? Give a look at [this tutorial](https://www.r-bloggers.com/2018/07/about-lazy-evaluation/)... or spend a coffeebreak with Thierry ;-)
+<small> * More about lazy evaluation? Give a look at [this tutorial](https://www.r-bloggers.com/2018/07/about-lazy-evaluation/)... or spend a coffeebreak with Thierry ;-)
 </small>
 
 ---
@@ -366,7 +370,7 @@ class: left, top
 
 Not everything is already wrapped in a function. So, how to get your data?
 
-Do you know SQL? Excellent! Otherwise, just use dplyr syntax, which is translated into SQL behind the scenes using dbplyr, the database backend of dplyr. Just pay attention to use `tbl()` to connect to the table you are interested to and it will be used as it would be a data frame.
+Do you know SQL? Excellent! Otherwise, just use dplyr syntax, which is translated into SQL behind the scenes using [dbplyr](https://dbplyr.tidyverse.org/), the database backend of dplyr. Just pay attention to use `tbl()` to connect to the table you are interested to and it will be interpreted as it would be a data frame.
 
 Example adapted from the "Use inbodb" section of the [inbodb homepage](https://inbo.github.io/inbodb/index.html):
 
@@ -394,9 +398,12 @@ Feel free to use dplyr syntax or SQL syntax or experiment both!
 1. Get the first 10 rows of table `Taxon` of `florabank`. Warning: if you use SQL, notice that SQL Server databases do NOT support `LIMIT` clause.
 2. Get the scientific name (`NaamWetenschappelijk`) of Dutch name (`NaamNederlands`) `Slank snavelmos`.
 3. Make the query above reusable by creating a *template* so that you can provide any kind of Dutch name and get its scientific name back. Tip: the section ["Create and use query templates"](https://tutorials.inbo.be/tutorials/r_database_access/#create-and-use-query-templates) from the INBO tutorial "Read data from INBO databases (SQL Server) with R" is very helpful.
-4. Make a template out of the provided query in `20260929_challenges.R`. The function should allow the users to select any kind of fish species.
-5. Similar to 4. Make a template ouf of the provided query in `20260929_challenges.R`. Variables: fish species (field `dt.NaamNL`), year(s) (field `dd.Jaar`), project(s) (field `dp.ProjectCode`), watercourse(s) (field `dv.VHAVispuntNaam`), basin(s) (field `dv.VHAVispuntBekkenNaam`) and observations status code (field `WaarnemingStatusCode`).
+4. Make a template out of the provided query in `20260929_challenges.R`. The function should allow the users to select any kind of fish species.*
+5. Similar to 4: make a template ouf of the provided query in `20260929_challenges.R`. Variables: fish species (field `dt.NaamNL`), year(s) (field `dd.Jaar`), project(s) (field `dp.ProjectCode`), watercourse(s) (field `dv.VHAVispuntNaam`), basin(s) (field `dv.VHAVispuntBekkenNaam`) and observations status code (field `WaarnemingStatusCode`).
 6. Do not forget to disconnect to the databases when you are done with your queries.
+
+<small>* Understanding the complex query is actually out of scope! Just find out how to change it to make a template out of it.
+</small>
 
 ---
 class: left, top
@@ -405,7 +412,7 @@ class: left, top
 
 We have just learned that R is lazy. We shouldn't be such as lazy! Please, [contribute](https://inbo.github.io/inbodb/CONTRIBUTING.html) to inbodb: future-you will thank you. Together we make of inbodb a more and more useful package.
 
-Contact Hans Vancalster and Els Lommelen (via GitHub issues or email) and provide them your SQL queries, some context and what are the expected inputs and output. Have you already an R function with the query template? Great! Send that too.
+Contact Hans Vancalster and Els Lommelen (via GitHub issues or email) and provide them your SQL queries, some context and what are the expected inputs and outputs. Have you already an R function with the query template? Great! Send that too.
 
 .center[![:scale 100%]({{ site.baseurl}}/assets/images/20260929/contributing_inbodb.png)]
 
@@ -432,9 +439,17 @@ class: left, top
 
 - Comprehensive solutions and video recordings will be available soon.
 - The [inbodb](https://inbo.github.io/inbodb/index.html) R package documentation website to connect and work with INBO databases in R.
-- The [DBI](https://dbi.r-dbi.org/) R package documentation website
+- The [RStudio connection pane](https://docs.posit.co/ide/user/ide/guide/data/data-connections.html#connections-pane) documentation
+- The [DBI](https://dbi.r-dbi.org/) R package documentation website.
 - [INBO tutorial](https://tutorials.inbo.be/tutorials/r_database_access/) about database access and how to create and use query templates and more.
-- The [dbplyr](https://dbplyr.tidyverse.org/) R package documentation website
+- The [dbplyr](https://dbplyr.tidyverse.org/) R package documentation website.
+- The [watina](https://inbo.github.io/watina/index.html) R package documentation website.
+- A [blogpost](https://www.r-bloggers.com/2018/07/about-lazy-evaluation/) about lazy evaluation in R.
+- The [hackMD](https://hackmd.io/tOalKnyaTfSgAMdYKFXJww?view) of this session.
+- The tutorial to [connect to INBO network](https://ict-intranet.inbo.be/tutorials/vpn/index.html)*
+
+<small>* Only available for INBO people
+</small>
 
 ---
 class: center, middle
@@ -443,6 +458,6 @@ class: center, middle
 
 <!--  Adjust the room number and name  -->
 Topic: to be decided <br>
-Room:  HT - 01.19 - Paul Van Ostaijen  <br>
-Date: **29/10/2026** (Tuesday), van **10:00** tot **12:30
-Help needed with technical setup? You are welcome from 9:45am
+Room:  HT - 01.19 - Paul Van Ostaijen <br>
+Date: **29/10/2026** (Tuesday), van **10:00** tot **12:30** <br>
+Help needed with the technical setup? You are welcome from 9:45am
