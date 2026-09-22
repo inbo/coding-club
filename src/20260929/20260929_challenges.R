@@ -17,6 +17,7 @@ vis <- connect_inbo_dbase("W0001_10_Vis")
 # No R coding needed
 
 
+
 ## 1.4 ####
 
 
@@ -115,7 +116,7 @@ obs_kortsnuitzeepaardje <- dbGetQuery(vis, obs_kortsnuitzeepaardje_query)
 
 
 ## 3.5 ####
-obs_zeebaars_filtered <-
+obs_zeebaars_filtered_query <-
   "
   SELECT
       dw.WaarnemingID
