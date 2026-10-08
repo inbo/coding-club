@@ -1,10 +1,13 @@
 ## CHALLENGE 0 ####
 
-# pak::pak("inbo/inbodb")
+# Install the newest version available
+install.packages("inbodb")
+
 library(inbodb)
 library(DBI)
 library(dplyr)
 library(glue)
+
 inboveg <- connect_inbo_dbase("D0010_00_Cydonia")
 florabank <- connect_inbo_dbase("D0152_00_Flora")
 taxonlijsten <- connect_inbo_dbase("D0156_00_Taxonlijsten")
@@ -12,11 +15,11 @@ vis <- connect_inbo_dbase("W0001_10_Vis")
 
 # CHALLENGE 1 ####
 
-## 1.1 - 1.3 ####
+## 1.1 - 1.4 ####
 
 # No R coding needed
 
-## 1.4 ####
+## 1.5 ####
 DBI::dbListFields(florabank, "Taxon")
 DBI::dbListFields(inboveg, "ivRecording")
 DBI::dbListFields(taxonlijsten, "Taxonlijst")
@@ -30,6 +33,12 @@ obs <- inbodb::get_florabank_observations(
   collect = TRUE
 )
 obs
+
+imp <- get_florabank_observations(
+  florabank,
+  c('Impatiens glandulifera', 'Hydrocotyle ranunculoides'),
+  fixed = FALSE, #fixed = FALSE zorgt ervoor dat de benaming niet 100% hetzelfde moet zijn als hier opgegeven
+  collect = TRUE)
 
 ## 2.2 ####
 ABS_LIM2011_recs <- get_inboveg_recording(
@@ -79,6 +88,12 @@ habitat_limburg_taxa <- inbodb::get_taxonlijsten_items(
 )
 habitat_limburg_taxa
 
+limburg_items <- get_taxonlijsten_items(
+  taxonlijsten,
+  list =  "%provinciaal%belangrijke%limburg%",
+  collect = TRUE) %>%
+  filter(Kenmerkwaarde == "Habitattypische soort")
+
 
 # INTERMEZZO 2 ####
 
@@ -87,6 +102,14 @@ obs <- inbodb::get_florabank_observations(
   names = c("Impatiens glandulifera", "Hydrocotyle ranunculoides")
 )
 obs %>% collect()
+
+readr::write_csv(x = obs, file = "/data/20260929/obs.csv")
+
+class(obs)
+
+obs
+
+obs %>% show_query()
 
 # INTERMEZZO 3 ####
 
@@ -141,15 +164,15 @@ tbl(
 ## 3.2 ####
 
 # The SQL-based solution
-rotsvorkje_query <- "
+snavelmos_query <- "
   SELECT NaamWetenschappelijk
   FROM Taxon
-  WHERE NaamNederlands = 'Rotsvorkje'
+  WHERE NaamNederlands = 'Slank snavelmos'
 "
 
 dbGetQuery(
   florabank,
-  rotsvorkje_query
+  snavelmos_query
 )
 
 # The dplyr-based solution
@@ -158,8 +181,13 @@ tbl(florabank, "Taxon") %>%
   select(NaamWetenschappelijk) %>%
   collect()
 
+tbl(florabank, "Taxon") %>%
+  filter(NaamNederlands == 'Slank snavelmos') %>%
+  select(NaamWetenschappelijk) %>%
+  collect()
+
 # Alternative using a mix between the two types of syntax
-tbl(florabank, dplyr::sql(rotsvorkje_query)) %>%
+tbl(florabank, dplyr::sql(snavelmos_query)) %>%
   collect()
 
 ## 3.3 ####
@@ -177,6 +205,13 @@ get_sc_names <- function(dbase_connection, dutch_name) {
   )
 }
 get_sc_names(florabank, "Rotsvorkje")
+
+flora_function <- function(florabank, dutch_name) {
+  tbl(florabank, "Taxon") |>
+    filter(NaamNederlands ==  dutch_name)|>
+    select("NaamWetenschappelijk")
+}
+flora_function(florabank, "Slank snavelmos")
 
 ## 3.4 ####
 obs_kortsnuitzeepaardje_query <- "
@@ -389,3 +424,4 @@ waldo::compare(
 dbDisconnect(inboveg)
 dbDisconnect(florabank)
 dbDisconnect(taxonlijsten)
+dbDisconnect(vis)
