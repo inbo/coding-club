@@ -263,9 +263,9 @@ class: left, top
 1. In challenge 0 we specified (a little blindly) some arguments, e.g. `DISSOLVE = TRUE`. What does this argument do? What happens if you set `DISSOLVE = FALSE`? How can you get a description of the chosen algorithm? How can you retrieve information about all the arguments allowed by the algorithm? Or about the generated output? Hint: use the cheat sheet!
 2. Calculate the ‘shortest’ path (lines) between the `hab_springs` points and the nearest watersurface `water`.
 3. Calculate the ‘shortest’ paths (lines) between the polygons `water` and the `hab_springs` points.
-4. We are all pipe (`%>%`)* lovers, aren't we? Can you use `qgis_run_algorithm()` in a pipe? No. How to combine qgisprocess and pipes? Hint: check the cheat sheet.
+4. We are all pipe (`%>%` or `|>`)* lovers, aren't we? Can you use `qgis_run_algorithm()` in a pipe? No. How to combine qgisprocess and pipes? Hint: check the cheat sheet.
 
-<small> \* Maybe you have already seen the new R pipe: `|>`. This pipe is available with R 4.0 or higher. </small>
+<small> \* The new R pipe, `|>`, is available with R 4.0 or higher and is embedded in R itself, no need to load any package. </small>
 
 ---
 class: left, top
@@ -277,8 +277,7 @@ The sf package is widely used in geospatial R community. We use it often, see e.
 When should I use qgisprocess instead of native sf/terra functions?
 
 - Not all QGIS algorithms have a sf/terra counterpart
-- Work with big spatial files
-- QGIS algorithms are typically faster
+- Work with big spatial files: QGIS algorithms are typically faster
 - You are a QGIS pro and don't want to/have time to learn sf/terra or other packages
 
 ---
@@ -393,7 +392,7 @@ class: left, top
 
 # Holidays!
 
-It was a great 2024 with many new people and interesting discussions. Thanks to all of you to make the INBO coding club a lively, welcoming place where we can experiment together, share code and learn from each other.
+It was a great 2023 with many new people and interesting discussions. Thanks to all of you to make the INBO coding club a lively, welcoming place where we can experiment together, share code and learn from each other.
 
 Enjoy the Christmas holidays and see you in 2024!
 
