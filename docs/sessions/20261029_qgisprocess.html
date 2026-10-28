@@ -35,15 +35,16 @@ class: left, top
 2. Did we start the recording?
 
 ---
-class: center, middle
+class: left, top
 
 # Do you know that?
 
-![:scale 90%]({{ site.baseurl}}/assets/images/20261029/20261029_tutorial_r _lidr.png)
-
-Thanks to Sebastiaan for the new INBO tutorial ["Exploring the potential of aerial LiDAR: introduction to lidR"](https://tutorials.inbo.be/tutorials/r_lidr/)!
+Thanks to Sebastiaan for the new INBO tutorial: ["Exploring the potential of aerial LiDAR: introduction to lidR"](https://tutorials.inbo.be/tutorials/r_lidr/)!
 
 And by extension, a huge thanks 🙏 to all contributors of our [INBO tutorial](https://tutorials.inbo.be/) website.
+
+.center[![:scale 70%]({{ site.baseurl}}/assets/images/20261029/20261029_tutorial_r _lidr.png)]
+
 
 ---
 class: center, middle
@@ -90,9 +91,11 @@ class: left, top
 
 - QGIS allows to create, edit, visualise, analyse and publish geospatial information.
 
-- The most recent version at the moment of writing (2026-10-26) is 4.2.3 'Belém do Pará'. It was released on 2026-09-25. The long term release (LTR) version* is 3.44.
+- The most recent version at the moment of writing (2026-10-26) is 4.2.3 'Belém do Pará'. It was released on 2026-09-25. The most recent long term version* is 3.44 (that's what I have installed on my laptop).
 
-<small> \* THe LTR is </small>
+<small> \* The long term version is a **stable** release, maintained for a longer period of time than the standard edition. The term is typically reserved for open-source software, where it describes a software edition that is supported for months or years longer than the software's standard edition. Source: Wikipedia contributors. (2026, August 10). Long-term support. In Wikipedia, The Free Encyclopedia. Retrieved 14:09, October 28, 2026, from https://en.wikipedia.org/w/index.php?title=Long-term_support&oldid=1368613073
+</small>
+
 ---
 class: left, top
 
@@ -139,7 +142,7 @@ class: left, top
 
 <small> \* Westra, T., Vanderhaeghe, F., & Herr, C. (2021). Map of standing water habitat types and regionally important biotopes in Flanders (watersurfaces_hab_v4) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.4915849.</small>
 <br>
-<small> \*\* Derived from "Oosterlynck, P. (2020). Distribution of the Natura 2000 habitat type 7220 (Cratoneurion) in Flanders and Brussels Capital Region, Belgium (version 2020) (habitatsprings_2020v2) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.3784149".</small>
+<small> \*\* Derived from "Oosterlynck, P. (2020). Distribution of the Natura 2000 habitat type 7220 (Cratoneurion) in Flanders and Brussels Capital Region, Belgium (version 2020) (habitatsprings_2020v2) [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.3784149".</small>
 <br>
 <small> \*\*\* Source: GBIF.org (26 October 2026) GBIF Occurrence Download https://doi.org/10.15468/dl.t2z7c6
 </small>
@@ -153,11 +156,7 @@ class: left, top
 
 - `prot_areas`: [20261029_natura2000_protected_areas.gpkg](https://github.com/inbo/coding-club/blob/main/data/20261029/20261029_natura2000_protected_areas.gpkg). A geopackage with NATURA2000 protected areas
 
-- `temperature`: [20261029_tdiff_tmax_tmin_january.tif](https://github.com/inbo/coding-club/blob/main/data/20261029/20261029_tdiff_tmax_tmin_january.tif). A raster with January average maximum and minimum temperature at 10 minutes precision*
-
 - [20261029_challenges.R](https://github.com/inbo/coding-club/blob/master/src/20261029/20261029_challenges.R): a R script to start with.
-
-<small> \* Source: [WorldClim](https://worldclim.org/data/worldclim21.html) historical data.</small>
 
 ---
 class: left, top
@@ -236,6 +235,10 @@ result
 
 output_sf <- sf::st_as_sf(result)
 plot(sf::st_geometry(output_sf))
+
+# Use mapview if you want to visualize spatial data on a map
+library(mapview)
+mapview(output_sf) + mapview(input)
 ```
 
 ---
@@ -258,7 +261,7 @@ class: left, top
 
 # INTERMEZZO 1 - qgisprocess vs sf/terra
 
-The sf package is widely used in geospatial R community. We use it often, see e.g. the INBO coding club ["Spatial data in R"](https://inbo.github.io/coding-club/sessions/20230627_spatial_data_in_r.html#1), 2023-06-27. The same goes for the terra package, the mainstream package to work with rasters. See e.g. the INBO coding club ["rasters in R"](https://inbo.github.io/coding-club/sessions/20221124_coding_club_rasters.html#1), 2022-11-24.
+The [sf](https://r-spatial.github.io/sf/) package is widely used in geospatial R community. We use it often, see e.g. the INBO coding club ["Spatial data in R"](https://inbo.github.io/coding-club/sessions/20260126_spatial_data_in_r.html#1), 2026-01-26. The same goes for the [terra](https://rspatial.github.io/terra/index.html) package, the mainstream package to work with rasters. See e.g. the INBO coding club ["rasters in R"](https://inbo.github.io/coding-club/sessions/20260528_rasters_in_r.html#1), 2026-05-28.
 
 When should I use qgisprocess instead of native sf/terra functions?
 
@@ -298,35 +301,104 @@ class: left, top
 
 # Challenge 2
 
-1. **Count** the number of occurrences of floating pennyworth (`hydrocotyle_ranunculoides`) in each of the water polygons. Hint: use `qgis_search_algorithms` to find the right algorithm to use.
+Use `qgis_search_algorithms()` to find the right algorithm to use.
 
-2. Create a buffer around hab_springs points with a dynamic radius expressed as the square root of `area_m2` divided by `3.14` (constant pi seems not interpreted by QGIS). Hint: check this [example](https://r-spatial.github.io/qgisprocess/articles/qgis_expressions.html#example-applying-a-data-defined-override) in the article "How to use QGIS expressions in qgisprocess?".
+1. **Count** the number of occurrences of floating pennyworth (`hydrocotyle_ranunculoides`) in each of the water polygons.
 
-3.
+2. Create a buffer around `hab_springs` points with a dynamic radius expressed as the square root of `area_m2` divided by `3.14` (constant pi seems not interpreted by QGIS). Hint: check this [example](https://r-spatial.github.io/qgisprocess/articles/qgis_expressions.html#example-applying-a-data-defined-override) in the article "How to use QGIS expressions in qgisprocess?".
+
+3. Typically, before making any spatial analysis, a check of **validity**\* is performed. Please, confirm that `water` and `prot_areas` are valid vector spatial data. Which algorithm do you use? Which output do you need to check?
+
+4. The spatial vector dataset `invalid` contains some invalid polygons. **Fix** it using qgisprocess.
+
+<small>* There are several reasons why a set of "geometries" are invalid. Check the blogpost ["Invalid OGC Geometry Examples"](https://support.safe.com/hc/en-us/articles/25407709561741-Invalid-OGC-Geometry-Examples) for some examples.</small>
+
+---
+class: left, top
+
+# INTERMEZZO 2 - the qgis package
+
+Using functions with explicit arguments is really user friendly. You will then probably love the [qgis](https://jancaha.github.io/r_package_qgis/index.html) package. It aims to provide calls and simple documentation for each QGIS function available in the QGIS core and the most important algorithm providers like GRASS GIS and SAGA. It requires the qgisprocess package.
+
+An example. Instead of:
+
+```r
+input <- sf::read_sf(system.file("shape/nc.shp", package = "sf"))
+input %>%
+  qgisprocess::qgis_run_algorithm_p(
+    algorithm = "native:buffer",
+    DISTANCE = 0.2,
+    DISSOLVE = TRUE,
+    END_CAP_STYLE = "Flat") %>%
+  sf::st_as_sf() %>%
+  plot()
+```
+
+```r
+input %>%
+  qgis::qgis_buffer(
+    DISTANCE = 0.2,
+    DISSOLVE = TRUE,
+    END_CAP_STYLE = "Flat") %>%
+  st_as_sf() %>%
+  plot()
+```
 
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
 
-# Challenge 3
+# CHALLENGE 3A
 
+1. Which parts of the water bodies (`water`) are inside the Natura 2000 protected areas (`prot_areas`)?
 
-
-<small>*
-</small>
-
----
-class: left, top
-
-# BONUS CHALLENGE
-
-
-.center[![:scale 100%]({{ site.baseurl}}/assets/images/20261029/contributing_inbodb.png)]
+2. Which parts of the water bodies (`water`) are outside the Natura 2000 protected areas (`prot_areas`)?
 
 ---
 class: left, top
 
-# The R package of the month: x
+# CHALLENGE 3B - rasters
+
+"A raster is a spatial (geographic) data structure that divides a region into rectangles called **cells** (or pixels) that can store one or more values for each of these cells."*
+
+2. Let's do some [zonal statistics](https://up42.com/blog/an-introduction-to-zonal-statistics#what-are-zonal-statistics): calculate the most and the least occurring land use category in each of the Natura2000 protected areas.<small> \*\*</small>
+
+3. **Clip** the raster based on the first NATURA 2000 protected area (`prot_areas[1, ]`). Keep the resolution of the input raster. You can use `qgis_as_terra()` at the end to convert the output to a `SpatRaster` object (something terra or mapview packages can understand).
+
+4. Let's do some **sampling**! Sample `land_use` values at the `hab_spring` locations. You can use  `sf::st_as_sf()` at the end to convert the output to a `sf` object. The final output is like `hab_spring` but with an additional column with the land use category at each point.
+
+5. How to convert the `land_use` raster to polygons? Be careful when visualizing the ouptut with mapview as you have just generated a lot of polygons! You can use `mapview::mapview(land_use_polygons[1:50000,], zcol = "class")` to show the land use category of the first 50 thousands squares.
+
+<small> \* Source: https://rspatial.org/raster/pkg/1-introduction.html</small>
+<br>
+<small> \*\* Notice that if you want to do the same purely in R, you need to use the R package [extractr](https://isciences.gitlab.io/exactextractr/index.html). See the last exercise in [slide 14](https://inbo.github.io/coding-club/sessions/20221124_coding_club_rasters.html#14) (Nov 24, 2022) or the last exercise of [slide 13](https://inbo.github.io/coding-club/sessions/20211125_rasters_in_r.html#13) (Nov 25, 2021).</small>
+
+---
+class: left, top
+
+# How to get help with qgisprocess?
+
+Do you have a generic question about the use of qgisprocess? Or do you not find the algorithm fitting your problem? Check the [FAQs](https://github.com/r-spatial/qgisprocess/issues/new/choose) on the "Issues" page of the qgisprocess GitHub repository. For INBO people: you can eventually use our standard mailing list (`dg_useR`).
+
+![:scale 100%]({{ site.baseurl}}/assets/images/20261029/20261029_templates_issues_qgisprocess.png)
+
+---
+class: left, top
+
+# The power of open science & software
+
+You can be helped, but you can also help! Software is not perfect. If it's open, you can report issues and even contribute to the solution. For example, thanks to the INBO coding club we found in Dec 2023 an issue (deprecation) with qgisprocess and a QGIS algorithm (see [#193](https://github.com/r-spatial/qgisprocess/issues/193)). We helped improving qgisprocess! How cool is that?!?
+
+![:scale 80%]({{ site.baseurl}}/assets/images/20261029/20261029_issue_qgisprocess.png)
+
+---
+class: left, top
+
+# The R package of the month: lidr
+
+We close the session as we started it :-) The package lidr is a R package to process and visualize LiDAR data. Check the [lidR book](https://r-lidar.github.io/lidRbook/) and the [INBO tutorial](https://tutorials.inbo.be/tutorials/r_lidr/) of Sebastiaan.
+
+![:scale 72%]({{ site.baseurl}}/assets/images/20261029/20261029_lidRbook.png)
 
 ---
 class: left, top
@@ -335,10 +407,30 @@ class: left, top
 
 - Comprehensive solutions and video recording will be available soon.
 - [qgisprocess](https://r-spatial.github.io/qgisprocess/index.html) R package documentation.
-- [Interfacing QGIS processing from R](https://florisvdh.github.io/foss4g-2023-qgisprocess/#1): Floris' presentation at FOSS4G 2023. Floris rocks: watch his talk, here is the [video](https://www.youtube.com/watch?v=Qt5DzWThWqI) :-).
+- [Interfacing QGIS processing from R](https://florisvdh.github.io/foss4g-2023-qgisprocess/#1): Floris' presentation at FOSS4G 2023. Floris rocks: watch the [video](https://www.youtube.com/watch?v=Qt5DzWThWqI) of his talk.
 - [qgis](https://jancaha.github.io/r_package_qgis/index.html) R package documentation.
 - [QGIS](https://qgis.org/en/site/) website.
+- Blogpost explaining the (in)validity of spatial objects: [What Makes a Geometry Valid? The OGC Rules Explained](https://www.spatialworkflow.io/geometry-validity-explained). See some examples in the section [The rules, in one picture](https://www.spatialworkflow.io/geometry-validity-explained/#the-rules-in-one-picture).
+- [sf](https://r-spatial.github.io/sf/) R package documentation.
+- [terra](https://rspatial.github.io/terra/index.html) R package documentation.
 - How to get help: use our internal INBO R mailing list (DG_useR) and also check the [FAQs](https://github.com/r-spatial/qgisprocess/issues/new/choose) on the "Issues" page of the qgisprocess GitHub repository.
+- Our [INBO tutorial](https://tutorials.inbo.be/) website.
+
+
+---
+class: left, top
+
+```
+cowsay::say(
+  what = "Hope your Halloween is a total scream!",
+  by = "pumpkin",
+  what_color = "purple",
+  by_color = "black",
+  width = 40
+)
+```
+
+.center[![:scale 80%]({{ site.baseurl}}/assets/images/20261029/20261029_happy_halloween.png)]
 
 ---
 class: center, middle

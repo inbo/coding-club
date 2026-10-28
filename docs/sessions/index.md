@@ -3,7 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
-| 2026-10-29 | QGIS algorithms with qgisprocess | work in progress... | [hackmd](https://hackmd.io/gIGB6eFUQxW55_W-SYXaxA?view) | 01.19 Paul Van Ostaijen |  |
+| 2026-10-29 | QGIS algorithms with qgisprocess | [slides]({{ site.baseurl }}{% link sessions/20261029_qgisprocess.html  %}) | [hackmd](https://hackmd.io/gIGB6eFUQxW55_W-SYXaxA?view) | 01.19 Paul Van Ostaijen |  |
 | 2026-09-29 | INBO data in R | [slides]({{ site.baseurl }}{% link sessions/20260929_inbo_databases.html  %}) | [hackmd](https://hackmd.io/CK0CKFCERrewCOVBU8W6JA?view) | 00.48 - Keldermans | [YouTube](https://youtu.be/oIGla1w_UM8?si=4vnpSsEIri9tymJE) |
 | 2026-08-27 | SQL in R? Yes, we can! | [slides]({{ site.baseurl }}{% link sessions/20260827_sql_in_r.html  %}) | [hackmd](https://hackmd.io/dzthDR3CTHy0g4BWir0VRw?view) | 01.72 - Kaat Tilley |  |
 | 2026-06-30 | webservices in R | [slides]({{ site.baseurl }}{% link sessions/20260630_webservices_in_r.html  %}) | [hackmd](https://hackmd.io/DnQ53lvgSPyVlmUc9x1R1Q?view) | 01.21 - Jeanne Brabants | [vimeo](https://vimeo.com/1217429725) |
