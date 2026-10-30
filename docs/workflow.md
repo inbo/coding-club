@@ -60,7 +60,7 @@ __Remark__, when creating links to other files, make sure to use the [jekyll lin
 
 *   Upload the `YYYYMMDD_challenges_solutions.R` file to the [src](https://github.com/inbo/coding-club/tree/master/src) folder.
 *   Edit the video recording of the coding club session.
-*   Publish video to INBO Vimeo channel in the dedicated folder called "INBO Coding Club". (Title and settings in template below).
+*   Publish video on the INBO channel in the dedicated playlist called "INBO Coding Club". (Title and settings in template below).
 *   Update the [session overview page](https://github.com/inbo/coding-club/blob/main/docs/sessions/index.md) with the link to the video.
 *   Send an email to all coding club members to announce that the solutions and the video are online.
 
@@ -133,42 +133,73 @@ Here below a practical example as well:
     ###...
 
 
-### Vimeo webinar settings template
+### YuTube webinar settings template
 
 We provide an old school [Movie Maker template](https://github.com/inbo/coding-club/blob/master/templates/20200528_vimeo_webinar_template.wlmp) to start editing the video, where logo at the beginning and at the end are already uploaded. Still, feel free to use any other (less obsolete) video editor program.
 
+#### Details
+
 Title: "yyyy-mm-dd - topic - INBO coding club". Example: "2020-06-30 - functional programming in R with purrr - INBO coding club"
 
-Description: short description of the topic, typically a copy paste from the invitation email. Add link to slides and hackmd and level (beginners, intermediate, ...) at the end. Example:
+Description: short description of the topic, typically a copy paste from the invitation email. Add link to slides and level (beginners, intermediate, ...) at the end. Example:
 
 > The topic of this INBO coding club edition is functional programming in R, alias loops on steroids. We will be using the package purrr, part of the tidyverse universe, which provides a complete and consistent set of tools to work with functions and vectors. If you have never heard about it, this INBO coding club session is the perfect occasion to learn it in a friendly and informal environment. For who already knows purrr, e.g. its map() functions, this session will offer the opportunity to increase the knowledge of this very powerful package.
 <br>Slides: https://inbo.github.io/coding-club/sessions/20200630_functional_programming.html#1
 <br>Hackmd: https://hackmd.io/ZDc7gTTHRm-ZcjYq_2f2Fg?view
 <br>Level: intermediate/advanced
 
-Privacy: "Anyone can see this video"
+
+Thumbnail:
+
+Use the badge used in the slides at the beginning of each coding club session. Example: [20261029_badge.png](https://github.com/inbo/coding-club/blob/main/docs/assets/images/20261029/20261029_badge.png).
+
+
+Playlists:
+
+INBO Coding Club
+
+
+Public:
+
+✅ Yes, this video is made for children
+
 
 Folder: INBO Coding Club
 
-Language (in Distribution tab, Discovery section): English
 
-Tags (in Distribution tab, Discovery section): programming, INBO coding club, R, other session related tags
+#### Video elements
+
+Leave empty. No subtitles needed :-)
+
+
+#### Checks
+
+Community and community guidelines checks are performed. There shouldn't be any issue to be solced in this step.
+
+
+#### Visibility
+
+Make your video public.
+
+You can click on "Publish".
+
+Once the video is published, you can further work on other aspects.
+
+
+Go to the playlist page, select the video, click on "Modify". In this way you will be able to add tags, license and so on. See below our choices.
+
+#### Tags
+
+Tags are helpful to make your video more findable. Something like `programming`, `coding club`, `Rstats` (R alone doesn't work). Add also other session related tags.
 
 Example: 
 > programming, INBO coding club, R, functional programming, purrr, tidyverse
 
-Credits & collaborators (in Distribution tab, Discovery section): an _author_ (main author of the slides and typically the moderator of the coding club session) and any other _contributor_.
 
-Example: 
-Damiano Oldoni (role: author), Hans Van Calster (role: contributor)
+#### License
 
-Categories: Educational
+Select Creative Common license, name attribution.
 
-Creative Common license (in Distribution tab, Discovery section):
-Attribution
+#### Category
 
-Enable video review page: YES
-
-Content rating: All audiences
-
-Use topic badge as thumbnail.
+"Sciene and technology". "Educational" is also a good option.
