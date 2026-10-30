@@ -133,7 +133,7 @@ Here below a practical example as well:
     ###...
 
 
-### YuTube webinar settings template
+### YouTube webinar settings template
 
 We provide an old school [Movie Maker template](https://github.com/inbo/coding-club/blob/master/templates/20200528_vimeo_webinar_template.wlmp) to start editing the video, where logo at the beginning and at the end are already uploaded. Still, feel free to use any other (less obsolete) video editor program.
 
