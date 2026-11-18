@@ -3,6 +3,7 @@
 
 |date | topic | slideshow | hackmd | location | video |
 | --- | ----- | ----------| ------ | -------  | ----- |
+| 2026-11-24 | from code to functions | [slides]({{ site.baseurl }}{% link sessions/work_in_progress.html  %} | [hackmd](https://hackmd.io/iZ0GSEl8Q1-gP1wRg6ccag?view) |  |  |
 | 2026-10-29 | QGIS algorithms with qgisprocess | [slides]({{ site.baseurl }}{% link sessions/20261029_qgisprocess.html  %}) | [hackmd](https://hackmd.io/gIGB6eFUQxW55_W-SYXaxA?view) | 01.19 Paul Van Ostaijen | [YouTube](https://youtu.be/JEb-POve5O0) |
 | 2026-09-29 | INBO data in R | [slides]({{ site.baseurl }}{% link sessions/20260929_inbo_databases.html  %}) | [hackmd](https://hackmd.io/CK0CKFCERrewCOVBU8W6JA?view) | 00.48 - Keldermans | [YouTube](https://youtu.be/oIGla1w_UM8?si=4vnpSsEIri9tymJE) |
 | 2026-08-27 | SQL in R? Yes, we can! | [slides]({{ site.baseurl }}{% link sessions/20260827_sql_in_r.html  %}) | [hackmd](https://hackmd.io/dzthDR3CTHy0g4BWir0VRw?view) | 01.72 - Kaat Tilley |  |
