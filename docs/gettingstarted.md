@@ -66,7 +66,7 @@ For csv or tsv (all text files with extension not  `txt`):
 
 ### How to donwload data automatically?
 
-We wrote an R function to help you downloading all material you need. In your `coding-club` project: just run `inborutils::setup_codingclub_session()`. For downloading a past coding club edition pass the date in the `"yyyymmdd"` format to the function.
+We wrote an R function to help you downloading all material you need. In your `coding-club` project: just run [`inborutils::setup_codingclub_session()`](https://inbo.github.io/inborutils/reference/setup_codingclub_session.html). For downloading a past coding club edition pass the date in the `"yyyymmdd"` format to the function.
 
 __Note for git-users__: You can do `git pull origin master` (or click the `pull` button in the git tab) to download the new material.
 
