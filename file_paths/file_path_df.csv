@@ -255,6 +255,8 @@ data/20261029/20261029_hydrocotyle_ranunculoides.geojson,20261029_hydrocotyle_ra
 data/20261029/20261029_natura2000_protected_areas.gpkg,20261029_natura2000_protected_areas.gpkg,data,20261029
 data/20261029/20261029_watersurfaces_hab.gpkg,20261029_watersurfaces_hab.gpkg,data,20261029
 data/20261029/20261029_land_use_nara_2016_100m.tif,20261029_land_use_nara_2016_100m.tif,data,20261029
+data/20261124/20261124_moth_obs_2022.csv,20261124_moth_obs_2023.csv,data,20261124
+data/20261124/20261124_moth_obs_2022.csv,20261124_moth_obs_2022.csv,data,20261124
 src/20180123/20180123_vmm_function_loader.R,20180123_vmm_function_loader.R,src,20180123
 src/20180123/20180123_data_import_example_solution.R,20180123_data_import_example_solution.R,src,20180123
 src/20180222/20180222_challenges.R,20180222_challenges.R,src,20180222
@@ -496,3 +498,4 @@ src/20260929/20260929_challenges.R,20260929_challenges.R,src,20260929
 src/20260929/20260929_challenges_solutions.R,20260929_challenges_solutions.R,src,20260929
 src/20261029/20261029_challenges.R,20261029_challenges.R,src,20261029
 src/20261029/20261029_challenges_solutions.R,20261029_challenges_solutions.R,src,20261029
+src/20261124/20261124_challenges.R,20261124_challenges.R,src,20261124
