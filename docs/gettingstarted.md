@@ -64,7 +64,7 @@ For csv or tsv (all text files with extension not  `txt`):
 3. select in the new tab the option `Save page as` (or  `Pagina opslaan als` )
 4. navigate to the respective folder (either `src` or `data`) and save the file
 
-### How to donwload data automatically?
+### How to download data automatically?
 
 We wrote an R function to help you downloading all material you need. In your `coding-club` project: just run [`inborutils::setup_codingclub_session()`](https://inbo.github.io/inborutils/reference/setup_codingclub_session.html). For downloading a past coding club edition pass the date in the `"yyyymmdd"` format to the function.
 
