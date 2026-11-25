@@ -441,6 +441,22 @@ docstring(make_bread) # or just
 ?make_bread
 ```
 
+Do you update the documentation? You need to restart R and reload the function to see the effects.
+
+---
+class: left, top
+
+# Intermezzo 2: document with style
+
+There are several packages helping you controlling some style aspects:
+
+- [air](https://tidyverse.org/blog/2025/02/air/): an extremely fast R formatter. Formatters are used to automatically style code. And it's a tidyverse package! Recommendation: use it with version control (e.g. git) so that you are aware of the code changes. Downside: it is still in a beta version = there may be some breaking changes over the next few releases :-(
+- [styler](https://styler.r-lib.org/): a R formatter following the tidyverse style guide. It's an r-lib package.*
+- [lintr](https://lintr.r-lib.org/): a static code analyser for R. It checks for adherence to a given style, identifying syntax errors and possible semantic issues, then reports them to you so you can take action. Another r-lib package*.
+- [checklist](https://inbo.github.io/checklist/): a package providing an elaborate and strict set of checks for R packages and R code. It's a "made in INBO" package.
+
+<small>* r-lib is a very authoritative source of R packages such as: [roxygen2](https://roxygen2.r-lib.org/), [pkgdown](https://pkgdown.r-lib.org/), [devtools](https://devtools.r-lib.org/), [testthat](https://testthat.r-lib.org/), [usethis](https://usethis.r-lib.org/), [httr2](https://httr2.r-lib.org/). Most of them are maintained by the same people behind tidyverse.</small>all>
+
 ---
 background-image: url({{ site.baseurl}}/assets/images/background_challenge_3.png)
 class: left, top
@@ -487,6 +503,34 @@ The goal of [legendry](https://teunbrand.github.io/legendry/) is to provide addi
 .center[![:scale 35%]({{ site.baseurl}}/assets/images/20261124/20261124_logo_legendry.png)]
 
 ---
+class: left, top
+
+# The tip of the month
+
+I would like to share this tip* of Thierry. Thanks for it!
+
+In if-else statements, pay attention to handle the shortest branch first. Advantages:
+- it makes the program flow easier
+- no `else` needed anymore! 😮
+
+```
+well_written_function <- function(a) {
+  if (a > 0) {
+    # short branch, returning something and skipping the rest of the code
+    return(a)
+    }
+  # "else" statement is just not needed anymore
+  print("This is only written when a<0")
+}
+well_written_function(a = 1)
+> [1] 1
+well_written_function(a = -1)
+> [1] "This is only written when a<0"
+```
+
+* This slide has been added after the coding club session = not present in recordings. It refers to an issue ([#26](https://github.com/inbo/coding-club/issues/26)) of Thierry.
+
+---
 class:left, top
 
 # Resources
@@ -498,8 +542,12 @@ class:left, top
 - The B-Cubed software development guide: [website](https://docs.b-cubed.eu/dev-guide/) of [journal article](https://doi.org/10.3897/rio.12.e216899).
 - Some advices from [tidyverse style guide](https://style.tidyverse.org/documentation.html) can also be useful.
 - Blogpost ["Why comment your code as little (and as well) as possible"](https://blog.r-hub.io/2023/01/26/code-comments-self-explaining-code/).
-- Packages [Roxygen2](https://roxygen2.r-lib.org/index.html) and [docstring](https://github.com/dasonk/docstring).
-- The [checklist](https://packages.inbo.be/checklist/index.html) package: a set of checks for R projects and R packages, created and maintained by our Thierry!
+- The [Roxygen2](https://roxygen2.r-lib.org/index.html) package.
+- The [docstring](https://github.com/dasonk/docstring) package.
+- The [air](https://tidyverse.org/blog/2025/02/air/)package: an extremely fast R formatter.
+- The [styler](https://styler.r-lib.org/): an R formatter following the tidyverse style guide.
+- The [lintr](https://lintr.r-lib.org/): a static code analyser for R.
+- The [checklist](https://inbo.github.io/checklist/) package: an elaborate and strict set of checks for R packages and R projects. It's a "made in INBO" package, created and maintained by our Thierry!
 - The [usethis](https://usethis.r-lib.org/index.html) package: a workflow package, useful for both for R packages and projects.
 - The [legendry](https://teunbrand.github.io/legendry/) package: push ggplot2 guides and legends to the next level.
 
