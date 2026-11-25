@@ -3,8 +3,8 @@ library(tidyverse)
 
 # CHALLENGE 1 ####
 
-file_name <- "20250626_moth_obs_2022.csv"
-path <- file.path("data", "20250626", file_name)
+file_name <- "20261124_moth_obs_2022.csv"
+path <- file.path("data", "20261124", file_name)
 obs <- readr::read_csv(path)
 
 
